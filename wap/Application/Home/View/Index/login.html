@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>用户登陆</title><meta name="keywords" content="茶汇通">
+<meta name="description" content="茶汇通用户登录">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="_CSS_/share.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="haed">
+<a href="javascript:history.go(-1)"><img src="_IMG_/fanhui02.png"></a>
+<a href="http://www.chahuitong.com/wap"><img src="_IMG_/home01.png"></a>
+</div>
+<nav>
+<a  href="#">登&nbsp;陆<span></span><mark></mark></a>
+<a href="register.html">注&nbsp;册</a>
+</nav>
+<div class="logo"><img src="_IMG_/logo01.png"></div>
+</header>
+<div>
+<div class="sub">
+<form method="post" action="">
+<input type="text" placeholder="手机号" name="usermobile" id="username" required><br>
+<input type="password" class="password" placeholder="密码" name="pwd" id="userpwd" style="border:none" required><br>
+<input type="hidden" name="chashi" value="0">
+<div class="line"></div>
+<span class="roundedTwo"><input id="a1" type="checkbox"><label for="roundedTwo"></label></span>一个月内免登陆<a href="#">忘记密码？</a><br>
+<a href="javascript:void(0);" class="l-btn-login mt10" id="loginbtn">
+                立即登陆
+            </a>
+</form>
+
+</div>
+<div class="di3f">
+<div class="denglu">
+</div>
+<div class="error-tips mt10"></div>
+<div class="logodl">
+<a href="/shop/api.php?act=toqq"><img src="_IMG_/qq.png"><br>QQ</a>
+<a href="/shop/api.php?act=tosina"><img src="_IMG_/weibo.png"><br>新浪微博</a>
+<a href="#"><img src="_IMG_/weixin.png"><br>微信</a>
+</div>
+</div>
+</div>
+<include file="public/foot"/>
+<input type="hidden" name="referurl">
+    <script type="text/javascript" src="_JS_/config.js"></script>
+    <script type="text/javascript" src="_JS_/zepto.min.js"></script>
+    <script type="text/javascript" src="_JS_/template.js"></script>
+    <script type="text/javascript" src="_JS_/common.js"></script>
+    <script type="text/javascript" src="_JS_/tmpl/common-top.js"></script>
+    <script type="text/javascript" src="_JS_/simple-plugin.js"></script>
+    <script type="text/javascript" src="_JS_/tmpl/login.js"></script>
+
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<script>
+    $(function(){
+        var obj = new WxLogin({
+            id:"wx_login",
+            appid: "wx16387162e6e9be38",
+            scope: "snsapi_login",
+            redirect_uri: "<?php echo urlencode('http://www.chahuitong.com/wap/index.php/Home/Index/member');?>",
+            state: "3d6be0a4035d839573b04816624a415e",
+            style: "",
+            href: ""
+        });
+    })
+</script>
+<div id="wx_login" style="height:0;">
+
+</div>
+
+</body>
+
+</html>

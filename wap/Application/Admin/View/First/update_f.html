@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>客户服务管理后台-修改先睹为快信息</title>
+<link rel="stylesheet" type="text/css" href="_CSS_/admin.css" />
+<script type="text/javascript" src="_JS_/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="_STATIC_/WdatePicker.js"></script>
+<script type="text/javascript" src="_JS_/formValidatorRegex.js"></script>
+<script type="text/javascript" src="_JS_/formValidator.js"></script>
+<link rel="stylesheet" type="text/css" href="_JS_/validator.css" />
+</head>
+<style type="text/css">
+.col_four{
+	display:inline-block;
+	border:1px solid #fbaa01;
+	background-color:#fbaa01;
+	color:white;
+	padding:5px;
+}
+.admin_box input{
+	margin-bottom:10px;
+}
+#myForm div{
+	float:left;
+	width:18%;
+	overflow:hidden;
+	padding:10px;
+	margin-bottom:10px;
+	height:200px;
+}
+#myForm div img{
+	width:80%;
+}
+</style>
+<body>
+<include file="Public/menu" />
+<div class="admin_box">
+<form action="{:U('First/update_db')}" method="post" id="myForm" enctype="multipart/form-data">
+<input type="hidden" name="id" id="id" value="{$data.id}"/>
+<div>
+顶部图:<input type="file" name="top_img" id="top_img"/><br>
+<if condition="$data.top_img neq ''"><img src="_UPL_{$data.top_img}" /></if>
+</div>
+<div>
+底部图:<input type="file" name="bottom_img" id="bottom_img"/><br>
+<if condition="$data.bottom_img neq ''"><img src="_UPL_{$data.bottom_img}" /></if>
+</div>
+<div>
+图1:<input type="file" name="img1" id="img1"/><br>
+<if condition="$data.img1 neq ''"><img src="_UPL_{$data.img1}" /></if>
+</div>
+<div>
+图2:<input type="file" name="img2" id="img2"/><br>
+<if condition="$data.img2 neq ''"><img src="_UPL_{$data.img2}" /></if>
+</div>
+<div>
+图3:<input type="file" name="img3" id="img3"/><br>
+<if condition="$data.img3 neq ''"><img src="_UPL_{$data.img3}" /></if>
+</div>
+<div>
+图4:<input type="file" name="img4" id="img4"/><br>
+<if condition="$data.img4 neq ''"><img src="_UPL_{$data.img4}" /></if>
+</div>
+<div>
+图5:<input type="file" name="img5" id="img5"/><br>
+<if condition="$data.img5 neq ''"><img src="_UPL_{$data.img5}" /></if>
+</div>
+<div>
+图6:<input type="file" name="img6" id="img6"/><br>
+<if condition="$data.img6 neq ''"><img src="_UPL_{$data.img6}" /></if>
+</div>
+<div>
+图7:<input type="file" name="img7" id="img7"/><br>
+<if condition="$data.img7 neq ''"><img src="_UPL_{$data.img7}" /></if>
+</div>
+<div>
+图8:<input type="file" name="img8" id="img8"/><br>
+<if condition="$data.img8 neq ''"><img src="_UPL_{$data.img8}" /></if>
+</div>
+<div>
+图9:<input type="file" name="img9" id="img9"/><br>
+<if condition="$data.img9 neq ''"><img src="_UPL_{$data.img9}" /></if>
+</div>
+<div>
+图10:<input type="file" name="img10" id="img10"/><br>
+<if condition="$data.img10 neq ''"><img src="_UPL_{$data.img10}" /></if>
+</div>
+<textarea name="words">{$data.words}</textarea><br>
+<input type="submit" value="提交"/>
+</form>
+</div>
+</body>
+</html>

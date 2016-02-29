@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关注--茶汇通用户个人中心</title>
+<meta name="keywords" content="茶汇通">
+<meta name="description" content="茶汇通用户个人中心">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="_CSS_/shequ/share.css" type="text/css" rel="stylesheet">
+<link href="_CSS_/shequ/user.css" type="text/css" rel="stylesheet">
+<link href="_CSS_/shequ/shequuser.css" type="text/css" rel="stylesheet">
+<style>
+#content{padding-bottom:20px;}
+</style>
+<script src="_JS_/jquery.min.js"></script>
+<script src="_JS_/jquery.cookie.js"></script>
+<script>
+    $(document).ready(function(){
+
+      var username=$.cookie("username");
+      
+      var key=$.cookie("key");	
+	  
+	  var reply_to='';
+	  
+	  var content_id='';
+
+      //alert(username);
+
+      //init();
+	   get_instersters();
+
+       $("#share").click(get_user_topic);
+
+       $("#guanzhu").click(get_instersters);
+
+       $("#huodong").click(get_active);
+
+       $("#pinglun").click(get_comment);
+
+       $(window).scroll(get_more);
+	   
+	    $(".guanzhu li div").live("click",move_instersters);
+	   
+	    $(".del-topic").live("click",del_content);
+
+        $(".shai_image").live("click",shai_image);
+		
+		 $(".huifu").live("click",add_reply_form);
+		 
+		 $(".sub").click(add_reply);
+		 
+		 $(".close").click(close_form);
+
+	   
+	   //$(".change").live("click",change_active);
+	   
+     /*初始化函数*/
+      function init(){
+   
+      }	
+	  /**/
+	  function close_form(){
+		  
+		   $(".form").css("display","none");
+		  		  
+		  }
+	  function add_reply_form(){
+		  
+		  $(".form").css("display","block"); 
+		  
+		   reply_to=$(this).parent().parent().find(".name").text();
+		  
+		  $(".replay_to").text("@"+reply_to);
+		  
+		  content_id=$(this).attr("data-id");
+		  
+		  }
+	  
+	  /*回复信息*/
+	  
+	  function add_reply(){
+		  
+		  //alert("__URL__/add_content_comment_api")
+		  var comment=$(".comment").val();
+		  		  		  		  
+		  $.ajax({
+			  
+			    url:"__URL__/add_content_comment_api",
+				
+				type:"post",
+
+              dataType:"json",
+
+              data:{username:username,key:key,content_id:content_id,comment:comment,reply_to:reply_to},
+			  
+			  success:function(data){
+				  
+					//alert(data.code); 
+					 
+				  if(data.code==200){
+					  		   
+					   $(".form").css("display","none");
+					  
+					   $(".showmsg").html("评论成功！");
+
+                     $("#content").css("opacity","0.3");
+
+                     $(".showmsg").show();
+
+                     setTimeout(function(){
+               
+                    $(".showmsg").hide();
+
+                    $("#content").css("opacity","1");
+
+                    },3000)
+
+				  
+					  }
+			  
+				  
+				  }	  
+			  
+			  })  
+		  
+		  }
+	   
+	  
+
+     /*点击取消关注者*/
+
+      function move_instersters(){
+
+        if(confirm("确定取消关注？")){
+
+          var member_id=$(this).attr("class");
+
+          $.ajax({
+
+          	url:"__URL__/move_instersters",
+
+          	type:"post",
+
+          	data:{username:username,key:key,member_id:member_id},
+
+          	dataType:"json",
+
+          	success:function(data){
+
+          		if(data.code==200){
+
+                 $("#"+member_id).remove();
+
+          		}
+
+
+          	}
+
+
+          })
+
+
+
+        }
+
+
+      }
+
+      /*获取发布主题*/
+
+      function get_user_topic(){
+
+         $("nav a").removeClass("on");
+
+         //$("nav a span").remove();
+
+         $(this).addClass("on");
+
+         $("input[name='way']").val("2")
+
+         $("input[name='page']").val("1");
+
+         //$(this).append("<span></span>");
+
+         var user_id={$member_info.member_id}
+
+         var page=$("input[name='page']").val();
+
+         $.ajax({
+
+         	url:"__URL__/get_user_topic_api",
+
+         	type:"post",
+
+         	data:{username:username,key:key,page:page},
+
+         	dataType:"json",
+
+         	success:function(data){
+
+         		if(data.code==200){
+
+         			$("#content").html('');
+
+         			$("#content").removeClass("guanzhu shai huodong pinglun");
+
+         			$("#content").addClass("shai");
+
+         			
+         			$("input[name='page']").val(page*1+1*1);
+                     
+
+
+         			for(var i=0;i<data.content.length;i++){
+
+                var myDate=new Date(data.content[i].time);
+
+                var Month  = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+
+                var string='<li id="'+data.content[i].content_id+'"><h5>'+data.content[i].title+'<span><time>'+myDate.getDate()+'th.'+Month[myDate.getMonth()]+'</time><img class="del-topic" data-id="'+data.content[i].content_id+'" src="_IMG_/delete.png"><span class="del-topic" data-id="'+data.content[i].content_id+'">删除</span></span></h5><p>'+data.content[i].content+'</p>';
+
+                if(data.content[i].image!=''){
+
+                   string+='<div >';
+
+                  var strs= new Array();
+
+                  strs=data.content[i].image.split(",");
+
+                  for(var j=0;j<strs.length;j++){
+
+                    string+='<div style="width:33%;float:left;text-align:center"><img class="shai_image" width=80% src="/data/upload/qunzi/'+strs[j]+'"></div>';
+
+                   }
+
+                   string+='</div>';
+
+                 }
+
+                string+='<div class="pic" style="clear:both"><span><img src="_IMG_/share.png">20425</span><span><img src="_IMG_/bi.png">2046</span><span><img src="_IMG_/zhan.png">3520</span> </div></li>';
+
+         			$(".shai").append(string);
+
+         			         }
+
+         		}
+				
+		 
+
+         	}
+
+
+         })
+
+
+      }
+
+      function get_user_topic_more(){
+
+
+         $("input[name='way']").val("2")
+
+         //$(this).append("<span></span>");
+
+         var user_id={$member_info.member_id}
+
+         var page=$("input[name='page']").val();
+
+         $.ajax({
+
+         	url:"__URL__/get_user_topic_api",
+
+         	type:"post",
+
+         	data:{username:username,key:key,page:page},
+
+         	dataType:"json",
+
+         	success:function(data){
+
+         		if(data.code==200){
+
+         			//$("#content").html('');
+
+         			$("#content").removeClass("guanzhu shai huodong pinglun");
+
+         			$("#content").addClass("shai");
+
+         			
+         			$("input[name='page']").val(page*1+1*1);
+                     
+
+         			for(var i=0;i<data.content.length;i++){
+
+                var myDate=new Date(data.content[i].time);
+
+                var Month  = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+         			 var string='<li id="'+data.content[i].content_id+'"><h5>'+data.content[i].title+'<span><time>'+myDate.getDate()+'th.'+Month[myDate.getMonth()]+'</time><img class="del-topic" data-id="'+data.content[i].content_id+'" src="_IMG_/delete.png"><span class="del-topic" data-id="'+data.content[i].content_id+'">删除</span></span></h5><p>'+data.content[i].content+'</p>';
+
+                if(data.content[i].image!=''){
+
+                   string+='<div >';
+
+                  var strs= new Array();
+
+                  strs=data.content[i].image.split(",");
+
+                  for(var j=0;j<strs.length;j++){
+
+                    string+='<div style="width:33%;float:left;text-align:center"><img class="shai_image" width=80% src="/data/upload/qunzi/'+strs[j]+'"></div>';
+
+                   }
+
+                   string+='</div>';
+
+                 }
+
+                string+='<div class="pic" style="clear:both"><span><img src="_IMG_/share.png">20425</span><span><img src="_IMG_/bi.png">2046</span><span><img src="_IMG_/zhan.png">3520</span> </div></li>';
+
+               $(".shai").append(string);
+
+         			         }
+				  $(".del-topic").click(del_content);	
+
+          $(".shai_image").click(shai_image);		 
+
+         		}else{
+
+                $(".showmsg").html(data.content);
+
+                $("#content").css("opacity","0.3");
+
+                $(".showmsg").show();
+
+                setTimeout(function(){
+               
+                $(".showmsg").hide();
+
+                $("#content").css("opacity","1");
+
+                },3000)
+
+               
+            }
+
+
+         	}
+
+
+         })
+
+
+      }
+
+      /*获取活动信息*/
+
+       function get_active(){
+
+          $("input[name='page']").val("1");
+
+          $("input[name='way']").val("3");
+
+          $("nav a").removeClass("on");
+
+          $(this).addClass("on");
+
+          $.ajax({
+
+            url:"__URL__/get_active_api",
+
+            type:"post",
+
+            dataType:"json",
+
+            data:{username:username,key:key,page:1},
+
+            success:function(data){
+
+               $("input[name='page']").val(2);
+
+               $("#content").html("");
+
+               $("#content").removeClass("guanzhu shai pinglun");
+
+               $("#content").addClass("huodong");
+
+               if(data.code==200){
+
+                var d = new Date();
+
+                var t=d.getTime();
+
+               for(var i=0;i<data.content.length;i++){
+
+                var j=Date.parse(data.content[i].join_time);
+
+                if(data.content[i].uid==data.uid){
+
+                  var string='<li id="'+data.content[i].active_id+'"><h5>'+data.content[i].active_title+'<span class="change"><a href="__URL__/changeActive/id/'+data.content[i].active_id+'" data-transition="pop"><img src="_IMG_/xiugai.png">修改</a></span></h5><p>'+data.content[i].content+'</p><div></div><p>活动时间:'+data.content[i].join_time+'</p><p>状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态：<mark>';
+
+                  if(j>t){
+
+                   string+='自建活动<span style="color:red">(即将开始)</span></mark></p></li>';
+
+                         }else{
+
+
+                   string+='自建活动(已经结束)</mark></p></li>'; 
+
+
+                         }
+
+                 $("#content").append(string);
+
+
+                                    }else{
+
+                 var string='<li id="'+data.content[i].active_id+'"><h5>'+data.content[i].active_title+'<span class="del" data-id="'+data.content[i].active_id+'"><img  src="_IMG_/xiugai.png">取消</span></h5><p>'+data.content[i].content+'</p><div></div><p>活动时间:'+data.content[i].join_time+'</p><p>状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态：<mark>已报名';
+                 
+                 if(j>t){
+                 
+                  string+='(<span style="color:red">即将开始</span>)</mark></p></li>';
+
+                  }else{
+
+                  string+='(已经结束)</mark></p></li>';
+
+                  }                     
+
+                 $("#content").append(string);
+
+
+
+                                    }
+
+               }
+
+               $(".del").click(del_active);
+
+
+              }
+
+
+
+
+            }
+
+
+
+
+
+          })
+       }
+
+      /*获取更多活动*/
+      
+       /*获取活动信息*/
+
+       function get_active_more(){
+
+          var page=$("input[name='page']").val();
+
+          $("input[name='way']").val("3");
+
+          $.ajax({
+
+            url:"__URL__/get_active_api",
+
+            type:"post",
+
+            dataType:"json",
+
+            data:{username:username,key:key,page:page},
+
+            success:function(data){
+
+               $("input[name='page']").val(page*1+1*1);
+
+               $("#content").removeClass("guanzhu shai pinglun");
+
+               $("#content").addClass("huodong");
+
+              if(data.code==200){
+
+                var d = new Date();
+
+                var t=d.getTime();
+
+               for(var i=0;i<data.content.length;i++){
+
+                var j=Date.parse(data.content[i].join_time);
+
+                if(data.content[i].uid==data.uid){
+
+                  var string='<li id="'+data.content[i].active_id+'"><h5>'+data.content[i].active_title+'<span class="change"><a href="__URL__/changeActive/id/'+data.content[i].active_id+'"><img src="_IMG_/xiugai.png" >修改</a></span></h5><p>'+data.content[i].content+'</p><div></div><p>活动时间:'+data.content[i].join_time+'</p><p>状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态：<mark>';
+
+                  if(j>t){
+
+                   string+='自建活动<span style="color:red">(即将开始)</span></mark></p></li>';
+
+                         }else{
+
+
+                   string+='自建活动(已经结束)</mark></p></li>'; 
+
+
+                         }
+
+                 $("#content").append(string);
+
+                                    }else{
+
+                 var string='<li id="'+data.content[i].active_id+'"><h5>'+data.content[i].active_title+'<span class="del" data-id="'+data.content[i].active_id+'"><img src="_IMG_/xiugai.png">取消</span></h5><p>'+data.content[i].content+'</p><div></div><p>活动时间:'+data.content[i].join_time+'</p><p>状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态：<mark>已报名';
+                 
+                 if(j>t){
+                 
+                  string+='(<span style="color:red">即将开始</span>)</mark></p></li>';
+
+                  }else{
+
+                  string+='(已经结束)</mark></p></li>';
+
+                  }                     
+
+                 $("#content").append(string);
+
+                                  }
+
+               }
+
+               $(".del").click(del_active);
+
+
+              }else{
+
+              $(".showmsg").html(data.content);
+
+                $("#content").css("opacity","0.3");
+
+                $(".showmsg").show();
+
+                setTimeout(function(){
+               
+                $(".showmsg").hide();
+
+                $("#content").css("opacity","1");
+
+                },3000);
+             }
+
+            }
+
+
+          })
+       } 
+
+       /*取消活动*/
+
+        function del_active(){
+
+          var active_id=$(this).attr("data-id");
+
+          if(confirm("确定要取消?")){
+
+            $.ajax({
+
+              url:"__URL__/del_active_api",
+
+              type:"post",
+
+              dataType:"json",
+
+              data:{username:username,key:key,active_id:active_id},
+
+              success:function(data){
+
+                if(data.code==200){
+
+                $("#"+active_id+" mark").html("已取消");
+
+                   }
+
+              }
+
+             })
+
+
+           }
+
+        }
+
+        /*取消发布主题*/
+
+        function del_content(){
+
+          var content_id=$(this).attr("data-id");
+
+          // alert(content_id);
+
+          if(confirm("确定要取消?")){
+
+            $.ajax({
+
+              url:"__URL__/del_content_api",
+
+              type:"post",
+
+              dataType:"json",
+
+              data:{username:username,key:key,content_id:content_id},
+
+              success:function(data){
+
+                if(data.code==200){
+
+                $("#"+content_id).remove();
+
+                   }
+
+              }
+
+             })
+
+
+           }
+
+        }
+
+
+       /*获取评论信息*/
+
+        function get_comment(){
+
+          $("input[name='page']").val("1");
+
+          $("input[name='way']").val("4");
+
+          $("nav a").removeClass("on");
+
+          $(this).addClass("on");
+
+
+
+          $.ajax({
+
+            url:"__URL__/get_comment_api",
+
+            type:"post",
+
+            dataType:"json",
+
+            data:{key:key,username:username,page:1},
+
+            success:function(data){
+				
+				alert(data.code)
+
+              if(data.code==200){
+
+               $("#content").removeClass("guanzhu shai huodong pinglun");
+
+               $("#content").addClass("pinglun");
+
+               $("#content").html("");
+
+               $("input[name='page']").val("2");
+
+               for(var i=0;i<data.content.length;i++){
+
+                 if(data.content[i].member_avatar==null||data.content[i].member_avatar=="null"||data.content[i].member_avatar==undefined){
+
+                  if(data.content[i].member_id==data.content[i].uid){
+
+                  $("#content").append('<li style="position:relative"><img src="/data/upload/shop/avatar/nopic.jpg" width=53 height=53><div><h5><time class="name">'+data.content[i].member_name+'</time><span><time>'+data.content[i].comment_time+'</time><img src="_IMG_/huifu.png"><time class="huifu" data-id="'+data.content[i].content_id+'"></time></span></h5><p style="height:50px;overflow:hidden">'+data.content[i].comment+'</p></div></li>');
+
+                                                   }else{
+
+                  $("#content").append('<li style="position:relative"><img src="/data/upload/shop/avatar/nopic.jpg" width=53 height=53><div><h5><time class="name">'+data.content[i].member_name+'</time><span><time>'+data.content[i].comment_time+'</time><img src="_IMG_/huifu.png"><time class="huifu" data-id="'+data.content[i].content_id+'">回复</time></span></h5><p style="height:50px;overflow:hidden">'+data.content[i].comment+'</p></div><span style="position:absolute;bottom:0px;right:45px"><img src="_IMG_/down-1.png" width=20 height=20></span></li>');    
+
+                                                   }
+
+
+                 }else{
+
+                 
+
+                 $("#content").append('<li style="position:relative"><img src="/data/upload/shop/avatar/'+data.content[i].member_avatar+'" width=53 height=53"><div><h5><time class="name">'+data.content[i].member_name+'</time><span><time>'+data.content[i].comment_time+'</time><img src="_IMG_/huifu.png"><time class="huifu" data-id="'+data.content[i].content_id+'">回复</time></span></h5><p style="height:50px;overflow:hidden">'+data.content[i].comment+'</p></div><span style="position:absolute;bottom:0px;right:45px"><img src="_IMG_/down-1.png" width=20 height=20></span></li>');
+
+                      
+
+                    }
+
+                 }
+
+
+               }
+
+            }
+
+
+
+          })
+
+        }
+
+       /*获取更多评论*/
+       
+        function get_comment_more(){
+
+          var page=$("input[name='page']").val();
+
+          $("input[name='way']").val("4");
+
+
+          $.ajax({
+
+            url:"__URL__/get_comment_api",
+
+            type:"post",
+
+            dataType:"json",
+
+            data:{key:key,username:username,page:page},
+
+            success:function(data){
+
+              if(data.code==200){
+
+               //$("#content").removeClass("guanzhu shai huodong pinglun");
+
+               //$("#content").addClass("pinglun");
+
+               //$("#content").html("");
+
+               $("input[name='page']").val(page*1+1*1); 
+
+               for(var i=0;i<data.content.length;i++){
+
+                 if(data.content[i].member_avatar==null||data.content[i].member_avatar=="null"||data.content[i].member_avatar==undefined){
+
+                  if(data.content[i].member_id==data.content[i].uid){
+
+                  $("#content").append('<li style="position:relative"><img src="/data/upload/shop/avatar/nopic.jpg" width=53 height=53><div><h5><time class="name">'+data.content[i].member_name+'</time><span><time>'+data.content[i].comment_time+'</time><img src="_IMG_/huifu.png"></span></h5><p style="height:50px;overflow:hidden">'+data.content[i].comment+'</p></div></li>');
+
+                                                   }else{
+
+                  $("#content").append('<li style="position:relative"><img src="/data/upload/shop/avatar/nopic.jpg" width=53 height=53><div><h5><time class="name">'+data.content[i].member_name+'</time><span><time>'+data.conetnt[i].comment_time+'</time><img src="_IMG_/huifu.png"><time class="huifu" data-id="'+data.content[i].content_id+'">回复</time></span></h5><p style="height:50px;overflow:hidden">'+data.content[i].comment+'</p></div><span style="position:absolute;bottom:0px;right:45px"><img src="_IMG_/down-1.png" width=20 height=20></span></li>');    
+
+                                                   }
+
+
+                 }else{
+
+                 
+
+                    $("#content").append('<li style="position:relative"><img src="/data/upload/shop/avatar/'+data.content[i].member_avatar+'" width=53 height=53"><div><h5><time class="name">'+data.content[i].member_name+'</time><span><time>'+data.content[i].comment_time+'</time><img src="_IMG_/huifu.png"><time class="huifu" data-id="'+data.content[i].content_id+'">回复</time></span></h5><p style="height:50px;overflow:hidden">'+data.content[i].comment+'</p></div></li>');
+
+                
+
+                    }
+
+                 }
+
+
+               }else{
+
+               
+                $(".showmsg").html(data.content);
+
+                $("#content").css("opacity","0.3");
+
+                $(".showmsg").show();
+
+                setTimeout(function(){
+               
+                $(".showmsg").hide();
+
+                $("#content").css("opacity","1");
+
+                },3000)
+
+
+               }
+
+            }
+
+
+
+          })
+
+        } 
+
+     /*触底获取更多*/
+
+      function get_more(){
+
+        if(parseInt(jQuery(document).scrollTop())>=parseInt(jQuery(document).height())-parseInt(jQuery(window).height())){
+
+        	var way=$("input[name='way']").val();
+
+        	if(way==1){
+
+              get_instersters_more();
+
+        	}
+
+          if(way==2){
+
+              get_user_topic_more();
+
+          }
+
+          if(way==4){
+
+             get_comment_more();  
+
+          }
+
+          if(way==3){
+
+             get_active_more();
+          }
+
+        }
+
+      }
+
+     /*点击图片展开*/
+     
+     function shai_image(){
+
+      var src=$(this).attr("src");
+
+      var image="<img src='"+src+"' width=100%>";
+
+      $("#content").css("opacity","0.3");
+
+      $(".head").css("opacity","0.3");
+
+      $("nav").css("opacity","0.3");
+
+      $(".shai_image").html(image);
+
+      $(".shai_image").show();
+
+      $(".shai_image img").click(shai_image_hide);
+ 
+
+      }   
+
+     /*点击隐藏图片*/ 
+
+     function shai_image_hide(){
+
+      
+
+      $("#content").css("opacity","1");
+
+      $(".head").css("opacity","1");
+
+      $("nav").css("opacity","1");
+
+      //$(".shai_image").remove("img");
+
+     // $(".shai_image").hide();
+
+
+
+
+     }
+
+
+
+     /*获取关注者函数*/
+  function get_instersters(){
+
+      	$("nav a").removeClass("on");
+
+      	$("#guanzhu").addClass("on");
+
+      	$("input[name='way']").val("1");
+
+      	$("input[name='page']").val("1");
+
+
+      	$(this).addClass("on");
+
+      	var page=$("input[name='page']").val();
+
+      	var user_id={$member_info.member_id};
+
+        $.ajax({
+
+           url:"__URL__/insterst_member_api",
+
+           type:"post",
+
+           data:{username:username,key:key,page:page},
+
+           dataType:"json",
+
+           success:function(data){
+
+               if(data.code==200){
+
+               	 $("#content").html('');
+
+               	 $("#content").removeClass("shai huodong pinglun guanzhu");
+
+               	 $("#content").addClass("guanzhu");
+
+                 $("input[name='page']").val(page*1+1*1);
+
+                 for(var i=0;i<data.content.length;i++){
+
+                 	if(data.content[i].member_avatar==null||data.content[i].member_avatar=="null"||data.content[i].member_avatar==undefined){
+
+                     $("#content").append("<li id='"+data.content[i].member_id+"'><img src='/data/upload/shop/avatar/nopic.jpg' width=78 height=78><h5>"+data.content[i].member_name+"</h5><p>"+data.content[i].rank+"</p><p>"+data.content[i].guanzhu+"关注</p><div class='"+data.content[i].member_id+"'><img src='_IMG_/xinl.png'><p>已关注</p></div></li>");
+
+                 	}else{
+                 
+                      $("#content").append("<li id='"+data.content[i].member_id+"'><img src='/data/upload/shop/avatar/"+
+                   	 data.content[i].member_avatar
+                    	+"' width=78 height=78><h5>"+data.content[i].member_name+"</h5><p>"+data.content[i].rank+"</p><p>"+data.content[i].guanzhu+"关注</p><div class='"+data.content[i].member_id+"'><img src='_IMG_/xinl.png'><p>已关注</p></div></li>");
+                     }
+
+                 }
+
+                 //$(window).scroll(get_more);
+
+               }else{
+				   
+				  alert(data.code); 
+				   
+				   }
+            
+
+           }
+
+        })
+
+      } 
+
+      function get_instersters_more(){
+
+
+      	var page=$("input[name='page']").val();
+
+      	var user_id={$member_info.member_id};
+
+        $.ajax({
+
+           url:"__URL__/insterst_member_api",
+
+           type:"post",
+
+           data:{username:username,key:key,page:page},
+
+           dataType:"json",
+
+           success:function(data){
+
+               if(data.code==200){
+
+               	 //$("#content").html('');
+
+               	 $("#content").removeClass("shai huodong pinglun guanzhu");
+
+               	 $("#content").addClass("guanzhu");
+
+                 $("input[name='page']").val(page*1+1*1);
+
+                 for(var i=0;i<data.content.length;i++){
+
+                 	if(data.content[i].member_avatar==null||data.content[i].member_avatar=="null"||data.content[i].member_avatar==undefined){
+
+                     $("#content").append("<li id='"+data.content[i].member_id+"'><img src='/data/upload/shop/avatar/nopic.jpg' width=78 height=78><h5>"+data.content[i].member_name+"</h5><p>"+data.content[i].rank+"</p><p>"+data.content[i].guanzhu+"关注</p><div class='"+data.content[i].member_id+"'><img src='_IMG_/xinl.png'><p>已关注</p></div></li>");
+
+                 	}else{
+                 
+                      $("#content").append("<li id='"+data.content[i].member_id+"'><img src='/data/upload/shop/avatar/"+
+                   	 data.content[i].member_avatar
+                    	+"' width=78 height=78><h5>"+data.content[i].member_name+"</h5><p>"+data.content[i].rank+"</p><p>"+data.content[i].guanzhu+"关注</p><div class='"+data.content[i].member_id+"'><img src='_IMG_/xinl.png'><p>已关注</p></div></li>");
+                     }
+
+                 }
+
+                 //$(".guanzhu li div").click(move_instersters);
+
+                 //$(window).scroll(get_more);
+
+               }else{
+				   
+				  $(".showmsg").html(data.content);
+
+                $("#content").css("opacity","0.3");
+
+                $(".showmsg").show();
+
+                setTimeout(function(){
+               
+                $(".showmsg").hide();
+
+                $("#content").css("opacity","1");
+
+                },3000)
+
+
+
+				   
+				   }
+            
+
+           }
+
+        })
+
+      } 
+
+    })    
+</script>
+</head>
+<body>
+<div class="head">
+<img src="/data/upload/shop/avatar/{$member_info.member_avatar}" style="border:1px solid;border-radius:55px;">
+<p>{$member_info.member_name}</p>
+</div>
+<nav>
+<a class="on" id="guanzhu">关注<span></span></a>
+<a id="share">晒一晒</a>
+<a id="huodong">活动</a>
+<a id="pinglun">评论<mark></mark></a>
+</nav>
+<input type="hidden" name="page" value="1">
+<!--用于判断哪个方式获取-->
+<input type="hidden" name="way" value="1">
+<ul class="guanzhu" id="content">
+</ul>
+<div id="nav">
+<a href="javaScript:window.history.back();"><img src="_IMG_/fanhui.png"></a><a href="#"><img src="_IMG_/tuichu.png"></a>
+</div>
+<div class="showmsg" style="width:100%;height:30px;background:red;color:#FFF;text-align:center;line-height:30px;display:none;position:fixed;top:40%;left:0;"></div>
+<div class="shai_image" style="width:100%;height:auto;color:white;text-align:center;line-height:30px;display:none;position:fixed;top:30%;left:0;"></div>
+<div class="change" style="display:none;position:fixed;top:0px;left:0px;z-index:999">
+   <link href="_CSS_/shequ.css" type="text/css" rel="stylesheet">
+   <link href="_CSS_/huodong.css" type="text/css" rel="stylesheet">
+</div>
+
+<div class="form" style="width:100%;height:110px;color:white;text-align:center;display:none;position:fixed;top:40%;left:0;border-top:1px solid #CCC;border-bottom:1px solid #CCC;z-index:999;background:#FFF;color:#000">
+   <div class="replay_to" style="height:20px;display:inline-block;width:50%;text-align:left"></div>
+   <div class="close" style="height:20px;display:inline-block;width:40%;text-align:right;color:#F00">X</div>
+   <textarea class="comment" style="width:100%;height:50px"></textarea>
+   <botton class="sub">提交</botton>
+</div>
+
+</body>
+</html>

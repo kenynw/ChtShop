@@ -1,0 +1,39 @@
+2015-06-25 10:34:52, INFO, ::1, File[ D:\wamp\www\shopnc\mobile\api\payment\yinlian\yinlian.php ], Line[26]------ ============处理前台请求开始=============== 
+2015-06-25 10:34:53, INFO, ::1, File[ D:\wamp\www\shopnc\mobile\api\payment\yinlian\yinlian.php ], Line[53]------ =====签名报文开始====== 
+2015-06-25 10:34:53, INFO, ::1, File[ D:\wamp\www\shopnc\mobile\api\payment\yinlian\yinlian.php ], Line[59]------ 签名key=val&...串 >accessType=0&backUrl=http://114.82.43.123/upacp_sdk_php/demo/utf8/BackReceive.php&bizType=000201&certId=124876885185794726986301355951670452718&channelType=08&currencyCode=156&defaultPayType=0001&encoding=utf-8&frontUrl=http://localhost:8085/upacp_sdk_php/demo/utf8/FrontReceive.php&merId=898350254993124&orderId=640487441943987002&reqReserved= 透传信息&signMethod=01&txnAmt=9900&txnSubType=01&txnTime=20150625103453&txnType=01&version=5.0.0 
+2015-06-25 10:34:53, INFO, ::1, File[ D:\wamp\www\shopnc\mobile\api\payment\yinlian\yinlian.php ], Line[62]------ 摘要sha1x16 >82dea8084f7500557f55954fed3a6fe50b732ce9 
+2015-06-25 10:34:54, INFO, ::1, File[ D:\wamp\www\shopnc\mobile\api\payment\yinlian\yinlian.php ], Line[74]------ 签名串为 >dcZ3Cjpea5eiMwnOIxcoE0hVwV+O3EQhg8KZUXb3/IJVNhEBaFoAHBqycEHj4mjC0+DJFcV+zeg99LjXtmVPCoRdtcDY1Yrm73y+xFITAWiMGBhFs7m4TysEe4G1GH/apS3kRq6wS61TRvbah9jDvbqdAVpAUKwPmS190TQzxeI= 
+2015-06-25 10:34:54, INFO, ::1, File[ D:\wamp\www\shopnc\mobile\api\payment\yinlian\yinlian.php ], Line[79]------ =====签名报文结束====== 
+2015-06-25 10:34:54, INFO, ::1, File[ D:\wamp\www\shopnc\mobile\api\payment\yinlian\yinlian.php ], Line[83]------ 前台请求地址为>https://101.231.204.80:5000/gateway/api/frontTransReq.do 
+2015-06-25 10:34:54, INFO, ::1, File[ D:\wamp\www\shopnc\mobile\api\payment\yinlian\yinlian.php ], Line[87]------ -------前台交易自动提交表单>--begin---- 
+2015-06-25 10:34:54, INFO, ::1, File[ D:\wamp\www\shopnc\mobile\api\payment\yinlian\yinlian.php ], Line[88]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body  onload="javascript:document.pay_forms.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="certId" id="certId" value="124876885185794726986301355951670452718" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_sdk_php/demo/utf8/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://114.82.43.123/upacp_sdk_php/demo/utf8/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="898350254993124" />
+    <input type="hidden" name="orderId" id="orderId" value="640487441943987002" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150625103453" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="9900" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="reqReserved" id="reqReserved" value=" 透传信息" />
+    <input type="hidden" name="signature" id="signature" value="dcZ3Cjpea5eiMwnOIxcoE0hVwV+O3EQhg8KZUXb3/IJVNhEBaFoAHBqycEHj4mjC0+DJFcV+zeg99LjXtmVPCoRdtcDY1Yrm73y+xFITAWiMGBhFs7m4TysEe4G1GH/apS3kRq6wS61TRvbah9jDvbqdAVpAUKwPmS190TQzxeI=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-06-25 10:34:54, INFO, ::1, File[ D:\wamp\www\shopnc\mobile\api\payment\yinlian\yinlian.php ], Line[89]------ -------前台交易自动提交表单>--end------- 
+2015-06-25 10:34:54, INFO, ::1, File[ D:\wamp\www\shopnc\mobile\api\payment\yinlian\yinlian.php ], Line[90]------ ============处理前台请求 结束=========== 

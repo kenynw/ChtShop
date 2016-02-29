@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>客户服务管理后台-修改管理员信息</title>
+<link rel="stylesheet" type="text/css" href="_CSS_/admin.css" />
+<script type="text/javascript" src="_JS_/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="_JS_/formValidatorRegex.js"></script>
+<script type="text/javascript" src="_JS_/formValidator.js"></script>
+<link rel="stylesheet" type="text/css" href="_JS_/validator.css" />
+</head>
+<style type="text/css">
+.col_one{
+	display:inline-block;
+	border:1px solid #fbaa01;
+	background-color:#fbaa01;
+	color:white;
+	padding:5px;
+}
+.admin_box input,select{
+	margin-bottom:10px;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$.formValidator.initConfig({formID:"myForm",debug:false,submitOnce:false,
+		onError:function(msg,obj,errorlist){
+			alert(msg);
+		},
+	});
+	
+	$("#login_name").formValidator({onShow:"请输入用户名",onFocus:"用户名长度不小于3",onCorrect:"填写正确"})
+	.inputValidator({min:"3",onError:"用户名长度不小于3"});
+	
+	$("#password").formValidator({onShow:"请输入密码",onFocus:"密码长度不小于6",onCorrect:"填写正确"})
+	.inputValidator({min:"6",onError:"密码长度不小于6"});
+})
+</script>
+<body>
+<include file="Public/menu" />
+<div class="admin_box">
+<form action="{:U('Admin/update_db')}" method="post" id="myForm">
+<input type="hidden" value="{$data.id}" name="id"/>
+姓名:<input type="text" name="login_name" value="{$data.login_name}" id="login_name" maxlength="10"/>
+<span id="login_nameTip"></span>
+<br>
+密码:<input type="password" value="{$data.password}" name="password" id="password" maxlength="20"/>
+<span id="passwordTip"></span>
+<br>
+类型:
+<select name="admin_type">
+<if condition="$data.admin_type eq 2">
+<option value="2" selected="selected">普通管理员</option>
+<option value="3">信息发布员</option>
+<else/>
+<option value="3" selected="selected">信息发布员</option>
+<option value="2">普通管理员</option>
+</if>
+</select><br>
+状态:
+<select name="admin_status">
+<if condition="$data.admin_status eq 1">
+<option value="1" selected="selected">启用</option>
+<option value="0">禁用</option>
+<else/>
+<option value="0" selected="selected">禁用</option>
+<option value="1">启用</option>
+</if>
+</select><br>
+<input type="submit" value="提交"/>
+</form>
+</div>
+</body>
+</html>
