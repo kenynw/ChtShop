@@ -125,6 +125,3 @@ define('ORDER_DEL_STATE_DROP', 2);
 define('ORDER_EVALUATE_TIME', 1296000);
 //抢购订单状态
 define('OFFLINE_ORDER_CANCEL_TIME', 3);//单位为天add
-
-
-
