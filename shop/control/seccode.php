@@ -17,10 +17,13 @@ class seccodeControl{
 	public function makecodeOp(){
 		$refererhost = parse_url($_SERVER['HTTP_REFERER']);
 		$refererhost['host'] .= !empty($refererhost['port']) ? (':'.$refererhost['port']) : '';
+
 		$seccode = makeSeccode($_GET['nchash']);
+
 		@header("Expires: -1");
 		@header("Cache-Control: no-store, private, post-check=0, pre-check=0, max-age=0", FALSE);
 		@header("Pragma: no-cache");
+
 		$code = new seccode();
 		$code->code = $seccode;
 		$code->width = 90;
