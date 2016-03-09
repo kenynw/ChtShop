@@ -1,4 +1,4 @@
- <?php
+<?php
 /**
  * 前台control父类,店铺control父类,会员control父类
  *
