@@ -101,9 +101,9 @@ URL: act=login&op=register_api
 ### 3.第三方登录
 URL: act=login&op=register_api  
 参数：
->key  shopNC的MD5值，固定为『804451dc13014b1c785fb73b1617b760』
->client   客户端类型，可选：android，ios，web
->op   第三方类型，可选：sina,wechat,qq
+>key  shopNC的MD5值，固定为『804451dc13014b1c785fb73b1617b760』     
+>client   客户端类型，可选：android，ios，web   
+>op   第三方类型，可选：sina,wechat,qq  
 >openid   第三方授权返回的唯一标识,如微博登录的Uid，腾讯的openId
 
 返回： 
