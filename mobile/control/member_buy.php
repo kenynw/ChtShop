@@ -76,25 +76,47 @@ class member_buyControl extends mobileMemberControl {
         //整理数据
         $store_cart_list = array();
         foreach ($result['store_cart_list'] as $key => $value) {
-            $store_cart_list[$key]['goods_list'] = $value;
-            $store_cart_list[$key]['store_goods_total'] = $result['store_goods_total'][$key];
-            if(!empty($result['store_premiums_list'][$key])) {
-                $result['store_premiums_list'][$key][0]['premiums'] = true;
-                $result['store_premiums_list'][$key][0]['goods_total'] = 0.00;
-                $store_cart_list[$key]['goods_list'][] = $result['store_premiums_list'][$key][0];
-            }
-            $store_cart_list[$key]['store_mansong_rule_list'] = $result['store_mansong_rule_list'][$key];
-            $store_cart_list[$key]['store_voucher_list'] = $result['store_voucher_list'][$key];
-            if(!empty($result['cancel_calc_sid_list'][$key])){
-                $store_cart_list[$key]['freight'] = '0';
-                $store_cart_list[$key]['freight_message'] = $result['cancel_calc_sid_list'][$key]['desc'];
+            if(isset($_POST['version']) && $_POST['version'] > 1) {
+                $store_cart_list[]['goods_list'] = $value;
+                $store_cart_list[]['store_goods_total'] = $result['store_goods_total'][$key];
+                if(!empty($result['store_premiums_list'][$key])) {
+                    $result['store_premiums_list'][$key][0]['premiums'] = true;
+                    $result['store_premiums_list'][$key][0]['goods_total'] = 0.00;
+                    $store_cart_list[]['goods_list'][] = $result['store_premiums_list'][$key][0];
+                }
+                $store_cart_list[]['store_mansong_rule_list'] = $result['store_mansong_rule_list'][$key];
+                $store_cart_list[]['store_voucher_list'] = $result['store_voucher_list'][$key];
+                if(!empty($result['cancel_calc_sid_list'][$key])){
+                    $store_cart_list[]['freight'] = '0';
+                    $store_cart_list[]['freight_message'] = $result['cancel_calc_sid_list'][$key]['desc'];
+                } else {
+                    $store_cart_list[]['freight'] = '1';
+                }
+                /*代金券 add by lai<<*/
+                $store_cart_list[]['voucher_list']=array_values($result['store_voucher_list'][$key]);
+                /*代金券>>*/
+                $store_cart_list[]['store_name'] = $value[0]['store_name'];
             } else {
-                $store_cart_list[$key]['freight'] = '1';
+                $store_cart_list[$key]['goods_list'] = $value;
+                $store_cart_list[$key]['store_goods_total'] = $result['store_goods_total'][$key];
+                if(!empty($result['store_premiums_list'][$key])) {
+                    $result['store_premiums_list'][$key][0]['premiums'] = true;
+                    $result['store_premiums_list'][$key][0]['goods_total'] = 0.00;
+                    $store_cart_list[$key]['goods_list'][] = $result['store_premiums_list'][$key][0];
+                }
+                $store_cart_list[$key]['store_mansong_rule_list'] = $result['store_mansong_rule_list'][$key];
+                $store_cart_list[$key]['store_voucher_list'] = $result['store_voucher_list'][$key];
+                if(!empty($result['cancel_calc_sid_list'][$key])){
+                    $store_cart_list[$key]['freight'] = '0';
+                    $store_cart_list[$key]['freight_message'] = $result['cancel_calc_sid_list'][$key]['desc'];
+                } else {
+                    $store_cart_list[$key]['freight'] = '1';
+                }
+                /*代金券 add by lai<<*/
+                $store_cart_list[$key]['voucher_list']=array_values($result['store_voucher_list'][$key]);
+                /*代金券>>*/
+                $store_cart_list[$key]['store_name'] = $value[0]['store_name'];
             }
-            /*代金券 add by lai<<*/
-            $store_cart_list[$key]['voucher_list']=array_values($result['store_voucher_list'][$key]);
-            /*代金券>>*/
-            $store_cart_list[$key]['store_name'] = $value[0]['store_name'];
         }
 
         $buy_list = array();
