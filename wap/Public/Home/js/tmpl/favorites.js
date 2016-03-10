@@ -4,8 +4,9 @@ $(function(){
 		location.href = 'login.html';
 	}
 	if(navigator.userAgent.indexOf("android")!=-1||navigator.userAgent.indexOf("ios")!=-1){
-				$("#header").css("display","none");	
-				//$(".nav1").css("display","none");	
+				$("#header").css("display","none");
+                $("header").css("display","none");
+        //$(".nav1").css("display","none");
 	  }	
 	//初始化页面
 	function initPage(){

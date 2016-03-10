@@ -68,6 +68,12 @@ $(function(){
 				//待评论
 				$("#uncomment").click(uncomment);
 				//end
+				//隐藏微信
+				//$("#wxpay").css("display","none");
+				var navi = navigator.userAgent;	           
+               if(navi.indexOf("android")!=-1||navi.indexOf("ios")!=-1){		
+		         $("#wxpay").css("display","none");
+                }  
 	
                 $('.viewdelivery-order').click(viewOrderDelivery);
 
@@ -96,6 +102,7 @@ $(function(){
                 $.each((result && result.datas && result.datas.payment_list) || [], function(k, v) {
                     // console.log(v);
                     if (v != '') {
+						
                         readytopay = true;
                         return false;
                     }
@@ -105,6 +112,8 @@ $(function(){
 	}
 	//初始化页面
 	initPage(page,curpage);
+	//隐藏app 微信支付
+	
 
 	//下一页
 	function nextPage (){

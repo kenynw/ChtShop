@@ -154,13 +154,14 @@ $(function() {
             z: 0
         };
     })();
-
+	
 	$.ajax({//提交订单信息
 		type:'post',
 		url:ApiUrl+'/index.php?act=member_buy&op=buy_step1',
 		dataType:'json',
 		data:data,
 		success:function(result){
+			
 			var data = result.datas;
 			if(typeof(data.error )!='undefined'){
 				location.href = WapSiteUrl;
@@ -322,7 +323,6 @@ $(function() {
 					}
 				}
 			});
-
 
 			$('select[name=voucher]').change(function(){//选择代金券
 				var store_id = $(this).attr('store_id');
