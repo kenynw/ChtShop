@@ -9,7 +9,7 @@ return array (
 				'_JS_' => __ROOT__ . '/Public/' . MODULE_NAME . '/js',
 				'_ADMIN_' => __ROOT__ . '/Public/' . MODULE_NAME,
 				'_DATA_' => __ROOT__ . '/Data' ,
-				'_SHOP_' =>"http://192.168.0.130/shopnc",
+				'_SHOP_' =>"",
 		),
 		'SESSION_OPTIONS' => array('path'=>'../data/session/') 
 );
