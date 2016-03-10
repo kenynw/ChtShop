@@ -374,7 +374,7 @@ class IndexController extends Controller {
 			}
 		/*商品评论暂时不写，在表33hao_evaluate_goods中，暂时不知道怎么存的*/	
 		$info['goods_attr']=$array;	
-		$this->assign('goods_info',$info);
+		$this->assign('info',$info);
 		$this->assign('brand_name',$brandname['brand_name']);
 		$this->assign('evals',$eval);
 		$this->display('good');		 
