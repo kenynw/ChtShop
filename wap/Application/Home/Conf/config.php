@@ -9,7 +9,7 @@ return array (
 				'_JS_' => __ROOT__ . '/Public/' . MODULE_NAME . '/js',
 				'_ADMIN_' => __ROOT__ . '/Public/' . MODULE_NAME,
 				'_DATA_' => __ROOT__ . '/Data' ,
-				'_SHOP_' =>"",
+				'_SHOP_' =>"http://www.chahuitong.com",
 		),
 		'SESSION_OPTIONS' => array('path'=>'../data/session/') 
 );
