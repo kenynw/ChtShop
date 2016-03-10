@@ -10,7 +10,6 @@
 <link href="_CSS_/brand.css" type="text/css" rel="stylesheet">
 <style>
     #.scroll a{color:black}
-	marquee a{color:#000;}
 </style>
 <script type="text/javascript" src="_JS_/jquery-1.7.1.min.js"></script>
 <script type="text/javascript">
@@ -20,7 +19,10 @@
 	          {catId:{$catId}},
 			  function(data){
 				  var json=eval(data.content.brands);
-                  $("#scroll").html('<a href="'+data.content.adv.goods_link+'">'+data.content.adv.slogan+'</a>')
+                  $("#scroll").html('');
+                  if(data.content.adv) {
+                      $("#scroll").html('<a href="' + data.content.adv.goods_link + '">' + data.content.adv.slogan + '</a>')
+                  }
 				  //alert()				  
 				  var html='';
 				   for(var i=0;i<=json.length;i++){				   				  
@@ -46,7 +48,9 @@
 				  $(".type").html(name);
 				  var json=eval(data.content.brands);
                   $("#scroll").html('');
-                  $("#scroll").html(data.content.adv.slogan)
+                  if(data.content.adv) {
+                      $("#scroll").html('<a href="' + data.content.adv.goods_link + '">' + data.content.adv.slogan + '</a>')
+                  }
 				  $(".brand").html('<span class="loading"><img src="_SHOP_/wap/Public/Home/img/loader.gif" width="16px" height="16px"></span>');
 				  for(var i=0;i<=json.length;i++){	
 				     $(".loading").remove();  
