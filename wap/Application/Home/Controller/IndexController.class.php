@@ -430,7 +430,7 @@ class IndexController extends Controller
         $this->assign('info', $info);
         $this->assign('brand_name', $brandname['brand_name']);
         $this->assign('evals', $eval);
-        $this->display('goods');
+        $this->display('good');
     }
 
     //登陆页
