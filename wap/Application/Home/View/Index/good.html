@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>产品详情</title><meta name="keywords" content="茶汇通,普洱,普洱茶,茶">
-<meta name="description" content="茶汇通">
-<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>产品详情</title>
+	<meta name="keywords" content="茶汇通,普洱,普洱茶,茶">
+	<meta name="description" content="茶汇通">
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 <link href="_CSS_/class.css" type="text/css" rel="stylesheet">
 <link href="_CSS_/details.css" type="text/css" rel="stylesheet">
 </head>
@@ -15,7 +16,6 @@
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></div>
 <div id="product_detail_wp"></div>
 
-<script type="text/html" id="product_detail">
 <header id="header">
 <a href="javaScript:window.history.back();"><img src="_IMG_/fanhui.png"></a><h5 style="width:70%;height:30px;text-align:center;overflow:hidden;display:inline-block"><%=goods_info.goods_name%></h5>
 <a href="http://www.chahuitong.com/wap"><img src="_IMG_/home.png"></a>
@@ -32,7 +32,7 @@
 						   <%}%>
 </ul>
 </div>
-</div>			
+</div>
 <h5><%=goods_info.goods_name%></h5>
 <input type="hidden" class="buy-num fleft" id="buynum" value="1"/>
 <div class="xiaol">
@@ -83,7 +83,7 @@
                                <div class="title">
 								<a href="goods?goods_id=<%=goods_commend_list[i].goods_id%>">
 									<img src="<%=goods_commend_list[i].goods_image_url%>">
-									
+
 										<p><%=goods_commend_list[i].goods_name%></p>
 									</div>
 									<div class="jiage">
@@ -101,7 +101,6 @@
 <a href="#" class="buy-now">立即购买<img src="_IMG_/shop.png"></a>
 </nav>
 
-</script>
 <style>
 #fanhuitop{position:fixed;right:20px;bottom:100px;display:none;}
 #fanhuitop img{width:36px;}
@@ -114,10 +113,10 @@
       <script type="text/javascript" src="_JS_/jquery-ui.js"></script>
     <script src="_JS_/TouchSlide.1.1.js"></script>
 	<script type="text/javascript" src="_JS_/common.js"></script>
-	<script type="text/javascript" src="_JS_/tmpl/common-top.js"></script>	
+	<script type="text/javascript" src="_JS_/tmpl/common-top.js"></script>
 	<script type="text/javascript" src="_JS_/tmpl/product_detail.js"></script>
 	<script>
-	
+
 	window.onload=function(){
 	$(".xq p").each(function(){
 	var text=$(this).html();
@@ -137,7 +136,7 @@
 	fanhuitop.onclick=function(){
 		document.body.scrollTop=0;
 	}
-	
+
     };
 	</script>
 <script>
@@ -145,11 +144,11 @@ var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "//hm.baidu.com/hm.js?9a15ea23e7316c631085bb3ef722599a";
-  var s = document.getElementsByTagName("script")[0]; 
+  var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
 </body>
-	
+
 
 </html>
