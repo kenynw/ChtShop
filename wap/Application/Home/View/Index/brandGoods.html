@@ -178,7 +178,12 @@
 <a href="__URL__/goods?goods_id={$value.goods_id}"><img src="_SHOP_/data/upload/shop/store/goods/{$value.store_id}/{$value.goods_image}"><h3 style="font-weight:500">{$value.goods_name}</h3></a>
 </div>
 <div class="jiage">
-<mark>￥{$value.goods_price}</mark><a href="__URL__/goods?goods_id={$value.goods_id}"><img src="_IMG_/you.png"></a>
+    <if condition="$value.goods_promotion_price neq ''">
+        <mark>￥{$value.goods_promotion_price}</mark>
+        <else/>
+        <mark>￥{$value.goods_price}</mark>
+    </if>
+    <a href="__URL__/goods?goods_id={$value.goods_id}"><img src="_IMG_/you.png"></a>
 </div>
 </div>
 </volist>
