@@ -70,49 +70,9 @@ class IndexController extends Controller
 
             $array['content'] = $goods;
 
-            $array['msg'] = '暂无数据';
-
         }
         echo json_encode($array);
 
-    }
-
-    //首页商品api修改版,同homePromotionGoods,为了不影响之前app导致闪退重新写个接口
-    public function home_promotion_goods()
-    {
-
-        //刷选商品，暂定，限时特购商品
-        $xianshi = M("p_xianshi_goods");
-
-        $goods = $xianshi->where("state='1' and start_time<'" . time() . "' and end_time>'" . time() . "'")->order("`xianshi_goods_id` desc")->limit("1")->select();
-
-        //print_r($goods);
-
-        $goods_id = $goods[0]['goods_id'];
-
-        $fav = M("favorites");
-
-        $info = $fav->where("fav_id='$goods_id'")->count();
-
-        //echo $info;
-
-        $goods[0]['fav'] = $info;
-
-        /*yincang447*/
-        $goods[0]['xianshi_price'] = '';
-        /*yicang447*/
-        //print_r($goods);
-
-        $result = array();
-        if (reset($goods)) {
-            $result['code'] = 200;
-            $result['content'] = reset($goods);
-        } else {
-            $result['code'] = 404;
-            $result['msg'] = '暂无数据';
-        }
-
-        echo json_encode($result);
     }
 
 
@@ -154,23 +114,30 @@ class IndexController extends Controller
     /*首页图片api*/
     public function homepic_api()
     {
+
         $homeModel = M("home_pic");
+
         $pics = $homeModel->where("state='1' and location='1'")->select();
+
         $array = array();
+
         if ($pics) {
-            $tempAraay = array();
-            foreach ($pics as $pic) {
-                $location = strripos($pic['image'], "/");;
-                $pic['image'] = substr($pic['image'], $location + 1);
-                $tempAraay[] = $pic;
-            }
+
             $array['code'] = 200;
-            $array['content'] = $tempAraay;
+
+            $array['content'] = $pics;
+
         } else {
+
             $array['code'] = 200;
+
             $array['content'] = '获取图片失败';
+
+
         }
+
         echo json_encode($array);
+
     }
 
     /*商城首页图片*/
@@ -417,12 +384,8 @@ class IndexController extends Controller
         //print_r($info);
         $array = array();
         foreach (unserialize($info['goods_attr']) as $v) {
-            //过长不显示
-            $attrArray = array_values($v);
-            if (strlen($attrArray[1]) < 12) {
-                $array[] = $attrArray;
-            }
 
+            $array[] = array_values($v);
 
         }
         /*商品评论暂时不写，在表33hao_evaluate_goods中，暂时不知道怎么存的*/
@@ -478,30 +441,53 @@ class IndexController extends Controller
     public function member()
     {
 
-        if (isset($_COOKIE['key'])) {
+        if (isset($_COOKIE['key']) && isset($_COOKIE['username'])) {
+
             $token = M('mb_user_token');
+
+            $name = $_COOKIE['username'];
+
             $key = $_COOKIE['key'];
+
             $userinfo = $token->field("member_id")->where("`token`='$key'")->find();
+
             /*用户信息*/
             $member = M('member');
+
             $userinfo = $member->where("member_id='{$userinfo['member_id']}'")->find();
+
             //print_r($userinfo);
+
             //查询订单数量
+
             $order = M('order');
+
             $time = time();
+
             $ordernumber = $order->where("order_state='10' and buyer_id='{$userinfo['member_id']}'")->count();
+
             //信息数目
+
             $message = M("message");
+
             $messagecount = $message->where("`to_member_id`='{$userinfo['member_id']}' and message_state='0'")->count();
+
             //购物车数量
+
             $cart = M('cart');
+
             $cartnumber = $cart->where("buyer_id='{$userinfo['member_id']}'")->count();
+
+
             $this->assign('cartnumber', $cartnumber);
             $this->assign('messagecount', $messagecount);
             $this->assign('ordernumber', $ordernumber);
             $this->assign('userinfo', $userinfo);
+
         }
+
         $this->display();
+
     }
 
     //搜索页面
@@ -741,7 +727,8 @@ class IndexController extends Controller
         $this->display();
     }
 
-    // ajax获取品牌
+    /*ajax获取品牌*/
+
     public function brandAjax()
     {
         $catId = isset($_POST['catId']) && is_numeric($_POST['catId']) ? $_POST['catId'] : 1;
@@ -2832,7 +2819,7 @@ class IndexController extends Controller
         $data = array();
         if (intval($member_id) <= 0) {
             $data['code'] = 404;
-            $data['msg'] = '还未登陆';
+            $data['content'] = '还未登陆';
             echo json_encode($data);
             die();
         }
@@ -2843,7 +2830,7 @@ class IndexController extends Controller
             $voucher = $voucherModel->where("voucher_owner_id='{$member_id}'")->select();
         }
         $data['code'] = 200;
-        $data['data'] = $voucher;
+        $data['content'] = $voucher;
         echo json_encode($data);
 
     }
@@ -3280,31 +3267,5 @@ class IndexController extends Controller
         echo json_encode($array);
     }
 
-    public function activity_enroll()
-    {
-        $activity_id = isset($_GET['activity_id']) ? $_GET['activity_id'] : 1;
-        $this->assign('activity_id', $activity_id);
-        $this->display();
-    }
-
-    public function activity_vote()
-    {
-        $activity_id = isset($_GET['activity_id']) ? $_GET['activity_id'] : 1;
-        $this->assign('activity_id', $activity_id);
-        $this->display();
-    }
-
-    public function activity_list()
-    {
-        $activity_id = isset($_GET['activity_id']) ? $_GET['activity_id'] : 1;
-        $this->assign('activity_id', $activity_id);
-        $this->display();
-    }
-
-    /*商品详细页面用于测试*/
-    public function goods_detail()
-    {
-        $this->display();
-    }
 
 }
