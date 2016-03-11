@@ -118,8 +118,6 @@ class homeControl extends mobileHomeControl{
             }
             $data['tastersRecommends'] = isset($tastersTem)? $tastersTem:'';
 
-            echo 'hahah';
-
         }
         //猜你喜欢
         //情形1，未登录

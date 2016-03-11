@@ -9,8 +9,12 @@
 
 <script type="text/javascript">
 <!--
-$(document).ready(function(){	
-  $(".submit").click(function(){
+$(document).ready(function(){
+    if(navigator.userAgent.indexOf("android")!=-1||navigator.userAgent.indexOf("ios")!=-1){
+        $("#header").css("display","none");
+        //$(".nav1").css("display","none");
+    }
+    $(".submit").click(function(){
 	  $pwd=$("input[name='pwd']").val();
 	  $newpwd=$("input[name='newpwd']").val();
 	  $repwd=$("input[name='repwd']").val();
