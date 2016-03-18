@@ -407,7 +407,8 @@ class dateControl extends BaseCronControl {
         $update['evaluation_state'] = 2;
         $update = $model_order->editOrder($update,$condition,1000);
         if (!$update) {
-            $this->log('更新实物订单超期不能评价失败');break;
+            $this->log('更新实物订单超期不能评价失败');
+            return;
         }
 
         //虚拟订单超期未评价自动更新状态，每次最多更新1000个订单
@@ -421,7 +422,8 @@ class dateControl extends BaseCronControl {
         $update['evaluation_state'] = 2;
         $update = $model_order->editOrder($update,$condition,1000);
         if (!$update) {
-            $this->log('更新虚拟订单超期不能评价失败');break;
+            $this->log('更新虚拟订单超期不能评价失败');
+            return;
         }
     }
 
