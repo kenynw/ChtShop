@@ -205,14 +205,12 @@ class homeControl extends mobileHomeControl
             //add ceshi
             output_json(1, $data, '查找成功');
             die();
+        } else if ($data['guess_list']) {
+            output_json(1, $data, '查找成功');
+            die();
         } else {
-            if ($data[guessYouLike]) {
-                output_json(1, $data, '查找成功');
-                die();
-            } else {
-                output_json(0, $data, '已经没有内容了');
-                die();
-            }
+            output_json(0, $data, '已经没有内容了');
+            die();
         }
     }
 

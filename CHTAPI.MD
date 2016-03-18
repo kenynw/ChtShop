@@ -127,8 +127,175 @@ URL: act=login&op=send_sms
 URL: act=home&op=home_page_api  
 参数： 
 
->key  
->page   
+>key    登录令牌,如果用户登录了会根据当前来获取特定的数据
+>page   猜你喜欢的页数
+
+返回:
+
+    {
+        "code": 1,
+        "msg": "查找成功",
+        "data": {
+            "is_login": true,
+            "adds": [
+                {
+                    "id": "14",
+                    "image": "http://www.chahuitong.com/data/upload/mobile/home/1458113957.jpg",
+                    "state": "1",
+                    "order": "1",
+                    "link": "http://www.chahuitong.com/example/web/raiders.html#",
+                    "location": "1"
+                },
+                {
+                    "id": "17",
+                    "image": "http://www.chahuitong.com/data/upload/mobile/home/1458115125.jpg",
+                    "state": "1",
+                    "order": "1",
+                    "link": "http://www.chahuitong.com/example/web/raiders.html#",
+                    "location": "1"
+                }
+            ],
+            "sample_image": "http://www.chahuitong.com/data/upload/mobile/home/1454378839_360.png",
+            "xianshi": {
+                "image": "http://www.chahuitong.com/data/upload/mobile/home/1454378839_360.png",
+                "end_time": "1476220800"
+            },
+            "tasters_list": [
+                {
+                    "goods_id": "101758",
+                    "goods_name": "大益 普洱茶8582 生茶 357g 买二送一",
+                    "goods_image": "2_05060208241996128.png",
+                    "goods_price": "480.00",
+                    "goods_promotion_price": "480.00",
+                    "goods_marketprice": "480.00",
+                    "goods_promotion_type": "0",
+                    "store_id": "2",
+                    "recommend_score": "9",
+                    "recommend_taste": "回甘快",
+                    "recommend_light": "金黄",
+                    "recommend_aroma": "纯正",
+                    "recommend_leaf": "柔匀",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05060208241996128_360.png"
+                },
+                {
+                    "goods_id": "101938",
+                    "goods_name": "中茶 圆茶-丹凤金毫普洱茶（2015年熟茶） 500g",
+                    "goods_image": "2_05059080118293239.jpg",
+                    "goods_price": "968.00",
+                    "goods_promotion_price": "968.00",
+                    "goods_marketprice": "968.00",
+                    "goods_promotion_type": "0",
+                    "store_id": "2",
+                    "recommend_score": "9.5",
+                    "recommend_taste": "醇厚顺滑",
+                    "recommend_light": "红艳",
+                    "recommend_aroma": "浓香",
+                    "recommend_leaf": "红褐",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05059080118293239_360.jpg"
+                },
+                {
+                    "goods_id": "101761",
+                    "goods_name": "大益 06年 7542 生茶 357g 601批 买二送一",
+                    "goods_image": "2_05028028157898086.jpg",
+                    "goods_price": "880.00",
+                    "goods_promotion_price": "880.00",
+                    "goods_marketprice": "880.00",
+                    "goods_promotion_type": "0",
+                    "store_id": "2",
+                    "recommend_score": "9",
+                    "recommend_taste": "回甘持久",
+                    "recommend_light": "金黄",
+                    "recommend_aroma": "纯正持久",
+                    "recommend_leaf": "柔匀",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05028028157898086_360.jpg"
+                },
+                {
+                    "goods_id": "101937",
+                    "goods_name": "中茶 2015年中茶普洱 布朗乔木老树 生茶 357g",
+                    "goods_image": "2_05059062555955369.jpg",
+                    "goods_price": "258.00",
+                    "goods_promotion_price": "258.00",
+                    "goods_marketprice": "258.00",
+                    "goods_promotion_type": "0",
+                    "store_id": "2",
+                    "recommend_score": "8.5",
+                    "recommend_taste": "回甘持久",
+                    "recommend_light": "蜜黄明亮",
+                    "recommend_aroma": "纯正",
+                    "recommend_leaf": "肥厚",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05059062555955369_360.jpg"
+                }
+            ],
+            "guess_list": [
+                {
+                    "goods_id": "101403",
+                    "goods_name": "齐云春 极品特级 藤茶礼盒装 84g",
+                    "goods_image": "2_05062071097871226.png",
+                    "goods_price": "534.00",
+                    "goods_promotion_price": "534.00",
+                    "goods_marketprice": "668.00",
+                    "goods_promotion_type": "0",
+                    "store_id": "2",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05062071097871226_360.png"
+                },
+                {
+                    "goods_id": "101389",
+                    "goods_name": "八马茶业 金骏眉茶叶 八马鸿韵系礼盒 武夷山桐木红茶 148g",
+                    "goods_image": "2_04993692565453067.jpg",
+                    "goods_price": "449.00",
+                    "goods_promotion_price": "449.00",
+                    "goods_marketprice": "449.00",
+                    "goods_promotion_type": "0",
+                    "store_id": "2",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_04993692565453067_360.jpg"
+                },
+                {
+                    "goods_id": "101694",
+                    "goods_name": "寸心草 条型红茶—贵红经典580 250g（5g/泡，50泡）",
+                    "goods_image": "2_05052232720295464.jpg",
+                    "goods_price": "290.00",
+                    "goods_promotion_price": "145.00",
+                    "goods_marketprice": "290.00",
+                    "goods_promotion_type": "1",
+                    "store_id": "2",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05052232720295464_360.jpg"
+                },
+                {
+                    "goods_id": "101697",
+                    "goods_name": "寸心草 尊享 红茶 （赠白瓷套组一套） 200g（5g/泡，40泡）",
+                    "goods_image": "2_05052329724636626.jpg",
+                    "goods_price": "396.00",
+                    "goods_promotion_price": "396.00",
+                    "goods_marketprice": "396.00",
+                    "goods_promotion_type": "0",
+                    "store_id": "2",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05052329724636626_360.jpg"
+                },
+                {
+                    "goods_id": "101404",
+                    "goods_name": "齐云春 皇后鹤红野生红茶礼盒装 240g",
+                    "goods_image": "2_04994394652819856.jpg",
+                    "goods_price": "78.40",
+                    "goods_promotion_price": "78.40",
+                    "goods_marketprice": "98.00",
+                    "goods_promotion_type": "0",
+                    "store_id": "2",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_04994394652819856_360.jpg"
+                },
+                {
+                    "goods_id": "100747",
+                    "goods_name": "醇一杯 2015年 福龙香（黄） 坦洋工夫红茶 400g",
+                    "goods_image": "2_04878541545247904.jpg",
+                    "goods_price": "300.00",
+                    "goods_promotion_price": "300.00",
+                    "goods_marketprice": "300.00",
+                    "goods_promotion_type": "0",
+                    "store_id": "2",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_04878541545247904_360.jpg"
+                }
+            ]
+        }
+    }
 
 ### 6.商品详情
 URL(Get): act=goods&op=goods_detail 
