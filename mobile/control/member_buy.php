@@ -93,6 +93,8 @@ class member_buyControl extends mobileMemberControl {
                 } else {
                     $store['freight'] = '1';
                 }
+                $store_cart_list['store_id'] = $key;
+                $store_cart_list['store_name'] = $value[0]['store_name'];
                 $store_cart_list[] = $store;
             } else {
                 $store_cart_list[$key]['goods_list'] = $value;
