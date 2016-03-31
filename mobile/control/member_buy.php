@@ -88,10 +88,10 @@ class member_buyControl extends mobileMemberControl {
                 $store_list['store_mansong_rule_list'] = $result['store_mansong_rule_list'][$key];
                 $store_list['store_voucher_list'] = $result['store_voucher_list'][$key];
                 if(!empty($result['cancel_calc_sid_list'][$key])){
-                    $store_list['freight'] = '0';
+                    $store_list['freight'] = false;
                     $store_list['freight_message'] = $result['cancel_calc_sid_list'][$key]['desc'];
                 } else {
-                    $store_list['freight'] = '1';
+                    $store_list['freight'] = true;
                 }
                 $store_list['store_id'] = $key;
                 $store_list['store_name'] = $value[0]['store_name'];
