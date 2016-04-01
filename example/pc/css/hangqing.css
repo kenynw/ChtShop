@@ -1,0 +1,23 @@
+.save{width:100%;border-top:1px solid #c9c9c9;}
+.save ul{width:1200px;margin:0 auto;}
+.paixu{border:1px solid #c9c9c9;margin-top:50px;}
+.paixu ul{padding:0 30px;}
+.paixu ul li{border-bottom:1px dashed #c9c9c9;padding:15px 0;position:relative;}
+.paixu label{display:block;font-size:22px;width:90px;position:absolute;left:0px;top:10px;}
+.paixu .list{width:1040px;padding-left:90px;position:relative;}
+.paixu .list span{margin-right:25px;display:inline-block;height:25px;line-height:25px;overflow:hidden;padding:0px 3px;}
+.paixu .pinpai .list{overflow:hidden;}
+.paixu .pinpai .list span{width:68px;}
+.paixu .list span a{padding:0 2px;}
+.paixu .list span.on a{background:#1b8b80;color:#fff;}
+#img{width:17px;height:17px;position:absolute;top:3px;right:0px;}
+.paixu .list input{width:60px;height:25px;margin:0 3px;border:1px solid #c9c9c9;}
+.lister{font-size:14px;text-align:center;margin:36px 0;}
+.lister div{background:#efefef;height:36px;}
+.lister span{display:block;float:left;border:none;width:125px;height:36px;line-height:36px;overflow:hidden;}
+.lister span.name{width:200px;}
+.lister ul li{border-bottom:1px solid #c9c9c9;height:36px;padding:12px 0;}
+.lister ul li span.wt{background:#c9c9c9;width:36px;height:24px;line-height:24px;margin:6px 44px;color:#fff;}
+@media screen\9{
+	.paixu .list{margin-top:-22px;}
+}

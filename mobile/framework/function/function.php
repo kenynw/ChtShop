@@ -55,7 +55,7 @@ function output_json($state = 1, $data = '', $msg = '')
 {
     $datas = array();
     $datas['code'] = $state;
-    $datas['msg'] = $msg;
+    if($msg) $datas['msg'] = $msg;
     //$datas['data'] = (($state == 1) && is_array($data)) ? $data : '';
     if(!empty($data)){
         $datas['data']=$data;

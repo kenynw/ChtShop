@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>茶汇通商城</title>
+<link type="text/css" href="css/class.css" rel="stylesheet">
+<link type="text/css" href="css/shop.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<img src="img/shop.png">
+<input id="search" type="search" placeholder="搜索商品名称、店铺等">
+</header>
+<div id="top">
+<ul></ul>
+<div class="top_list"><ul></ul></div>
+</div>
+<div class="top_shop">
+<div id="chayang">
+<img src="img/shop/shop02.jpg">
+<p>免费茶样领取<p>
+<a href="freetea.html">点击领取</a>
+</div>
+<div id="qianggou">
+<img src="img/shop/shop02.jpg">
+<!-- data-time 属性是设置活动结束时间，时间格式是年/月/日 时:分:秒 -->
+<p id="countdown" data-time="2016/1/15 16:50:00"><span>00</span>:<span>00</span>:<span>00</span></p>
+<a href="qianggou.html">点击抢购</a>
+</div>
+</div>
+<div class="tuijian">
+<h3 class="on">试茶师推荐.<span>对味品鉴</span><a href="tuijian.html"><img src="img/arrow.png"></a></h3>
+<div class="tuijian_img">
+<img src="img/shop/shop03.jpg">
+<div>
+<a href="#"><h1>告别“盲选”</h1>
+<h3>茶艺师为您亲自品尝</h3></a>
+</div>
+</div>
+<div class="tuijia_list">
+<ul id="tuijiaList"></ul>
+</div>
+</div>
+<div class="cai">
+<h3 class="on">猜你喜欢.<span>合适才最好</span><a href="#"><img src="img/arrow.png"></a></h3>
+<ul id="cai"></ul>
+</div>
+<nav>
+<a href="shop.html" class="on"><img src="img/mall.png">商城</a>
+<a href="shequ.html"><img src="img/bbs_g.png">论坛</a>
+<a href="shopcar.html"><img src="img/shopcar_g.png">购物车</a>
+<a href="user.html"><img src="img/wode_g.png">个人中心</a>
+</nav>
+<script src="js/mj.js"></script>
+<script src="js/lunbo.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/jq.js"></script>
+<script>
+var key = getCookie('key');
+$.ajax({
+	url:'http://www.chahuitong.com/mobile/index.php?act=home&op=home_page_api',
+	type:'POST',
+	data:{key:key},
+	dataType:"json",
+	success: function(data){
+		var top = data.data.carouselFigure;
+		for(var i in top){
+			$('#top ul').eq(0).html($('#top ul').html() + '<li><a href="'+ top[i].link +'#"><img src="'+ top[i].image +'"></a></li>');
+		}
+		lunbo('top',3000,W);
+		$('#chayang img').attr('src',data.data.goodsSample.bmiddle_pic);
+		$('#qianggou img').attr('src',data.data.flashSale.goods_image.bmiddle_pic);
+		$('#countdown').attr('data-time',data.data.flashSale.end_time);
+		daojishi('countdown','span');
+		var tuijian = data.data.tastersRecommends;
+		for(var j in tuijian){
+			$('#tuijiaList').html($('#tuijiaList').html() + '<li><a href="http://www.chahuitong.com/wap/index.php/Home/Index/goods?goods_id=' + tuijian[j].goods_id + '"><img src="' + tuijian[j].goods_image.bmiddle_pic + '"><h5>' + tuijian[j].goods_name + '</h5><p><img src="img/wuxing.png">综合评分<span>' + tuijian[j].recommend_score + '</span>分</p></a></li>');
+		}
+		tuijianL();
+		var cai = data.data.guessYouLike;
+		for(j in cai){
+			$('#cai').html($('#cai').html() + '<li><a href="http://www.chahuitong.com/wap/index.php/Home/Index/goods?goods_id=' + cai[j].goods_id + '"><img src="' + cai[j].goods_image.bmiddle_pic + '" class="shop_img"><p>' + cai[j].goods_name + '</p><h5>￥' + cai[j].goods_promotion_price + '<span><img src="img/weizhi.png">云南</span></h5></a></li>');
+		}
+	}
+});
+window.addEventListener('load',function(){
+	//var shopImgWidth = parseInt(cN('shop_img')[0].offsetWidth);
+	var W = document.body.clientWidth > 640 ? 640 : document.body.clientWidth;
+	var height = W / 750 * 529;
+	//css(cN('shop_img'),{height:shopImgWidth + 'px'});
+	id('top').style.height = height + 'px';
+	css(tag('ul',id('top'))[0],{height:height + 'px'});
+	//css(tag('li',tag('ul',id('top'))[0]),{height:height + 'px'});
+	//console.log(W);
+	id('search').addEventListener('click',function(){
+		window.location.href = 'search.html';
+	},false);
+	//lunbo('top',3000,W);
+},false);
+</script>
+</body>
+</html>

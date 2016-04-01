@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>新增收货地址</title>
+<link type="text/css" href="css/class.css" rel="stylesheet">
+<link type="text/css" href="css/details.css" rel="stylesheet">
+<style>
+ul{background:#fff;}
+li{padding:0 3%;line-height:36px;border-bottom:1px solid #c9c9c9;}
+label{display:inline-block;width:20%;text-align:right;}
+input{width:78%;height:36px;border:none;}
+p{padding:10px 3%;color:#1b8b80;font-size:0.8em;}
+button{background:#1b8b80;color:#fff;border:none;margin:30px 3%;width:94%;line-height:40px;font-size:1.1em;letter-spacing:0.5em;border-radius:5px;}
+select{width:20%;border:none;}
+</style>
+</head>
+<body>
+<header><a href="javaScript:window.history.back();"><img src="img/arrow.png"></a>新增收货地址</header>
+<form>
+<ul>
+<li><label>*姓名：</label><input type="text" placeholder="输入姓名" required></li>
+<li><label>*电话：</label><input type="tel" placeholder="输入手机号码" required></li>
+<li><label>*地址：</label><span><select></select>省<select></select>市<select></select>区</span></li>
+<li><label>*街道：</label><input type="text" required></li>
+<li><label>邮编：</label><input type="number" required></li>
+</ul>
+<p>带*号为必填项！</p>
+<button>保存</button>
+</form>
+</body>
+</html>

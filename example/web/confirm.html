@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>确认订单</title>
+<link type="text/css" href="css/class.css" rel="stylesheet">
+<link type="text/css" href="css/details.css" rel="stylesheet">
+<link type="text/css" href="css/shopcar.css" rel="stylesheet">
+<style>
+.shopcar ul li{padding-bottom:32px;}
+.shopcar ul li>p{color:#666;line-height:28px;}
+.shopcar ul li>p>span{float:right;}
+.shopcar ul li>p.on{border-top:1px solid #c9c9c9;}
+.shopcar ul li>p mark{background:none;color:#fe694b;}
+.tol{bottom:0;}
+</style>
+</head>
+<body>
+<header>
+<a href="javaScript:window.history.back();"><img src="img/arrow.png"></a>确认订单
+</header>
+<div class="xinxi">
+<p>收货人：李娜<span>15045430000</span></p>
+<p>收货地址：福建省厦门市湖里区三福财富中心501D</p>
+</div>
+<div class="buypay">
+<ul>
+<li><img src="img/shop/yinlian.png">银联支付<div class="checkbox"><input type="radio" id="b01" name="zhifu"><label for="b01"></label></div></li>
+<li><img src="img/shop/weixin.png">微信支付<div class="checkbox"><input type="radio" id="b02" name="zhifu"><label for="b02"></label></div></li>
+<li><img src="img/shop/zhifubao.png">支付宝<div class="checkbox"><input type="radio" id="b03" name="zhifu"><label for="b03"></label></div></li>
+</ul>
+</div>
+<div class="shopcar">
+<ul id="shopcar">
+<li>
+<a href="#"><img src="img/dayicha.jpg"></a>
+<div class="shopcar_t" style="width:68%;">
+<h4><a href="#">程记安溪 观音王秋 程记安溪铁观音王 南特产 茶饼 买2送福饼</a></h4>
+<p><span>重量：30g</span><span>浓香型</span></p>
+<div>
+<!-- data-max 属性表示限购数量，没有此属性或值为0表示不限购 -->
+￥<mark>198.00</mark><span class="jiajian"><span class="jian">-</span><input type="number" class="num" value="1" data-max="3"><span class="jia">+</span></span>
+</div>
+</div>
+<p class="on">运费<span>￥<span class="youfei">8.00</span></span></p>
+<p><span>小计：<mark>￥<span class="mon">198.00</span></mark></span></p>
+</li>
+<li>
+<a href="#"><img src="img/dayicha.jpg"></a>
+<div class="shopcar_t" style="width:68%;">
+<h4><a href="#">程记安溪 观音王秋 程记安溪铁观音王 南特产 茶饼 买2送福饼</a></h4>
+<p><span>重量：30g</span><span>浓香型</span></p>
+<div>
+￥<mark>198.00</mark><span class="jiajian"><span class="jian">-</span><input type="number" class="num" value="1"><span class="jia">+</span></span>
+</div>
+</div>
+<p class="on">运费<span>￥<span class="youfei">8.00</span></span></p>
+<p><span>小计：<mark>￥<span class="mon">198.00</span></mark></span></p>
+</li>
+<li>
+<a href="#"><img src="img/dayicha.jpg"></a>
+<div class="shopcar_t" style="width:68%;">
+<h4><a href="#">程记安溪 观音王秋 程记安溪铁观音王 南特产 茶饼 买2送福饼</a></h4>
+<p><span>重量：30g</span><span>浓香型</span></p>
+<div>
+￥<mark>198.00</mark><span class="jiajian"><span class="jian">-</span><input type="number" class="num" value="1"><span class="jia">+</span></span>
+</div>
+</div>
+<p class="on">运费<span>￥<span class="youfei">8.00</span></span></p>
+<p><span>小计：<mark>￥<span class="mon">198.00</span></mark></span></p>
+</li>
+</ul>
+</div>
+<div class="tol">
+<div class="heji" style="width:68%;">合计：<mark>￥<span id="heji">0</span></mark></div>
+<a id="jiesuan" href="#">去支付</a>
+</div>
+</div>
+<script src="js/mj.js"></script>
+<script src="js/confirm.js"></script>
+</body>
+</html>

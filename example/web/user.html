@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>个人中心</title>
+<link type="text/css" href="css/class.css" rel="stylesheet">
+<link type="text/css" href="css/details.css" rel="stylesheet">
+<link type="text/css" href="css/user.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<a href="javaScript:window.history.back();"><img src="img/arrow.png"></a>个人中心 
+</header>
+<div class="user">
+<div class="img"><img src="img/touxiang.jpg"></div>
+<div class="xinxi">
+<p>账号：<span>THKIWI</span></p>
+<p>积分：<span><mark>100</mark>分</span></p>
+<p>等级：<span>茶鬼</span></p>
+<a href="address.html">收货地址</a>
+</div>
+<div class="land">
+<a href="land.html">登录</a><a href="registered.html">注册</a>
+</div>
+</div>
+<div class="mydingdan">
+<h4>我的订单<a href="dingdan.html">查看全部订单></a></h4>
+<ul>
+<li><a href="daifukuan.html"><img src="img/user/fukuan.png">待付款</a></li>
+<li><a href="daifahuo.html"><img src="img/user/fahuo.png">待发货</a></li>
+<li><a href="daishouhuo.html"><img src="img/user/shouhuo.png">待收货</a></li>
+<li><a href="daipingjia.html"><img src="img/user/pingjia.png">待评价</a></li>
+</ul>
+</div>
+<div class="nav">
+<a href="#"><img src="img/user/shouchang.png">我的收藏</a>
+<a href="#"><img src="img/user/mypingjia.png">我的评价</a>
+<a href="#"><img src="img/user/xiaoxi.png">客服消息</a>
+<a href="#"><img src="img/user/tiezi.png">我的帖子</a>
+<a href="#"><img src="img/user/huodong.png">我的活动</a>
+<a href="#"><img src="img/user/fankui.png">意见反馈</a>
+</div>
+<nav>
+<a href="shop.html"><img src="img/mall_g.png">商城</a>
+<a href="shequ.html"><img src="img/bbs_g.png">论坛</a>
+<a href="shopcar.html"><img src="img/shopcar_g.png">购物车</a>
+<a href="user.html" class="on"><img src="img/wode.png">个人中心</a>
+</nav>
+<script src="js/mj.js"></script>
+<script>
+var nav = cN('nav')[0];
+var navA = tag('a',nav);
+var w = navA[0].clientWidth;
+css(navA,{height:w + 'px'});
+css(tag('img',nav),{marginTop:(w-71)/2 + 'px'});
+</script>
+</body>
+</html>

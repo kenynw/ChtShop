@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>限时抢购</title>
+<link type="text/css" href="css/class.css" rel="stylesheet">
+<link type="text/css" href="css/details.css" rel="stylesheet">
+<link type="text/css" href="css/dingdan.css" rel="stylesheet">
+<style>
+.listnav a{margin:0 10%;}
+</style>
+</head>
+<body>
+<header>
+<a href="javaScript:window.history.back();"><img src="img/arrow.png"></a>限时抢购
+</header>
+<div class="listnav">
+<a class="on">今日抢购</a>
+<a>明日预告</a>
+</div>
+<div class="qianggou">
+<ul id="qianggou">
+<!-- data-time 属性是设置活动结束时间，时间格式是年/月/日 时:分:秒 -->
+<h5><img src="img/shop/qianggou.png"><span id="times" data-time="2016/1/12 18:00:00">本场还剩:<mark>00</mark>:<mark>00</mark>:<mark>00</mark></span></h5>
+</ul>
+<ul id="yugao">
+<h5><img src="img/shop/qianggou.png"></h5>
+</ul>
+</div>
+<div id="fanhui"><img src="img/top.png"></div>
+<script src="js/mj.js"></script>
+<script src="js/jq.js"></script>
+<script>
+$.ajax({
+	url:'http://www.chahuitong.com/mobile/index.php?act=flash_sale&op=current_api',
+	type:'POST',
+	data:{},
+	dataType:"json",
+	success: function(data){
+		var qianggou = data.data;
+		var str = $('#qianggou').html();
+		for(var i = 0; i < qianggou.length;i++){
+			str += '<li><img src="'+ qianggou[i].goods_image.bmiddle_pic +'"><h5>' + qianggou[i].goods_name + '</h5><p><span class="mon">￥' + qianggou[i].xianshi_price + '</span><span class="yuanjia">￥' + qianggou[i].goods_price + '</span>已抢购<span class="num">' + qianggou[i].goods_salenum + '</span>份/共' + qianggou[i].goods_storage + '份<a href="http://www.chahuitong.com/wap/index.php/Home/Index/goods?goods_id=' + qianggou[i].goods_id + '">马上抢</a></p></li>';
+		}
+		$('#qianggou').html(str);
+	}
+});
+function yugao(){
+$.ajax({
+	url:'http://www.chahuitong.com/mobile/index.php?act=flash_sale&op=coming_api',
+	type:'POST',
+	data:{},
+	dataType:"json",
+	success: function(data){
+		var yg = data.data;
+		var str = $('#yugao').html();
+		for(var i = 0; i < yg.length;i++){
+			str += '<li><img src="'+ yg[i].goods_image.bmiddle_pic +'"><h5>' + yg[i].goods_name + '</h5><p><span class="mon">￥' + yg[i].xianshi_price + '</span><span class="yuanjia">￥' + yg[i].goods_price + '</span>已抢购<span class="num">' + yg[i].goods_salenum + '</span>份/共' + yg[i].goods_storage + '份<a href="http://www.chahuitong.com/wap/index.php/Home/Index/goods?goods_id=' + yg[i].goods_id + '">马上抢</a></p></li>';
+		}
+		$('#yugao').html(str);
+	}
+});
+}
+</script>
+<script src="js/qianggou.js"></script>
+</body>
+</html>

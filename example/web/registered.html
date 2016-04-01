@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>注册</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link type="text/css" href="css/class.css" rel="stylesheet">
+<link type="text/css" href="css/details.css" rel="stylesheet">
+<link type="text/css" href="css/denglu.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<a href="javaScript:window.history.back();"><img src="img/arrow.png"></a>注册
+</header>
+<form class="table">
+<ul>
+<li><label>用户名：</label><input type="text" placeholder="请输入用户名" maxlength="25" required></li>
+<li><label>手机号：</label><input type="tel" maxlength="11" placeholder="请输入手机号" required></li>
+<li><label>验证码：</label><input type="number" required><button type="button" id="btn">获取验证码</button></li>
+<li><label>密&nbsp;&nbsp;&nbsp;码：</label><input type="password" placeholder="请输入密码" required></li>
+</ul>
+<div class="word">
+<p>选择3个以上您感兴趣的词：<mark><img src="">换一批</mark></p>
+<div id="word">
+<span>普洱茶</span>
+<span>金骏眉</span>
+<span>正山小种</span>
+<span>福鼎白茶</span>
+<span>大益</span>
+<span>中茶</span>
+<span>养胃</span>
+<span>减肥</span>
+<span>护肝</span>
+<span>大红袍</span>
+<span>美容</span>
+</div>
+<p id="yixuan">已选词汇：</p>
+</div>
+<button>确定</button>
+</form>
+<p class="fankui"><a href="#">意见反馈</a></p>
+<div class="disanfang">
+<p>第三方登录</p>
+<a href="#"><img src="img/qq.png">腾讯QQ</a>
+<a href="#"><img src="img/weibo.png">新浪微博</a>
+<a href="#"><img src="img/weixin.png">微信</a>
+</div>
+<script src="js/mj.js"></script>
+<script>
+var btn = id('btn');
+var num;
+btn.addEventListener('click',function(){
+	btn.disabled = true;
+	num = 60;
+	daojishi();
+},false);
+function daojishi(){
+	btn.innerHTML = num + "秒后重新获取";
+	num--;
+	if(num < 0){
+		btn.disabled = false;
+		btn.innerHTML = '获取验证码';
+	}else{
+		setTimeout(daojishi,1000);
+	}
+}
+
+var word = id('word');
+var yixuan = id('yixuan');
+var spanWord = tag('span',word);
+for(var i = 0;i < spanWord.length;i++){
+	removeSpan(spanWord[i]);
+}
+function removeSpan(obj){
+	obj.addEventListener('click',function(){
+		var con = obj.innerHTML;
+		var node = document.createElement('span');
+		node.innerHTML = con;
+		yixuan.appendChild(node);
+		obj.outerHTML = '';
+		addSpan(node);
+	},false);
+}
+/*var spanYixuan = tag('span',yixuan);
+for(var i = 0;i < spanYixuan.length;i++){
+	addSpan(spanYixuan[i]);
+}*/
+function addSpan(obj){
+	obj.addEventListener('click',function(){
+		var con = obj.innerHTML;
+		var node = document.createElement('span');
+		node.innerHTML = con;
+		word.appendChild(node);
+		obj.outerHTML = '';
+		removeSpan(node);
+	},false);
+}
+</script>
+</body>
+</html>

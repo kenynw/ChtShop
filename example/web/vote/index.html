@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>活动详情</title>
+<link type="text/css" href="../css/class.css" rel="stylesheet">
+<link type="text/css" href="../css/details.css" rel="stylesheet">
+<link type="text/css" href="../css/vote.css" rel="stylesheet">
+</head>
+<body>
+<header><a href="javaScript:window.history.back();"><img src="../img/arrow.png"></a>活动详情<a href="#"><img style="width:25px;" src="../img/share.png"></a></header>
+<div class="vote">
+<img src="../img/vote/huodong.jpg">
+<h4 id="list"><a class="on"><span>活动详情</span></a><a><span>报名</span></a></h4>
+<div class="huodong">
+<p>报名时间：<span>2016.1.15 8:00--2016.1.25 24:00</span></p>
+<p>投票时间：<span>2016.1.26 8:00--2016.2.20 24:00</span></p>
+<h5>报名方式一：</h5>
+<P><span>关注微信公众号（茶汇通、青春茶寮、大勐）三个任意一个公众号，回复泡茶人的照片、姓名、地址 、电话，即可报名成功；</span></P>
+<h5>报名方式二：</h5>
+<p><span>点击本页面的“报名”按钮，按要求填写报名资料，即可报名成功；</span></p>
+<h5>票数统计：</h5>
+<p><span>活动联合茶汇通、青春茶寮、大勐海三个公众号！</span></p>
+<p class="red">*每个公众号上都可投票一次,App上投票一次记三票！</p>
+<p class="red">最终票数=茶汇通APP活动页面上的票数+3个公众号的票数</p>
+<h5>活动奖品：</h5>
+<p><span>一等奖（1名）02年老茶（生茶）一饼 +现金1000元</span></p>
+<p><span>二等奖（3名）滇臻号（生熟茶可选）普洱茶一饼 + 现金500元</span></p>
+<p><span>三等奖（5名）价值250元的紫砂壶一个+现金100元</span></p>
+<p><span>参与奖（50名）获得茶汇通APP购物券100元礼包</span></p>
+<p class="green">*若发现作弊行为，则取消参赛资格！</p>
+</div>
+<div class="baoming">
+<h5><span></span>报名流程</h5>
+<ul>
+<li>1、未注册茶汇通的用户请先<a href="../registered.html">注册</a></li>
+<li>2、老用户请先<a href="../land.html">登录</a></li>
+<li>3、用户登录后，按以下格式报名</li>
+</ul>
+<form>
+<ul>
+<li><label>泡茶人</label><input type="text" placeholder="输入昵称或姓名" required></li>
+<li><label>手机号</label><input type="tel" placeholder="输入手机号" required></li>
+<li><label>地&nbsp;&nbsp;&nbsp;址</label><span><select></select>省<select></select>市<select></select>区</span></li>
+<li><label>街&nbsp;&nbsp;&nbsp;道</label><input type="text" required></li>
+</ul>
+<div class="file"><input id="file" type="file" multiple><label for="file"></label></div>
+<button>提交报名</button>
+</form>
+</div>
+</div>
+<script src="../js/mj.js"></script>
+<script>
+var list = id('list');
+var listA = tag('a',list);
+listA[0].addEventListener('click',function(e){
+	e.preventDefault();
+	listC(listA);
+	listA[0].className = 'on';
+	cN('huodong')[0].style.display = 'block';
+	cN('baoming')[0].style.display = 'none';
+},false);
+listA[1].addEventListener('click',function(e){
+	e.preventDefault();
+	listC(listA);
+	listA[1].className = 'on';
+	cN('huodong')[0].style.display = 'none';
+	cN('baoming')[0].style.display = 'block';
+},false);
+</script>
+</body>
+</html>

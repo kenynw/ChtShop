@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>免费茶叶</title>
+<link type="text/css" href="css/class.css" rel="stylesheet">
+<link type="text/css" href="css/details.css" rel="stylesheet">
+<style>
+.title>p{font-size:0.8em;line-height:30px;}
+.title>p span{padding-right:3%;margin-right:3%;border-right:1px solid #c9c9c9;}
+.title>p span:last-child{padding:0;margin:0;border:none;}
+.title>a{display:block;color:#fff;background:#1b8b80;width:40%;line-height:36px;text-align:center;margin:0 auto;font-size:1.1em;border-radius:18px;}
+.mail{padding:0;padding-top:10px;}
+#mail{background:#efefef;padding-top:8px;}
+</style>
+</head>
+<body>
+<header>
+<a href="javaScript:window.history.back();"><img src="img/arrow.png"></a>本期免费茶叶
+</header>
+<div id="top">
+<ul>
+<li><a href="#"><img src="img/shop/shop01.jpg"></a></li>
+<li><a href="#"><img src="img/shop/shop01.jpg"></a></li>
+<li><a href="#"><img src="img/shop/shop01.jpg"></a></li>
+</ul>
+<div class="top_list"><ul></ul></div>
+</div>
+<div class="title">
+<h3>程记安溪 观音王秋 程记安溪铁观音王 南特产茶饼357g买2送福饼</h3>
+<p><span>产地:泉州安溪</span><span>重量:30g</span><span>运费:包邮</span><span>限购:1份</span></p>
+<a href="#">申领</a>
+</div>
+<div class="mail">
+<ul id="list">
+<li class="on"><h3><span data-ul="details">申领须知</span></h3></li>
+<li><h3><span data-ul="chayang">往期茶样</span></h3></li>
+</ul>
+<div id="mail">
+<div class="details">
+<img src="img/shop/liucheng.jpg">
+</div>
+<div class="chayang">
+<ul>
+<li>
+<img src="img/shop/shop04.jpg">
+<div class="chayang_con">
+<h4>正山小种礼盒装养胃茶、春茶桂圆香金俊眉红</h4>
+<p>￥55.00</p>
+<p><span><img src="img/weizhi.png">云南</span></p>
+<div>
+<a href="#">看评价</a>
+<a href="#">去购买</a>
+</div>
+</div>
+</li>
+<li>
+<img src="img/shop/shop04.jpg">
+<div class="chayang_con">
+<h4>正山小种礼盒装养胃茶、春茶桂圆香金俊眉红</h4>
+<p>￥55.00</p>
+<p><span><img src="img/weizhi.png">云南</span></p>
+<div>
+<a href="#">看评价</a>
+<a href="#">去购买</a>
+</div>
+</div>
+</li>
+<li>
+<img src="img/shop/shop04.jpg">
+<div class="chayang_con">
+<h4>正山小种礼盒装养胃茶、春茶桂圆香金俊眉红</h4>
+<p>￥55.00</p>
+<p><span><img src="img/weizhi.png">云南</span></p>
+<div>
+<a href="#">看评价</a>
+<a href="#">去购买</a>
+</div>
+</div>
+</li>
+<li>
+<img src="img/shop/shop04.jpg">
+<div class="chayang_con">
+<h4>正山小种礼盒装养胃茶、春茶桂圆香金俊眉红</h4>
+<p>￥55.00</p>
+<p><span><img src="img/weizhi.png">云南</span></p>
+<div>
+<a href="#">看评价</a>
+<a href="#">去购买</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script src="js/mj.js"></script>
+<script src="js/lunbo.js"></script>
+<script>
+window.addEventListener('load',function(){
+	var W = document.body.clientWidth > 640 ? 640 : document.body.clientWidth;
+	var height = W * 10 / 24;
+	id('top').style.height = height + 'px';
+	css(tag('ul',id('top'))[0],{height:height + 'px'});
+	css(tag('li',tag('ul',id('top'))[0]),{height:height + 'px'});
+	lunbo('top',3000,W);
+},false);
+(function(){
+var list = id('list');
+list.addEventListener('click',function(e){
+	switch(e.target.dataset.ul){
+		case 'details':
+			moveOn();
+			tag('li',list)[0].className = 'on';
+			cN('details')[0].style.display = 'block';
+			cN('chayang')[0].style.display = 'none';
+			break;
+		case 'chayang':
+			moveOn();
+			tag('li',list)[1].className = 'on';
+			cN('details')[0].style.display = 'none';
+			cN('chayang')[0].style.display = 'block';
+			break;
+	}
+},false);
+function moveOn(){
+	var listLi = tag('li',list);
+	listC(listLi);
+}
+})();
+toTop();
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>投票</title>
+<link type="text/css" href="../css/class.css" rel="stylesheet">
+<link type="text/css" href="../css/details.css" rel="stylesheet">
+<link type="text/css" href="../css/vote.css" rel="stylesheet">
+</head>
+<body>
+<header><a href="javaScript:window.history.back();"><img src="../img/arrow.png"></a>投票<a href="#"><img style="width:25px;" src="../img/share.png"></a></header>
+<div class="vote">
+<img src="../img/vote/huodong.jpg">
+<div class="toupiao">
+<h5><span></span>投票说明：</h5>
+<ul>
+<li>每个用户每天可投票一次，每次投票可选择3个参赛者。</li>
+<li>投票截止时间：2016.2.20 24:00</li>
+<li>注：一个手机登录不同账号默认是同一个用户。</li>
+</ul>
+</div>
+</div>
+<div id="toupiao">
+<ul>
+<li>
+<img class="img" src="../img/vote/toupiao01.jpg">
+<p class="xingming">1号李晓红</p>
+<p class="piaoshu">1号李晓红<span><mark>308</mark>票</span></p>
+<div class="checkbox1"><input id="a001" type="checkbox" name="toup"><label for="a001"><span></span></label></div>
+</li>
+<li>
+<img class="img" src="../img/vote/toupiao01.jpg">
+<p class="xingming">2号李晓红</p>
+<p class="piaoshu">2号李晓红<span><mark>308</mark>票</span></p>
+<div class="checkbox1"><input id="a002" type="checkbox" name="toup"><label for="a002"><span></span></label></div>
+</li>
+<li>
+<img class="img" src="../img/vote/toupiao01.jpg">
+<p class="xingming">3号李晓红</p>
+<p class="piaoshu">3号李晓红<span><mark>308</mark>票</span></p>
+<div class="checkbox1"><input id="a003" type="checkbox" name="toup"><label for="a003"><span></span></label></div>
+</li>
+<li>
+<img class="img" src="../img/vote/toupiao01.jpg">
+<p class="xingming">4号李晓红</p>
+<p class="piaoshu">4号李晓红<span><mark>308</mark>票</span></p>
+<div class="checkbox1"><input id="a004" type="checkbox" name="toup"><label for="a004"><span></span></label></div>
+</li>
+<li>
+<img class="img" src="../img/vote/toupiao01.jpg">
+<p class="xingming">5号李晓红</p>
+<p class="piaoshu">5号李晓红<span><mark>308</mark>票</span></p>
+<div class="checkbox1"><input id="a005" type="checkbox" name="toup"><label for="a005"><span></span></label></div>
+</li>
+<li>
+<img class="img" src="../img/vote/toupiao01.jpg">
+<p class="xingming">6号李晓红</p>
+<p class="piaoshu">6号李晓红<span><mark>308</mark>票</span></p>
+<div class="checkbox1"><input id="a006" type="checkbox" name="toup"><label for="a006"><span></span></label></div>
+</li>
+<li>
+<img class="img" src="../img/vote/toupiao01.jpg">
+<p class="xingming">7号李晓红</p>
+<p class="piaoshu">7号李晓红<span><mark>308</mark>票</span></p>
+<div class="checkbox1"><input id="a007" type="checkbox" name="toup"><label for="a007"><span></span></label></div>
+</li>
+<li>
+<img class="img" src="../img/vote/toupiao01.jpg">
+<p class="xingming">8号李晓红</p>
+<p class="piaoshu">8号李晓红<span><mark>308</mark>票</span></p>
+<div class="checkbox1"><input id="a008" type="checkbox" name="toup"><label for="a008"><span></span></label></div>
+</li>
+</ul>
+<p>上滑加载更多</p>
+</div>
+<nav>
+<form>
+<input type="search" placeholder="输入号数/姓名">
+<button><img src="../img/searchgreen.png">搜索</button>
+</form>
+<a id="tou">投票</a>
+</nav>
+<div id="success">
+<div><h5>投票成功！</h5><p id="queding">确定</p></div>
+</div>
+<script src="../js/mj.js"></script>
+<script>
+(function(){
+var queding = id('queding');
+var toupiao = id('toupiao');
+var toupiaoUl = tag('ul',toupiao)[0];
+var toupiaoLi = tag('li',toupiao);
+var input;
+id('tou').addEventListener('click',function(e){
+	e.preventDefault();
+	id('success').style.display = 'block';
+},false);
+queding.addEventListener('click',function(){
+	id('success').style.display = 'none';
+	css(cN('xingming'),{display:'none'});
+	css(cN('checkbox1'),{display:'none'});
+	css(cN('piaoshu'),{display:'block'});
+	css(tag('nav'),{display:'none'});
+	removeLi();
+},false);
+function removeLi(){
+	for(var i = 0;i < toupiaoLi.length;i++){
+		var input = tag('input',toupiaoLi[i])[0];
+		if(!input.checked){
+			toupiaoUl.removeChild(toupiaoLi[i]);
+			setTimeout(removeLi,0);
+			break;
+		}
+	}
+}
+})();
+</script>
+</body>
+</html>

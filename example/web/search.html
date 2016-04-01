@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>搜索</title>
+<link type="text/css" href="css/class.css" rel="stylesheet">
+<link type="text/css" href="css/details.css" rel="stylesheet">
+<link type="text/css" href="css/tuijian.css" rel="stylesheet">
+<style>
+header input{width:88%;height:25px;padding:0 3%;border:1px solid #c9c9c9;border-radius:5px;/*background:#fff url(img/search.png) no-repeat;background-size:16px; background-position:98%;*/}
+.tuijian{display:none;}
+</style>
+</head>
+<body>
+<header>
+<a href="javaScript:window.history.back();"><img src="img/arrow.png"></a><input id="context" type="search" placeholder="搜索内容"><button id="btn"></button>
+</header>
+<div id="search_t">
+<h4>推荐搜索</h4>
+<div><a href="#">普洱茶</a>
+<a href="#">云顶茶</a>
+<a href="#">玫瑰花茶</a>
+<a href="#">红茶</a>
+<a href="#">普洱茶</a>
+<a href="#">玫瑰花茶</a>
+<a href="#">普洱茶</a>
+<a href="#">普洱茶</a></div>
+</div>
+<div class="tuijian">
+<ul id="naver">
+<li>品牌<span></span></li>
+<li>价格<span></span></li>
+<li>销量<span></span></li>
+<li>评分<span></span></li>
+</ul>
+<div class="search">
+<ul>
+<li>
+<a href="#">
+<img src="img/dayicha.jpg">
+<div>
+<h4>程记安溪 观音王秋 程记安溪铁观音王 秋茶</h4>
+<p><span class="pj">综合评价<span class="num">95</span>分</span></p>
+<p><span class="mon">￥198.00</span><span class="add">产地:云南</span></p></div></a>
+</li>
+<li>
+<a href="#">
+<img src="img/dayicha.jpg">
+<div>
+<h4>程记安溪 观音王秋 程记安溪铁观音王 秋茶</h4>
+<p><span class="pj">综合评价<span class="num">95</span>分</span></p>
+<p><span class="mon">￥198.00</span><span class="add">产地:云南</span></p></div></a>
+</li>
+<li>
+<a href="#">
+<img src="img/dayicha.jpg">
+<div>
+<h4>程记安溪 观音王秋 程记安溪铁观音王 秋茶</h4>
+<p><span class="pj">综合评价<span class="num">95</span>分</span></p>
+<p><span class="mon">￥198.00</span><span class="add">产地:云南</span></p></div></a>
+</li>
+<li>
+<a href="#">
+<img src="img/dayicha.jpg">
+<div>
+<h4>程记安溪 观音王秋 程记安溪铁观音王 秋茶</h4>
+<p><span class="pj">综合评价<span class="num">95</span>分</span></p>
+<p><span class="mon">￥198.00</span><span class="add">产地:云南</span></p></div></a>
+</li>
+</ul>
+</div>
+<p>已经全部显示</p>
+</div>
+<div id="fanhui"><img src="img/top.png"></div>
+<script src="js/mj.js"></script>
+<script>
+toTop();
+var naver = id('naver');
+var naverLi = tag('li',naver);
+for(var i = 0;i < naverLi.length;i++){
+	liClick(naverLi[i]);
+}
+function liClick(node){
+	node.addEventListener('click',function(){
+		listC(naverLi);
+		node.className = 'on';
+	},false);
+}
+id('btn').addEventListener('click',function(){
+	if(id('context').value){
+		id('search_t').style.display = 'none';
+		cN('tuijian')[0].style.display = 'block';
+	}
+},false);
+</script>
+</body>
+</html>

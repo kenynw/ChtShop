@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>试茶师推荐</title>
+<link type="text/css" href="css/class.css" rel="stylesheet">
+<link type="text/css" href="css/details.css" rel="stylesheet">
+<link type="text/css" href="css/tuijian.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<a href="javaScript:window.history.back();"><img src="img/arrow.png"></a>试茶师推荐
+</header>
+<div class="tuijian">
+<ul id="naver">
+<li>类别<span></span>
+<div class="sele" id="leibie"><p>普洱茶</p><p>铁观音</p></div></li>
+<li>价格<span></span>
+<div class="sele"><p>0-100元</p><p>100-300元</p><p>300-500元</p><p>500元以上</p></div></li>
+<li>优先级<span></span>
+<div class="sele"><p>销量优先</p><p>评分优先</p></div></li>
+<li>季节<span></span>
+<div class="sele"><p>春茶</p><p>秋茶</p></div></li>
+</ul>
+<div id="list">
+<ul>
+<li>
+<img src="img/shop/shop06.jpg">
+<h3><a href="#">程记安溪 观音王秋 程记安溪铁观音王 秋茶</a></h3>
+<p><span class="mon">￥198.00</span><span class="pj">综合评价<span class="num">95</span>分</span><span class="add"><img src="img/weizhi.png">云南</span></p>
+</li>
+<li>
+<img src="img/shop/shop06.jpg">
+<h3><a href="#">程记安溪 观音王秋 程记安溪铁观音王 秋茶</a></h3>
+<p><span class="mon">￥198.00</span><span class="pj">综合评价<span class="num">95</span>分</span><span class="add"><img src="img/weizhi.png">云南</span></p>
+</li>
+<li>
+<img src="img/shop/shop06.jpg">
+<h3><a href="#">程记安溪 观音王秋 程记安溪铁观音王 秋茶</a></h3>
+<p><span class="mon">￥198.00</span><span class="pj">综合评价<span class="num">95</span>分</span><span class="add"><img src="img/weizhi.png">云南</span></p>
+</li>
+</ul>
+</div>
+<p>已经全部显示</p>
+</div>
+<div id="fanhui"><img src="img/top.png"></div>
+<script src="js/mj.js"></script>
+<script src="js/jq.js"></script>
+<script>
+function yugao(){
+$.ajax({
+	url:'http://www.chahuitong.com/mobile/index.php?act=tasters_recommends',
+	type:'POST',
+	data:{},
+	dataType:"json",
+	success: function(data){
+		var yg = data.data;
+		var leibie = yg.goods_class;
+		var str = '';
+		$('#leibie').html();
+		for(var j in leibie){
+			str += '<p id="' + leibie[j].gc_id + '">'+ leibie[j].gc_name +'</p>';
+		}
+		$('#leibie').html(str);
+		/*for(var i = 0; i < yg.length;i++){
+			str += '<li><img src="'+ yg[i].goods_image.bmiddle_pic +'"><h5>' + yg[i].goods_name + '</h5><p><span class="mon">￥' + yg[i].xianshi_price + '</span><span class="yuanjia">￥' + yg[i].goods_price + '</span>已抢购<span class="num">' + yg[i].goods_salenum + '</span>份/共' + yg[i].goods_storage + '份<a href="http://www.chahuitong.com/wap/index.php/Home/Index/goods?goods_id=' + yg[i].goods_id + '">马上抢</a></p></li>';
+		}
+		$('#yugao').html(str);*/
+	}
+});
+}
+yugao();
+
+var naver = id('naver');
+var naverLi = tag('li',naver);
+for(var i = 0;i < naverLi.length;i++){
+	liClick(naverLi[i]);
+}
+function liClick(node){
+	node.addEventListener('click',function(){
+		listC(naverLi);
+		node.className = 'on';
+		css(cN('sele'),{display:'none'});
+		cN('sele',node)[0].style.display = 'block';
+	},false);
+}
+var selectList = cN('sele');
+var selectP;
+for(var j = 0;j < selectList.length;j++){
+	selectP = tag('p',selectList[j]);
+	for(var k = 0;k < selectP.length;k++){
+		selectClick(selectP[k]);
+	}
+}
+function selectClick(obj){
+	obj.addEventListener('click',function(e){
+		listC(obj.parentNode.childNodes);
+		obj.className = 'on';
+		obj.parentNode.style.display = 'none';
+		e.stopPropagation();
+	},false);
+}
+window.addEventListener('scroll',function(){
+	css(cN('sele'),{display:'none'});
+},false);
+toTop();
+</script>
+</body>
+</html>

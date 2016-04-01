@@ -1,0 +1,1 @@
+window.onload=function(){var lx=document.getElementById('lingxiu');var lxLi=lx.getElementsByTagName('li');for(var i=0;i<lxLi.length;i++){if(i%2==0){lxLi[i].style.marginRight=10+'px';}}};

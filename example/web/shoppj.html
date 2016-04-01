@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>商品评价</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link type="text/css" href="css/class.css" rel="stylesheet">
+<link type="text/css" href="css/details.css" rel="stylesheet">
+<link type="text/css" href="css/shoppj.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<a href="javaScript:window.history.back();"><img src="img/arrow.png"></a>商品评价
+</header>
+<div class="mall">
+<div class="pingjias">
+<div class="titles"><img src="img/dayicha.jpg">
+<p class="titles_p">勐库戎氏 丨 2014年中国梦-唤醒普洱生茶厂家直销 新春香浓系列</p>
+<p>实付：<span>￥140.00</span></p>
+</div>
+<div class="pingfen">
+<ul>
+<li><mark>产品</mark><label class="star"><span></span><span></span><span></span><span></span><span></span></label></li>
+<li><mark>服务</mark><label class="star"><span></span><span></span><span></span><span></span><span></span></label></li>
+<li><mark>物流</mark><label class="star"><span></span><span></span><span></span><span></span><span></span></label></li>
+</ul>
+</div>
+<form>
+<textarea placeholder="亲，写点什么吧，您的意见对对其他茶友有很大帮助！"></textarea>
+<div class="file"><input type="file" id="file" multiple><label for="file"></label></div>
+</form>
+</div>
+</div>
+<div class="fabiao">
+<div class="niming">
+<div class="checkbox">
+<input id="box01" type="checkbox" checked><label class="yuan" for="box01"></label></div>匿名评价</div>
+<a href="#">发布评价</a>
+</div>
+<script src="js/mj.js"></script>
+<script>
+var star = cN('star');
+var span;
+for(var i = 0;i < star.length;i++){
+	span = tag('span',star[i]);
+	for(var j = 0;j < span.length;j++){
+		starChange(span,i,j);
+	}
+}
+function starChange(obj,x,y){
+	obj[y].addEventListener('click',function(){
+		for(var i = 0;i <= y;i++){
+			css(tag('span',star[x])[i],{backgroundImage:"url(img/redstar.png)"});
+		}
+		for(var j = 4;j > y;j--){
+			css(tag('span',star[x])[j],{backgroundImage:"url(img/star.png)"});
+		}
+	},false);
+}
+</script>
+</body>
+</html>
