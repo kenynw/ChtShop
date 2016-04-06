@@ -37,7 +37,7 @@ $params = array(
 		'signMethod' => '01',		//签名方法
 		'channelType' => '08',		//渠道类型，07-PC，08-手机
 		'accessType' => '0',		//接入类型
-		'merId' => '898350254993136',		        //商户代码，请改自己的测试商户号
+		'merId' => '898350254993124',		        //商户代码，请改自己的测试商户号
 		'orderId' => $param['order_sn'],	//商户订单号
 		'txnTime' => date('YmdHis'),	//订单发送时间
 		'txnAmt' => $param['order_amount']*100,		//交易金额，单位分
@@ -89,33 +89,8 @@ $log->LogInfo ( $html_form );
 $log->LogInfo ( "-------前台交易自动提交表单>--end-------" );
 $log->LogInfo ( "============处理前台请求 结束===========" );
 echo $html_form;
+
+
   }
-/*银联前台同步跳转地址*/
-public function getReturnInfo($payment_config){	
-	if (isset($_POST['signature'])) {
-        return array(
-         //商户订单号		 
-        'out_trade_no' =>$_POST['orderId'],
-         //支付宝交易号
-        'trade_no' =>$_POST['queryId'],
-         );
-	    } else{
-		  return false;
-		}
-	}  
-/*银联支付异步后台通知地址*/  
-public function getNotifyInfo($payment_config){	 
-	 if (isset($_POST['signature'])) {
-        return array(
-         //商户订单号		 
-        'out_trade_no' =>$_POST['orderId'],
-         //支付宝交易号
-        'trade_no' =>$_POST['queryId'],
-         );
-	    } else{
-		  return false;
-		}
-	}  
-  
 
 }

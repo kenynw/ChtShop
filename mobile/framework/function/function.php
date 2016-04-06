@@ -51,21 +51,16 @@ function mobile_page($page_count)
     return $extend_data;
 }
 
-function output_json($state = 1, $data = '', $msg = '')
+function output_json($code, $data = array(), $msg = 'SUCCESS', $extend_data = array())
 {
-    $datas = array();
-    $datas['code'] = $state;
-    if($msg) $datas['msg'] = $msg;
-    //$datas['data'] = (($state == 1) && is_array($data)) ? $data : '';
-    if(!empty($data)){
-        $datas['data']=$data;
-    }
-    echo json_encode($datas);
-}
+    if(!is_numeric($code)) return;
 
-function outpu_json_error($state = 0, $msg = '')
-{
-    $datas['code'] = $state;
-    $datas['msg'] = $msg;
-    echo json_encode($datas);
+    $result = array(
+        'code' => $code,
+        'data' => !empty($extend_data) ? array_merge($data, $extend_data) : $data
+    );
+    if($msg) $result['msg'] = $msg;
+
+    echo json_encode($result);
+    die();
 }
