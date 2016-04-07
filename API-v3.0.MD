@@ -883,4 +883,86 @@ URL: act=member_address&op=area_list
     }
 
 
+### 34.地区列表
+URL: act=member_order&op=order_list
+
+参数：
+
+>key 当前登录令牌
+>version 版本号
+>order_state 订单状态
+>curpage 当前列表页,用GET方式
+>getpayment 是否显示付款方式列表,用GET方式
+>page 每页显示项目数,默认15,用GET方式
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "order_list": [
+                {
+                    "order_id": "1225",
+                    "order_sn": "8000000000127701",
+                    "pay_sn": "330513290162301164",
+                    "store_id": "2",
+                    "store_name": "茶汇通商城",
+                    "buyer_id": "164",
+                    "buyer_name": "内测帐号",
+                    "buyer_email": "",
+                    "add_time": "1459946162",
+                    "payment_code": "online",
+                    "payment_time": "0",
+                    "finnshed_time": "0",
+                    "goods_amount": "480.00",
+                    "order_amount": "480.00",
+                    "rcb_amount": "0.00",
+                    "pd_amount": "0.00",
+                    "shipping_fee": "0.00",
+                    "evaluation_state": "0",
+                    "order_state": "10",
+                    "refund_state": "0",
+                    "lock_state": "0",
+                    "delete_state": "0",
+                    "refund_amount": "0.00",
+                    "delay_time": "0",
+                    "order_from": "2",
+                    "shipping_code": "",
+                    "state_desc": "待付款",
+                    "payment_name": "在线付款",
+                    "extend_order_goods": [
+                        {
+                            "rec_id": "1440",
+                            "order_id": "1225",
+                            "goods_id": "101758",
+                            "goods_name": "大益 普洱茶8582 生茶 357g 买二送一",
+                            "goods_price": "480.00",
+                            "goods_num": "1",
+                            "goods_image": "2_05060208241996128.png",
+                            "goods_pay_price": "480.00",
+                            "store_id": "2",
+                            "buyer_id": "164",
+                            "goods_type": "1",
+                            "promotions_id": "0",
+                            "commis_rate": "0",
+                            "gc_id": "1067",
+                            "brand_id": "365",
+                            "brand_name": "大益",
+                            "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_240.gif"
+                        }
+                    ],
+                    "if_cancel": true, #是否显示取消按键
+                    "if_receive": false, #是否显示确认收货
+                    "if_lock": false, #是否显示锁定中
+                    "if_deliver": false, #是否显示查看物流
+                    "if_evaluation": false, #是否显示评价
+                    "pay_amount": 480 #支付总额，该字段存在且大于0时显示支付按钮
+                }
+            ],
+            "hasmore": true,
+            "page_total": 49
+        },
+        "msg": "查找成功"
+    }
+
 
