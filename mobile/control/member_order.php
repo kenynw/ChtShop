@@ -54,31 +54,27 @@ class member_orderControl extends mobileMemberControl {
                 $value['extend_order_goods'][$k]['goods_image_url'] = cthumb($goods_info['goods_image'], 240, $value['store_id']);
             }
 
-            // 新版本接口简化了数据结构,把一些没必要的数据去掉
-            if(isset($_POST['version']) && $_POST['version'] == VERSION_3_0) {
-                //如果有在线支付且未付款的订单则显示合并付款链接
-                if ($value['order_state'] == ORDER_STATE_NEW) {
-                    $value['pay_amount'] += $value['order_amount'] - $value['rcb_amount'] - $value['pd_amount'];
-                }
-                $order_group_list[] = $value;
-            } else {
-                $order_group_list[$value['pay_sn']]['order_list'][] = $value;
+            $order_group_list[$value['pay_sn']]['order_list'][] = $value;
 
-                //如果有在线支付且未付款的订单则显示合并付款链接
-                if ($value['order_state'] == ORDER_STATE_NEW) {
-                    $order_group_list[$value['pay_sn']]['pay_amount'] += $value['order_amount'] - $value['rcb_amount'] - $value['pd_amount'];
-                }
-                $order_group_list[$value['pay_sn']]['add_time'] = $value['add_time'];
+            //如果有在线支付且未付款的订单则显示合并付款链接
+            if ($value['order_state'] == ORDER_STATE_NEW) {
+                $order_group_list[$value['pay_sn']]['pay_amount'] += $value['order_amount'] - $value['rcb_amount'] - $value['pd_amount'];
             }
+            $order_group_list[$value['pay_sn']]['add_time'] = $value['add_time'];
 
             //记录一下pay_sn，后面需要查询支付单表
             $order_pay_sn_array[] = $value['pay_sn'];
         }
 
+        $new_order_group_list = array();
+        foreach ($order_group_list as $key => $value) {
+            $value['pay_sn'] = strval($key);
+            $new_order_group_list[] = $value;
+        }
+
         $page_count = $model_order->gettotalpage();
 
-        $array_data = array();
-        // 是否返回
+        $array_data = array('order_group_list' => $new_order_group_list);
         if(isset($_GET['getpayment'])&&$_GET['getpayment']=="true"){
             $model_mb_payment = Model('mb_payment');
 
@@ -92,21 +88,15 @@ class member_orderControl extends mobileMemberControl {
             $array_data['payment_list'] = $payment_array;
         }
 
-        if(isset($_POST['version']) && $_POST['version'] == VERSION_3_0) {
-            $array_data = array('order_list' => $order_group_list);
-            output_json(1, $array_data, '查找成功', mobile_page($page_count));
-        } else {
-            $new_order_group_list = array();
-            foreach ($order_group_list as $key => $value) {
-                $value['pay_sn'] = strval($key);
-                $new_order_group_list[] = $value;
-            }
-            $array_data = array('order_group_list' => $new_order_group_list);
-            output_data($array_data, mobile_page($page_count));
-        }
 
         //output_data(array('order_group_list' => $array_data), mobile_page($page_count));
         //output_data($array_data, mobile_page($page_count));
+        if($_POST['version']){
+            output_json(1,$array_data,'查找成功');
+            die();
+        }else{
+            output_data($array_data, mobile_page($page_count));
+        }
     }
 
     /**
