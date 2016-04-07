@@ -24,14 +24,15 @@ class member_orderControl extends mobileMemberControl {
     public function order_listOp() {
 		$model_order = Model('order');
 
+        $order_state=intval($_POST['order_state']);
+
         $condition = array();
         $condition['buyer_id'] = $this->member_info['member_id'];
-		//add by lai<<
-		if(isset($_POST['order_state'])&&($_POST['order_state']!='')){
-		$orderstatus=intval($_POST['order_state']);	
-		$condition['order_state']=$orderstatus;
-		                        }
-		//end>>
+        $condition['order_state']=$order_state;
+        // 待评价的订单
+        if($order_state == ORDER_STATE_SUCCESS) {
+            $condition['evaluation_state'] = 0;
+        }
 
         $order_list_array = $model_order->getNormalOrderList($condition, $this->page, '*', 'order_id desc','', array('order_goods'));
 
@@ -39,7 +40,6 @@ class member_orderControl extends mobileMemberControl {
         $order_pay_sn_array = array();
 
         if(isset($_POST['version']) && $_POST['version'] >= VERSION_3_0) {
-
             foreach ($order_list_array as $value) {
                 //显示取消订单
                 $value['if_cancel'] = $model_order->getOrderOperateState('buyer_cancel',$value);
@@ -65,21 +65,6 @@ class member_orderControl extends mobileMemberControl {
             }
 
             $page_count = $model_order->gettotalpage();
-
-            $array_data = array();
-            // 是否返回
-            if(isset($_GET['getpayment'])&&$_GET['getpayment']=="true"){
-                $model_mb_payment = Model('mb_payment');
-
-                $payment_list = $model_mb_payment->getMbPaymentOpenList();
-                $payment_array = array();
-                if(!empty($payment_list)) {
-                    foreach ($payment_list as $value) {
-                        $payment_array[] = array('payment_code' => $value['payment_code'],'payment_name' =>$value['payment_name']);
-                    }
-                }
-                $array_data['payment_list'] = $payment_array;
-            }
 
             $array_data = array('order_list' => $order_group_list);
             output_json(1, $array_data, '查找成功', mobile_page($page_count));
@@ -146,6 +131,24 @@ class member_orderControl extends mobileMemberControl {
             }
         }
 
+    }
+
+    /**
+     * 订单详细信息
+     */
+    public function order_infoOp() {
+        $model_order = Model('order');
+        $order_id = intval($_POST['order_id']);
+
+        $condition = array();
+        $condition['order_id'] = $order_id;
+        $condition['buyer_id'] = $this->member_info['member_id'];
+        $order_info = $model_order->getOrderInfo($condition);
+        if(empty($order_info)) {
+            output_json(0, $order_info, '暂无数据');
+        } else {
+            output_json(1, $order_info);
+        }
     }
 
     /**

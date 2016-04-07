@@ -883,7 +883,7 @@ URL: act=member_address&op=area_list
     }
 
 
-### 34.地区列表
+### 34.订单列表
 URL: act=member_order&op=order_list
 
 参数：
@@ -892,7 +892,6 @@ URL: act=member_order&op=order_list
 >version 版本号
 >order_state 订单状态
 >curpage 当前列表页,用GET方式
->getpayment 是否显示付款方式列表,用GET方式
 >page 每页显示项目数,默认15,用GET方式
 
 返回：
@@ -966,3 +965,47 @@ URL: act=member_order&op=order_list
     }
 
 
+### 34.订单详情
+URL: act=member_order&op=order_info
+
+参数：
+
+>key 当前登录令牌
+>order_id 订单ID
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "order_id": "1149",
+            "order_sn": "8000000000119801",
+            "pay_sn": "730512313191287164",
+            "store_id": "2",
+            "store_name": "茶汇通商城",
+            "buyer_id": "164",
+            "buyer_name": "内测帐号",
+            "buyer_email": "",
+            "add_time": "1458969191",
+            "payment_code": "online",
+            "payment_time": "0",
+            "finnshed_time": "0",
+            "goods_amount": "480.00",
+            "order_amount": "480.00",
+            "rcb_amount": "0.00",
+            "pd_amount": "0.00",
+            "shipping_fee": "0.00",
+            "evaluation_state": "0",
+            "order_state": "0",
+            "refund_state": "0",
+            "lock_state": "0",
+            "delete_state": "0",
+            "refund_amount": "0.00",
+            "delay_time": "0",
+            "order_from": "2",
+            "shipping_code": "",
+            "state_desc": "已取消",
+            "payment_name": "在线付款"
+        },
+        "msg": "SUCCESS"
+    }
