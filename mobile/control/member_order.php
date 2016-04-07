@@ -37,66 +37,115 @@ class member_orderControl extends mobileMemberControl {
 
         $order_group_list = array();
         $order_pay_sn_array = array();
-        foreach ($order_list_array as $value) {
-            //显示取消订单
-            $value['if_cancel'] = $model_order->getOrderOperateState('buyer_cancel',$value);
-            //显示收货
-            $value['if_receive'] = $model_order->getOrderOperateState('receive',$value);
-            //显示锁定中
-            $value['if_lock'] = $model_order->getOrderOperateState('lock',$value);
-            //显示物流跟踪
-            $value['if_deliver'] = $model_order->getOrderOperateState('deliver',$value);
-			 //显示评价
-			 $value['if_evaluation'] = $model_order->getOrderOperateState('evaluation',$value);
 
-            //商品图
-            foreach ($value['extend_order_goods'] as $k => $goods_info) {
-                $value['extend_order_goods'][$k]['goods_image_url'] = cthumb($goods_info['goods_image'], 240, $value['store_id']);
-            }
+        if(isset($_POST['version']) && $_POST['version'] >= VERSION_3_0) {
 
-            $order_group_list[$value['pay_sn']]['order_list'][] = $value;
+            foreach ($order_list_array as $value) {
+                //显示取消订单
+                $value['if_cancel'] = $model_order->getOrderOperateState('buyer_cancel',$value);
+                //显示收货
+                $value['if_receive'] = $model_order->getOrderOperateState('receive',$value);
+                //显示锁定中
+                $value['if_lock'] = $model_order->getOrderOperateState('lock',$value);
+                //显示物流跟踪
+                $value['if_deliver'] = $model_order->getOrderOperateState('deliver',$value);
+                //显示评价
+                $value['if_evaluation'] = $model_order->getOrderOperateState('evaluation',$value);
 
-            //如果有在线支付且未付款的订单则显示合并付款链接
-            if ($value['order_state'] == ORDER_STATE_NEW) {
-                $order_group_list[$value['pay_sn']]['pay_amount'] += $value['order_amount'] - $value['rcb_amount'] - $value['pd_amount'];
-            }
-            $order_group_list[$value['pay_sn']]['add_time'] = $value['add_time'];
-
-            //记录一下pay_sn，后面需要查询支付单表
-            $order_pay_sn_array[] = $value['pay_sn'];
-        }
-
-        $new_order_group_list = array();
-        foreach ($order_group_list as $key => $value) {
-            $value['pay_sn'] = strval($key);
-            $new_order_group_list[] = $value;
-        }
-
-        $page_count = $model_order->gettotalpage();
-
-        $array_data = array('order_group_list' => $new_order_group_list);
-        if(isset($_GET['getpayment'])&&$_GET['getpayment']=="true"){
-            $model_mb_payment = Model('mb_payment');
-
-            $payment_list = $model_mb_payment->getMbPaymentOpenList();
-            $payment_array = array();
-            if(!empty($payment_list)) {
-                foreach ($payment_list as $value) {
-                    $payment_array[] = array('payment_code' => $value['payment_code'],'payment_name' =>$value['payment_name']);
+                //商品图
+                foreach ($value['extend_order_goods'] as $k => $goods_info) {
+                    $value['extend_order_goods'][$k]['goods_image_url'] = cthumb($goods_info['goods_image'], 240, $value['store_id']);
                 }
+
+                //如果有在线支付且未付款的订单则显示合并付款链接
+                if ($value['order_state'] == ORDER_STATE_NEW) {
+                    $value['pay_amount'] += $value['order_amount'] - $value['rcb_amount'] - $value['pd_amount'];
+                }
+                $order_group_list[] = $value;
             }
-            $array_data['payment_list'] = $payment_array;
-        }
+
+            $page_count = $model_order->gettotalpage();
+
+            $array_data = array();
+            // 是否返回
+            if(isset($_GET['getpayment'])&&$_GET['getpayment']=="true"){
+                $model_mb_payment = Model('mb_payment');
+
+                $payment_list = $model_mb_payment->getMbPaymentOpenList();
+                $payment_array = array();
+                if(!empty($payment_list)) {
+                    foreach ($payment_list as $value) {
+                        $payment_array[] = array('payment_code' => $value['payment_code'],'payment_name' =>$value['payment_name']);
+                    }
+                }
+                $array_data['payment_list'] = $payment_array;
+            }
+
+            $array_data = array('order_list' => $order_group_list);
+            output_json(1, $array_data, '查找成功', mobile_page($page_count));
+        } else {
+            foreach ($order_list_array as $value) {
+                //显示取消订单
+                $value['if_cancel'] = $model_order->getOrderOperateState('buyer_cancel',$value);
+                //显示收货
+                $value['if_receive'] = $model_order->getOrderOperateState('receive',$value);
+                //显示锁定中
+                $value['if_lock'] = $model_order->getOrderOperateState('lock',$value);
+                //显示物流跟踪
+                $value['if_deliver'] = $model_order->getOrderOperateState('deliver',$value);
+                //显示评价
+                $value['if_evaluation'] = $model_order->getOrderOperateState('evaluation',$value);
+
+                //商品图
+                foreach ($value['extend_order_goods'] as $k => $goods_info) {
+                    $value['extend_order_goods'][$k]['goods_image_url'] = cthumb($goods_info['goods_image'], 240, $value['store_id']);
+                }
+
+                $order_group_list[$value['pay_sn']]['order_list'][] = $value;
+
+                //如果有在线支付且未付款的订单则显示合并付款链接
+                if ($value['order_state'] == ORDER_STATE_NEW) {
+                    $order_group_list[$value['pay_sn']]['pay_amount'] += $value['order_amount'] - $value['rcb_amount'] - $value['pd_amount'];
+                }
+                $order_group_list[$value['pay_sn']]['add_time'] = $value['add_time'];
+
+                //记录一下pay_sn，后面需要查询支付单表
+                $order_pay_sn_array[] = $value['pay_sn'];
+            }
+
+            $new_order_group_list = array();
+            foreach ($order_group_list as $key => $value) {
+                $value['pay_sn'] = strval($key);
+                $new_order_group_list[] = $value;
+            }
+
+            $page_count = $model_order->gettotalpage();
+
+            $array_data = array('order_group_list' => $new_order_group_list);
+            if(isset($_GET['getpayment'])&&$_GET['getpayment']=="true"){
+                $model_mb_payment = Model('mb_payment');
+
+                $payment_list = $model_mb_payment->getMbPaymentOpenList();
+                $payment_array = array();
+                if(!empty($payment_list)) {
+                    foreach ($payment_list as $value) {
+                        $payment_array[] = array('payment_code' => $value['payment_code'],'payment_name' =>$value['payment_name']);
+                    }
+                }
+                $array_data['payment_list'] = $payment_array;
+            }
 
 
-        //output_data(array('order_group_list' => $array_data), mobile_page($page_count));
-        //output_data($array_data, mobile_page($page_count));
-        if($_POST['version']){
-            output_json(1,$array_data,'查找成功');
-            die();
-        }else{
-            output_data($array_data, mobile_page($page_count));
+            //output_data(array('order_group_list' => $array_data), mobile_page($page_count));
+            //output_data($array_data, mobile_page($page_count));
+            if($_POST['version']){
+                output_json(1,$array_data,'查找成功');
+                die();
+            }else{
+                output_data($array_data, mobile_page($page_count));
+            }
         }
+
     }
 
     /**
