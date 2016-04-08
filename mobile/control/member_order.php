@@ -238,7 +238,7 @@ class member_orderControl extends mobileMemberControl {
         $content = dfsockopen($url);
         $content = json_decode($content,true);
 
-        if ($content['status'] != 200) { 
+        if ($content['status'] != 200) {
             output_error('物流信息查询失败');
         }
         $content['data'] = array_reverse($content['data']);

@@ -480,7 +480,7 @@ URL: act=member_index&op=update_member_pwd
       msg: "更新成功"
     }
 
-### 15.获取用户信息(v1)
+### 15.获取用户信息
 URL: act=member_index 
 参数：
 
@@ -489,14 +489,20 @@ URL: act=member_index
 返回： 
 
     {
-      code: 200,
-      datas: {
-        user_name: 测试-廖培坤
-        avator: http://www.chahuitong.com/data/upload/shop/common/default_user_portrait.gif
-        point: 0
-        predepoit: 0.00
-      }
-      
+        "code": 1,
+        "data": {
+            "member_name": "内测帐号",
+            "member_avatar": "http://www.chahuitong.com/data/upload/shop/common/default_user_portrait.gif",
+            "member_points": "176", //积分
+            "available_predeposit": "0.00", //余额
+            "member_exppoints": "3348", //经验值
+            "member_title": "茶界泰斗", //头衔
+            "order_new_count": "19", //待支付订单数
+            "order_pay_count": "29", //待发货订单数
+            "order_send_count": "1", //待收货订单数
+            "order_eval_count": "0"  //待评价订单数
+        },
+        "msg": "SUCCESS"
     }
 
 ### 16.获取用户信息(v3)
