@@ -297,6 +297,48 @@ URL: act=home&op=home_page_api
         }
     }
 
+### 6.商品列表
+URL(Get): act=goods&op=goods_list
+参数：
+
+>version 版本号
+>key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序
+>order 排序方式 1-升序 2-降序
+>page 每页数量
+>curPage 当前页码
+>gc_id 分类编号
+>keyword 搜索关键字 注：gc_id和keyword二选一不能同时出现
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "list": [
+                {
+                    "goods_id": "102064",
+                    "goods_name": "倚澜岩 武夷山岩茶 虎肉 两盒装 250g",
+                    "goods_price": "300.00",
+                    "goods_marketprice": "399.00",
+                    "goods_image": "2_05102418687282446.jpg",
+                    "goods_salenum": "0",
+                    "evaluation_good_star": "5",
+                    "evaluation_count": "0",
+                    "is_virtual": "0",
+                    "is_presell": "0",
+                    "is_fcode": "0",
+                    "have_gift": "0",
+                    "group_flag": false,
+                    "xianshi_flag": false,
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif"
+                }
+            ],
+            "hasmore": true,
+            "page_total": 145
+        },
+        "msg": "SUCCESS"
+    }
+
 ### 6.商品详情
 URL(Get): act=goods&op=goods_detail 
 参数：
