@@ -52,7 +52,11 @@ class goods_classControl extends mobileHomeControl{
             $class_list[$key]['text'] = rtrim($class_list[$key]['text'], '/');
         }
 
-        output_data(array('class_list' => $class_list));
+        if(isset($_GET['version']) && $_GET['version'] == VERSION_3_0) {
+            output_json(1, $class_list);
+        } else {
+            output_data(array('class_list' => $class_list));
+        }
     }
 
     /**
@@ -65,7 +69,11 @@ class goods_classControl extends mobileHomeControl{
 
         if(empty($goods_class['child'])) {
             //无下级分类返回0
-            output_data(array('class_list' => '0'));
+            if(isset($_GET['version']) && $_GET['version'] == VERSION_3_0) {
+                output_json(0, array(), '暂无数据');
+            } else {
+                output_data(array('class_list' => '0'));
+            }
         } else {
             //返回下级分类列表
             $class_list = array();
@@ -77,7 +85,11 @@ class goods_classControl extends mobileHomeControl{
                 $class_item['gc_name'] .= $goods_class_array[$child_class]['gc_name'];
                 $class_list[] = $class_item;
             }
-            output_data(array('class_list' => $class_list));
+            if(isset($_GET['version']) && $_GET['version'] == VERSION_3_0) {
+                output_json(1, $class_list);
+            } else {
+                output_data(array('class_list' => $class_list));
+            }
         }
     }
 }
