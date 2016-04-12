@@ -57,7 +57,7 @@ class goodsControl extends mobileHomeControl{
         }
         $page_count = $model_goods->gettotalpage();
 
-        //处理商品列表(抢购、限时折扣、商品图片)
+        //处理商品列表(抢购、限时折扣、商品图片、产地)
         $goods_list = $this->_goods_list_extend($goods_list);
 
         if(isset($_GET['version']) && $_GET['version'] == VERSION_3_0) {
@@ -98,7 +98,7 @@ class goodsControl extends mobileHomeControl{
     }
 
     /**
-     * 处理商品列表(抢购、限时折扣、商品图片)
+     * 处理商品列表(抢购、限时折扣、商品图片、产地)
      */
     private function _goods_list_extend($goods_list) {
         //获取商品列表编号数组
@@ -132,12 +132,59 @@ class goodsControl extends mobileHomeControl{
             //商品图片url
             $goods_list[$key]['goods_image_url'] = cthumb($value['goods_image'], 360, $value['store_id']);
 
+            //产地
+            $goods_list[$key]['area'] = $this->_goods_origin($value['goods_id']);
+
             unset($goods_list[$key]['store_id']);
             unset($goods_list[$key]['goods_commonid']);
             unset($goods_list[$key]['nc_distinct']);
         }
 
         return $goods_list;
+    }
+
+    /**
+     * 获取试茶师推荐列表
+     *
+     * @author Liao
+     */
+    public function recommend_listOp() {
+        $condition = array();
+        if(!empty($_GET['gc_id']) && intval($_GET['gc_id']) > 0) {
+            $condition['gc_id'] = $_GET['gc_id'];
+        }
+
+        $fields = 'goods_id,goods_name,goods_image,goods_price,goods_promotion_price,goods_marketprice,goods_promotion_type,store_id,recommend_score,recommend_taste,recommend_light,recommend_aroma,recommend_leaf';
+
+        $order = $this->_goods_list_order($_GET['key'], $_GET['order']);
+
+        $model_goods = Model('goods');
+
+        $goods_list = $model_goods -> getGoodsTastersList($condition, $fields, $order, $this->page);
+
+        //处理商品列表(抢购、限时折扣、商品图片、产地)
+        $goods_list = $this->_goods_list_extend($goods_list);
+
+        $page_count = Model('tasters_recommends')->gettotalpage();
+
+        output_json(1, array('list' => $goods_list), 'SUCCESS', mobile_page($page_count));
+    }
+
+    /**
+     * 获取商品产地
+     *
+     * @author Liao
+     */
+    public function _goods_origin($goods_id) {
+        $origin_name = '';
+        $condition['goods_id'] = $goods_id;
+        $condition['attr_id'] = array('between', '266,277');
+        $goods_attr_list = Model('goods_attr_index')->getGoodsAttrIndexList($condition, 'attr_value_id');
+        if(!empty($goods_attr_list)) {
+            $attr_name_array = Model('attribute')->getAttributeValueList($goods_attr_list[0], 'attr_value_name');
+            $origin_name = $attr_name_array[0]['attr_value_name'];
+        }
+        return $origin_name;
     }
 
     /**

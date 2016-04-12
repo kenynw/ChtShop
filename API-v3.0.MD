@@ -65,7 +65,7 @@
         msg: "请登录"
       }
 
-### 1.登录
+### 登录
 URL：act=login  
 参数：
 
@@ -83,7 +83,7 @@ URL：act=login
         }
       }
 
-### 2.注册
+### 注册
 URL: act=login&op=register_api  
 参数：
 >mobile   
@@ -98,7 +98,7 @@ URL: act=login&op=register_api
         code:  
       }
 
-### 3.第三方登录
+### 第三方登录
 URL: act=login&op=register_api  
 参数：
 >key  shopNC的MD5值，固定为『804451dc13014b1c785fb73b1617b760』     
@@ -112,7 +112,7 @@ URL: act=login&op=register_api
         code:  
       }
 
-### 4.发送验证码
+### 发送验证码
 URL: act=login&op=send_sms  
 参数：
 >mobile  
@@ -123,7 +123,7 @@ URL: act=login&op=send_sms
         code:  
       }
 
-### 5.首页 
+### 首页
 URL: act=home&op=home_page_api  
 参数： 
 
@@ -141,14 +141,6 @@ URL: act=home&op=home_page_api
                 {
                     "id": "14",
                     "image": "http://www.chahuitong.com/data/upload/mobile/home/1458113957.jpg",
-                    "state": "1",
-                    "order": "1",
-                    "link": "http://www.chahuitong.com/example/web/raiders.html#",
-                    "location": "1"
-                },
-                {
-                    "id": "17",
-                    "image": "http://www.chahuitong.com/data/upload/mobile/home/1458115125.jpg",
                     "state": "1",
                     "order": "1",
                     "link": "http://www.chahuitong.com/example/web/raiders.html#",
@@ -176,54 +168,6 @@ URL: act=home&op=home_page_api
                     "recommend_aroma": "纯正",
                     "recommend_leaf": "柔匀",
                     "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05060208241996128_360.png"
-                },
-                {
-                    "goods_id": "101938",
-                    "goods_name": "中茶 圆茶-丹凤金毫普洱茶（2015年熟茶） 500g",
-                    "goods_image": "2_05059080118293239.jpg",
-                    "goods_price": "968.00",
-                    "goods_promotion_price": "968.00",
-                    "goods_marketprice": "968.00",
-                    "goods_promotion_type": "0",
-                    "store_id": "2",
-                    "recommend_score": "9.5",
-                    "recommend_taste": "醇厚顺滑",
-                    "recommend_light": "红艳",
-                    "recommend_aroma": "浓香",
-                    "recommend_leaf": "红褐",
-                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05059080118293239_360.jpg"
-                },
-                {
-                    "goods_id": "101761",
-                    "goods_name": "大益 06年 7542 生茶 357g 601批 买二送一",
-                    "goods_image": "2_05028028157898086.jpg",
-                    "goods_price": "880.00",
-                    "goods_promotion_price": "880.00",
-                    "goods_marketprice": "880.00",
-                    "goods_promotion_type": "0",
-                    "store_id": "2",
-                    "recommend_score": "9",
-                    "recommend_taste": "回甘持久",
-                    "recommend_light": "金黄",
-                    "recommend_aroma": "纯正持久",
-                    "recommend_leaf": "柔匀",
-                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05028028157898086_360.jpg"
-                },
-                {
-                    "goods_id": "101937",
-                    "goods_name": "中茶 2015年中茶普洱 布朗乔木老树 生茶 357g",
-                    "goods_image": "2_05059062555955369.jpg",
-                    "goods_price": "258.00",
-                    "goods_promotion_price": "258.00",
-                    "goods_marketprice": "258.00",
-                    "goods_promotion_type": "0",
-                    "store_id": "2",
-                    "recommend_score": "8.5",
-                    "recommend_taste": "回甘持久",
-                    "recommend_light": "蜜黄明亮",
-                    "recommend_aroma": "纯正",
-                    "recommend_leaf": "肥厚",
-                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05059062555955369_360.jpg"
                 }
             ],
             "guess_list": [
@@ -237,61 +181,6 @@ URL: act=home&op=home_page_api
                     "goods_promotion_type": "0",
                     "store_id": "2",
                     "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05062071097871226_360.png"
-                },
-                {
-                    "goods_id": "101389",
-                    "goods_name": "八马茶业 金骏眉茶叶 八马鸿韵系礼盒 武夷山桐木红茶 148g",
-                    "goods_image": "2_04993692565453067.jpg",
-                    "goods_price": "449.00",
-                    "goods_promotion_price": "449.00",
-                    "goods_marketprice": "449.00",
-                    "goods_promotion_type": "0",
-                    "store_id": "2",
-                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_04993692565453067_360.jpg"
-                },
-                {
-                    "goods_id": "101694",
-                    "goods_name": "寸心草 条型红茶—贵红经典580 250g（5g/泡，50泡）",
-                    "goods_image": "2_05052232720295464.jpg",
-                    "goods_price": "290.00",
-                    "goods_promotion_price": "145.00",
-                    "goods_marketprice": "290.00",
-                    "goods_promotion_type": "1",
-                    "store_id": "2",
-                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05052232720295464_360.jpg"
-                },
-                {
-                    "goods_id": "101697",
-                    "goods_name": "寸心草 尊享 红茶 （赠白瓷套组一套） 200g（5g/泡，40泡）",
-                    "goods_image": "2_05052329724636626.jpg",
-                    "goods_price": "396.00",
-                    "goods_promotion_price": "396.00",
-                    "goods_marketprice": "396.00",
-                    "goods_promotion_type": "0",
-                    "store_id": "2",
-                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05052329724636626_360.jpg"
-                },
-                {
-                    "goods_id": "101404",
-                    "goods_name": "齐云春 皇后鹤红野生红茶礼盒装 240g",
-                    "goods_image": "2_04994394652819856.jpg",
-                    "goods_price": "78.40",
-                    "goods_promotion_price": "78.40",
-                    "goods_marketprice": "98.00",
-                    "goods_promotion_type": "0",
-                    "store_id": "2",
-                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_04994394652819856_360.jpg"
-                },
-                {
-                    "goods_id": "100747",
-                    "goods_name": "醇一杯 2015年 福龙香（黄） 坦洋工夫红茶 400g",
-                    "goods_image": "2_04878541545247904.jpg",
-                    "goods_price": "300.00",
-                    "goods_promotion_price": "300.00",
-                    "goods_marketprice": "300.00",
-                    "goods_promotion_type": "0",
-                    "store_id": "2",
-                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_04878541545247904_360.jpg"
                 }
             ]
         }
@@ -392,7 +281,7 @@ URL(Get): act=goods&op=goods_detail
       }
     }
 
-### 7.商品介绍信息
+### 商品介绍信息
 URL(Get): act=goods&op=goods_body 
 参数：
 
@@ -464,7 +353,7 @@ URL： act=flash_sale&op=current_api
       code: 
     }
 
-### 11.限时抢购明日
+### 限时抢购明日
 URL： act=flash_sale&op=coming_api  
 参数：
 
@@ -476,20 +365,45 @@ URL： act=flash_sale&op=coming_api
       code: 
     }
 
-### 12.茶艺师推荐
-URL: act=tasters_recommends 
+### 茶艺师推荐列表
+URL(GET): act=goods&op=recommend_list
 参数：
 
->page 当前列表页数    
->gc_id 按类别排序时的类目ID
->byPrice 按价格进行筛选，值为1 倒序 值为 0 顺序   
->bySalenum 按销量进行筛选，值为1 倒序 值为 0 顺序   
->byClick") 按点击量进行筛选，值为1 倒序 值为 0 顺序   
+>key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序
+>order 排序方式 1-升序 2-降序
+>page 每页数量
+>curPage 当前页码
+>gc_id 分类编号
 
 返回： 
 
     {
-      code: 
+        "code": 1,
+        "data": {
+            "list": [
+                {
+                    "goods_id": "101758",
+                    "goods_name": "大益 普洱茶8582 生茶 357g 买二送一",
+                    "goods_image": "2_05060208241996128.png",
+                    "goods_price": "480.00",
+                    "goods_promotion_price": "480.00",
+                    "goods_marketprice": "480.00",
+                    "goods_promotion_type": "0",
+                    "recommend_score": "9",
+                    "recommend_taste": "回甘快",
+                    "recommend_light": "金黄",
+                    "recommend_aroma": "纯正",
+                    "recommend_leaf": "柔匀",
+                    "group_flag": false,
+                    "xianshi_flag": false,
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif",
+                    "area": "云南"
+                }
+            ],
+            "hasmore": true,
+            "page_total": 4
+        },
+        "msg": "SUCCESS"
     }
 
 ### 13.忘记密码

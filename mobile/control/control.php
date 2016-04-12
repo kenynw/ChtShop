@@ -17,7 +17,7 @@ class mobileControl{
     //客户端类型
     protected $client_type_array = array('android', 'wap', 'wechat', 'ios');
     //列表默认分页数
-    protected $page = 5;
+    protected $page = 10;
 
 
 	public function __construct() {

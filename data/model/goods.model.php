@@ -275,6 +275,21 @@ class goodsModel extends Model{
     }
 
     /**
+     *  查询商品SUK及试茶师推荐信息
+     *
+     * @param $condition
+     * @param string $field
+     * @return array
+     * @author Liao
+     */
+    public function getGoodsTastersList($condition, $field = '*', $order = 'goods_id asc', $page = 10) {
+        $condition['goods_state']   = self::STATE1;
+        $condition['goods_verify']  = self::VERIFY1;
+        $condition = $this -> _getRecursiveClass($condition);
+        return $this -> table('goods,tasters_recommend')->field($field)->join('inner')->on('tasters_recommend.recommend_goods_id=goods.goods_id')->where($condition)->order($order)->page($page)->select();
+    }
+
+    /**
      * 计算商品库存
      *
      * @param array $goods_list
