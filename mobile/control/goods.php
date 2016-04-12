@@ -133,7 +133,7 @@ class goodsControl extends mobileHomeControl{
             $goods_list[$key]['goods_image_url'] = cthumb($value['goods_image'], 360, $value['store_id']);
 
             //产地
-            $goods_list[$key]['area'] = $this->_goods_origin($value['goods_id']);
+            $goods_list[$key]['origin'] = $this->_goods_origin($value['goods_id']);
 
             unset($goods_list[$key]['store_id']);
             unset($goods_list[$key]['goods_commonid']);

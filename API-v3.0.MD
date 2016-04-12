@@ -397,7 +397,7 @@ URL(GET): act=goods&op=recommend_list
                     "group_flag": false,
                     "xianshi_flag": false,
                     "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif",
-                    "area": "云南"
+                    "origin": "云南"
                 }
             ],
             "hasmore": true,
