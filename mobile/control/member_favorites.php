@@ -40,7 +40,7 @@ class member_favoritesControl extends mobileMemberControl {
             $goods_list[$key]['goods_image_url'] = cthumb($value['goods_image'], 240, $value['store_id']);
         }
 
-        output_data(array('favorites_list' => $goods_list), mobile_page($page_count));
+        output_data(array('list' => $goods_list), mobile_page($page_count));
     }
 
     /**

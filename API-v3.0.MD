@@ -680,15 +680,23 @@ URL: act=member_favorites&op=favorites_list
 
 返回： 
 
-    {
-      code: 200,
-      datas: {
-        goods_name 商品名称
-        goods_image_url 商品图片地址
-        goods_price 商品价格
-        fav_id 收藏编号
-      }
-    }
+    "code": 1,
+        "data": {
+            "list": [
+                {
+                    "goods_id": "100747",
+                    "goods_name": "醇一杯 2015年 福龙香（黄） 坦洋工夫红茶 400g",
+                    "goods_price": "300.00",
+                    "goods_image": "2_04878541545247904.jpg",
+                    "store_id": "2",
+                    "fav_id": "100747",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_240.gif"
+                }
+            ],
+            "hasmore": false,
+            "page_total": 1
+        },
+        "msg": "SUCCESS"
 
 ### 26.收藏添加
 URL: act=member_favorites&op=favorites_add
