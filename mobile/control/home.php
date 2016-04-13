@@ -140,7 +140,7 @@ class homeControl extends mobileHomeControl
         //情形1，未登录
         if (!$logState) {
             $member_lable = "cate_id=3_258&a_id=3059_3512&brand_id=444";
-            $guess_list = $this->get_likeOp($member_lable, $page);
+            $guess_list = $this->_get_like($member_lable, $page);
             //$guess_list=$goodsModel->field("goods_id,goods_name,goods_image,goods_price,goods_promotion_price,goods_marketprice,goods_promotion_type,store_id")->where("goods_state='1'")->order("goods_click desc")->page(6)->select();
         } else {
             /*按浏览记录查找，已废弃 更改为按标签查找
@@ -172,31 +172,20 @@ class homeControl extends mobileHomeControl
             //有标签
             $goodsModel = Model("goods");
             if (!empty($member_lable)) {
-                $guess_list = $this->get_likeOp($member_lable, $page);
+                $guess_list = $this->_get_like($member_lable, $page);
             } else {
                 //没有标签
                 $guess_list = $goodsModel->field("goods_id,goods_name,goods_image,goods_price,goods_promotion_price,goods_marketprice,goods_promotion_type,store_id")->where("goods_state='1'")->order("goods_click desc")->page(6)->select();
 
             }
         }
-        // print_r($guess_list);
-        $temGuess = array();
-        if ($guess_list) {
-            $goodsCommonModel = Model("goods_common");
-            foreach ($guess_list as $key => $value) {
-//                list($imageName, $imageType) = explode(".", $value['goods_image']);
-//                $value['goods_image'] = array();
-//                $value['goods_image']['original_pic'] = Goods_Img_Patch . $value["store_id"] . '/' . $imageName . '.' . $imageType;
-//                $value['goods_image']['bmiddle_pic'] = Goods_Img_Patch . $value["store_id"] . '/' . $imageName . '_360.' . $imageType;
-//                $value['goods_image']['small_pic'] = Goods_Img_Patch . $value["store_id"] . '/' . $imageName . '_60.' . $imageType;
-                $guess_list[$key]['goods_image_url'] = cthumb($value['goods_image'], 360, $value['store_id']);
-//                /*获取产地属性<<*/
-//                $attrArray = $goodsCommonModel->field("goods_attr")->where("goods_commonid='" . $value['goods_commonid'] . "'")->find();
-//                $attrArray = @unserialize();
-//                /*获取产地属性>>*/
-//                $temGuess[] = $value;
-            }
+
+        foreach ($guess_list as $key => $value) {
+            $guess_list[$key]['goods_image_url'] = cthumb($value['goods_image'], 360, $value['store_id']);
+
+            $guess_list[$key]['origin'] = $this->_goods_origin($value['goods_id']);
         }
+
         $data['guess_list'] = $guess_list;
 
         if ($page == 1) {
@@ -215,7 +204,7 @@ class homeControl extends mobileHomeControl
     }
 
     //标签选项
-    public function get_likeOp($string = "cate_id=3_258&a_id=3059_3512&brand_id=444", $page = 1)
+    private function _get_like($string = "cate_id=3_258&a_id=3059_3512&brand_id=444", $page = 1)
     {
         //筛选字符串为cate_id=201_202&a_id=3224_3230
         if (strpos($string, "cate_id") === false && strpos($string, 'a_id') === false) {
@@ -338,6 +327,25 @@ class homeControl extends mobileHomeControl
         return $goods;
 
     }
+
+
+    /**
+     * 获取商品产地
+     *
+     * @author Liao
+     */
+    public function _goods_origin($goods_id) {
+        $origin_name = '';
+        $condition['goods_id'] = $goods_id;
+        $condition['attr_id'] = array('between', '266,277');
+        $goods_attr_list = Model('goods_attr_index')->getGoodsAttrIndexList($condition, 'attr_value_id');
+        if(!empty($goods_attr_list)) {
+            $attr_name_array = Model('attribute')->getAttributeValueList($goods_attr_list[0], 'attr_value_name');
+            $origin_name = $attr_name_array[0]['attr_value_name'];
+        }
+        return $origin_name;
+    }
+
 }
 
 ?>

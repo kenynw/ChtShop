@@ -10,6 +10,11 @@ defined('InShopNC') or exit('Access Invalid!');
 
 function output_data($datas, $extend_data = array())
 {
+    if(isset($_POST['version']) && $_POST['version'] == VERSION_3_0) {
+        output_json(1, $datas, 'SUCCESS', $extend_data);
+        die;
+    }
+
     $data = array();
     $data['code'] = 200;
 
