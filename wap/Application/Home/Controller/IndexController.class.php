@@ -39,7 +39,7 @@ class IndexController extends Controller
 
         $goods = $xianshi->where("state='1' and start_time<'" . time() . "' and end_time>'" . time() . "'")->order("`xianshi_goods_id` desc")->limit("1")->select();
 
-        //print_r($goods);
+        print_r($goods);
 
         $goods_id = $goods[0]['goods_id'];
 
@@ -62,16 +62,16 @@ class IndexController extends Controller
 
             $array['code'] = 200;
 
-            $array['content'] = reset($goods);
+            $array['content'] = $goods[0];
 
         } else {
 
             $array['code'] = 404;
 
-            $array['content'] = reset($goods);
+            $array['content'] = $goods[0];
 
         }
-        echo json_encode($array);
+//        echo json_encode($array);
 
     }
 
