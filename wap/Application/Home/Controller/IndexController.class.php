@@ -62,13 +62,13 @@ class IndexController extends Controller
 
             $array['code'] = 200;
 
-            $array['content'] = $goods;
+            $array['content'] = reset($goods);
 
         } else {
 
             $array['code'] = 404;
 
-            $array['content'] = $goods;
+            $array['content'] = reset($goods);
 
         }
         echo json_encode($array);
