@@ -50,7 +50,7 @@ class mb_specialControl extends SystemControl{
     }
 
     /**
-     * 编辑专题描述 
+     * 编辑专题描述
      */
     public function update_special_descOp() {
         $model_mb_special = Model('mb_special');
@@ -188,7 +188,7 @@ class mb_specialControl extends SystemControl{
     public function special_item_saveOp() {
         $model_mb_special = Model('mb_special');
 
-        $result = $model_mb_special->editMbSpecialItemByID(array('item_data' => $_POST['item_data']), $_POST['item_id'], $_POST['special_id']); 
+        $result = $model_mb_special->editMbSpecialItemByID(array('item_data' => $_POST['item_data']), $_POST['item_id'], $_POST['special_id']);
 
         if($result) {
             if($_POST['special_id'] == $model_mb_special::INDEX_SPECIAL_ID) {

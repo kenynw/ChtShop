@@ -1,6 +1,6 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?>
 
-<div class="page"> 
+<div class="page">
   <!-- 页面导航 -->
   <div class="fixed-bar">
     <div class="item-title">
@@ -62,12 +62,12 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/jquery-ui/jquery.ui.js"></script> 
-<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script> 
-<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/template.min.js" charset="utf-8"></script> 
-<!-- 页面模块模板 --> 
+<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/jquery-ui/jquery.ui.js"></script>
+<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script>
+<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/template.min.js" charset="utf-8"></script>
+<!-- 页面模块模板 -->
 <script id="item_template" type="text/html">
-</script> 
+</script>
 <script type="text/javascript">
     var special_id = <?php echo $output['special_id'];?>;
     var url_item_add = "<?php echo urlAdmin('mb_special', 'special_item_add');?>";
@@ -173,4 +173,4 @@
         });
 
     });
-</script> 
+</script>

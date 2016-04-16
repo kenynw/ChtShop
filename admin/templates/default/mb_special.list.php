@@ -4,7 +4,7 @@ input {
 	width: 270px;
 }
 </style>
-<div class="page"> 
+<div class="page">
   <!-- 页面导航 -->
   <div class="fixed-bar">
     <div class="item-title">

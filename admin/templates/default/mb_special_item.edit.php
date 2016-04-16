@@ -6,7 +6,7 @@
 }
 </style>
 
-<div class="page"> 
+<div class="page">
   <!-- 页面导航 -->
   <div class="fixed-bar">
     <div class="item-title">
@@ -221,4 +221,4 @@
             $('#dialog_item_image_desc').text(desc);
         }
     });
-    </script> 
+    </script>
