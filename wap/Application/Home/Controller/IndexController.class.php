@@ -31,7 +31,7 @@ class IndexController extends Controller
     }
 
     //首页商品api
-    public function homePromotionGoods()
+    public function home_promotion_goods()
     {
 
         //刷选商品，暂定，限时特购商品
