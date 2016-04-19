@@ -20,14 +20,13 @@ class yinlian
     /**
      *    以下代码只是为了方便商户测试而提供的样例代码，商户可以根据自己需要，按照技术文档编写。该代码仅供参考
      */
-// 初始化日志
+    // 初始化日志
 
     function submit($param)
     {
-
         $log = new PhpLog (SDK_LOG_FILE_PATH, "PRC", SDK_LOG_LEVEL);
         $log->LogInfo("============处理前台请求开始===============");
-// 初始化日志
+        // 初始化日志
         $params = array(
             'version' => '5.0.0',                //版本号
             'encoding' => 'utf-8',                //编码方式
@@ -50,9 +49,8 @@ class yinlian
             'reqReserved' => ' 透传信息', //请求方保留域，透传字段，查询、通知、对账文件中均会原样出现
         );
 
-
-// 签名
-//sign ( $params );
+        // 签名
+        //sign ( $params );
         $log->LogInfo('=====签名报文开始======');
         if (isset($params['transTempUrl'])) {
             unset($params['transTempUrl']);
@@ -65,12 +63,15 @@ class yinlian
         $log->LogInfo("摘要sha1x16 >" . $params_sha1x16);
         // 签名证书路径
         $cert_path = SDK_SIGN_CERT_PATH;
-        //echo $cert_path;
+//        echo $cert_path;
         //add
-        //echo file_get_contents($cert_path);
+//        echo file_get_contents($cert_path);
         $private_key = getPrivateKey($cert_path);
+
         // 签名
         $sign_falg = openssl_sign($params_sha1x16, $signature, $private_key, OPENSSL_ALGO_SHA1);
+
+        echo $private_key;
 
         if ($sign_falg) {
             $signature_base64 = base64_encode($signature);
@@ -81,10 +82,10 @@ class yinlian
         }
         $log->LogInfo('=====签名报文结束======');
 
-// 前台请求地址
+        // 前台请求地址
         $front_uri = SDK_FRONT_TRANS_URL;
         $log->LogInfo("前台请求地址为>" . $front_uri);
-// 构造 自动提交的表单
+        // 构造 自动提交的表单
         $html_form = create_html($params, $front_uri);
 
         $log->LogInfo("-------前台交易自动提交表单>--begin----");
@@ -92,8 +93,37 @@ class yinlian
         $log->LogInfo("-------前台交易自动提交表单>--end-------");
         $log->LogInfo("============处理前台请求 结束===========");
         echo $html_form;
-
-
     }
+
+    /*银联前台同步跳转地址*/
+    public function getReturnInfo($payment_config)
+    {
+        if (isset($_POST['signature'])) {
+            return array(
+                //商户订单号
+                'out_trade_no' => $_POST['orderId'],
+                //支付宝交易号
+                'trade_no' => $_POST['queryId'],
+            );
+        } else {
+            return false;
+        }
+    }
+
+    /*银联支付异步后台通知地址*/
+    public function getNotifyInfo($payment_config)
+    {
+        if (isset($_POST['signature'])) {
+            return array(
+                //商户订单号
+                'out_trade_no' => $_POST['orderId'],
+                //支付宝交易号
+                'trade_no' => $_POST['queryId'],
+            );
+        } else {
+            return false;
+        }
+    }
+
 
 }
