@@ -10,10 +10,10 @@ const SDK_PAN_ENC = 0;
  
 // ######(以下配置为PM环境：入网测试环境用，生产环境配置见文档说明)#######
 // 签名证书路径
-const SDK_SIGN_CERT_PATH = './certs/PM_700000000000001_acp.pfx';
+const SDK_SIGN_CERT_PATH = './certs/PRO_700000000000001_acp.pfx';
 
 // 签名证书密码
- const SDK_SIGN_CERT_PWD = 'chaxin';
+ const SDK_SIGN_CERT_PWD = '000000';
 
 // 密码加密证书（这条用不到的请随便配）
 const SDK_ENCRYPT_CERT_PATH = './certs/verify_sign_acp.cer';
