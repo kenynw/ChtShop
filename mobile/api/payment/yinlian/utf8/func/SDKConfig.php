@@ -45,8 +45,8 @@ const SDK_FILE_DOWN_PATH = './file/';
 //日志 目录
 const SDK_LOG_FILE_PATH = './logs/';
 
-//日志级别，关掉的话改PhpLog::OFF
-const SDK_LOG_LEVEL = PhpLog::INFO;
+//日志级别
+const SDK_LOG_LEVEL = 'INFO';
 
 
 
