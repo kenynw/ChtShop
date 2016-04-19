@@ -1,0 +1,396 @@
+[2016-04-15 21:29:53] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api&page=2&curpage=2 ( act=flash_sale&op=current_api ) 
+ERR: Db Error: Unknown column 'goods_salenum' in 'field list'
+SELECT goods_salenum FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460726992' ) AND ( end_time > '1460726992' ) ORDER BY xianshi_recommend desc LIMIT 2,2  
+[2016-04-15 21:30:00] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api&page=2 ( act=flash_sale&op=current_api ) 
+ERR: Db Error: Unknown column 'goods_salenum' in 'field list'
+SELECT goods_salenum FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727000' ) AND ( end_time > '1460727000' ) ORDER BY xianshi_recommend desc LIMIT 0,2  
+[2016-04-15 21:30:27] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api&page=2 ( act=flash_sale&op=current_api ) 
+ERR: Db Error: Unknown column 'goods_salenum' in 'field list'
+SELECT xianshi_id,goods_salenum FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727027' ) AND ( end_time > '1460727027' ) ORDER BY xianshi_recommend desc LIMIT 0,2  
+[2016-04-15 21:33:12] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api&page=2 ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '14607271' at line 1
+SELECT xianshi_goods_id,xianshi_id, FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727192' ) AND ( end_time > '1460727192' ) LIMIT 0,2  
+[2016-04-15 21:35:33] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api&page=2 ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xiansh' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xianshi_recommend FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727333' ) AND ( end_time > '1460727333' ) ORDER BY xianshi_recommend desc LIMIT 0,2  
+[2016-04-15 21:35:42] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api&page=2 ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xiansh' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xianshi_recommend FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727342' ) AND ( end_time > '1460727342' ) LIMIT 0,2  
+[2016-04-15 21:35:53] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api&page=2 ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xiansh' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xianshi_recommend FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727353' ) AND ( end_time > '1460727353' ) LIMIT 0,2  
+[2016-04-15 21:35:55] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api&page=2 ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xiansh' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xianshi_recommend FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727355' ) AND ( end_time > '1460727355' ) LIMIT 0,2  
+[2016-04-15 21:35:58] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api&page=2 ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xiansh' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xianshi_recommend FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727358' ) AND ( end_time > '1460727358' ) LIMIT 0,2  
+[2016-04-15 21:36:06] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xiansh' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xianshi_recommend FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727366' ) AND ( end_time > '1460727366' ) LIMIT 0,10  
+[2016-04-15 21:36:10] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xiansh' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state,xianshi_recommend FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727370' ) AND ( end_time > '1460727370' ) LIMIT 0,10  
+[2016-04-15 21:36:22] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state FROM `' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727382' ) AND ( end_time > '1460727382' ) LIMIT 0,10  
+[2016-04-15 21:36:23] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state FROM `' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_namegoods_price,xianshi_price,goods_image,start_time,end_time,state FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727383' ) AND ( end_time > '1460727383' ) LIMIT 0,10  
+[2016-04-15 21:36:37] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_name,goods_price,xianshi_price,goods_image,start_time,end_time,state FROM ' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_name,goods_price,xianshi_price,goods_image,start_time,end_time,state FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727397' ) AND ( end_time > '1460727397' ) LIMIT 0,10  
+[2016-04-15 21:36:52] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_name,goods_price,xianshi_price,goods_image,start_time,end_time,state FROM ' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_name,goods_price,xianshi_price,goods_image,start_time,end_time,state FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727412' ) AND ( end_time > '1460727412' ) LIMIT 0,10  
+[2016-04-15 21:37:57] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_name,goods_price,xianshi_price,goods_image,start_time,end_time,lower_limit' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_name,goods_price,xianshi_price,goods_image,start_time,end_time,lower_limit,state,xianshi_recommend,order,goods_url,image_url,xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727477' ) AND ( end_time > '1460727477' ) LIMIT 0,10  
+[2016-04-15 21:38:01] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'goods_name,goods_price,xianshi_price,goods_image,start_time,end_time,lower_limit' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,,goods_name,goods_price,xianshi_price,goods_image,start_time,end_time,lower_limit,state,xianshi_recommend,order,goods_url,image_url,xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727481' ) AND ( end_time > '1460727481' ) LIMIT 0,10  
+[2016-04-15 21:38:32] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order,goods_url,image_url,xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE (' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,goods_name,goods_price,xianshi_price,goods_image,start_time,end_time,lower_limit,state,xianshi_recommend,order,goods_url,image_url,xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727512' ) AND ( end_time > '1460727512' ) LIMIT 0,10  
+[2016-04-15 21:38:35] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order,goods_url,image_url,xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE (' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,goods_name,goods_price,xianshi_price,goods_image,start_time,end_time,lower_limit,state,xianshi_recommend,order,goods_url,image_url,xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727515' ) AND ( end_time > '1460727515' ) LIMIT 0,10  
+[2016-04-15 21:38:37] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order,goods_url,image_url,xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE (' at line 1
+SELECT xianshi_goods_id,xianshi_id,xianshi_name,xianshi_title,xianshi_explain,goods_id,store_id,goods_name,goods_price,xianshi_price,goods_image,start_time,end_time,lower_limit,state,xianshi_recommend,order,goods_url,image_url,xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727517' ) AND ( end_time > '1460727517' ) LIMIT 0,10  
+[2016-04-15 21:39:58] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order,
+                    goods_url,
+                    image_url,
+           ' at line 16
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    store_id,
+                    goods_name,
+                    goods_price,
+                    xianshi_price,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    order,
+                    goods_url,
+                    image_url,
+                    xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727598' ) AND ( end_time > '1460727598' ) LIMIT 0,10  
+[2016-04-15 21:40:03] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order,
+                    goods_url,
+                    image_url,
+           ' at line 13
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    xianshi_price,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    order,
+                    goods_url,
+                    image_url,
+                    xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727603' ) AND ( end_time > '1460727603' ) LIMIT 0,10  
+[2016-04-15 21:40:09] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order,
+                    goods_url,
+                    image_url,
+           ' at line 12
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    xianshi_price,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    order,
+                    goods_url,
+                    image_url,
+                    xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727609' ) AND ( end_time > '1460727609' ) LIMIT 0,10  
+[2016-04-15 21:40:17] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order,
+                    xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ' at line 12
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    xianshi_price,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    order,
+                    xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727617' ) AND ( end_time > '1460727617' ) LIMIT 0,10  
+[2016-04-15 21:40:26] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: Unknown column 'xianshi_discount' in 'field list'
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    xianshi_price,
+                    start_time,
+                    end_time,
+                    xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727626' ) AND ( end_time > '1460727626' ) LIMIT 0,10  
+[2016-04-15 21:40:32] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '14607276' at line 8
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    xianshi_price,
+                    start_time,
+                    end_time, FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727632' ) AND ( end_time > '1460727632' ) LIMIT 0,10  
+[2016-04-15 21:40:34] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '14607276' at line 8
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    xianshi_price,
+                    start_time,
+                    end_time, FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727634' ) AND ( end_time > '1460727634' ) LIMIT 0,10  
+[2016-04-15 21:42:32] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order,
+                    goods_url,
+                    image_url,
+           ' at line 17
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_id,
+                    store_id,
+                    goods_name,
+                    goods_price,
+                    xianshi_price,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    order,
+                    goods_url,
+                    image_url,
+                    xianshi_discount FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727752' ) AND ( end_time > '1460727752' ) LIMIT 0,10  
+[2016-04-15 21:43:49] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) A' at line 16
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_id,
+                    store_id,
+                    goods_name,
+                    goods_price,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727829' ) AND ( end_time > '1460727829' ) LIMIT 0,10  
+[2016-04-15 21:44:11] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) A' at line 14
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_name,
+                    goods_price,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727851' ) AND ( end_time > '1460727851' ) LIMIT 0,10  
+[2016-04-15 21:44:23] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) A' at line 13
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_name,
+                    goods_price,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727863' ) AND ( end_time > '1460727863' ) LIMIT 0,10  
+[2016-04-15 21:44:27] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) A' at line 12
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_name,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727867' ) AND ( end_time > '1460727867' ) LIMIT 0,10  
+[2016-04-15 21:44:33] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) A' at line 10
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_name,
+                    goods_image,
+                    lower_limit,
+                    state,
+                    order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727873' ) AND ( end_time > '1460727873' ) LIMIT 0,10  
+[2016-04-15 21:44:38] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '14607278' at line 8
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_name,
+                    goods_image,
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727878' ) AND ( end_time > '1460727878' ) LIMIT 0,10  
+[2016-04-15 21:44:43] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '14607278' at line 6
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727883' ) AND ( end_time > '1460727883' ) LIMIT 0,10  
+[2016-04-15 21:45:08] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) A' at line 16
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_id,
+                    store_id,
+                    goods_name,
+                    goods_price,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    order
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727908' ) AND ( end_time > '1460727908' ) LIMIT 0,10  
+[2016-04-15 21:46:29] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: Unknown column 'goods_salenum' in 'field list'
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_id,
+                    store_id,
+                    goods_name,
+                    goods_price,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    goods_salenum
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727989' ) AND ( end_time > '1460727989' ) LIMIT 0,10  
+[2016-04-15 21:46:31] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: Unknown column 'goods_salenum' in 'field list'
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_id,
+                    store_id,
+                    goods_name,
+                    goods_price,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    goods_salenum
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727991' ) AND ( end_time > '1460727991' ) LIMIT 0,10  
+[2016-04-15 21:46:33] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: Unknown column 'goods_salenum' in 'field list'
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_id,
+                    store_id,
+                    goods_name,
+                    goods_price,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    goods_salenum
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460727993' ) AND ( end_time > '1460727993' ) LIMIT 0,10  
+[2016-04-15 21:47:05] /CHTWeb/mobile/index.php?act=flash_sale&op=current_api ( act=flash_sale&op=current_api ) 
+ERR: Db Error: Unknown column 'goods_url' in 'field list'
+SELECT xianshi_goods_id,
+                    xianshi_id,
+                    xianshi_name,
+                    xianshi_title,
+                    xianshi_explain,
+                    goods_id,
+                    store_id,
+                    goods_name,
+                    goods_price,
+                    goods_image,
+                    start_time,
+                    end_time,
+                    lower_limit,
+                    state,
+                    xianshi_recommend,
+                    goods_url
+                     FROM `shopnc_p_xianshi_goods` WHERE ( state = '1' ) AND ( start_time < '1460728025' ) AND ( end_time > '1460728025' ) LIMIT 0,10  

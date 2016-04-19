@@ -321,6 +321,7 @@ class goodsControl extends mobileHomeControl{
     }
 	/**
      * 手机商品详细页
+     *
      */
 	public function wap_goods_bodyOp() {
         $goods_id = intval($_GET ['goods_id']);
@@ -332,11 +333,11 @@ class goodsControl extends mobileHomeControl{
         Tpl:output('goods_common_info',$goods_common_info);
         Tpl::showpage('goods_body');
     }
-    /*
-     app请求商品详细接口
 
-      */
-
+    /**
+     * app请求商品详细接口
+     * @author Lai
+     */
     public function goods_detail_apiOp() {
         $goods_id = intval($_GET ['goods_id']);
 
