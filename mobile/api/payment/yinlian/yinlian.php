@@ -63,13 +63,15 @@ class yinlian
         $log->LogInfo("摘要sha1x16 >" . $params_sha1x16);
         // 签名证书路径
         $cert_path = SDK_SIGN_CERT_PATH;
-        echo $cert_path;
+//        echo $cert_path;
         //add
-        echo file_get_contents($cert_path);
+//        echo file_get_contents($cert_path);
         $private_key = getPrivateKey($cert_path);
 
         // 签名
         $sign_falg = openssl_sign($params_sha1x16, $signature, $private_key, OPENSSL_ALGO_SHA1);
+
+        echo $private_key;
 
         if ($sign_falg) {
             $signature_base64 = base64_encode($signature);
