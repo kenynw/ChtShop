@@ -13,10 +13,7 @@ const SDK_PAN_ENC = 0;
 const SDK_SIGN_CERT_PATH = './certs/PM_700000000000001_acp.pfx';
 
 // 签名证书密码
-const SDK_SIGN_CERT_PWD = 'chaxin';
-
-// 验签
-const SDK_VERIFY_CERT_PATH = './certs/UPOP_VERIFY.cer';
+ const SDK_SIGN_CERT_PWD = '000000';
 
 // 密码加密证书（这条用不到的请随便配）
 const SDK_ENCRYPT_CERT_PATH = './certs/verify_sign_acp.cer';
@@ -25,25 +22,26 @@ const SDK_ENCRYPT_CERT_PATH = './certs/verify_sign_acp.cer';
 const SDK_VERIFY_CERT_DIR = './certs/';
 
 // 前台请求地址
-const SDK_FRONT_TRANS_URL = 'https://gateway.95516.com/gateway/api/frontTransReq.do';
+const SDK_FRONT_TRANS_URL = 'https://101.231.204.80:5000/gateway/api/frontTransReq.do';
 
 // 后台请求地址
-const SDK_BACK_TRANS_URL = 'https://gateway.95516.com/gateway/api/backTransReq.do';
+const SDK_BACK_TRANS_URL = 'https://101.231.204.80:5000/gateway/api/backTransReq.do';
 
 // 批量交易
-const SDK_BATCH_TRANS_URL = 'https://gateway.95516.com/gateway/api/batchTrans.do';
+const SDK_BATCH_TRANS_URL = 'https://101.231.204.80:5000/gateway/api/batchTrans.do';
 
 //单笔查询请求地址
-const SDK_SINGLE_QUERY_URL = 'https://gateway.95516.com/gateway/api/queryTrans.do';
+const SDK_SINGLE_QUERY_URL = 'https://101.231.204.80:5000/gateway/api/queryTrans.do';
 
 //文件传输请求地址
-const SDK_FILE_QUERY_URL = 'https://filedownload.95516.com/';
+const SDK_FILE_QUERY_URL = 'https://101.231.204.80:9080/';
 
 //有卡交易地址
-const SDK_Card_Request_Url = 'https://gateway.95516.com/gateway/api/cardTransReq.do';
+const SDK_Card_Request_Url = 'https://101.231.204.80:5000/gateway/api/cardTransReq.do';
 
 //App交易地址
-const SDK_App_Request_Url = 'https://gateway.95516.com/gateway/api/appTransReq.do';
+const SDK_App_Request_Url = 'https://101.231.204.80:5000/gateway/api/appTransReq.do';
+
 
 // 前台通知地址 (商户自行配置通知地址)
 const SDK_FRONT_NOTIFY_URL = 'http://www.chahuitong.com/mobile/api/payment/yinlian/call_back_url.php';
