@@ -27,7 +27,7 @@ class yinlian
 
         $log = new PhpLog (SDK_LOG_FILE_PATH, "PRC", SDK_LOG_LEVEL);
         $log->LogInfo("============处理前台请求开始===============");
-// 初始化日志
+        // 初始化日志
         $params = array(
             'version' => '5.0.0',                //版本号
             'encoding' => 'utf-8',                //编码方式
@@ -51,8 +51,8 @@ class yinlian
         );
 
 
-// 签名
-//sign ( $params );
+        // 签名
+        //sign ( $params );
         $log->LogInfo('=====签名报文开始======');
         if (isset($params['transTempUrl'])) {
             unset($params['transTempUrl']);
@@ -92,8 +92,37 @@ class yinlian
         $log->LogInfo("-------前台交易自动提交表单>--end-------");
         $log->LogInfo("============处理前台请求 结束===========");
         echo $html_form;
-
-
     }
+
+    /*银联前台同步跳转地址*/
+    public function getReturnInfo($payment_config)
+    {
+        if (isset($_POST['signature'])) {
+            return array(
+                //商户订单号
+                'out_trade_no' => $_POST['orderId'],
+                //支付宝交易号
+                'trade_no' => $_POST['queryId'],
+            );
+        } else {
+            return false;
+        }
+    }
+
+    /*银联支付异步后台通知地址*/
+    public function getNotifyInfo($payment_config)
+    {
+        if (isset($_POST['signature'])) {
+            return array(
+                //商户订单号
+                'out_trade_no' => $_POST['orderId'],
+                //支付宝交易号
+                'trade_no' => $_POST['queryId'],
+            );
+        } else {
+            return false;
+        }
+    }
+
 
 }
