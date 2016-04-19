@@ -1,83 +1,70 @@
-<?php
+﻿<?php
 header ( 'Content-type:text/html;charset=utf-8' );
 include_once 'log.class.php';
 include_once 'SDKConfig.php';
 // 初始化日志
-$log = new PhpLog ( SDK_LOG_FILE_PATH, "PRC", SDK_LOG_LEVEL );
-
+//$log = new PhpLog ( SDK_LOG_FILE_PATH, "PRC", SDK_LOG_LEVEL );
 /**
- * key1=value1&key2=value2转array
- * @param $str key1=value1&key2=value2的字符串
- * @param $$needUrlDecode 是否需要解url编码，默认不需要
+ * 数组 排序后转化为字体串
+ *
+ * @param array $params        	
+ * @return string
  */
-function parseQString($str, $needUrlDecode=false){
-	$result = array();
-	$len = strlen($str);
-	$temp = "";
-	$curChar = "";
-	$key = "";
-	$isKey = true;
-	$isOpen = false;
-	$openName = "\0";
-
-	for($i=0; $i<$len; $i++){
-		$curChar = $str[$i];
-		if($isOpen){
-			if( $curChar == $openName){
-				$isOpen = false;
-			}
-			$temp = $temp . $curChar;
-		} elseif ($curChar == "{"){
-			$isOpen = true;
-			$openName = "}";
-			$temp = $temp . $curChar;
-		} elseif ($curChar == "["){
-			$isOpen = true;
-			$openName = "]";
-			$temp = $temp . $curChar;
-		} elseif ($isKey && $curChar == "="){
-			$key = $temp;
-			$temp = "";
-			$isKey = false;
-		} elseif ( $curChar == "&" && !$isOpen){
-			putKeyValueToDictionary($temp, $isKey, $key, $result, $needUrlDecode);
-			$temp = "";
-			$isKey = true;
-		} else {
-			$temp = $temp . $curChar;
+function coverParamsToString($params) {
+	$sign_str = '';
+	// 排序
+	ksort ( $params );
+	foreach ( $params as $key => $val ) {
+		if ($key == 'signature') {
+			continue;
 		}
+		$sign_str .= sprintf ( "%s=%s&", $key, $val );
+		// $sign_str .= $key . '=' . $val . '&';
 	}
-	putKeyValueToDictionary($temp, $isKey, $key, $result, $needUrlDecode);
-	return $result;
+	return substr ( $sign_str, 0, strlen ( $sign_str ) - 1 );
 }
-
-
-function putKeyValueToDictionary($temp, $isKey, $key, &$result, $needUrlDecode) {
-	if ($isKey) {
-		$key = $temp;
-		if (strlen ( $key ) == 0) {
-			return false;
-		}
-		$result [$key] = "";
-	} else {
-		if (strlen ( $key ) == 0) {
-			return false;
-		}
-		if ($needUrlDecode)
-			$result [$key] = urldecode ( $temp );
-		else
-			$result [$key] = $temp;
-	}
-}
-
 /**
  * 字符串转换为 数组
  *
- * @param unknown_type $str
+ * @param unknown_type $str        	
  * @return multitype:unknown
  */
-function convertStringToArray($str) {
-	return parseQString($str);
+function coverStringToArray($str) {
+	$result = array ();
+
+	if (! empty ( $str )) {
+		$temp = preg_split ( '/&/', $str );
+		if (! empty ( $temp )) {
+			foreach ( $temp as $key => $val ) {
+				$arr = preg_split ( '/=/', $val, 2 );
+				if (! empty ( $arr )) {
+					$k = $arr ['0'];
+					$v = $arr ['1'];
+					$result [$k] = $v;
+				}
+			}
+		}
+	}
+	return $result;
+}
+/**
+ * 处理返回报文 解码客户信息 , 如果编码为utf-8 则转为utf-8
+ *
+ * @param unknown_type $params        	
+ */
+function deal_params(&$params) {
+	/**
+	 * 解码 customerInfo
+	 */
+	if (! empty ( $params ['customerInfo'] )) {
+		$params ['customerInfo'] = base64_decode ( $params ['customerInfo'] );
+	}
+	
+	if (! empty ( $params ['encoding'] ) && strtoupper ( $params ['encoding'] ) == 'utf-8') {
+		foreach ( $params as $key => $val ) {
+			$params [$key] = iconv ( 'utf-8', 'UTF-8', $val );
+		}
+	}
 }
 
 /**
@@ -103,44 +90,70 @@ function deflate_file(&$params) {
 	}
 }
 
+/**
+ * 处理报文中的文件
+ *
+ * @param unknown_type $params        	
+ */
+function deal_file($params) {
+	global $log;
+	if (isset ( $params ['fileContent'] )) {
+		$log->LogInfo ( "---------处理后台报文返回的文件---------" );
+		$fileContent = $params ['fileContent'];
+		
+		if (empty ( $fileContent )) {
+			$log->LogInfo ( '文件内容为空' );
+		} else {
+			// 文件内容 解压缩
+			$content = gzuncompress ( base64_decode ( $fileContent ) );
+			$root = SDK_FILE_DOWN_PATH;
+			$filePath = null;
+			if (empty ( $params ['fileName'] )) {
+				$log->LogInfo ( "文件名为空" );
+				$filePath = $root . $params ['merId'] . '_' . $params ['batchNo'] . '_' . $params ['txnTime'] . '.txt';
+			} else {
+				$filePath = $root . $params ['fileName'];
+			}
+			$handle = fopen ( $filePath, "w+" );
+			if (! is_writable ( $filePath )) {
+				$log->LogInfo ( "文件:" . $filePath . "不可写，请检查！" );
+			} else {
+				file_put_contents ( $filePath, $content );
+				$log->LogInfo ( "文件位置 >:" . $filePath );
+			}
+			fclose ( $handle );
+		}
+	}
+}
 
 /**
- * 讲数组转换为string
+ * 构造自动提交表单
  *
- * @param $para 数组        	
- * @param $sort 是否需要排序        	
- * @param $encode 是否需要URL编码        	
+ * @param unknown_type $params        	
+ * @param unknown_type $action        	
  * @return string
  */
-function createLinkString($para, $sort, $encode) {
-	if($para == NULL || !is_array($para))
-		return "";
+function create_html($params, $action) {
+	$encodeType = isset ( $params ['encoding'] ) ? $params ['encoding'] : 'UTF-8';
+	$html = <<<eot
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset={$encodeType}" />
+</head>
+<body  onload="javascript:document.pay_forms.submit();">
+    <form id="pay_form" name="pay_form" action="{$action}" method="post">
 	
-	$linkString = "";
-	if ($sort) {
-		$para = argSort ( $para );
+eot;
+	foreach ( $params as $key => $value ) {
+		$html .= "    <input type=\"hidden\" name=\"{$key}\" id=\"{$key}\" value=\"{$value}\" />\n";
 	}
-	while ( list ( $key, $value ) = each ( $para ) ) {
-		if ($encode) {
-			$value = urlencode ( $value );
-		}
-		$linkString .= $key . "=" . $value . "&";
-	}
-	// 去掉最后一个&字符
-	$linkString = substr ( $linkString, 0, count ( $linkString ) - 2 );
-	
-	return $linkString;
+	$html .= <<<eot
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html>
+eot;
+	return $html;
 }
 
-/**
- * 对数组排序
- *
- * @param $para 排序前的数组
- *        	return 排序后的数组
- */
-function argSort($para) {
-	ksort ( $para );
-	reset ( $para );
-	return $para;
-}
-
+?>
