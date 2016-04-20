@@ -16,38 +16,28 @@ class flash_saleControl extends mobileHomeControl{
     }
 
     public function current_apiOp(){
-        $model_xianshi = Model('p_xianshi');
+        $model_xianshi_goods = Model('p_xianshi_goods');
 
-        $condition = array();
+        $field = 'xianshi_goods_id,xianshi_id,goods_id,store_id,xianshi_price,goods_name,goods_image,goods_price,start_time,end_time,state,xianshi_recommend';
+
+        $order = 'xianshi_recommend desc';
+
         $condition['state'] = 1;
         $condition['start_time'] = array('lt', TIMESTAMP);
         $condition['end_time'] = array('gt', TIMESTAMP);
+        $goods_list = $model_xianshi_goods -> getXianshiGoodsList($condition, $this->page, $order, $field);
 
-        $xianshi_list = $model_xianshi -> getXianshiList($condition);
+        $model_goods = Model('goods');
+        foreach ($goods_list as $key => $goods) {
+            $goods_info = $model_goods -> getGoodsInfo(array('goods_id' => $goods['goods_id']), 'goods_salenum,goods_storage');
+            $goods_list[$key]['goods_salenum'] = $goods_info['goods_salenum'];
+            $goods_list[$key]['goods_storage'] = $goods_info['goods_storage'];
 
-        output_json(1, $xianshi_list);
-//        $model_xianshi_goods = Model('p_xianshi_goods');
-//
-//        $field = 'xianshi_goods_id,xianshi_id,goods_id,store_id,xianshi_price,goods_name,goods_image,goods_price,start_time,end_time,state,xianshi_recommend';
-//
-//        $order = 'xianshi_recommend desc';
-//
-//        $condition['state'] = 1;
-//        $condition['start_time'] = array('lt', TIMESTAMP);
-//        $condition['end_time'] = array('gt', TIMESTAMP);
-//        $goods_list = $model_xianshi_goods -> getXianshiGoodsList($condition, $this->page, $order, $field);
-//
-//        $model_goods = Model('goods');
-//        foreach ($goods_list as $key => $goods) {
-//            $goods_info = $model_goods -> getGoodsInfo(array('goods_id' => $goods['goods_id']), 'goods_salenum,goods_storage');
-//            $goods_list[$key]['goods_salenum'] = $goods_info['goods_salenum'];
-//            $goods_list[$key]['goods_storage'] = $goods_info['goods_storage'];
-//
-//            // 商品URl
-//            $goods_list[$key]['goods_image_url'] = cthumb($goods['goods_image'], 360, $goods['store_id']);
-//        }
-//
-//        output_json(1, $goods_list);
+            // 商品URl
+            $goods_list[$key]['goods_image_url'] = cthumb($goods['goods_image'], 360, $goods['store_id']);
+        }
+
+        output_json(1, $goods_list);
     }
 
     public function coming_apiOp(){
