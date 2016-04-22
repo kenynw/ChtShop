@@ -85,7 +85,9 @@ URL：act=login
 
 ### 注册
 URL: act=login&op=register_api  
+
 参数：
+
 >mobile   
 >password   
 >verificode   
@@ -100,7 +102,9 @@ URL: act=login&op=register_api
 
 ### 第三方登录
 URL: act=login&op=register_api  
+
 参数：
+
 >key  shopNC的MD5值，固定为『804451dc13014b1c785fb73b1617b760』     
 >client   客户端类型，可选：android，ios，web   
 >op   第三方类型，可选：sina,wechat,qq  
@@ -124,10 +128,11 @@ URL: act=login&op=send_sms
       }
 
 ### 首页
-URL: act=home&op=home_page_api  
+URL: ~~act=home&op=home_page_api~~	<已被act=home替换>
+	
 参数： 
 
->key    登录令牌,如果用户登录了会根据当前来获取特定的数据
+>key    登录令牌,如果用户登录了会根据当前来获取特定的数据	
 >page   猜你喜欢的页数
 
 返回:
@@ -185,18 +190,85 @@ URL: act=home&op=home_page_api
             ]
         }
     }
+    
+### 首页
+URL: act=home
+	
+参数： 
 
-### 6.商品列表
+>key    登录令牌,根据浏览记录获取猜你喜欢商品列表
+
+返回:
+
+    {
+    "code": 1,
+    "data": {
+        "adds": [
+            {
+                "id": "14",
+                "image": "http://www.chahuitong.com/data/upload/mobile/home/1458113957.jpg",
+                "state": "1",
+                "order": "1",
+                "link": "http://www.chahuitong.com/example/web/raiders.html#",
+                "location": "1"
+            }
+        ],
+        "sample_image": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_240.gif",
+        "xianshi": {
+            "end_time": "1548812800",
+            "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_240.gif"
+        },
+        "tasters_list": [
+            {
+                "goods_id": "101758",
+                "goods_name": "大益 普洱茶8582 生茶 357g 买二送一",
+                "goods_image": "2_05060208241996128.png",
+                "goods_price": "480.00",
+                "goods_promotion_price": "480.00",
+                "goods_marketprice": "480.00",
+                "goods_promotion_type": "0",
+                "store_id": "2",
+                "recommend_score": "9",
+                "recommend_taste": "回甘快",
+                "recommend_light": "金黄",
+                "recommend_aroma": "纯正",
+                "recommend_leaf": "柔匀",
+                "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif"
+            }
+        ],
+        "guess_list": [
+            {
+                "goods_id": "101724",
+                "goods_commonid": "101009",
+                "store_id": "2",
+                "goods_name": "云源号 普洱生茶2011年乔木早春官正宗品包邮云南布朗茶叶380g",
+                "goods_price": "188.00",
+                "goods_marketprice": "315.00",
+                "goods_image": "2_05034182403801496.jpg",
+                "goods_salenum": "0",
+                "evaluation_good_star": "5",
+                "evaluation_count": "0",
+                "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif",
+                "origin": "云南"
+            }
+        ]
+    },
+    "msg": "SUCCESS"
+}
+
+
+### 商品列表
 URL(Get): act=goods&op=goods_list
+
 参数：
 
->version 版本号
->key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序
->order 排序方式 1-升序 2-降序
->page 每页数量
->curPage 当前页码
->gc_id 分类编号
->keyword 搜索关键字 注：gc_id和keyword二选一不能同时出现
+>version 版本号	
+>key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序	
+>order 排序方式 1-升序 2-降序	
+>page 每页数量	
+>curPage 当前页码	
+>gc_id 分类编号	
+>keyword 搜索关键字 注：gc_id和keyword二选一不能同时出现	
 
 返回：
 
@@ -228,8 +300,9 @@ URL(Get): act=goods&op=goods_list
         "msg": "SUCCESS"
     }
 
-### 6.商品详情
+### 商品详情
 URL(Get): act=goods&op=goods_detail 
+
 参数：
 
 >goods_id 商品编号    
@@ -283,6 +356,7 @@ URL(Get): act=goods&op=goods_detail
 
 ### 商品介绍信息
 URL(Get): act=goods&op=goods_body 
+
 参数：
 
 >goods_id 商品编号    
@@ -290,8 +364,9 @@ URL(Get): act=goods&op=goods_body
 返回： html
 
 
-### 8.免费茶样往期
+### 免费茶样往期
 URL(Get): act=goods_sample&op=overdue_goods 
+
 返回：
 
       {
@@ -299,11 +374,12 @@ URL(Get): act=goods_sample&op=overdue_goods
       }
 
 ### 9.免费茶样当前
+
 URL： act=goods_sample 
 
 参数：
 
->key 登录令牌，用于判断当前用户是否领取过
+>key 登录令牌，用于判断当前用户是否领取过	
 
 返回：
 
@@ -341,8 +417,9 @@ URL： act=goods_sample
       }
     }
 
-### 10.限时抢购今日
-URL： act=flash_sale&op=current_api 
+### ~~限时抢购今日~~<已被act=goods&op=current_list替换>
+URL： act=flash_sale&op=current_api
+
 参数：
 
 >page 当前列表页数    
@@ -353,7 +430,7 @@ URL： act=flash_sale&op=current_api
       code: 
     }
 
-### 限时抢购明日
+### ~~限时抢购明日~~<已弃用>
 URL： act=flash_sale&op=coming_api  
 参数：
 
@@ -365,15 +442,54 @@ URL： act=flash_sale&op=coming_api
       code: 
     }
 
-### 茶艺师推荐列表
-URL(GET): act=goods&op=recommend_list
+### 限时抢购今日
+URL(GET)： act=goods&op=current_list
 参数：
 
->key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序
->order 排序方式 1-升序 2-降序
->page 每页数量
->curPage 当前页码
->gc_id 分类编号
+>curpage 当前列表页数
+>page 每页默认数
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "list": [
+                {
+                    "xianshi_goods_id": "156",
+                    "xianshi_id": "21",
+                    "goods_id": "101672",
+                    "store_id": "2",
+                    "xianshi_price": "99.00",
+                    "goods_name": "可以兴 2014年盛世茶会 特级普洱茶生茶饼200g 云南勐海布朗山茶叶 买一送一",
+                    "goods_image": "2_05041997917573703.gif",
+                    "goods_price": "140.00",
+                    "start_time": "1460995200",
+                    "end_time": "1461168000",
+                    "state": "1",
+                    "xianshi_recommend": "1",
+                    "goods_salenum": "0",
+                    "goods_storage": "999",
+                    "goods_image_url": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05041997917573703_360.gif"
+                }
+            ],
+            "hasmore": false,
+            "page_total": 1
+        },
+        "msg": "SUCCESS"
+    }
+
+### 茶艺师推荐列表
+
+URL(GET): act=goods&op=recommend_list
+
+参数：
+
+>key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序	
+>order 排序方式 1-升序 2-降序	
+>page 每页数量	
+>curPage 当前页码	
+>gc_id 分类编号	
 
 返回： 
 
@@ -406,12 +522,14 @@ URL(GET): act=goods&op=recommend_list
         "msg": "SUCCESS"
     }
 
-### 13.忘记密码
+### 忘记密码
+
 URL: act=login&op=change_pwd  
+
 参数：
 
 >mobile 手机号码    
->verificode 验证码
+>verificode 验证码	
 >newpwd 新密码    
 
 返回： 
@@ -421,7 +539,7 @@ URL: act=login&op=change_pwd
       msg: "更新成功"
     }
 
-### 14.更改密码
+### 更改密码
 URL: act=member_index&op=update_member_pwd  
 参数：
 
@@ -436,8 +554,10 @@ URL: act=member_index&op=update_member_pwd
       msg: "更新成功"
     }
 
-### 15.获取用户信息
+### 获取用户信息
+
 URL: act=member_index 
+
 参数：
 
 >key  登录令牌    
@@ -461,8 +581,10 @@ URL: act=member_index
         "msg": "SUCCESS"
     }
 
-### 16.获取用户信息(v3)
+### 获取用户信息(v3)
+
 URL: act=member_index 
+
 参数：
 
 >key  登录令牌    
@@ -482,8 +604,10 @@ URL: act=member_index
       
     }
 
-### 17.更改用户信息
+### 更改用户信息
+
 URL: act=member_index&op=update_member_info 
+
 参数：
 
 >key  登录令牌    
@@ -500,8 +624,10 @@ URL: act=member_index&op=update_member_info
       data: {}
     }
 
-### 18.购买第一步(获取订单信息)
+### 购买第一步(获取订单信息)
+
 URL: act=member_buy&op=buy_step1  
+
 参数：
 
 >key 登录令牌    

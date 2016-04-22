@@ -282,7 +282,7 @@ class goodsModel extends Model{
      * @return array
      * @author Liao
      */
-    public function getGoodsTastersList($condition, $field = '*', $order = 'goods_id asc', $page = 10) {
+    public function getGoodsTastersList($condition, $field = '*', $order = 'recommend_sort asc', $page = 10) {
         $condition['goods_state']   = self::STATE1;
         $condition['goods_verify']  = self::VERIFY1;
         $condition = $this -> _getRecursiveClass($condition);

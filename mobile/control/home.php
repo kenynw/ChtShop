@@ -21,6 +21,70 @@ class homeControl extends mobileHomeControl
         parent::__construct();
     }
 
+    public function indexOp() {
+        $data = array();
+
+        //首页轮播图
+        $model_home = Model('home_pic');
+        $data['adds'] = $model_home->where("location='1'")->select();
+
+        //免费茶样
+        $condition['sample_start_time'] = array('lt', TIMESTAMP);
+        $condition['sample_end_time'] = array('gt', TIMESTAMP);
+        $goodsSample = Model()->table('goods_sample,goods')->join('inner')->on('goods.goods_id=goods_sample.sample_link')->where($condition)->field('goods_image,store_id')->find();
+        $data['sample_image'] = cthumb($goodsSample['goods_image'], 240, $goodsSample['store_id']);
+
+        // 限时抢购
+        $field_xianshi = 'goods_image,store_id,end_time';
+        $model_xianshi_goods = Model('p_xianshi_goods');
+        $condition_xianshi = array();
+        $condition_xianshi['state'] = 1;
+        $condition_xianshi['start_time'] = array('lt', TIMESTAMP);
+        $condition_xianshi['end_time'] = array('gt', TIMESTAMP);
+        $xianshi_goods = $model_xianshi_goods->getXianshiGoodsInfo($condition_xianshi, $field_xianshi);
+        $xianshi_goods['goods_image_url'] = cthumb($xianshi_goods['goods_image'], 240, $xianshi_goods['store_id']);
+        $data['xianshi'] = array(
+            'end_time' => $xianshi_goods['end_time'],
+            'goods_image_url' => $xianshi_goods['goods_image_url']
+        );
+
+        // 品茶师推荐
+        $model_goods = Model("goods");
+        $field = 'goods_id,goods_name,goods_image,goods_price,goods_promotion_price,goods_marketprice,goods_promotion_type,store_id,recommend_score,recommend_taste,recommend_light,recommend_aroma,recommend_leaf';
+        $order = 'recommend_sort desc';
+        $condition = array();
+        $condition['goods_commend'] = 1;
+        $tasters_list = $model_goods->getGoodsTastersList($condition, $field, $order, 4);
+        foreach ($tasters_list as $key => $value) {
+            $tasters_list[$key]['goods_image_url'] = cthumb($value['goods_image'], 360, $value['store_id']);
+        }
+        $data['tasters_list'] = $tasters_list;
+
+        //猜你喜欢
+        // 获取登录信息
+        $model_mb_user_token = Model('mb_user_token');
+        $key = $_POST['key'];
+        if(empty($key)) {
+            $key = $_GET['key'];
+        }
+        $mb_user_token_info = $model_mb_user_token -> getMbUserTokenInfoByToken($key);
+
+        $model_browse = Model('goods_browse');
+        $field_goods = 'goods_id,goods_commonid,store_id,goods_name,goods_price,goods_marketprice,goods_image,goods_salenum,evaluation_good_star,evaluation_count';
+        $guess_list = $model_browse -> getGuessLikeGoods($mb_user_token_info['member_id'], $this->page, $field_goods);
+
+        foreach ($guess_list as $key => $value) {
+            $guess_list[$key]['goods_image_url'] = cthumb($value['goods_image'], 360, $value['store_id']);
+            $guess_list[$key]['origin'] = $this->_goods_origin($value['goods_id']);
+        }
+        $data['guess_list'] = $guess_list;
+
+        output_json(1, $data);
+    }
+
+    /**
+     * @Deprecated
+     */
     public function home_page_apiOp()
     {
         $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
@@ -203,7 +267,7 @@ class homeControl extends mobileHomeControl
         }
     }
 
-    //标签选项
+    // 标签选项
     private function _get_like($string = "cate_id=3_258&a_id=3059_3512&brand_id=444", $page = 1)
     {
         //筛选字符串为cate_id=201_202&a_id=3224_3230

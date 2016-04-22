@@ -57,8 +57,8 @@ class p_xianshi_goodsModel extends Model{
      * @return array 限时折扣商品信息
 	 *
 	 */
-    public function getXianshiGoodsInfo($condition) {
-        $result = $this->where($condition)->find();
+    public function getXianshiGoodsInfo($condition, $field = '*') {
+        $result = $this->where($condition)->field($field)->find();
         return $result;
     }
 
