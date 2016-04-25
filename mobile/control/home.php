@@ -73,10 +73,7 @@ class homeControl extends mobileHomeControl
         $field_goods = 'goods_id,goods_commonid,store_id,goods_name,goods_price,goods_marketprice,goods_image,goods_salenum,evaluation_good_star,evaluation_count';
         $guess_list = $model_browse -> getGuessLikeGoods($mb_user_token_info['member_id'], $this->page, $field_goods);
 
-        foreach ($guess_list as $key => $value) {
-            $guess_list[$key]['goods_image_url'] = cthumb($value['goods_image'], 360, $value['store_id']);
-            $guess_list[$key]['origin'] = $this->_goods_origin($value['goods_id']);
-        }
+        $guess_list = $this->_goods_list_extend($guess_list);
         $data['guess_list'] = $guess_list;
 
         output_json(1, $data);
@@ -391,7 +388,52 @@ class homeControl extends mobileHomeControl
         return $goods;
 
     }
+    
+    /**
+     * 处理商品列表(抢购、限时折扣、商品图片、产地)
+     */
+    private function _goods_list_extend($goods_list) {
+        //获取商品列表编号数组
+        $commonid_array = array();
+        $goodsid_array = array();
+        foreach($goods_list as $key => $value) {
+            $commonid_array[] = $value['goods_commonid'];
+            $goodsid_array[] = $value['goods_id'];
+        }
 
+        //促销
+        $groupbuy_list = Model('groupbuy')->getGroupbuyListByGoodsCommonIDString(implode(',', $commonid_array));
+        $xianshi_list = Model('p_xianshi_goods')->getXianshiGoodsListByGoodsString(implode(',', $goodsid_array));
+        foreach ($goods_list as $key => $value) {
+            //抢购
+            if (isset($groupbuy_list[$value['goods_commonid']])) {
+                $goods_list[$key]['goods_price'] = $groupbuy_list[$value['goods_commonid']]['groupbuy_price'];
+                $goods_list[$key]['group_flag'] = true;
+            } else {
+                $goods_list[$key]['group_flag'] = false;
+            }
+
+            //限时折扣
+            if (isset($xianshi_list[$value['goods_id']]) && !$goods_list[$key]['group_flag']) {
+                $goods_list[$key]['goods_price'] = $xianshi_list[$value['goods_id']]['xianshi_price'];
+                $goods_list[$key]['xianshi_flag'] = true;
+            } else {
+                $goods_list[$key]['xianshi_flag'] = false;
+            }
+
+            //商品图片url
+            $goods_list[$key]['goods_image_url'] = cthumb($value['goods_image'], 360, $value['store_id']);
+
+            //产地
+            $goods_list[$key]['origin'] = $this->_goods_origin($value['goods_id']);
+
+            unset($goods_list[$key]['store_id']);
+            unset($goods_list[$key]['goods_commonid']);
+            unset($goods_list[$key]['nc_distinct']);
+        }
+
+        return $goods_list;
+    }
 
     /**
      * 获取商品产地
