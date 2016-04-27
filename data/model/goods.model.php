@@ -972,7 +972,7 @@ class goodsModel extends Model{
     public function getGoodsInfoByID($goods_id, $fields = '*') {
         $goods_info = $this->_rGoodsCache($goods_id, $fields);
         if (empty($goods_info)) {
-            $goods_info = $this->getGoodsInfo(array('goods_id'=>$goods_id));
+            $goods_info = $this->getGoodsInfo(array('goods_id'=>$goods_id), $fields);
             $this->_wGoodsCache($goods_id, $goods_info);
         }
         return $goods_info;
