@@ -35,6 +35,12 @@ class goods_sampleControl extends mobileHomeControl
         $sample_info['allow'] = 1;
         $sample_info['state_text'] = '申领';
 
+        // 判断库存
+        if ($sample_info['goods_storage'] <= 0) {
+            $sample_info['allow'] = 0;
+            $sample_info['state_text'] = '已领光';
+        }
+        
         // 处理图片
         $image_list = explode(",", $sample_info['sample_image']);
         $sample_info['sample_image'] = array();
