@@ -77,6 +77,8 @@ class groupbuyControl extends mobileHomeControl {
 
         $groupbuy_info['goods_image_list'] = $goods_image_list;
 
+        $groupbuy_info['origin'] = $this->_goods_origin($groupbuy_info['goods_id']);
+
         output_json(1, $groupbuy_info);
     }
 
@@ -110,6 +112,23 @@ class groupbuyControl extends mobileHomeControl {
             }
         }
         return false;
+    }
+
+    /**
+     * 获取商品产地
+     *
+     * @author Liao
+     */
+    public function _goods_origin($goods_id) {
+        $origin_name = '';
+        $condition['goods_id'] = $goods_id;
+        $condition['attr_id'] = array('between', '266,277');
+        $goods_attr_list = Model('goods_attr_index')->getGoodsAttrIndexList($condition, 'attr_value_id');
+        if(!empty($goods_attr_list)) {
+            $attr_name_array = Model('attribute')->getAttributeValueList($goods_attr_list[0], 'attr_value_name');
+            $origin_name = $attr_name_array[0]['attr_value_name'];
+        }
+        return $origin_name;
     }
 
 }
