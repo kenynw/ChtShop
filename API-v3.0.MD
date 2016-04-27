@@ -373,9 +373,9 @@ URL(Get): act=goods_sample&op=overdue_goods
         code:  
       }
 
-### 9.免费茶样当前
+### 免费茶样当前
 
-URL： act=goods_sample 
+URL： act=goods_sample<将会被act=group_buy&op=sample_info代替>
 
 参数：
 
@@ -384,38 +384,107 @@ URL： act=goods_sample
 返回：
 
     {
-      "code": 1,
-      "msg": "查询正常",
-      "data": {
-          "sample_id": "36",
-          "sample_name": "[免费茶样]婀娜公主 清香铁观音 浓香 油切黑乌龙 各一包7g*3",
-          "sample_image": [
-              {
-                  "original_pic": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421284587390.jpg",
-                  "bmiddle_pic": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421284587390_360.jpg"
-              },
-              {
-                  "original_pic": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421912242261.jpg",
-                  "bmiddle_pic": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421912242261_360.jpg"
-              }
-          ],
-          "sample_origin_place": "福建",
-          "sample_weight": "7",
-          "sample_correlation_price": "0",
-          "sample_freight": "0",
-          "sample_limit_number": "10",
-          "sample_add_time": "0",
-          "sample_start_time": "1456416000",
-          "sample_end_time": "1456502400",
-          "sample_state": "1",
-          "sample_received_number": "0",
-          "sample_link": "101972",
-          "sample_bak_price": "0",
-          "sample_bak_promotion_price": "0",
-          "allow": true
-          "state": "可以申领"
-      }
+        "code": 1,
+        "data": {
+            "sample_id": "36",
+            "sample_name": "[免费茶样]婀娜公主 清香铁观音 浓香 油切黑乌龙 各一包7g*3",
+            "sample_image": [
+                {
+                    "bmiddle_pic": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421284587390_360.jpg",
+                    "original_pic": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421284587390_1280.jpg"
+                },
+                {
+                    "bmiddle_pic": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421912242261_360.jpg",
+                    "original_pic": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421912242261_1280.jpg"
+                }
+            ],
+            "sample_origin_place": "福建",
+            "sample_weight": "7",
+            "sample_correlation_price": "0",
+            "sample_freight": "0",
+            "sample_limit_number": "10",
+            "sample_add_time": "0",
+            "sample_start_time": "1460390400",
+            "sample_end_time": "1461830880",
+            "sample_state": "1",
+            "sample_received_number": "0",
+            "sample_link": "101972",
+            "sample_bak_price": "0",
+            "sample_bak_promotion_price": "0",
+            "store_id": "2",
+            "goods_salenum": "3",
+            "goods_storage": "7",
+            "goods_state": "1",
+            "goods_verify": "1",
+            "allow": 1,
+            "state_text": "申领"
+        },
+        "msg": "查询正常"
     }
+
+
+### 免费茶样当前
+
+URL： act=group_buy&op=sample_info   
+
+参数：
+
+>key 登录令牌，用于判断当前用户是否领取过	
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "groupbuy_id": "18",
+            "groupbuy_name": "免费茶样",
+            "start_time": "1461654180",
+            "end_time": "1461740580",
+            "goods_id": "101972",
+            "goods_commonid": "101101",
+            "goods_name": "[免费茶样]婀娜公主 清香铁观音 浓香 油切黑乌龙 各一包7g*3",
+            "store_id": "2",
+            "store_name": "茶汇通商城",
+            "goods_price": "0.10",
+            "groupbuy_price": "0.01",
+            "groupbuy_rebate": "1.00",
+            "virtual_quantity": "1",
+            "upper_limit": "1",
+            "buyer_count": "2",
+            "buy_quantity": "2",
+            "groupbuy_intro": "",
+            "state": "20",
+            "recommended": "0",
+            "views": "10",
+            "class_id": "4",
+            "s_class_id": "0",
+            "groupbuy_image": "2_05149981604676766.jpg",
+            "groupbuy_image1": "2_05149981672690476.jpg",
+            "remark": "免费茶样",
+            "is_vr": "0",
+            "vr_city_id": null,
+            "vr_area_id": null,
+            "vr_mall_id": null,
+            "vr_class_id": null,
+            "vr_s_class_id": null,
+            "button_text": "已领取",
+            "goods_image_list": [
+                {
+                    "goods_image": "2_05071421284587390.jpg",
+                    "goods_image_small": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421284587390_240.jpg",
+                    "goods_image_mid": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421284587390_360.jpg"
+                },
+                {
+                    "goods_image": "2_05071421912242261.jpg",
+                    "goods_image_small": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421912242261_240.jpg",
+                    "goods_image_mid": "http://www.chahuitong.com/data/upload/shop/store/goods/2/2_05071421912242261_360.jpg"
+                }
+            ],
+            "origin": ""
+        },
+        "msg": "SUCCESS"
+    }
+
 
 ### ~~限时抢购今日~~<已被act=goods&op=current_list替换>
 URL： act=flash_sale&op=current_api
