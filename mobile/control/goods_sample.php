@@ -45,8 +45,8 @@ class goods_sampleControl extends mobileHomeControl
         $image_list = explode(",", $sample_info['sample_image']);
         $sample_info['sample_image'] = array();
         foreach ($image_list as $key => $v) {
-            $sample_info['sample_image'][$key]['bmiddle_pic'] = cthumb($v, 360, $sample_info['store_id']);
-            $sample_info['sample_image'][$key]['original_pic'] = cthumb($v, 1280, $sample_info['store_id']);
+            $sample_info['sample_image'][$key]['image_small'] = cthumb($v, 240, $sample_info['store_id']);
+            $sample_info['sample_image'][$key]['image_mid'] = cthumb($v, 360, $sample_info['store_id']);
         }
         
         // 处理日期

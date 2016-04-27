@@ -71,8 +71,8 @@ class groupbuyControl extends mobileHomeControl {
 
         $goods_image_list = $model_goods->getGoodsImageList(array('goods_commonid' => $groupbuy_info['goods_commonid']), 'goods_image');
         foreach ($goods_image_list as $key => $value) {
-            $goods_image_list[$key]['goods_image_small'] = cthumb($value['goods_image'], '240', $groupbuy_info['store_id']);
-            $goods_image_list[$key]['goods_image_mid'] = cthumb($value['goods_image'], '360', $groupbuy_info['store_id']);
+            $goods_image_list[$key]['image_small'] = cthumb($value['goods_image'], 240, $groupbuy_info['store_id']);
+            $goods_image_list[$key]['image_mid'] = cthumb($value['goods_image'], 360, $groupbuy_info['store_id']);
         }
 
         $groupbuy_info['goods_image_list'] = $goods_image_list;
