@@ -306,9 +306,116 @@ URL(Get): act=goods&op=goods_detail
 参数：
 
 >goods_id 商品编号    
+>version 接口版本号 大于等于3-返回3.0版本数据结构 其他-旧版数据
 
 返回： 
 
+    V3.0:
+    
+    {
+        "code": 1,
+        "data": {
+            "goods_info": {
+                "goods_name": "芳津茶业  蜂窝玲珑茶具套装（四色可选） 红色",
+                "goods_jingle": "",
+                "gc_id_1": "662",
+                "gc_id_2": "663",
+                "gc_id_3": "0",
+                "store_id": "2",
+                "spec_value": [
+                    {
+                        "spec_name": "颜色",
+                        "spec_value": [
+                            {
+                                "spec_value_text": "白色",
+                                "goods_id": "101699"
+                            },
+                            {
+                                "spec_value_text": "花色",
+                                "goods_id": "101700"
+                            },
+                            {
+                                "spec_value_text": "红色",
+                                "goods_id": "101701"
+                            },
+                            {
+                                "spec_value_text": "蓝色",
+                                "goods_id": "101702"
+                            }
+                        ]
+                    }
+                ],
+                "goods_attr": [
+                    {
+                        "attr_name": "产地",
+                        "attr_value": "福建"
+                    },
+                    {
+                        "attr_name": "颜色",
+                        "attr_value": "不限"
+                    }
+                ],
+                "mobile_body": "",
+                "goods_specname": "",
+                "goods_price": "200.00",
+                "goods_marketprice": "200.00",
+                "goods_costprice": "0.00",
+                "goods_discount": "100",
+                "goods_serial": "",
+                "goods_storage_alarm": "0",
+                "transport_id": "0",
+                "transport_title": "",
+                "goods_freight": "0.00",
+                "goods_vat": "0",
+                "areaid_1": "13",
+                "areaid_2": "204",
+                "goods_stcids": "",
+                "plateid_top": "0",
+                "plateid_bottom": "0",
+                "is_virtual": "0",
+                "virtual_indate": "0",
+                "virtual_limit": "0",
+                "virtual_invalid_refund": "0",
+                "is_fcode": "0",
+                "is_appoint": "0",
+                "appoint_satedate": "0",
+                "is_presell": "0",
+                "presell_deliverdate": "0",
+                "is_own_shop": "1",
+                "goods_id": "101701",
+                "goods_promotion_price": "95.00",
+                "goods_promotion_type": "2",
+                "goods_click": 49,
+                "goods_salenum": "0",
+                "goods_collect": "0",
+                "goods_spec": "红色",
+                "goods_storage": "200",
+                "color_id": "0",
+                "evaluation_good_star": "5",
+                "evaluation_count": "0",
+                "have_gift": "0",
+                "is_goods_sample": "0",
+                "groupbuy_info": null,
+                "promotion_type": "xianshi",
+                "title": "年终大促限时抢购",
+                "remark": "年终大促限时抢购",
+                "promotion_price": "95.00",
+                "down_price": "105.00",
+                "lower_limit": "1",
+                "goods_url": "http://www.chahuitong.com/shop/index.php?act=goods&op=index&goods_id=101701"
+            },
+            "spec_image": [
+                "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_60.gif"
+            ],
+            "mansong_info": null,
+            "gift_array": [],
+            "goods_image": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif,http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif,http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif,http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif"
+        },
+        "msg": "SUCCESS"
+    }
+
+    其他:
+    
     {
       code: 200,
       datas {
@@ -363,6 +470,66 @@ URL(Get): act=goods&op=goods_body
 
 返回： html
 
+### 商品评论列表
+URL(GET): act=goods&op=comments_list
+
+参数：
+
+>goods_id 商品编号    
+
+返回： 
+
+    {
+        "code": 1,
+        "data": [
+            {
+                "geval_id": "1",
+                "geval_orderid": "36",
+                "geval_orderno": "7000000000003401",
+                "geval_ordergoodsid": "40",
+                "geval_goodsid": "101758",
+                "geval_goodsname": "高顶古茶 布朗·传家宝 380g",
+                "geval_goodsprice": "0.10",
+                "geval_goodsimage": "2_04879527997639713.jpg",
+                "geval_scores": "5",
+                "geval_content": "包装很精美，很高档的茶叶，味道很好，是正品",
+                "geval_isanonymous": "0", // 是否匿名 0-未匿名 1-匿名
+                "geval_addtime": "1435641129",
+                "geval_storeid": "2",
+                "geval_storename": "茶汇通商城",
+                "geval_frommemberid": "3", // 评论者的用户ID
+                "geval_frommembername": "test",
+                "geval_state": "0",
+                "geval_remark": null,
+                "geval_explain": null,
+                "geval_image": null,
+                "geval_frommemberavatar": "http://www.chahuitong.com/data/upload/shop/common/default_user_portrait.gif",
+                "add_time_text": "2015-06-30 13:12"
+            }
+        ],
+        "msg": "SUCCESS"
+    }
+
+### 热搜词
+URL: act=goods&op=hot_search
+
+参数：
+
+>无  
+
+返回： 
+
+    {
+        "code": 1,
+        "data": [
+            "大益",
+            "老班章",
+            "源山古茶",
+            "中茶",
+            "古树茶"
+        ],
+        "msg": "SUCCESS"
+    }
 
 ### 免费茶样往期
 URL(Get): act=goods_sample&op=overdue_goods 

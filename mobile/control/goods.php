@@ -192,6 +192,7 @@ class goodsControl extends mobileHomeControl{
      */
     public function goods_detailOp() {
         $goods_id = intval($_GET ['goods_id']);
+        $version = intval($_GET['version']);
 
         // 商品详细信息
         $model_goods = Model('goods');
@@ -200,9 +201,16 @@ class goodsControl extends mobileHomeControl{
         if (empty($goods_detail)) {
             output_error('商品不存在');
         }
+
+        if ($version >= 3) {
+            $this->_goods_detail_v3();
+        }
+
 		 //添加浏览记录
         $model_mb_user_token = Model('mb_user_token');
-        $key = $_COOKIE['key'];
+        $key = $_POST['key'];
+        if (empty($key)) $key = $_GET['key'];
+        if (empty($key)) $_COOKIE['key'];
         $mb_user_token_info = $model_mb_user_token->getMbUserTokenInfoByToken($key);
         $member_id=$mb_user_token_info['member_id'];
         $model_member = Model('member');
@@ -335,6 +343,121 @@ class goodsControl extends mobileHomeControl{
     }
 
     /**
+     * 商品详情接口
+     * @author Lai
+     */
+    private function _goods_detail_v3() {
+        $goods_id = intval($_GET ['goods_id']);
+
+        // 商品详细信息
+        $model_goods = Model('goods');
+        $goods_detail = $model_goods->getGoodsDetail($goods_id);
+
+        if (empty($goods_detail)) {
+            output_error('商品不存在');
+        }
+
+        //添加浏览记录
+        $model_mb_user_token = Model('mb_user_token');
+        $key = $_POST['key'];
+        if (empty($key)) $key = $_GET['key'];
+        $mb_user_token_info = $model_mb_user_token->getMbUserTokenInfoByToken($key);
+        $member_id=$mb_user_token_info['member_id'];
+        $model_member = Model('member');
+        $member_info=$model_member->getMemberInfoByID($member_id);
+        if(empty($member_info)){
+            $seller_info = Model('seller')->getSellerInfo(array('member_id'=>$member_id));
+            $store_id= $seller_info['store_id'];
+        }
+        $store_id=isset($store_id)? $store_id:0;
+        Model('goods_browse')->addViewedGoods($goods_id,$member_id,$store_id);
+
+        //商品详细信息处理
+        $goods_detail = $this->_goods_detail_extend($goods_detail);
+
+        //商品规格
+        $spec_list = array();
+        if (is_array($goods_detail['goods_info']['spec_name'])) {
+            $spec = array();
+            foreach($goods_detail['goods_info']['spec_name'] as $key => $value){
+                $spec['spec_name'] = $value;
+
+                if (is_array($goods_detail['goods_info']['spec_value'][$key]) && !empty($goods_detail['goods_info']['spec_value'][$key])) {
+                    foreach($goods_detail['goods_info']['spec_value'][$key] as $k => $v) {
+                        if($key !== 1) {
+                            $spec['spec_value'][] = array(
+                                'spec_value_text' => $v,
+                                'goods_id' => $goods_detail['spec_list'][$k]);
+                        }
+                    }
+                }
+                $spec_list[] = $spec;
+            }
+        }
+
+        $goods_detail['goods_info']['spec_value']=$spec_list;
+
+        if (is_array($goods_detail['goods_info']['goods_spec'])) {
+            $goods_detail['goods_info']['goods_spec'] = reset($goods_detail['goods_info']['goods_spec']);
+        }
+
+        $goods_attr=array();
+        foreach($goods_detail['goods_info']['goods_attr'] as $value){
+            $value=array_values($value);
+            // $goods_attr[]=$value[0].','.$value[1];
+            $goods_attr[]=array("attr_name"=>$value[0],"attr_value"=>$value[1]);
+        }
+        $goods_detail['goods_info']['goods_attr']=$goods_attr;
+
+        unset($goods_detail['goods_info']['spec_name']);
+        unset($goods_detail['spec_list']);
+
+        output_json(1,$goods_detail);
+    }
+
+    /**
+     * 搜索热词
+     */
+    public function hot_searchOp() {
+        $keywords_list = explode(',', C('hot_search'));
+        output_json(1, $keywords_list);
+    }
+
+    /**
+     * 商品评价列表
+     */
+    public function comments_listOp() {
+        $goods_id  = intval($_GET['goods_id']);
+
+        $model_evaluate_goods = Model('evaluate_goods');
+
+        $condition  = array();
+        $condition['geval_goodsid'] = $goods_id;
+        $condition['geval_state'] = 0;
+
+        $field = 'geval_id,geval_goodsid,geval_goodsname,geval_content,geval_isanonymous,geval_addtime,geval_frommemberid,geval_frommembername,geval_state,geval_image';
+
+        $evaluate_list = $model_evaluate_goods->getEvaluateGoodsList($condition, $this->page, 'geval_id desc', $field);
+
+        foreach ($evaluate_list as $key => $value) {
+            $evaluate_list[$key]['geval_frommemberavatar'] = getMemberAvatarForID($value['geval_frommemberid']);
+            $evaluate_list[$key]['add_time_text'] = date('Y-m-d H:i', $value['geval_addtime']);
+
+            if ($value['geval_isanonymous'] == 1) {
+                $evaluate_list[$key]['geval_frommembername'] = str_cut($value['geval_frommembername'],2).'***';
+            }
+
+            // 删除没用的字段,节省网络资源
+            unset($evaluate_list[$key]['geval_isanonymous']);
+            unset($evaluate_list[$key]['geval_addtime']);
+            unset($evaluate_list[$key]['geval_frommemberid']);
+            unset($evaluate_list[$key]['geval_isanonymous']);
+        }
+
+        output_json(1, $evaluate_list);
+    }
+
+    /**
      * app请求商品详细接口
      * @author Lai
      */
@@ -349,7 +472,8 @@ class goodsControl extends mobileHomeControl{
         }
         //添加浏览记录
         $model_mb_user_token = Model('mb_user_token');
-        $key = $_GET['key'];
+        $key = $_POST['key'];
+        if (empty($key)) $key = $_GET['key'];
         $mb_user_token_info = $model_mb_user_token->getMbUserTokenInfoByToken($key);
         $member_id=$mb_user_token_info['member_id'];
         $model_member = Model('member');
@@ -416,7 +540,5 @@ class goodsControl extends mobileHomeControl{
         }
        output_data($goods_detail);
     }
-
-
 
 }
