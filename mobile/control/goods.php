@@ -454,7 +454,9 @@ class goodsControl extends mobileHomeControl{
             unset($evaluate_list[$key]['geval_isanonymous']);
         }
 
-        output_json(1, $evaluate_list);
+        $page_count = $model_evaluate_goods->gettotalpage();
+
+        output_json(1, array('list' => $evaluate_list), 'SUCCESS', mobile_page($page_count));
     }
 
     /**

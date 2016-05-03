@@ -481,32 +481,36 @@ URL(GET): act=goods&op=comments_list
 
     {
         "code": 1,
-        "data": [
-            {
-                "geval_id": "1",
-                "geval_orderid": "36",
-                "geval_orderno": "7000000000003401",
-                "geval_ordergoodsid": "40",
-                "geval_goodsid": "101758",
-                "geval_goodsname": "高顶古茶 布朗·传家宝 380g",
-                "geval_goodsprice": "0.10",
-                "geval_goodsimage": "2_04879527997639713.jpg",
-                "geval_scores": "5",
-                "geval_content": "包装很精美，很高档的茶叶，味道很好，是正品",
-                "geval_isanonymous": "0", // 是否匿名 0-未匿名 1-匿名
-                "geval_addtime": "1435641129",
-                "geval_storeid": "2",
-                "geval_storename": "茶汇通商城",
-                "geval_frommemberid": "3", // 评论者的用户ID
-                "geval_frommembername": "test",
-                "geval_state": "0",
-                "geval_remark": null,
-                "geval_explain": null,
-                "geval_image": null,
-                "geval_frommemberavatar": "http://www.chahuitong.com/data/upload/shop/common/default_user_portrait.gif",
-                "add_time_text": "2015-06-30 13:12"
-            }
-        ],
+        "data": {
+            "list": [
+                {
+                    "geval_id": "1",
+                    "geval_orderid": "36",
+                    "geval_orderno": "7000000000003401",
+                    "geval_ordergoodsid": "40",
+                    "geval_goodsid": "101758",
+                    "geval_goodsname": "高顶古茶 布朗·传家宝 380g",
+                    "geval_goodsprice": "0.10",
+                    "geval_goodsimage": "2_04879527997639713.jpg",
+                    "geval_scores": "5",
+                    "geval_content": "包装很精美，很高档的茶叶，味道很好，是正品",
+                    "geval_isanonymous": "0", // 是否匿名 0-未匿名 1-匿名
+                    "geval_addtime": "1435641129",
+                    "geval_storeid": "2",
+                    "geval_storename": "茶汇通商城",
+                    "geval_frommemberid": "3", // 评论者的用户ID
+                    "geval_frommembername": "test",
+                    "geval_state": "0",
+                    "geval_remark": null,
+                    "geval_explain": null,
+                    "geval_image": null,
+                    "geval_frommemberavatar": "http://www.chahuitong.com/data/upload/shop/common/default_user_portrait.gif",
+                    "add_time_text": "2015-06-30 13:12"
+                }
+            ],
+            "hasmore": false,
+            "page_total": 1
+        },
         "msg": "SUCCESS"
     }
 
