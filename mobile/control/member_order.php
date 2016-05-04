@@ -51,8 +51,6 @@ class member_orderControl extends mobileMemberControl {
                 $value['if_deliver'] = $model_order->getOrderOperateState('deliver',$value);
                 //显示评价
                 $value['if_evaluation'] = $model_order->getOrderOperateState('evaluation',$value);
-                //显示删除
-                $value['if_delete'] = $model_order->getOrderOperateState('delete',$value);
 
                 //商品图
                 foreach ($value['extend_order_goods'] as $k => $goods_info) {
@@ -192,31 +190,6 @@ class member_orderControl extends mobileMemberControl {
         $condition['buyer_id'] = $this->member_info['member_id'];
         $order_info	= $model_order->getOrderInfo($condition);
         $if_allow = $model_order->getOrderOperateState('receive',$order_info);
-        if (!$if_allow) {
-            output_error('无权操作');
-        }
-
-        $result = $logic_order->changeOrderStateReceive($order_info,'buyer', $this->member_info['member_name']);
-        if(!$result['state']) {
-            output_error($result['msg']);
-        } else {
-            output_data('1');
-        }
-    }
-
-    /**
-     * 订单确认收货
-     */
-    public function order_deleteOp() {
-        $model_order = Model('order');
-        $logic_order = Logic('order');
-        $order_id = intval($_POST['order_id']);
-
-        $condition = array();
-        $condition['order_id'] = $order_id;
-        $condition['buyer_id'] = $this->member_info['member_id'];
-        $order_info	= $model_order->getOrderInfo($condition);
-        $if_allow = $model_order->getOrderOperateState('delete',$order_info);
         if (!$if_allow) {
             output_error('无权操作');
         }
