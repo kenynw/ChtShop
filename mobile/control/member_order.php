@@ -51,6 +51,8 @@ class member_orderControl extends mobileMemberControl {
                 $value['if_deliver'] = $model_order->getOrderOperateState('deliver',$value);
                 //显示评价
                 $value['if_evaluation'] = $model_order->getOrderOperateState('evaluation',$value);
+                //显示删除
+                $value['if_delete'] = $model_order->getOrderOperateState('delete',$value);
 
                 //商品图
                 foreach ($value['extend_order_goods'] as $k => $goods_info) {
