@@ -181,7 +181,6 @@ class member_orderControl extends BaseMemberControl {
     public function get_expressOp(){
 
         $url = 'http://www.kuaidi100.com/query?type='.$_GET['e_code'].'&postid='.$_GET['shipping_code'].'&id=1&valicode=&temp='.random(4).'&sessionid=&tmp='.random(4);
-        echo $url;
         import('function.ftp');
         $content = dfsockopen($url);
         $content = json_decode($content,true);

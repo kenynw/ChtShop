@@ -206,7 +206,7 @@ class member_orderControl extends mobileMemberControl {
      * 物流跟踪
      */
     public function search_deliverOp(){
-        $order_id	= intval($_POST['order_id']);
+        $order_id = intval($_POST['order_id']);
         if ($order_id <= 0) {
             output_error('订单不存在');
         }
@@ -215,7 +215,7 @@ class member_orderControl extends mobileMemberControl {
         $condition['order_id'] = $order_id;
         $condition['buyer_id'] = $this->member_info['member_id'];
         $order_info = $model_order->getOrderInfo($condition,array('order_common','order_goods'));
-        if (empty($order_info)) {
+        if (empty($order_info) || !in_array($order_info['order_state'],array(ORDER_STATE_SEND,ORDER_STATE_SUCCESS))) {
             output_error('订单不存在');
         }
 
