@@ -66,7 +66,7 @@ class member_orderControl extends mobileMemberControl {
 
             $page_count = $model_order->gettotalpage();
 
-            $array_data = array('order_list' => $order_group_list);
+            $array_data = array('list' => $order_group_list);
             output_json(1, $array_data, '查找成功', mobile_page($page_count));
         } else {
             foreach ($order_list_array as $value) {
