@@ -205,6 +205,31 @@ class member_orderControl extends mobileMemberControl {
     }
 
     /**
+     * 订单确认收货
+     */
+    public function order_deleteOp() {
+        $model_order = Model('order');
+        $logic_order = Logic('order');
+        $order_id = intval($_POST['order_id']);
+
+        $condition = array();
+        $condition['order_id'] = $order_id;
+        $condition['buyer_id'] = $this->member_info['member_id'];
+        $order_info	= $model_order->getOrderInfo($condition);
+        $if_allow = $model_order->getOrderOperateState('delete',$order_info);
+        if (!$if_allow) {
+            output_error('无权操作');
+        }
+
+        $result = $logic_order->changeOrderStateReceive($order_info,'buyer', $this->member_info['member_name']);
+        if(!$result['state']) {
+            output_error($result['msg']);
+        } else {
+            output_data('1');
+        }
+    }
+
+    /**
      * 物流跟踪
      */
     public function search_deliverOp(){
