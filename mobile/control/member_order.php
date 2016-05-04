@@ -28,7 +28,7 @@ class member_orderControl extends mobileMemberControl {
 
         $condition = array();
         $condition['buyer_id'] = $this->member_info['member_id'];
-        $condition['order_state']=$order_state;
+        if ($order_state > 0) $condition['order_state']=$order_state;
         // 待评价的订单
         if($order_state == ORDER_STATE_SUCCESS) {
             $condition['evaluation_state'] = 0;
