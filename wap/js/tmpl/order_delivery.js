@@ -1,5 +1,9 @@
 $(function() {
     var key = getcookie('key');
+    if (key = '') {
+        key = GetQueryString("key")
+    }
+    
     if (key=='') {
         window.location.href = WapSiteUrl + '/tmpl/member/login.html';
         return;
