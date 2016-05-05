@@ -149,6 +149,7 @@ class member_orderControl extends mobileMemberControl {
         }
 
         $order_info['address_info'] = $order_info['extend_order_common']['reciver_info'];
+        $order_info['address_info']['true_name'] = $order_info['extend_order_common']['reciver_name'];
         unset($order_info['extend_order_common']);
 
         output_json(1, $order_info);
