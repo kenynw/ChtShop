@@ -1,7 +1,7 @@
 $(function() {
     var key = getcookie('key');
-    if (key = '') {
-        key = GetQueryString("key")
+    if (key = '' && navigate.userAgent.indexOf("android") != -1) {
+        key = window.CHTAndroid.getToken();
     }
     
     if (key=='') {
@@ -18,7 +18,7 @@ $(function() {
         dataType:'json',
         success:function(result) {
             //检测是否登录了
-            checklogin(result.login);
+            // checklogin(result.login);
 
             var data = result && result.datas;
             if (!data) {
