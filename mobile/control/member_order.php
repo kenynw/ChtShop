@@ -143,12 +143,15 @@ class member_orderControl extends mobileMemberControl {
         $condition = array();
         $condition['order_id'] = $order_id;
         $condition['buyer_id'] = $this->member_info['member_id'];
-        $order_info = $model_order->getOrderInfo($condition);
+        $order_info = $model_order->getOrderInfo($condition, array('order_common'));
         if(empty($order_info)) {
-            output_json(0, $order_info, '暂无数据');
-        } else {
-            output_json(1, $order_info);
+            output_json(0, $order_info, '订单不存在');
         }
+
+        $order_info['address_info'] = $order_info['extend_order_common']['reciver_info'];
+        unset($order_info['extend_order_common']);
+
+        output_json(1, $order_info);
     }
 
     /**

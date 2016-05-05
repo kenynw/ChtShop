@@ -57,7 +57,7 @@ class orderModel extends Model {
     }
 
     public function getOrderCommonInfo($condition = array(), $field = '*') {
-        return $this->table('order_common')->where($condition)->find();
+        return $this->table('order_common')->where($condition)->field($field)->find();
     }
 
     public function getOrderPayInfo($condition = array(), $master = false) {
