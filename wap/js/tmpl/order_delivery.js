@@ -1,9 +1,11 @@
 $(function() {
-    var key = getcookie('key');
-    if (key = '' && navigate.userAgent.indexOf("android") != -1) {
+    var key = '';
+    if (navigator.userAgent.indexOf("android") != -1) {
         key = window.CHTAndroid.getToken();
+    } else {
+        key = $.cookie("key");
     }
-    
+
     if (key=='') {
         window.location.href = WapSiteUrl + '/tmpl/member/login.html';
         return;
