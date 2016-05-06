@@ -1,10 +1,12 @@
 $(function() {
-    var key = getcookie("key");
-    // if (key=='') {
-    //     if (navigator.userAgent.indexOf("android") != -1) {
-    //         key = window.CHTAndroid.getToken();
-    //     }
-    // }
+    var key = getcookie('key');
+    if (key=='') {
+        if (navigator.userAgent.indexOf("android") != -1) {
+            key = window.CHTAndroid.getToken();
+        } else {
+            key = GetQueryString("key");
+        }
+    }
 
     if (key=='') {
         window.location.href = WapSiteUrl + '/tmpl/member/login.html';
