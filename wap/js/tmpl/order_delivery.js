@@ -1,9 +1,8 @@
 $(function() {
-    var key = '';
-    if (navigator.userAgent.indexOf("android") != -1) {
+    var key = $.cookie("key");
+    
+    if (key == '' && navigator.userAgent.indexOf("android") != -1) {
         key = window.CHTAndroid.getToken();
-    } else {
-        key = $.cookie("key");
     }
 
     if (key=='') {
