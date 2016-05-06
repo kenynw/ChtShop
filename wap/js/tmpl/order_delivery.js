@@ -1,7 +1,6 @@
 $(function() {
     var key = $.cookie("key");
-    
-    if (key == '' && navigator.userAgent.indexOf("android") != -1) {
+    if (navigator.userAgent.indexOf("android") != -1) {
         key = window.CHTAndroid.getToken();
     }
 

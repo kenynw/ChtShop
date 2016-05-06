@@ -258,7 +258,7 @@ class member_orderControl extends mobileMemberControl {
                 $output['deliver_info'][]= $v['time'].'&nbsp;&nbsp;'.$v['context'];
             }
         }
-        
+
         switch (intval($content['state'])) {
             case 0 :
                 $output['state_text'] = '在途';
