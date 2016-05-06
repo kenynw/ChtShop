@@ -1,14 +1,6 @@
 $(function() {
     var key = getcookie('key');
     if (key=='') {
-        if (navigator.userAgent.indexOf("android") != -1) {
-            key = window.CHTAndroid.getToken();
-        } else {
-            key = GetQueryString("key");
-        }
-    }
-
-    if (key=='') {
         window.location.href = WapSiteUrl + '/tmpl/member/login.html';
         return;
     }
@@ -22,7 +14,7 @@ $(function() {
         dataType:'json',
         success:function(result) {
             //检测是否登录了
-            // checklogin(result.login);
+            checklogin(result.login);
 
             var data = result && result.datas;
             if (!data) {
