@@ -1,5 +1,12 @@
 $(function() {
     var key = getcookie('key');
+
+    if (key == '') {
+        if (navigator.userAgent.indexOf("android") != -1) {
+            key = window.CHTAndroid.getToken();
+        }
+    }
+
     if (key=='') {
         window.location.href = WapSiteUrl + '/tmpl/member/login.html';
         return;
