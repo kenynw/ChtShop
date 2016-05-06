@@ -1,7 +1,11 @@
 $(function() {
-    var key = $.cookie("key");
+    var key = getcookie('key');
     if (navigator.userAgent.indexOf("android") != -1) {
         key = window.CHTAndroid.getToken();
+    }
+
+    if (key=='') {
+        key = GetQueryString("key");
     }
 
     if (key=='') {

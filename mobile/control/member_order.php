@@ -227,13 +227,8 @@ class member_orderControl extends mobileMemberControl {
         $e_code = $express[$order_info['extend_order_common']['shipping_express_id']]['e_code'];
         $e_name = $express[$order_info['extend_order_common']['shipping_express_id']]['e_name'];
 
-        $express_info = $this->_get_express($e_code, $order_info['shipping_code']);
-        output_data(array(
-            'express_name' => $e_name,
-            'shipping_code' => $order_info['shipping_code'],
-            'state_text' => $express_info['state_text'],
-            'deliver_info' => $express_info['deliver_info'])
-        );
+        $deliver_info = $this->_get_express($e_code, $order_info['shipping_code']);
+        output_data(array('express_name' => $e_name, 'shipping_code' => $order_info['shipping_code'], 'deliver_info' => $deliver_info));
     }
 
     /**
@@ -255,34 +250,9 @@ class member_orderControl extends mobileMemberControl {
         if (is_array($content['data'])){
             foreach ($content['data'] as $k=>$v) {
                 if ($v['time'] == '') continue;
-                $output['deliver_info'][]= $v['time'].'&nbsp;&nbsp;'.$v['context'];
+                $output[]= $v['time'].'&nbsp;&nbsp;'.$v['context'];
             }
         }
-
-        switch (intval($content['state'])) {
-            case 0 :
-                $output['state_text'] = '在途';
-                break;
-            case 1 :
-                $output['state_text'] = '揽件';
-                break;
-            case 2 :
-                $output['state_text'] = '货物寄送过程出了问题';
-                break;
-            case 3 :
-                $output['state_text'] = '已签收';
-                break;
-            case 4 :
-                $output['state_text'] = '用户退签';
-                break;
-            case 5 :
-                $output['state_text'] = '正在派件';
-                break;
-            case 6 :
-                $output['state_text'] = '被退回';
-                break;
-        }
-
         if (empty($output)) exit(json_encode(false));
         if (strtoupper(CHARSET) == 'GBK'){
             $output = Language::getUTF8($output);//网站GBK使用编码时,转换为UTF-8,防止json输出汉字问题
