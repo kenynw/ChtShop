@@ -3,7 +3,7 @@
 
 $config = array();
 $config['base_site_url']        = 'http://www.chahuitong.com';
-$config['shop_site_url'] 		= 'http://shop.chahuitong.com';
+$config['shop_site_url'] 		= 'http://www.chahuitong.com/shop';
 $config['cms_site_url'] 		= 'http://www.chahuitong.com/cms';
 $config['microshop_site_url'] 	= 'http://www.chahuitong.com/microshop';
 $config['circle_site_url'] 		= 'http://www.chahuitong.com/circle';
@@ -44,7 +44,7 @@ $config['default_store_id'] = '1';
 //如果开始伪静态，这里设置为true
 $config['url_model'] = false;
 //如果店铺开启二级域名绑定的，这里填写主域名如baidu.com
-$config['subdomain_suffix'] = 'chahuitong.com';
+$config['subdomain_suffix'] = '';
 //$config['session_type'] = 'redis';
 //$config['session_save_path'] = 'tcp://127.0.0.1:6379';
 $config['node_chat'] = true;
