@@ -6,7 +6,7 @@
   <div class="nc-appbar-tabs" id="appBarTabs">
     <?php if ($_SESSION['is_login']) {?>
     <div class="user" nctype="a-barUserInfo">
-      <div class="avatar"><img src="<?php echo getMemberAvatar($_SESSION['avatar']);?>"/></div>
+      <div class="avatar"><img alt="头像" src="<?php echo getMemberAvatar($_SESSION['avatar']);?>"/></div>
       <p>我</p>
     </div>
     <div class="user-info" nctype="barUserInfo" style="display:none;"><i class="arrow"></i>
@@ -21,7 +21,7 @@
     </div>
     <?php } else {?>
     <div class="user" nctype="a-barLoginBox">
-      <div class="avatar"><img src="<?php echo getMemberAvatar($_SESSION['avatar']);?>"/></div>
+      <div class="avatar"><img alt="头像" src="<?php echo getMemberAvatar($_SESSION['avatar']);?>"/></div>
       <p>未登录</p>
     </div>
     <div class="user-login-box" nctype="barLoginBox" style="display:none;"> <i class="arrow"></i> <a href="javascript:void(0);" class="close" nctype="close-barLoginBox" title="关闭">X</a>
