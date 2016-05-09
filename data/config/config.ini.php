@@ -3,12 +3,12 @@ defined('InShopNC') or exit('Access Invalid!');
 
 $config = array();
 $config['base_site_url']        = 'http://www.chahuitong.com';
-$config['shop_site_url'] 		= 'http://shop.chahuitong.com';
-$config['cms_site_url'] 		= 'http://cms.chahuitong.com';
-$config['microshop_site_url'] 	= 'http://microshop.chahuitong.com';
-$config['circle_site_url'] 		= 'http://circle.chahuitong.com';
-$config['admin_site_url'] 		= 'http://system.chahuitong.com';
-$config['mobile_site_url'] 		= 'http://m.chahuitong.com';
+$config['shop_site_url'] 		= 'http://www.chahuitong.com/shop';
+$config['cms_site_url'] 		= 'http://www.chahuitong.com/cms';
+$config['microshop_site_url'] 	= 'http://www.chahuitong.com/microshop';
+$config['circle_site_url'] 		= 'http://www.chahuitong.com/circle';
+$config['admin_site_url'] 		= 'http://www.chahuitong.com/admin';
+$config['mobile_site_url'] 		= 'http://www.chahuitong.com/mobile';
 $config['wap_site_url'] 		= 'http://www.chahuitong.com/wap';
 $config['chat_site_url'] 		= 'http://www.chahuitong.com/chat';
 $config['node_site_url'] 		= 'http://www.chahuitong.com:8090';
@@ -77,7 +77,7 @@ $config['debug'] 			= false;
 $config['default_store_id'] = '1';
 
 # 是否开启伪静态,支持 true(开启) 或 false(关闭)
-$config['url_model'] = true;
+$config['url_model'] = false;
 
 //如果店铺开启二级域名绑定的，这里填写主域名如shopnc.net
 $config['subdomain_suffix'] = 'chahuitong.com';
