@@ -57,12 +57,12 @@ $config['thumb']['cut_type'] = 'gd';
 $config['thumb']['impath'] = '';
 
 # 如果缓存类型设置为 memcache 或 redis,还需要配置下面的 memcache 或 redis 相关参数才会生效
-$config['cache']['type'] 			= 'file';
-//$config['redis']['prefix']      	= 'nc_';
-//$config['redis']['master']['port']     	= 6379;
-//$config['redis']['master']['host']     	= '127.0.0.1';
-//$config['redis']['master']['pconnect'] 	= 0;
-//$config['redis']['slave']      	    = array();
+$config['cache']['type'] 			    = 'redis';
+$config['redis']['prefix']      	    = 'nc_';
+$config['redis']['master']['port']     	= 6379;
+$config['redis']['master']['host']     	= '127.0.0.1';
+$config['redis']['master']['pconnect'] 	= 0;
+$config['redis']['slave']      	        = array();
 
 # 全文检索配置,支持 true(开启) 或 false(关闭),全文检索的详细配置,请参考本帮助的全文检索章节
 # 需编辑 data\api\xs\app\shopnc.ini,将 server.index 和 server.search 值修改成自己的 IP 和端口
