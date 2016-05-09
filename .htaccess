@@ -1,6 +1,9 @@
-﻿RewriteEngine on
-RewriteBase /
-
-RewriteRule ^mobile/wxpay/wxpay.php$ mobile/api/payment/wxpay/wxpay.php
-
-
+﻿location / {
+     if (!-e $request_filename)
+     {
+rewrite ^/shop/(.*)$ /shop/index.php?$1;
+     }
+}
+location ~ \.php$ {
+     fastcgi_param PATH_INFO $request_uri;
+}

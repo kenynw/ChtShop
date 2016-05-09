@@ -77,7 +77,7 @@ $config['debug'] 			= false;
 $config['default_store_id'] = '1';
 
 # 是否开启伪静态,支持 true(开启) 或 false(关闭)
-$config['url_model'] = false;
+$config['url_model'] = true;
 
 //如果店铺开启二级域名绑定的，这里填写主域名如shopnc.net
 $config['subdomain_suffix'] = 'chahuitong.com';
