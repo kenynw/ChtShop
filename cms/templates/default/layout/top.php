@@ -4,8 +4,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo CHARSET;?>">
 <title><?php echo empty($output['seo_title'])?$output['html_title']:$output['seo_title'].'-'.$output['html_title'];?></title>
-<meta name="keywords" content="<?php echo $output['seo_keywords']; ?>" />
-<meta name="description" content="<?php echo $output['seo_description']; ?>" />
+<meta name="keywords" content="<?php echo empty($output['article_keyword'])?$output['seo_keywords']:$output['seo_keywords'].' '.$output['article_keyword']; ?>" />
+<meta name="description" content="<?php echo empty($output['article_description'])?$output['seo_description']:$output['article_description'].$output['seo_keywords']; ?>" />
 
 
 <link href="<?php echo CMS_TEMPLATES_URL;?>/css/base.css" rel="stylesheet" type="text/css">
