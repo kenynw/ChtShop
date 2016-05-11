@@ -1,7 +1,7 @@
 ﻿RewriteEngine on
 RewriteBase /
 
-RewriteRule ^mobile/wxpay/wxpay.php$ mobile/api/payment/wxpay/wxpay.php
+#RewriteRule ^mobile/wxpay/wxpay.php$ mobile/api/payment/wxpay/wxpay.php
 
 #nginx 伪静态规则
 rewrite ^/goods-([0-9]+)(-?)([0-9]*).html$ /index.php?act=goods&goods_id=$1&id=$2 last;
