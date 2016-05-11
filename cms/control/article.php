@@ -54,7 +54,6 @@ class articleControl extends CMSHomeControl{
 
         $model_article = Model('cms_article');
         $article_detail = $model_article->getOne(array('article_id'=>$article_id));
-        var_dump($article_detail);
         if(empty($article_detail)) {
             showMessage(Language::get('article_not_exist'), CMS_SITE_URL, '', 'error');
         }
