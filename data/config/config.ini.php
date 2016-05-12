@@ -3,10 +3,10 @@ defined('InShopNC') or exit('Access Invalid!');
 
 $config = array();
 $config['base_site_url']        = 'http://www.chahuitong.com';
-$config['shop_site_url'] 		= 'http://shop.chahuitong.com';
+$config['shop_site_url'] 		= 'http://www.chahuitong.com/shop';
 $config['cms_site_url'] 		= 'http://www.chahuitong.com/cms';
-$config['microshop_site_url'] 	= 'http://microshop.chahuitong.com';
-$config['circle_site_url'] 		= 'http://circle.chahuitong.com';
+$config['microshop_site_url'] 	= 'http://www.chahuitong.com/microshop';
+$config['circle_site_url'] 		= 'http://www.chahuitong.com/circle';
 $config['admin_site_url'] 		= 'http://system.chahuitong.com';
 $config['mobile_site_url'] 		= 'http://m.chahuitong.com';
 $config['wap_site_url'] 		= 'http://www.chahuitong.com/wap';
@@ -57,12 +57,12 @@ $config['thumb']['cut_type'] = 'gd';
 $config['thumb']['impath'] = '';
 
 # 如果缓存类型设置为 memcache 或 redis,还需要配置下面的 memcache 或 redis 相关参数才会生效
-$config['cache']['type'] 			    = 'redis';
-$config['redis']['prefix']      	    = 'nc_';
-$config['redis']['master']['port']     	= 6379;
-$config['redis']['master']['host']     	= '127.0.0.1';
-$config['redis']['master']['pconnect'] 	= 0;
-$config['redis']['slave']      	        = array();
+$config['cache']['type'] 			    = 'file';
+//$config['redis']['prefix']      	    = 'nc_';
+//$config['redis']['master']['port']     	= 6379;
+//$config['redis']['master']['host']     	= '127.0.0.1';
+//$config['redis']['master']['pconnect'] 	= 0;
+//$config['redis']['slave']      	        = array();
 
 # 全文检索配置,支持 true(开启) 或 false(关闭),全文检索的详细配置,请参考本帮助的全文检索章节
 # 需编辑 data\api\xs\app\shopnc.ini,将 server.index 和 server.search 值修改成自己的 IP 和端口
@@ -77,7 +77,7 @@ $config['debug'] 			= false;
 $config['default_store_id'] = '1';
 
 # 是否开启伪静态,支持 true(开启) 或 false(关闭)
-$config['url_model'] = false;
+$config['url_model'] = true;
 
 //如果店铺开启二级域名绑定的，这里填写主域名如shopnc.net
 $config['subdomain_suffix'] = 'chahuitong.com';
