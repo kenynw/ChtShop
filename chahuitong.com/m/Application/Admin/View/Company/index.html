@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>客户服务管理后台-影楼信息</title>
+<link rel="stylesheet" type="text/css" href="_CSS_/admin.css" />
+<script type="text/javascript" src="_JS_/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="_JS_/formValidatorRegex.js"></script>
+<script type="text/javascript" src="_JS_/formValidator.js"></script>
+<link rel="stylesheet" type="text/css" href="_JS_/validator.css" />
+</head>
+<style type="text/css">
+.col_three{
+	display:inline-block;
+	border:1px solid #fbaa01;
+	background-color:#fbaa01;
+	color:white;
+	padding:5px;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$.formValidator.initConfig({formID:"myForm",debug:false,submitOnce:false,
+		onError:function(msg,obj,errorlist){
+			alert(msg);
+		},
+	});
+	
+	$("#name").formValidator({onShow:"请输入影楼名称",onFocus:"影楼名称不可为空",onCorrect:"填写正确"})
+	.inputValidator({min:"3",onError:"影楼名称长度大于三位"});
+})
+</script>
+<body>
+<include file="Public/menu" />
+<div class="admin_box">
+<form action="{:U('Company/update_db')}" method="post" enctype="multipart/form-data" id="myForm">
+<input type="hidden" value="{$data.id}" name="id" />
+<input type="hidden" value="{$data.logo}" name="logo1" />
+影楼名称：<input type="text" maxlength="20" value="{$data.name}" name="name" id="name"/><span id="nameTip"></span><br>
+<br>
+影楼LOGO：
+<a href="_UPL_/{$data.logo}" target="_blank" title="点击查看高清大图">
+<img src="_UPL_/{$data.logo}" style="width:100px;vertical-align: middle;"/>
+</a>
+<br>
+<input type="file" name="logo" id="logo"/>
+1M以内
+<br>
+<br>
+官方主页：
+<input type="text" maxlength="50" style="width:200px" value="{$data.homepage}" name="homepage" id="homepage"/><span id="homepageTip"></span>
+<br>
+<br>
+客服电话：
+<input type="text" maxlength="15" value="{$data.custom_service}" name="custom_service" id="custom_service"/><span id="custom_serviceTip"></span>
+<br>
+<br>
+总经理电话：
+<input type="text" maxlength="15" value="{$data.manager}" name="manager" id="manager"/><span id="managerTip"></span>
+<br>
+<br>
+<input type="submit" value="更改" />
+</form>
+</div>
+</body>
+</html>

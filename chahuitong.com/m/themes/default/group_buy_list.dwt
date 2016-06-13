@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{$page_title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<link href="images/touch-icon.png" rel="apple-touch-icon-precomposed" />
+<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.mytime1{display:none;}
+.mytime{
+position: absolute;
+  color: white;
+  background-color: black;
+  width: 100%;
+  bottom: 49px;
+  padding: 3px;
+  display:none;
+}
+</style>
+</head>
+<body>
+<div id="page" style="right: 0px; left: 0px; display: block;">
+  <header id="header" style="z-index:1">
+    <div class="header_l"> <a class="ico_10" href="javascript:history.go(-1);"> 返回 </a> </div>
+    <h1> 闪购 </h1>
+    <div class="header_r header_search"> <a class="ico_17" href="index.php"> 首页 </a> </div>
+  </header>
+  <div class="shan_head">
+  <span id="forNow" class="shan_span">进行中...</span>
+  <!--<span id="forNext" class="shan_span">即将开始</span>-->
+  </div>
+  <div class="srp album flex-f-row" id="J_ItemList" style="opacity:1;padding-top:20px">
+    <div class="product flex_in single_item">
+      <div class="pro-inner" style="padding-bottom: 45px;"></div>
+    </div>
+    <a href="javascript:;" class="get_more"></a> </div>
+  <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.more.js"></script>
+<script type="text/javascript" src="js/supertouch.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	var navi = navigator.userAgent;
+	if(navi.indexOf("android")!=-1||navi.indexOf("ios")!=-1){
+		$("#header").hide();
+		$(".shan_head").hide();
+	}
+	$('#J_ItemList').more({'address': 'group_buy.php?act=asynclist', 'spinner_code':'<div style="text-align:center; margin:10px;"><img src="themes/default/images/loader.gif" /></div>'})
+	$(window).scroll(function () {
+		if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+			$('.get_more').click();
+		}
+	});
+});
+
+$(function(){
+setInterval(function(){
+$(".mytime1").each(function(){
+var now=$(this);
+
+//开始时间
+var date1=new Date();
+
+//结束时间
+var mytime=now.text();
+var date2=new Date(mytime);
+
+//时间差的毫秒数
+var date3=date2.getTime()-date1.getTime();
+
+//计算出相差天数
+var days=Math.floor(date3/(24*3600*1000));
+
+//计算天数后剩余的毫秒数
+var leave1=date3%(24*3600*1000);
+//计算出小时数
+var hours=Math.floor(leave1/(3600*1000));
+
+//计算小时数后剩余的毫秒数
+var leave2=leave1%(3600*1000);
+//计算相差分钟数
+var minutes=Math.floor(leave2/(60*1000));
+
+//计算分钟数后剩余的毫秒数
+var leave3=leave2%(60*1000);
+//计算相差秒数
+var seconds=Math.round(leave3/1000);
+
+$(".mytime").fadeIn();
+if(seconds>=0){
+now.next(".mytime").text("仅剩"+days+"天"+hours+"小时"+minutes+"分"+seconds+"秒");
+}else{
+now.next(".mytime").text("此闪购已结束");
+}
+})
+},1000)
+})
+</script>
+</body>
+</html>

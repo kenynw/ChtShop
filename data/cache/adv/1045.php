@@ -4,7 +4,7 @@
   'ap_intro' => '闲置首页中部短栏广告3',
   'ap_class' => '0',
   'ap_display' => '2',
-  'is_use' => '1',
+  'is_use' => '0',
   'ap_width' => '240',
   'ap_height' => '100',
   'ap_price' => '30',

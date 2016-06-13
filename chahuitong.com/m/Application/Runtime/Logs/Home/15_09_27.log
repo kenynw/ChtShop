@@ -1,0 +1,3139 @@
+[ 2015-09-27T00:50:03+08:00 ] 112.97.54.129 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014649s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.203132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.203132s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T00:50:04+08:00 ] 112.97.54.129 /wap/index.php/Home/Index/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443286204' and end_time>'1443286204' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049807s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T00:50:05+08:00 ] 112.97.54.129 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T00:50:11+08:00 ] 112.97.54.129 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0654s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T00:50:14+08:00 ] 112.97.54.129 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 5,5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T00:50:20+08:00 ] 112.97.54.129 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 10,5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T00:50:22+08:00 ] 112.97.54.129 /wap/index.php/Home/News/newsDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_cms_article` WHERE ( article_id='6128' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T00:50:22+08:00 ] 112.97.54.129 /wap/index.php/Home/News/newsDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_cms_article` WHERE ( article_id='6128' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T00:52:32+08:00 ] 112.97.54.129 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 15,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T00:52:47+08:00 ] 112.97.54.129 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 20,5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T00:53:27+08:00 ] 112.97.54.129 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008790s ]
+
+[ 2015-09-27T00:53:29+08:00 ] 112.97.54.129 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='92' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T00:53:33+08:00 ] 112.97.54.129 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='92' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 5,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T00:53:37+08:00 ] 112.97.54.129 /wap/index.php/Home/News/newsDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_cms_article` WHERE ( article_id='6140' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T00:53:37+08:00 ] 112.97.54.129 /wap/index.php/Home/News/newsDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_cms_article` WHERE ( article_id='6140' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2015-09-27T00:54:17+08:00 ] 183.12.158.42 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T00:54:18+08:00 ] 183.12.158.42 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='92' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T00:54:20+08:00 ] 183.12.158.42 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='92' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 5,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T00:54:24+08:00 ] 183.12.158.42 /wap/index.php/Home/News/newsDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_cms_article` WHERE ( article_id='6134' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T00:55:46+08:00 ] 183.12.158.42 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='92' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 10,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T00:56:01+08:00 ] 183.12.158.42 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002929s ]
+
+[ 2015-09-27T00:56:03+08:00 ] 183.12.158.42 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='92' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T00:56:04+08:00 ] 183.12.158.42 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='92' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 5,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T00:56:06+08:00 ] 183.12.158.42 /wap/index.php/Home/News/newsDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_cms_article` WHERE ( article_id='6140' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T00:56:06+08:00 ] 183.12.158.42 /wap/index.php/Home/News/newsDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_cms_article` WHERE ( article_id='6140' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T00:58:18+08:00 ] 183.12.158.42 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0039s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='92' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 10,5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T00:58:29+08:00 ] 183.12.158.42 /wap/index.php/Home/Index/brandAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0020s ]
+SQL: SELECT `gc_id` FROM `shopnc_goods_class` WHERE ( `gc_parent_id`='1' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 670 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE (  class_id in (1) )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T01:20:34+08:00 ] 66.249.79.187 /wap/index.php/Home/Discuz/home_page_leader_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] Undefined index: username C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 147 行.
+NOTIC: [8] Undefined index: key C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 147 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_member` ORDER BY guanzhu desc,member_id ASC LIMIT 12   [ RunTime:0.0352s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T02:19:51+08:00 ] 66.249.79.180 /wap/index.php/Home/Index/goods?goods_id=101328
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017579s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='101328' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id=445 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_goodsid=101328 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 322 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_common` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_goods_common` WHERE ( goods_commonid='100767' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.108403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.108403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T02:36:21+08:00 ] 66.249.79.180 /wap/index.php/Home/Discuz/get_content_comment_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004882s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019530s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_comment` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_comment` WHERE ( content_id='1' ) ORDER BY id desc  [ RunTime:0.0361s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='8' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='20' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='10' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='11' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T03:52:08+08:00 ] 66.249.79.180 /wap/index.php/Home/Discuz/add_content_comment_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.024412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013671s ]
+NOTIC: [8] Undefined index: username C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 804 行.
+NOTIC: [8] Undefined index: key C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 804 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-27T04:19:09+08:00 ] 66.249.79.194 /wap/index.php/Home/Index/myInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009765s ]
+NOTIC: [8] Undefined index: key C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 1241 行.
+NOTIC: [8] Undefined index: username C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 1243 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_member` WHERE ( member_id='' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.095697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.095697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T04:27:31+08:00 ] 66.249.79.180 /wap/index.php/Home/Index/changepw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019532s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090824s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.090824s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.017579s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017579s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014649s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014649s ]
+
+[ 2015-09-27T04:31:20+08:00 ] 66.249.79.194 /wap/index.php/Home/Index/changepwdapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: key C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 1241 行.
+NOTIC: [8] Undefined index: username C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 1243 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_member` WHERE ( member_id='' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-27T05:07:55+08:00 ] 66.249.79.187 /wap/index.php/Home/Discuz/get_allperson_active_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_active` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_active` ORDER BY active_id  desc LIMIT 0,8   [ RunTime:0.0264s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T06:23:43+08:00 ] 66.249.79.180 /wap/index.php/Home/Discuz/get_allperson_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018554s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_content` ORDER BY content_id desc LIMIT 2   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T07:01:03+08:00 ] 117.136.5.147 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008790s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070315s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070315s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T07:01:04+08:00 ] 117.136.5.147 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T07:01:07+08:00 ] 117.136.5.147 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T07:01:35+08:00 ] 117.136.5.147 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T07:01:37+08:00 ] 117.136.5.147 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T07:22:55+08:00 ] 117.136.5.147 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='80' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 5,5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007812s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007812s ]
+
+[ 2015-09-27T07:23:03+08:00 ] 117.136.5.147 /wap/index.php/Home/News/newsDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_cms_article` WHERE ( article_id='6148' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003907s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003907s ]
+
+[ 2015-09-27T07:29:15+08:00 ] 117.136.5.147 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='80' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 5,5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T09:21:54+08:00 ] 119.147.225.214 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016603s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Undefined variable: khd C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.130864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.130864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007813s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007813s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011719s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011719s ]
+
+[ 2015-09-27T09:21:55+08:00 ] 119.147.225.214 /wap/index.php/Home/Index/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443316915' and end_time>'1443316915' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030275s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T09:21:56+08:00 ] 119.147.225.214 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T09:24:58+08:00 ] 66.249.79.194 /wap/index.php/Home/Index/goods?goods_id=101328
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='101328' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0029s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id=445 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_goodsid=101328 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 322 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_common` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_goods_common` WHERE ( goods_commonid='100767' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T09:35:36+08:00 ] 207.46.13.104 /wap/index.php/Home/Index/loader
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+ERR: 非法操作:loader
+
+[ 2015-09-27T10:11:06+08:00 ] 220.181.108.185 /wap/index.php/Home/Index/goods?goods_id=100002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019532s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0020s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='100002' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+
+[ 2015-09-27T10:17:58+08:00 ] 68.180.230.37 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.021485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021485s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: khd C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073245s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073245s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T10:18:13+08:00 ] 68.180.230.37 /wap/index.php/Home/Index/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443320293' and end_time>'1443320293' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T11:02:39+08:00 ] 121.229.131.223 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.021485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021485s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.091801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T11:02:40+08:00 ] 121.229.131.223 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T11:02:43+08:00 ] 121.229.131.223 /wap/index.php/Home/Discuz/home_page_leader_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+NOTIC: [8] Undefined index: username C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 147 行.
+NOTIC: [8] Undefined index: key C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 147 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_member` ORDER BY guanzhu desc,member_id ASC LIMIT 12   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T11:02:43+08:00 ] 121.229.131.223 /wap/index.php/Home/Discuz/last_news_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_discuz_content` WHERE ( uid='1' ) ORDER BY content_id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='1' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T11:02:43+08:00 ] 121.229.131.223 /wap/index.php/Home/Discuz/get_allperson_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_discuz_content` ORDER BY content_id desc LIMIT 0,5   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T11:02:43+08:00 ] 121.229.131.223 /wap/index.php/Home/Discuz/get_allperson_active_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_active` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_active` ORDER BY active_id  desc LIMIT 0,8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2015-09-27T11:03:09+08:00 ] 121.229.131.223 /wap/index.php/Home/Index/brandAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0020s ]
+SQL: SELECT `gc_id` FROM `shopnc_goods_class` WHERE ( `gc_parent_id`='1' )  [ RunTime:0.0205s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 670 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE (  class_id in (1) )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T11:03:13+08:00 ] 121.229.131.223 /wap/index.php/Home/Index/secondcg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T11:03:15+08:00 ] 121.229.131.223 /wap/index.php/Home/Index/secondcg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T11:03:17+08:00 ] 121.229.131.223 /wap/index.php/Home/index/categorydetail/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_goods` WHERE ( gc_id='1' and goods_state='1' ) ORDER BY goods_commend desc,goods_id desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057619s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T11:03:23+08:00 ] 121.229.131.223 /wap/index.php/Home/Index/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_goods` WHERE ( gc_id='1' and goods_state='1' ) ORDER BY goods_salenum desc LIMIT 10,10   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T11:23:32+08:00 ] 39.78.167.0 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T11:23:35+08:00 ] 39.78.167.0 /wap/index.php/Home/news
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T11:23:36+08:00 ] 39.78.167.0 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2015-09-27T11:23:40+08:00 ] 39.78.167.0 /wap/index.php/Home/News/showMoreApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 5,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T11:57:32+08:00 ] 136.243.73.82 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: khd C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072268s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072268s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T11:57:35+08:00 ] 136.243.73.82 /wap/index.php/Home/Index/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443326255' and end_time>'1443326255' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019532s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019532s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T12:43:31+08:00 ] 36.248.219.187 /wap/index.php/Home/Index/homepic_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016602s ]
+SQL: SHOW COLUMNS FROM `shopnc_home_pic` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_home_pic` WHERE ( state='1' )  [ RunTime:0.0303s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T12:43:31+08:00 ] 36.248.219.187 /wap/index.php/Home/Index/homePromotionGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016602s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443329011' and end_time>'1443329011' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:43:32+08:00 ] 36.248.219.187 /wap/index.php/Home/Index/homeapi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:43:50+08:00 ] 36.248.219.187 /wap/index.php/Home/Index/brandAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0029s ]
+SQL: SELECT `gc_id` FROM `shopnc_goods_class` WHERE ( `gc_parent_id`='1' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 670 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE (  class_id in (1) )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:43:51+08:00 ] 36.248.219.187 /wap/index.php/Home/Index/brandAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0020s ]
+SQL: SELECT `gc_id` FROM `shopnc_goods_class` WHERE ( `gc_parent_id`='2' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE (  class_id in (2,151,152,153,154,155) )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T12:43:53+08:00 ] 36.248.219.187 /wap/index.php/Home/Discuz/last_news_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_content` WHERE ( uid='1' ) ORDER BY content_id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='1' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T12:43:53+08:00 ] 36.248.219.187 /wap/index.php/Home/discuz/get_allperson_active_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_active` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_discuz_active` ORDER BY active_id  desc LIMIT 0,8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:43:53+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/home_page_leader_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_member` ORDER BY guanzhu desc,member_id ASC LIMIT 12   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:43:53+08:00 ] 36.248.219.187 /wap/index.php/Home/Discuz/get_allperson_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_content` ORDER BY content_id desc LIMIT 2   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:43:54+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/home_page_leader_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_member` ORDER BY guanzhu desc,member_id ASC LIMIT 12   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T12:44:00+08:00 ] 36.248.219.187 /wap/index.php/Home/Discuz/last_news_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_content` WHERE ( uid='1' ) ORDER BY content_id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='1' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:44:00+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/home_page_leader_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_member` ORDER BY guanzhu desc,member_id ASC LIMIT 12   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:44:00+08:00 ] 36.248.219.187 /wap/index.php/Home/Discuz/get_allperson_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_content` ORDER BY content_id desc LIMIT 2   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T12:44:00+08:00 ] 36.248.219.187 /wap/index.php/Home/discuz/get_allperson_active_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_active` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `shopnc_discuz_active` ORDER BY active_id  desc LIMIT 0,8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-27T12:44:00+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/home_page_leader_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_member` ORDER BY guanzhu desc,member_id ASC LIMIT 12   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:44:03+08:00 ] 36.248.219.187 /wap/index.php/Home/Discuz/get_allperson_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_content` ORDER BY content_id desc LIMIT 2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='164' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2015-09-27T12:44:03+08:00 ] 36.248.219.187 /wap/index.php/Home/Discuz/last_news_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_content` WHERE ( uid='1' ) ORDER BY content_id desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='1' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:44:03+08:00 ] 36.248.219.187 /wap/index.php/Home/discuz/get_allperson_active_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002929s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_active` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_discuz_active` ORDER BY active_id  desc LIMIT 0,8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T12:44:03+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/home_page_leader_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_member` ORDER BY guanzhu desc,member_id ASC LIMIT 12   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T12:44:04+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/home_page_leader_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_member` ORDER BY guanzhu desc,member_id ASC LIMIT 12   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:46:04+08:00 ] 120.41.104.92 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: khd C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.136724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.136724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008790s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008790s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:46:04+08:00 ] 120.41.104.92 /wap/index.php/Home/Index/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443329164' and end_time>'1443329164' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:46:05+08:00 ] 120.41.104.92 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:47:35+08:00 ] 36.248.219.187 /wap/index.php/Home/Index/homepic_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_home_pic` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_home_pic` WHERE ( state='1' )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T12:47:35+08:00 ] 36.248.219.187 /wap/index.php/Home/Index/homePromotionGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443329255' and end_time>'1443329255' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T12:47:35+08:00 ] 36.248.219.187 /wap/index.php/Home/Index/homeapi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T12:47:57+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/insterst_member_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='41ea42148c9f4a9030dff5e22bc224ce' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='41ea42148c9f4a9030dff5e22bc224ce' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_interest` [ RunTime:0.0020s ]
+SQL: SELECT `member_id` FROM `shopnc_discuz_interest` WHERE ( `uid`='164' ) ORDER BY interest_time desc LIMIT 0,5   [ RunTime:0.0225s ]
+
+[ 2015-09-27T12:47:57+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/get_user_topic_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='41ea42148c9f4a9030dff5e22bc224ce' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_discuz_content` WHERE ( `uid`='164' ) ORDER BY content_id desc LIMIT 0,5   [ RunTime:0.0215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T12:47:58+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/get_active_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.020509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005860s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='41ea42148c9f4a9030dff5e22bc224ce' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='41ea42148c9f4a9030dff5e22bc224ce' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_active_member` [ RunTime:0.0020s ]
+SQL: SELECT `active_id` FROM `shopnc_discuz_active_member` WHERE ( `member_id`='164' and `status`='1' )  [ RunTime:0.0332s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_active` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_discuz_active` WHERE (  `uid`='164' ) ORDER BY `time` desc LIMIT 0,5   [ RunTime:0.0186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010743s ]
+
+[ 2015-09-27T12:48:01+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/del_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='41ea42148c9f4a9030dff5e22bc224ce' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: DELETE FROM `shopnc_discuz_content` WHERE ( `content_id`='79' ) [ RunTime:0.0459s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006836s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007813s ]
+
+[ 2015-09-27T12:48:04+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/del_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='41ea42148c9f4a9030dff5e22bc224ce' ) LIMIT 1   [ RunTime:0.0254s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: DELETE FROM `shopnc_discuz_content` WHERE ( `content_id`='78' ) [ RunTime:0.0273s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2015-09-27T12:48:05+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/del_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='41ea42148c9f4a9030dff5e22bc224ce' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0010s ]
+SQL: DELETE FROM `shopnc_discuz_content` WHERE ( `content_id`='78' ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T12:48:35+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/del_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='41ea42148c9f4a9030dff5e22bc224ce' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: DELETE FROM `shopnc_discuz_content` WHERE ( `content_id`='77' ) [ RunTime:0.0293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T12:48:36+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/del_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='41ea42148c9f4a9030dff5e22bc224ce' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: DELETE FROM `shopnc_discuz_content` WHERE ( `content_id`='76' ) [ RunTime:0.0254s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T13:47:26+08:00 ] 223.104.23.53 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.020508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020508s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066409s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T13:47:27+08:00 ] 223.104.23.53 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T13:47:27+08:00 ] 223.104.23.53 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T13:47:28+08:00 ] 223.104.23.53 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T13:47:29+08:00 ] 223.104.23.53 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011720s ]
+
+[ 2015-09-27T13:47:30+08:00 ] 223.104.23.53 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T13:49:53+08:00 ] 66.249.79.187 /wap/index.php/Home/Index/goods?goods_id=101328
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='101328' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0029s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id=445 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_goodsid=101328 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 322 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_common` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_goods_common` WHERE ( goods_commonid='100767' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071292s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071292s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T15:00:21+08:00 ] 66.249.79.180 /wap/index.php/Home/Index/goods?goods_id=101328
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018555s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0020s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='101328' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0029s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id=445 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_goodsid=101328 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 322 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_common` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_goods_common` WHERE ( goods_commonid='100767' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.108403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.108403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T16:28:19+08:00 ] 223.104.6.61 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.020509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021486s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.089847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T16:28:20+08:00 ] 223.104.6.61 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:12:05+08:00 ] 42.156.137.78 /wap/index.php/Home/Discuz/addContent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.038087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038087s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.118169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.118169s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013672s ]
+
+[ 2015-09-27T19:12:12+08:00 ] 42.156.138.78 /wap/index.php/Home/Discuz/lingxiu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:13:33+08:00 ] 66.249.79.180 /wap/index.php/Home/Index/goods?goods_id=101328
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='101328' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0010s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id=445 ) LIMIT 1   [ RunTime:0.0195s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_goodsid=101328 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 322 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_common` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_goods_common` WHERE ( goods_commonid='100767' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042970s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042970s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T19:24:45+08:00 ] 39.91.96.62 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:26:41+08:00 ] 39.91.96.62 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.1699s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:27:01+08:00 ] 39.91.96.62 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:27:02+08:00 ] 39.91.96.62 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:27:07+08:00 ] 39.91.96.62 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:27:08+08:00 ] 39.91.96.62 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0020s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:28:59+08:00 ] 39.91.96.62 /wap/index.php/Home/Discuz/last_news_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_content` WHERE ( uid='1' ) ORDER BY content_id desc LIMIT 1   [ RunTime:0.0859s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='1' ) LIMIT 1   [ RunTime:0.0469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:28:59+08:00 ] 39.91.96.62 /wap/index.php/Home/Discuz/home_page_leader_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] Undefined index: username C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 147 行.
+NOTIC: [8] Undefined index: key C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 147 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_member` ORDER BY guanzhu desc,member_id ASC LIMIT 12   [ RunTime:0.2217s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.017579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017579s ]
+
+[ 2015-09-27T19:28:59+08:00 ] 39.91.96.62 /wap/index.php/Home/Discuz/get_allperson_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_content` ORDER BY content_id desc LIMIT 2   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:28:59+08:00 ] 39.91.96.62 /wap/index.php/Home/Discuz/get_allperson_active_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_active` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_discuz_active` ORDER BY active_id  desc LIMIT 0,8   [ RunTime:0.0273s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2015-09-27T19:29:15+08:00 ] 39.91.96.62 /wap/index.php/Home/Index/brandAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0020s ]
+SQL: SELECT `gc_id` FROM `shopnc_goods_class` WHERE ( `gc_parent_id`='1' )  [ RunTime:0.0264s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 670 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE (  class_id in (1) )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:29:41+08:00 ] 39.91.96.62 /wap/index.php/Home/Index/brandGoods/bid/371
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='371' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: showway C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 722 行.
+SQL: SELECT * FROM `shopnc_goods` WHERE ( brand_id='371' and goods_state='1' )  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: showway C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\b096450eee7daed465af7b28e0a67d45.php 第 164 行.
+NOTIC: [8] Undefined variable: showway C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\b096450eee7daed465af7b28e0a67d45.php 第 165 行.
+NOTIC: [8] Undefined variable: showway C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\b096450eee7daed465af7b28e0a67d45.php 第 166 行.
+NOTIC: [8] Undefined variable: showway C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\b096450eee7daed465af7b28e0a67d45.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066409s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T19:29:59+08:00 ] 39.91.96.62 /wap/index.php/Home/Index/brandAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0029s ]
+SQL: SELECT `gc_id` FROM `shopnc_goods_class` WHERE ( `gc_parent_id`='1' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 670 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE (  class_id in (1) )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:30:00+08:00 ] 39.91.96.62 /wap/index.php/Home/Index/brandAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0020s ]
+SQL: SELECT `gc_id` FROM `shopnc_goods_class` WHERE ( `gc_parent_id`='1' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 670 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE (  class_id in (1) )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:48:12+08:00 ] 119.147.225.237 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: khd C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087894s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:48:12+08:00 ] 119.147.225.237 /wap/index.php/Home/Index/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443354492' and end_time>'1443354492' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.278331s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.279308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:48:12+08:00 ] 119.147.225.182 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: khd C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002930s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:48:12+08:00 ] 119.147.225.182 /wap/index.php/Home/Index/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443354492' and end_time>'1443354492' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T19:48:13+08:00 ] 119.147.225.182 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T19:48:13+08:00 ] 119.147.225.237 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007813s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007813s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004883s ]
+
+[ 2015-09-27T19:48:36+08:00 ] 119.147.225.170 /wap/index.php/Home/Index/goods?goods_id=100883
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0010s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id=367 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_goodsid=100883 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 322 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_common` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_goods_common` WHERE ( goods_commonid='100256' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055666s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055666s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T19:49:00+08:00 ] 119.147.225.185 /wap/index.php/Home/Index/brand
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_goods_class` WHERE ( gc_parent_id='0' ) ORDER BY gc_sort Asc LIMIT 7   [ RunTime:0.0146s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041994s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041994s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:49:01+08:00 ] 119.147.225.185 /wap/index.php/Home/Index/brandAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0020s ]
+SQL: SELECT `gc_id` FROM `shopnc_goods_class` WHERE ( `gc_parent_id`='1' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 670 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE (  class_id in (1) )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:49:01+08:00 ] 119.147.225.187 /wap/index.php/Home/Index/brand
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002929s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_goods_class` WHERE ( gc_parent_id='0' ) ORDER BY gc_sort Asc LIMIT 7   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005860s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005860s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:49:02+08:00 ] 119.147.225.187 /wap/index.php/Home/Index/brandAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0020s ]
+SQL: SELECT `gc_id` FROM `shopnc_goods_class` WHERE ( `gc_parent_id`='1' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 670 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE (  class_id in (1) )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T19:49:44+08:00 ] 119.147.225.227 /wap/index.php/Home/Index/brandGoods/bid/365
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0078s ]
+NOTIC: [8] Undefined index: showway C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 722 行.
+SQL: SELECT * FROM `shopnc_goods` WHERE ( brand_id='365' and goods_state='1' )  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: showway C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\b096450eee7daed465af7b28e0a67d45.php 第 164 行.
+NOTIC: [8] Undefined variable: showway C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\b096450eee7daed465af7b28e0a67d45.php 第 165 行.
+NOTIC: [8] Undefined variable: showway C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\b096450eee7daed465af7b28e0a67d45.php 第 166 行.
+NOTIC: [8] Undefined variable: showway C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\b096450eee7daed465af7b28e0a67d45.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T20:02:40+08:00 ] 27.152.155.195 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014649s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065432s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T20:02:41+08:00 ] 27.152.155.195 /wap/index.php/Home/Index/member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 50 行.
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 56 行.
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 59 行.
+NOTIC: [8] Undefined variable: ordernumber C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 59 行.
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 60 行.
+NOTIC: [8] Undefined variable: cartnumber C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 60 行.
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 61 行.
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 62 行.
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 63 行.
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 64 行.
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 65 行.
+NOTIC: [8] Undefined variable: messagecount C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 65 行.
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 67 行.
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 70 行.
+NOTIC: [8] Undefined variable: userinfo C:\xampp\htdocs\shopncb2b2c\wap\Application\Runtime\Cache\Home\0034c409d5ac2c07ac3f17b1b2ad5d84.php 第 72 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2015-09-27T20:02:42+08:00 ] 27.152.155.195 /wap/index.php/Home/Index/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443355362' and end_time>'1443355362' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T20:02:43+08:00 ] 27.152.155.195 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T20:02:51+08:00 ] 27.152.155.195 /wap/index.php/Home/Index/brand
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_goods_class` WHERE ( gc_parent_id='0' ) ORDER BY gc_sort Asc LIMIT 7   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T20:02:53+08:00 ] 27.152.155.195 /wap/index.php/Home/Index/brandAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0029s ]
+SQL: SELECT `gc_id` FROM `shopnc_goods_class` WHERE ( `gc_parent_id`='1' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 670 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE (  class_id in (1) )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T20:03:02+08:00 ] 27.152.155.195 /wap/index.php/Home/Index/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002929s ]
+
+[ 2015-09-27T20:03:06+08:00 ] 27.152.155.195 /wap/index.php/Home/Index/category
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003906s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_goods_class` WHERE ( gc_parent_id='0' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047854s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047854s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T20:03:07+08:00 ] 27.152.155.195 /wap/index.php/Home/Index/secondcg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T20:03:15+08:00 ] 27.152.155.195 /wap/index.php/Home/Index/secondcg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_goods_class` WHERE ( gc_parent_id='530' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T20:03:21+08:00 ] 27.152.155.195 /wap/index.php/Home/index/categorydetail/id/531
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_goods` WHERE ( gc_id='531' and goods_state='1' ) ORDER BY goods_commend desc,goods_id desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036135s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T20:03:30+08:00 ] 27.152.155.195 /wap/index.php/Home/Index/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_goods` WHERE ( gc_id='531' and goods_state='1' ) ORDER BY goods_salenum desc LIMIT 10,10   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T20:03:39+08:00 ] 27.152.155.195 /wap/index.php/Home/Index/select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_goods` WHERE ( gc_id='531' and goods_state='1' ) ORDER BY goods_salenum desc LIMIT 20,10   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T20:03:41+08:00 ] 27.152.155.195 /wap/index.php/Home/index/goods/goods?goods_id=100739
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='100739' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0029s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id=429 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_goodsid=100739 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 322 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_common` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_goods_common` WHERE ( goods_commonid='100469' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002930s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T20:36:30+08:00 ] 66.249.79.180 /wap/index.php/Home/Index/message
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: key C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 1241 行.
+NOTIC: [8] Undefined index: username C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 1243 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_frommemberid='' ) ORDER BY geval_id desc LIMIT 10   [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 1177 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075198s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T21:42:26+08:00 ] 123.125.71.48 /wap/index.php/Home/Index/login?chashi=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018556s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.125005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.125005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T22:58:38+08:00 ] 207.46.13.53 /wap/index.php/Home/Index/loader
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016602s ]
+ERR: 非法操作:loader
+
+[ 2015-09-27T23:12:02+08:00 ] 114.242.248.224 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018555s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058596s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058596s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:12:03+08:00 ] 114.242.248.224 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:12:12+08:00 ] 114.242.248.224 /wap/index.php/Home/Index/goods?goods_id=100883
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id=367 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_goodsid=100883 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 322 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_common` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_goods_common` WHERE ( goods_commonid='100256' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:28:48+08:00 ] 36.248.219.187 /wap/index.php/Home/Index/homePromotionGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443367727' and end_time>'1443367727' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.017577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017577s ]
+
+[ 2015-09-27T23:28:48+08:00 ] 36.248.219.187 /wap/index.php/Home/Index/homepic_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_home_pic` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_home_pic` WHERE ( state='1' )  [ RunTime:0.0273s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-09-27T23:28:49+08:00 ] 36.248.219.187 /wap/index.php/Home/Index/homeapi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:28:50+08:00 ] 36.248.219.187 /wap/index.php/Home/Discuz/last_news_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_discuz_content` WHERE ( uid='1' ) ORDER BY content_id desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='1' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:28:50+08:00 ] 36.248.219.187 /wap/index.php/Home/Discuz/get_allperson_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_content` ORDER BY content_id desc LIMIT 2   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:28:50+08:00 ] 36.248.219.187 /wap/index.php/Home/discuz/get_allperson_active_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_active` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_active` ORDER BY active_id  desc LIMIT 0,8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='150' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `member_name`,`member_avatar`,`guanzhu`,`rank` FROM `shopnc_member` WHERE ( member_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:28:50+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/home_page_leader_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='1fc36919ed8477938bc7b6cebf15536d' ) LIMIT 1   [ RunTime:0.1504s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='1fc36919ed8477938bc7b6cebf15536d' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_member` ORDER BY guanzhu desc,member_id ASC LIMIT 12   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_interest` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_interest` WHERE ( `uid`='164' )  [ RunTime:0.0166s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 188 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:28:52+08:00 ] 36.248.219.187 /wap/index.php/home/discuz/home_page_leader_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='1fc36919ed8477938bc7b6cebf15536d' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='1fc36919ed8477938bc7b6cebf15536d' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_member` ORDER BY guanzhu desc,member_id ASC LIMIT 12   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_discuz_interest` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_discuz_interest` WHERE ( `uid`='164' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 188 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:29:15+08:00 ] 36.248.219.187 /wap/index.php/Home/Discuz/save_content_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='1fc36919ed8477938bc7b6cebf15536d' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: title C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 1274 行.
+NOTIC: [8] Undefined index: pics C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 1286 行.
+NOTIC: [8] Undefined index: image C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\DiscuzController.class.php 第 1286 行.
+SQL: SHOW COLUMNS FROM `shopnc_discuz_content` [ RunTime:0.0020s ]
+SQL: INSERT INTO `shopnc_discuz_content` (`uid`,`content`,`time`,`share`,`view`,`comment`) VALUES ('164','v','2015-09-27 23:29:15','0','0','0') [ RunTime:0.0127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T23:39:33+08:00 ] 117.35.138.21 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051760s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:39:33+08:00 ] 117.35.138.21 /wap/index.php/Home/Index/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and start_time<'1443368373' and end_time>'1443368373' ) ORDER BY `order` desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039064s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T23:39:35+08:00 ] 117.35.138.21 /wap/index.php/Home/Index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_favorites` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_favorites` WHERE ( fav_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005860s ]
+
+[ 2015-09-27T23:39:44+08:00 ] 117.35.138.21 /wap/index.php/Home/Index/goods?goods_id=100883
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0029s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='100883' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id=367 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_goodsid=100883 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0029s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 322 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_common` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_goods_common` WHERE ( goods_commonid='100256' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038088s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-09-27T23:40:19+08:00 ] 117.35.138.21 /wap/index.php/Home/news
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037111s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037111s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-27T23:40:19+08:00 ] 117.35.138.21 /wap/index.php/Home/News/newsapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004883s ]
+SQL: SHOW COLUMNS FROM `shopnc_cms_article` [ RunTime:0.0029s ]
+SQL: SELECT `article_id`,`article_image`,`article_publish_time`,`article_abstract`,`article_title` FROM `shopnc_cms_article` WHERE ( article_class_id='89' ) ORDER BY article_sort desc,article_publish_time desc LIMIT 0,5   [ RunTime:0.0186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:40:25+08:00 ] 117.35.138.21 /wap/index.php/Home/Index/brand
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_goods_class` WHERE ( gc_parent_id='0' ) ORDER BY gc_sort Asc LIMIT 7   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-09-27T23:40:26+08:00 ] 117.35.138.21 /wap/index.php/Home/Index/brandAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0029s ]
+SQL: SELECT `gc_id` FROM `shopnc_goods_class` WHERE ( `gc_parent_id`='1' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\shopncb2b2c\wap\Application\Home\Controller\IndexController.class.php 第 670 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE (  class_id in (1) )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+

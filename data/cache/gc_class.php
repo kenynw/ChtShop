@@ -11,9 +11,9 @@
       'commis_rate' => '0',
       'gc_sort' => '1',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '{name}价格 图片 {name}评价 - {sitename}',
+      'gc_keywords' => '{name},{name}历口品牌,{name}价格',
+      'gc_description' => '茶汇通提供{name}产品报价、图片、产品参数、功能介绍、{name}评论讨论，寻找{name}就上茶汇通，还包括{name}相关产品的供应商 批发价格 厂家等信息',
     ),
     2 => 
     array (
@@ -25,9 +25,9 @@
       'commis_rate' => '0',
       'gc_sort' => '2',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '{name}价格 图片 {name}评价 - {sitename}',
+      'gc_keywords' => '{name},{name}历口品牌,{name}价格',
+      'gc_description' => '茶汇通提供{name}产品报价、图片、产品参数、功能介绍、{name}评论讨论，寻找{name}就上茶汇通，还包括{name}相关产品的供应商 批发价格 厂家等信息',
     ),
     3 => 
     array (
@@ -137,9 +137,9 @@
       'commis_rate' => '1',
       'gc_sort' => '0',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '{name}价格 图片 {name}评价 - {sitename}',
+      'gc_keywords' => '{name},{name}历口品牌,{name}价格',
+      'gc_description' => '茶汇通提供{name}产品报价、图片、产品参数、功能介绍、{name}评论讨论，寻找{name}就上茶汇通，还包括{name}相关产品的供应商 批发价格 厂家等信息',
     ),
     1068 => 
     array (
@@ -151,9 +151,9 @@
       'commis_rate' => '1',
       'gc_sort' => '0',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '{name}价格 图片 {name}评价 - {sitename}',
+      'gc_keywords' => '{name},{name}历口品牌,{name}价格',
+      'gc_description' => '茶汇通提供{name}产品报价、图片、产品参数、功能介绍、{name}评论讨论，寻找{name}就上茶汇通，还包括{name}相关产品的供应商 批发价格 厂家等信息',
     ),
     1075 => 
     array (
@@ -165,9 +165,9 @@
       'commis_rate' => '0',
       'gc_sort' => '0',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '{name}价格 图片 {name}评价 - {sitename}',
+      'gc_keywords' => '{name},{name}历口品牌,{name}价格',
+      'gc_description' => '茶汇通提供{name}产品报价、图片、产品参数、功能介绍、{name}评论讨论，寻找{name}就上茶汇通，还包括{name}相关产品的供应商 批发价格 厂家等信息',
     ),
     1076 => 
     array (
@@ -179,9 +179,9 @@
       'commis_rate' => '1',
       'gc_sort' => '0',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '{name}价格 图片 {name}评价 - {sitename}',
+      'gc_keywords' => '{name},{name}历口品牌,{name}价格',
+      'gc_description' => '茶汇通提供{name}产品报价、图片、产品参数、功能介绍、{name}评论讨论，寻找{name}就上茶汇通，还包括{name}相关产品的供应商 批发价格 厂家等信息',
     ),
     151 => 
     array (
@@ -193,9 +193,9 @@
       'commis_rate' => '0',
       'gc_sort' => '1',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '{name}价格 图片 {name}评价 - {sitename}',
+      'gc_keywords' => '{name},{name}历口品牌,{name}价格',
+      'gc_description' => '茶汇通提供{name}产品报价、图片、产品参数、功能介绍、{name}评论讨论，寻找{name}就上茶汇通，还包括{name}相关产品的供应商 批发价格 厂家等信息',
     ),
     152 => 
     array (
@@ -207,9 +207,9 @@
       'commis_rate' => '0',
       'gc_sort' => '2',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '{name}价格 图片 {name}评价 - {sitename}',
+      'gc_keywords' => '{name},{name}历口品牌,{name}价格',
+      'gc_description' => '茶汇通提供{name}产品报价、图片、产品参数、功能介绍、{name}评论讨论，寻找{name}就上茶汇通，还包括{name}相关产品的供应商 批发价格 厂家等信息',
     ),
     153 => 
     array (
@@ -221,9 +221,9 @@
       'commis_rate' => '0',
       'gc_sort' => '3',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '{name}价格 图片 {name}评价 - {sitename}',
+      'gc_keywords' => '{name},{name}历口品牌,{name}价格',
+      'gc_description' => '茶汇通提供{name}产品报价、图片、产品参数、功能介绍、{name}评论讨论，寻找{name}就上茶汇通，还包括{name}相关产品的供应商 批发价格 厂家等信息',
     ),
     154 => 
     array (
@@ -235,9 +235,9 @@
       'commis_rate' => '0',
       'gc_sort' => '4',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '{name}价格 图片 {name}评价 - {sitename}',
+      'gc_keywords' => '{name},{name}历口品牌,{name}价格',
+      'gc_description' => '茶汇通提供{name}产品报价、图片、产品参数、功能介绍、{name}评论讨论，寻找{name}就上茶汇通，还包括{name}相关产品的供应商 批发价格 厂家等信息',
     ),
     155 => 
     array (
@@ -249,9 +249,9 @@
       'commis_rate' => '0',
       'gc_sort' => '5',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '乌龙茶价格 图片 乌龙茶评价 - {sitename}',
+      'gc_keywords' => '乌龙茶,乌龙茶历口品牌,乌龙茶价格',
+      'gc_description' => '茶汇通提供乌龙茶产品报价、图片、产品参数、功能介绍、乌龙茶评论讨论，寻找乌龙茶就上茶汇通，还包括乌龙茶相关产品的供应商 批发价格 厂家等信息',
     ),
     1060 => 
     array (
@@ -347,9 +347,9 @@
       'commis_rate' => '0',
       'gc_sort' => '3',
       'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
+      'gc_title' => '{name}价格 图片 {name}评价 - {sitename}',
+      'gc_keywords' => '{name},{name}历口品牌,{name}价格,祁红茶',
+      'gc_description' => '茶汇通提供{name}产品报价、图片、产品参数、功能介绍、{name}评论讨论，寻找{name}就上茶汇通，还包括{name}相关产品的供应商 批发价格 厂家等信息',
     ),
     203 => 
     array (
@@ -542,34 +542,6 @@
       'gc_parent_id' => '256',
       'commis_rate' => '0',
       'gc_sort' => '10',
-      'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
-    ),
-    262 => 
-    array (
-      'gc_id' => '262',
-      'gc_name' => '手机',
-      'type_id' => '0',
-      'type_name' => '',
-      'gc_parent_id' => '257',
-      'commis_rate' => '0',
-      'gc_sort' => '255',
-      'gc_virtual' => '0',
-      'gc_title' => '',
-      'gc_keywords' => '',
-      'gc_description' => '',
-    ),
-    263 => 
-    array (
-      'gc_id' => '263',
-      'gc_name' => '对讲机',
-      'type_id' => '0',
-      'type_name' => '',
-      'gc_parent_id' => '257',
-      'commis_rate' => '0',
-      'gc_sort' => '255',
       'gc_virtual' => '0',
       'gc_title' => '',
       'gc_keywords' => '',
@@ -925,8 +897,6 @@
     390 => '256',
     391 => '256',
     1059 => '256',
-    262 => '257',
-    263 => '257',
     309 => '308',
     310 => '308',
     1069 => '470',
@@ -1005,11 +975,6 @@
       6 => '390',
       7 => '391',
       8 => '1059',
-    ),
-    257 => 
-    array (
-      0 => '262',
-      1 => '263',
     ),
     308 => 
     array (

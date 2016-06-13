@@ -1,0 +1,13 @@
+<volist name="data" id="data">
+<if condition="$data.id neq null">
+<div class="infos-item">
+<div class="img-content">
+<a href="{:U('Index/detail?aid='.$data[id].'')}" target="_self"><img src="{$host}{$data.litpic}" /></a>
+</div>
+<div class="img-title"><a href="{:U('Index/detail?aid='.$data[id].'')}" target="_self">{$data.title}</a></div>
+<div class="img-descri"><a href="{:U('Index/detail?aid='.$data[id].'')}" target="_self">{$data.description}...</a></div>
+<div class="img-date">{$data.writer}|{$data.typename}|{$data.pubdate}</div>
+</div>
+<else/>暂无相关文章
+</if>
+</volist>

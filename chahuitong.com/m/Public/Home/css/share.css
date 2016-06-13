@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;}
+body{width:100%;min-width:320px;max-width:640px;text-align:center;background:#f8f8f8;font-family:"微软雅黑";margin:0 auto;}
+a{text-decoration:none; color:#9a9a9a;}
+header{width:100%;height:160px;background:#1b8b80;position:relative;}
+header .haed{width:90%;position:absolute;top:50px;left:5%;}
+header div img{height:20px;margin-top:10px;}
+header div a:first-child{float:left; display:block;}
+header div a:last-child{float:right;}
+header nav{width:100%;font-size:1.2em; position:absolute;left:0px;bottom:15px;}
+header nav a{width:50%;color:#fff;float:left;display:block;position:relative;font-size:0.8em;}
+header nav a mark{display:block;background:#fff;width:1px;height:15px;position:absolute;bottom:3px;right:0px;}
+header nav a span{display:block;border:0 solid #fff; border-width:0 10px 12px; border-color:#fff rgba(255,255,255,0) ;width:0; overflow:hidden;height:0;position:absolute;left:44.3%;bottom:-18px;}
+.sub{color:#999999;font-size:0.8em;}
+.sub form{background:url(../img/fff.png) repeat-x;}
+.sub form input[type=text]{background:url(../img/user.png) no-repeat;}
+.sub form input[type=password]{background:url(../img/pass.png) no-repeat;}
+.sub form input[type=email]{background:url(../img/email.png) no-repeat;}
+.sub form input[type=text],.sub form input[type=email],.sub form input[type=password]{width:45%;height:36px;border:none;padding:2px 20%;margin:1px 5% 1px 10%;background-size:25px; background-position:20px 10px; background-color:#fff;outline:medium;border-bottom:1px solid #c9c9c9;}
+.sub form input[id=password_confirm]{border:none;}
+.sub form{margin-top:10px;}
+.sub form input[type=checkbox]{background:#fff;width:20px;height:20px;margin-right:10px; vertical-align:middle;}
+.sub form a{text-decoration:underline;margin-left:10%;}
+.sub form #loginbtn{display:block;line-height:40px;background:#1b8b80;color:#fff;width:75%;height:40px; font-size:1.4em;margin:30px auto;border:none;text-decoration:none;letter-spacing:1px;}
+.line{width:100%;height:15px;}
+.denglu{background:url(../img/denglu.png) no-repeat;width:75%;height:70px;background-size:contain;margin:60px auto 20px auto;color:#9a9a9a;}
+.logodl{width:75%;height:70px;margin:0 auto;}
+.logodl a{float:left;width:33%;font-size:0.8em;}
+.logodl img{width:50px;padding-bottom:5px;}
+.usert{background:#ffebec;width:75%;height:20px;border:1px solid #ffbdbf;position:relative;left:15%;top:-2px;font-size:10px;line-height:20px;color:#e6393d;display:none;}
+.nav1{width:100%;height:55px;background:url(../img/navbg.png) no-repeat;background-size:cover;position:fixed;left:0px;bottom:0px;}
+.nav1 a{float:left;padding:5px 0px;width:20%;color:#71797f;font-size:0.8em;}
+.nav1 img{width:20px;height:20px;padding:3px 0px 4px 0px;}
+.error-tips{color:red}
+div.di3f{margin-bottom:65px;}
+.logo{width:100%;height:60px;position:absolute;left:0;top:30px;}
+.logo img{width:60px;height:60px;border-radius:50%;}

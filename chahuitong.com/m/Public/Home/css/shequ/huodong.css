@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+.mai div:first-child a{border-bottom:2px solid #a15641;color:#a15641;}
+body{text-align:center;background:#fff;}
+.mail{width:100%;}
+.table{background:#fff;font-size:0.9em;margin-bottom:60px;}
+.table form ul li{display:none;height:48px;border-bottom:1px solid #c9c9c9;margin:0 auto;text-align:right;line-height:48px;font-size:1.2em;}
+.table form ul li label{width:26%;text-align:left;float:left;color:#1b8b80;}
+.table form ul li input{float:left;margin-left:10px;border:none;height:38px;width:60%;padding:5px 0px;font-size:0.9em;}
+.table form ul li span{float:right;background:url(../img/shequ/xiasanjiao.jpg);width:20px;height:20px;display:block;position:relative;margin-left:5px;margin-top:12px;}
+.table form ul li span select{position:absolute;top:25px;right:2px;display:none;z-index:99;width:40px;}
+.table form ul li span:hover select{display:inline;widht:30px;}
+.table form textarea{width:85%;height:100px;background:#efefef;;margin:25px auto;border-radius:3px;padding:20px 10px;}
+.table form input[type=submit]{width:90%;height:36px;margin:30px auto;background:#1b8b80;color:#fff;font-size:1.2em;border-radius:3px;border:none;letter-spacing:1em;}
+.table form input[type=button]{background:#fff;border:1px solid #c9c9c9;color:#c9c9c9;font-size:2em;margin:0 5%;}
+.table form input[name=btn]{float:left;padding:20px 20px;}

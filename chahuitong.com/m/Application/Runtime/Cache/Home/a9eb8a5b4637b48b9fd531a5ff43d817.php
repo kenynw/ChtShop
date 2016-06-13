@@ -1,0 +1,113 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>产品详情</title>
+<link type="text/css" href="/wap/Public/Home/css/newclass.css" rel="stylesheet">
+<link type="text/css" href="/wap/Public/Home/css/newdetails.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<a href="javaScript:window.history.back();"><img src="/wap/Public/Home/img/arrow.png"></a>产品详情<a href="#"><img src="/wap/Public/Home/img/shopcar_g.png"></a>
+</header>
+<div id="top">
+<ul>
+<li><a href="#"><img src="/wap/Public/Home/img/shop01.jpg"></a></li>
+<li><a href="#"><img src="/wap/Public/Home/img/shop01.jpg"></a></li>
+<li><a href="#"><img src="/wap/Public/Home/img/shop01.jpg"></a></li>
+</ul>
+<div class="top_list"><ul></ul></div>
+</div>
+<div class="title">
+<h3>程记安溪 观音王秋 程记安溪铁观音王 南特产茶饼357g买2送福饼</h3>
+<h2>￥198.00<span>￥398.00</span></h2>
+<p class="t_p">快递：15.00<span></span>月销量<span>60</span><span class="add">安溪感德</span></p>
+<h5><span><img src="/wap/Public/Home/img/save.png">正品保证</span><span><img src="/wap/Public/Home/img/save.png">12小时发货</span><span><img src="/wap/Public/Home/img/save.png">实地认证</span></h5>
+</div>
+<div class="canshu">
+<h3><span></span>产品参数：<a id="canshu" href="#"><img src="/wap/Public/Home/img/arrow.png"></a></h3>
+<ul>
+<li>净含量：<span>125g</span></li>
+<li>品牌：<span>125g</span></li>
+<li>季节：<span>125g</span></li>
+<li>保质期：<span>125g</span></li>
+<li>包装：<span>125g</span></li>
+<li>保质期：<span>125g</span></li>
+<li>净含量：<span>125g</span></li>
+<li>品牌：<span>125g</span></li>
+<li>季节：<span>125g</span></li>
+<li>保质期：<span>125g</span></li>
+<li>包装：<span>125g</span></li>
+<li>保质期：<span>125g</span></li>
+</ul>
+</div>
+<div class="select">
+<h3><a id="shopselect" href="#">购买选择<img src="/wap/Public/Home/img/arrow.png"></a></h3>
+</div>
+<div class="mail">
+<ul id="list">
+<li class="on"><h3><span data-ul="details">产品详情</span></h3></li>
+<li><h3><span data-ul="pingjia">评价</span></h3></li>
+</ul>
+<div id="mail">
+<div class="details">
+<img  src="/wap/Public/Home/img/shop01.jpg">
+<img  src="/wap/Public/Home/img/shop01.jpg">
+<img  src="/wap/Public/Home/img/shop01.jpg">
+<img  src="/wap/Public/Home/img/shop01.jpg">
+</div>
+<div class="pingjia">
+<ul>
+<li>
+<h3><img src="/wap/Public/Home/img/touxiang.jpg">东方<time>2015.12.24</time></h3>
+<p class="con">此茶口感不错，汤色很好，值得买。</p>
+<p class="pj_img"><img src="/wap/Public/Home/img/shop04.jpg"><img src="/wap/Public/Home/img/shop04.jpg"><img src="/wap/Public/Home/img/shop04.jpg"></p>
+</li>
+<li>
+<h3><img src="/wap/Public/Home/img/touxiang.jpg">东方<time>2015.12.24</time></h3>
+<p class="con">此茶口感不错，汤色很好，值得买。</p>
+<p class="pj_img"><img src="/wap/Public/Home/img/shop04.jpg"><img src="/wap/Public/Home/img/shop04.jpg"><img src="/wap/Public/Home/img/shop04.jpg"></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="brand">
+<h3>品牌介绍<img src="/wap/Public/Home/img/arrow.png"></h3>
+<div id="brand">
+<div class="brand_img"><img src="/wap/Public/Home/img/brand01.jpg"></div>
+<div class="brand_con"><h4>滇臻號</h4>
+<p class="brand_jj">纯料古树  难得好茶</p>
+<p>品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍</p></div></div>
+<div class="on"></div>
+</div>
+<div id="show_img"></div>
+<nav>
+<ul>
+<li>
+<a id="fenxiang" href="#"><img src="/wap/Public/Home/img/share.png">分享</a>
+<a href="#"><img src="/wap/Public/Home/img/kefu.png">客服</a>
+<a href="#"><img src="/wap/Public/Home/img/xing.png">收藏</a>
+</li>
+<li><a href="#">加入购物车</a></li>
+<li><a href="#">立即购买</a></li>
+</ul>
+</nav>
+<div id="xuanze">
+<div>
+<h4>购买选择<img id="close" src="/wap/Public/Home/img/close.png"></h4>
+<p id="leixing"><span>浓香型</span><span class="on">清淡型</span></p>
+<h4>购买数量<span>（限购1件）</span><mark><span id="jian">-</span><span id="num">1</span><span id="jia">+</span></mark></h4>
+</div>
+</div>
+<div id="share">
+<div class="bdsharebuttonbox"><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址">复制网址</a><button id="quxiao">取消</button></div>
+
+</div>
+<div id="fanhui"><img src="/wap/Public/Home/img/top.png"></div>
+<script src="/wap/Public/Home/js/mj.js"></script>
+<script src="/wap/Public/Home/js/lunbo.js"></script>
+<script src="/wap/Public/Home/js/details.js"></script>
+</body>
+</html>

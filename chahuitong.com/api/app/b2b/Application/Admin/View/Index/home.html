@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>客户服务管理后台</title>
+<link rel="stylesheet" type="text/css" href="_CSS_/admin.css" />
+<script type="text/javascript" src="_JS_/jquery-1.4.4.min.js"></script>
+</head>
+<style type="text/css">
+.col_one{
+	display:inline-block;
+	border:1px solid #fbaa01;
+	background-color:#fbaa01;
+	color:white;
+	padding:5px;
+}
+</style>
+<body>
+<include file="Public/menu" />
+<div class="admin_box">
+<table>
+<tr>
+<td colspan="6"><a href="{:U('Admin/add_d')}">添加账户</a></td>
+</tr>
+<tr>
+<td>编号</td>
+<td>用户名</td>
+<td>类型</td>
+<td>状态</td>
+<td>操作</td>
+</tr>
+<volist name="data" id="vo">
+<tr>
+<td>{$vo.id}</td>
+<td>{$vo.login_name}</td>
+<td>
+<if condition="$vo.admin_type eq 1">超级管理员
+<elseif condition="$vo.admin_type eq 2" />普通管理员
+<else />信息发布员
+</if>
+</td>
+<td>
+<if condition="$vo.admin_status eq 1">启用中
+<else />被禁用
+</if>
+</td>
+<td>
+<a href="{:U('Admin/update_d?admin_id='.$vo[id].'')}">编辑</a>
+<a href="{:U('Admin/delete?admin_id='.$vo[id].'')}">删除</a>
+</td>
+</tr>
+</volist>
+
+</table>
+</div>
+</body>
+</html>

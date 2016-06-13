@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>茶市————茶汇通</title>
+<meta name="keywords" content="茶汇通,普洱,普洱茶">
+<meta name="description" content="茶汇通普洱饼茶">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="_CSS_/share.css" type="text/css" rel="stylesheet">
+<link href="_CSS_/chashi.css" type="text/css" rel="stylesheet">
+<style>
+body{background:#fff;}
+</style>
+</head>
+<body>
+<header id="header">
+<a href="javaScript:window.history.back();"><img src="_IMG_/fanhui.png"></a>茶市<a href="http://www.chahuitong.com/wap"><img src="_IMG_/home.png"></a>
+</header>
+<header>
+<nav>
+<a href="__URL__/hangqing">行情</a>
+<a href="__URL__/sale">出售</a>
+<a href="__URL__/buy">求购</a>
+<a href="__URL__/myList">发布</a>
+</nav>
+</header>
+<div class="img"><h3>雲顶茶叶</h3><img src="_IMG_/hangqing01.png"></div>
+<div class="hangqing">
+<div class="tr"><span>品名</span><span>年份</span><span>单位</span><span>参考价</span></div>
+<ul>
+    <volist id="v" name="goods">
+        <li><span><a href="{$v.goods_link}">{$v.brand_name}</a></span><span>{$v.year}</span><span>{$v.unit}</span><span>{$v.price}</span></li>
+    </volist>
+</ul>
+</div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9a15ea23e7316c631085bb3ef722599a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body></html>

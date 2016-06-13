@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>供求信息</title><meta name="keywords" content="茶汇通,供求信息">
+<meta name="description" content="茶汇通供求信息">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="_CSS_/gongqiu.css" type="text/css" rel="stylesheet">
+<script src="_JS_/jquery-1.4.4.min.js"></script>
+<script src="_JS_/gongqiu.js"></script>
+<script>
+$(document).ready(function() {
+	
+	$(".click").click(function(){
+		
+		window.location.href="__URL__/buy/order/1";
+		
+		})
+	
+		var navi = navigator.userAgent;
+	if(navi.indexOf("android")!=-1||navi.indexOf("ios")!=-1){
+		$("header").hide();
+		$("nav").hide();
+	}
+    
+});
+</script>
+<script src="_JS_/TouchSlide.1.1.js"></script>
+</head>
+<body>
+<header>
+<a href="http://www.chahuitong.com/mobile/user.php"><img src="_IMG_/xiangzuo.jpg"></a>供求信息
+<a href="__URL__/search"><img src="_IMG_/sousuo.jpg"></a>
+</header>
+<div id="focus" class="focus">
+<div class="hd">
+<ul></ul>
+</div>
+<div class="bd">
+<ul>
+<li><a href="#"><img src="_IMG_/tu.jpg"/></a></li>
+<li><a href="#"><img src="_IMG_/tu.jpg"/></a></li>
+<li><a href="#"><img src="_IMG_/tu.jpg"/></a></li>
+</ul>
+</div>
+</div>
+<div class="mail">
+<div class="nav">
+<a class="all" href="__URL__/index">全部</a>
+<a class="sale" href="__URL__/sale" >出售</a>
+<a class="buy" href="__URL__/buy" style="margin: 1px 1px;
+padding: 2px 0px 9px 0px;
+background: #fff;
+color: #a15641;
+border-left: 1px solid #a15641;
+border-top: 1px solid #a15641;
+border-right: 1px solid #a15641;background:url(http://www.chahuitong.com/mobile/app/b2b/public/Home/img/dian.png) no-repeat 85% 30%;background-size:15% 50%">求购</a>
+<img class="click" src="_IMG_/timesort.jpg">
+</div>
+<div class="details">
+<ul>
+<volist name="all" id="v">
+<li>
+<a href="__URL__/info/id/{$v.id}"n style="color:#CCC">
+<div class="pic">
+<if condition="$v.pic neq ''">
+<img class="picimg" src="__ROOT__/Public/upload/{$v.pic}">
+<else />
+<img class="picimg" src="_IMG_/nopic.jpg">
+</if>
+<div class="state">
+<img src="_IMG_/gou.png">
+</div>
+</div>
+<div class="shop">
+<div class="title">
+<h3>{$v.name}</h3>
+<p><span>年份：{$v.year}</span><span>数量：{$v.number}饼</span></p>
+<p style="height:1.1em;overflow:hidden;">{$v.content}</p>
+</div>
+<div class="jiage">
+<if condition="$v.arrow_order eq 1">
+
+{$v.price}
+
+<else />
+价格详谈
+
+</if>
+
+</div>
+</div>
+<div class="time">
+<img src="_IMG_/time.jpg">{$v.addtime}
+</div>
+</a>
+</li>
+</volist>
+</ul>
+
+</div>
+<style>
+ .page{padding-top:2em;text-align:center;}
+.page a{display:inline-block;width:30px;padding:5px 10px;margin:0 10px;font-size:14px}
+.page span{display:inline-block;width:30px;padding:5px 10px;font-size:14px}
+</style>
+<div class="page">
+  {$page}
+</div>
+</div>
+<include file="public/foot"/>
+</body>
+<script type="text/javascript" src="_JS_/slide.js"></script>
+</html>

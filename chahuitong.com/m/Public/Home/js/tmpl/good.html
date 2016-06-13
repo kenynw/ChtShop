@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>产品详情</title><meta name="keywords" content="茶汇通,普洱,普洱茶,茶">
+<meta name="description" content="茶汇通">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="_CSS_/class.css" type="text/css" rel="stylesheet">
+<link href="_CSS_/details.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="share" style="background:#333;opacity:0.5;position:fixed;top:0px;right:0px;width:100%;height:40px;z-index:900;display:none "></div>
+<div class="share" id="share" style="background:#333;opacity:0.5;position:fixed;top:0px;left:0px;width:15%;height:40px;z-index:999;display:none;color:#F00;text-align:center;line-height:40px;font-weight:bold">X</div>
+<div class="share" style="position:fixed;top:0px;right:0px;width:55%;height:40px;z-index:999;display:none"><div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></div>
+<div id="product_detail_wp"></div>
+
+<script type="text/html" id="product_detail">
+<header>
+<a href="__URL__/categorydetail/id/{$info.gc_id}"><img src="_IMG_/fanhui.png"></a><h5 style="width:70%;height:100%;text-align:center;overflow:hidden;display:inline-block"><%=goods_info.goods_name%></h5>
+<a href="#" class="clickshare"><img src="_IMG_/share.png"></a>
+</header>
+<div class="mail">
+<div id="focus" class="focus">
+<div class="hd">
+<ul></ul>
+</div>
+<div class="bd">
+<ul >
+ <% for(var i =0;i<goods_image.length;i++){　%>
+						      <li><img src="<%=goods_image[i]%>"/></li>
+						   <%}%>
+</ul>
+</div>
+</div>			
+<h5><%=goods_info.goods_name%></h5>
+<input type="hidden" class="buy-num fleft" id="buynum" value="1"/>
+<div class="xiaol">
+<mark><% if(goods_info.promotion_price){ %>促销价：$<%=goods_info.promotion_price%><% }else{ %>$ <%=goods_info.goods_price%><%}%></mark><span class="span">销量<b><%=goods_info.goods_salenum%></b></span><span class="span">收藏量<b><%=goods_info.goods_collect%></b></span><span>总评价<b><%=goods_info.evaluation_count%></b></span>
+</div>
+<div class="details">
+<ul>
+<li>
+<h4 class="close">产品参数<div></div></h4>
+<ul id="a1" class="chanshu">
+<li><span>&nbsp;</span>品牌:<%=goods_info.brand_name%></li>
+<li><span>&nbsp;</span>类型:{$info.gc_name}</li>
+<volist id="v" name="info['goods_attr']">
+<li><span>&nbsp;</span>{$v.0}:{$v.1}</li>
+</volist>
+</ul>
+</li>
+<li>
+<h4 class="close">产品详情<div></div></h4>
+<ul id="a1" class="xq">
+{$info.goods_body}
+</ul>
+</li>
+<li>
+<h4 class="close">用户口碑<div></div></h4>
+<ul id="a1" class="pingjia">
+<li>
+<div class="wenzi">
+<div class="yuan"></div>
+<time>May.05.2015 09:31</time>
+<hgroup>云南普洱茶是头次喝，味道纯香，回甘很好！老板言出必行，说当天下午发货果然很及时，新品茶样也送到了！好评！！</hgroup>
+</div>
+<div class="head">
+<img src="_IMG_/head.png"><br>
+猴***袋
+</div>
+</li>
+<li>
+<div class="wenzi">
+<div class="yuan"></div>
+<time>May.05.2015 09:31</time>
+<hgroup>云南普洱茶是头次喝，味道纯香，回甘很好！老板言出必行，说当天下午发货果然很及时，新品茶样也送到了！好评！！</hgroup>
+</div>
+<div class="head">
+<img src="_IMG_/head.png"><br>
+猴***袋
+</div>
+<h4 class="close">更多口碑<div></div></h4>
+</li>
+</ul>
+</li>
+<li>
+<h4 class="open">其他相关<div></div></h4>
+<div id="a1" class="qita" style="display:block;">
+
+<%for (var i = 0;i<goods_commend_list.length;i++){%>
+                               <div class="show">
+                               <div class="title">
+								<a href="goods?goods_id=<%=goods_commend_list[i].goods_id%>">
+									<img src="<%=goods_commend_list[i].goods_image_url%>">
+									
+										<p><%=goods_commend_list[i].goods_name%></p>
+									</div>
+									<div class="jiage">
+<img src="_IMG_/jiage.gif"><mark><%=goods_commend_list[i].goods_price%></mark>
+                                <img src="_IMG_/you.png"></a>
+                                 </div>
+                                 </div>
+							<%}%>
+
+</div></li></ul></div></div>
+<div id="dialog" style="display:none;position:fixed;top:45%;left:0;width:100%;z-index:999;color:white;text-align:center;padding:10px 5px;background:red;"><div style="">aaaaaaaa</div></div>
+<nav>
+<a href="#" class="pd-collect"><img src="_IMG_/collection.png">收藏</a>
+<a href="#" class="add-to-cart"><img src="_IMG_/cart.png">加入购物车</a>
+<a href="#" class="buy-now">立即购买<img src="_IMG_/shop.png"></a>
+</nav>
+</script>
+	<script type="text/javascript" src="_JS_/config.js"></script>
+	<script type="text/javascript" src="_JS_/template.js"></script>
+     <script type="text/javascript" src="_JS_/jquery.min.js"></script>
+      <script type="text/javascript" src="_JS_/jquery-ui.js"></script>
+    <script src="_JS_/TouchSlide.1.1.js"></script>
+	<script type="text/javascript" src="_JS_/common.js"></script>
+	<script type="text/javascript" src="_JS_/tmpl/common-top.js"></script>	
+	<script type="text/javascript" src="_JS_/tmpl/product_detail.js"></script>
+	<script>
+	
+	window.onload=function(){
+		if(navigator.userAgent.indexOf("android")!=-1||navigator.userAgent.indexOf("ios")!=-1){
+		$("header").hide();
+		$(".header").hide();
+		//$("#topss").css('display','none');
+		//$(".focus").css("margin-top","0px");
+		//alert("1111");
+		//document.getElementById("topss").style.display="none";
+	  }
+	setTimeout($('.xq img').removeAttr("height"),1000);
+	
+    };
+	</script>
+</body>
+	
+
+</html>

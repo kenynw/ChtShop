@@ -1,0 +1,1754 @@
+[ 2015-07-02T00:04:48+08:00 ] 112.96.112.93 /mobile/app/b2b/index.php/News/news
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] Undefined index: typeid C:\xampp\htdocs\mall\mobile\app\b2b\Application\News\Controller\NewsController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: select a.id,a.litpic,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,left(a.description,30) as description,a.typeid,a.title,a.writer,t.typename from archives a left join arctype t on a.typeid=t.id where arcrank=0 and typeid in (88,89,90,91,92) order by a.pubdate desc limit 0,5 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T00:05:06+08:00 ] 112.96.112.93 /mobile/app/b2b/index.php/News/News/getColumnArticles.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: select a.id,a.litpic,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,left(a.description,30) as description,a.typeid,a.title,a.writer,t.typename from archives a left join arctype t on a.typeid=t.id where arcrank=0 and typeid in (88,89,90,91,92) order by a.pubdate desc limit 5,5 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T00:05:08+08:00 ] 112.96.112.93 /mobile/app/b2b/index.php/News/Index/detail/aid/6052.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0029s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='6052' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0029s ]
+SQL: select a.id,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,a.goodpost,a.title,a.writer,ad.body from archives a left join addonarticle ad on a.id=ad.aid where id=6052 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: pics C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 38 行.
+NOTIC: [8] Undefined variable: host C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T00:05:56+08:00 ] 112.96.112.93 /mobile/app/b2b/index.php/News/Index/detail/aid/6051.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0029s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='6051' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0029s ]
+SQL: select a.id,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,a.goodpost,a.title,a.writer,ad.body from archives a left join addonarticle ad on a.id=ad.aid where id=6051 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: pics C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 38 行.
+NOTIC: [8] Undefined variable: host C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006835s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006835s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T00:06:48+08:00 ] 112.96.112.93 /mobile/app/b2b/index.php/News/News/getColumnArticles.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: select a.id,a.litpic,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,left(a.description,30) as description,a.typeid,a.title,a.writer,t.typename from archives a left join arctype t on a.typeid=t.id where arcrank=0 and typeid=89  order by a.pubdate desc limit 0,5 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T00:07:08+08:00 ] 112.96.112.93 /mobile/app/b2b/index.php/News/News/getColumnArticles.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: select a.id,a.litpic,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,left(a.description,30) as description,a.typeid,a.title,a.writer,t.typename from archives a left join arctype t on a.typeid=t.id where arcrank=0 and typeid=89  order by a.pubdate desc limit 5,5 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T00:07:28+08:00 ] 112.96.112.93 /mobile/app/b2b/index.php/News/Index/detail/aid/5952.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0020s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5952' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0029s ]
+SQL: select a.id,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,a.goodpost,a.title,a.writer,ad.body from archives a left join addonarticle ad on a.id=ad.aid where id=5952 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: pics C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 38 行.
+NOTIC: [8] Undefined variable: host C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005859s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T00:07:53+08:00 ] 112.96.112.93 /mobile/app/b2b/index.php/News/News/getColumnArticles.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0029s ]
+SQL: select a.id,a.litpic,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,left(a.description,30) as description,a.typeid,a.title,a.writer,t.typename from archives a left join arctype t on a.typeid=t.id where arcrank=0 and typeid=92  order by a.pubdate desc limit 0,5 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T00:08:02+08:00 ] 112.96.112.93 /mobile/app/b2b/index.php/News/News/getColumnArticles.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0029s ]
+SQL: select a.id,a.litpic,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,left(a.description,30) as description,a.typeid,a.title,a.writer,t.typename from archives a left join arctype t on a.typeid=t.id where arcrank=0 and typeid=92  order by a.pubdate desc limit 5,5 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T00:08:06+08:00 ] 112.96.112.93 /mobile/app/b2b/index.php/News/Index/detail/aid/6011.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0029s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='6011' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0029s ]
+SQL: select a.id,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,a.goodpost,a.title,a.writer,ad.body from archives a left join addonarticle ad on a.id=ad.aid where id=6011 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: pics C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 38 行.
+NOTIC: [8] Undefined variable: host C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T00:18:05+08:00 ] 123.125.71.60 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T01:04:24+08:00 ] 220.181.108.116 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T01:40:05+08:00 ] 111.4.146.144 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T01:40:16+08:00 ] 220.181.108.157 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T01:40:21+08:00 ] 111.4.146.144 /mobile/app/b2b/index.php/News/Index/detail/aid/5875
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0029s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5875' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0029s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5875 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select id,title from archives where title like '%凤凰单枞%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T01:40:21+08:00 ] 111.4.146.144 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T02:16:22+08:00 ] 220.181.108.91 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T02:52:16+08:00 ] 123.125.71.55 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013671s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T03:28:10+08:00 ] 220.181.108.121 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T04:04:01+08:00 ] 123.125.71.97 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013671s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T04:39:50+08:00 ] 123.125.71.40 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012695s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T05:10:20+08:00 ] 66.249.65.125 /mobile/app/b2b/index.php/News/Index/detail/aid/3005
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0020s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3005' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3005 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select id,title from archives where title like '%大户寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T05:15:46+08:00 ] 123.125.71.31 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T05:51:38+08:00 ] 123.125.71.33 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015624s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T06:13:52+08:00 ] 66.249.65.122 /mobile/app/b2b/index.php/News/Index/bai.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027345s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027345s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T06:27:29+08:00 ] 123.125.71.108 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T06:28:42+08:00 ] 123.125.71.26 /mobile/app/b2b/index.php/News/Index/detail/aid/3039
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0020s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3039' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3039 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T07:03:24+08:00 ] 123.125.71.17 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T07:08:02+08:00 ] 66.249.65.122 /mobile/app/b2b/index.php/News/Index/detail/aid/3005
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0020s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3005' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3005 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select id,title from archives where title like '%大户寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T07:39:14+08:00 ] 220.181.108.80 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T07:52:36+08:00 ] 66.249.65.119 /mobile/app/b2b/index.php/News/Index/detail/aid/3274
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0020s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3274' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: select a.id,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,a.goodpost,a.title,a.writer,ad.body from archives a left join addonarticle ad on a.id=ad.aid where id=3274 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Undefined index: pics C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 38 行.
+NOTIC: [8] Undefined variable: host C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006837s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006837s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T08:15:13+08:00 ] 123.125.71.18 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T09:05:36+08:00 ] 220.181.108.123 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T09:41:33+08:00 ] 220.181.108.101 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013671s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T10:17:20+08:00 ] 220.181.108.88 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T10:34:19+08:00 ] 66.249.65.180 /mobile/app/b2b/index.php/News/Index/detail/aid/3005
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0020s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3005' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0029s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3005 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select id,title from archives where title like '%大户寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T11:02:20+08:00 ] 123.125.71.31 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T11:43:15+08:00 ] 220.181.108.182 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T12:19:11+08:00 ] 220.181.108.171 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T12:46:22+08:00 ] 123.125.71.71 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T13:17:10+08:00 ] 66.249.65.180 /mobile/app/b2b/index.php/News/Index/yinxiang/typeid/78
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: select id,title,from_unixtime(pubdate,'%Y-%m-%d') as pubdate from archives where typeid='78' limit 0,20 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T13:22:14+08:00 ] 123.125.71.24 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T14:02:36+08:00 ] 220.181.108.153 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T14:38:23+08:00 ] 220.181.108.146 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T14:48:26+08:00 ] 66.249.65.180 /mobile/app/b2b/index.php/News/Index/detail/aid/3005
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0020s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3005' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3005 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select id,title from archives where title like '%大户寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T15:16:55+08:00 ] 123.125.71.89 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T15:52:53+08:00 ] 220.181.108.172 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T16:20:29+08:00 ] 220.181.108.181 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T16:56:20+08:00 ] 123.125.71.114 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T17:10:10+08:00 ] 36.99.30.108 /mobile/app/b2b/index.php/News/news
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: typeid C:\xampp\htdocs\mall\mobile\app\b2b\Application\News\Controller\NewsController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0029s ]
+SQL: select a.id,a.litpic,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,left(a.description,30) as description,a.typeid,a.title,a.writer,t.typename from archives a left join arctype t on a.typeid=t.id where arcrank=0 and typeid in (88,89,90,91,92) order by a.pubdate desc limit 0,5 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T17:32:21+08:00 ] 123.125.71.41 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025391s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T18:08:15+08:00 ] 123.125.71.28 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022462s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T18:27:18+08:00 ] 117.24.27.132 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T18:47:27+08:00 ] 123.125.71.91 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024412s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T19:03:18+08:00 ] 121.42.0.14 /mobile/app/b2b/index.php/News/Index/bbx/yanfang/index.php?q=%7B%24%7Bprint%28md5%28233333%29%29%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+ERR: 非法操作:bbx
+
+[ 2015-07-02T19:03:20+08:00 ] 121.42.0.14 /mobile/app/b2b/index.php/News/Index/tools/life/yanfang/index.php?q=%7B%24%7Bprint%28md5%28233333%29%29%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+ERR: 非法操作:tools
+
+[ 2015-07-02T19:03:20+08:00 ] 121.42.0.14 /mobile/app/b2b/index.php/News/Index/yanfang/index.php?q=%7B%24%7Bprint%28md5%28233333%29%29%7D%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+ERR: 非法操作:yanfang
+
+[ 2015-07-02T19:03:21+08:00 ] 121.42.0.14 /mobile/app/b2b/index.php/News/Index//feed-proxy.php?feed=http/../feed-proxy.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+ERR: 非法操作:feed-proxy.php
+
+[ 2015-07-02T19:03:23+08:00 ] 121.42.0.14 /mobile/app/b2b/index.php/News/Index//shopadmin/index.php?ctl=passport&act=login&sess_id=1%27+and%28select+1+from%28select+count%28*%29%2Cconcat%28%28select+%28select+%28select+concat%28userpass%2C0x7e%2Cusername%2C0x7e%2Cop_id%29+from+sdb_operators+order+by+username+limit+0%2C1%29+%29+from+%60information_schema%60.tables+limit+0%2C1%29%2Cfloor%28rand%280%29*2%29%29x+from+%60information_schema%60.tables+group+by+x%29a%29+and+%271%27%3D%271
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+ERR: 非法操作:shopadmin
+
+[ 2015-07-02T19:09:09+08:00 ] 66.249.65.187 /mobile/app/b2b/index.php/News/Index/detail/aid/3005
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0029s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3005' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3005 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select id,title from archives where title like '%大户寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T19:16:17+08:00 ] 123.11.239.238 /mobile/app/b2b/index.php/News/news
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Undefined index: typeid C:\xampp\htdocs\mall\mobile\app\b2b\Application\News\Controller\NewsController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: select a.id,a.litpic,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,left(a.description,30) as description,a.typeid,a.title,a.writer,t.typename from archives a left join arctype t on a.typeid=t.id where arcrank=0 and typeid in (88,89,90,91,92) order by a.pubdate desc limit 0,5 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 93 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\7523b64d4b63fdcf7f8b65c00c7b9965.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009765s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T19:16:30+08:00 ] 123.11.239.238 /mobile/app/b2b/index.php/News/Index/detail/aid/6055.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0029s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='6055' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: select a.id,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,a.goodpost,a.title,a.writer,ad.body from archives a left join addonarticle ad on a.id=ad.aid where id=6055 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: pics C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 38 行.
+NOTIC: [8] Undefined variable: host C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006835s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006835s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T19:17:01+08:00 ] 123.11.239.238 /mobile/app/b2b/index.php/News/News/getColumnArticles.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0029s ]
+SQL: select a.id,a.litpic,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,left(a.description,30) as description,a.typeid,a.title,a.writer,t.typename from archives a left join arctype t on a.typeid=t.id where arcrank=0 and typeid in (88,89,90,91,92) order by a.pubdate desc limit 5,5 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 3 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 5 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\dfb1f5ab8d2ad817db7cf1c91f367627.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017579s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T19:27:25+08:00 ] 123.125.71.33 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T20:03:21+08:00 ] 220.181.108.151 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T20:41:42+08:00 ] 123.125.71.47 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T20:52:06+08:00 ] 66.249.79.219 /mobile/app/b2b/index.php/News/Index/detail/aid/2952
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0020s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2952' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2952 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T21:01:55+08:00 ] 66.249.79.243 /mobile/app/b2b/index.php/News/Index/detail/aid/3005
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0020s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3005' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3005 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select id,title from archives where title like '%大户寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016602s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T21:17:37+08:00 ] 220.181.108.182 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T21:43:20+08:00 ] 66.249.79.231 /mobile/app/b2b/index.php/News/Index/detail/aid/3083
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0029s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3083' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: select a.id,from_unixtime(a.pubdate,'%Y-%m-%d') as pubdate,a.goodpost,a.title,a.writer,ad.body from archives a left join addonarticle ad on a.id=ad.aid where id=3083 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: pics C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 38 行.
+NOTIC: [8] Undefined variable: host C:\xampp\htdocs\mall\mobile\app\b2b\Application\Runtime\Cache\News\5b220d8fd5c0c22511b53a047888c968.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T21:53:35+08:00 ] 123.125.71.52 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T22:23:16+08:00 ] 219.130.236.68 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-07-02T22:23:27+08:00 ] 219.130.236.68 /mobile/app/b2b/index.php/News/Index/yinxiang/typeid/78
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0029s ]
+SQL: select id,title,from_unixtime(pubdate,'%Y-%m-%d') as pubdate from archives where typeid='78' limit 0,20 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T22:31:19+08:00 ] 123.125.71.107 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-07-02T22:54:00+08:00 ] 66.249.79.243 /mobile/app/b2b/index.php/News/Index/yinxiang/typeid/75
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0020s ]
+SQL: select id,title,from_unixtime(pubdate,'%Y-%m-%d') as pubdate from archives where typeid='75' limit 0,20 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009766s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T23:07:19+08:00 ] 123.125.71.55 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T23:28:24+08:00 ] 117.136.16.33 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013671s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-02T23:43:14+08:00 ] 123.125.71.53 /mobile/app/b2b/index.php/News/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+

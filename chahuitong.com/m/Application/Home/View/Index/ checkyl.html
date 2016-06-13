@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>支付成功</title><meta name="keywords" content="茶汇通">
+<meta name="description" content="茶汇通用户登录">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="_CSS_/share.css" type="text/css" rel="stylesheet">
+<script src="_JS_/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        //客户端去头部
+        if(navigator.userAgent.indexOf("android")!=-1||navigator.userAgent.indexOf("ios")!=-1){
+            $("header").hide();
+            $(".header").hide();
+        }
+    })
+</script>
+</head>
+<body>
+<header>
+<div class="haed">
+<a href="http://www.chahuitong.com/wap/index.php/Home/Index/brand"><img src="_IMG_/fanhui.png"></a>
+<a href="http://www.chahuitong.com/wap"><img src="_IMG_/home.png"></a>
+</div>
+</header>
+<div class="main">
+<div class="sub">
+ <img src="_IMG_/success.png" width="100%">
+</div>
+</div>
+
+<include file="public/foot"/>
+<input type="hidden" name="referurl">
+<div id="show" style="display:none;position:fixed;top:30%;left:0;width:100%;height:50px;background:#F30;text-align:center;color:white;line-height:50px"></div>   
+</body>
+
+</html>

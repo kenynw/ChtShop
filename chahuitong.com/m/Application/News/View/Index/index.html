@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>茶汇通-资讯频道</title>
+<script src="_JS_/jquery-1.4.4.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="_CSS_/news.css" />
+<style type="text/css">
+.selected{
+	background: white;
+ 	color: #a15641;
+  	border: 1px solid #a15641;
+  	height: 39px;
+  	border-bottom: none;
+}
+.cBody{
+	display:none;
+}
+.on{
+	display:block;
+}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$(".cHead").click(function(){
+			$(this).addClass("selected");
+			$(".cHead").not($(this)).removeClass("selected");
+			var id=$(this).data("id");
+			if(id==4){
+				id=1;
+			}
+			$(".content").children(".cBody").removeClass("on");
+			$(".content").children(".cBody").eq(id-1).addClass("on");
+		})
+	});
+</script>
+</head>
+<body>
+<!-- 头部 -->
+<include file="public/head"/>
+<!-- 幻灯片 -->
+<div class="lanternSlide">
+<img src="http://www.chahuitong.com/mobile/images/t0402/mgy_banner.jpg" width="100%"/>
+</div>
+<!-- 内容 -->
+<div class="content">
+<!-- 内容头部 -->
+<div class="contentHead">
+<span class="cHead selected" data-id="1">全部</span>
+<span class="cHead" data-id="2">出售</span>
+<span class="cHead" data-id="3">求购</span>
+<span class="cHead" data-id="4">最新</span>
+</div>
+<!-- 内容正文 -->
+<div class="cBody on" >
+<volist name="all" id="all">
+<a href="{:U('Index/info?id='.$all[id].'')}">
+<div class="item">
+<div class="imgThumbnail" >
+<img src="http://www.chahuitong.com/images/201504/source_img/235_G_1428016292346.jpg"/>
+<div class="icon1">
+<if condition="$all.saleway eq 1">售
+<else/>购
+</if>
+</div>
+</div>
+<div class="cDetail">
+<span class="cTitle">{$all.name}</span><br/>
+<span class="cDescribe">{$all.brand}-{$all.name}</span>  
+<div class="cPrice">
+<if condition="$all.price eq null">价格详谈
+<else/>{$all.price}元
+</if>
+</div>
+<hr>
+<div class="cTime">2015-04-23 10:24</div>
+</div>
+</div>
+</a>
+</volist>
+</div>
+
+<div class="cBody" >
+<volist name="sale" id="all">
+<a href="{:U('Index/info?id='.$all[id].'')}">
+<div class="item">
+<div class="imgThumbnail" >
+<img src="http://www.chahuitong.com/images/201504/source_img/235_G_1428016292346.jpg"/>
+<div class="icon1">
+<if condition="$all.saleway eq 1">售
+<else/>购
+</if>
+</div>
+</div>
+<div class="cDetail">
+<span class="cTitle">{$all.name}</span><br/>
+<span class="cDescribe">{$all.brand}-{$all.name}</span>  
+<div class="cPrice">
+<if condition="$all.price eq null">价格详谈
+<else/>{$all.price}元
+</if>
+</div>
+<hr>
+<div class="cTime">2015-04-23 10:24</div>
+</div>
+</div>
+</a>
+</volist>
+</div>
+
+<div class="cBody" >
+<volist name="buy" id="all">
+<a href="{:U('Index/info?id='.$all[id].'')}">
+<div class="item">
+<div class="imgThumbnail" >
+<img src="http://www.chahuitong.com/images/201504/source_img/235_G_1428016292346.jpg"/>
+<div class="icon1">
+<if condition="$all.saleway eq 1">售
+<else/>购
+</if>
+</div>
+</div>
+<div class="cDetail">
+<span class="cTitle">{$all.name}</span><br/>
+<span class="cDescribe">{$all.brand}-{$all.name}</span>  
+<div class="cPrice">
+<if condition="$all.price eq null">价格详谈
+<else/>{$all.price}元
+</if>
+</div>
+<hr>
+<div class="cTime">2015-04-23 10:24</div>
+</div>
+</div>
+</a>
+</volist>
+</div>
+
+</div>
+<include file="public/foot"/>
+</body>
+</HTML>

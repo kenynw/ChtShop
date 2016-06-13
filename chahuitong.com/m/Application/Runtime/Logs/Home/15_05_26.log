@@ -1,0 +1,40 @@
+[ 2015-05-26T09:25:04+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.025817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012895s ]
+NOTIC: [8] Undefined index: ECS_ID C:\wamp\www\ecshop\mobile\app\b2b\Application\Common\Common\function.php 第 25 行.
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.4371s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000481s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.106588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.018760s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.019003s ]
+
+[ 2015-05-26T15:01:23+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012788s ]
+NOTIC: [8] Undefined index: ECS_ID C:\wamp\www\ecshop\mobile\app\b2b\Application\Common\Common\function.php 第 25 行.
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.2200s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000419s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.093160s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093460s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.021600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022092s ]
+

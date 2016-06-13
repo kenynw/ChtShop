@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        var exampleSocket = new WebSocket("ws://chahuitong.com:9501");
+        exampleSocket.onopen = function (event) {
+            exampleSocket.send("connect server");
+        };
+        exampleSocket.onmessage = function (event) {
+            console.log(event.data);
+        }
+        function getCookieValue(cookieName)
+        {
+            var cookieValue = document.cookie;
+            var cookieStartAt = cookieValue.indexOf(""+cookieName+"=");
+            if(cookieStartAt==-1)
+            {
+                cookieStartAt = cookieValue.indexOf(cookieName+"=");
+            }
+            if(cookieStartAt==-1)
+            {
+                cookieValue = null;
+            }
+            else
+            {
+                cookieStartAt = cookieValue.indexOf("=",cookieStartAt)+1;
+                cookieEndAt = cookieValue.indexOf(";",cookieStartAt);
+                if(cookieEndAt==-1)
+                {
+                    cookieEndAt = cookieValue.length;
+                }
+                cookieValue = unescape(cookieValue.substring(cookieStartAt,cookieEndAt));//解码latin-1
+            }
+            return cookieValue;
+        }
+    </script>
+</head>
+<body>
+<input  type="text" id="content">
+<button  onclick="exampleSocket.send( document.getElementById('content').value+'|'+getCookieValue('key'))">发送</button>
+</body>
+</html>

@@ -1,0 +1,75 @@
+[ 2015-05-31T14:12:14+08:00 ] 211.97.128.187 /mobile/app/b2b/index.php/Home/Index/delete/id/45
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='5efc3215c1dbb9a17eac07859766223a' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecs_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ecs_users` WHERE ( user_id='64' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `ecs_post_content` [ RunTime:0.0020s ]
+SQL: DELETE FROM `ecs_post` WHERE ( id='45' ) [ RunTime:0.0098s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-05-31T14:19:11+08:00 ] 211.97.128.187 /mobile/app/b2b/index.php/Home/Index/delete/id/46
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='5efc3215c1dbb9a17eac07859766223a' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecs_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `ecs_users` WHERE ( user_id='64' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ecs_post_content` [ RunTime:0.0020s ]
+SQL: DELETE FROM `ecs_post` WHERE ( id='46' ) [ RunTime:0.0078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-05-31T14:21:49+08:00 ] 211.97.128.187 /mobile/app/b2b/index.php/Home/Index/delete/id/47
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='5efc3215c1dbb9a17eac07859766223a' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecs_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `ecs_users` WHERE ( user_id='64' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ecs_post_content` [ RunTime:0.0029s ]
+SQL: DELETE FROM `ecs_post` WHERE ( id='47' ) [ RunTime:0.0088s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-05-31T14:26:38+08:00 ] 211.97.128.187 /mobile/app/b2b/index.php/Home/Index/delete/id/48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='5efc3215c1dbb9a17eac07859766223a' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecs_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `ecs_users` WHERE ( user_id='64' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecs_post_content` [ RunTime:0.0010s ]
+SQL: DELETE FROM `ecs_post` WHERE ( id='48' ) [ RunTime:0.0078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-05-31T15:35:19+08:00 ] 211.97.128.187 /mobile/app/b2b/index.php/Home/Index/delete/id/49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='5efc3215c1dbb9a17eac07859766223a' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecs_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ecs_users` WHERE ( user_id='64' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `ecs_post_content` [ RunTime:0.0020s ]
+SQL: DELETE FROM `ecs_post` WHERE ( id='49' ) [ RunTime:0.0215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>用户登陆</title><meta name="keywords" content="茶汇通">
+<meta name="description" content="茶汇通用户登录">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="_CSS_/share.css" type="text/css" rel="stylesheet">
+<script src="_JS_/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    
+  $("#loginbtn").click(function(){
+	  
+	  var password=$("input[name='password']").val();
+
+	  
+	  if(password.length<6||password==''){
+		  
+		    $("#show").html("密码请大于6位");
+			
+			$("#show").show();
+			
+			setTimeout(function(){
+				
+				$("#show").hide();
+				
+				},3000)
+		  
+		  }else{
+			  
+			var username=$("input[name='username']").val();
+			var member_mobile=$("input[name='member_mobile']").val();
+			
+			$.ajax({
+				
+				url:"__URL__/sinabind",
+				
+				type:"post",
+				
+				data:{username:username,member_mobile:member_mobile,password:password,bindway:"register"},
+				
+				dataType:"json",
+				
+				success: function(data){
+					
+					if(data.code==200){
+						
+						window.location.href="__URL__/member";
+						
+						}else{
+							
+						 $("#show").html(data.content);
+						 
+						 $("#show").show();
+						 
+						 setTimeout(function(){
+							 
+						 $("#show").hide();	 
+							 						 
+							 },3000)	
+													
+						}					
+					
+					}			
+				
+				})
+	  
+			 }
+	  	  
+	  })
+  
+  
+ $("#logindir").click(function(){
+	 
+	  var username=$("input[name='username']").val();
+	  
+	  //alert(username);
+	  
+    $.ajax({
+		  
+		  url:"__URL__/sinabind",
+		  
+		  type:"post",
+		  
+		  dataType:"json",
+		  
+		  data:{username:"11111",bindway:"logindir"},
+		  
+		  success: function(data){
+			  
+			     if(data.code==200){
+					 
+				  window.location.href="__URL__/member";	 
+					 
+					 }else{
+					
+				  $("#show").html(data.content);
+				  
+				  $("#show").show();
+				  
+				  setTimeout(function(data){
+					  
+					  $("#show").hide();
+					  
+					  },3000) 		 
+						 
+						 
+						 }			  
+			  }
+		  		  
+		  })	 
+	
+	 }) 
+  
+ });
+ 
+</script>
+</head>
+<body>
+<header>
+<div class="haed">
+<a href="#"><img src="_IMG_/fanhui.png"></a>
+<a href="#"><img src="_IMG_/home.png"></a>
+</div>
+<nav>
+<a  href="#">登&nbsp;陆<span></span><mark></mark></a>
+<a href="register.html">注&nbsp;册</a>
+</nav>
+</header>
+<div class="main">
+<div class="sub">
+<form method="post" action="">
+<input type="text"  name="username" id="username"  value="{$name}{$number}"><br>
+<input type="text" class="password" placeholder="密码" name="password"  required value=""><br>
+<input type="text" class="password" placeholder="手机号" name="member_mobile" value=""><br>
+<div class="line"></div>
+<span class="roundedTwo"><input id="a1" type="checkbox"><label for="roundedTwo"></label></span>一个月内免登陆<a href="#">忘记密码？</a><br>
+<a href="javascript:void(0);" class="l-btn-login mt10" id="loginbtn">
+                绑定账号
+            </a>
+<a href="javascript:void(0);" class="l-btn-login mt10" id="logindir" style="display: block;
+  line-height: 40px;
+  background: #fbbb01;
+  color: #fff;
+  width: 75%;
+  height: 40px;
+  font-size: 1.4em;
+  margin: 30px auto;
+  border: none;">
+                直接登陆
+            </a>            
+</form>
+
+</div>
+<div class="di3f">
+<div class="denglu">
+</div>
+<div class="error-tips mt10"></div>
+<div class="logodl">
+<a href="#"><img src="_IMG_/qq.png"><br>QQ</a>
+<a href="#"><img src="_IMG_/weibo.png"><br>新浪微博</a>
+<a href="#"><img src="_IMG_/weixin.png"><br>微信</a>
+</div>
+</div>
+</div>
+
+<include file="public/foot"/>
+<input type="hidden" name="referurl">
+<div id="show" style="display:none;position:fixed;top:30%;left:0;width:100%;height:50px;background:#F30;text-align:center;color:white;line-height:50px"></div>   
+</body>
+
+</html>

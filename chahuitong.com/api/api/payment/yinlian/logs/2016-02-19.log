@@ -1,0 +1,39 @@
+2016-02-19 14:56:56, INFO, 110.83.125.163, File[ /home/wwwroot/default/shopnc/mobile/api/payment/yinlian/yinlian.php ], Line[30]------ ============处理前台请求开始=============== 
+2016-02-19 14:56:56, INFO, 110.83.125.163, File[ /home/wwwroot/default/shopnc/mobile/api/payment/yinlian/yinlian.php ], Line[59]------ =====签名报文开始====== 
+2016-02-19 14:56:56, INFO, 110.83.125.163, File[ /home/wwwroot/default/shopnc/mobile/api/payment/yinlian/yinlian.php ], Line[65]------ 签名key=val&...串 >accessType=0&backUrl=http://www.chahuitong.com/mobile/api/payment/yinlian/notify_url.php&bizType=000201&certId=69414782278&channelType=08&currencyCode=156&defaultPayType=0001&encoding=utf-8&frontUrl=http://www.chahuitong.com/mobile/api/payment/yinlian/call_back_url.php&merId=898350254993136&orderId=540507142995750175&reqReserved= 透传信息&signMethod=01&txnAmt=100&txnSubType=01&txnTime=20160219145656&txnType=01&version=5.0.0 
+2016-02-19 14:56:56, INFO, 110.83.125.163, File[ /home/wwwroot/default/shopnc/mobile/api/payment/yinlian/yinlian.php ], Line[68]------ 摘要sha1x16 >3c2b4150f7e8310a8948bcb7515c813dde0aa538 
+2016-02-19 14:56:56, INFO, 110.83.125.163, File[ /home/wwwroot/default/shopnc/mobile/api/payment/yinlian/yinlian.php ], Line[80]------ 签名串为 >FsW6Vy1HrUr/pa4QQMYENZhfaB0mZcmGAUmxtGIHxVh+o8++LAEpaTjEQt6LhLLD7DVfOOOQwUwvXjVH4Km8Vtz75ledqF+q0B60tBaYhiFoZC8GJJ4e2ji13Cnu6WNSzeraBwTAFlJR8AR3EsyoyU9Pfgb1+K24c/pJkv8PITYGz0t8wy7VS5zf5rkWHEmGz2O1ma2gcZaddLf+D3P0qrxdhgLdRiCI+00258FGTj3pLwwGHT2SzLA00N/pjGsSKXFlrgdISFoMPkqkAvMJYiDC7R6YiFih8Z7w/YgIi227l8JSpiR/C6FrGSDi4SnbqLoaqgpwahs9cw3MCgms4w== 
+2016-02-19 14:56:56, INFO, 110.83.125.163, File[ /home/wwwroot/default/shopnc/mobile/api/payment/yinlian/yinlian.php ], Line[85]------ =====签名报文结束====== 
+2016-02-19 14:56:56, INFO, 110.83.125.163, File[ /home/wwwroot/default/shopnc/mobile/api/payment/yinlian/yinlian.php ], Line[89]------ 前台请求地址为>https://gateway.95516.com/gateway/api/frontTransReq.do 
+2016-02-19 14:56:56, INFO, 110.83.125.163, File[ /home/wwwroot/default/shopnc/mobile/api/payment/yinlian/yinlian.php ], Line[93]------ -------前台交易自动提交表单>--begin---- 
+2016-02-19 14:56:56, INFO, 110.83.125.163, File[ /home/wwwroot/default/shopnc/mobile/api/payment/yinlian/yinlian.php ], Line[94]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="certId" id="certId" value="69414782278" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.chahuitong.com/mobile/api/payment/yinlian/call_back_url.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.chahuitong.com/mobile/api/payment/yinlian/notify_url.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="898350254993136" />
+    <input type="hidden" name="orderId" id="orderId" value="540507142995750175" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20160219145656" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="reqReserved" id="reqReserved" value=" 透传信息" />
+    <input type="hidden" name="signature" id="signature" value="FsW6Vy1HrUr/pa4QQMYENZhfaB0mZcmGAUmxtGIHxVh+o8++LAEpaTjEQt6LhLLD7DVfOOOQwUwvXjVH4Km8Vtz75ledqF+q0B60tBaYhiFoZC8GJJ4e2ji13Cnu6WNSzeraBwTAFlJR8AR3EsyoyU9Pfgb1+K24c/pJkv8PITYGz0t8wy7VS5zf5rkWHEmGz2O1ma2gcZaddLf+D3P0qrxdhgLdRiCI+00258FGTj3pLwwGHT2SzLA00N/pjGsSKXFlrgdISFoMPkqkAvMJYiDC7R6YiFih8Z7w/YgIi227l8JSpiR/C6FrGSDi4SnbqLoaqgpwahs9cw3MCgms4w==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2016-02-19 14:56:56, INFO, 110.83.125.163, File[ /home/wwwroot/default/shopnc/mobile/api/payment/yinlian/yinlian.php ], Line[95]------ -------前台交易自动提交表单>--end------- 
+2016-02-19 14:56:56, INFO, 110.83.125.163, File[ /home/wwwroot/default/shopnc/mobile/api/payment/yinlian/yinlian.php ], Line[96]------ ============处理前台请求 结束=========== 

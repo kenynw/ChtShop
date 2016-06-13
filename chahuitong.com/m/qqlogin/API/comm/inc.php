@@ -1,0 +1,2 @@
+<?php die('forbidden'); ?>
+{"appid":"101233531","appkey":"63fa0160f58a990894c32741868d2db1","callback":"http://www.chahuitong.com/wap/qqlogin/example/oauth/callback.php","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test","scope":null}

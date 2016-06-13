@@ -1,0 +1,34 @@
+.chashi{width:100%;height:150px;background:url(../images/top_tea.png) no-repeat;background-position:center;}
+.mai div{height:88px;margin:28px 0;padding-left:145px;padding-top:27px;}
+.mai div p{color:#999;letter-spacing:7px;}
+#sale{background:url(../images/sale01.png) no-repeat;margin-left:115px;width:300px;float:left;}
+#buy{background:url(../images/buy02.png) no-repeat;width:340px;float:right;}
+.context{clear:both;font-size:14px;color:#585858;text-align:center;}
+#paixu{width:1200px;height:30px;background:#efefef;}
+#paixu span{display:block;float:left;line-height:30px;width:171px;}
+#paixu span img{vertical-align:middle;margin-left:6px;width:14px;height:14px;}
+#list li{width:1200px;height:70px;border-bottom:1px dashed #c9c9c9;padding:11px 0;}
+#list span{display:block;float:left;line-height:65px;width:171px;height:65px;overflow:hidden;}
+#list .pic img{width:64px;height:64px;}
+#list .brand{font-size:18px;font-weight:600;}
+#list .time{font-family:Arial, Helvetica, sans-serif;}
+#list .jiage{font-size:18px;font-weight:600;color:#1b8b80;font-family:Arial, Helvetica, sans-serif;}
+#list .jiage img{vertical-align:middle;margin-right:5px;}
+#leixing{position:relative;}
+#leixing select{display:none;position:absolute;left:52px;top:30px;width:60px;}
+#leixing:hover select{display:block;}
+.save{width:100%;border-top:1px solid #c9c9c9;}
+.save ul{width:1200px;margin:0 auto;}
+.page .num{float:none;}
+
+/*add by lai 底部分页*/
+
+.pagination { padding: 2px;+float:none; +position: absolute; +right:6px;}
+.pagination ul { margin: 0; padding: 0; }
+.pagination ul li { line-height: 22px; color: #AAA; display: inline !important; list-style-type: none; width: auto !important; height: auto !important; float: left; padding: 0px; margin: 0 1px !important;}
+.pagination li span {font-size: 13px;  list-style-type: none; display: inline; float: left; padding: 0px 10px; margin: 0 1px 0 0; }
+.pagination li a span , .pagination li a:visited span { color: #1b8b80; text-decoration: none;  cursor:pointer; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;/*Firefox\Chrome\Safari\IE9\元素圆角效果*/}
+.pagination li a:hover span, .pagination li a:active span{ color: #000; background-color: #FFF;  cursor:pointer; -khtml-opacity: .9; -moz-opacity: 0.9; -moz-box-shadow:0 0 3px rgba(204, 204, 204, 0.5); -webkit-box-shadow: 0 0 3px rgba(204, 204, 204, 0.5); box-shadow: 0 0 3px rgba(204, 204, 204, 0.5);}
+.pagination li span.currentpage{ color:#FFF; font-weight: bold;  background-color:#1b8b80; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;/*Firefox\Chrome\Safari\IE9\元素圆角效果*/}
+.paixv a {text-decoration:none; color:#000}
+.paixv a:hover {color:#1b8b80;}
