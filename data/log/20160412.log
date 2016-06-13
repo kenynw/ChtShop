@@ -1,9 +1,0 @@
-[2016-04-12 16:26:39] /CHTWeb/mobile/index.php?act=tasters_recommends&op=recommend_list ( act=tasters_recommends&op=recommend_list ) 
-ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON tasters_recommend.recommend_goods_id=goods.goods_id LIMIT 30' at line 1
-SELECT * FROM `shopnc_goods INNER JOIN tasters_recommend` ON tasters_recommend.recommend_goods_id=goods.goods_id LIMIT 30  
-[2016-04-12 17:08:18] /CHTWeb/mobile/index.php?act=tasters_recommends&op=recommend_list ( act=tasters_recommends&op=recommend_list ) 
-ERR: Db Error: Table 'shopncb2b2c.shopnc_ tasters_recommend' doesn't exist
-SELECT * FROM `shopnc_goods` AS `goods` INNER JOIN `shopnc_ tasters_recommend` AS ` tasters_recommend` ON tasters_recommend.recommend_goods_id=goods.goods_id LIMIT 30  
-[2016-04-12 17:10:50] /CHTWeb/mobile/index.php?act=tasters_recommends&op=recommend_list ( act=tasters_recommends&op=recommend_list ) 
-ERR: Db Error: Table 'shopncb2b2c.shopnc_ tasters_recommend' doesn't exist
-SELECT goods_id,goods_commonid,store_id,goods_name,goods_price,goods_marketprice,goods_image FROM `shopnc_goods` AS `goods` INNER JOIN `shopnc_ tasters_recommend` AS ` tasters_recommend` ON tasters_recommend.recommend_goods_id=goods.goods_id LIMIT 30  
