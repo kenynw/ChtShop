@@ -29,7 +29,6 @@ $RECYCLE.BIN/
 .LSOverride
 
 # IDE配置信息 
-*.iml
 .idea/
 
 # Thumbnails
@@ -51,11 +50,21 @@ Temporary Items
 .apdisk
 
 # shopnc
+*.htaccess*
+datas/
 data/session/
 data/cache/
 data/upload/
 data/log/
-mobile/interface/
-wap/Application/Runtime/
-wap/Public/upload/
+/certs
+/delivery
+/example
+/phpmyadmin
+/websocket
+/weixin
+/welive
+/queue
+Runtime/
+upload/
+doc/
 *_push.php
