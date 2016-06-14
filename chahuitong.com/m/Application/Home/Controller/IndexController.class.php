@@ -10,10 +10,10 @@ use Think\Controller;
 class IndexController extends Controller
 {
 
-    //系统首页
 
-    public function home()
+    public function index()
     {
+
         //首页图片
         $homePicModel = M("home_pic");
         $picArray = $homePicModel->where("state='1' and location='1'")->select();
@@ -26,7 +26,48 @@ class IndexController extends Controller
         /*yicang447*/
         $this->assign("pics", $picArray);
         $this->assign("xianshigoods", $goods);
-        $this->display();
+        $this->display('home');
+
+//        $kehuduan = $_SERVER['HTTP_USER_AGENT'];
+//
+//        if (strpos($kehuduan, 'android') || strpos($kehuduan, 'ios')) {
+//
+//            $this->assign('khd', '1');
+//
+//        }
+//
+//        //品牌
+//        $brand = M('brand');
+//        $recommend = $brand->where("brand_recommend='1'")->order("brand_sort desc")->limit(8)->select();
+//        //闪购 数据库表中p_xianshi_goods 中添加了 order 进行排序
+//        $xianshi = M('p_xianshi_goods');
+//        $xianshigoods = $xianshi->where("state='1' and xianshi_recommend='1'")->order("`order` desc")->limit(3)->select();
+//        $xgoods = array();
+//        foreach ($xianshigoods as $key => $v) {
+//            if ($key == 0) {
+//                $v['goods_image'] = substr($v['goods_image'], 0, -4) . '_360' . substr($v['goods_image'], -4);
+//                $v['end_time'] = floor(($v['end_time'] - time()) / (24 * 60 * 60));
+//            } else {
+//                $v['goods_image'] = substr($v['goods_image'], 0, -4) . '_240' . substr($v['goods_image'], -4);
+//                $v['end_time'] = floor(($v['end_time'] - time()) / (24 * 60 * 60));
+//            }
+//            $xgoods[] = $v;
+//
+//        }
+//        //print_r($xgoods);
+//        //第二次轮播图片
+//        $link = M("link");
+//        $pics = $link->where("link_sort='255'")->select();
+//
+//        $this->assign('pics', $pics);
+//        $this->assign('xianshi', $xgoods);
+//        $this->assign('recommend', $recommend);
+//        $this->display();
+    }
+
+    //系统首页
+    public function home()
+    {
 
     }
 
@@ -167,49 +208,6 @@ class IndexController extends Controller
 
         echo json_encode($array);
 
-    }
-
-
-    public function index()
-    {
-
-        header("location:/wap/index.php/Home/Index/home");
-
-        $kehuduan = $_SERVER['HTTP_USER_AGENT'];
-
-        if (strpos($kehuduan, 'android') || strpos($kehuduan, 'ios')) {
-
-            $this->assign('khd', '1');
-
-        }
-
-        //品牌
-        $brand = M('brand');
-        $recommend = $brand->where("brand_recommend='1'")->order("brand_sort desc")->limit(8)->select();
-        //闪购 数据库表中p_xianshi_goods 中添加了 order 进行排序
-        $xianshi = M('p_xianshi_goods');
-        $xianshigoods = $xianshi->where("state='1' and xianshi_recommend='1'")->order("`order` desc")->limit(3)->select();
-        $xgoods = array();
-        foreach ($xianshigoods as $key => $v) {
-            if ($key == 0) {
-                $v['goods_image'] = substr($v['goods_image'], 0, -4) . '_360' . substr($v['goods_image'], -4);
-                $v['end_time'] = floor(($v['end_time'] - time()) / (24 * 60 * 60));
-            } else {
-                $v['goods_image'] = substr($v['goods_image'], 0, -4) . '_240' . substr($v['goods_image'], -4);
-                $v['end_time'] = floor(($v['end_time'] - time()) / (24 * 60 * 60));
-            }
-            $xgoods[] = $v;
-
-        }
-        //print_r($xgoods);
-        //第二次轮播图片
-        $link = M("link");
-        $pics = $link->where("link_sort='255'")->select();
-
-        $this->assign('pics', $pics);
-        $this->assign('xianshi', $xgoods);
-        $this->assign('recommend', $recommend);
-        $this->display();
     }
 
     /*目录页*/
