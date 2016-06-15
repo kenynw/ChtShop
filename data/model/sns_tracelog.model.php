@@ -5,7 +5,7 @@
  
  */
 defined('InShopNC') or exit('Access Invalid!');
-class sns_tracelogModel{
+class sns_tracelogModel extends Model {
 	/**
 	 * 新增动态
 	 *
@@ -16,6 +16,7 @@ class sns_tracelogModel{
 		if (empty($param)){
 			return false;
 		}
+		$message_id = array();
 		//处理文本中@信息
 		if ($param['trace_title']){
 			preg_match_all("/@(.+?)([\s|:|：]|$)/is", $param['trace_title'], $matches);
@@ -23,13 +24,24 @@ class sns_tracelogModel{
 				//查询会员信息
 				$member_model = Model('member');
 				$member_list = $member_model->getMemberList(array('member_name'=>array('in', $matches[1])));
+				$model_message = Model('message');
+				$message = array();
+				$message['from_member_id'] = $param['trace_memberid'];
+				$message['from_member_name'] = $param['trace_membername'];
 				foreach ($member_list as $k=>$v){
 					$param['trace_title'] = preg_replace("/@(".$v['member_name'].")([\s|:|：]|$)/is",'<a href=\"%siteurl%index.php?act=member_snshome&mid='.$v['member_id'].'\" target="_blank">@${1}</a>${2}',$param['trace_title']);
+
+					$message['to_member_id'] = $v['member_id'];
+					$message['to_member_name'] = $v['member_name'];
+					$message['msg_content'] = $param['trace_title'];
+					$message['message_type'] = 5;
+					$message_id[] = $model_message->saveMessage($message);
 				}
 			}
 			unset($matches);
 		}
 		$result = Db::insert('sns_tracelog',$param);
+		if ($message_id && $result) Model('message')->updateCommonMessage(array('message_parent_id'=>$result), array('message_id'=>array('in', $message_id)));
 		return $result;
 	}
 	/**

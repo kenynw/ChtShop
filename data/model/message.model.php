@@ -5,7 +5,12 @@
  
  */
 defined('InShopNC') or exit('Access Invalid!');
-class messageModel {
+class messageModel extends Model {
+
+	public function __construct() {
+		parent::__construct('message');
+	}
+
 	/**
 	 * 站内信列表
 	 * @param	array $param	条件数组
@@ -39,6 +44,16 @@ class messageModel {
 		$message_list	= Db::select($param,$page);
 		return $message_list;
 	}
+
+	/**
+	 * 获取每个用户最新一条消息列表
+	 */
+	public function listLatestMessageGroupByMember() {
+		$member_id_array = $this->field('MAX(message_id) message_id')->group('from_member_id')->select();
+		$condition = array('in', $member_id_array);
+		$message_list = $this->table("message a,$member_id_array b")->join('right')->on('a.message_id=b.message_id')->select();
+		return $message_list;
+	}
 	/**
 	 * 站内信总数
 	 */
@@ -49,7 +64,7 @@ class messageModel {
 		$param['table']		= 'message';
 		$param['where']		= $condition_str;
 		$param['field']		= ' count(message_id) as countnum ';
-		$message_list		= Db::select($param,$page);
+		$message_list		= Db::select($param);
 		return $message_list[0]['countnum'];
 	}
 	/**
@@ -85,14 +100,19 @@ class messageModel {
 	 * @param	array $param	条件数组
 	 */
 	public function saveMessage($param) {
-		if($param['member_id'] == '') {
+		if($param['member_id'] == '' && empty($param['to_member_id'])) {
 			return false;
 		}
+		
+		if ($param['member_id'] == $param['from_member_id'] || $param['to_member_id'] == $param['from_member_id']) {
+			return false;
+		}
+		
 		$array	= array();
 		$array['message_parent_id'] = $param['message_parent_id']?$param['message_parent_id']:'0';
 		$array['from_member_id']	= $param['from_member_id'] ? $param['from_member_id'] : '0' ;
 		$array['from_member_name']	= $param['from_member_name'] ? $param['from_member_name'] : '' ;
-		$array['to_member_id']	    = $param['member_id'];
+		$array['to_member_id']	    = $param['to_member_id'] ? $param['to_member_id'] : $param['member_id'];
 		$array['to_member_name']	= $param['to_member_name']?$param['to_member_name']:'';
 		$array['message_body']		= trim($param['msg_content']);
 		$array['message_time']		= time();
@@ -107,12 +127,13 @@ class messageModel {
 	 * 更新站内信
 	 */
 	public function updateCommonMessage($param,$condition){
-		if(empty($param)) {
-			return false;
-		}
-		//得到条件语句
-		$condition_str = $this->getCondition($condition);
-		Db::update('message',$param,$condition_str);
+//		if(empty($param)) {
+//			return false;
+//		}
+//		//得到条件语句
+//		$condition_str = $this->getCondition($condition);
+//		Db::update('message',$param,$condition_str);
+		return $this->table('message')->where($condition)->update($param);
 	}
 	/**
 	 * 删除发送信息

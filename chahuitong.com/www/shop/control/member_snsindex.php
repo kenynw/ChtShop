@@ -106,6 +106,11 @@ class member_snsindexControl extends BaseMemberControl {
 		$insert_arr['trace_copycount'] = 0;
 		$result = $tracelog_model->tracelogAdd($insert_arr);
 		if ($result){
+			//更新发表统计信息
+			$model_member = Model();
+			$condition_member = array('member_id' => $this->member_info['member_id']);
+			$model_member->table('member')->where($condition_member)->setInc('traces', 1);
+
 			//建立cookie
 			if (cookie('weibonum') != null && intval(cookie('weibonum')) >0){
 				setNcCookie('weibonum',intval(cookie('weibonum'))+1,2*3600);//保存2小时

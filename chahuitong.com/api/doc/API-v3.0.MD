@@ -1387,3 +1387,484 @@ URL: act=member_order&op=search_deliver
         },
         "msg": "SUCCESS"
     }
+
+### 好友动态列表
+URL: act=member_sns&op=trace_list
+
+参数：
+
+>key 当前登录令牌
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "list": [
+                {
+                    "trace_id": "15",
+                    "trace_originalid": "0",
+                    "trace_memberid": "2",
+                    "trace_membername": "茶汇通",
+                    "trace_memberavatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                    "trace_title": "test test 茶汇通 茶汇通",
+                    "trace_addtime": "2016.05.25 09:00",
+                    "trace_state": "0",
+                    "trace_privacy": "0",
+                    "trace_commentcount": "0"
+                }
+            ],
+            "hasmore": false,
+            "page_total": 1
+        },
+        "msg": "SUCCESS"
+    }
+    
+### 动态详情
+
+URL: act=member_sns&op=trace_detail
+
+参数：
+
+>key 当前登录令牌     
+>id 动态id    
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "trace_id": "19",
+            "trace_originalid": "0",
+            "trace_originalmemberid": "0",
+            "trace_originalstate": "0",
+            "trace_memberid": "164",
+            "trace_membername": "内测帐号",
+            "trace_memberavatar": "164_60.jpg",
+            "trace_title": "ttttt",
+            "trace_content": "",
+            "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif,
+    http://img.chahuitong.com/shop/common/default_goods_image_240.gif,",
+            "trace_addtime": "2016.06.01 20:03",
+            "trace_state": "0",
+            "trace_privacy": "0",
+            "trace_commentcount": "0",
+            "trace_likecount": "0",
+            "trace_copycount": "0",
+            "trace_orgcommentcount": "0",
+            "trace_orgcopycount": "0",
+            "trace_from": "1",
+            "relation": 3
+        },
+        "msg": "SUCCESS"
+    }
+     
+### 添加动态
+
+URL: act=member_sns&op=trace_add
+
+参数：
+
+>key 当前登录令牌     
+>id 动态id    
+
+返回：
+
+    {
+        "code": 1,
+        "data": 16, // 添加的动态id
+        "msg": "SUCCESS"
+    }
+     
+### 删除动态
+
+URL(Get/Post): act=member_sns&op=trace_del
+
+参数：
+
+>key 当前登录令牌     
+>id 动态id    
+
+返回：
+
+    {
+        "code": 1,
+        "data": 16, // 添加的动态id
+        "msg": "删除成功"
+    }
+      
+### 动态评论列表
+
+URL(Get/Post): act=member_sns&op=comment_list
+
+参数：
+
+>key 当前登录令牌     
+>id 动态id    
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "list": [
+                {
+                    "comment_id": "12",
+                    "comment_memberid": "164",
+                    "comment_membername": "内测帐号",
+                    "comment_memberavatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                    "comment_originalid": "10",
+                    "comment_originaltype": "0",
+                    "comment_content": "test2",
+                    "comment_addtime": "2016.05.26 19:35",
+                    "comment_ip": "127.0.0.1",
+                    "comment_state": "0"
+                }
+            ],
+            "hasmore": false,
+            "page_total": 1
+        },
+        "msg": "SUCCESS"
+    }
+       
+### 添加动态评论
+
+URL(Get/Post): act=member_sns&op=comment_add
+
+参数：
+
+>key 当前登录令牌     
+>id 动态id    
+
+返回：
+
+    {
+        "code": 1,
+        "data": 13,
+        "msg": "SUCCESS"
+    }
+        
+### 删除动态评论
+
+URL(Get/Post): act=member_sns&op=comment_del
+
+参数：
+
+>key 当前登录令牌     
+>id 动态id    
+
+返回：
+
+    {
+        "code": 1,
+        "data": 13,
+        "msg": "SUCCESS"
+    }
+         
+### 点赞
+
+URL: act=member_sns&op=like_add
+
+参数：
+
+>key 当前登录令牌     
+>id 动态id    
+>type 原帖类型 0表示动态 1表示分享商品 2表示评论 默认为0
+
+返回：
+
+    {
+        "code": 1,
+        "data": true,
+        "msg": "SUCCESS"
+    }
+          
+### 取消赞
+
+URL: act=member_sns&op=like_cancel
+
+参数：
+
+>key 当前登录令牌     
+>id 动态id    
+>type 原帖类型 0表示动态 1表示分享商品 2表示评论 默认为0
+
+返回：
+
+    {
+        "code": 1,
+        "data": true,
+        "msg": "SUCCESS"
+    }
+            
+### 个人主页
+
+URL: act=member_sns_home
+
+参数：
+
+>key 当前登录令牌     
+>mid 主页用户ID    
+>relation 登录用户和主人关系 0表示未登录 1表示未关注 2表示互相关注 3表示自己 4表示已关注
+
+返回：
+
+    {
+        "code": 1,
+        "data": true,
+        "msg": "SUCCESS"
+    }
+              
+### 全部动态列表
+
+URL: act=member_sns_home&op=trace_list
+
+参数：
+
+>key 当前登录令牌     
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "list": [
+                {
+                    "trace_id": "19",
+                    "trace_originalid": "0",
+                    "trace_memberid": "164",
+                    "trace_membername": "内测帐号",
+                    "trace_memberavatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                    "trace_title": "ttttt",
+                    "trace_addtime": "2016.06.01 08:03",
+                    "trace_state": "0",
+                    "trace_privacy": "0",
+                    "trace_commentcount": "0"
+                }
+            ],
+            "hasmore": false,
+            "page_total": 1
+        },
+        "msg": "SUCCESS"
+    }
+                     
+### 推荐好友列表,根据粉丝数排名
+
+URL(Get): act=member_sns_friend&op=popular_list
+
+参数：
+
+>key 当前登录令牌     
+>name 搜索的用户名     
+
+返回：
+
+    {
+        "code": 1,
+        "data": [
+            {
+                "friend_frommid": "0",
+                "friend_tomid": "167",
+                "friend_tomname": "15375870891",
+                "friend_tomavatar": "",
+                "followers": "2"
+            }
+        ],
+        "msg": "SUCCESS"
+    }
+                       
+### 搜索用户列表
+
+URL(Get): act=member_sns_friend&op=find_list
+
+参数：
+
+>key 当前登录令牌     
+>name 搜索的用户名     
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "list": [
+                {
+                    "member_id": "5083",
+                    "member_name": "品茶人",
+                    "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                    "member_sex": "1",
+                    "member_state": "1",
+                    "follow_state": 0
+                }
+            ],
+            "hasmore": true,
+            "page_total": 6
+        },
+        "msg": "SUCCESS"
+    }
+        
+### 添加关注
+
+URL(Get): act=member_sns_friend&op=add_follow
+
+参数：
+
+>key 当前登录令牌     
+>mid 用户ID    
+
+返回：
+
+    {
+        "code": 1,
+        "data": 11,
+        "msg": "SUCCESS"
+    }
+     
+### 取消关注
+
+URL(Get): act=member_sns_friend&op=del_follow
+
+参数：
+
+>key 当前登录令牌     
+>mid 用户ID      
+
+返回：
+
+    {
+        "code": 1,
+        "data": 11,
+        "msg": "SUCCESS"
+    }
+    
+### 关注好友列表
+
+URL: act=member_sns_friend&op=follow_list
+
+参数：
+
+>key 当前登录令牌     
+
+返回：
+
+    {
+            "code": 1,
+            "data": {
+                "list": [
+                    {
+                        "friend_id": "9",
+                        "friend_frommid": "167",
+                        "friend_frommname": "15375870891",
+                        "friend_frommavatar": "",
+                        "friend_tomid": "164",
+                        "friend_tomname": "内测帐号",
+                        "friend_tomavatar": "164_60.jpg",
+                        "friend_addtime": "1464180914",
+                        "friend_followstate": "1"
+                    }
+                ],
+                "hasmore": false,
+                "page_total": 1
+            },
+            "msg": "SUCCESS"
+        }
+       
+### 粉丝列表
+
+URL: act=member_sns_friend&op=followers_list
+
+参数：
+
+>key 当前登录令牌     
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "list": [
+                {
+                    "friend_id": "9",
+                    "friend_frommid": "167",
+                    "friend_frommname": "15375870891",
+                    "friend_frommavatar": "",
+                    "friend_tomid": "164",
+                    "friend_tomname": "内测帐号",
+                    "friend_tomavatar": "164_60.jpg",
+                    "friend_addtime": "1464180914",
+                    "friend_followstate": "1"
+                }
+            ],
+            "hasmore": false,
+            "page_total": 1
+        },
+        "msg": "SUCCESS"
+    }
+
+### 粉丝列表
+
+URL: act=member_message&op=message_list
+
+参数：
+
+>key 当前登录令牌     
+>type 消息类型 0为私信、1为系统消息、2为留言、3为新的粉丝、4为评论和赞、5为@我 
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "list": [
+                {
+                    "friend_id": "9",
+                    "friend_frommid": "167",
+                    "friend_frommname": "15375870891",
+                    "friend_frommavatar": "",
+                    "friend_tomid": "164",
+                    "friend_tomname": "内测帐号",
+                    "friend_tomavatar": "164_60.jpg",
+                    "friend_addtime": "1464180914",
+                    "friend_followstate": "1"
+                }
+            ],
+            "hasmore": false,
+            "page_total": 1
+        },
+        "msg": "SUCCESS"
+    }
+  
+### 新消息数量
+
+URL: act=member_message&op=message_list
+
+参数：
+
+>key 当前登录令牌     
+>type 消息类型 0为私信、1为系统消息、2为留言、3为新的粉丝、4为评论和赞、5为@我 
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "list": [
+                {
+                    "friend_id": "9",
+                    "friend_frommid": "167",
+                    "friend_frommname": "15375870891",
+                    "friend_frommavatar": "",
+                    "friend_tomid": "164",
+                    "friend_tomname": "内测帐号",
+                    "friend_tomavatar": "164_60.jpg",
+                    "friend_addtime": "1464180914",
+                    "friend_followstate": "1"
+                }
+            ],
+            "hasmore": false,
+            "page_total": 1
+        },
+        "msg": "SUCCESS"
+    }
+  
+    

@@ -5,23 +5,12 @@
  
  */
 defined('InShopNC') or exit('Access Invalid!');
-class sns_friendModel{
-	/**
-	 * 好友添加
-	 *
-	 * @param	array $param 添加信息数组
-	 */
-	public function addFriend($param) {
-		if (empty($param)){
-			return false;
-		}
-		if (is_array($param)){
-			$result = Db::insert('sns_friend',$param);
-			return $result;
-		}else {
-			return false;
-		}
+class sns_friendModel extends Model {
+
+	public function __construct() {
+		parent::__construct('sns_friend');
 	}
+
 	/**
 	 * 好友列表
 	 *
@@ -57,6 +46,14 @@ class sns_friendModel{
 		$friend_list	= Db::select($param,$obj_page);
 		return $friend_list;
 	}
+
+	/**
+	 * 按粉丝数从大到小返回用户列表
+	 */
+	public function friendListGroupByToMid($condition, $field='*', $page = 0, $order='followers desc, friend_tomid desc', $limit= 10) {
+		return $this->field($field . ',count(*) as followers')->group('friend_tomid')->having($condition)->page($page)->order($order)->limit($limit)->select();
+	}
+	
 	/**
 	 * 获取好友详细
 	 * 
@@ -70,6 +67,7 @@ class sns_friendModel{
 		$param['value'] = array_values($condition);
 		return Db::getRow($param,$field);
 	}
+
 	/**
 	 * 好友总数
 	 */
@@ -79,6 +77,24 @@ class sns_friendModel{
 		$count = Db::getCount('sns_friend',$condition_str);
 		return $count;
 	}
+
+    /**
+     * 好友添加
+     *
+     * @param	array $param 添加信息数组
+     */
+    public function addFriend($param) {
+        if (empty($param)){
+            return false;
+        }
+        if (is_array($param)){
+            $result = Db::insert('sns_friend',$param);
+            return $result;
+        }else {
+            return false;
+        }
+    }
+
 	/**
 	 * 更新好友信息
 	 * @param $param 更新内容
@@ -100,6 +116,8 @@ class sns_friendModel{
 		if (empty($condition)){
 			return false;
 		}
+        
+        $condition_str = '';
 		if ($condition['friend_frommid'] != ''){
 			$condition_str .= " and friend_frommid='{$condition['friend_frommid']}' ";
 		}

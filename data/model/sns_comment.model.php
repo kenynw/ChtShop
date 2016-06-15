@@ -5,7 +5,7 @@
  
  */
 defined('InShopNC') or exit('Access Invalid!');
-class sns_commentModel{
+class sns_commentModel extends Model {
 	/**
 	 * 新增评论
 	 *
