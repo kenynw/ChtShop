@@ -130,7 +130,7 @@ final class Base{
 
 		//默认以文件形式存储session信息
 		session_save_path(BASE_DATA_PATH.'/session');
-		session_start();
+		@session_start();
 	}
 
 	public static function autoload($class){
