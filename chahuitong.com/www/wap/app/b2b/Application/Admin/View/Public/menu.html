@@ -1,0 +1,32 @@
+<div class="menu">
+<ul>
+<li>
+<a href="{:U('Admin/index')}" class="col_one">管理员</a>
+</li>
+<li>
+<a href="{:U('Actor/index')}" class="col_two">角色</a>
+</li>
+<li>
+<a href="{:U('Company/index')}" class="col_three">公司</a>
+</li>
+<li>
+<a href="{:U('Customer/index')}" class="col_four">客户-流程</a>
+</li>
+<li>
+<a href="{:U('Music/update_f')}" class="col_five">音乐管理</a>
+</li>
+<li>
+<a href="{:U('Index/direct')}" target="_blank">生成首页</a>
+</li>
+<li>
+<a style="cursor:pointer" class="out">退出</a>
+</li>
+</ul>
+</div>
+<script type="text/javascript">
+$(function(){
+	$(".out").click(function(){
+		window.location.href="{:U('Index/out')}";
+	})
+})
+</script>

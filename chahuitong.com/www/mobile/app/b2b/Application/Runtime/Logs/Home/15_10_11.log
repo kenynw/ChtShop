@@ -1,0 +1,1753 @@
+[ 2015-10-11T01:47:29+08:00 ] 207.46.13.69 /mobile/app/b2b/index.php/Home/index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0283s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0342s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T05:20:01+08:00 ] 123.125.71.74 /mobile/app/b2b/index.php/Home/Index/info/id/445
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='445' [ RunTime:0.0293s ]
+NOTIC: [8] Undefined offset: 0 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 470 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Undefined variable: v C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008790s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T07:56:51+08:00 ] 173.208.177.130 /mobile/app/b2b/index.php/Home/Index/contact/id/483
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] Undefined index: key C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: username C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0772s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T07:56:53+08:00 ] 173.208.177.130 /mobile/app/b2b/index.php/Home/Index/contact/id/484
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: key C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: username C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T07:56:55+08:00 ] 173.208.177.130 /mobile/app/b2b/index.php/Home/Index/contact/id/490
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Undefined index: key C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: username C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T11:17:50+08:00 ] 180.76.15.29 /mobile/app/b2b/index.php/Home/Index/sale/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0693s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 20 , 10 [ RunTime:0.0430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T11:27:44+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T11:27:44+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T11:27:57+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T11:29:57+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T11:29:57+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T11:35:34+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T11:35:35+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T11:35:37+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T11:35:46+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T11:35:46+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T11:36:01+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T11:36:02+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 10,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T11:36:03+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T11:36:11+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T11:45:35+08:00 ] 36.99.30.204 /mobile/app/b2b/index.php/Home/Index/info/id/447
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='447' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 470 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] Undefined variable: v C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T11:46:50+08:00 ] 36.99.31.228 /mobile/app/b2b/index.php/Home/Index/info/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='5' [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined offset: 2 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T11:49:10+08:00 ] 36.99.30.43 /mobile/app/b2b/index.php/Home/Index/info/id/452
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='452' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 470 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: v C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T13:18:16+08:00 ] 68.180.230.37 /mobile/app/b2b/index.php/Home/Index/buy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='2' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0029s ]
+NOTIC: [8] Undefined variable: show C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 186 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T13:35:45+08:00 ] 116.23.178.11 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T13:35:45+08:00 ] 116.23.178.11 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T13:45:05+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T13:45:05+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T13:45:21+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T13:45:21+08:00 ] 120.33.15.108 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T14:03:37+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T14:03:37+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T14:55:32+08:00 ] 116.22.255.123 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0215s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0273s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T14:55:32+08:00 ] 116.22.255.123 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T14:55:34+08:00 ] 116.22.255.123 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T14:55:36+08:00 ] 116.22.255.123 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T14:55:38+08:00 ] 116.22.255.123 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 10,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T14:55:39+08:00 ] 116.22.255.123 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 20,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:13:59+08:00 ] 119.98.135.3 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0801s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:13:59+08:00 ] 119.98.135.3 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:14:10+08:00 ] 119.98.135.3 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:14:22+08:00 ] 119.98.135.3 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 10,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:14:23+08:00 ] 119.98.135.3 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:14:24+08:00 ] 119.98.135.3 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:25:03+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T16:26:58+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006837s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006837s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:27:11+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/Index/buy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='2' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0029s ]
+NOTIC: [8] Undefined variable: show C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 186 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T16:27:13+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/Index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:27:14+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/Index/fabu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005859s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005859s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:27:18+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/Index/buy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='2' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: show C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 186 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T16:27:20+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/Index/info/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='25' [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: img C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 38 行.
+NOTIC: [8] Undefined index: img C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined index: img C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:27:24+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/Index/contact/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] Undefined index: key C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: username C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T16:27:45+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T16:27:45+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:27:49+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:27:49+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:27:50+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='15159059980' and token='46802cec9ef0d222cb1b4da3c7f1a633' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: select p.*,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where user_id='176' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: content C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 795 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T16:27:56+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:27:58+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/Index/info/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='5' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined offset: 2 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T16:28:30+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:28:31+08:00 ] 27.154.153.80 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T16:52:38+08:00 ] 180.76.15.137 /mobile/app/b2b/index.php/Home/Index/sale/order/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0225s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1'  order by p.id desc limit 0 , 10 [ RunTime:0.0264s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T18:51:23+08:00 ] 36.248.218.68 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T18:51:24+08:00 ] 36.248.218.68 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T18:51:27+08:00 ] 36.248.218.68 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T18:51:28+08:00 ] 36.248.218.68 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T18:51:30+08:00 ] 36.248.218.68 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='DSK' and token='' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T20:17:52+08:00 ] 223.104.176.122 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' or saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' or saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T22:30:10+08:00 ] 66.249.64.151 /mobile/app/b2b/index.php/Home/Index/index/order/1/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T22:30:11+08:00 ] 66.249.64.141 /mobile/app/b2b/index.php/Home/Index/index/order/1/p/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T22:30:12+08:00 ] 66.249.64.141 /mobile/app/b2b/index.php/Home/Index/index/order/1/p/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T22:30:12+08:00 ] 66.249.64.141 /mobile/app/b2b/index.php/Home/Index/index/order/1/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T22:30:13+08:00 ] 66.249.64.141 /mobile/app/b2b/index.php/Home/Index/index/order/1/p/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T22:30:13+08:00 ] 66.249.64.151 /mobile/app/b2b/index.php/Home/Index/index/order/1/p/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:07:57+08:00 ] 182.118.21.251 /mobile/app/b2b/index.php/Home/Index/info/id/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='10' [ RunTime:0.0557s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined offset: 2 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:14:00+08:00 ] 101.226.168.249 /mobile/app/b2b/index.php/Home/Index/info/id/464
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='464' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 470 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: v C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T23:21:42+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:21:42+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T23:21:44+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='18059828582' and token='1d824d827a19bfbb4e2cc91b3a63fb44' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.*,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where user_id='177' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: content C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 795 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:21:47+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T23:21:49+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='18059828582' and token='1d824d827a19bfbb4e2cc91b3a63fb44' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.*,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where user_id='177' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: content C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 795 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:23:12+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/post_save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: img1 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 201 行.
+NOTIC: [8] Undefined index: img2 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 226 行.
+NOTIC: [8] Undefined index: img3 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 250 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='18059828582' and token='1d824d827a19bfbb4e2cc91b3a63fb44' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `shopnc_ecs_post` (`saleway`,`brand`,`name`,`year`,`price`,`arrow_order`,`weight`,`address`,`phone`,`user_id`,`pic`,`addtime`) VALUES ('1','大勐海','茶2015','2015','1000','1','2000','福建厦门','05925990900','177','','2015-10-11 23:23') [ RunTime:0.0137s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post_content` [ RunTime:0.0029s ]
+SQL: INSERT INTO `shopnc_ecs_post_content` (`pid`,`content`,`depic`) VALUES ('26','啥哈家完图家呢啊啊呢呢','') [ RunTime:0.0137s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:23:17+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='18059828582' and token='1d824d827a19bfbb4e2cc91b3a63fb44' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.*,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where user_id='177' [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:23:18+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T23:23:19+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 10,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:23:20+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 20,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:23:22+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 30,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:23:23+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 40,10 [ RunTime:0.0039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:23:25+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 50,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:24:07+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:24:07+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:24:08+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='18059828582' and token='1d824d827a19bfbb4e2cc91b3a63fb44' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.*,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where user_id='177' [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:24:09+08:00 ] 59.57.189.5 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 10,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:24:43+08:00 ] 183.30.199.17 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T23:24:43+08:00 ] 183.30.199.17 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:26:21+08:00 ] 182.118.20.171 /mobile/app/b2b/index.php/Home/Index/info/id/454
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='454' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 470 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: v C:\xampp\htdocs\shopncb2b2c\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008790s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:31:17+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:31:17+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:31:38+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='username' and token='cba7de10dd48ed44479e54dcb10eca74' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:31:40+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='username' and token='cba7de10dd48ed44479e54dcb10eca74' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:31:42+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='username' and token='cba7de10dd48ed44479e54dcb10eca74' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:31:44+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:31:57+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 10,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T23:31:58+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 20,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:32:00+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 30,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T23:32:01+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 40,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-11T23:32:23+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 50,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:32:28+08:00 ] 222.222.158.91 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:34:53+08:00 ] 183.30.199.17 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-11T23:34:53+08:00 ] 183.30.199.17 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:58:13+08:00 ] 180.141.0.145 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id asc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-11T23:58:13+08:00 ] 180.141.0.145 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id asc   limit 0,10 [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+

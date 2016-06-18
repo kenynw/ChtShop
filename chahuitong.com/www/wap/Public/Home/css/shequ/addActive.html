@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>活动发布</title><meta name="keywords" content="茶汇通,资讯,信息">
+<meta name="description" content="茶汇通资讯信息">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="_CSS_/shequ/share.css" type="text/css" rel="stylesheet">
+<link href="_CSS_/shequ/shequ.css" type="text/css" rel="stylesheet">
+<link href="_CSS_/shequ/huodong.css" type="text/css" rel="stylesheet">
+<script src="_JS_/jquery.min.js"></script>
+<script src="_JS_/jquery.cookie.js"></script>
+<script>
+
+   $(document).ready(function(){
+	   
+	   var username=$.cookie("username");
+	   
+	   var key=$.cookie("key");
+	   
+	   $("input[name='btn']").click(function(){
+		   
+		   var i=$("input[name='image']").val();
+		   
+		   $("input[name='pic'"+i+"]").click();	 
+		   
+		   
+		   })
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   })
+   
+
+
+
+</script>
+</head>
+<body>
+<header>
+<a href="javaScript:window.history.back();"><img src="_IMG_/fanhui.png"></a>我要发布
+<a href="#"><img src="_IMG_/home.png"></a>
+</header>
+<div class="mail">
+<div class="table">
+<form id="a1" action="#" method="post">
+<ul>
+<li><label>活动主题</label><input type="text" value="活动主题" required name="active_title"></li>
+<li><label>活动地点</label><input type="text" value="活动地点" required name="location"></li>
+<li><label>活动时间</label><input type="datetime-local" required name="join_time"><span><select size="4"></select></span></li>
+<li><label>持续时间</label><input type="number" placeholder="请输入持续时间" required name="last_time"></li>
+<li><label>联系电话</label><input type="number" placeholder="请输入联系电话" required telphone="联系电话"></li>
+<li><label>活动费用</label><input type="text" placeholder="输入0元即免费" required name="free"></li>
+</ul>
+<textarea name="" cols="" rows="" placeholder="活动描述 建议添加活动提醒、费用项目明细及活动提醒等。" name="content"></textarea><br>
+<input type="file" name="pic1" value="" style="display:none">
+<input type="file" name="pic2" value="" style="display:none">
+<input type="file" name="pic3" value="" style="display:none">
+<input type="file" name="pic4" value="" style="display:none">
+<input type="file" name="pic5" value="" style="display:none">
+<input type="file" name="pic6" value="" style="display:none">
+<input type="button" name="btn"  value="+"><br>
+<input type="hidden" name="image" value="1">
+<input type="hidden" name="username" value="">
+<input type="hidden" name="key" value="">
+<input type="submit" value="发布">
+</form>
+</div>
+</div>
+</body>
+</html>

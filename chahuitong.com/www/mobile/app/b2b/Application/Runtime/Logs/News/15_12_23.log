@@ -1,0 +1,3235 @@
+[ 2015-12-23T01:58:03+08:00 ] 117.136.12.134 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006172s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2015-12-23T03:17:39+08:00 ] 220.181.108.96 /mobile/app/b2b/index.php/News/Index/detail/aid/5817
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5817' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5817 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%翁家山龙井%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003243s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2015-12-23T03:24:01+08:00 ] 123.125.71.91 /mobile/app/b2b/index.php/News/Index/detail/aid/6243
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0011s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='6243' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0008s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=6243 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%黑砖%' limit 0,10 [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002859s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-12-23T03:36:44+08:00 ] 123.125.71.88 /mobile/app/b2b/index.php/News/Index/detail/aid/5974
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5974' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T03:49:56+08:00 ] 101.226.166.250 /mobile/app/b2b/index.php/News/Index/detail/aid/5877
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0012s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5877' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5877 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%凤凰水仙%' limit 0,10 [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002692s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2015-12-23T03:53:41+08:00 ] 101.226.166.202 /mobile/app/b2b/index.php/News/Index/detail/aid/5826
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000082s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5826' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5826 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%白鸡冠%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002758s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-12-23T03:56:06+08:00 ] 182.118.20.172 /mobile/app/b2b/index.php/News/Index/detail/aid/2924
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0011s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2924' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2924 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2015-12-23T03:59:02+08:00 ] 101.226.166.208 /mobile/app/b2b/index.php/News/Index/detail/aid/3008
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3008' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3008 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%东来%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2015-12-23T03:59:02+08:00 ] 101.226.166.206 /mobile/app/b2b/index.php/News/Index/detail/aid/6256
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0006s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='6256' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=6256 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%铁观音红茶%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000058s ]
+
+[ 2015-12-23T04:45:52+08:00 ] 182.118.20.167 /mobile/app/b2b/index.php/News/Index/detail/aid/2549
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2549' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T06:18:02+08:00 ] 123.125.71.50 /mobile/app/b2b/index.php/News/Index/detail/aid/3038
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3038' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0008s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3038 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002691s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2015-12-23T06:21:55+08:00 ] 220.181.108.83 /mobile/app/b2b/index.php/News/Index/detail/aid/406
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='406' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0008s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T06:25:48+08:00 ] 123.125.71.14 /mobile/app/b2b/index.php/News/Index/detail/aid/2998
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2998' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2998 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%坝歪寨%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2015-12-23T06:29:41+08:00 ] 123.125.71.91 /mobile/app/b2b/index.php/News/Index/detail/aid/3223
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3223' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T06:31:37+08:00 ] 123.125.71.48 /mobile/app/b2b/index.php/News/Index/detail/aid/5849
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0017s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5849' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5849 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%祥华铁观音%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002581s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002618s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000078s ]
+
+[ 2015-12-23T06:35:30+08:00 ] 220.181.108.119 /mobile/app/b2b/index.php/News/Index/detail/aid/2564
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2564' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T06:39:24+08:00 ] 123.125.71.47 /mobile/app/b2b/index.php/News/Index/detail/aid/2922
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2922' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2922 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%曼迈%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002666s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-12-23T06:43:17+08:00 ] 123.125.71.85 /mobile/app/b2b/index.php/News/Index/detail/aid/3026
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3026' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3026 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%香竹箐%' limit 0,10 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-12-23T06:47:10+08:00 ] 123.125.71.111 /mobile/app/b2b/index.php/News/Index/detail/aid/2944
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2944' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2944 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%保塘%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002688s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000087s ]
+
+[ 2015-12-23T06:49:06+08:00 ] 220.181.108.176 /mobile/app/b2b/index.php/News/Index/detail/aid/2998
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2998' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2998 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%坝歪寨%' limit 0,10 [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002799s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002840s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2015-12-23T06:52:59+08:00 ] 220.181.108.106 /mobile/app/b2b/index.php/News/Index/detail/aid/3015
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3015' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3015 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%亥公%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002663s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2015-12-23T06:56:52+08:00 ] 123.125.71.13 /mobile/app/b2b/index.php/News/Index/detail/aid/2938
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0013s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2938' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2938 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%帕沙中寨%' limit 0,10 [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002687s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2015-12-23T06:58:49+08:00 ] 123.125.71.53 /mobile/app/b2b/index.php/News/Index/detail/aid/2945
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2945' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2945 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%关双茶区%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002741s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-12-23T07:02:42+08:00 ] 220.181.108.139 /mobile/app/b2b/index.php/News/Index/detail/aid/2236
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2236' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T07:06:35+08:00 ] 123.125.71.107 /mobile/app/b2b/index.php/News/Index/detail/aid/3038
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3038' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3038 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002833s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2015-12-23T07:08:32+08:00 ] 123.125.71.34 /mobile/app/b2b/index.php/News/Index/detail/aid/2541
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2541' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T07:12:25+08:00 ] 220.181.108.112 /mobile/app/b2b/index.php/News/Index/detail/aid/3426
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3426' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T07:18:14+08:00 ] 220.181.108.162 /mobile/app/b2b/index.php/News/Index/detail/aid/2947
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2947' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2947 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%曼帕%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002689s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002746s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2015-12-23T07:22:07+08:00 ] 123.125.71.23 /mobile/app/b2b/index.php/News/Index/detail/aid/2564
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2564' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T07:24:04+08:00 ] 123.125.71.16 /mobile/app/b2b/index.php/News/Index/detail/aid/3038
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3038' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3038 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002757s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000085s ]
+
+[ 2015-12-23T07:27:57+08:00 ] 123.125.71.73 /mobile/app/b2b/index.php/News/Index/detail/aid/2912
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2912' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2912 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%布朗山%' limit 0,10 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002785s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2015-12-23T07:31:50+08:00 ] 123.125.71.22 /mobile/app/b2b/index.php/News/Index/detail/aid/2922
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2922' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2922 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%曼迈%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002645s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2015-12-23T07:35:43+08:00 ] 123.125.71.76 /mobile/app/b2b/index.php/News/Index/detail/aid/2945
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2945' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2945 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%关双茶区%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002787s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2015-12-23T07:39:36+08:00 ] 123.125.71.48 /mobile/app/b2b/index.php/News/Index/detail/aid/3026
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3026' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3026 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%香竹箐%' limit 0,10 [ RunTime:0.0032s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-12-23T07:41:33+08:00 ] 220.181.108.85 /mobile/app/b2b/index.php/News/Index/detail/aid/2541
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2541' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0009s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T07:43:29+08:00 ] 123.125.71.89 /mobile/app/b2b/index.php/News/Index/detail/aid/2944
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2944' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2944 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%保塘%' limit 0,10 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002595s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2015-12-23T07:45:26+08:00 ] 123.125.71.44 /mobile/app/b2b/index.php/News/Index/detail/aid/3015
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3015' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3015 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%亥公%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002796s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002834s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2015-12-23T07:49:19+08:00 ] 220.181.108.157 /mobile/app/b2b/index.php/News/Index/detail/aid/2938
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2938' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2938 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%帕沙中寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002686s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000077s ]
+
+[ 2015-12-23T07:53:12+08:00 ] 220.181.108.142 /mobile/app/b2b/index.php/News/Index/detail/aid/2998
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0008s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2998' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2998 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%坝歪寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002663s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2015-12-23T07:57:05+08:00 ] 123.125.71.31 /mobile/app/b2b/index.php/News/Index/detail/aid/841
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='841' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T07:59:02+08:00 ] 123.125.71.50 /mobile/app/b2b/index.php/News/Index/detail/aid/2936
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2936' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2936 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%帕沙新寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002774s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2015-12-23T08:02:55+08:00 ] 220.181.108.185 /mobile/app/b2b/index.php/News/Index/detail/aid/3015
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3015' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3015 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%亥公%' limit 0,10 [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2015-12-23T08:06:48+08:00 ] 123.125.71.91 /mobile/app/b2b/index.php/News/Index/detail/aid/2998
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2998' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2998 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%坝歪寨%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002719s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002759s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2015-12-23T08:08:44+08:00 ] 220.181.108.114 /mobile/app/b2b/index.php/News/Index/detail/aid/2945
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2945' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2945 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%关双茶区%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002744s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-12-23T08:12:37+08:00 ] 123.125.71.33 /mobile/app/b2b/index.php/News/Index/detail/aid/3426
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3426' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T08:19:13+08:00 ] 220.181.108.115 /mobile/app/b2b/index.php/News/Index/detail/aid/3038
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0013s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3038' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3038 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004546s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004610s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2015-12-23T08:21:25+08:00 ] 123.125.71.71 /mobile/app/b2b/index.php/News/Index/detail/aid/3223
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3223' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T08:25:49+08:00 ] 123.125.71.114 /mobile/app/b2b/index.php/News/Index/detail/aid/2945
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2945' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2945 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%关双茶区%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002634s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2015-12-23T08:28:01+08:00 ] 220.181.108.99 /mobile/app/b2b/index.php/News/Index/detail/aid/3038
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3038' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3038 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002666s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002703s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-12-23T08:32:25+08:00 ] 123.125.71.45 /mobile/app/b2b/index.php/News/Index/detail/aid/3426
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3426' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T08:34:37+08:00 ] 220.181.108.102 /mobile/app/b2b/index.php/News/Index/detail/aid/406
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='406' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T08:39:01+08:00 ] 123.125.71.108 /mobile/app/b2b/index.php/News/Index/detail/aid/2922
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2922' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2922 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%曼迈%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002709s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-12-23T08:41:13+08:00 ] 123.125.71.111 /mobile/app/b2b/index.php/News/Index/detail/aid/2936
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0012s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2936' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2936 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%帕沙新寨%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002782s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-12-23T08:45:37+08:00 ] 123.125.71.50 /mobile/app/b2b/index.php/News/Index/detail/aid/2938
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2938' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2938 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%帕沙中寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002793s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-12-23T08:47:49+08:00 ] 220.181.108.181 /mobile/app/b2b/index.php/News/Index/detail/aid/2236
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2236' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T08:52:13+08:00 ] 220.181.108.161 /mobile/app/b2b/index.php/News/Index/detail/aid/841
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='841' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T08:54:25+08:00 ] 123.125.71.48 /mobile/app/b2b/index.php/News/Index/detail/aid/2944
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2944' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2944 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%保塘%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002570s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002607s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-12-23T08:58:49+08:00 ] 123.125.71.71 /mobile/app/b2b/index.php/News/Index/detail/aid/2998
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2998' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0012s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2998 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select id,title from archives where title like '%坝歪寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002796s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2015-12-23T09:01:01+08:00 ] 123.125.71.86 /mobile/app/b2b/index.php/News/Index/detail/aid/5851
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5851' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5851 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%西坪铁观音%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002638s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002675s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2015-12-23T09:05:25+08:00 ] 123.125.71.86 /mobile/app/b2b/index.php/News/Index/detail/aid/2947
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0110s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2947' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2947 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%曼帕%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2015-12-23T09:07:37+08:00 ] 123.125.71.76 /mobile/app/b2b/index.php/News/Index/detail/aid/3223
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3223' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T09:12:01+08:00 ] 123.125.71.76 /mobile/app/b2b/index.php/News/Index/detail/aid/5849
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5849' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5849 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%祥华铁观音%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002618s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002657s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2015-12-23T09:16:25+08:00 ] 123.125.71.26 /mobile/app/b2b/index.php/News/Index/detail/aid/2945
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2945' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2945 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%关双茶区%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2015-12-23T09:18:37+08:00 ] 123.125.71.89 /mobile/app/b2b/index.php/News/Index/detail/aid/2912
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0083s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2912' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2912 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%布朗山%' limit 0,10 [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-12-23T09:20:49+08:00 ] 123.125.71.17 /mobile/app/b2b/index.php/News/Index/detail/aid/840
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='840' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T09:23:01+08:00 ] 123.125.71.88 /mobile/app/b2b/index.php/News/Index/detail/aid/3026
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3026' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3026 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%香竹箐%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002806s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000080s ]
+
+[ 2015-12-23T09:27:25+08:00 ] 123.125.71.26 /mobile/app/b2b/index.php/News/Index/detail/aid/3426
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3426' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T09:29:37+08:00 ] 220.181.108.100 /mobile/app/b2b/index.php/News/Index/detail/aid/2564
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2564' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0011s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T09:34:01+08:00 ] 123.125.71.69 /mobile/app/b2b/index.php/News/Index/detail/aid/2541
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0014s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2541' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T09:38:25+08:00 ] 220.181.108.116 /mobile/app/b2b/index.php/News/Index/detail/aid/5868
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5868' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5868 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%闽南水仙茶%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002605s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2015-12-23T09:42:49+08:00 ] 123.125.71.31 /mobile/app/b2b/index.php/News/Index/detail/aid/3015
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3015' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3015 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%亥公%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002689s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002726s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2015-12-23T09:45:01+08:00 ] 220.181.108.90 /mobile/app/b2b/index.php/News/Index/detail/aid/823
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='823' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0008s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T09:49:25+08:00 ] 123.125.71.88 /mobile/app/b2b/index.php/News/Index/detail/aid/3038
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3038' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3038 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002740s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002780s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-12-23T09:52:09+08:00 ] 125.224.243.58 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006640s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-12-23T10:02:37+08:00 ] 123.125.71.30 /mobile/app/b2b/index.php/News/Index/detail/aid/2172
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2172' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T11:02:31+08:00 ] 183.230.45.75 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006199s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2015-12-23T11:45:28+08:00 ] 113.27.249.107 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006346s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000078s ]
+
+[ 2015-12-23T11:45:38+08:00 ] 113.27.249.107 /mobile/app/b2b/index.php/News/Index/detail/aid/6244
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0011s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='6244' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=6244 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%湖南黑茶%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2015-12-23T11:45:38+08:00 ] 113.27.249.107 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000064s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001292s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2015-12-23T12:37:34+08:00 ] 101.126.32.96 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006458s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006518s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2015-12-23T12:38:02+08:00 ] 101.126.32.96 /mobile/app/b2b/index.php/News/Index/detail/aid/5778
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0012s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5778' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5778 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%大红袍%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002755s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002794s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2015-12-23T12:38:02+08:00 ] 101.126.32.96 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000064s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001314s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001377s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001032s ]
+
+[ 2015-12-23T14:05:17+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2015-12-23T14:05:41+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/detail/aid/2909
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0012s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2909' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2909 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%老班章%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-12-23T14:05:42+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001215s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2015-12-23T14:06:00+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/detail/aid/797
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='797' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T14:06:11+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/detail/aid/2913
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2913' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2913 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%新班章%' limit 0,10 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002760s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000058s ]
+
+[ 2015-12-23T14:06:11+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001229s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-12-23T15:28:42+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2015-12-23T15:36:45+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/1053
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='1053' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:36:47+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/1187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0034s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='1187' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:36:49+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/207
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='207' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:36:51+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2142
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2142' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:36:53+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2159
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2159' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:36:55+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2172
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2172' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:36:57+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2231
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2231' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0010s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:36:59+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2233
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2233' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:01+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2236
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0012s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2236' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0009s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:03+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2260
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2260' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0009s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:05+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2288
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2288' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:08+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2290
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2290' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:10+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2291
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2291' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:13+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2549
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2549' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:16+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2559
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0014s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:19+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2560
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2560' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:21+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2564
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2564' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:23+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2565
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2565' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:25+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2568
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2568' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:28+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2613
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2613' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:30+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2620
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2620' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:37+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2623
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2623' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:40+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2866
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0012s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2866' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0008s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:42+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2891
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2891' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:37:45+08:00 ] 195.154.187.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2901
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2901' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T15:51:53+08:00 ] 106.57.113.128 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006128s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000077s ]
+
+[ 2015-12-23T15:52:45+08:00 ] 106.57.113.128 /mobile/app/b2b/index.php/News/Index/detail/aid/2951
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2951' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2951 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002794s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2015-12-23T15:52:45+08:00 ] 106.57.113.128 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001271s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001307s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2015-12-23T15:52:55+08:00 ] 106.57.113.128 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007117s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000095s ]
+
+[ 2015-12-23T15:54:27+08:00 ] 106.57.113.128 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2015-12-23T15:54:33+08:00 ] 106.57.113.128 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006111s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006149s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-12-23T15:54:38+08:00 ] 106.57.113.128 /mobile/app/b2b/index.php/News/Index/detail/aid/2909
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2909' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2909 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%老班章%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2015-12-23T15:54:38+08:00 ] 106.57.113.128 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001318s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000058s ]
+
+[ 2015-12-23T16:16:37+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-12-23T16:18:50+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/detail/aid/2986
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2986' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2986 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-12-23T16:18:50+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001413s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001481s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2015-12-23T16:19:12+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/detail/aid/3040
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3040' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=3040 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%冰岛%' limit 0,10 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002827s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2015-12-23T16:19:12+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001305s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000056s ]
+
+[ 2015-12-23T16:32:27+08:00 ] 123.125.71.83 /mobile/app/b2b/index.php/News/Index/detail/aid/3118
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='3118' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T16:44:27+08:00 ] 180.153.236.111 /mobile/app/b2b/index.php/News/Index/detail/aid/2987
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2987' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2987 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%临沧茶区%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002680s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-12-23T17:07:38+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/detail/aid/6295
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='6295' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=6295 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%昔归%' limit 0,10 [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2015-12-23T17:07:38+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000064s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001304s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-12-23T17:12:49+08:00 ] 119.1.100.162 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005981s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2015-12-23T17:13:10+08:00 ] 119.1.100.162 /mobile/app/b2b/index.php/News/Index/detail/aid/5838
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5838' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5838 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%都匀毛尖%' limit 0,10 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002758s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2015-12-23T17:13:10+08:00 ] 119.1.100.162 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2015-12-23T17:33:07+08:00 ] 218.28.126.132 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006437s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2015-12-23T17:33:32+08:00 ] 218.28.126.132 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009137s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-12-23T17:46:51+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006100s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006138s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-12-23T17:48:52+08:00 ] 117.30.168.3 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2015-12-23T19:19:41+08:00 ] 123.125.71.107 /mobile/app/b2b/index.php/News/Index/detail/aid/5610
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0008s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5610' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T19:27:52+08:00 ] 42.156.254.115 /mobile/app/b2b/index.php/News/Index/detail/aid/6085
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='6085' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T19:27:53+08:00 ] 42.156.254.116 /mobile/app/b2b/index.php/News/Index/detail/aid/2291
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000082s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2291' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T19:27:54+08:00 ] 42.156.254.117 /mobile/app/b2b/index.php/News/Index/detail/aid/2290
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2290' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T19:27:55+08:00 ] 42.156.254.118 /mobile/app/b2b/index.php/News/Index/detail/aid/2999
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2999' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2999 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%邦改%' limit 0,10 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002731s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2015-12-23T19:27:57+08:00 ] 42.156.254.120 /mobile/app/b2b/index.php/News/Index/detail/aid/5825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5825' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5825 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%铁罗汉%' limit 0,10 [ RunTime:0.0032s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002823s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2015-12-23T19:27:57+08:00 ] 42.156.254.115 /mobile/app/b2b/index.php/News/Index/detail/aid/6116
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='6116' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0008s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T19:27:59+08:00 ] 42.156.254.117 /mobile/app/b2b/index.php/News/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001217s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2015-12-23T19:28:00+08:00 ] 42.156.254.118 /mobile/app/b2b/index.php/News/Index/detail/aid/5811
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5811' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5811 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%狮峰龙井%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2015-12-23T19:28:02+08:00 ] 42.156.254.116 /mobile/app/b2b/index.php/News/Index/detail/aid/2623
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2623' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T19:28:04+08:00 ] 42.156.254.117 /mobile/app/b2b/index.php/News/Index/detail/aid/2942
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2942' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2942 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%那卡%' limit 0,10 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003253s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2015-12-23T19:28:04+08:00 ] 42.156.254.118 /mobile/app/b2b/index.php/News/Index/detail/aid/5677
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5677' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0010s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T19:28:04+08:00 ] 42.156.254.120 /mobile/app/b2b/index.php/News/Index/detail/aid/6110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='6110' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T19:28:05+08:00 ] 42.156.254.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2990
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2990' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2990 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002618s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002654s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000058s ]
+
+[ 2015-12-23T19:28:08+08:00 ] 42.156.254.120 /mobile/app/b2b/index.php/News/Index/detail/aid/5512
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0020s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5512' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T19:28:09+08:00 ] 42.156.254.119 /mobile/app/b2b/index.php/News/Index/detail/aid/2866
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0011s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2866' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T19:28:10+08:00 ] 42.156.254.116 /mobile/app/b2b/index.php/News/Index/detail/aid/2953
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0009s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2953' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2953 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select id,title from archives where title like '%%' limit 0,10 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2015-12-23T19:28:10+08:00 ] 42.156.254.117 /mobile/app/b2b/index.php/News/Index/detail/aid/2920
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0012s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2920' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0008s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2920 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%曼迈老寨%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002582s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000058s ]
+
+[ 2015-12-23T19:28:13+08:00 ] 42.156.254.115 /mobile/app/b2b/index.php/News/Index/detail/aid/2620
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0031s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2620' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopncb2b2c.addonarticle' doesn't exist
+
+[ 2015-12-23T19:28:14+08:00 ] 42.156.254.117 /mobile/app/b2b/index.php/News/Index/detail/aid/2987
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='2987' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=2987 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%临沧茶区%' limit 0,10 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002821s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002863s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2015-12-23T19:28:15+08:00 ] 42.156.254.118 /mobile/app/b2b/index.php/News/Index/detail/aid/5890
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5890' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5890 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%广西六堡茶%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002657s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000079s ]
+
+[ 2015-12-23T19:37:39+08:00 ] 66.249.73.139 /mobile/app/b2b/index.php/News/Index/detail/aid/5866
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `hill_img` [ RunTime:0.0010s ]
+SQL: SELECT `cyte`,`body`,`zuobiao`,`pics`,`mobile_img` FROM `hill_img` WHERE ( aid='5866' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `archives` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `archives` WHERE ( id=5866 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select id,title from archives where title like '%坦洋工夫%' limit 0,10 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2015-12-23T23:59:05+08:00 ] 117.135.225.10 /mobile/app/b2b/index.php/News/Index/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006349s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+

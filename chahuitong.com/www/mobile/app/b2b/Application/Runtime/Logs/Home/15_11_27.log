@@ -1,0 +1,149 @@
+[ 2015-11-27T14:20:55+08:00 ] 120.35.95.206 /mobile/app/b2b/index.php/Home/index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003221s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000787s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000829s ]
+
+[ 2015-11-27T14:21:05+08:00 ] 120.35.95.206 /mobile/app/b2b/index.php/Home/Index/buy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='2' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: show /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 186 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020216s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2015-11-27T14:21:07+08:00 ] 120.35.95.206 /mobile/app/b2b/index.php/Home/Index/myList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+NOTIC: [8] Undefined index: key /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: username /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002655s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000057s ]
+
+[ 2015-11-27T14:21:11+08:00 ] 120.35.95.206 /mobile/app/b2b/index.php/Home/Index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003055s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2015-11-27T14:21:17+08:00 ] 120.35.95.206 /mobile/app/b2b/index.php/Home/Index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002987s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003027s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-11-27T14:21:26+08:00 ] 120.35.95.206 /mobile/app/b2b/index.php/Home/Index/buy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='2' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: show /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 186 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002986s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003022s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000058s ]
+

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>客户服务管理后台-客户&流程&先睹为快</title>
+<link rel="stylesheet" type="text/css" href="_CSS_/admin.css" />
+<script type="text/javascript" src="_JS_/jquery-1.4.4.min.js"></script>
+</head>
+<style type="text/css">
+.col_four{
+	display:inline-block;
+	border:1px solid #fbaa01;
+	background-color:#fbaa01;
+	color:white;
+	padding:5px;
+}
+</style>
+<body>
+<include file="Public/menu" />
+<div class="admin_box">
+<table>
+<tr>
+<td colspan="6"><a href="{:U('Customer/add_d')}">添加客户</a></td>
+</tr>
+<tr>
+<td>编号</td>
+<td>姓名</td>
+<td>电话</td>
+<td>订单日期</td>
+<td>操作</td>
+</tr>
+<volist name="data" id="vo">
+<tr>
+<td>{$vo.id}</td>
+<td><a style="text-decoration: underline" href="{:U('Customer/update_customer?id='.$vo[id].'')}" title="修改">{$vo.name}</a></td>
+<td>{$vo.telphone}</td>
+<td>{$vo.deal_date}</td>
+<td>
+<a href="{:U('Customer/update_d?id='.$vo[id].'')}" title="查看&修改">流程</a>
+<a href="{:U('First/update_f?id='.$vo[id].'')}" title="查看&修改">先睹为快</a>
+<a href="{:U('Customer/delete?id='.$vo[id].'')}">删除</a>
+</td>
+</tr>
+</volist>
+
+</table>
+</div>
+</body>
+</html>

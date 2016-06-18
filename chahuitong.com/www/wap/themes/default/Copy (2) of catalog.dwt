@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{$page_title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<link href="images/touch-icon.png" rel="apple-touch-icon-precomposed" />
+<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="themes/default/fenlei.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header id="header">
+  <div class="header_l header_return"> <a class="ico_10" href="index.php"> 返回 </a> </div>
+  <h1> 所有分类 </h1>
+  <div class="header_r header_search"> <a class="ico_03"  onClick="showSearch()"> 搜索 </a> </div>
+  <div id="search_box">
+    <div class="search_box">
+      <form method="post" action="search.php" name="searchForm" id="searchForm_id">
+        <input placeholder="请输入商品名称" name="keywords" type="text" id="keywordBox" />
+        <button class="ico_07" type="submit" onclick="return check('keywordBox')"> </button>
+      </form>
+    </div>
+    <a class="ico_08" onClick="closeSearch()"></a> </div>
+</header>
+
+<div class="fenlei">
+
+<div class="feilei_left">
+<ul class="fitems_left">
+<li id="pinpai" style="border:1px solid #dddcdc"><span>品牌</span><img src='images/arrow_fenlei.png' /></li>
+<li id="zhizuo"><span>制作工艺</span></li>
+<li id="shengchan"><span>生产年份</span></li>
+<li id="xingzhuang"><span>形状</span></li>
+<li id="chaqu"><span>茶区</span></li>
+<li id="jiage"><span>价格</span></li>
+</ul>
+</div>
+
+<div class="feilei_right">
+<ul class="fitems_right">
+
+<ul class="pinpai">
+
+<li>
+<a href="/mobile/category.php?id=271&brand=75&type=web">
+<div>
+<img src="/mobile/themes/default/images/fenlei/laotongzhi.jpg" />
+</div>
+<span>老同志</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&brand=76&type=web">
+<div>
+<img src="/mobile/themes/default/images/fenlei/longrunhao.jpg" />
+</div>
+<span>龙润</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&brand=74&type=web">
+<div>
+<img src="/mobile/themes/default/images/fenlei/dayi.jpg" />
+</div>
+<span>大益</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&brand=77&type=web">
+<div>
+<img src="/mobile/themes/default/images/fenlei/qicaiyunnan.jpg" />
+</div>
+<span>七彩云南</span>
+</a>
+</li>
+
+</ul>
+
+<ul style="display:none;" class="zhizuo">
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.0.0.386.0.0.0&type=web">
+<div>
+<img src="/mobile/themes/default/images/fenlei/shucha.jpg" />
+</div>
+<span>熟茶</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.0.0.379.0.0.0&type=web">
+<div>
+<img src="/mobile/themes/default/images/fenlei/shengcha.jpg" />
+</div>
+<span>生茶</span>
+</a>
+</li>
+
+</ul>
+
+<ul style="display:none;" class="shengchan">
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.0.434.0.0.0.0&type=web">
+<span>2010年</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.0.390.0.0.0.0&type=web">
+<span>2012年</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.0.376.0.0.0.0&type=web">
+<span>2013年</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.0.406.0.0.0.0&type=web">
+<span>2014年</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.0.482.0.0.0.0&type=web">
+<span>2015年</span>
+</a>
+</li>
+
+</ul>
+
+<ul style="display:none;" class="xingzhuang">
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.0.0.0.375.0.0&type=web">
+<div><img src="/mobile/themes/default/images/fenlei/bingcha.jpg" /></div>
+<span>饼茶</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.0.0.0.426.0.0&type=web">
+<div><img src="/mobile/themes/default/images/fenlei/tuocha.jpg" /></div>
+<span>沱茶</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.0.0.0.481.0.0&type=web">
+<div><img src="/mobile/themes/default/images/fenlei/zhuancha.jpg" /></div>
+<span>砖茶</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.0.0.0.535.0.0&type=web">
+<div><img src="/mobile/themes/default/images/fenlei/guacha.jpg" /></div>
+<span>瓜茶</span>
+</a>
+</li>
+
+</ul>
+
+<ul style="display:none;" class="chaqu">
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.452.0.0.0.0.0&type=web">
+<div><img src="/mobile/themes/default/images/fenlei/lincang.jpg" /></div>
+<span>临沧茶区</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.380.0.0.0.0.0&type=web">
+<div><img src="/mobile/themes/default/images/fenlei/puer.jpg" /></div>
+<span>普洱茶区</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&filter_attr=0.0.403.0.0.0.0.0&type=web">
+<div><img src="/mobile/themes/default/images/fenlei/menghai.jpg" /></div>
+<span>勐海茶区</span>
+</a>
+</li>
+
+</ul>
+
+<ul style="display:none;" class="jiage">
+
+<li>
+<a href="/mobile/category.php?id=271&price_min=0&price_max=99&type=web">
+<span><99元</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&price_min=100&price_max=199&type=web">
+<span>100~199元</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&price_min=200&price_max=399&type=web">
+<span>200~399元</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&price_min=400&price_max=499&type=web">
+<span>400~499元</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&price_min=500&price_max=599&type=web">
+<span>500~599元</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&price_min=600&price_max=699&type=web">
+<span>600~699元</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&price_min=700&price_max=799&type=web">
+<span>700~799元</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&price_min=800&price_max=899&type=web">
+<span>800~899元</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&price_min=900&price_max=999&type=web">
+<span>900~999元</span>
+</a>
+</li>
+
+<li>
+<a href="/mobile/category.php?id=271&price_min=1000&price_max=&type=web">
+<span>>1000元</span>
+</a>
+</li>
+
+</ul>
+
+</ul>
+</div>
+
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+$(function(){
+var navi = navigator.userAgent;
+	if(navi.indexOf("android")!=-1||navi.indexOf("ios")!=-1){
+		$(".header_l").hide();
+	}
+$(".fitems_left li").click(function(){
+var a=$(this).attr("id");
+$(this).css("border","1px solid #dddcdc");
+$(this).siblings().css("border","none");
+$(this).siblings().find("img").remove();
+$(this).append("<img src='images/arrow_fenlei.png' />");
+$("."+a).css("display","block");
+$("."+a).siblings().css("display","none");
+})
+})
+/*头部搜索点击关闭或者弹出搜索框*/  
+function showSearch(){
+	document.getElementById("search_box").style.display="block";
+}
+function closeSearch(){
+	document.getElementById("search_box").style.display="none";
+}
+/* 搜索验证 */
+function check(Id){
+	var strings = document.getElementById(Id).value;
+	if(strings.replace(/(^\s*)|(\s*$)/g, "").length == 0){
+		return false;
+	}
+	return true;
+}
+
+
+</script>
+</body>
+</html>

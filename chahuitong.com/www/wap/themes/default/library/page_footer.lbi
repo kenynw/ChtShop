@@ -1,0 +1,139 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.wrap_1 {
+	width: 52px;
+	height: 57px;
+	position: fixed;
+	left: 10px;
+	bottom: 0;
+	z-index:99;
+}
+.icon_menu {
+	width: 57px;
+	height: 57px;
+	position: absolute;
+	bottom: 2px;
+	right: 2px;
+	z-index: 10;
+	cursor: pointer;
+}
+.icon_menu span {
+	diplay: none;
+}
+.btn {
+	width: 52px;
+	height: 57px;
+	background: url(themes/default/img/bg1.png) no-repeat;
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 0 5px 2px 0;
+	cursor: pointer;
+	  background-size: 53px;
+}
+.btn span {
+	display: block;
+	width: 24px;
+	height: 24px;
+	font-size: 1em;
+	color:white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -10px;
+	margin-left: -12px;
+	overflow: hidden;
+}
+.btn span a{
+	color:white;
+}
+.btn1 span {
+	background-position: -176px -20px;
+}
+.btn2 span {
+	background-position: -198px -18px;
+}
+.btn3 span {
+	background-position: -221px -18px;
+}
+.btn4 span {
+	background-position: -243px -19px;
+}
+.btn5 span {
+	background-position: -267px -20px;
+}
+.btn {
+	-webkit-transition: bottom .2s, right .2s;
+	-moz-transition: bottom .2s, right .2s;
+	-o-transition: bottom .2s, right .2s;
+	-ms-transition: bottom .2s, right .2s;
+	transition: bottom .2s, right .2s;
+}
+.btn1.close,.btn2.close,.btn3.close,.btn4.close {
+	bottom: 0;
+	right: 0;
+}
+.btn1.open {
+	bottom: 152px;
+  left: -5px;
+}
+.btn2.open {
+	  bottom: 137px;
+  left: 47px;
+}
+.btn3.open {
+	  bottom: 100px;
+  left: 90px;
+}
+.btn4.open {
+	  bottom: 53px;
+  left: 118px;
+}
+.btn5.open {
+	bottom: 0px;
+  left: 130px;
+}
+.goTop{
+width:30px;
+position:fixed;
+right:20px;
+bottom:50px;
+display:none;
+}
+</style>
+<div class="wrap_1">
+	<div class="menu"><img class="icon_menu" src="themes/default/img/menu.png" /><span></span></div>
+	<div class="btn btn1" data-num="1"><span><a href="./" target="_self">首页</a></span></div>
+	<div class="btn btn2" data-num="2"><span><a href="brand.php" target="_self">品牌</a></span></div>
+	<div class="btn btn3" data-num="3"><span><a href="catalog.php" target="_self">分类</a></span></div>
+	<div class="btn btn4" data-num="4"><span><a href="user.php" target="_self">会员</a></span></div>
+	<div class="btn btn5" data-num="5"><span style="margin-left:-17px;width:36px"><a href="flow.php?step=cart" target="_self">购物车</a></span></div>
+</div>
+<div class="goTop"><img src="images/goTop.png" width="40px"/></div>
+<script type="text/javascript" src="themes/default/js/zepto.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(window).scroll(function(){
+		if($(this).scrollTop()>500){
+			$(".goTop").fadeIn();
+		}else{
+			$(".goTop").fadeOut();
+		}
+	})
+	$(".goTop").click(function(){
+		$("body,html").animate({scrollTop:"0"},1000)
+	})
+
+	$(".menu").click(function(){
+		var span = $(this).find("span");
+		if(span.hasClass("open")){
+			span.removeClass("open").addClass("close");
+			$(".btn").removeClass("open").addClass("close");
+		}else{
+			span.removeClass("close").addClass("open");
+			$(".btn").removeClass("close").addClass("open");
+		}
+	});
+});
+</script>

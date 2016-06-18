@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+.mail{padding-bottom:60px;}
+#nav{color:#000;font-size:1em;width:100%;height:48px;line-height:48px;background:#fff;border-bottom:1px solid #1b8b80;}
+#nav a{padding:0px 2% 11px 2%;color:#000;}
+#nav a.on{color:#1b8b80;border-bottom:4px solid #1b8b80;}
+.dingdan{background:#fff;width:100%;margin-top:10px;border-top:1px solid #1b8b80;color:#898989;text-align:left;font-size:0.9em;border-bottom:1px solid #1b8b80;}
+.dingdan ul{width:95%;margin:0 auto;}
+.dingdan ul p:first-child img{width:5px;margin-left:5px;}
+.dingdan ul>p{line-height:45px;border-bottom:1px solid #dcdddd;}
+.dingdan ul>p span{font-size:1.1em;margin-left:2%;}
+.dingdan p .state{float:right;font-size:0.9em;}
+.liebiao{border-bottom:1px solid #dcdddd;padding:10px 0px;}
+.liebiao>img{width:25%;border:1px solid #cdcdcd;padding:5px 5px;}
+.liebiao .title{float:right;width:60%;}
+.liebiao .shu{float:right;width:8%;text-align:right;font-family:Arial;}
+.liebiao .title p{margin-bottom:15px;}
+.liebiao .title mark{background:#fff;color:#1b8b80;font-size:1.2em;font-family:Arial;font-weight:600;}
+.liebiao .title mark img{width:10px;border:none;margin-right:6px;vertical-align:middle;}
+.dingdan_p{text-align:right;line-height:30px;}
+#jine{border-bottom:1px solid #dcdddd;}
+#jine span{margin:0 2px;color:#1b8b80;font-family:Arial;}
+#jine mark{background:#fff;color:#898989;margin-left:8%;margin-right:2.5%;}
+.dingdan_p a{background:#f5f5f5;margin:0px 1%;padding:1px 12px;border-radius:20px;color:#6c6a6a;}
+.dingdan h5{line-height:40px;text-align:center;color:#6c6a6a;font-size:1.1em;border-top:1px solid #1b8b80;display:none;}
+.dingdan h5 img{width:15px;margin-right:9px;}
+.dingdan h5 a{width:41%;display:inline-block;border-right:1px solid #1b8b80;color:#6c6a6a;}
+.dingdan h5 a.quxiao{width:17%;border:none;}
+.pingjia{background:#fff;border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding-top:15px;width:100%;text-align:left;font-size:0.9em;margin-bottom:5px;}
+.pingjia ul{width:90%;margin:0 auto;}
+.pingjia ul li{border-bottom:1px solid #dcdddd;line-height:38px;}
+.pingjia ul li:last-child{border:none;}
+.pingjia ul li label{display:inline-block;width:25%;color:#787878;}
+.pingjia .p_right{color:#898989;width:75%;display:inline-block;}
+.pingjia .p_right .yuan{display:inline-block;width:6px;height:6px;background:#1b8b80;border-radius:8px;margin-right:6px;}
+.pingjia .p_right time{color:#1b8b80;font-family:Arial;font-size:0.6em;}
+.pingjia .p_right .shifu{float:right;}
+.pingjia .p_right .shifu mark{background:#fff;color:#1b8b80;}
+.pingjia .p_right a{color:#787878;}
+.pingjia .p_right .c_title{float:right;width:60%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.pingjia .content{line-height:25px;padding:15px 0;}
+.pingjia .content label{vertical-align:top;position:relative;top:25px;left:0;}
+.pingjia ul li:last-child a{background:#f5f5f5;display:inline-block;width:30%;text-align:center;margin-left:6px;height:24px;line-height:24px;border-radius:24px;color:#6c6a6a;}
+#nav span{padding:0px 0%;display:inline-block;width:25%;}
+#nav span.on{color:#1b8b80;border-bottom:4px solid #1b8b80;}
+.notice{width:90%;margin:0 auto;text-align:left;font-size:0.9em;padding-top:6px;overflow:hidden;}
+.notice li{border-bottom:1px solid #dcdddd;position:relative;display:block;top:0;left:0;}
+.notice li img{width:15px;margin-right:5px;}
+.notice li h5{color:#787878;line-height:30px;border-bottom:1px solid #dcdddd;font-weight:500;}
+.notice li h5 label{display:inline-block;width:55%;overflow:hidden;white-space:nowrap; text-overflow:ellipsis;line-height:12px;}
+.notice li h5 span{float:right;color:#1b8b80;font-size:0.6em;font-family:Arial;}
+.notice li h5 span mark{display:inline-block;width:6px;height:6px;background:#1b8b80;margin-right:8px;border-radius:50%;}
+.notice li p{color:#6c6a6a;border:1px solid #d6d6d6;background:#fff;margin-top:15px;margin-bottom:8px;padding:18px 18px;position:relative;}
+.notice li p span{display:block;border:0 solid #fff;border-width:0 10px 12px;border-color:#fff rgba(255,255,255,0);width:0;overflow:hidde;height:0;position:absolute;top:-9px;left:20px;}
+.notice li .delete{background:#f14545;text-align:center;color:#fff;font-size:1.2em;width:18%;position:absolute;top:0;right:-18%;display:none;height:46px;line-height:46px;}
+@media screen and (max-width:340px){
+	.liebiao .title p{height:40px; overflow:hidden;}
+	.dingdan h5{font-size:1em;letter-spacing:-1px;}
+	.dingdan h5 img{margin-right:4px;}
+	.pingjia{font-size:0.7em;}
+	.pingjia ul li label{width:25%;}
+	.pingjia .p_right{width:75%;}
+	.notice li h5 label{width:48%;}
+}

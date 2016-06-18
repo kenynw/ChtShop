@@ -1,0 +1,143 @@
+[ 2016-02-13T23:27:59+08:00 ] 66.249.73.247 /wap/index.php/Home/Index/brandGoods/bid/429
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/wap/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0010s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='429' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: showway /home/wwwroot/default/shopnc/wap/Application/Home/Controller/IndexController.class.php 第 760 行.
+SQL: SELECT * FROM `shopnc_goods` WHERE ( brand_id='429' and goods_state='1' )  [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined variable: showway /home/wwwroot/default/shopnc/wap/Application/Runtime/Cache/Home/b096450eee7daed465af7b28e0a67d45.php 第 164 行.
+NOTIC: [8] Undefined variable: showway /home/wwwroot/default/shopnc/wap/Application/Runtime/Cache/Home/b096450eee7daed465af7b28e0a67d45.php 第 165 行.
+NOTIC: [8] Undefined variable: showway /home/wwwroot/default/shopnc/wap/Application/Runtime/Cache/Home/b096450eee7daed465af7b28e0a67d45.php 第 166 行.
+NOTIC: [8] Undefined variable: showway /home/wwwroot/default/shopnc/wap/Application/Runtime/Cache/Home/b096450eee7daed465af7b28e0a67d45.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004044s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000102s ]
+
+[ 2016-02-13T23:39:13+08:00 ] 66.249.73.139 /wap/index.php/Home/Index/goods?goods_id=101477
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/wap/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0012s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='101477' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0006s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id=463 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_goodsid=101477 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0008s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/default/shopnc/wap/Application/Home/Controller/IndexController.class.php 第 388 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_common` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_goods_common` WHERE ( goods_commonid='100893' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005421s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005462s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2016-02-13T23:46:11+08:00 ] 123.151.152.151 /wap/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/wap/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_brand` WHERE ( brand_recommend='1' ) ORDER BY brand_sort desc LIMIT 8   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `shopnc_p_xianshi_goods` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `shopnc_p_xianshi_goods` WHERE ( state='1' and xianshi_recommend='1' ) ORDER BY `order` desc LIMIT 3   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_link` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `shopnc_link` WHERE ( link_sort='255' )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined variable: khd /home/wwwroot/default/shopnc/wap/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005418s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000128s ]
+
+[ 2016-02-13T23:49:51+08:00 ] 51.255.65.92 /wap/index.php/Home/Index/brand/catId/530
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/wap/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_class` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_goods_class` WHERE ( gc_parent_id='0' ) ORDER BY gc_sort Asc LIMIT 9   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003746s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2016-02-13T23:51:05+08:00 ] 220.181.108.142 /wap/index.php/Home/Index/goods?goods_id=101447
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/wap/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods` [ RunTime:0.0013s ]
+SQL: SELECT `goods_commonid`,`brand_id` FROM `shopnc_goods` WHERE ( goods_id='101447' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id=460 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `shopnc_evaluate_goods` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `shopnc_evaluate_goods` WHERE ( geval_goodsid=101447 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0008s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/default/shopnc/wap/Application/Home/Controller/IndexController.class.php 第 388 行.
+SQL: SHOW COLUMNS FROM `shopnc_goods_common` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_goods_common` WHERE ( goods_commonid='100867' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004817s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+

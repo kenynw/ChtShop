@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>茶市</title>
+<meta name="keywords" content="茶汇通,普洱,普洱茶">
+<meta name="description" content="茶汇通普洱饼茶">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="_CSS_/share.css" type="text/css" rel="stylesheet">
+<link href="_CSS_/chashi.css" type="text/css" rel="stylesheet">
+<script src="_JS_/qiugou.js"></script>
+</head>
+<body>
+<header id="header">
+<a href="javaScript:window.history.back();"><img src="_IMG_/fanhui.png"></a>茶市<a href="__URL__/fabu"><img src="_IMG_/home.png"></a>
+</header>
+<header>
+<nav>
+<a href="__URL__/brand">行情</a>
+<a class="on" href="__URL__/sale">出售</a>
+<a  href="__URL__/buy">求购</a>
+<a href="__URL__/myList">发布</a>
+</nav>
+</header>
+<div class="list">
+<ul>
+<volist name="all" id="v">
+<li>
+<a href="__URL__/info/id/{$v.id}" style="color:#CCC">
+<div class="pic">
+
+<if condition="$v.pic neq ''">
+<img class="picimg" src="__ROOT__/Public/upload/{$v.pic}" width="101" height="101">
+<else />
+<img class="picimg" src="_IMG_/nopic.jpg" width="101" height="101">
+</if>
+</div>
+</a>
+<!--新样式-->
+<a href="__URL__/info/id/{$v.id}" style="color:#333">
+<div name="text" class="text"><h5>{$v.name}<span>{$v.addtime}</span></h5>
+<p>{$v.content}</p>
+</a>
+<div class="shop">
+<if condition="$v.arrow_order eq 1">
+￥{$v.price}
+<else />
+价格详谈
+</if><span><a href="__URL__/info/id/{$v.id}">详情</a></span></div>
+</div>
+<!--end-->
+
+</li>
+</volist>
+</ul>
+</div>
+<style>
+ .page{padding-top:2em;text-align:center;}
+.page a{display:inline-block;width:30px;padding:5px 10px;margin:0 10px;font-size:14px}
+.page span{display:inline-block;width:30px;padding:5px 10px;font-size:14px}
+</style>
+<div class="page">
+  {$page}
+</div>
+<include file="Public/foot"/>
+</body>
+</html>

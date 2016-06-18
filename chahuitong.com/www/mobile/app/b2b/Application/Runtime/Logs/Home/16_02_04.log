@@ -1,0 +1,2892 @@
+[ 2016-02-04T00:14:52+08:00 ] 66.249.79.249 /mobile/app/b2b/index.php/Home/Index/info/id/62
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='62' [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 38 行.
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003752s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-02-04T00:16:09+08:00 ] 124.127.165.4 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2016-02-04T00:16:24+08:00 ] 124.127.165.4 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='479' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='479' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2016-02-04T00:20:22+08:00 ] 183.250.209.178 /mobile/app/b2b/index.php/Home/index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000085s ]
+
+[ 2016-02-04T00:20:27+08:00 ] 183.250.209.178 /mobile/app/b2b/index.php/Home/Index/info/id/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='20' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2016-02-04T00:20:36+08:00 ] 183.250.209.178 /mobile/app/b2b/index.php/Home/Index/info/id/21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='21' [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003896s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2016-02-04T00:20:43+08:00 ] 183.250.209.178 /mobile/app/b2b/index.php/Home/Index/info/id/43
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='43' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003738s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003772s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000155s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000218s ]
+
+[ 2016-02-04T00:38:20+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-02-04T00:46:36+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000087s ]
+
+[ 2016-02-04T00:46:39+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 10,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2016-02-04T00:46:50+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/Index/productDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SELECT p.*,c.depic,c.content,m.member_name,m.member_mobile from shopnc_ecs_post_content as c left join (shopnc_ecs_post as p left join shopnc_member as m on p.user_id=m.member_id) on c.pid=p.id where p.id='20' [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2016-02-04T00:47:09+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-02-04T00:47:20+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/Index/productDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SELECT p.*,c.depic,c.content,m.member_name,m.member_mobile from shopnc_ecs_post_content as c left join (shopnc_ecs_post as p left join shopnc_member as m on p.user_id=m.member_id) on c.pid=p.id where p.id='20' [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T00:47:35+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 10,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2016-02-04T00:47:51+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 20,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2016-02-04T00:47:51+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 30,10 [ RunTime:0.0023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2016-02-04T00:48:05+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/Index/productDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SELECT p.*,c.depic,c.content,m.member_name,m.member_mobile from shopnc_ecs_post_content as c left join (shopnc_ecs_post as p left join shopnc_member as m on p.user_id=m.member_id) on c.pid=p.id where p.id='20' [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2016-02-04T00:48:48+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 40,10 [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2016-02-04T00:49:01+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/Index/productDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SELECT p.*,c.depic,c.content,m.member_name,m.member_mobile from shopnc_ecs_post_content as c left join (shopnc_ecs_post as p left join shopnc_member as m on p.user_id=m.member_id) on c.pid=p.id where p.id='20' [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000110s ]
+
+[ 2016-02-04T00:49:24+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/Index/productDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SELECT p.*,c.depic,c.content,m.member_name,m.member_mobile from shopnc_ecs_post_content as c left join (shopnc_ecs_post as p left join shopnc_member as m on p.user_id=m.member_id) on c.pid=p.id where p.id='20' [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-02-04T00:49:38+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/Index/productDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SELECT p.*,c.depic,c.content,m.member_name,m.member_mobile from shopnc_ecs_post_content as c left join (shopnc_ecs_post as p left join shopnc_member as m on p.user_id=m.member_id) on c.pid=p.id where p.id='20' [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T00:49:54+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/Index/productDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SELECT p.*,c.depic,c.content,m.member_name,m.member_mobile from shopnc_ecs_post_content as c left join (shopnc_ecs_post as p left join shopnc_member as m on p.user_id=m.member_id) on c.pid=p.id where p.id='20' [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000103s ]
+
+[ 2016-02-04T00:49:58+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 50,10 [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-02-04T00:49:58+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 50,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2016-02-04T00:50:18+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 60,10 [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000098s ]
+
+[ 2016-02-04T00:50:18+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 70,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T00:50:19+08:00 ] 124.238.212.173 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 80,10 [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2016-02-04T00:57:26+08:00 ] 51.255.65.79 /mobile/app/b2b/index.php/Home/Index/contact/id/57
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+NOTIC: [8] Undefined index: key /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: username /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='' ) LIMIT 1   [ RunTime:0.0038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001532s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001567s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-02-04T04:58:18+08:00 ] 51.255.65.24 /mobile/app/b2b/index.php/Home/Index/quotation/quotationid/372
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='372' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='372' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002640s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2016-02-04T05:39:43+08:00 ] 101.84.174.142 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2016-02-04T06:58:47+08:00 ] 51.255.65.74 /mobile/app/b2b/index.php/Home/Index/quotation/quotationid/435
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='435' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='435' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002595s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-02-04T07:22:14+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2016-02-04T07:22:53+08:00 ] 117.37.193.62 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='369' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='369' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2016-02-04T07:22:58+08:00 ] 117.37.193.62 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='369' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='369' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T07:23:00+08:00 ] 117.37.193.62 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='369' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='369' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T07:53:14+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000086s ]
+
+[ 2016-02-04T07:53:39+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='383' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='383' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2016-02-04T07:53:45+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='383' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='383' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2016-02-04T07:53:46+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='383' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='383' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000080s ]
+
+[ 2016-02-04T07:53:57+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='493' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='493' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2016-02-04T07:53:59+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='493' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='493' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2016-02-04T07:54:07+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='486' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0006s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='486' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-02-04T07:54:22+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='379' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='379' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2016-02-04T07:54:24+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='379' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='379' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2016-02-04T07:54:57+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='379' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='379' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-02-04T07:54:59+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='379' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='379' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2016-02-04T07:55:03+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2016-02-04T07:55:29+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 15,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2016-02-04T07:55:36+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 30,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2016-02-04T07:55:37+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 45,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T07:55:47+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 60,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000087s ]
+
+[ 2016-02-04T07:56:21+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 0,10 [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2016-02-04T07:56:29+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 10,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-02-04T07:56:33+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/productDetailApi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SELECT p.*,c.depic,c.content,m.member_name,m.member_mobile from shopnc_ecs_post_content as c left join (shopnc_ecs_post as p left join shopnc_member as m on p.user_id=m.member_id) on c.pid=p.id where p.id='20' [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2016-02-04T07:56:42+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2016-02-04T07:56:43+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T07:56:46+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='490' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0006s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='490' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-02-04T07:56:48+08:00 ] 219.145.166.192 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='490' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='490' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-02-04T08:19:27+08:00 ] 66.249.79.128 /mobile/app/b2b/index.php/Home/Index/info/id/113
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='113' [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003727s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003760s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2016-02-04T10:53:51+08:00 ] 223.73.73.90 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2016-02-04T10:54:04+08:00 ] 223.73.73.90 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 0,10 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2016-02-04T10:54:12+08:00 ] 223.73.73.90 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2016-02-04T11:30:48+08:00 ] 66.249.79.128 /mobile/app/b2b/index.php/Home/Index/info/id/112
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='112' [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003689s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2016-02-04T11:51:26+08:00 ] 223.73.135.128 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2016-02-04T11:51:41+08:00 ] 223.73.135.128 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='435' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='435' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2016-02-04T11:51:47+08:00 ] 223.73.135.128 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='372' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='372' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-02-04T11:51:53+08:00 ] 223.73.135.128 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='447' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='447' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T11:52:04+08:00 ] 223.73.135.128 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='490' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='490' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2016-02-04T11:52:10+08:00 ] 223.73.135.128 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='376' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='376' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T11:52:16+08:00 ] 223.73.135.128 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 0,10 [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2016-02-04T11:52:21+08:00 ] 223.73.135.128 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-02-04T12:16:58+08:00 ] 66.249.79.128 /mobile/app/b2b/index.php/Home/Index/info/id/116
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='116' [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003955s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-02-04T12:20:46+08:00 ] 66.249.79.249 /mobile/app/b2b/index.php/Home/Index/info/id/118
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='118' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-02-04T12:22:24+08:00 ] 182.118.20.214 /mobile/app/b2b/index.php/Home/Index/info/id/118
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='118' [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2016-02-04T12:23:18+08:00 ] 182.118.20.219 /mobile/app/b2b/index.php/Home/Index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002973s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2016-02-04T12:25:11+08:00 ] 182.118.21.214 /mobile/app/b2b/index.php/Home/Index/quotation/quotationid/370
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='370' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='370' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002564s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002602s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-02-04T12:36:04+08:00 ] 117.136.16.40 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2016-02-04T12:36:08+08:00 ] 117.136.16.40 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='447' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0006s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='447' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2016-02-04T12:36:09+08:00 ] 117.136.16.40 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='447' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='447' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2016-02-04T12:36:23+08:00 ] 117.136.16.40 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2016-02-04T12:36:29+08:00 ] 117.136.16.40 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='371' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='371' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2016-02-04T12:36:31+08:00 ] 117.136.16.40 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='371' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='371' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000101s ]
+
+[ 2016-02-04T12:40:15+08:00 ] 183.21.156.186 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000098s ]
+
+[ 2016-02-04T12:40:21+08:00 ] 183.21.156.186 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='447' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='447' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000096s ]
+
+[ 2016-02-04T12:51:29+08:00 ] 51.255.65.73 /mobile/app/b2b/index.php/Home/Index/info/id/115
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='115' [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003990s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004057s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2016-02-04T13:47:19+08:00 ] 101.226.168.237 /mobile/app/b2b/index.php/Home/Index/sale/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 20 , 10 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2016-02-04T13:51:36+08:00 ] 124.117.239.90 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2016-02-04T13:52:05+08:00 ] 124.117.239.90 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-02-04T13:54:07+08:00 ] 178.255.215.68 /mobile/app/b2b/index.php/Home/Index/fabu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001675s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2016-02-04T13:54:10+08:00 ] 178.255.215.68 /mobile/app/b2b/index.php/Home/Index/brand
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002654s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002689s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000056s ]
+
+[ 2016-02-04T13:54:12+08:00 ] 178.255.215.68 /mobile/app/b2b/index.php/Home/Index/info/id/42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='42' [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2016-02-04T13:54:16+08:00 ] 178.255.215.68 /mobile/app/b2b/index.php/Home/Index/info/id/62
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='62' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 38 行.
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003933s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2016-02-04T13:54:23+08:00 ] 178.255.215.68 /mobile/app/b2b/index.php/Home/Index/info/id/117
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='117' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 38 行.
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003769s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2016-02-04T13:57:33+08:00 ] 221.14.193.156 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000118s ]
+
+[ 2016-02-04T13:57:39+08:00 ] 221.14.193.156 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000094s ]
+
+[ 2016-02-04T13:57:44+08:00 ] 221.14.193.156 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 15,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2016-02-04T13:58:11+08:00 ] 221.14.193.156 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 30,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0006s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-02-04T14:04:52+08:00 ] 51.255.65.88 /mobile/app/b2b/index.php/Home/Index/quotation/quotationid/438
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='438' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='438' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000086s ]
+
+[ 2016-02-04T15:03:23+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003071s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-02-04T15:03:29+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/Index/sale/p/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 50 , 10 [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2016-02-04T15:03:51+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/Index/info/id/129
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='129' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003821s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2016-02-04T15:04:10+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/Index/myList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='ab8c3fea7a7203620509ee3513591cf4' ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_member` WHERE ( member_id=4709 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='18908799388' and token='ab8c3fea7a7203620509ee3513591cf4' ) LIMIT 1   [ RunTime:0.0044s ]
+SQL: SELECT * FROM `shopnc_member` WHERE ( member_id=4709 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `shopnc_ecs_post` WHERE ( user_id='4709' )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003546s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003585s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-02-04T15:04:12+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/Index/info/id/129
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='129' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003704s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2016-02-04T15:04:16+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/Index/editor/id/129
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='ab8c3fea7a7203620509ee3513591cf4' ) LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_member` WHERE ( member_id=4709 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `shopnc_ecs_post` WHERE ( id='129' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post_content` [ RunTime:0.0004s ]
+SQL: SELECT `content` FROM `shopnc_ecs_post_content` WHERE ( pid='129' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T15:04:38+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/Index/post_save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post_content` [ RunTime:0.0004s ]
+SQL: DELETE FROM `shopnc_ecs_post` WHERE ( id='129' ) [ RunTime:0.0058s ]
+SQL: DELETE FROM `shopnc_ecs_post_content` WHERE ( pid='129' ) [ RunTime:0.0051s ]
+NOTIC: [8] Undefined index: img2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 253 行.
+NOTIC: [8] Undefined index: img3 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 282 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='18908799388' and token='ab8c3fea7a7203620509ee3513591cf4' ) LIMIT 1   [ RunTime:0.0039s ]
+NOTIC: [8] Undefined variable: pic /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 316 行.
+NOTIC: [8] Undefined index: contact /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 318 行.
+SQL: INSERT INTO `shopnc_ecs_post` (`saleway`,`brand`,`name`,`year`,`price`,`arrow_order`,`weight`,`unit`,`address`,`phone`,`id`,`user_id`,`addtime`) VALUES ('1','普洱生茶','古树茶原料','2005','660','0','25','4','云南普洱市','18908799388','129','4709','2016-02-04 15:04') [ RunTime:0.0071s ]
+SQL: INSERT INTO `shopnc_ecs_post_content` (`pid`,`content`,`depic`) VALUES ('129','极品古树沱茶（年份：2005年 规格：250克/个）
+   原料采用2005年普洱无量山古树春茶纯料，传统工艺精心加工，高端限量定制，现存量仅25个；入口丰满滑润，回甘化甜生津，陈香野韵沁人心脾，汤色褐红透亮，是不可多得的品饮极品！','') [ RunTime:0.0072s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001546s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-02-04T15:04:41+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/Index/editor/id/129
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='ab8c3fea7a7203620509ee3513591cf4' ) LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_member` WHERE ( member_id=4709 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `shopnc_ecs_post` WHERE ( id='129' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post_content` [ RunTime:0.0004s ]
+SQL: SELECT `content` FROM `shopnc_ecs_post_content` WHERE ( pid='129' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003157s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003213s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-02-04T15:04:45+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/Index/editor/id/129
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='ab8c3fea7a7203620509ee3513591cf4' ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shopnc_member` WHERE ( member_id=4709 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `shopnc_ecs_post` WHERE ( id='129' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post_content` [ RunTime:0.0004s ]
+SQL: SELECT `content` FROM `shopnc_ecs_post_content` WHERE ( pid='129' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003142s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2016-02-04T15:05:04+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/Index/post_save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post_content` [ RunTime:0.0004s ]
+SQL: DELETE FROM `shopnc_ecs_post` WHERE ( id='129' ) [ RunTime:0.0146s ]
+SQL: DELETE FROM `shopnc_ecs_post_content` WHERE ( pid='129' ) [ RunTime:0.0054s ]
+NOTIC: [8] Undefined index: img2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 253 行.
+NOTIC: [8] Undefined index: img3 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 282 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='18908799388' and token='ab8c3fea7a7203620509ee3513591cf4' ) LIMIT 1   [ RunTime:0.0039s ]
+NOTIC: [8] Undefined variable: pic /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 316 行.
+NOTIC: [8] Undefined index: contact /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 318 行.
+SQL: INSERT INTO `shopnc_ecs_post` (`saleway`,`brand`,`name`,`year`,`price`,`arrow_order`,`weight`,`unit`,`address`,`phone`,`id`,`user_id`,`addtime`) VALUES ('1','普洱生茶','古树茶原料','2005','660','0','25','3','云南普洱市','18908799388','129','4709','2016-02-04 15:05') [ RunTime:0.0164s ]
+SQL: INSERT INTO `shopnc_ecs_post_content` (`pid`,`content`,`depic`) VALUES ('129','极品古树沱茶（年份：2005年 规格：250克/个）
+   原料采用2005年普洱无量山古树春茶纯料，传统工艺精心加工，高端限量定制，现存量仅25个；入口丰满滑润，回甘化甜生津，陈香野韵沁人心脾，汤色褐红透亮，是不可多得的品饮极品！','') [ RunTime:0.0045s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001516s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000055s ]
+
+[ 2016-02-04T15:05:07+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/Index/editor/id/129
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='ab8c3fea7a7203620509ee3513591cf4' ) LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `shopnc_member` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_member` WHERE ( member_id=4709 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `shopnc_ecs_post` WHERE ( id='129' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post_content` [ RunTime:0.0005s ]
+SQL: SELECT `content` FROM `shopnc_ecs_post_content` WHERE ( pid='129' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003396s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2016-02-04T17:23:16+08:00 ] 51.255.65.48 /mobile/app/b2b/index.php/Home/Index/info/id/123
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='123' [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2016-02-04T17:32:47+08:00 ] 51.255.65.49 /mobile/app/b2b/index.php/Home/Index/contact/id/75
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+NOTIC: [8] Undefined index: key /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: username /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='' ) LIMIT 1   [ RunTime:0.0041s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000065s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001537s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+
+[ 2016-02-04T17:34:24+08:00 ] 171.14.200.214 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000087s ]
+
+[ 2016-02-04T17:56:59+08:00 ] 1.56.84.12 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2016-02-04T17:57:12+08:00 ] 1.56.84.12 /mobile/app/b2b/index.php/Home/index/myListapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( member_name='' and token='' ) LIMIT 1   [ RunTime:0.0038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2016-02-04T17:57:12+08:00 ] 1.56.84.12 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 0,10 [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2016-02-04T17:57:18+08:00 ] 1.56.84.12 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 10,10 [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2016-02-04T17:57:30+08:00 ] 1.56.84.12 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='1' order by id desc   limit 20,10 [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2016-02-04T17:57:42+08:00 ] 1.56.84.12 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='371' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='371' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000079s ]
+
+[ 2016-02-04T18:24:21+08:00 ] 182.240.149.127 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2016-02-04T18:24:42+08:00 ] 182.240.149.127 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2016-02-04T18:55:16+08:00 ] 212.47.253.128 /mobile/app/b2b/index.php/Home/Index/info/id/125
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='125' [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 38 行.
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined index: img /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003837s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003871s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T19:01:23+08:00 ] 66.249.79.137 /mobile/app/b2b/index.php/Home/Index/info/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='60' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 39 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2016-02-04T19:04:49+08:00 ] 42.156.136.101 /mobile/app/b2b/index.php/Home/Index/contact/id/60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+NOTIC: [8] Undefined index: key /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: username /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='' ) LIMIT 1   [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001540s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-02-04T19:04:52+08:00 ] 42.156.137.101 /mobile/app/b2b/index.php/Home/Index/info/id/80
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='80' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003669s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T19:04:55+08:00 ] 42.156.138.101 /mobile/app/b2b/index.php/Home/index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003168s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2016-02-04T19:04:56+08:00 ] 42.156.139.101 /mobile/app/b2b/index.php/Home/Index/info/id/81
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='81' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000056s ]
+
+[ 2016-02-04T19:04:57+08:00 ] 42.120.160.101 /mobile/app/b2b/index.php/Home/Index/info/id/93
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='93' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003752s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000100s ]
+
+[ 2016-02-04T19:05:00+08:00 ] 42.120.161.101 /mobile/app/b2b/index.php/Home/Index/contact/id/117
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+NOTIC: [8] Undefined index: key /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: username /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='' ) LIMIT 1   [ RunTime:0.0038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001557s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+
+[ 2016-02-04T19:05:01+08:00 ] 42.156.136.101 /mobile/app/b2b/index.php/Home/Index/contact/id/66
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+NOTIC: [8] Undefined index: key /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: username /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Home/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `shopnc_mb_user_token` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_mb_user_token` WHERE ( token='' ) LIMIT 1   [ RunTime:0.0037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001537s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000094s ]
+
+[ 2016-02-04T19:19:53+08:00 ] 66.249.79.128 /mobile/app/b2b/index.php/Home/Index/info/id/55
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='55' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003721s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2016-02-04T19:32:55+08:00 ] 14.16.253.194 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-02-04T19:33:02+08:00 ] 14.16.253.194 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-02-04T19:33:12+08:00 ] 14.16.253.194 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 15,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-02-04T19:33:16+08:00 ] 14.16.253.194 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 30,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-02-04T19:33:20+08:00 ] 14.16.253.194 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 45,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2016-02-04T19:33:21+08:00 ] 14.16.253.194 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 60,15   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-02-04T20:13:56+08:00 ] 123.76.214.227 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2016-02-04T20:21:01+08:00 ] 223.104.12.147 /mobile/app/b2b/index.php/Home/index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2016-02-04T21:49:19+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2016-02-04T21:49:25+08:00 ] 106.61.2.202 /mobile/app/b2b/index.php/Home/Index/sale/p/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 50 , 10 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003099s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003138s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2016-02-04T21:53:03+08:00 ] 66.249.79.137 /mobile/app/b2b/index.php/Home/Index/info/id/123
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='123' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 40 行.
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004326s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2016-02-04T22:01:13+08:00 ] 220.165.202.23 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2016-02-04T22:39:39+08:00 ] 117.136.38.35 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000087s ]
+
+[ 2016-02-04T22:53:34+08:00 ] 14.16.139.100 /mobile/app/b2b/index.php/Home/index/homeapi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='2' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.depic,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where saleway='2' order by id desc   limit 0,10 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000078s ]
+
+[ 2016-02-04T22:53:50+08:00 ] 14.16.139.100 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='387' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='387' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2016-02-04T22:53:58+08:00 ] 14.16.139.100 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2016-02-04T22:54:07+08:00 ] 14.16.139.100 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 15,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2016-02-04T22:54:15+08:00 ] 14.16.139.100 /mobile/app/b2b/index.php/Home/Index/qutation_api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_quotation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `shopnc_ecs_quotation` WHERE ( brand_id='365' ) ORDER BY 'order' desc,id desc LIMIT 30,15   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `shopnc_brand` [ RunTime:0.0005s ]
+SQL: SELECT `brand_name` FROM `shopnc_brand` WHERE ( brand_id='365' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-02-04T23:15:32+08:00 ] 180.153.81.159 /mobile/app/b2b/index.php/Home/index/sale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 0 , 10 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003053s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2016-02-04T23:15:55+08:00 ] 180.153.81.159 /mobile/app/b2b/index.php/Home/Index/sale/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 10 , 10 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003161s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2016-02-04T23:16:30+08:00 ] 180.153.81.159 /mobile/app/b2b/index.php/Home/Index/info/id/73
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: select c.id,c.addtime,c.brand,c.name,c.year,c.address,c.price,c.weight,c.unit,c.timeout,c.phone,c.saleway,d.depic,d.content from `shopnc_ecs_post` as c left join `shopnc_ecs_post_content` as d on c.id=d.pid where c.id='73' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: v /home/wwwroot/default/shopnc/mobile/app/b2b/Application/Runtime/Cache/Home/58dcbc0a6aedef7ee219b145fa55354f.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003868s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003902s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000083s ]
+
+[ 2016-02-04T23:17:40+08:00 ] 58.243.250.44 /mobile/app/b2b/index.php/Home/Index/sale/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 20 , 10 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003124s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2016-02-04T23:18:24+08:00 ] 180.153.81.159 /mobile/app/b2b/index.php/Home/Index/sale/p/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 30 , 10 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003089s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003127s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2016-02-04T23:18:59+08:00 ] 180.153.81.159 /mobile/app/b2b/index.php/Home/Index/sale/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Common/functions.php 第 1261 行.
+SQL: SHOW COLUMNS FROM `shopnc_ecs_post` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shopnc_ecs_post` WHERE ( saleway='1' and recommend !='-1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select p.* ,d.content from shopnc_ecs_post as p left join shopnc_ecs_post_content as d on p.id=d.pid where p.saleway='1' and p.recommend != '-1' order by p.recommend desc limit 20 , 10 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Public/foot.html): failed to open stream: No such file or directory /home/wwwroot/default/shopnc/mobile/app/b2b/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003413s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000082s ]
+

@@ -1,0 +1,1534 @@
+[ 2015-05-20T08:55:53+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012540s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000341s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047645s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.017848s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.018048s ]
+
+[ 2015-05-20T08:55:58+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001588s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000380s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024057s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000938s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009969s ]
+
+[ 2015-05-20T08:56:08+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001502s ]
+SQL: SHOW COLUMNS FROM `ecs_users` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `ecs_users` WHERE `user_name` = 'test' AND `password` = '05a671c66aefea124cc08b76ea6d30bb' LIMIT 1   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000240s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000603s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022447s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001540s ]
+
+[ 2015-05-20T08:56:13+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001245s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000379s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052416s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001205s ]
+
+[ 2015-05-20T08:56:23+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/info/id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001913s ]
+SQL: select c.id,c.brand,c.name,c.year,c.address,c.price,c.weight,c.timeout,c.phone,c.saleway,d.depic,d.content from ecs_post as c left join ecs_post_content as d on c.id=d.pid where c.id=14 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8] Undefined index: addtime C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\58dcbc0a6aedef7ee219b145fa55354f.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039680s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001148s ]
+
+[ 2015-05-20T08:56:26+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/contact/id/14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001489s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( id=14 ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000357s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001336s ]
+
+[ 2015-05-20T08:56:28+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/newssave
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001303s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000321s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010646s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000871s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001125s ]
+
+[ 2015-05-20T08:56:33+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001261s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000381s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039259s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000916s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001205s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001463s ]
+
+[ 2015-05-20T08:56:46+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/myList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001273s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( user_id=63 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000390s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001184s ]
+
+[ 2015-05-20T08:56:51+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/news.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001192s ]
+SQL: select cid,pid,sum(isRead) as readed,count(*) as total from ecs_post_news where uid =63 group by pid [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000240s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000569s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0044s ]
+SQL: SELECT `pic` FROM `ecs_post` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `ecs_post` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ecs_users` [ RunTime:0.0045s ]
+SQL: SELECT `user_name` FROM `ecs_users` WHERE ( user_id=64 ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant total - assumed 'total' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\cecb45903f8aa0e33f62e7ce7ef7b49f.php 第 31 行.
+NOTIC: [8] Use of undefined constant readed - assumed 'readed' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\cecb45903f8aa0e33f62e7ce7ef7b49f.php 第 31 行.
+NOTIC: [8] Undefined index: addtime C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\cecb45903f8aa0e33f62e7ce7ef7b49f.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051570s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001221s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001710s ]
+
+[ 2015-05-20T08:56:57+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/newslist/cid/64/pid/9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001735s ]
+SQL: SHOW COLUMNS FROM `ecs_post_news` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ecs_post_news` WHERE ( cid='64' and pid='9' ) ORDER BY id desc LIMIT 10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000389s ]
+NOTIC: [8] Use of undefined constant isRead - assumed 'isRead' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+NOTIC: [8] Undefined index: isRead C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0049s ]
+SQL: SELECT `pic` FROM `ecs_post` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ecs_post_news` WHERE ( cid='63' and fid='48' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant isRead - assumed 'isRead' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+NOTIC: [8] Undefined index: isRead C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+SQL: SELECT `pic` FROM `ecs_post` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ecs_post_news` WHERE ( cid='63' and fid='46' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant isRead - assumed 'isRead' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+NOTIC: [8] Undefined index: isRead C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+SQL: SELECT `pic` FROM `ecs_post` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ecs_post_news` WHERE ( cid='63' and fid='45' ) LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Use of undefined constant isRead - assumed 'isRead' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+NOTIC: [8] Undefined index: isRead C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+SQL: SELECT `pic` FROM `ecs_post` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ecs_post_news` WHERE ( cid='63' and fid='43' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047636s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001252s ]
+
+[ 2015-05-20T08:58:00+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/newslist/cid/64/pid/9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001236s ]
+SQL: SHOW COLUMNS FROM `ecs_post_news` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `ecs_post_news` WHERE ( cid='64' and pid='9' ) ORDER BY id desc LIMIT 10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000369s ]
+NOTIC: [8] Use of undefined constant isRead - assumed 'isRead' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+NOTIC: [8] Undefined index: isRead C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0042s ]
+SQL: SELECT `pic` FROM `ecs_post` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ecs_post_news` WHERE ( cid='63' and fid='48' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant isRead - assumed 'isRead' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+NOTIC: [8] Undefined index: isRead C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+SQL: SELECT `pic` FROM `ecs_post` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ecs_post_news` WHERE ( cid='63' and fid='46' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant isRead - assumed 'isRead' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+NOTIC: [8] Undefined index: isRead C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+SQL: SELECT `pic` FROM `ecs_post` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ecs_post_news` WHERE ( cid='63' and fid='45' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant isRead - assumed 'isRead' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+NOTIC: [8] Undefined index: isRead C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\26c290c341599a77e297bebfcacd5dc6.php 第 23 行.
+SQL: SELECT `pic` FROM `ecs_post` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ecs_post_news` WHERE ( cid='63' and fid='43' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001170s ]
+
+[ 2015-05-20T10:05:07+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002037s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000468s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000957s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001712s ]
+
+[ 2015-05-20T10:49:49+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000108s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002798s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000499s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066635s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001632s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002178s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002561s ]
+
+[ 2015-05-20T10:49:56+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000103s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002937s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000541s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025189s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025718s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001854s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002275s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002806s ]
+
+[ 2015-05-20T10:50:01+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000877s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001557s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000300s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000705s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018051s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018477s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001328s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001796s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002536s ]
+
+[ 2015-05-20T10:50:43+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000109s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002698s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000522s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002410s ]
+
+[ 2015-05-20T10:50:49+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002291s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000248s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000584s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021628s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002884s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002742s ]
+
+[ 2015-05-20T10:50:52+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002361s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000522s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019277s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019639s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001661s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001950s ]
+
+[ 2015-05-20T11:29:42+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000097s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001629s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000320s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000779s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020920s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002008s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002449s ]
+
+[ 2015-05-20T11:49:47+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001996s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000341s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000826s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022425s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001661s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002075s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001965s ]
+
+[ 2015-05-20T11:49:53+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000111s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001944s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001984s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000425s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000936s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070528s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001834s ]
+
+[ 2015-05-20T11:55:16+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000157s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002277s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000318s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000816s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025243s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001661s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002146s ]
+
+[ 2015-05-20T11:55:21+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000095s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001797s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000477s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017187s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017566s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001744s ]
+
+[ 2015-05-20T11:55:22+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001800s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000568s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001409s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001780s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001891s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002161s ]
+
+[ 2015-05-20T11:55:29+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003386s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000527s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002412s ]
+
+[ 2015-05-20T13:09:03+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000099s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001560s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001513s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001813s ]
+
+[ 2015-05-20T13:12:32+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002116s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0092s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '4de24ad756da0834c4b16ff8ca1012d69d9c5952' in 'where clause'
+
+[ 2015-05-20T13:13:18+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000096s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001881s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d69d9c5952' ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001858s ]
+
+[ 2015-05-20T13:14:31+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000197s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003181s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d69d9c5952' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002447s ]
+
+[ 2015-05-20T13:15:52+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000094s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003257s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d69d9c5952' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001794s ]
+
+[ 2015-05-20T13:17:00+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001649s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='9d9c5952' ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001727s ]
+
+[ 2015-05-20T13:17:24+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000111s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002322s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='9d9c5952' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003032s ]
+
+[ 2015-05-20T13:17:38+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000918s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001649s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002509s ]
+
+[ 2015-05-20T13:17:57+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002671s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001754s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002042s ]
+
+[ 2015-05-20T13:20:16+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001811s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002457s ]
+
+[ 2015-05-20T13:20:56+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001845s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002536s ]
+
+[ 2015-05-20T13:21:00+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000950s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001755s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002209s ]
+
+[ 2015-05-20T13:21:01+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001934s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002317s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002814s ]
+
+[ 2015-05-20T13:21:01+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001589s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002885s ]
+
+[ 2015-05-20T13:21:02+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000998s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001729s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002201s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002570s ]
+
+[ 2015-05-20T13:21:03+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002996s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002211s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002526s ]
+
+[ 2015-05-20T13:21:14+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001172s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001488s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002847s ]
+
+[ 2015-05-20T13:21:15+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000096s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001651s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001793s ]
+
+[ 2015-05-20T13:22:34+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001437s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions_data` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `ecs_sessions_data` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001730s ]
+
+[ 2015-05-20T13:22:44+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001201s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001567s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001798s ]
+
+[ 2015-05-20T13:25:38+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001198s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001694s ]
+NOTIC: [2] require_once(/ecshop/mobile/include/init.php): failed to open stream: No such file or directory C:\wamp\www\ecshop\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 50 行.
+
+[ 2015-05-20T13:26:40+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002257s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003050s ]
+
+[ 2015-05-20T13:37:08+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000095s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002633s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001683s ]
+
+[ 2015-05-20T13:39:28+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002007s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003008s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002825s ]
+
+[ 2015-05-20T13:49:45+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000108s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001882s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002407s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ecs_users` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `ecs_users` WHERE ( user_id='65' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000325s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000836s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025114s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001185s ]
+
+[ 2015-05-20T13:50:39+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001998s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0086s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ecs_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ecs_users` WHERE ( user_id='65' ) LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000465s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022171s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022692s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001796s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002847s ]
+
+[ 2015-05-20T13:52:27+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002877s ]
+SQL: SHOW COLUMNS FROM `ecs_sessions` [ RunTime:0.0301s ]
+SQL: SELECT * FROM `ecs_sessions` WHERE ( sesskey='4de24ad756da0834c4b16ff8ca1012d6' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ecs_users` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `ecs_users` WHERE ( user_id='65' ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000455s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019662s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002478s ]
+
+[ 2015-05-20T13:55:50+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004229s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000325s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000873s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001551s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001914s ]
+
+[ 2015-05-20T14:04:32+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003142s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000493s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001763s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003534s ]
+
+[ 2015-05-20T14:05:31+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001894s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000657s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070157s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001845s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002249s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002533s ]
+
+[ 2015-05-20T14:15:26+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/post.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000107s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003729s ]
+
+[ 2015-05-20T14:18:23+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/newsdetail/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000997s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002521s ]
+SQL: SHOW COLUMNS FROM `ecs_post_news` [ RunTime:0.0081s ]
+SQL: UPDATE `ecs_post_news` SET `isRead`='1' WHERE ( id=48 ) [ RunTime:0.1014s ]
+SQL: SELECT * FROM `ecs_post_news` WHERE ( id=48 ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000447s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021939s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001546s ]
+
+[ 2015-05-20T14:27:44+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/post.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002568s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000334s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000577s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.086177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086610s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001585s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002154s ]
+
+[ 2015-05-20T14:29:04+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001635s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000554s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001904s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001834s ]
+
+[ 2015-05-20T14:39:27+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000182s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002820s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000477s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055808s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001770s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002242s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002739s ]
+
+[ 2015-05-20T14:48:33+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001005s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001997s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000460s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000985s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074613s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074912s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001593s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002725s ]
+
+[ 2015-05-20T14:54:37+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000943s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001934s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0161s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000568s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061124s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061465s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001576s ]
+
+[ 2015-05-20T15:35:49+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/myList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002374s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: user_id C:\wamp\www\ecshop\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 238 行.
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY id desc LIMIT 10' at line 1
+
+[ 2015-05-20T15:36:02+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/myList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002253s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0075s ]
+NOTIC: [8] Undefined index: user_id C:\wamp\www\ecshop\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 238 行.
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY id desc LIMIT 10' at line 1
+
+[ 2015-05-20T15:36:19+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/myList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002175s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0082s ]
+NOTIC: [8] Undefined index: user_id C:\wamp\www\ecshop\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 238 行.
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY id desc LIMIT 10' at line 1
+
+[ 2015-05-20T15:36:31+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/myList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002687s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0105s ]
+NOTIC: [8] Undefined index: user_id C:\wamp\www\ecshop\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 238 行.
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY id desc LIMIT 10' at line 1
+
+[ 2015-05-20T15:36:32+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/myList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001827s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0072s ]
+NOTIC: [8] Undefined index: user_id C:\wamp\www\ecshop\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 238 行.
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY id desc LIMIT 10' at line 1
+
+[ 2015-05-20T15:36:46+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/Index/myList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003945s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0088s ]
+NOTIC: [8] Undefined index: user_id C:\wamp\www\ecshop\mobile\app\b2b\Application\Home\Controller\IndexController.class.php 第 238 行.
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY id desc LIMIT 10' at line 1
+
+[ 2015-05-20T16:15:00+08:00 ] ::1 /ecshop/mobile/app/b2b/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001768s ]
+SQL: SHOW COLUMNS FROM `ecs_post` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `ecs_post` ORDER BY id desc LIMIT 10   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=1 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ecs_post` WHERE ( saleway=2 ) ORDER BY id desc LIMIT 10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000532s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\ecshop\mobile\app\b2b\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.127078s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.127531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001329s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001759s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001890s ]
+
