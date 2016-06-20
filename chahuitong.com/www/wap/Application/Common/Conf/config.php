@@ -12,7 +12,7 @@ return array (
 		'DB_PWD'    => 'Chaxinkeji2015',  // 密码
 		'DB_PORT' => '3306', // 端口
 		'DB_PREFIX' => 'shopnc_', // 数据库表前缀
-		
+
 
 		/* URL配置 */
 		'URL_CASE_INSENSITIVE' => true, //默认false 表示URL区分大小写 true则表示不区分大小写

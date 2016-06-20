@@ -23,9 +23,11 @@ class IndexController extends Controller
         //print_r($goods);
         /*yincang447*/
         $goods[0]['xianshi_price'] = '';
+//        $goods[0]['goods_image'] = cthumb($goods[0]['goods_image']);
         /*yicang447*/
         $this->assign("pics", $picArray);
         $this->assign("xianshigoods", $goods);
+//        echo json_encode($goods);
         $this->display('home');
 
 //        $kehuduan = $_SERVER['HTTP_USER_AGENT'];
