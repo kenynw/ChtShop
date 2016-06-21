@@ -65,6 +65,11 @@
         msg: "请登录"
       }
 
+### URL规则
+    BASE_URL:http://api.chahuitong.com
+    
+    例如登录接口为:http://api.chahuitong.com?act=login
+
 ### 登录
 URL：act=login  
 参数：
