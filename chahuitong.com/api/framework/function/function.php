@@ -61,13 +61,17 @@ function mobile_page($page_count)
 
 function output_json($code, $data = array(), $msg = 'SUCCESS', $extend_data = array())
 {
-    if(!is_numeric($code)) return;
+    if (!is_numeric($code)) return;
 
-    $result = array(
-        'code' => $code,
-        'data' => !empty($extend_data) ? array_merge($data, $extend_data) : $data
-    );
+    $result = array();
+    if (empty($data) && $code == 1) {
+        $result['code'] = 0;
+        $result['msg'] = '暂无数据';
+    } else {
+        $result['code'] = $code;
+    }
     if($msg) $result['msg'] = $msg;
+    $result['data'] = !empty($extend_data) ? array_merge($data, $extend_data) : $data;
 
     echo json_encode($result);
     die();

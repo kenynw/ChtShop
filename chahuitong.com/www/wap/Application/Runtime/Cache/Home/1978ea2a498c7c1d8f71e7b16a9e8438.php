@@ -341,12 +341,12 @@
                                 if (data.content[i].member_avatar != null) {
 
 
-                                    str += '<img src="/data/upload/shop/avatar/' + data.content[i].member_avatar + '"><h5>' + data.content[i].member_name + '</h5><p>';
+                                    str += '<img src="http://img.chahuitong.com/shop/avatar/' + data.content[i].member_avatar + '"><h5>' + data.content[i].member_name + '</h5><p>';
 
 
                                 } else {
 
-                                    str += '<img src="/data/upload/shop/avatar/nopic.jpg"><h5>' + data.content[i].member_name + '</h5><p>';
+                                    str += '<img src="http://img.chahuitong.com/shop/avatar/nopic.jpg"><h5>' + data.content[i].member_name + '</h5><p>';
 
                                 }
 
@@ -706,7 +706,7 @@
 <body>
 <header>
     <a href="javaScript:window.history.back();"><img src="/wap/Public/Home/img/fanhui.png"></a>
-    社区<a href="/wap/index.php/Home/Index/home"><img src="/wap/Public/Home/img/home.png"></a>
+    社区<a href="/wap"><img src="/wap/Public/Home/img/home.png"></a>
 </header>
 <div class="ling">
     <h4>魅力领袖<a href="/wap/index.php/Home/Discuz/lingxiu">更多</a></h4>

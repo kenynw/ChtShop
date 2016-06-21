@@ -96,3 +96,25 @@ class mobileMemberControl extends mobileControl{
         }
     }
 }
+
+class mobileCMSControl extends mobileMemberControl {
+
+    //文章状态草稿箱
+    const ARTICLE_STATE_DRAFT = 1;
+    //文章状态待审核
+    const ARTICLE_STATE_VERIFY = 2;
+    //文章状态已发布
+    const ARTICLE_STATE_PUBLISHED = 3;
+    //文章状态回收站
+    const ARTICLE_STATE_RECYCLE = 4;
+    //文章类型用户投稿
+    const ARTICLE_TYPE_MEMBER = 1;
+    //文章类型管理员发布
+    const ARTICLE_TYPE_ADMIN = 2;
+    //推荐
+    const COMMEND_FLAG_TRUE = 1;
+    //文章评论类型
+    const ARTICLE = 1;
+    const PICTURE = 2;
+
+}

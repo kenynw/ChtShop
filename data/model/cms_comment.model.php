@@ -30,7 +30,7 @@ class cms_commentModel extends Model{
 	 */
 	public function getListWithUserInfo($condition, $page='', $order='', $field='*'){
         $on = 'cms_comment.comment_member_id = member.member_id';
-        $result = $this->table('cms_comment,member')->field($filed)->join('left')->on($on)->where($condition)->page($page)->order($order)->select();
+        $result = $this->table('cms_comment,member')->field($field)->join('left')->on($on)->where($condition)->page($page)->order($order)->select();
         return $result;
 	}
 

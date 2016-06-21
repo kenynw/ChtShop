@@ -1866,5 +1866,141 @@ URL: act=member_message&op=message_list
         },
         "msg": "SUCCESS"
     }
-  
+   
+### 文章列表
+
+URL: act=article&op=article_list
+
+参数：
+
+>key 当前登录令牌     
+>class_id 文章类目ID 
+>tag_id 标签ID 
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": [
+            {
+                "article_id": "6356",
+                "article_title": "白牡丹茶是什么茶？",
+                "article_class_id": "92",
+                "article_origin": "",
+                "article_origin_address": "",
+                "article_author": "茶汇通",
+                "article_image": "http://img.chahuitong.com/cms/article/2/1_list.png",
+                "article_publish_time": "1456502400",
+                "article_click": "12",
+                "article_sort": "255",
+                "article_commend_flag": "0",
+                "article_state": "3",
+                "article_publisher_name": "茶汇通",
+                "article_publisher_id": "2",
+                "article_publisher_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                "article_attachment_path": "2",
+                "article_comment_count": "0",
+                "article_url": "http://www.chahuitong.com/cms/article-6356.html"
+            }
+        ]
+    }
+   
+### 文章详情介绍信息
+URL(Get): act=article&op=article_detail 
+
+参数：
+
+>key 当前登录令牌     
+>article_id 文章编号    
+
+返回： html
+
+### 文章评论列表
+
+URL: act=article_comment&op=comment_list
+
+参数：
+
+>key 当前登录令牌  
+>order 排序 0-热度 1-时间 默认为热度
+>object_id 文章ID 
+>type 类型 1-文章 2-画报 默认为文章
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": [
+            {
+                "comment_id": "5",
+                "comment_type": "1",
+                "comment_object_id": "6356",
+                "comment_message": "tttt",
+                "comment_member_id": "164",
+                "comment_time": "1466495092",
+                "comment_quote": "",
+                "comment_up": "0",
+                "member_id": "164",
+                "member_name": "内测帐号",
+                "member_avatar": "164_60.jpg"
+            }
+        ]
+    }
+   
+### 添加文章评论
+
+URL(Get): act=article_comment&op=comment_add
+
+参数：
+
+>key 当前登录令牌     
+>object_id 文章或画报ID 
+>comment_message 评论内容 
+>comment_type 评论类型 1-文章 2-画报 默认为1 
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "评论发表成功",
+        "data": 5 // 成功的评论ID
+    }
+   
+### 删除文章评论
+
+URL(Post): act=article_comment&op=comment_del
+
+参数：
+
+>key 当前登录令牌     
+>comment_id 评论编号
+>comment_type 评论类型 1-文章 2-画报 默认为1 
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": true
+    }
+     
+### 文章评论点赞
+
+URL(Post): act=article_comment&op=comment_up
+
+参数：
+
+>key 当前登录令牌     
+>comment_id 评论编号
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": true
+    }
+   
     
