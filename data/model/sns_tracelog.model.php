@@ -6,6 +6,11 @@
  */
 defined('InShopNC') or exit('Access Invalid!');
 class sns_tracelogModel extends Model {
+	
+	public function __construct() {
+		parent::__construct('sns_tracelog');
+	}
+
 	/**
 	 * 新增动态
 	 *
@@ -52,16 +57,16 @@ class sns_tracelogModel extends Model {
 	 * @param $field 查询字段
 	 * @return array 数组格式的返回结果
 	 */
-	public function getTracelogList($condition,$page='',$field='*'){
-		$condition_str	= $this->getCondition($condition);
-		$param	= array();
-		$param['table']	= 'sns_tracelog';
-		$param['where']	= $condition_str;
-		$param['field'] = $field;
-		$param['order'] = $condition['order'] ? $condition['order'] : 'sns_tracelog.trace_id desc';
-		$param['limit'] = $condition['limit'];
-		$param['group'] = $condition['group'];
-		return Db::select($param,$page);
+	public function getTracelogList($condition,$page='',$field='*', $order='trace_id desc', $limit = 10){
+//		$condition_str	= $this->getCondition($condition);
+//		$param	= array();
+//		$param['table']	= 'sns_tracelog';
+//		$param['where']	= $condition_str;
+//		$param['field'] = $field;
+//		$param['order'] = $condition['order'] ? $condition['order'] : 'sns_tracelog.trace_id desc';
+//		$param['limit'] = $condition['limit'];
+//		$param['group'] = $condition['group'];
+		return $this->field($field)->where($condition)->page($page)->order($order)->limit($limit)->select();
 	}
 	/**
 	 * 获取动态详细

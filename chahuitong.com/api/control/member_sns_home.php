@@ -98,10 +98,7 @@ class member_sns_homeControl extends mobileHomeControl {
 
         $filed = 'trace_id,trace_originalid,trace_memberid,trace_membername,trace_memberavatar,trace_title,trace_addtime,trace_state,trace_privacy,trace_commentcount';
 
-        $page = new Page();
-        $page->setEachNum($this->page);
-        $page->setStyle('admin');
-        $trace_list = $tracelog_model->getTracelogList($condition, $page, $filed);
+        $trace_list = $tracelog_model->getTracelogList($condition, $this->page, $filed);
 
         // 数据处理
         if (empty($trace_list)) {
