@@ -1471,7 +1471,8 @@ URL: act=member_sns_trace&op=trace_add
 参数：
 
 >key 当前登录令牌     
->id 动态id    
+>content 动态内容   
+>privacy 权限 0-公开 1-仅自己可见 默认为0
 
 返回：
 
@@ -1534,12 +1535,13 @@ URL(Get/Post): act=member_sns_trace&op=comment_list
        
 ### 添加动态评论
 
-URL(Get/Post): act=member_sns_trace&op=comment_add
+URL(Post): act=member_sns_trace&op=comment_add
 
 参数：
 
 >key 当前登录令牌     
 >id 动态id    
+>content 评论内容    
 
 返回：
 

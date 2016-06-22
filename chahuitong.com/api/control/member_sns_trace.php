@@ -259,8 +259,8 @@ class member_sns_traceControl extends mobileMemberControl {
         if ($id <= 0) output_json(0, array(), '参数错误');
 
         $obj_validate = new Validate();
-        $validate_arr[] = array("input"=>$_GET['content'], "require"=>"true","message"=>'评论不能空');
-        $validate_arr[] = array("input"=>$_GET['content'], "validator"=>'Length',"min"=>0,"max"=>140,"message"=>'评论不能超过140个中文字符');
+        $validate_arr[] = array("input"=>$_POST['content'], "require"=>"true","message"=>'评论不能空');
+        $validate_arr[] = array("input"=>$_POST['content'], "validator"=>'Length',"min"=>0,"max"=>140,"message"=>'评论不能超过140个中文字符');
         $obj_validate -> validateparam = $validate_arr;
         $error = $obj_validate->validate();
         if ($error != ''){
@@ -281,7 +281,7 @@ class member_sns_traceControl extends mobileMemberControl {
         $insert_arr['comment_memberavatar'] = $this->member_info['member_avatar'];
         $insert_arr['comment_originalid'] = $id;
         $insert_arr['comment_originaltype'] = 0;
-        $insert_arr['comment_content'] = $_GET['content'];
+        $insert_arr['comment_content'] = $_POST['content'];
         $insert_arr['comment_addtime'] = time();
         $insert_arr['comment_ip'] = getIp();
         $insert_arr['comment_state'] = '0'; //正常

@@ -1714,7 +1714,8 @@ http://img.chahuitong.com/shop/common/default_goods_image_240.gif,",
 <p>参数：</p>
 
 <blockquote><p>key 当前登录令牌   <br/>
-id 动态id</p></blockquote>
+content 动态内容 <br/>
+privacy 权限 0-公开 1-仅自己可见 默认为0</p></blockquote>
 
 <p>返回：</p>
 
@@ -1780,12 +1781,13 @@ id 动态id</p></blockquote>
 
 <h3>添加动态评论</h3>
 
-<p>URL(Get/Post): act=member_sns_trace&amp;op=comment_add</p>
+<p>URL(Post): act=member_sns_trace&amp;op=comment_add</p>
 
 <p>参数：</p>
 
 <blockquote><p>key 当前登录令牌   <br/>
-id 动态id</p></blockquote>
+id 动态id  <br/>
+content 评论内容</p></blockquote>
 
 <p>返回：</p>
 
