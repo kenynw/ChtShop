@@ -236,5 +236,21 @@ class snstraceControl extends SystemControl{
 			showMessage(Language::get('nc_common_op_fail'),'index.php?act=snstrace&op=commentlist','','error');
 		}
 	}
+	
+	/**
+	 * ajax操作
+	 */
+	public function ajaxOp(){
+		$model_trace = Model('sns_tracelog');
+		switch ($_GET['branch']){
+			case 'trace_commend' :
+				$update[$_GET['column']] = trim($_GET['value']);
+				$condition['trace_id'] = intval($_GET['id']);
+				$model_trace->tracelogEdit($update, $condition);
+				echo 'true';exit;
+				break;
+		}
+	}
+
 }
 ?>

@@ -1,4 +1,5 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?>
+<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/jquery.edit.js" charset="utf-8"></script>
 
 <div class="page">
   <div class="fixed-bar">
@@ -98,8 +99,10 @@
                 <div class="clear"></div>
               </dl>
             </li>
-            
+
             <!-- 动态列表end --></td>
+          <td>推荐:</td>
+          <td class="w60 align-center yes-onoff"><a href="JavaScript:void(0);" class=" <?php echo $v['trace_commend_flag']? 'enabled':'disabled'?>" ajax_branch='trace_commend'  nc_type="inline_edit" fieldname="trace_commend_flag" fieldid="<?php echo $v['trace_id']?>" fieldvalue="<?php echo $v['trace_commend_flag']?'1':'0'?>" title="<?php echo $lang['editable'];?>"><img src="<?php echo ADMIN_TEMPLATES_URL;?>/images/transparent.gif"></a></td>
         </tr>
         <?php } ?>
         <?php }else { ?>

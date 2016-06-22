@@ -66,7 +66,7 @@ class sns_tracelogModel extends Model {
 //		$param['order'] = $condition['order'] ? $condition['order'] : 'sns_tracelog.trace_id desc';
 //		$param['limit'] = $condition['limit'];
 //		$param['group'] = $condition['group'];
-		return $this->field($field)->where($condition)->page($page)->order($order)->limit($limit)->select();
+		return $this->table('sns_tracelog')->field($field)->where($condition)->page($page)->order($order)->limit($limit)->select();
 	}
 	/**
 	 * 获取动态详细
