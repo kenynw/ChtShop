@@ -151,48 +151,48 @@ class member_sns_traceControl extends mobileMemberControl {
     }
 
     public function trace_image_uploadOp() {
-        echo 'fuck' . $_FILES['image']['name'] . $_POST['trace_id'];
+//        echo 'fuck' . $_FILES['image']['name'] . $_POST['trace_id'];
 
-//        /**
-//         * 上传图片
-//         */
-//        $upload = new UploadFile();
-//        $upload_dir = ATTACH_MALBUM.DS.$this->member_info['member_id'].DS;
-//
-//        $upload->set('default_dir',$upload_dir.$upload->getSysSetPath());
-//        $thumb_width	= '240,1024';
-//        $thumb_height	= '2048,1024';
-//
-//        $upload->set('max_size',C('image_max_filesize'));
-//        $upload->set('thumb_width', $thumb_width);
-//        $upload->set('thumb_height',$thumb_height);
-//        $upload->set('fprefix',$this->member_info['member_id']);
-//        $upload->set('thumb_ext', '_240,_1024');
-//        $result = $upload->upfile('image');
-//        if (!$result){
-//            output_json(0, $upload->fileInputError(), '上传失败');
-//        }
-//
-//        $img_path = $upload->getSysSetPath().$upload->file_name;
-//
-//        $model_trace_image = Model('sns_trace_images');
-//        $insert = array();
-//        $insert['trace_id']	= intval($_POST['trace_id']);
-//        $insert['member_id'] = $this->member_info['member_id'];
-//        $insert['trace_image'] = $img_path;
-//        $insert['upload_time'] = time();
-//        $insert['is_default'] = intval($_POST['is_default']);
-//        $result = $model_trace_image->insert($insert);
-//        if ($result) {
-//            if (intval($_POST['is_default']) == 1) {
-//                $model_trace = Model('sns_tracelog');
-//                $model_trace->tracelogEdit(array('trace_image' => $img_path), array('trace_id' => intval($_POST['trace_id'])));
-//            }
-//
-//            output_json(1, $result);
-//        } else {
-//            output_json(0, '', '更新数据库失败');
-//        }
+        /**
+         * 上传图片
+         */
+        $upload = new UploadFile();
+        $upload_dir = ATTACH_MALBUM.DS.$this->member_info['member_id'].DS;
+
+        $upload->set('default_dir',$upload_dir.$upload->getSysSetPath());
+        $thumb_width	= '240,1024';
+        $thumb_height	= '2048,1024';
+
+        $upload->set('max_size',C('image_max_filesize'));
+        $upload->set('thumb_width', $thumb_width);
+        $upload->set('thumb_height',$thumb_height);
+        $upload->set('fprefix',$this->member_info['member_id']);
+        $upload->set('thumb_ext', '_240,_1024');
+        $result = $upload->upfile('image');
+        if (!$result){
+            output_json(0, $result . $_FILES['image']['name'], '上传失败');
+        }
+
+        $img_path = $upload->getSysSetPath().$upload->file_name;
+
+        $model_trace_image = Model('sns_trace_images');
+        $insert = array();
+        $insert['trace_id']	= intval($_POST['trace_id']);
+        $insert['member_id'] = $this->member_info['member_id'];
+        $insert['trace_image'] = $img_path;
+        $insert['upload_time'] = time();
+        $insert['is_default'] = intval($_POST['is_default']);
+        $result = $model_trace_image->insert($insert);
+        if ($result) {
+            if (intval($_POST['is_default']) == 1) {
+                $model_trace = Model('sns_tracelog');
+                $model_trace->tracelogEdit(array('trace_image' => $img_path), array('trace_id' => intval($_POST['trace_id'])));
+            }
+
+            output_json(1, $result);
+        } else {
+            output_json(0, '', '更新数据库失败');
+        }
 
     }
 
