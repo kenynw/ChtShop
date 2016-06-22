@@ -153,13 +153,13 @@ class member_sns_traceControl extends mobileMemberControl {
     public function trace_image_testOp() {
         $model_trace_image = Model('sns_trace_images');
         $insert = array();
-        $insert['trace_id']	= intval($_POST['trace_id']);
+        $insert['trace_id']	= 12;
         $insert['member_id'] = $this->member_info['member_id'];
         $insert['trace_image'] = 'test.jpge';
         $insert['upload_time'] = time();
-        $insert['is_default'] = intval($_POST['is_default']);
+        $insert['is_default'] = 1;
         var_dump($insert);
-        $result = $model_trace_image->insert($insert);
+        $result = Model('sns_trace_images')->insert($insert);
         echo 'resutl: ' . $result;
     }
     
