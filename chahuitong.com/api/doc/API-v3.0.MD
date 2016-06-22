@@ -1427,7 +1427,7 @@ URL: act=member_sns&op=trace_list
     
 ### 动态详情
 
-URL: act=member_sns&op=trace_detail
+URL: act=member_sns_trace&op=trace_detail
 
 参数：
 
@@ -1466,7 +1466,7 @@ URL: act=member_sns&op=trace_detail
      
 ### 添加动态
 
-URL: act=member_sns&op=trace_add
+URL: act=member_sns_trace&op=trace_add
 
 参数：
 
@@ -1483,7 +1483,7 @@ URL: act=member_sns&op=trace_add
      
 ### 删除动态
 
-URL(Get/Post): act=member_sns&op=trace_del
+URL(Get/Post): act=member_sns_trace&op=trace_del
 
 参数：
 
@@ -1500,7 +1500,7 @@ URL(Get/Post): act=member_sns&op=trace_del
       
 ### 动态评论列表
 
-URL(Get/Post): act=member_sns&op=comment_list
+URL(Get/Post): act=member_sns_trace&op=comment_list
 
 参数：
 
@@ -1534,7 +1534,7 @@ URL(Get/Post): act=member_sns&op=comment_list
        
 ### 添加动态评论
 
-URL(Get/Post): act=member_sns&op=comment_add
+URL(Get/Post): act=member_sns_trace&op=comment_add
 
 参数：
 
@@ -1551,7 +1551,7 @@ URL(Get/Post): act=member_sns&op=comment_add
         
 ### 删除动态评论
 
-URL(Get/Post): act=member_sns&op=comment_del
+URL(Get/Post): act=member_sns_trace&op=comment_del
 
 参数：
 
@@ -1568,7 +1568,7 @@ URL(Get/Post): act=member_sns&op=comment_del
          
 ### 点赞
 
-URL: act=member_sns&op=like_add
+URL: act=member_sns_trace&op=like_add
 
 参数：
 
@@ -1586,7 +1586,7 @@ URL: act=member_sns&op=like_add
           
 ### 取消赞
 
-URL: act=member_sns&op=like_cancel
+URL: act=member_sns_trace&op=like_cancel
 
 参数：
 
@@ -1806,7 +1806,7 @@ URL: act=member_sns_friend&op=followers_list
         "msg": "SUCCESS"
     }
 
-### 粉丝列表
+### 消息列表
 
 URL: act=member_message&op=message_list
 
@@ -1819,29 +1819,33 @@ URL: act=member_message&op=message_list
 
     {
         "code": 1,
-        "data": {
-            "list": [
-                {
-                    "friend_id": "9",
-                    "friend_frommid": "167",
-                    "friend_frommname": "15375870891",
-                    "friend_frommavatar": "",
-                    "friend_tomid": "164",
-                    "friend_tomname": "内测帐号",
-                    "friend_tomavatar": "164_60.jpg",
-                    "friend_addtime": "1464180914",
-                    "friend_followstate": "1"
-                }
-            ],
-            "hasmore": false,
-            "page_total": 1
-        },
-        "msg": "SUCCESS"
+        "msg": "SUCCESS",
+        "data": [
+            {
+                "message_id": "707",
+                "message_parent_id": "0",
+                "from_member_id": "2",
+                "to_member_id": "164",
+                "message_title": null,
+                "message_body": "请留言:smile:",
+                "message_time": "2016.06.06 11:02",
+                "message_update_time": "1465182124",
+                "message_open": "0",
+                "message_state": "0",
+                "message_type": "2",
+                "read_member_id": "",
+                "del_member_id": "",
+                "message_ismore": "0",
+                "from_member_name": "茶汇通",
+                "to_member_name": "内测帐号",
+                "from_member_avatar": "http://img.chahuitong.com/shop/avatar/avatar_2.jpg"
+            }
+        ]
     }
   
 ### 新消息数量
 
-URL: act=member_message&op=message_list
+URL: act=member_message&op=new_count
 
 参数：
 
@@ -1852,24 +1856,14 @@ URL: act=member_message&op=message_list
 
     {
         "code": 1,
+        "msg": "SUCCESS",
         "data": {
-            "list": [
-                {
-                    "friend_id": "9",
-                    "friend_frommid": "167",
-                    "friend_frommname": "15375870891",
-                    "friend_frommavatar": "",
-                    "friend_tomid": "164",
-                    "friend_tomname": "内测帐号",
-                    "friend_tomavatar": "164_60.jpg",
-                    "friend_addtime": "1464180914",
-                    "friend_followstate": "1"
-                }
-            ],
-            "hasmore": false,
-            "page_total": 1
-        },
-        "msg": "SUCCESS"
+            "new_fans": "1", // 新的粉丝
+            "new_comment": "2", // 新的评论 
+            "new_at": "1", // @我
+            "new_system": "62", // 系统消息
+            "count_new_msg": 64 总消息数
+        }
     }
    
 ### 文章列表

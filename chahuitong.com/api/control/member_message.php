@@ -174,30 +174,34 @@ class member_messageControl extends mobileMemberControl {
      */
     public function new_countOp() {
         $count = array();
-        $model_message = Model('message');
-        $count_new_msg = $model_message->countNewMessage($this->member_info['member_id']);
+        $count_new_msg = 0;
+        // 新的粉丝
+        $new_fans = $this->_receivedMsgNewCount(3);
+        if ($new_fans > 0) {
+            $count['new_fans'] = $new_fans;
+            $count_new_msg += $new_fans;
+        }
+        // 评论和赞
+        $new_comment = $this->_receivedMsgNewCount(4);
+        if ($new_comment > 0) {
+            $count['new_comment'] = $new_comment;
+            $count_new_msg += $new_comment;
+        }
+        // @我
+        $new_at = $this->_receivedMsgNewCount(5);
+        if ($new_at > 0) {
+            $count['new_at'] = $new_at;
+            $count_new_msg += $new_at;
+        }
+        // 系统消息
+        $newsystem = $this->_receivedSystemNewNum();
+        if ($newsystem > 0) {
+            $count['new_system'] = $newsystem;
+            $count_new_msg += $newsystem;
+        }
+
         if ($count_new_msg > 0) {
             $count['count_new_msg']  =$count_new_msg;
-            // 新的粉丝
-            $new_fans = $this->_receivedMsgNewCount(3);
-            if ($new_fans > 0) {
-                $count['new_fans'] = $new_fans;
-            }
-            // 评论和赞
-            $new_comment = $this->_receivedMsgNewCount(4);
-            if ($new_comment > 0) {
-                $count['new_comment'] = $new_comment;
-            }
-            // @我
-            $new_at = $this->_receivedMsgNewCount(5);
-            if ($new_at > 0) {
-                $count['new_at'] = $new_at;
-            }
-            // 系统消息
-            $newsystem = $this->_receivedSystemNewNum();
-            if ($newsystem > 0) {
-                $count['new_system'] = $newsystem;
-            }
             output_json(1, $count);
         } else {
             output_json(0, array(), '没有新消息');

@@ -1669,7 +1669,7 @@ version</p></blockquote>
 
 <h3>动态详情</h3>
 
-<p>URL: act=member_sns&amp;op=trace_detail</p>
+<p>URL: act=member_sns_trace&amp;op=trace_detail</p>
 
 <p>参数：</p>
 
@@ -1709,7 +1709,7 @@ http://img.chahuitong.com/shop/common/default_goods_image_240.gif,",
 
 <h3>添加动态</h3>
 
-<p>URL: act=member_sns&amp;op=trace_add</p>
+<p>URL: act=member_sns_trace&amp;op=trace_add</p>
 
 <p>参数：</p>
 
@@ -1727,7 +1727,7 @@ id 动态id</p></blockquote>
 
 <h3>删除动态</h3>
 
-<p>URL(Get/Post): act=member_sns&amp;op=trace_del</p>
+<p>URL(Get/Post): act=member_sns_trace&amp;op=trace_del</p>
 
 <p>参数：</p>
 
@@ -1745,7 +1745,7 @@ id 动态id</p></blockquote>
 
 <h3>动态评论列表</h3>
 
-<p>URL(Get/Post): act=member_sns&amp;op=comment_list</p>
+<p>URL(Get/Post): act=member_sns_trace&amp;op=comment_list</p>
 
 <p>参数：</p>
 
@@ -1780,7 +1780,7 @@ id 动态id</p></blockquote>
 
 <h3>添加动态评论</h3>
 
-<p>URL(Get/Post): act=member_sns&amp;op=comment_add</p>
+<p>URL(Get/Post): act=member_sns_trace&amp;op=comment_add</p>
 
 <p>参数：</p>
 
@@ -1798,7 +1798,7 @@ id 动态id</p></blockquote>
 
 <h3>删除动态评论</h3>
 
-<p>URL(Get/Post): act=member_sns&amp;op=comment_del</p>
+<p>URL(Get/Post): act=member_sns_trace&amp;op=comment_del</p>
 
 <p>参数：</p>
 
@@ -1816,7 +1816,7 @@ id 动态id</p></blockquote>
 
 <h3>点赞</h3>
 
-<p>URL: act=member_sns&amp;op=like_add</p>
+<p>URL: act=member_sns_trace&amp;op=like_add</p>
 
 <p>参数：</p>
 
@@ -1835,7 +1835,7 @@ type 原帖类型 0表示动态 1表示分享商品 2表示评论 默认为0</p>
 
 <h3>取消赞</h3>
 
-<p>URL: act=member_sns&amp;op=like_cancel</p>
+<p>URL: act=member_sns_trace&amp;op=like_cancel</p>
 
 <p>参数：</p>
 
@@ -2064,7 +2064,7 @@ mid 用户ID</p></blockquote>
 }
 </code></pre>
 
-<h3>粉丝列表</h3>
+<h3>消息列表</h3>
 
 <p>URL: act=member_message&amp;op=message_list</p>
 
@@ -2077,30 +2077,34 @@ type 消息类型 0为私信、1为系统消息、2为留言、3为新的粉丝�
 
 <pre><code>{
     "code": 1,
-    "data": {
-        "list": [
-            {
-                "friend_id": "9",
-                "friend_frommid": "167",
-                "friend_frommname": "15375870891",
-                "friend_frommavatar": "",
-                "friend_tomid": "164",
-                "friend_tomname": "内测帐号",
-                "friend_tomavatar": "164_60.jpg",
-                "friend_addtime": "1464180914",
-                "friend_followstate": "1"
-            }
-        ],
-        "hasmore": false,
-        "page_total": 1
-    },
-    "msg": "SUCCESS"
+    "msg": "SUCCESS",
+    "data": [
+        {
+            "message_id": "707",
+            "message_parent_id": "0",
+            "from_member_id": "2",
+            "to_member_id": "164",
+            "message_title": null,
+            "message_body": "请留言:smile:",
+            "message_time": "2016.06.06 11:02",
+            "message_update_time": "1465182124",
+            "message_open": "0",
+            "message_state": "0",
+            "message_type": "2",
+            "read_member_id": "",
+            "del_member_id": "",
+            "message_ismore": "0",
+            "from_member_name": "茶汇通",
+            "to_member_name": "内测帐号",
+            "from_member_avatar": "http://img.chahuitong.com/shop/avatar/avatar_2.jpg"
+        }
+    ]
 }
 </code></pre>
 
 <h3>新消息数量</h3>
 
-<p>URL: act=member_message&amp;op=message_list</p>
+<p>URL: act=member_message&amp;op=new_count</p>
 
 <p>参数：</p>
 
@@ -2111,24 +2115,14 @@ type 消息类型 0为私信、1为系统消息、2为留言、3为新的粉丝�
 
 <pre><code>{
     "code": 1,
+    "msg": "SUCCESS",
     "data": {
-        "list": [
-            {
-                "friend_id": "9",
-                "friend_frommid": "167",
-                "friend_frommname": "15375870891",
-                "friend_frommavatar": "",
-                "friend_tomid": "164",
-                "friend_tomname": "内测帐号",
-                "friend_tomavatar": "164_60.jpg",
-                "friend_addtime": "1464180914",
-                "friend_followstate": "1"
-            }
-        ],
-        "hasmore": false,
-        "page_total": 1
-    },
-    "msg": "SUCCESS"
+        "new_fans": "1", // 新的粉丝
+        "new_comment": "2", // 新的评论 
+        "new_at": "1", // @我
+        "new_system": "62", // 系统消息
+        "count_new_msg": 64 总消息数
+    }
 }
 </code></pre>
 
