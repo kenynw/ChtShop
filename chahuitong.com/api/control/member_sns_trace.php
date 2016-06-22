@@ -151,7 +151,7 @@ class member_sns_traceControl extends mobileMemberControl {
     }
 
     public function trace_image_uploadOp() {
-        echo $_FILES['image']['name'];
+        echo 'fuck' . $_FILES['image']['name'];
 
 //        /**
 //         * 上传图片
