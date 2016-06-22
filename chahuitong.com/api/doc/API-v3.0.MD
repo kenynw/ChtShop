@@ -1482,6 +1482,25 @@ URL: act=member_sns_trace&op=trace_add
         "msg": "SUCCESS"
     }
      
+### 动态图片上传
+
+URL: act=member_sns_trace&op=trace_image_upload
+
+参数：
+
+>key 当前登录令牌     
+>trace_id 动态动态ID   
+>image （File） 图片文件,为File类型 
+>is_default 是否为封面
+
+返回：
+
+    {
+        "code": 1,
+        "data": 16, // 图片ID
+        "msg": "SUCCESS"
+    }
+     
 ### 删除动态
 
 URL(Get/Post): act=member_sns_trace&op=trace_del
@@ -1668,16 +1687,29 @@ URL(Get): act=member_sns_friend&op=popular_list
 
     {
         "code": 1,
+        "msg": "SUCCESS",
         "data": [
             {
-                "friend_frommid": "0",
-                "friend_tomid": "167",
-                "friend_tomname": "15375870891",
-                "friend_tomavatar": "",
-                "followers": "2"
+                "member_id": "164",
+                "member_name": "内测帐号",
+                "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                "trace_list": [
+                    {
+                        "trace_id": "19",
+                        "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif,"
+                    },
+                    {
+                        "trace_id": "19",
+                        "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif,"
+                    }
+                ]
+            },
+            {
+                "member_id": "4825",
+                "member_name": "A湖南安化皇园茶业-諶(shèn)周文",
+                "member_avatar": "http://img.chahuitong.com/shop/avatar/4825.jpg"
             }
-        ],
-        "msg": "SUCCESS"
+        ]
     }
                        
 ### 搜索用户列表
