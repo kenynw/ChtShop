@@ -150,6 +150,19 @@ class member_sns_traceControl extends mobileMemberControl {
         }
     }
 
+    public function trace_image_testOp() {
+        $model_trace_image = Model('sns_trace_images');
+        $insert = array();
+        $insert['trace_id']	= intval($_POST['trace_id']);
+        $insert['member_id'] = $this->member_info['member_id'];
+        $insert['trace_image'] = 'test.jpge';
+        $insert['upload_time'] = time();
+        $insert['is_default'] = intval($_POST['is_default']);
+        var_dump($insert);
+        $result = $model_trace_image->insert($insert);
+        echo 'resutl: ' . $result;
+    }
+    
     public function trace_image_uploadOp() {
 //        echo 'fuck' . $_FILES['image']['name'] . $_POST['trace_id'];
 
