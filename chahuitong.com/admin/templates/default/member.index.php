@@ -1,5 +1,5 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-
+<script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/jquery.edit.js" charset="utf-8"></script>
 <div class="page">
   <div class="fixed-bar">
     <div class="item-title">
@@ -80,6 +80,7 @@
           <th class="align-center">经验值</th>
           <th class="align-center">级别</th>
           <th class="align-center"><?php echo $lang['member_index_login']; ?></th>
+          <th class="align-center"><?php echo $lang['member_index_recommend']; ?></th>
           <th class="align-center"><?php echo $lang['nc_handle']; ?></th>
         </tr>
       <tbody>
@@ -114,6 +115,7 @@
           <td class="align-center"><?php echo $v['member_exppoints'];?></td>
           <td class="align-center"><?php echo $v['member_grade'];?></td>
           <td class="align-center"><?php echo $v['member_state'] == 1?$lang['member_edit_allow']:$lang['member_edit_deny']; ?></td>
+          <td class="w60 align-center yes-onoff"><a href="JavaScript:void(0);" class=" <?php echo $v['member_commend_flag']? 'enabled':'disabled'?>" ajax_branch='member_commend'  nc_type="inline_edit" fieldname="member_commend_flag" fieldid="<?php echo $v['member_id']?>" fieldvalue="<?php echo $v['member_commend_flag']?'1':'0'?>" title="<?php echo $lang['editable'];?>"><img src="<?php echo ADMIN_TEMPLATES_URL;?>/images/transparent.gif"></a></td>
           <td class="align-center"><a href="index.php?act=member&op=member_edit&member_id=<?php echo $v['member_id']; ?>"><?php echo $lang['nc_edit']?></a> | <a href="index.php?act=notice&op=notice&member_name=<?php echo ltrim(base64_encode($v['member_name']),'='); ?>"><?php echo $lang['member_index_to_message'];?></a></td>
         </tr>
         <?php } ?>

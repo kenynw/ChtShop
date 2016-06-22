@@ -236,12 +236,12 @@ class memberControl extends SystemControl{
 	 * ajax操作
 	 */
 	public function ajaxOp(){
+		$model_member = Model('member');
 		switch ($_GET['branch']){
 			/**
 			 * 验证会员是否重复
 			 */
 			case 'check_user_name':
-				$model_member = Model('member');
 				$condition['member_name']	= $_GET['member_name'];
 				$condition['member_id']	= array('neq',intval($_GET['member_id']));
 				$list = $model_member->getMemberInfo($condition);
@@ -255,7 +255,6 @@ class memberControl extends SystemControl{
 			 * 验证邮件是否重复
 			 */
 			case 'check_email':
-				$model_member = Model('member');
 				$condition['member_email'] = $_GET['member_email'];
 				$condition['member_id'] = array('neq',intval($_GET['member_id']));
 				$list = $model_member->getMemberInfo($condition);
@@ -264,6 +263,12 @@ class memberControl extends SystemControl{
 				}else {
 					echo 'false';exit;
 				}
+				break;
+			case 'member_commend' :
+				$update[$_GET['column']] = trim($_GET['value']);
+				$condition['member_id'] = intval($_GET['id']);
+				$model_member->editMember($condition, $update);
+				echo 'true';exit;
 				break;
 		}
 	}

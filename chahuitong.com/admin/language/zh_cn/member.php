@@ -16,7 +16,7 @@ $lang['member_index_if_admin']		= '是否是管理员';
 $lang['member_index_set_admin']		= '设为管理员';
 $lang['member_index_store']			= '店铺';
 $lang['member_index_to_store']		= '访问店铺';
-$lang['member_index_edit_store']		= '编辑店铺';
+$lang['member_index_edit_store']	= '编辑店铺';
 $lang['member_index_to_message']	= '通知';
 $lang['member_index_points']		= '积分';
 $lang['member_index_inform']		= '举报商品';
@@ -32,6 +32,7 @@ $lang['member_index_buy_deny']		= '禁止购买';
 $lang['member_index_talk_deny']		= '禁止发表言论';
 $lang['member_index_login_deny']	= '禁止登录';
 $lang['member_index_login']			= '登录';
+$lang['member_index_recommend']		= '推荐';
 /**
  * 编辑
  */
