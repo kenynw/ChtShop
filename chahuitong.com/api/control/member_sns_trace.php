@@ -180,7 +180,6 @@ class member_sns_traceControl extends mobileMemberControl {
         $insert['trace_image'] = $img_path;
         $insert['upload_time'] = time();
         $insert['is_default'] = intval($_POST['is_default']);
-        var_dump($insert);
         $result = $model_trace_image->insert($insert);
         if ($result) {
             if (intval($_POST['is_default']) == 1) {
