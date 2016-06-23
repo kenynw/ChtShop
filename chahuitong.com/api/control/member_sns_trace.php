@@ -55,7 +55,7 @@ class member_sns_traceControl extends mobileMemberControl {
         } else {
             foreach ($trace_list as $key=>$value) {
                 $trace_list[$key]['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
-                $trace_list[$key]['trace_addtime'] = date('Y.m.d h:i', $value['trace_addtime']);
+                $trace_list[$key]['trace_addtime'] = date('m.d h:i', $value['trace_addtime']);
             }
         }
 

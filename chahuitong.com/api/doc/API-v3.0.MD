@@ -1688,28 +1688,31 @@ URL(Get): act=member_sns_friend&op=popular_list
     {
         "code": 1,
         "msg": "SUCCESS",
-        "data": [
-            {
-                "member_id": "164",
-                "member_name": "内测帐号",
-                "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
-                "trace_list": [
-                    {
-                        "trace_id": "19",
-                        "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif,"
-                    },
-                    {
-                        "trace_id": "19",
-                        "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif,"
-                    }
-                ]
-            },
-            {
-                "member_id": "4825",
-                "member_name": "A湖南安化皇园茶业-諶(shèn)周文",
-                "member_avatar": "http://img.chahuitong.com/shop/avatar/4825.jpg"
-            }
-        ]
+        "data": {
+            "list": [
+                {
+                    "member_id": "164",
+                    "member_name": "内测帐号",
+                    "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                    "trace_list": [
+                        {
+                            "trace_id": "19",
+                            "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
+                        },
+                        {
+                            "trace_id": "19",
+                            "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
+                        },
+                        {
+                            "trace_id": "19",
+                            "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
+                        }
+                    ]
+                }
+            ],
+            "hasmore": true,
+            "page_total": 3
+        }
     }
                        
 ### 搜索用户列表
@@ -1897,6 +1900,44 @@ URL: act=member_message&op=new_count
             "new_at": "1", // @我
             "new_system": "62", // 系统消息
             "count_new_msg": 64 总消息数
+        }
+    }
+   
+        
+### 发现首页
+
+URL(Post): act=discover
+
+参数：
+    无
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": {
+            "trace_list": [
+                {
+                    "trace_id": "33",
+                    "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
+                }
+            ],
+            "class_list": [
+                {
+                    "staple_id": "12",
+                    "counter": "167",
+                    "gc_id": "1",
+                    "gc_name": "普洱茶"
+                }
+            ],
+            "member_list": [
+                {
+                    "member_id": "5098",
+                    "member_name": "克克",
+                    "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif"
+                }
+            ]
         }
     }
    

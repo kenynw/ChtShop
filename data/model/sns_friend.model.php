@@ -46,12 +46,23 @@ class sns_friendModel extends Model {
 		$friend_list	= Db::select($param,$obj_page);
 		return $friend_list;
 	}
+	
+	/**
+	 * 会员列表
+	 * @param array $condition
+	 * @param string $field
+	 * @param number $page
+	 * @param string $order
+	 */
+	public function getFriendList($condition = array(), $field = '*', $page = 0, $order = 'friend_id desc', $limit = '') {
+		return $this->table('sns_friend')->where($condition)->field($field)->page($page)->order($order)->limit($limit)->select();
+	}
 
 	/**
 	 * 按粉丝数从大到小返回用户列表
 	 */
-	public function friendListGroupByToMid($condition, $field='*', $page = 0, $order='followers desc, friend_tomid desc', $limit= 10) {
-		return $this->field($field . ',count(*) as followers')->group('friend_tomid')->having($condition)->page($page)->order($order)->limit($limit)->select();
+	public function friendListGroupByToMid($condition, $field='*', $page = 0, $order='followers desc, friend_tomid desc', $limit= '') {
+		return $this->field($field . ',count(*) as followers')->page($page)->group('friend_tomid')->having($condition)->order($order)->limit($limit)->select();
 	}
 	
 	/**

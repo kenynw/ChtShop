@@ -57,6 +57,7 @@ class member_sns_friendControl extends mobileMemberControl {
 
             $page_count = $model_member->gettotalpage();
 
+
             output_json(1, array('list' => $member_list), 'SUCCESS', mobile_page($page_count));
         }
     }
@@ -84,7 +85,7 @@ class member_sns_friendControl extends mobileMemberControl {
 
                 if (!empty($trace_image_list)) {
                     foreach ($trace_image_list as $k=>$image) {
-                        $trace_image_list[$k]['trace_image'] = snsThumb($image['trace_image']).',';
+                        $trace_image_list[$k]['trace_image'] = snsThumb($image['trace_image']);
                     }
 
                     $member_list[$key]['trace_list'] = $trace_image_list;
@@ -92,7 +93,9 @@ class member_sns_friendControl extends mobileMemberControl {
             }
         }
 
-        output_json(1, $member_list);
+        $page_count = $model_friend->gettotalpage();
+
+        output_json(1, array('list' => $member_list), 'SUCCESS', mobile_page($page_count));
     }
 
     /**
@@ -175,10 +178,7 @@ class member_sns_friendControl extends mobileMemberControl {
         $condition = array();
         $condition['friend_frommid'] = $this->member_info['member_id'];
 
-        $page = new Page();
-        $page->setEachNum($this->page);
-        $page->setStyle('admin');
-        $follow_list = $model_follow->listFriend($condition, '*', $page);
+        $follow_list = $model_follow->getFriendList($condition, '*', $this->page);
 
         $page_count = $model_follow->gettotalpage();
 

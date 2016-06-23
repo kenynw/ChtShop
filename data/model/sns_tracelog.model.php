@@ -57,7 +57,7 @@ class sns_tracelogModel extends Model {
 	 * @param $field 查询字段
 	 * @return array 数组格式的返回结果
 	 */
-	public function getTracelogList($condition,$page='',$field='*', $order='trace_id desc', $limit = 10){
+	public function getTracelogList($condition,$page='',$field='*', $order='trace_id desc', $limit = 0){
 //		$condition_str	= $this->getCondition($condition);
 //		$param	= array();
 //		$param['table']	= 'sns_tracelog';
