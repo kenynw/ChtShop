@@ -50,13 +50,31 @@ class member_messageControl extends mobileMemberControl {
         if (!empty($message_list) && is_array($message_list)) {
             $model_member = Model('member');
             foreach ($message_list as $key=>$value) {
-                // 消息打开状态
+                // 设置并更新消息打开状态
                 $value['message_open'] = '0';
-                if ($value['read_member_id']) {
+                if (!empty($value['read_member_id'])) {
                     $read_list = explode(',', $value['read_member_id']);
                     if (in_array($this->member_info['member_id'], $read_list)) {
                         $value['message_open'] = '1';
+                    } else  { // 更新系统消息状态为已读
+                        $read_list[] = $this->member_info['member_id'];
+                        foreach ($read_list as $readid_k=>$readid_v){
+                            if ($readid_v == ''){
+                                unset($read_list[$readid_k]);
+                            }
+                        }
+                        $read_list = array_unique($read_list);//去除相同
+                        sort($read_list);//排序
+                        $read_list = ',' . implode(',',$read_list) . ',';
                     }
+                } else {
+                    $read_list = ',' . $this->member_info['member_id'] . '.';
+                }
+                if ($value['message_type'] == 1) {
+                    $this->model_message->updateCommonMessage(array('read_member_id'=>$read_list),array('message_id'=>"{$read_list}"));
+                } else {
+                    // 更新消息状态为已读
+                    $this->model_message->updateCommonMessage(array('message_open'=>'1'),array('message_id' => $value['message_id']));
                 }
 
                 // 用户与动态信息
@@ -90,7 +108,9 @@ class member_messageControl extends mobileMemberControl {
             }
         }
 
-        output_json(1, $message_list);
+        $page_count = $this->obj_page->getTotalNum();
+
+        output_json(1, array('list' => $message_list), 'SUCCESS', mobile_page($page_count));
     }
 
     /**

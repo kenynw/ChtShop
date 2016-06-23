@@ -45,7 +45,7 @@ class member_sns_traceControl extends mobileMemberControl {
         $condition['trace_originalid'] = '0'; // 原创
         $condition['limit'] =$this->page;
 
-        $file = 'trace_id,trace_originalid,trace_memberid,trace_membername,trace_memberavatar,trace_title,trace_addtime,trace_state,trace_privacy,trace_commentcount';
+        $file = 'trace_id,trace_originalid,trace_memberid,trace_membername,trace_memberavatar,trace_title,trace_image,trace_addtime,trace_state,trace_privacy,trace_commentcount';
 
         $trace_list = $tracelog_model->getTracelogList($condition, '', $file);
 
@@ -56,6 +56,7 @@ class member_sns_traceControl extends mobileMemberControl {
             foreach ($trace_list as $key=>$value) {
                 $trace_list[$key]['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
                 $trace_list[$key]['trace_addtime'] = date('m.d h:i', $value['trace_addtime']);
+                $trace_list[$key]['trace_image'] = snsThumb($value['trace_image']);
             }
         }
 
