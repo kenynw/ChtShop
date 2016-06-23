@@ -82,9 +82,11 @@ class member_sns_traceControl extends mobileMemberControl {
         // 图片信息
         $model_trace_image = Model('sns_trace_images');
         $image_list = $model_trace_image->where(array('trace_id' => $id))->select();
+        $trace_image = '';
         foreach ($image_list as $image) {
-            $trace_info['trace_image'] .= snsThumb($image['trace_image']) . ',';
+            $trace_image .= snsThumb($image['trace_image']) . ',';
         }
+        $trace_info['trace_image'] = $trace_image;
 
         if (empty($trace_info)) {
             output_json(0, $trace_info, '暂无数据');
