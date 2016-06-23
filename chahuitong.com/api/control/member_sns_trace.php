@@ -79,6 +79,11 @@ class member_sns_traceControl extends mobileMemberControl {
         $condition['trace_privacy'] = 0;
         $condition['trace_state'] = 0;
         $trace_info = $tracelog_model->getTracelogRow($condition);
+        if (empty($trace_info)) output_json(0, array(), '暂无数据');
+
+        // 处理头像
+        $trace_info['trace_memberavatar'] = getMemberAvatar($trace_info['trace_memberavatar']);
+
         // 图片信息
         $model_trace_image = Model('sns_trace_images');
         $image_list = $model_trace_image->where(array('trace_id' => $id))->select();
