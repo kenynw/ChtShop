@@ -1413,6 +1413,7 @@ URL: act=member_sns&op=trace_list
                     "trace_membername": "茶汇通",
                     "trace_memberavatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
                     "trace_title": "test test 茶汇通 茶汇通",
+                    "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
                     "trace_addtime": "2016.05.25 09:00",
                     "trace_state": "0",
                     "trace_privacy": "0",
@@ -1662,6 +1663,7 @@ URL: act=member_sns_home&op=trace_list
                     "trace_membername": "内测帐号",
                     "trace_memberavatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
                     "trace_title": "ttttt",
+                    "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
                     "trace_addtime": "2016.06.01 08:03",
                     "trace_state": "0",
                     "trace_privacy": "0",
@@ -1857,27 +1859,31 @@ URL: act=member_message&op=message_list
     {
         "code": 1,
         "msg": "SUCCESS",
-        "data": [
-            {
-                "message_id": "707",
-                "message_parent_id": "0",
-                "from_member_id": "2",
-                "to_member_id": "164",
-                "message_title": null,
-                "message_body": "请留言:smile:",
-                "message_time": "2016.06.06 11:02",
-                "message_update_time": "1465182124",
-                "message_open": "0",
-                "message_state": "0",
-                "message_type": "2",
-                "read_member_id": "",
-                "del_member_id": "",
-                "message_ismore": "0",
-                "from_member_name": "茶汇通",
-                "to_member_name": "内测帐号",
-                "from_member_avatar": "http://img.chahuitong.com/shop/avatar/avatar_2.jpg"
-            }
-        ]
+        "data": {
+            "list": [
+                {
+                    "message_id": "535",
+                    "message_parent_id": "0",
+                    "from_member_id": "0",
+                    "to_member_id": "164",
+                    "message_title": null,
+                    "message_body": "内测帐号关注了你",
+                    "message_time": "2016.06.07 15:30",
+                    "message_update_time": "1465284615",
+                    "message_open": "0",
+                    "message_state": "0",
+                    "message_type": "3",
+                    "read_member_id": "",
+                    "del_member_id": "",
+                    "message_ismore": "0",
+                    "from_member_name": "内测帐号",
+                    "to_member_name": "qweqwe",
+                    "from_member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif"
+                }
+            ],
+            "hasmore": true,
+            "page_total": "82"
+        }
     }
   
 ### 新消息数量
