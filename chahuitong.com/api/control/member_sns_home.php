@@ -65,23 +65,25 @@ class member_sns_homeControl extends mobileHomeControl {
         $condition_trace = array();
         $condition_trace['trace_memberid']	= $mid;
         $condition_trace['trace_state']		= 0;
-        $condition_trace['limit'] = $this->page;
-        $field_trace = 'trace_id,trace_originalid,trace_title,trace_addtime,trace_state,trace_privacy,trace_commentcount,trace_likecount';
+        $field_trace = 'trace_id,trace_originalid,trace_title,trace_image,trace_addtime,trace_state,trace_privacy,trace_commentcount,trace_likecount';
         switch ($relation){
             case 2:
-                $condition_trace['trace_privacy']	= array('in',array(0,1));
+                $condition_trace['trace_privacy']	= array('in', array(0,1));
                 break;
             case 1:
             default:
                 $condition_trace['trace_privacy']	= 0;
         }
-        $trace_list = $model_trace->getTracelogList($condition_trace, '', $field_trace);
+        $trace_list = $model_trace->getTracelogList($condition_trace, $this->page, $field_trace);
         // 数据处理
         if (!empty($trace_list)) {
             foreach ($trace_list as $key=>$value) {
                 $trace_list[$key]['trace_addtime'] = date('Y.m.d h:i', $value['trace_addtime']);
+                $trace_list[$key]['trace_image'] = snsThumb($value['trace_image']);
             }
-            $member_info['trace_list'] = $trace_list;
+
+            $page_count = $model_trace->gettotalpage();
+            $member_info['trace_list'] = array_merge(array('list' => $trace_list), mobile_page($page_count));
         }
 
         output_json(1, $member_info);
