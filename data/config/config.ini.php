@@ -12,8 +12,8 @@ $config['mobile_site_url'] 		= 'http://api.chahuitong.com';
 $config['wap_site_url'] 		= 'http://www.chahuitong.com/wap';
 $config['chat_site_url'] 		= 'http://www.chahuitong.com/chat';
 $config['node_site_url'] 		= 'http://www.chahuitong.com:8090';
-$config['upload_site_url']		= 'http://img.chahuitong.com';
-$config['resource_site_url']	= 'http://res.chahuitong.com';
+$config['upload_site_url']		= 'http://120.25.216.71/data/upload';
+$config['resource_site_url']	= 'http://120.25.216.71/data/resource';
 
 # 系统版本号,安装时自动生成
 $config['version'] 		= '201502020388';
