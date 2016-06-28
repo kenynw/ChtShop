@@ -2,13 +2,13 @@
 defined('InShopNC') or exit('Access Invalid!');
 
 $config = array();
-$config['base_site_url']        = 'http://www.chahuitong.com';
-$config['shop_site_url'] 		= 'http://www.chahuitong.com/shop';
-$config['cms_site_url'] 		= 'http://www.chahuitong.com/cms';
-$config['microshop_site_url'] 	= 'http://www.chahuitong.com/ms';
-$config['circle_site_url'] 		= 'http://www.chahuitong.com/circle';
-$config['admin_site_url'] 		= 'http://system.chahuitong.com';
-$config['mobile_site_url'] 		= 'http://api.chahuitong.com';
+$config['base_site_url']        = 'http://120.25.216.71';
+$config['shop_site_url'] 		= 'http://120.25.216.71/shop';
+$config['cms_site_url'] 		= 'http://120.25.216.71/cms';
+$config['microshop_site_url'] 	= 'http://120.25.216.71/ms';
+$config['circle_site_url'] 		= 'http://120.25.216.71/circle';
+$config['admin_site_url'] 		= 'http://120.25.216.71/admin';
+$config['mobile_site_url'] 		= 'http://120.25.216.71/api';
 $config['wap_site_url'] 		= 'http://www.chahuitong.com/wap';
 $config['chat_site_url'] 		= 'http://www.chahuitong.com/chat';
 $config['node_site_url'] 		= 'http://www.chahuitong.com:8090';
