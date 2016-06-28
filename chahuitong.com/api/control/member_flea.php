@@ -171,6 +171,7 @@ class member_fleaControl extends mobileMemberControl {
         $goods_array['goods_name']		    = $_POST['goods_name'];
         $goods_array['gc_id']			    = $_POST['cate_id'];
         $goods_array['gc_name']			    = $_POST['cate_name'];
+        $goods_array['member_id']			= $this->member_info['member_id'];
         $goods_array['flea_pname']		    = $_POST['flea_pname'];
         $goods_array['flea_area_id']	    = $_POST['area_id'];
         $goods_array['flea_area_name']	    = $_POST['area_info'];
@@ -178,9 +179,9 @@ class member_fleaControl extends mobileMemberControl {
         $goods_array['goods_tag']		    = $_POST['goods_tag'];
         $goods_array['goods_store_price']   = $_POST['price'];
         $goods_array['goods_show']		    = '1';
-        $goods_array['goods_commend']	    = $_POST['goods_commend'];
+        $goods_array['goods_commend']	    = 0;
         $goods_array['goods_body']		    = $_POST['g_body'];
-        $goods_array['goods_keywords']		= empty($_POST['seo_keywords']) ? $_POST['tag'] : $_POST['seo_keywords'];
+        $goods_array['goods_keywords']		= empty($_POST['seo_keywords']) ? $_POST['goods_tag'] : $_POST['seo_keywords'];
         $goods_array['goods_description']   = empty($_POST['seo_description']) ? $_POST['goods_name'].','.str_cut($_POST['g_body'], 120) : $_POST['seo_description'];
         $state = $model_store_goods->saveGoods($goods_array);
         if($state) {
@@ -197,8 +198,8 @@ class member_fleaControl extends mobileMemberControl {
             /**
              * 商品封面图片修改
              */
-            if(!empty($_POST['goods_file_id'][0])) {
-                $image_info	= $model_store_goods->getListImageGoods(array('upload_id'=>intval($_POST['goods_file_id'][0])));
+            if(!empty($_POST['goods_file_id'])) {
+                $image_info	= $model_store_goods->getListImageGoods(array('upload_id'=>intval($_POST['goods_file_id'])));
                 $goods_image	= $image_info[0]['file_thumb'];
                 $model_store_goods->updateGoods(array('goods_image'=>$goods_image),$state);
             }
@@ -261,10 +262,88 @@ class member_fleaControl extends mobileMemberControl {
         $result2 = $model_upload->add($insert_array);
 
         $data = array();
-        $data['file_id']	= $result2;
+        $data['upload_id']	= $result2;
         $data['file_name']	= $_POST['pic_thumb'];
         $data['file_path']	= $_POST['pic_thumb'];
         output_json(1, $data);
+    }
+
+    /**
+     * 删除闲置物品
+     */
+    public function drop_goodsOp() {
+        /**
+         * 实例化闲置物品模型
+         */
+        $model_store_goods	= Model('flea');
+        /**
+         * 检查商品是否属于店铺
+         */
+        $goods_id = trim(empty($_GET['goods_id']) ? $_POST['goods_id'] : $_GET['goods_id']);
+        if(empty($goods_id)) output_json(0, 0, Language::get('wrong_argument'));
+
+        //统计输入数量
+        $goods_id_array = explode(',',$goods_id);
+        $input_goods_count = count($goods_id_array);
+        //统计确认的数量
+        $para = array();
+        $para['member_id'] = $this->member_info['member_id'];
+        $para['goods_id_in'] = $goods_id;
+        $verify_count = intval($model_store_goods->countGoods($para));
+        //判断输入和确认是否一致
+        if($input_goods_count !== $verify_count) output_json(0, 0, Language::get('wrong_argument'));
+
+        $state	= $model_store_goods->dropGoods($goods_id);
+        if($state) {
+            output_json(1, $state, '删除成功');
+        } else {
+            output_json(0, 0, '删除失败');
+        }
+    }
+
+    /**
+     * 编辑闲置物品保存
+     */
+    public function edit_goodsOp() {
+        $goods_id	= intval($_POST['goods_id']);
+
+        if (empty($_POST['goods_name'])) output_json(0, 0, Language::get('error_title_null'));
+
+        /**
+         * 实例化闲置物品模型
+         */
+        $model_store_goods	= Model('flea');
+        $goods_array			= array();
+        $goods_array['goods_name']		= $_POST['goods_name'];
+        if (intval($_POST['cate_id']) != 0) {
+            $goods_array['gc_id']	    = $_POST['cate_id'];
+            $goods_array['gc_name']		= $_POST['cate_name'];
+        }
+        $goods_array['flea_pname']		= $_POST['flea_pname'];
+        $goods_array['flea_pphone']		= $_POST['flea_pphone'];
+        $goods_array['flea_area_id']	= $_POST['area_id'];
+        $goods_array['flea_area_name']	= $_POST['area_info'];
+        $goods_array['goods_tag']		= $_POST['goods_tag'];
+        $goods_array['goods_store_price']= $_POST['price'];
+        $goods_array['goods_show']		= '1';
+        $goods_array['goods_commend']	= 0;
+        $goods_array['goods_body']		= $_POST['g_body'];
+        $goods_array['goods_keywords']		= empty($_POST['seo_keywords']) ? $_POST['goods_tag'] : $_POST['seo_keywords'];
+        $goods_array['goods_description']   = empty($_POST['seo_description']) ? $_POST['goods_name'].','.str_cut($_POST['g_body'], 120) : $_POST['seo_description'];
+        $state = $model_store_goods->updateGoods($goods_array,$goods_id);
+        if($state) {
+            /**
+             * 闲置物品封面图片修改
+             */
+            if(!empty($_POST['goods_file_id'])) {
+                $image_info	= $model_store_goods->getListImageGoods(array('upload_id'=>intval($_POST['goods_file_id'])));
+                $goods_image	= $image_info[0]['file_thumb'];
+                $model_store_goods->updateGoods(array('goods_image'=>$goods_image),$goods_id);
+            }
+            output_json(1, $state);
+        } else {
+            output_json(0, 0, '添加超时,请重试');
+        }
     }
 
     /**

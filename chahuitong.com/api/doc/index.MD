@@ -2221,6 +2221,102 @@ URL: act=member_flea&op=flea_detail
         }
     }
      
+### 茶市发布商品
+
+#### 第一步先上传图片
+
+URL: act=member_flea&op=image_upload
+
+参数：
+
+>key 登录信息   
+>upload_id 原图片ID,用于编辑时更改图片,需要把原图片ID传入用来删除原图片
+>image 图片   
+
+返回：
+    
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": {
+            "upload_id": 135,
+            "file_name": "164_05204352615783671_240.png",
+            "file_path": "164_05204352615783671_240.png"
+        }
+    }
+    
+#### 第二步再上传文字内容
+
+URL: act=member_flea&op=save_goods
+
+参数：
+
+>key 登录信息   
+>goods_file_id 封面图片ID,由第一步上传成功后返回的第一张图片的ID
+>*goods_name 图片   
+>cate_id 分类ID   			 
+>cate_name 分类名称     			 
+>flea_pname 联系人名称		 
+>area_id 地区ID    	 
+>area_info 地区名称 	 
+>flea_pphone 联系电话     		 
+>goods_tag 标签   		 
+>price 价格 传0表示不供价    
+>g_body 描述  		 
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": 56
+    }
+            
+### 茶市删除商品
+
+URL: act=member_flea&op=drop_goods
+
+参数：
+
+>key 登录信息   
+>goods_id 要删除的商品ID,可批量删除,多个ID用逗号分割 
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": 56
+    }
+          
+### 茶市编辑商品
+
+URL: act=member_flea&op=edit_goods
+
+参数：
+
+>key 登录信息   
+>goods_id 商品ID
+>goods_file_id 封面图片ID,由第一步上传成功后返回的第一张图片的ID
+>*goods_name 图片   
+>cate_id 分类ID   			 
+>cate_name 分类名称     			 
+>flea_pname 联系人名称		 
+>area_id 地区ID    	 
+>area_info 地区名称 	 
+>flea_pphone 联系电话     		 
+>goods_tag 标签   		 
+>price 价格 传0表示不供价    
+>g_body 描述  		 
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": 56
+    }
+     
 ### 茶市商品留言
 
 URL: act=member_flea&op=save_consult

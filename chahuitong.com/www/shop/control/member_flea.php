@@ -169,7 +169,8 @@ class member_fleaControl extends BaseMemberControl{
 			}
 		}
 	}
-	               	/**
+
+	/**
 	 *删除闲置物品
 	 */
 	public function flea_delOp(){
@@ -180,6 +181,7 @@ class member_fleaControl extends BaseMemberControl{
 			showMessage(L('nc_common_del_fail'));
 		}
 	}
+	
 	/**
 	 * 删除闲置物品
 	 */	

@@ -2491,6 +2491,106 @@ goods_id 商品ID  如果不传或者传0将会返回用户的信息</p></blockq
 }
 </code></pre>
 
+<h3>茶市发布商品</h3>
+
+<h4>第一步先上传图片</h4>
+
+<p>URL: act=member_flea&amp;op=image_upload</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 登录信息 <br/>
+upload_id 原图片ID,用于编辑时更改图片,需要把原图片ID传入用来删除原图片
+image 图片</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "SUCCESS",
+    "data": {
+        "upload_id": 135,
+        "file_name": "164_05204352615783671_240.png",
+        "file_path": "164_05204352615783671_240.png"
+    }
+}
+</code></pre>
+
+<h4>第二步再上传文字内容</h4>
+
+<p>URL: act=member_flea&amp;op=save_goods</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 登录信息 <br/>
+goods_file_id 封面图片ID,由第一步上传成功后返回的第一张图片的ID
+*goods_name 图片 <br/>
+cate_id 分类ID              <br/>
+cate_name 分类名称                <br/>
+flea_pname 联系人名称    <br/>
+area_id 地区ID      <br/>
+area_info 地区名称    <br/>
+flea_pphone 联系电话          <br/>
+goods_tag 标签          <br/>
+price 价格 传0表示不供价  <br/>
+g_body 描述</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "SUCCESS",
+    "data": 56
+}
+</code></pre>
+
+<h3>茶市删除商品</h3>
+
+<p>URL: act=member_flea&amp;op=drop_goods</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 登录信息 <br/>
+goods_id 要删除的商品ID,可批量删除,多个ID用逗号分割</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "SUCCESS",
+    "data": 56
+}
+</code></pre>
+
+<h3>茶市编辑商品</h3>
+
+<p>URL: act=member_flea&amp;op=edit_goods</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 登录信息 <br/>
+goods_id 商品ID
+goods_file_id 封面图片ID,由第一步上传成功后返回的第一张图片的ID
+*goods_name 图片 <br/>
+cate_id 分类ID              <br/>
+cate_name 分类名称                <br/>
+flea_pname 联系人名称    <br/>
+area_id 地区ID      <br/>
+area_info 地区名称    <br/>
+flea_pphone 联系电话          <br/>
+goods_tag 标签          <br/>
+price 价格 传0表示不供价  <br/>
+g_body 描述</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "SUCCESS",
+    "data": 56
+}
+</code></pre>
+
 <h3>茶市商品留言</h3>
 
 <p>URL: act=member_flea&amp;op=save_consult</p>
