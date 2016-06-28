@@ -1,1 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?>上传文件大小不符！Logo未上传成功

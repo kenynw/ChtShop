@@ -5,8 +5,13 @@
  */
 defined('InShopNC') or exit('Access Invalid!');
 
-class fleaModel {
-	/**
+class fleaModel extends Model {
+
+    public function __construct() {
+        parent::__construct('flea');
+    }
+
+    /**
 	 * 商品保存
 	 *
 	 * @param	array $param 商品资料
@@ -40,11 +45,13 @@ class fleaModel {
 		$result	= Db::insert('flea',$goods_array);
 		return $result;
 	}
+    
 	/**
 	 * 商品列表
 	 */ 	
 	public function listGoods($param,$page = '',$field='*') {
 		$condition_str = $this->getCondition($param);
+        
 		$array	= array();
 		$array['table']	= 'flea';
 		$array['where']	= $condition_str;
@@ -53,7 +60,15 @@ class fleaModel {
 		$array['limit'] = $param['limit'];
 		$list_goods		= Db::select($array,$page);
 		return $list_goods;
-	}	
+	}
+
+    /**
+     * 商品详情
+     */
+    public function getGoodsInfo($condition, $field='*') {
+        return $this->table('flea')->field($field)->where($condition)->find();
+    }
+    
 	/**
 	 * 他们正在卖的
 	 */
@@ -251,6 +266,9 @@ class fleaModel {
 		if($condition_array['goods_id'] != 0) {
 			$condition_sql  .= " and goods_id = ".$condition_array['goods_id'];
 		}
+        if($condition_array['commend'] == 1) {
+            $condition_sql	.= " and goods_commend = ".$condition_array['commend'];
+        }
 		if($condition_array['keyword'] != '') {
 			$condition_sql  .= " and goods_name LIKE '%".$condition_array['keyword']."%'";
 		}

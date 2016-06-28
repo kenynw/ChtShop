@@ -50,16 +50,20 @@ class flea_consultModel {
 	 * @param unknown_type $type 查询范围
 	 * @param unknown_type $ctype 咨询类型
 	 */
-	public function getConsultList($condition,$obj_page='',$type="simple",$ctype='goods'){
+	public function getConsultList($condition,$obj_page='',$type="simple", $field = '*', $ctype='goods'){
 		$condition_str = $this->getCondition($condition);
 		$param = array();
 		$param['where'] = $condition_str;
 		switch($type){
 			case 'seller':
-				$param['field']		= 'flea_consult.*,member.member_name,flea.goods_name';
-				$param['table'] 	= 'flea_consult,member,flea';
+				$param['field']		= 'flea_consult.'. $field .',member.member_name,member_avatar';
+				$param['table'] 	= 'flea_consult,member';
 				$param['join_type']	= 'LEFT JOIN';
-				$param['join_on']	= array('flea_consult.member_id = member.member_id','flea_consult.goods_id = flea.goods_id');
+				$param['join_on']	= array('flea_consult.member_id = member.member_id');
+				break;
+			case 'simple' :
+				$param['field']		= 'flea_consult.*';
+				$param['table'] 	= 'flea_consult';
 				break;
 		}
 		$param['order'] = $condition['order'];

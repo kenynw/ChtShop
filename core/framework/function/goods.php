@@ -131,6 +131,26 @@ function snsThumb($image_name = '', $type = ''){
 }
 
 /**
+ * 取得闲置商品缩略图的完整URL路径
+ *
+ * @param string $imgurl 商品名称
+ * @param string $type 缩略图类型  值为240,1024
+ * @return string
+ */
+function fleaThumb($image_name = '', $member_id, $type = ''){
+    if (!in_array($type, array('240','1024'))) $type = '240';
+    if (empty($image_name)){
+        return UPLOAD_SITE_URL.'/'.defaultGoodsImage('240');
+    }
+
+    $file_path = ATTACH_MALBUM.DS.$member_id.DS.$image_name;
+    if(!file_exists(BASE_UPLOAD_PATH.DS.$file_path)) {
+		return UPLOAD_SITE_URL.'/'.defaultGoodsImage('240');
+	}
+    return UPLOAD_SITE_URL.DS.$file_path;
+}
+
+/**
  * 取得积分商品缩略图的完整URL路径
  *
  * @param string $imgurl 商品名称

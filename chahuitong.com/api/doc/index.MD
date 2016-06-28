@@ -2068,7 +2068,7 @@ URL(Post): act=article_comment&op=comment_del
      
 ### 文章评论点赞
 
-URL(Post): act=article_comment&op=comment_up
+URL: act=article_comment&op=comment_up
 
 参数：
 
@@ -2082,5 +2082,159 @@ URL(Post): act=article_comment&op=comment_up
         "msg": "SUCCESS",
         "data": true
     }
-   
     
+### 我发布的茶市商品
+
+URL: act=member_flea
+
+参数：     
+
+>key 登录信息   
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": {
+            "list": [
+                {
+                    "goods_id": "5",
+                    "goods_name": "普洱茶 08年鹏程茶厂特级布朗山熟茶",
+                    "member_id": "1354",
+                    "goods_tag": "普洱茶",
+                    "goods_store_price": "1680.00",
+                    "goods_show": "0",
+                    "goods_click": "0",
+                    "goods_add_time": "7月",
+                    "flea_pname": "",
+                    "flea_pphone": "13618799142",
+                    "goods_image_url": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+                    "abstract": "7年干仓陈化，2008年勐海鹏程茶厂特级布朗山熟饼，现货37件出售，性价比高，口感醇和，生津明显。有意者打电话或加微信【397762737】私聊。"
+                }
+            ],
+            "hasmore": true,
+            "page_total": 5
+        }
+    }
+ 
+### 茶市商品列表
+
+URL: act=member_flea&op=flea_list
+
+参数：     
+
+>key 登录信息   
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": {
+            "list": [
+                {
+                    "goods_id": "5",
+                    "goods_name": "普洱茶 08年鹏程茶厂特级布朗山熟茶",
+                    "member_id": "1354",
+                    "goods_tag": "普洱茶",
+                    "goods_store_price": "1680.00",
+                    "goods_show": "0",
+                    "goods_click": "0",
+                    "goods_add_time": "7月",
+                    "flea_pname": "",
+                    "flea_pphone": "13618799142",
+                    "goods_image_url": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+                    "abstract": "7年干仓陈化，2008年勐海鹏程茶厂特级布朗山熟饼，现货37件出售，性价比高，口感醇和，生津明显。有意者打电话或加微信【397762737】私聊。"
+                }
+            ],
+            "hasmore": true,
+            "page_total": 5
+        }
+    }
+ 
+### 茶市商品详情
+
+URL: act=member_flea&op=flea_detail
+
+参数：
+
+>key 登录信息
+>goods_id 商品ID  如果不传或者传0将会返回用户的信息
+
+返回：
+    
+    查看详情页时:
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": {
+            "goods_id": "21",
+            "goods_name": " 牛蒡茶",
+            "gc_id": "0",
+            "gc_name": "",
+            "member_id": "4154",
+            "member_name": "13430056089",
+            "goods_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif,http://img.chahuitong.com/shop/common/default_goods_image_240.gif,http://img.chahuitong.com/shop/common/default_goods_image_240.gif,",
+            "goods_tag": [],
+            "goods_price": "0.00",
+            "goods_store_price": "80.00",
+            "goods_show": "0",
+            "goods_click": "39",
+            "flea_collect_num": "0",
+            "goods_commend": "0",
+            "goods_add_time": "2016-06-27 19:39",
+            "goods_keywords": "",
+            "goods_description": "",
+            "goods_body": "牛蒡性温、味甘无毒，通十二经脉、除五脏恶气，牛蒡茶有排除人体毒素，是老幼四季皆宜的保健饮品",
+            "commentnum": "2",
+            "salenum": "0",
+            "flea_quality": "0",
+            "flea_pname": "黄小姐",
+            "flea_pphone": "13430056089",
+            "flea_area_id": "0",
+            "flea_area_name": "揭阳",
+            "consult_list": [
+                {
+                    "member_id": "164",
+                    "consult_id": "5",
+                    "goods_id": "21",
+                    "consult_content": "1",
+                    "consult_addtime": "1467025302",
+                    "consult_reply": null,
+                    "consult_reply_time": null,
+                    "member_name": "内测帐号",
+                    "member_avatar": "164_60.jpg"
+                }
+            ]
+        }
+    }
+    发布新商品时,返回用户信息用于自动填充用户已经保存过资料的信息
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": {
+            "member_id": "164",
+            "member_mobile": "15375870891",
+            "member_truename": "廖培坤",
+            "member_areainfo": "福建厦门湖里区"
+        }
+    }
+     
+### 茶市商品留言
+
+URL: act=member_flea&op=save_consult
+
+参数：
+
+>key 登录令牌
+>goods_id 商品ID  
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "咨询发布成功",
+        "data": 5 // 新插入的数据ID
+    }
+             
