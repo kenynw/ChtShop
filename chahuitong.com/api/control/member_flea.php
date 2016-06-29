@@ -123,27 +123,6 @@ class member_fleaControl extends mobileMemberControl {
 
         output_json(1, $goods_info);
     }
-    
-    /**
-     * 添加闲置
-     */
-    public function add_goodsOp() {
-        /**
-         * 检测用户发布闲置物品个数
-         */
-        $model_flea = Model('flea');
-        $goods_num=$model_flea->countGoods(array('member_id'=>$this->member_info['member_id']));
-        if($goods_num >= 10) output_json(0, 0, Language::get('flea_limit_goods_notice'));
-
-        $goods_image_path	= UPLOAD_SITE_URL.DS.ATTACH_MALBUM.'/'.$this->member_info['member_id'].'/';	//店铺商品图片目录地址
-        //查询会员信息
-        $this->member_info = $this->getMemberAndGradeInfo(true);
-        self::profile_menu('add_goods','goods_add');
-        Tpl::output('menu_sign','flea');
-        Tpl::output('menu_sign_url','index.php?act=member_flea');
-        Tpl::output('menu_sign1','add_flea_goods');
-        Tpl::showpage('store_flea_goods_add');
-    }
 
     /**
      * 保存闲置物品
@@ -388,9 +367,9 @@ class member_fleaControl extends mobileMemberControl {
 
                 $abstract = preg_replace('/<[^>]*>|\s+/', '', $val['goods_body']);
                 if ($abstract) {
-                    $goods_list[$key]['abstract'] = str_cut($abstract,140);
+                    $goods_list[$key]['goods_abstract'] = str_cut($abstract,140);
                 } else {
-                    $goods_list[$key]['abstract'] = Language::get('flea_no_explain');
+                    $goods_list[$key]['goods_abstract'] = Language::get('flea_no_explain');
                 }
 
                 $goods_list[$key]['goods_add_time'] = $this->_time_comb(intval($val['goods_add_time'])) . '前';

@@ -7,25 +7,16 @@
 
  */
 defined('InShopNC') or exit('Access Invalid!');
-
-function output_data($datas, $extend_data = array())
-{
-    $version = $_POST['version'];
-    if (empty($version)) {
-        $version = $_GET['version'];
-    }
-    if(intval($version) >= VERSION_3_0) {
-        output_json(1, $datas, 'SUCCESS', $extend_data);
-    }
-
+function output_data($datas, $extend_data = array()) {
     $data = array();
-    $data['code'] = 200;
+    $data['code'] = 1;
+    $data['msg'] = 'SUCCESS';
 
     if (!empty($extend_data)) {
         $data = array_merge($data, $extend_data);
     }
 
-    $data['datas'] = $datas;
+    $data['data'] = $datas;
 
     if (!empty($_GET['callback'])) {
         echo $_GET['callback'] . '(' . json_encode($data) . ')';
@@ -36,14 +27,15 @@ function output_data($datas, $extend_data = array())
     }
 }
 
-function output_error($message, $extend_data = array())
-{
-    $datas = array('error' => $message);
-    output_data($datas, $extend_data);
+function output_error($message, $extend_data = array()) {
+    $data = array();
+    $data['code'] = 0;
+    $data['msg'] = $message;
+    echo json_encode($data);
+    die;
 }
 
-function mobile_page($page_count)
-{
+function mobile_page($page_count) {
     //输出是否有下一页
     $extend_data = array();
     $current_page = intval($_GET['curpage']);
@@ -59,8 +51,7 @@ function mobile_page($page_count)
     return $extend_data;
 }
 
-function output_json($code, $data = array(), $msg = 'SUCCESS', $extend_data = array())
-{
+function output_json($code, $data = array(), $msg = 'SUCCESS', $extend_data = array()) {
     if (!is_numeric($code)) return;
 
     $result = array();
