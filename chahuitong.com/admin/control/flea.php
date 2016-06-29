@@ -71,15 +71,21 @@ class fleaControl extends SystemControl{
 	 * ajax操作
 	 */
 	public function ajaxOp(){
+		$model_goods = Model('flea');
 		switch ($_GET['branch']){
 			/**
 			 * 商品名称
 			 */
 			case 'goods_name':
-				$model_goods = Model('flea');
 				$update_array = array();
 				$update_array[$_GET['column']] = $_GET['value'];
 				$model_goods->updateGoods($update_array,$_GET['id']);
+				echo 'true';exit;
+				break;
+
+			case 'goods_commend':
+				$update[$_GET['column']] = trim($_GET['value']);
+				$model_goods->updateGoods($update,$_GET['id']);
 				echo 'true';exit;
 				break;
 		}

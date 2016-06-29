@@ -45,6 +45,7 @@
 		  <th>发布会员名</th>
           <th>分类</th>
           <th class="align-center">浏览</th>
+          <th class="align-center">推荐</th>
           <th class="align-center">操作 </th>
         </tr>
       </thead>
@@ -59,6 +60,7 @@
           <td class="w156"><?php echo $v['member_name'];?></td>
           <td><?php echo $v['gc_name'];?></td>
           <td class="align-center"><?php echo $v['goods_click']?></td>
+          <td class="w60 align-center yes-onoff"><a href="JavaScript:void(0);" class=" <?php echo $v['goods_commend']? 'enabled':'disabled'?>" ajax_branch='goods_commend'  nc_type="inline_edit" fieldname="goods_commend" fieldid="<?php echo $v['goods_id']?>" fieldvalue="<?php echo $v['goods_commend']?'1':'0'?>" title="<?php echo $lang['editable'];?>"><img src="<?php echo ADMIN_TEMPLATES_URL;?>/images/transparent.gif"></a></td>
           <td class="w48 align-center"><a href="<?php echo SHOP_SITE_URL;?>/index.php?act=flea_goods&goods_id=<?php echo $v['goods_id'];?>" target="_blank"><?php echo $lang['nc_view'];?></a></td>
         </tr>
         <?php } ?>

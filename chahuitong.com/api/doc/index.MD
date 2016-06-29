@@ -1926,7 +1926,14 @@ URL(Post): act=discover
             "trace_list": [
                 {
                     "trace_id": "33",
-                    "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
+                    "trace_image": "http://120.25.216.71/data/upload/shop/common/default_goods_image_240.gif"
+                }
+            ],
+            "flea_list": [
+                {
+                    "goods_id": "24",
+                    "goods_commend": "1",
+                    "goods_image_url": "http://120.25.216.71/data/upload/shop/common/default_goods_image_240.gif"
                 }
             ],
             "class_list": [
@@ -1935,13 +1942,13 @@ URL(Post): act=discover
                     "counter": "167",
                     "gc_id": "1",
                     "gc_name": "普洱茶"
-                }
+                }}
             ],
             "member_list": [
                 {
-                    "member_id": "5098",
-                    "member_name": "克克",
-                    "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif"
+                    "member_id": "132",
+                    "member_name": "郑明锡",
+                    "member_avatar": "http://120.25.216.71/data/upload/shop/common/default_user_portrait.gif"
                 }
             ]
         }

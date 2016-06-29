@@ -38,7 +38,26 @@ class discoverControl extends mobileHomeControl {
             }
             $data['trace_list'] = $trace_list;
         }
-        
+
+        // 获取推荐茶市
+        $model_flea = Model('flea');
+        $condition = array();
+//        $condition['goods_show'] = 1;
+        $condition['commend'] = 1;
+        $condition['order'] = 'goods_id desc';
+        $field = 'goods_id, goods_image, goods_commend';
+        $page	= new Page();
+        $page->setEachNum(10);
+        $page->setStyle('admin');
+        $flea_list	= $model_flea->listGoods($condition, $page, $field);
+        if(!empty($flea_list)){
+            foreach ($flea_list as $key => $val) {
+                $flea_list[$key]['goods_image_url'] = fleaThumb($val['goods_image'], $val['member_id']);
+                unset($flea_list[$key]['goods_image']);
+            }
+            $data['flea_list'] = $flea_list;
+        }
+
         // 获取热门茶类
         $model_staple_class = Model('goods_class_staple');
         $condition = array();
