@@ -38,8 +38,10 @@ class articleControl extends mobileCMSControl {
                 $article_list[$k]['article_publisher_avatar'] = getMemberAvatarForID($v['article_publisher_id']);
             }
         }
+        
+        $page_count = $model_article->gettotalpage();
 
-        output_json(1, $article_list);
+        output_json(1, array('list' => $article_list), 'SUCCESS', mobile_page($page_count));
     }
 
     /**

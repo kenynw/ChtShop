@@ -1969,28 +1969,32 @@ URL: act=article&op=article_list
     {
         "code": 1,
         "msg": "SUCCESS",
-        "data": [
-            {
-                "article_id": "6356",
-                "article_title": "白牡丹茶是什么茶？",
-                "article_class_id": "92",
-                "article_origin": "",
-                "article_origin_address": "",
-                "article_author": "茶汇通",
-                "article_image": "http://img.chahuitong.com/cms/article/2/1_list.png",
-                "article_publish_time": "1456502400",
-                "article_click": "12",
-                "article_sort": "255",
-                "article_commend_flag": "0",
-                "article_state": "3",
-                "article_publisher_name": "茶汇通",
-                "article_publisher_id": "2",
-                "article_publisher_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
-                "article_attachment_path": "2",
-                "article_comment_count": "0",
-                "article_url": "http://www.chahuitong.com/cms/article-6356.html"
-            }
-        ]
+        "data": {
+            "list": [
+                {
+                    "article_id": "6356",
+                    "article_title": "白牡丹茶是什么茶？",
+                    "article_class_id": "92",
+                    "article_origin": "",
+                    "article_origin_address": "",
+                    "article_author": "茶汇通",
+                    "article_image": "http://120.25.216.71/data/upload/cms/article/2/1_list.png",
+                    "article_publish_time": "1456502400",
+                    "article_click": "15",
+                    "article_sort": "255",
+                    "article_commend_flag": "0",
+                    "article_state": "3",
+                    "article_publisher_name": "茶汇通",
+                    "article_publisher_id": "2",
+                    "article_attachment_path": "2",
+                    "article_comment_count": "0",
+                    "article_url": "http://120.25.216.71/api/index.php?act=article&op=article_detail=6356",
+                    "article_publisher_avatar": "http://120.25.216.71/data/upload/shop/common/default_user_portrait.gif"
+                }
+            ],
+            "hasmore": true,
+            "page_total": 31
+        }
     }
    
 ### 文章详情介绍信息
