@@ -109,17 +109,15 @@ class member_sns_traceControl extends mobileMemberControl {
         $condition['comment_state'] = "0"; //0表示正常，1表示屏蔽
         $condition['limit'] = $this->page;
 
-        if (empty($_GET['show_comment'])) {
-            $comment_list = $comment_model->getCommentList($condition);
-            if (!empty($comment_list)) {
-                foreach ($comment_list as $key => $value) {
-                    $comment_list[$key]['comment_memberavatar'] = getMemberAvatar($value['comment_memberavatar']);
-                    $comment_list[$key]['comment_addtime'] = date('Y.m.d H:i', $value['comment_addtime']);
-                }
-                $page_count = $comment_model->gettotalpage();
-                $trace_info['comment_list'] = array_merge(array('list' => $comment_list), mobile_page($page_count));
+        $comment_list = $comment_model->getCommentList($condition);
+        if (!empty($comment_list)) {
+            foreach ($comment_list as $key => $value) {
+                $comment_list[$key]['comment_memberavatar'] = getMemberAvatar($value['comment_memberavatar']);
+                $comment_list[$key]['comment_addtime'] = date('Y.m.d H:i', $value['comment_addtime']);
             }
         }
+        $page_count = $comment_model->gettotalpage();
+        $trace_info['comment_list'] = array_merge(array('list' => $comment_list), mobile_page($page_count));
 
         output_json(1, $trace_info);
     }

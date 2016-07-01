@@ -1394,7 +1394,7 @@ URL: act=member_order&op=search_deliver
     }
 
 ### 好友动态列表
-URL: act=member_sns&op=trace_list
+URL: act=member_sns_trace&op=trace_list
 
 参数：
 
@@ -1630,26 +1630,35 @@ URL: act=member_sns_home
 
 参数：
 
->key 当前登录令牌     
->mid 主页用户ID    
->relation 登录用户和主人关系 0表示未登录 1表示未关注 2表示互相关注 3表示自己 4表示已关注
+>key 当前登录令牌        
+>mid 主页用户ID     
 
 返回：
 
     {
         "code": 1,
-        "data": true,
-        "msg": "SUCCESS"
+        "msg": "SUCCESS",
+        "data": {
+            "member_id": "164",
+            "member_name": "内测帐号",
+            "member_truename": "廖培坤",
+            "member_avatar": "http://120.25.216.71/data/upload/shop/common/default_user_portrait.gif",
+            "member_sex": "1",
+            "member_areainfo": null,
+            "relation": 3, // 登录用户和主人关系 0表示未登录 1表示未关注 2表示互相关注 3表示自己 4表示已关注
+            "following": "2",
+            "followers": "3",
+            "trace_count": "9"
+        }
     }
               
 ### 全部动态列表
 
-URL: act=member_sns_home&op=trace_list
+URL(Get): act=member_sns_home&op=trace_list
 
 参数：
-
->key 当前登录令牌     
-
+    无
+    
 返回：
 
     {

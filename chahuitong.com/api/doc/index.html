@@ -1635,7 +1635,7 @@ version</p></blockquote>
 
 <h3>好友动态列表</h3>
 
-<p>URL: act=member_sns&amp;op=trace_list</p>
+<p>URL: act=member_sns_trace&amp;op=trace_list</p>
 
 <p>参数：</p>
 
@@ -1881,26 +1881,35 @@ type 原帖类型 0表示动态 1表示分享商品 2表示评论 默认为0</p>
 
 <p>参数：</p>
 
-<blockquote><p>key 当前登录令牌   <br/>
-mid 主页用户ID  <br/>
-relation 登录用户和主人关系 0表示未登录 1表示未关注 2表示互相关注 3表示自己 4表示已关注</p></blockquote>
+<blockquote><p>key 当前登录令牌      <br/>
+mid 主页用户ID</p></blockquote>
 
 <p>返回：</p>
 
 <pre><code>{
     "code": 1,
-    "data": true,
-    "msg": "SUCCESS"
+    "msg": "SUCCESS",
+    "data": {
+        "member_id": "164",
+        "member_name": "内测帐号",
+        "member_truename": "廖培坤",
+        "member_avatar": "http://120.25.216.71/data/upload/shop/common/default_user_portrait.gif",
+        "member_sex": "1",
+        "member_areainfo": null,
+        "relation": 3, // 登录用户和主人关系 0表示未登录 1表示未关注 2表示互相关注 3表示自己 4表示已关注
+        "following": "2",
+        "followers": "3",
+        "trace_count": "9"
+    }
 }
 </code></pre>
 
 <h3>全部动态列表</h3>
 
-<p>URL: act=member_sns_home&amp;op=trace_list</p>
+<p>URL(Get): act=member_sns_home&amp;op=trace_list</p>
 
-<p>参数：</p>
-
-<blockquote><p>key 当前登录令牌</p></blockquote>
+<p>参数：
+    无</p>
 
 <p>返回：</p>
 
@@ -2230,28 +2239,32 @@ tag_id 标签ID</p></blockquote>
 <pre><code>{
     "code": 1,
     "msg": "SUCCESS",
-    "data": [
-        {
-            "article_id": "6356",
-            "article_title": "白牡丹茶是什么茶？",
-            "article_class_id": "92",
-            "article_origin": "",
-            "article_origin_address": "",
-            "article_author": "茶汇通",
-            "article_image": "http://img.chahuitong.com/cms/article/2/1_list.png",
-            "article_publish_time": "1456502400",
-            "article_click": "12",
-            "article_sort": "255",
-            "article_commend_flag": "0",
-            "article_state": "3",
-            "article_publisher_name": "茶汇通",
-            "article_publisher_id": "2",
-            "article_publisher_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
-            "article_attachment_path": "2",
-            "article_comment_count": "0",
-            "article_url": "http://www.chahuitong.com/cms/article-6356.html"
-        }
-    ]
+    "data": {
+        "list": [
+            {
+                "article_id": "6356",
+                "article_title": "白牡丹茶是什么茶？",
+                "article_class_id": "92",
+                "article_origin": "",
+                "article_origin_address": "",
+                "article_author": "茶汇通",
+                "article_image": "http://120.25.216.71/data/upload/cms/article/2/1_list.png",
+                "article_publish_time": "1456502400",
+                "article_click": "15",
+                "article_sort": "255",
+                "article_commend_flag": "0",
+                "article_state": "3",
+                "article_publisher_name": "茶汇通",
+                "article_publisher_id": "2",
+                "article_attachment_path": "2",
+                "article_comment_count": "0",
+                "article_url": "http://120.25.216.71/api/index.php?act=article&amp;op=article_detail=6356",
+                "article_publisher_avatar": "http://120.25.216.71/data/upload/shop/common/default_user_portrait.gif"
+            }
+        ],
+        "hasmore": true,
+        "page_total": 31
+    }
 }
 </code></pre>
 
