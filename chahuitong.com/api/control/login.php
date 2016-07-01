@@ -352,11 +352,10 @@ class loginControl extends mobileHomeControl {
             output_json(0,array(),"同个ip一天只能登陆5次");
             die();
         }
-        $number=isset($_POST['mobile'])?$_POST['mobile']:$_GET['mobile'];
+        $number=isset($_POST['mobile']) ? $_POST['mobile'] : $_GET['mobile'];
         $result=array();
-        if((!is_numeric($number))||(strlen($number)!=11)){
-            output_json(0,array(),"手机号码格式不正确");
-            die();
+        if(strlen($number) != 11) {
+            output_error('手机号码格式不正确');
         }
         $code=rand(100000,999999);
         $url="http://106.ihuyi.cn/webservice/sms.php?method=Submit&account=cf_chahuitong&password=chahuitong2015&mobile=$number&content=您的验证码是：【".$code."】。请不要把验证码泄露给其他人。";
