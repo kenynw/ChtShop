@@ -115,10 +115,9 @@ class member_sns_traceControl extends mobileMemberControl {
                 $comment_list[$key]['comment_memberavatar'] = getMemberAvatar($value['comment_memberavatar']);
                 $comment_list[$key]['comment_addtime'] = date('Y.m.d H:i', $value['comment_addtime']);
             }
-            $page_count = $comment_model->gettotalpage();
-            $trace_info['comment_list'] = array_merge(array('list' => $comment_list), mobile_page($page_count));
+            $trace_info['comment_list'] = $comment_list;
         } else {
-            $trace_info['comment_list'] = array('list' => $comment_list, 'hasmore' => false, 'page_total' => 0);
+            $trace_info['comment_list'] = array();
         }
 
         output_json(1, $trace_info);
