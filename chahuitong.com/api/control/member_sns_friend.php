@@ -145,7 +145,7 @@ class member_sns_friendControl extends mobileMemberControl {
             $param['message_type'] = 3;
             Model('message')->saveMessage($param);
 
-            output_json(1, $result);
+            output_json(1, $insert['friend_followstate']);
         } else {
             output_json(0, $result, '操作失败');
         }

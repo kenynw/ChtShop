@@ -1443,7 +1443,7 @@ URL: act=member_sns_trace&op=trace_detail
             "trace_commend_flag": "0",
             "trace_content": "",
             "trace_id": "18",
-            "relation": 3,
+            "relation": 3,  //登录用户和主人关系 0表示未登录 1表示未关注 2表示互相关注 3表示自己 4表示已关注
             "trace_originalid": "0",
             "trace_originalmemberid": "0",
             "trace_image": "http://120.25.216.71/data/upload/shop/member/164/164_05199450589333909_240.jpg,",
@@ -1619,25 +1619,7 @@ URL: act=member_sns_trace&op=like_add
         "data": true,
         "msg": "SUCCESS"
     }
-          
-### 取消赞
 
-URL: act=member_sns_trace&op=like_cancel
-
-参数：
-
->key 当前登录令牌     
->id 动态id    
->type 原帖类型 0表示动态 1表示分享商品 2表示评论 默认为0
-
-返回：
-
-    {
-        "code": 1,
-        "data": true,
-        "msg": "SUCCESS"
-    }
-            
 ### 个人主页
 
 URL: act=member_sns_home
@@ -1783,7 +1765,7 @@ URL(Get): act=member_sns_friend&op=add_follow
 
     {
         "code": 1,
-        "data": 11,
+        "data": 2, // 返回该用户目前的状态和登录用户的关系 登录用户和主人关系 0表示未登录 1表示未关注 2表示互相关注 3表示自己 4表示已关注
         "msg": "SUCCESS"
     }
      

@@ -353,14 +353,22 @@ class member_sns_traceControl extends mobileMemberControl {
 
     /**
      * 点赞
+     * TODO
      */
     public function like_addOp() {
         $id = intval(empty($_GET['id']) ? $_POST['id'] : $_GET['id']);
         if ($id <= 0) output_json(0, array(), '参数错误');
+        $type = intval($_POST['type'])<=0 ? 0 : intval($_POST['type']);
 
         $model_comment = Model('sns_comment');
-        $comment_info = $model_comment->getCommentRow(array('comment_id' => $id));
-        if (empty($comment_info)) output_json(0, array(), '原评论已不存在');
+        $model_trace = Model('sns_tracelog');
+        $original_info = array();
+        if ($type == 2) {
+            $original_info = $model_comment->getCommentRow(array('comment_id' => $id));
+        } else if ($type == 0) {
+            $original_info = $model_trace->getCommentRow(array('trace_id' => $id));
+        }
+        if (empty($original_info)) output_json(0, array(), $type == 2 ? '原评论不存在' : '原动态不存在');
 
         $model_like = Model('sns_like');
         $like_info = $model_like->getLikeInfo(array('like_originalid' => $id));
@@ -370,7 +378,7 @@ class member_sns_traceControl extends mobileMemberControl {
             $insert['like_membername'] = $this->member_info['member_name'];
             $insert['like_memberavatar'] = $this->member_info['member_avatar'];
             $insert['like_originalid'] = $id;
-            $insert['like_originaltype'] = intval($_POST['type'])<=0 ? 0 : intval($_POST['type']);
+            $insert['like_originaltype'] = $type;
             $insert['like_addtime'] = time();
             $insert['like_ip'] = getIp();
             $insert['like_state'] = '0'; //正常
@@ -378,26 +386,23 @@ class member_sns_traceControl extends mobileMemberControl {
 
             if ($result && $like_info['like_memberid'] != $this->member_info['member_id']) {
                 $params = array();
-                $params['member_id'] = $comment_info['comment_memberid'];
-                $params['to_member_name'] = $comment_info['comment_membername'];
-                $params['msg_content'] = $comment_info['comment_id'] . '&赞了你:';
+                $params['member_id'] = $type == 2 ? $original_info['comment_memberid'] : $original_info['trace_memberid'];
+                $params['to_member_name'] = $type == 2 ? $original_info['comment_membername'] : $original_info['trace_membername'];
+                $params['msg_content'] = $type == 2 ? $original_info['comment_id'] : $original_info['trace_id'] . '&赞了你:';
                 $params['message_type'] = 4;
                 $this->_send_msg($params);
             }
         } else {
-            if ($like_info['like_state'] == 0) {
-                output_json(1, array(), '已经点过赞了');
-            }
-
+            if ($like_info['like_state'] == 0) output_json(1, array(), '已经点过赞了');
             $result = $model_like->editLike(array('like_id' => $like_info['like_id']), array('like_state' => 0));
         }
 
         // 更改点赞数
         $action = array('sign'=>'increase','value'=>'1');
-        if (intval($_POST['type']) == 0) {
+        if ($type == 0) {
             $model_trace = Model('sns_tracelog');
             $model_trace->tracelogEdit(array('trace_likecount' => $action),array('trace_id'=>$id));
-        } elseif(intval($_POST['type']) == 2) {
+        } elseif($type == 2) {
             $model_comment = Model('sns_comment');
             $model_comment->commentEdit(array('comment_likecount' => $action),array('comment_id'=>$id));
         }
