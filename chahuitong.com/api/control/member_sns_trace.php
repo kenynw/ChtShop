@@ -366,12 +366,12 @@ class member_sns_traceControl extends mobileMemberControl {
         if ($type == 2) {
             $original_info = $model_comment->getCommentRow(array('comment_id' => $id));
         } else if ($type == 0) {
-            $original_info = $model_trace->getCommentRow(array('trace_id' => $id));
+            $original_info = $model_trace->getTracelogRow(array('trace_id' => $id));
         }
         if (empty($original_info)) output_json(0, array(), $type == 2 ? '原评论不存在' : '原动态不存在');
 
         $model_like = Model('sns_like');
-        $like_info = $model_like->getLikeInfo(array('like_originalid' => $id));
+        $like_info = $model_like->getLikeInfo(array('like_originalid' => $id, 'like_memberid' => $this->member_info['member_id']));
         if (empty($like_info)) {
             $insert = array();
             $insert['like_memberid'] = $this->member_info['member_id'];
@@ -381,7 +381,7 @@ class member_sns_traceControl extends mobileMemberControl {
             $insert['like_originaltype'] = $type;
             $insert['like_addtime'] = time();
             $insert['like_ip'] = getIp();
-            $insert['like_state'] = '0'; //正常
+            $insert['like_state'] = 0; //正常
             $result = $model_like->addLike($insert);
 
             if ($result && $like_info['like_memberid'] != $this->member_info['member_id']) {
