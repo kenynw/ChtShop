@@ -58,15 +58,15 @@ class sns_tracelogModel extends Model {
 	 * @return array 数组格式的返回结果
 	 */
 	public function getTracelogList($condition,$page='',$field='*', $order='trace_id desc', $limit = 0){
-//		$condition_str	= $this->getCondition($condition);
-//		$param	= array();
-//		$param['table']	= 'sns_tracelog';
-//		$param['where']	= $condition_str;
-//		$param['field'] = $field;
-//		$param['order'] = $condition['order'] ? $condition['order'] : 'sns_tracelog.trace_id desc';
-//		$param['limit'] = $condition['limit'];
-//		$param['group'] = $condition['group'];
-		return $this->table('sns_tracelog')->field($field)->where($condition)->page($page)->order($order)->limit($limit)->select();
+		$condition_str	= $this->getCondition($condition);
+		$param	= array();
+		$param['table']	= 'sns_tracelog';
+		$param['where']	= $condition_str;
+		$param['field'] = $field;
+		$param['order'] = $condition['order'] ? $condition['order'] : 'sns_tracelog.trace_id desc';
+		$param['limit'] = $condition['limit'];
+		$param['group'] = $condition['group'];
+		return Db::select($param,$page);
 	}
 	/**
 	 * 获取动态详细

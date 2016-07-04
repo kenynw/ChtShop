@@ -43,11 +43,13 @@ class member_sns_traceControl extends mobileMemberControl {
         }
         $condition['trace_state'] = "0";
         $condition['trace_originalid'] = '0'; // 原创
-        $condition['limit'] =$this->page;
 
         $file = 'trace_id,trace_originalid,trace_memberid,trace_membername,trace_memberavatar,trace_title,trace_image,trace_addtime,trace_state,trace_privacy,trace_commentcount,trace_likecount';
 
-        $trace_list = $tracelog_model->getTracelogList($condition, '', $file);
+        $page = new Page();
+        $page->setEachNum($this->page);
+        $page->setStyle('admin');
+        $trace_list = $tracelog_model->getTracelogList($condition, $page, $file);
 
         // 数据处理
         if (empty($trace_list)) {
@@ -60,7 +62,7 @@ class member_sns_traceControl extends mobileMemberControl {
             }
         }
 
-        $page_count = $tracelog_model->gettotalpage();
+        $page_count = $page->getTotalPage();
 
         output_json(1, array('list' => $trace_list), 'SUCCESS', mobile_page($page_count));
     }
