@@ -26,7 +26,10 @@ class discoverControl extends mobileHomeControl {
         $condition['trace_originalid'] = 0; // 原创
         $condition['trace_commend_flag'] = self::TRACE_COMMEND;
         $field = 'trace_id, trace_image, trace_state, trace_privacy, trace_originalid, trace_commend_flag';
-        $trace_list = $model_trace->getTracelogList($condition, 9, $field);
+        $page = new Page();
+        $page->setEachNum(9);
+        $page->setStyle('admin');
+        $trace_list = $model_trace->getTracelogList($condition, $page, $field);
         // 数据处理
         if (!empty($trace_list)) {
             foreach ($trace_list as $key=>$value) {
