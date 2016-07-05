@@ -52,7 +52,7 @@ class member_messageControl extends mobileMemberControl {
             foreach ($message_list as $key=>$value) {
                 // 设置并更新消息打开状态
                 $value['message_open'] = '0';
-                if (!empty($value['read_member_id'])) {
+                if ($value['read_member_id'] !== '') {
                     $read_list = explode(',', $value['read_member_id']);
                     if (in_array($this->member_info['member_id'], $read_list)) {
                         $value['message_open'] = '1';
@@ -128,7 +128,7 @@ class member_messageControl extends mobileMemberControl {
         if (!empty($message_list) && is_array($message_list)) {
             foreach ($message_list as $key=>$value) {
                 $value['message_open'] = '0';
-                if ($value['read_member_id']) {
+                if ($value['read_member_id'] !== '') {
                     $read_list = explode(',', $value['read_member_id']);
                     if (in_array($this->member_info['member_id'], $read_list)) {
                         $value['message_open'] = '1';
@@ -197,35 +197,31 @@ class member_messageControl extends mobileMemberControl {
         $count_new_msg = 0;
         // 新的粉丝
         $new_fans = $this->_receivedMsgNewCount(3);
+        $count['new_fans'] = $new_fans;
         if ($new_fans > 0) {
-            $count['new_fans'] = $new_fans;
             $count_new_msg += $new_fans;
         }
         // 评论和赞
         $new_comment = $this->_receivedMsgNewCount(4);
+        $count['new_comment'] = $new_comment;
         if ($new_comment > 0) {
-            $count['new_comment'] = $new_comment;
             $count_new_msg += $new_comment;
         }
         // @我
         $new_at = $this->_receivedMsgNewCount(5);
+        $count['new_at'] = $new_at;
         if ($new_at > 0) {
-            $count['new_at'] = $new_at;
             $count_new_msg += $new_at;
         }
         // 系统消息
         $newsystem = $this->_receivedSystemNewNum();
+        $count['new_system'] = $newsystem;
         if ($newsystem > 0) {
-            $count['new_system'] = $newsystem;
             $count_new_msg += $newsystem;
         }
 
-        if ($count_new_msg > 0) {
-            $count['count_new_msg']  =$count_new_msg;
-            output_json(1, $count);
-        } else {
-            output_json(0, array(), '没有新消息');
-        }
+        $count['count_new_msg']  =$count_new_msg;
+        output_json(1, $count);
     }
 
     /**
@@ -241,7 +237,7 @@ class member_messageControl extends mobileMemberControl {
         $condition['no_message_state'] = '2';
         $condition['message_open_common'] = '0';
         $countnum = $model_message->countMessage($condition);
-        return $countnum;
+        return intval($countnum);
     }
 
     /**
@@ -257,7 +253,7 @@ class member_messageControl extends mobileMemberControl {
         $condition['no_del_member_id'] = $this->member_info['member_id'];
         $condition['no_read_member_id'] = $this->member_info['member_id'];
         $countnum = $message_model->countMessage($condition);
-        return $countnum;
+        return intval($countnum);
     }
 
     /**

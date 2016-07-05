@@ -1701,6 +1701,7 @@ URL(Get): act=member_sns_friend&op=popular_list
                     "member_id": "164",
                     "member_name": "内测帐号",
                     "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                    "follow_state": 0-未关注 1-已关注 2-相互关注
                     "trace_list": [
                         {
                             "trace_id": "19",
@@ -1743,7 +1744,7 @@ URL(Get): act=member_sns_friend&op=find_list
                     "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
                     "member_sex": "1",
                     "member_state": "1",
-                    "follow_state": 0
+                    "follow_state": 0-未关注 1-已关注 2-相互关注
                 }
             ],
             "hasmore": true,

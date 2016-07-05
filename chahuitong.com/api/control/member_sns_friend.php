@@ -67,14 +67,33 @@ class member_sns_friendControl extends mobileMemberControl {
      */
     public function popular_listOp() {
         $model_friend = Model('sns_friend');
-        $field = 'friend_frommid,friend_tomid,friend_tomname,friend_tomavatar';
-        $condition = 'friend_frommid!=' . $this->member_info['member_id'];
+        //查询关注会员id
+        $condition = array();
+        $condition['friend_frommid'] = $this->member_info['member_id'];
+        $field_follow = 'friend_tomid,friend_followstate';
+        $follow_list = $model_friend->listFriend($condition, $field_follow, $this->page);
+        $follow_list_new = array();
+        if(!empty($follow_list)){
+            foreach($follow_list as $k=>$v){
+                $follow_list_new[$v['friend_tomid']] = $v;
+            }
+        }
+
+        $field = 'friend_frommid,friend_tomid,friend_tomname,friend_tomavatar,friend_followstate';
+        $condition = 'friend_tomid != ' . $this->member_info['member_id'];
         $friend_list = $model_friend->friendListGroupByToMid($condition, $field, $this->page);
 
         $member_list = array();
         if (!empty($friend_list)) {
+            $follow_id_arr = array_keys($follow_list_new);
             $model_trace_images = Model('sns_trace_images');
             foreach ($friend_list as $key=>$value) {
+                if(in_array($value['member_id'],$follow_id_arr)){
+                    $member_list[$key]['follow_state'] = $follow_list_new[$value['member_id']]['friend_followstate'];
+                } else {
+                    $member_list[$key]['follow_state'] = 0;
+                }
+
                 $member_list[$key]['member_id'] = $value['friend_tomid'];
                 $member_list[$key]['member_name'] = $value['friend_tomname'];
                 $member_list[$key]['member_avatar'] = getMemberAvatar($value['friend_tomavatar']);
@@ -126,6 +145,7 @@ class member_sns_friendControl extends mobileMemberControl {
         $insert['friend_tomid'] = $member_info['member_id'];
         $insert['friend_tomname'] = $member_info['member_name'];
         $insert['friend_tomavatar'] = $member_info['member_avatar'];
+        $insert['friend_addtime'] = time();
         $friend_info = $model_friend->getFriendRow(array('friend_frommid'=>"{$mid}", 'friend_tomid' => $this->member_info['member_id']));
         if (empty($friend_info)) $insert['friend_followstate'] = 1; // 单方面关注
         else $insert['friend_followstate'] = 2; // 互相关注
@@ -202,5 +222,28 @@ class member_sns_friendControl extends mobileMemberControl {
 
         output_json(1, array('list' => $follow_list), 'SUCCESS', mobile_page($page_count));
     }
-    
+
+    private function _check_relation($mid) {
+        if ($mid <= 0) output_json(0, array(), Language::get('wrong_argument'));
+
+        if ($mid == $this -> member_info['member_id']) {
+            $relation = 3;
+        } else {
+            $relation = 1;
+
+            $model_friend = Model('sns_friend');
+            $condition_friend = array();
+            $condition_friend['friend_frommid'] = $this -> member_info['member_id'];
+            $condition_friend['friend_tomid'] = $mid;
+            $friend_info = $model_friend->getFriendRow($condition_friend);
+            if (!empty($friend_info) && $friend_info['friend_followstate'] == 2) {
+                $relation = 2;
+            } elseif ($friend_info['friend_followstate'] == 1) {
+                $relation = 4;
+            }
+        }
+
+        return $relation;
+    }
+
 }
