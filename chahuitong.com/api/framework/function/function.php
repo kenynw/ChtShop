@@ -55,7 +55,7 @@ function output_json($code, $data = array(), $msg = 'SUCCESS', $extend_data = ar
     if (!is_numeric($code)) return;
 
     $result = array();
-    if (empty($data) && $code == 1) {
+    if (is_array($data) && empty($data) && $code == 1) {
         $result['code'] = 0;
         $result['msg'] = '暂无数据';
     } else {
