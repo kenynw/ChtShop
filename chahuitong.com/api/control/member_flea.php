@@ -360,6 +360,17 @@ class member_fleaControl extends mobileMemberControl {
         }
     }
 
+    public function class_listOp() {
+        $id = intval(empty($_POST['class_id']) ? $_GET['class_id'] : $_POST['class_id']);
+
+        $model_goods_class = Model('flea_class');
+        $condition = array();
+        $condition['gc_show'] = 1;
+        $condition['gc_parent_id'] = $id;
+        $goods_class = $model_goods_class->getClassList($condition);
+        output_json(1, $goods_class);
+    }
+    
     private function _get_extend_goods($goods_list) {
         if (!empty($goods_list) && is_array($goods_list)) {
             foreach ($goods_list as $key => $val) {

@@ -2350,4 +2350,31 @@ URL: act=member_flea&op=save_consult
         "msg": "咨询发布成功",
         "data": 5 // 新插入的数据ID
     }
-             
+ 
+### 茶市类别列表
+
+URL: act=member_flea&op=class_list
+
+参数：
+
+>key 登录令牌
+>class_id 类别ID,如果不传默认返回一级类目  
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": [
+            {
+                "gc_id": "1",
+                "gc_name": "普洱茶",
+                "gc_name_index": "",
+                "gc_parent_id": "0",
+                "gc_sort": "1",
+                "gc_show": "1",
+                "gc_index_show": "1"
+            }
+        ]
+    }
+                         

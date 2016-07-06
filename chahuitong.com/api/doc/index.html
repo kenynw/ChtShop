@@ -2624,5 +2624,33 @@ goods_id 商品ID</p></blockquote>
     "data": 5 // 新插入的数据ID
 }
 </code></pre>
+
+<h3>茶市类别列表</h3>
+
+<p>URL: act=member_flea&amp;op=class_list</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 登录令牌
+class_id 类别ID,如果不传默认返回一级类目</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "SUCCESS",
+    "data": [
+        {
+            "gc_id": "1",
+            "gc_name": "普洱茶",
+            "gc_name_index": "",
+            "gc_parent_id": "0",
+            "gc_sort": "1",
+            "gc_show": "1",
+            "gc_index_show": "1"
+        }
+    ]
+}
+</code></pre>
 </body>
 </html>
