@@ -122,12 +122,12 @@ class member_sns_friendControl extends mobileMemberControl {
      */
     public function add_followOp() {
         $mid = intval(empty($_GET['mid']) ? $_POST['mid'] : $_GET['mid']);
-        if ($mid <= 0) output_json(0, array(), '参数错误');
+        if ($mid <= 0) output_json(0, 0, '参数错误');
 
         // 查询是否有该用户
         $model_member = Model('member');
         $member_info = $model_member->getMemberInfoByID($mid);
-        if (empty($member_info)) output_json(0, $member_info, '用户不存在');
+        if (empty($member_info)) output_json(0, 0, '用户不存在');
 
         // 验证是否关注过
         $model_friend = Model('sns_friend');
@@ -135,7 +135,7 @@ class member_sns_friendControl extends mobileMemberControl {
         $condition_friend['friend_frommid'] = $this->member_info['member_id'];
         $condition_friend['friend_tomid'] = $mid;
         $friend_count = $model_friend->countFriend($condition_friend);
-        if ($friend_count > 0) output_json(0, array(), '已关注过该用户');
+        if ($friend_count > 0) output_json(0, 0, '已关注过该用户');
 
         // 查询对方是否已经关注我，从而判断关注状态
         $insert = array();
@@ -167,7 +167,7 @@ class member_sns_friendControl extends mobileMemberControl {
 
             output_json(1, $insert['friend_followstate']);
         } else {
-            output_json(0, $result, '操作失败');
+            output_json(0, 0, '操作失败');
         }
     }
 
