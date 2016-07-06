@@ -86,10 +86,11 @@ class member_sns_friendControl extends mobileMemberControl {
         $member_list = array();
         if (!empty($friend_list)) {
             $follow_id_arr = array_keys($follow_list_new);
+
             $model_trace_images = Model('sns_trace_images');
             foreach ($friend_list as $key=>$value) {
-                if(in_array($value['member_id'],$follow_id_arr)){
-                    $member_list[$key]['follow_state'] = $follow_list_new[$value['member_id']]['friend_followstate'];
+                if(in_array($value['friend_tomid'],$follow_id_arr)){
+                    $member_list[$key]['follow_state'] = $follow_list_new[$value['friend_tomid']]['friend_followstate'];
                 } else {
                     $member_list[$key]['follow_state'] = 0;
                 }
@@ -184,9 +185,9 @@ class member_sns_friendControl extends mobileMemberControl {
         if($result){
             //更新对方的关注状态
             $friend_model->editFriend(array('friend_followstate'=>'1'),array('friend_frommid'=>"$mid",'friend_tomid'=>$this->member_info['member_id']));
-            output_json(1, $result);
+            output_json(1, 0);
         }else{
-            output_json(0, $result, '取消关注失败');
+            output_json(0, 1, '取消关注失败');
         }
     }
 
