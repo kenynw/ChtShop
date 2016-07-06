@@ -24,7 +24,7 @@ class loginControl extends mobileHomeControl
      * 登录
      */
     public function indexOp() {
-        if (empty($_POST['username']) || empty($_POST['usermobile'])) {
+        if (empty($_POST['username']) && empty($_POST['usermobile'])) {
             output_error('用户名不能为空');
         }
         if (empty($_POST['password'])) {
@@ -67,7 +67,7 @@ class loginControl extends mobileHomeControl
         if (!empty($member_info)) {
             $token = $this->_get_token($member_info['member_id'], $member_info['member_name'], $_POST['client']);
             if ($token) {
-                output_data(array('username' => $member_info['member_name'], 'key' => $token, 'avatar' => getMemberAvatar($member_info['member_avatar'])));
+                output_data(array('member_name' => $member_info['member_name'], 'key' => $token, 'member_avatar' => getMemberAvatar($member_info['member_avatar'])));
             } else {
                 if ($_POST['version']) {
                     output_json(0, array('key' => $token), '登录失败');
