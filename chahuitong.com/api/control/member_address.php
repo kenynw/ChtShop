@@ -175,7 +175,7 @@ class member_addressControl extends mobileMemberControl {
         } else {
             $condition['area_deep'] = 1;
         }
-        $area_list = $model_area->getAreaList($condition, 'area_id,area_name');
+        $area_list = $model_area->getAreaList($condition, 'area_id,area_name,area_parent_id,area_deep');
         if (empty($area_list)) output_json(1, array(), '暂无数据');
         else output_json(1, array('list' => $area_list), 'SUCCESS', mobile_page(0));
     }
