@@ -1118,7 +1118,7 @@ URL: act=member_favorites&op=favorites_del
       datas: "1"
     }
 
-### 28.地址列表
+### 地址列表
 URL: act=member_address&op=address_list
 参数：
 
@@ -1142,7 +1142,7 @@ URL: act=member_address&op=address_list
       }
     }
 
-### 29.地址详细信息
+### 地址详细信息
 URL: act=member_address&op=address_info   
 
 参数：
@@ -1162,7 +1162,7 @@ URL: act=member_address&op=address_info
       }
     }
 
-### 30.地址删除
+### 地址删除
 URL: act=member_address&op=address_del   
 
 参数：
@@ -1177,7 +1177,7 @@ URL: act=member_address&op=address_del
       datas: "1"
     }
 
-### 31.地址添加
+### 地址添加
 URL: act=member_address&op=address_add   
 
 参数：
@@ -1200,7 +1200,7 @@ URL: act=member_address&op=address_add
       }
     }
 
-### 32.地址编辑
+### 地址编辑
 URL: act=member_address&op=address_edit   
 
 参数：
@@ -1222,7 +1222,23 @@ URL: act=member_address&op=address_edit
       datas: "1"
     }
 
-### 33.地区列表
+### 设置默认地址
+URL: act=member_address&op=set_default   
+
+参数：
+
+>key 登录令牌    
+>address_id 地址编号
+
+返回： 
+
+    {
+      code: 1,
+      data: 11,
+      msg: 'SUCCeSS'
+    }
+
+### 地区列表
 URL: act=member_address&op=area_list   
 
 参数：
@@ -1245,7 +1261,7 @@ URL: act=member_address&op=area_list
     }
 
 
-### 34.订单列表
+### 订单列表
 URL: act=member_order&op=order_list
 
 参数：

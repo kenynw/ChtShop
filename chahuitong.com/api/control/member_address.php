@@ -197,29 +197,18 @@ class member_addressControl extends mobileMemberControl {
 	/**
      * 设置默认地址
      */
-	
 	 public function set_defaultOp() {
-        $area_id = intval($_POST['address_id']);
-		 $member_id=$this->member_info['member_id'];
          $model_area = Model('address');
-        $condition=array();
-		 $condition['member_id']=$member_id;
-		 $condition['address_id']=$area_id;
-		 $result=$model_area->where($condition)->find();
+         $condition=array();
+		 $condition['member_id'] = $this->member_info['member_id'];
+		 $condition['address_id'] = intval($_POST['address_id']);
+         
+		 $result=$model_area->editAddress(array('is_default' => 1), $condition);
 		 if($result){
-		 $conditions=array();
-		 $default=array();
-		 $conditions['is_default']=1;
-		 $conditions['member_id']=$member_id;
-		 $default['is_default']=0;
-		 $model_area->where($conditions)->update($default);
-		 $default['is_default']=1;
-		 $model_area->where($condition)->update($default);		 
-		 output_data(array('code' =>200,'msg'=>'更新成功'));	 			 
-			 }else{		 
-		 output_error(array('code' =>404,'msg'=>'更新失败'));		 				 
-				 }        
+             output_json(1, $result);
+         } else {
+             output_json(0, 0, '操作超时');
+         }
     }
- 
 
 }

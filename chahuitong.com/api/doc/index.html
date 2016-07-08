@@ -1343,7 +1343,7 @@ fav_id 收藏编号</p></blockquote>
 }
 </code></pre>
 
-<h3>28.地址列表</h3>
+<h3>地址列表</h3>
 
 <p>URL: act=member_address&amp;op=address_list
 参数：</p>
@@ -1369,7 +1369,7 @@ fav_id 收藏编号</p></blockquote>
 }
 </code></pre>
 
-<h3>29.地址详细信息</h3>
+<h3>地址详细信息</h3>
 
 <p>URL: act=member_address&amp;op=address_info</p>
 
@@ -1391,7 +1391,7 @@ address_id 地址编号</p></blockquote>
 }
 </code></pre>
 
-<h3>30.地址删除</h3>
+<h3>地址删除</h3>
 
 <p>URL: act=member_address&amp;op=address_del</p>
 
@@ -1408,7 +1408,7 @@ address_id 地址编号</p></blockquote>
 }
 </code></pre>
 
-<h3>31.地址添加</h3>
+<h3>地址添加</h3>
 
 <p>URL: act=member_address&amp;op=address_add</p>
 
@@ -1433,7 +1433,7 @@ mob_phone 手机</p></blockquote>
 }
 </code></pre>
 
-<h3>32.地址编辑</h3>
+<h3>地址编辑</h3>
 
 <p>URL: act=member_address&amp;op=address_edit</p>
 
@@ -1457,7 +1457,25 @@ mob_phone 手机</p></blockquote>
 }
 </code></pre>
 
-<h3>33.地区列表</h3>
+<h3>设置默认地址</h3>
+
+<p>URL: act=member_address&amp;op=set_default</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 登录令牌  <br/>
+address_id 地址编号</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+  code: 1,
+  data: 11,
+  msg: 'SUCCeSS'
+}
+</code></pre>
+
+<h3>地区列表</h3>
 
 <p>URL: act=member_address&amp;op=area_list</p>
 
@@ -1481,7 +1499,7 @@ area_id 地区编号(为空时默认返回一级分类)</p></blockquote>
 }
 </code></pre>
 
-<h3>34.订单列表</h3>
+<h3>订单列表</h3>
 
 <p>URL: act=member_order&amp;op=order_list</p>
 
