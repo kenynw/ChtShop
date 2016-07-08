@@ -93,10 +93,17 @@ class member_sns_homeControl extends mobileHomeControl {
      * 首页动态列表
      */
     public function trace_listOp() {
+        $key = empty($_GET['key']) ? $_POST['key'] : $_GET['key'];
+        $model_mb_user_token = Model('mb_user_token');
+        $mb_user_token_info = $model_mb_user_token->getMbUserTokenInfoByToken($key);
+        $mid = intval(empty($_GET['mid']) ? $_POST['mid'] : $_GET['mid']);
+        if ($mid <= 0) $mid = intval($mb_user_token_info['member_id']);
+
         $tracelog_model = Model('sns_tracelog');
         $condition = array();
         $condition['trace_state'] = 0;
         $condition['trace_originalid'] = 0; // 原创
+        if ($mid > 0) $condition['trace_memberid'] = $mid;
 
         $filed = 'trace_id,trace_originalid,trace_memberid,trace_membername,trace_memberavatar,trace_title,trace_image,trace_addtime,trace_state,trace_privacy,trace_commentcount,trace_likecount';
 

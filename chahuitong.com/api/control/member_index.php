@@ -59,6 +59,7 @@ class member_indexControl extends mobileMemberControl {
             output_data(array('member_info' => $member_info));
         }
 	}
+
     /*个人信息更新*/
     public function update_member_infoOp(){
         //$datas=json_decode($_POST['content'],true);
@@ -106,17 +107,18 @@ class member_indexControl extends mobileMemberControl {
             die();
         }
     }
-    /*获取个人信息*/
+
     public function get_member_infoOp(){
         $member_info = array();
         $member_info['member_name'] = $this->member_info['member_name'];
         $member_info['member_truename'] = $this->member_info['member_truename'];
         $member_info['member_avatar'] = getMemberAvatarForID($this->member_info['member_id']);
         $member_info['member_birthday'] = $this->member_info['member_birthday'];
-        $member_info['member_sex'] = $this->member_info['member_sex'] == '1' ? '男' : '女';
+        $member_info['member_sex'] = $this->member_info['member_sex'] == '1' ? '男' : '女';;
+        $member_info['member_areainfo'] = $this->member_info['member_areainfo'];
         output_json(1, $member_info, '获取成功');
-        die();
     }
+
     public function update_member_pwdOp(){
         $member_id=$this->member_info['member_id'];
         if(md5($_POST['oldpwd'])!=$this->member_info['member_passwd']){

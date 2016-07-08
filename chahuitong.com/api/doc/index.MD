@@ -826,7 +826,7 @@ URL: act=member_index
         "msg": "SUCCESS"
     }
 
-### 获取用户信息(v3)
+### 个人中心
 
 URL: act=member_index 
 
@@ -847,6 +847,27 @@ URL: act=member_index
         member_sex: 男
       }
       
+    }
+
+### 获取个人资料
+
+URL: act=member_index&op=member_info 
+
+参数：
+
+>key  登录令牌    
+>member_truename 真实姓名   
+>member_sex 性别 0-男， 1-女    
+>member_birthday 生日   
+>member
+>member_avatar 头像，图片的Base64   
+
+返回： 
+
+    {
+      code: 1,
+      msg: "更新成功",
+      data: {}
     }
 
 ### 更改用户信息
@@ -1653,7 +1674,9 @@ URL: act=member_sns_home
 URL(Get): act=member_sns_home&op=trace_list
 
 参数：
-    无
+
+>mid 登录令牌,查看自己的动态列表    
+>mid 用户ID 可以指定某个用户的动态列表,如果不传则默认返回全部列表    
     
 返回：
 
@@ -2377,4 +2400,31 @@ URL: act=member_flea&op=class_list
             }
         ]
     }
-                         
+ 
+### 意见反馈
+
+URL: act=member_feedback&op=feedback_add
+
+参数：
+
+>key 登录令牌
+>feedback 反馈内容
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": [
+            {
+                "gc_id": "1",
+                "gc_name": "普洱茶",
+                "gc_name_index": "",
+                "gc_parent_id": "0",
+                "gc_sort": "1",
+                "gc_show": "1",
+                "gc_index_show": "1"
+            }
+        ]
+    }
+                        

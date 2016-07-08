@@ -1029,7 +1029,7 @@ newpwd 新密码</p></blockquote>
 }
 </code></pre>
 
-<h3>获取用户信息(v3)</h3>
+<h3>个人中心</h3>
 
 <p>URL: act=member_index</p>
 
@@ -1050,6 +1050,28 @@ newpwd 新密码</p></blockquote>
     member_sex: 男
   }
 
+}
+</code></pre>
+
+<h3>获取个人资料</h3>
+
+<p>URL: act=member_index&amp;op=member_info</p>
+
+<p>参数：</p>
+
+<blockquote><p>key  登录令牌  <br/>
+member_truename 真实姓名 <br/>
+member_sex 性别 0-男， 1-女  <br/>
+member_birthday 生日 <br/>
+member
+member_avatar 头像，图片的Base64</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+  code: 1,
+  msg: "更新成功",
+  data: {}
 }
 </code></pre>
 
@@ -1903,8 +1925,10 @@ mid 主页用户ID</p></blockquote>
 
 <p>URL(Get): act=member_sns_home&amp;op=trace_list</p>
 
-<p>参数：
-    无</p>
+<p>参数：</p>
+
+<blockquote><p>mid 登录令牌,查看自己的动态列表  <br/>
+mid 用户ID 可以指定某个用户的动态列表,如果不传则默认返回全部列表</p></blockquote>
 
 <p>返回：</p>
 
@@ -2633,6 +2657,34 @@ goods_id 商品ID</p></blockquote>
 
 <blockquote><p>key 登录令牌
 class_id 类别ID,如果不传默认返回一级类目</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "SUCCESS",
+    "data": [
+        {
+            "gc_id": "1",
+            "gc_name": "普洱茶",
+            "gc_name_index": "",
+            "gc_parent_id": "0",
+            "gc_sort": "1",
+            "gc_show": "1",
+            "gc_index_show": "1"
+        }
+    ]
+}
+</code></pre>
+
+<h3>意见反馈</h3>
+
+<p>URL: act=member_feedback&amp;op=feedback_add</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 登录令牌
+feedback 反馈内容</p></blockquote>
 
 <p>返回：</p>
 
