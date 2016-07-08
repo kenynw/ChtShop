@@ -1249,15 +1249,18 @@ URL: act=member_address&op=area_list
 返回： 
 
     {
-      code: 200,
-      datas: {
-        area_list[
-          {
-            area_id 地区编号
-            area_name 地区名称
-          },
-        ]
-      }
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": {
+            "list": [
+                {
+                    "area_id": "1",
+                    "area_name": "北京"
+                }
+            ],
+            "hasmore": false,
+            "page_total": 0
+        }
     }
 
 

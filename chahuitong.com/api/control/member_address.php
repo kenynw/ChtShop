@@ -176,22 +176,8 @@ class member_addressControl extends mobileMemberControl {
             $condition['area_deep'] = 1;
         }
         $area_list = $model_area->getAreaList($condition, 'area_id,area_name');
-        if($area_list){
-           if($_POST['version']){
-               output_json(1,$area_list,"获取成功");
-               die();
-           }else{
-               output_data(array('area_list' => $area_list));
-           }
-        }else{
-            if($_POST['version']){
-                output_json(0,'',"获取失败");
-                die();
-            }else{
-                output_error('获取失败');
-            }
-        }
-        //output_data(array('area_list' => $area_list));
+        if (empty($area_list)) output_json(1, array(), '暂无数据');
+        else output_json(1, array('list' => $area_list), 'SUCCESS', mobile_page(0));
     }
 	
 	/**

@@ -1487,15 +1487,18 @@ area_id 地区编号(为空时默认返回一级分类)</p></blockquote>
 <p>返回：</p>
 
 <pre><code>{
-  code: 200,
-  datas: {
-    area_list[
-      {
-        area_id 地区编号
-        area_name 地区名称
-      },
-    ]
-  }
+    "code": 1,
+    "msg": "SUCCESS",
+    "data": {
+        "list": [
+            {
+                "area_id": "1",
+                "area_name": "北京"
+            }
+        ],
+        "hasmore": false,
+        "page_total": 0
+    }
 }
 </code></pre>
 
