@@ -23,27 +23,9 @@ class member_addressControl extends mobileMemberControl {
      */
     public function address_listOp() {
 		$model_address = Model('address');
+        $address_list = array();
         $address_list = $model_address->getAddressList(array('member_id'=>$this->member_info['member_id']));
-        //change by lai
-        if(!empty($address_list)){
-            if($_POST['version']){
-                output_json(1,$address_list,'查找完成');
-                die();
-            }else{
-                output_data(array('address_list' => $address_list));
-            }
-        }else{
-            if($_POST['version']){
-                output_json(0,'','查找失败');
-                die();
-            }else{
-                output_error('地址不存在');
-            }
-
-        }
-
-        //change by lai end
-        //output_data(array('address_list' => $address_list));
+        output_json(1, array('list' => $address_list), 'SUCCESS', mobile_page(0));
     }
 
     /**
