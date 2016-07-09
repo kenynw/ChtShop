@@ -166,10 +166,11 @@ class member_addressControl extends mobileMemberControl {
      */
 	 public function set_defaultOp() {
          $model_area = Model('address');
+         $model_area->editAddress(array('is_default' => 0), array('is_default' => 1));
+
          $condition=array();
 		 $condition['member_id'] = $this->member_info['member_id'];
 		 $condition['address_id'] = intval($_POST['address_id']);
-         
 		 $result=$model_area->editAddress(array('is_default' => 1), $condition);
 		 if($result){
              output_json(1, $result);
