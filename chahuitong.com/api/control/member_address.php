@@ -59,21 +59,10 @@ class member_addressControl extends mobileMemberControl {
         $condition['member_id'] = $this->member_info['member_id'];
         $delResult=$model_address->delAddress($condition);
         if($delResult){
-            if($_POST['version']){
-                output_json(1,$condition,"获取成功");
-                die();
-            }else{
-                output_data(1);
-            }
-        }else{
-            if($_POST['version']){
-                output_json(0,'',"获取失败");
-                die();
-            }else{
-                output_error('获取失败');
-            }
+            output_json(1,$delResult);
+        }else {
+            output_json(0, 0, "删除失败");
         }
-        //output_data('1');
     }
 
     /**
@@ -94,17 +83,9 @@ class member_addressControl extends mobileMemberControl {
 
         $result = $model_address->addAddress($address_info);
         if($result) {
-            if($_POST['version']){
-                output_json(1,array('address_id' => $result),'添加完成');
-                die();
-            }
-            output_data(array('address_id' => $result));
+            output_json(1, $result);
         } else {
-            if($_POST['version']){
-                output_json(0,array('address_id' => $result),'添加失败');
-                die();
-            }
-            output_error('保存失败');
+            output_json(0, 0, '添加失败');
         }
     }
 
