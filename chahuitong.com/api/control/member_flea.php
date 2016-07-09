@@ -85,8 +85,12 @@ class member_fleaControl extends mobileMemberControl {
         if(empty($goods_info)) output_json(0, $goods_info, Language::get('error_no_goods'));
 
         // 标签处理
-        if ($goods_info['goods_tag']) $goods_info['goods_tag'] = explode(',',str_replace('，',',',$goods_info['goods_tag']));
-        else $goods_info['goods_tag'] = array();
+        if ($goods_info['goods_tag']) {
+            $tag_list = explode(',',str_replace('，',',',$goods_info['goods_tag']));
+            foreach ($tag_list as $value) {
+                $goods_info['goods_tag'] .= ' ' . $value;
+            }
+        }
 
         // 日期处理
         $goods_info['goods_add_time'] = date('Y-m-d H:i');
