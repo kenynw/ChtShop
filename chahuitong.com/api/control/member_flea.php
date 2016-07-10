@@ -86,10 +86,7 @@ class member_fleaControl extends mobileMemberControl {
 
         // 标签处理
         if ($goods_info['goods_tag']) {
-            $tag_list = explode(',',str_replace('，',',',$goods_info['goods_tag']));
-            foreach ($tag_list as $value) {
-                $goods_info['goods_tag'] .= ' ' . $value;
-            }
+            $goods_info['goods_tag'] = str_replace(', ',' ',$goods_info['goods_tag']);
         }
 
         // 日期处理
