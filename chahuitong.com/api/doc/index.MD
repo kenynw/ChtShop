@@ -2234,6 +2234,7 @@ URL: act=member_flea&op=flea_detail
             "gc_name": "",
             "member_id": "4154",
             "member_name": "13430056089",
+            "member_avatar": 
             "goods_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif,http://img.chahuitong.com/shop/common/default_goods_image_240.gif,http://img.chahuitong.com/shop/common/default_goods_image_240.gif,",
             "goods_tag": [],
             "goods_price": "0.00",
@@ -2391,7 +2392,17 @@ URL: act=member_flea&op=save_consult
     {
         "code": 1,
         "msg": "咨询发布成功",
-        "data": 5 // 新插入的数据ID
+        "data": {
+                    "member_id": "164",
+                    "consult_id": "5",
+                    "goods_id": "21",
+                    "consult_content": "test",
+                    "consult_addtime": "1467025302",
+                    "consult_reply": null,
+                    "consult_reply_time": null,
+                    "member_name": "内测帐号",
+                    "member_avatar": "164_60.jpg"
+                }
     }
  
 ### 茶市类别列表

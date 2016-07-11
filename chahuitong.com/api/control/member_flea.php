@@ -84,6 +84,9 @@ class member_fleaControl extends mobileMemberControl {
 
         if(empty($goods_info)) output_json(0, $goods_info, Language::get('error_no_goods'));
 
+        // 用户头像处理
+        $goods_info['member_avatar'] = getMemberAvatarForID($goods_info['member_id']);
+
         // 标签处理
         if ($goods_info['goods_tag']) {
             $goods_info['goods_tag'] = str_replace(', ',' ',$goods_info['goods_tag']);
@@ -91,6 +94,12 @@ class member_fleaControl extends mobileMemberControl {
 
         // 日期处理
         $goods_info['goods_add_time'] = date('Y-m-d H:i');
+
+        // 描述处理
+        $abstract = preg_replace('/<[^>]*>|\s+/', '', $goods_info['goods_body']);
+        if (!$abstract) {
+            $goods_info['goods_body'] = Language::get('flea_no_explain');
+        }
 
         /**
          * 商品多图
@@ -115,6 +124,12 @@ class member_fleaControl extends mobileMemberControl {
         $consult		= Model('flea_consult');
         $field = 'member_id,consult_id,goods_id,consult_content,consult_addtime,consult_reply,consult_reply_time';
         $consult_list	= $consult->getConsultList(array('goods_id'=>$goods_id,'order'=>'consult_id desc'),'','seller', $field);
+        if ($consult_list) {
+            foreach ($consult_list as $key=>$value) {
+                $value['member_avatar'] = getMemberAvatarForID($value['member_id']);
+                $value['consult_addtime'] = $this->_time_comb($value['consult_addtime']);
+            }
+        }
         $goods_info['consult_list'] = empty($consult_list) ? array() : $consult_list;
 
         /**
@@ -349,18 +364,26 @@ class member_fleaControl extends mobileMemberControl {
         $input['goods_id']			= $goods_id;
         $input['consult_content']	= $_POST['content'];
         $input['type_name']	        = 'flea';
-        $consult = Model('flea_consult');
-        if($result = $consult->addConsult($input)){
+        $model_consult = Model('flea_consult');
+        if($result = $model_consult->addConsult($input)){
             /*	闲置物品表增加评论次数	*/
             $condition['commentnum']['value']='1';
             $condition['commentnum']['sign']='increase';
             $goods->updateGoods($condition, $goods_id);
-            output_json(1, $result, '留言发布成功');
+            $field = 'consult_id, goods_id, member_id, consult_content, consult_addtime, consult_reply';
+            $consult = $model_consult->getGoodsInfo(array('consult_id' => $result), $field);
+            $consult['member_avatar'] = getMemberAvatarForID($consult['member_id']);
+            $consult['consult_addtime'] = $this->_time_comb($consult['consult_addtime']) . '前';
+
+            output_json(1, $consult, '留言发布成功');
         }else{
             output_json(0, 0, '留言发布超时');
         }
     }
 
+    /**
+     * 获取类别列表
+     */
     public function class_listOp() {
         $id = intval(empty($_POST['class_id']) ? $_GET['class_id'] : $_POST['class_id']);
 
@@ -379,7 +402,7 @@ class member_fleaControl extends mobileMemberControl {
 
                 $abstract = preg_replace('/<[^>]*>|\s+/', '', $val['goods_body']);
                 if ($abstract) {
-                    $goods_list[$key]['goods_abstract'] = str_cut($abstract,140);
+                    $goods_list[$key]['goods_abstract'] = str_cut($abstract,70);
                 } else {
                     $goods_list[$key]['goods_abstract'] = Language::get('flea_no_explain');
                 }
@@ -395,13 +418,18 @@ class member_fleaControl extends mobileMemberControl {
     }
 
     private function _time_comb($goods_add_time){
-        $now_time	= time();
-        $last_time	= $now_time - $goods_add_time;
-        if($last_time>2592000)	return intval($last_time/2592000).Language::get('flea_index_mouth');
-        if($last_time>86400)	return intval($last_time/86400).Language::get('flea_index_day');
-        if($last_time>3600)		return intval($last_time/3600).Language::get('flea_index_hour');
-        if($last_time>60)		return intval($last_time/60).Language::get('flea_index_minute');
-        return $last_time.Language::get('flea_index_seconds');
+        $catch_time = (time() - $goods_add_time);
+        if($catch_time < 60){
+            return $catch_time.Language::get('second');
+        }elseif ($catch_time < 60*60){
+            return intval($catch_time/60).Language::get('minute');
+        }elseif ($catch_time < 60*60*24){
+            return intval($catch_time/60/60).Language::get('hour');
+        }elseif ($catch_time < 60*60*24*365){
+            return intval($catch_time/60/60/24).Language::get('day');
+        }else {
+            return date('Y:m:d H:i', $goods_add_time);
+        }
     }
 
 }

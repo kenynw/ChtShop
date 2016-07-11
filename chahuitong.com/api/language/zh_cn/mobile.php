@@ -14,10 +14,11 @@ $lang['error_title_null']		= '商品不存在';
 $lang['error_content_null']		= '内容不能为空';
 
 $lang['flea_index_unable']		= '闲置市场功能未开启';
-$lang['flea_index_mouth']		= '月';
-$lang['flea_index_day']			= '天';
-$lang['flea_index_hour']		= '小时';
-$lang['flea_index_minute']		= '分钟';
-$lang['flea_index_seconds']		= '秒';
+$lang['second']                 = '秒';
+$lang['minute']                 = '分钟';
+$lang['hour']	                = '小时';
+$lang['day']	                = '天';
+$lang['mouth']	                = '月';
+$lang['year']	                = '年';
 $lang['flea_no_explain']		= '这个卖家太懒了，宝贝描述里面一个字都不肯写。';
 $lang['flea_limit_goods_notice']= '每个用户最多发布10个闲置物品信息,请删除某个闲置物品信息后重新操作';
