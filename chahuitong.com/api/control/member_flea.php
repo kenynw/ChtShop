@@ -347,7 +347,7 @@ class member_fleaControl extends mobileMemberControl {
     public function save_consultOp(){
         $goods_id = intval(empty($_GET['goods_id']) ? $_POST['goods_id'] : $_GET['goods_id']);
         if ($goods_id <= 0) output_json(1, array(), Language::get('wrong_argument'));
-        if(trim($_GET['content'])==="") output_json(0, array(), Language::get('error_content_null'));
+        if(trim($_POST['content'])==="") output_json(0, array(), Language::get('error_content_null'));
 
         $goods	= Model('flea');
         $condition	= array();
@@ -360,9 +360,9 @@ class member_fleaControl extends mobileMemberControl {
          */
         $input	= array();
         $input['seller_id']			= $goods_info['member_id'];
-        $input['member_id']			= $_GET['hide_name']?0:(empty($this->member_info['member_id'])?0:$this->member_info['member_id']);
+        $input['member_id']			= $_POST['hide_name']?0:(empty($this->member_info['member_id'])?0:$this->member_info['member_id']);
         $input['goods_id']			= $goods_id;
-        $input['consult_content']	= $_GET['content'];
+        $input['consult_content']	= $_POST['content'];
         $input['type_name']	        = 'flea';
         $model_consult = Model('flea_consult');
         if($result = $model_consult->addConsult($input)){
