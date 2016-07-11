@@ -126,8 +126,8 @@ class member_fleaControl extends mobileMemberControl {
         $consult_list	= $consult->getConsultList(array('goods_id'=>$goods_id,'order'=>'consult_id desc'),'','seller', $field);
         if ($consult_list) {
             foreach ($consult_list as $key=>$value) {
-                $value['member_avatar'] = getMemberAvatarForID($value['member_id']);
-                $value['consult_addtime'] = $this->_time_comb($value['consult_addtime']);
+                $consult_list[$key]['member_avatar'] = getMemberAvatarForID($value['member_id']);
+                $consult_list[$key]['consult_addtime'] = $this->_time_comb($value['consult_addtime']);
             }
         }
         $goods_info['consult_list'] = empty($consult_list) ? array() : $consult_list;
