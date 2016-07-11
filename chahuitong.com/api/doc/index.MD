@@ -2384,6 +2384,7 @@ URL: act=member_flea&op=save_consult
 
 >key 登录令牌
 >goods_id 商品ID  
+>content 留言内容
 
 返回：
 

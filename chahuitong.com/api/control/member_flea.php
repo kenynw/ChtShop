@@ -115,7 +115,7 @@ class member_fleaControl extends mobileMemberControl {
         $consult		= Model('flea_consult');
         $field = 'member_id,consult_id,goods_id,consult_content,consult_addtime,consult_reply,consult_reply_time';
         $consult_list	= $consult->getConsultList(array('goods_id'=>$goods_id,'order'=>'consult_id desc'),'','seller', $field);
-        $goods_info['consult_list'] = $consult_list;
+        $goods_info['consult_list'] = empty($consult_list) ? array() : $consult_list;
 
         /**
          * 浏览次数更新
