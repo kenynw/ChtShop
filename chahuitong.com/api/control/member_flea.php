@@ -347,7 +347,7 @@ class member_fleaControl extends mobileMemberControl {
     public function save_consultOp(){
         $goods_id = intval(empty($_GET['goods_id']) ? $_POST['goods_id'] : $_GET['goods_id']);
         if ($goods_id <= 0) output_json(1, array(), Language::get('wrong_argument'));
-        if(trim($_POST['content'])==="") output_json(0, array(), Language::get('error_content_null'));
+        if(trim($_GET['content'])==="") output_json(0, array(), Language::get('error_content_null'));
 
         $goods	= Model('flea');
         $condition	= array();
@@ -360,9 +360,9 @@ class member_fleaControl extends mobileMemberControl {
          */
         $input	= array();
         $input['seller_id']			= $goods_info['member_id'];
-        $input['member_id']			= $_POST['hide_name']?0:(empty($this->member_info['member_id'])?0:$this->member_info['member_id']);
+        $input['member_id']			= $_GET['hide_name']?0:(empty($this->member_info['member_id'])?0:$this->member_info['member_id']);
         $input['goods_id']			= $goods_id;
-        $input['consult_content']	= $_POST['content'];
+        $input['consult_content']	= $_GET['content'];
         $input['type_name']	        = 'flea';
         $model_consult = Model('flea_consult');
         if($result = $model_consult->addConsult($input)){
@@ -370,14 +370,15 @@ class member_fleaControl extends mobileMemberControl {
             $condition['commentnum']['value']='1';
             $condition['commentnum']['sign']='increase';
             $goods->updateGoods($condition, $goods_id);
+            
             $field = 'consult_id, goods_id, member_id, consult_content, consult_addtime, consult_reply';
-            $consult = $model_consult->getGoodsInfo(array('consult_id' => $result), $field);
+            $consult = $model_consult->getOneById($result);
             $consult['member_avatar'] = getMemberAvatarForID($consult['member_id']);
-            $consult['consult_addtime'] = $this->_time_comb($consult['consult_addtime']) . '前';
+            $consult['consult_addtime'] = $this->_time_comb($consult['consult_addtime']);
 
             output_json(1, $consult, '留言发布成功');
         }else{
-            output_json(0, 0, '留言发布超时');
+            output_json(0, array(), '留言发布超时');
         }
     }
 
@@ -407,7 +408,7 @@ class member_fleaControl extends mobileMemberControl {
                     $goods_list[$key]['goods_abstract'] = Language::get('flea_no_explain');
                 }
 
-                $goods_list[$key]['goods_add_time'] = $this->_time_comb(intval($val['goods_add_time'])) . '前';
+                $goods_list[$key]['goods_add_time'] = $this->_time_comb(intval($val['goods_add_time']));
 
                 unset($goods_list[$key]['goods_image']);
                 unset($goods_list[$key]['goods_body']);
@@ -420,13 +421,13 @@ class member_fleaControl extends mobileMemberControl {
     private function _time_comb($goods_add_time){
         $catch_time = (time() - $goods_add_time);
         if($catch_time < 60){
-            return $catch_time.Language::get('second');
+            return $catch_time.Language::get('second').'前';
         }elseif ($catch_time < 60*60){
-            return intval($catch_time/60).Language::get('minute');
+            return intval($catch_time/60).Language::get('minute').'前';
         }elseif ($catch_time < 60*60*24){
-            return intval($catch_time/60/60).Language::get('hour');
+            return intval($catch_time/60/60).Language::get('hour').'前';
         }elseif ($catch_time < 60*60*24*365){
-            return intval($catch_time/60/60/24).Language::get('day');
+            return intval($catch_time/60/60/24).Language::get('day').'前';
         }else {
             return date('Y:m:d H:i', $goods_add_time);
         }
