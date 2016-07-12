@@ -2290,7 +2290,7 @@ URL: act=member_flea&op=image_upload
 参数：
 
 >key 登录信息   
->upload_id 原图片ID,用于编辑时更改图片,需要把原图片ID传入用来删除原图片
+>upload_id 原图片ID,用于编辑时更改图片,需要把原图片ID传入用来删除原图片    
 >image 图片   
 
 返回：
@@ -2312,7 +2312,7 @@ URL: act=member_flea&op=save_goods
 参数：
 
 >key 登录信息   
->goods_file_id 封面图片ID,由第一步上传成功后返回的第一张图片的ID
+>goods_file_id 封面图片ID,由第一步上传成功后返回的第一张图片的ID  
 >*goods_name 图片   
 >cate_id 分类ID   			 
 >cate_name 分类名称     			 

@@ -230,7 +230,7 @@ class member_fleaControl extends mobileMemberControl {
         $result = $upload->upfile('image');
         if ($result){
             $_POST['pic'] 		= $upload->getSysSetPath().$upload->file_name;
-            $_POST['pic_thumb'] = $upload->getSysSetPath().$upload->thumb_image;
+            $_POST['pic_thumb'] = $upload->getSysSetPath().$upload->file_name;
         }else {
             output_json(0, array(), '图片上传失败');
         }
@@ -254,13 +254,9 @@ class member_fleaControl extends mobileMemberControl {
         $insert_array['item_id']	= intval($_POST['item_id']);
         $insert_array['store_id']	= $this->member_info['member_id'];
         $insert_array['upload_type']= 12;
-        $result2 = $model_upload->add($insert_array);
+        $insert_array['upload_id'] = $model_upload->add($insert_array);
 
-        $data = array();
-        $data['upload_id']	= $result2;
-        $data['file_name']	= $_POST['pic_thumb'];
-        $data['file_path']	= $_POST['pic_thumb'];
-        output_json(1, $data);
+        output_json(1, $insert_array);
     }
 
     /**

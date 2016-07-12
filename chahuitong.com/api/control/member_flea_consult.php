@@ -52,27 +52,37 @@ class member_flea_consultControl extends mobileMemberControl {
         $model_consult = Model('flea_consult');
         $condition = array();
         $condition['goods_id'] = $flea_id;
-        $cousult_list = $model_consult->getConsultList();
+        $page = new Page();
+        $page->setStyle('admin');
+        $page->setEachNum($this->page);
+        $consult_list = $model_consult->getConsultList($condition, $page, 'seller');
+        if ($consult_list) {
+            foreach ($consult_list as $key => $value) {
+                $consult_list[$key]['member_avatar'] = getMemberAvatar($value['member_avatar']);
+                $consult_list[$key]['consult_addtime'] = $this->_time_comb($value['consult_addtime']);
+            }
+        }
+
+        output_json(1, $consult_list);
     }
-    
+
     /**
      * 取得的时间间隔
      */
-    function checkTime($time) {
-        if($time=='') return false;
-        
-        $catch_time = (time() - $time);
+    private function _time_comb($goods_add_time){
+        $catch_time = (time() - $goods_add_time);
         if($catch_time < 60){
-            return $catch_time.Language::get('second');
+            return $catch_time.Language::get('second').'前';
         }elseif ($catch_time < 60*60){
-            return intval($catch_time/60).Language::get('minute');
+            return intval($catch_time/60).Language::get('minute').'前';
         }elseif ($catch_time < 60*60*24){
-            return intval($catch_time/60/60).Language::get('hour');
+            return intval($catch_time/60/60).Language::get('hour').'前';
         }elseif ($catch_time < 60*60*24*365){
-            return intval($catch_time/60/60/24).Language::get('day');
+            return intval($catch_time/60/60/24).Language::get('day').'前';
         }else {
-            return date('Y:m:d H:i', $time);
+            return date('Y:m:d H:i', $goods_add_time);
         }
     }
+
 
 }
