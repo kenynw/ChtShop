@@ -195,7 +195,7 @@ class member_fleaControl extends mobileMemberControl {
              * 商品封面图片修改
              */
             if(!empty($_POST['goods_file_id'])) {
-                $image_info	= $model_store_goods->getListImageGoods(array('upload_id'=>intval($_POST['goods_file_id'])));
+                $image_info	= $model_store_goods->getListImageGoods(array('upload_id'=>intval($_POST['goods_file_id'][0])));
                 $goods_image	= $image_info[0]['file_thumb'];
                 $model_store_goods->updateGoods(array('goods_image'=>$goods_image),$state);
             }
