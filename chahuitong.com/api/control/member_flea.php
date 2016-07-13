@@ -167,6 +167,7 @@ class member_fleaControl extends mobileMemberControl {
         $goods_array['gc_id']			    = $_POST['cate_id'];
         $goods_array['gc_name']			    = $_POST['cate_name'];
         $goods_array['member_id']			= $this->member_info['member_id'];
+        $goods_array['member_name']			= $this->member_info['member_name'];
         $goods_array['flea_pname']		    = $_POST['flea_pname'];
         $goods_array['flea_area_id']	    = $_POST['area_id'];
         $goods_array['flea_area_name']	    = $_POST['area_info'];

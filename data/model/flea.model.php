@@ -24,8 +24,8 @@ class fleaModel extends Model {
 		$goods_array['goods_name']	= $param['goods_name'];
 		$goods_array['gc_id']		= $param['gc_id'];
 		$goods_array['gc_name']		= $param['gc_name'];
-		$goods_array['member_id']	= $_SESSION['member_id'];
-		$goods_array['member_name'] = $_SESSION['member_name'];
+		$goods_array['member_id']	= empty($param['member_id']) ? $_SESSION['member_id'] : $param['member_id'];
+		$goods_array['member_name'] = empty($param['member_name']) ? $_SESSION['member_name'] : $param['member_name'];
 		$goods_array['goods_image']	= $param['goods_image'];
 		$goods_array['flea_quality']= $param['flea_quality'];
 		$goods_array['flea_area_id']= $param['flea_area_id'];
