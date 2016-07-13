@@ -188,14 +188,14 @@ class member_fleaControl extends mobileMemberControl {
             $upload_array['store_id']	= $this->member_info['member_id'];
             $upload_array['item_id']	= '0';
             $upload_array['upload_type_in'] = "'12','13'";
-            $upload_array['upload_id_in']	= "'".implode("','", $_POST['goods_file_id'])."'";
+//            $upload_array['upload_id_in']	= "'".implode("','", $_POST['goods_file_id'])."'";
             $model_upload->updatebywhere(array('item_id'=>$state),$upload_array);
 
             /**
              * 商品封面图片修改
              */
             if(!empty($_POST['goods_file_id'])) {
-                $image_info	= $model_store_goods->getListImageGoods(array('upload_id'=>intval($_POST['goods_file_id'][0])));
+                $image_info	= $model_store_goods->getListImageGoods(array('upload_id'=>intval($_POST['goods_file_id'])));
                 $goods_image	= $image_info[0]['file_thumb'];
                 $model_store_goods->updateGoods(array('goods_image'=>$goods_image),$state);
             }
