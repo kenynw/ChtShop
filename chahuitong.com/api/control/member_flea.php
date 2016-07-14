@@ -390,6 +390,12 @@ class member_fleaControl extends mobileMemberControl {
         $condition['gc_show'] = 1;
         $condition['gc_parent_id'] = $id;
         $goods_class = $model_goods_class->getClassList($condition);
+        foreach ($goods_class as $key => $value) {
+            $child_list = $model_goods_class->getNextLevelGoodsClassById($value['gc_id']);
+            if (!empty($child_list)) $goods_class[$key]['has_child'] = true;
+            else $goods_class[$key]['has_child'] = false;
+        }
+
         output_json(1, $goods_class);
     }
     

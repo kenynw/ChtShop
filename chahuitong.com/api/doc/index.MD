@@ -2428,6 +2428,7 @@ URL: act=member_flea&op=class_list
                 "gc_sort": "1",
                 "gc_show": "1",
                 "gc_index_show": "1"
+                "has_child": true 是否有下级
             }
         ]
     }
@@ -2446,16 +2447,6 @@ URL: act=member_feedback&op=feedback_add
     {
         "code": 1,
         "msg": "SUCCESS",
-        "data": [
-            {
-                "gc_id": "1",
-                "gc_name": "普洱茶",
-                "gc_name_index": "",
-                "gc_parent_id": "0",
-                "gc_sort": "1",
-                "gc_show": "1",
-                "gc_index_show": "1"
-            }
-        ]
+        "data": 1
     }
                         
