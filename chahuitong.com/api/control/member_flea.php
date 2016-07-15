@@ -290,7 +290,7 @@ class member_fleaControl extends mobileMemberControl {
         $goods_info  = $model_store_goods->getGoodsInfo($para);
         if (empty($goods_info)) output_json(0, false, '商品不存在');
 
-        $state	= $model_store_goods->dropGoods($goods_id);
+        $state	= $model_store_goods->dropGoods($goods_id, $this->member_info['member_id']);
         if($state) {
             output_json(1, $state, '删除成功');
         } else {
