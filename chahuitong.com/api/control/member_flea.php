@@ -239,7 +239,7 @@ class member_fleaControl extends mobileMemberControl {
         $result = $upload->upfile('image');
         if ($result){
             $_POST['pic'] 		= $upload->getSysSetPath().$upload->file_name;
-            $_POST['pic_thumb'] = $upload->getSysSetPath().$upload->file_name;
+            $_POST['pic_thumb'] = $upload->getSysSetPath().$upload->thumb_image;
         }else {
             output_json(0, array(), '图片上传失败');
         }
