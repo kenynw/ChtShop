@@ -244,18 +244,11 @@ class member_fleaControl extends mobileMemberControl {
             output_json(0, array(), '图片上传失败');
         }
 
-        $img_path = $_POST['pic'];
-        /**
-         * 取得图像大小
-         */
-        list($width, $height, $type, $attr) = getimagesize(BASE_UPLOAD_PATH.DS.$upload_dir.$img_path);
-
         /**
          * 图片数据入库
          */
         $model_upload = Model('flea_upload');
         $insert_array = array();
-        $image_type	  = array('goods_image'=>12,'desc_image'=>13);//debug
         $insert_array['file_name']	= $_POST['pic'];
         $insert_array['file_thumb']	= $_POST['pic_thumb'];
         $insert_array['file_size']	= intval($_FILES['image']['size']);
