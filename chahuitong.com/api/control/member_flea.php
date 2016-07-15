@@ -30,6 +30,7 @@ class member_fleaControl extends mobileMemberControl {
         if(is_array($list_goods) and !empty($list_goods)) {
             foreach ($list_goods as $key => $val) {
                 $list_goods[$key]['goods_image'] = fleaThumb($val['goods_image'], $val['member_id']);
+                $list_goods[$key]['goods_add_time'] = $this->_time_comb(intval($val['goods_add_time']));
             }
 
             $page_count = $page->getTotalPage();
@@ -57,12 +58,10 @@ class member_fleaControl extends mobileMemberControl {
         $goods_list	= $flea_model->listGoods($condition, $page, $field);
         if($goods_list){
             $goods_list = $this->_get_extend_goods($goods_list);
-
-            $page_count = $page->getTotalPage();
-            output_json(1, array('list' => $goods_list), 'SUCCESS', mobile_page($page_count));
         }
 
-        output_json(0, $goods_list);
+        $page_count = $page->getTotalPage();
+        output_json(1, array('list' => $goods_list), 'SUCCESS', mobile_page($page_count));
     }
 
     public function flea_detailOp() {
@@ -265,15 +264,15 @@ class member_fleaControl extends mobileMemberControl {
      */
     public function drop_goodsOp() {
         /**
+         * 检查商品是否属于店铺
+         */
+        $goods_id = intval(empty($_POST['goods_id']) ? $_GET['goods_id'] : $_POST['goods_id']);
+        if($goods_id <= 0 ) output_json(0, 0, Language::get('wrong_argument'));
+
+        /**
          * 实例化闲置物品模型
          */
         $model_store_goods	= Model('flea');
-        /**
-         * 检查商品是否属于店铺
-         */
-        $goods_id = trim(empty($_GET['goods_id']) ? $_POST['goods_id'] : $_GET['goods_id']);
-        if(empty($goods_id)) output_json(0, 0, Language::get('wrong_argument'));
-
         //统计输入数量
         $goods_id_array = explode(',',$goods_id);
         $input_goods_count = count($goods_id_array);
@@ -425,13 +424,13 @@ class member_fleaControl extends mobileMemberControl {
         $catch_time = (time() - $goods_add_time);
         if($catch_time < 60){
             return $catch_time.Language::get('second').'前';
-        }elseif ($catch_time < 60*60){
+        } elseif ($catch_time < 60*60){
             return intval($catch_time/60).Language::get('minute').'前';
-        }elseif ($catch_time < 60*60*24){
+        } elseif ($catch_time < 60*60*24){
             return intval($catch_time/60/60).Language::get('hour').'前';
-        }elseif ($catch_time < 60*60*24*365){
+        } elseif ($catch_time < 60*60*24*365){
             return intval($catch_time/60/60/24).Language::get('day').'前';
-        }else {
+        } else {
             return date('Y:m:d H:i', $goods_add_time);
         }
     }
