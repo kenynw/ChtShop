@@ -171,7 +171,7 @@ class fleaModel extends Model {
 	 * @param	array $param 列表条件
 	 * @param	int $goods_id 商品id
 	 */ 
-	public function dropGoods($goods_id, $member_id) {
+	public function dropGoods($goods_id, $member_id = '') {
 		if(empty($goods_id)) {
 			return false;
 		}
@@ -180,7 +180,7 @@ class fleaModel extends Model {
 			$image_more	= Db::select(array('table'=>'flea_upload','field'=>'file_name','where'=>' where item_id in ('.$goods_id.') and upload_type in ("12","13")'));
 			if(is_array($image_more) && !empty($image_more)){
 				foreach ($image_more as $v){
-                    @unlink("www.chahuitong.com/data/upload".DS.ATTACH_MALBUM.DS.(empty($member_id) ? $_SESSION['member_id'] : $member_id).DS.$v['file_name']);
+					@unlink(UPLOAD_SITE_URL.DS.ATTACH_MALBUM.DS.(empty($member_id) ? $_SESSION['member_id'] : $member_id).DS.$v['file_name']);
 				}
 			}
 			Db::delete('flea_upload','where item_id in ('.$goods_id.') and upload_type in ("12","13")');
