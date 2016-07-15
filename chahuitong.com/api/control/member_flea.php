@@ -30,7 +30,7 @@ class member_fleaControl extends mobileMemberControl {
         if(is_array($list_goods) and !empty($list_goods)) {
             foreach ($list_goods as $key => $val) {
                 $list_goods[$key]['goods_image'] = fleaThumb($val['goods_image'], $val['member_id']);
-                $list_goods[$key]['goods_add_time'] = $this->_time_comb(intval($val['goods_add_time']));
+                $list_goods[$key]['goods_add_time'] = date('Y.m.d H:i', $val['goods_add_time']);
             }
 
             $page_count = $page->getTotalPage();
@@ -263,26 +263,23 @@ class member_fleaControl extends mobileMemberControl {
      * 删除闲置物品
      */
     public function drop_goodsOp() {
+
         /**
          * 检查商品是否属于店铺
          */
-        $goods_id = intval(empty($_POST['goods_id']) ? $_GET['goods_id'] : $_POST['goods_id']);
-        if($goods_id <= 0 ) output_json(0, 0, Language::get('wrong_argument'));
+        $goods_id = trim(empty($_POST['goods_id']) ? $_GET['goods_id'] : $_POST['goods_id']);
+        if(empty($goods_id)) output_json(0, 0, Language::get('wrong_argument'));
 
         /**
          * 实例化闲置物品模型
          */
         $model_store_goods	= Model('flea');
-        //统计输入数量
-        $goods_id_array = explode(',',$goods_id);
-        $input_goods_count = count($goods_id_array);
         //统计确认的数量
         $para = array();
         $para['member_id'] = $this->member_info['member_id'];
-        $para['goods_id_in'] = $goods_id;
-        $verify_count = intval($model_store_goods->countGoods($para));
-        //判断输入和确认是否一致
-        if($input_goods_count !== $verify_count) output_json(0, 0, Language::get('wrong_argument'));
+        $para['goods_id'] = $goods_id;
+        $goods_info  = $model_store_goods->getGoodsInfo($para);
+        if (empty($goods_info)) output_json(0, 0, '商品不存在');
 
         $state	= $model_store_goods->dropGoods($goods_id);
         if($state) {
