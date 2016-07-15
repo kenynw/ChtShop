@@ -2346,7 +2346,7 @@ URL: act=member_flea&op=drop_goods
     {
         "code": 1,
         "msg": "SUCCESS",
-        "data": 56
+        "data": true / false
     }
           
 ### 茶市编辑商品

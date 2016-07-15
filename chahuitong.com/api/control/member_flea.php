@@ -268,7 +268,7 @@ class member_fleaControl extends mobileMemberControl {
          * 检查商品是否属于店铺
          */
         $goods_id = trim(empty($_POST['goods_id']) ? $_GET['goods_id'] : $_POST['goods_id']);
-        if(empty($goods_id)) output_json(0, 0, Language::get('wrong_argument'));
+        if(empty($goods_id)) output_json(0, false, Language::get('wrong_argument'));
 
         /**
          * 实例化闲置物品模型
@@ -279,13 +279,13 @@ class member_fleaControl extends mobileMemberControl {
         $para['member_id'] = $this->member_info['member_id'];
         $para['goods_id'] = $goods_id;
         $goods_info  = $model_store_goods->getGoodsInfo($para);
-        if (empty($goods_info)) output_json(0, 0, '商品不存在');
+        if (empty($goods_info)) output_json(0, false, '商品不存在');
 
         $state	= $model_store_goods->dropGoods($goods_id);
         if($state) {
             output_json(1, $state, '删除成功');
         } else {
-            output_json(0, 0, '删除失败');
+            output_json(0, false, '删除失败');
         }
     }
 
