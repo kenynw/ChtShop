@@ -180,12 +180,12 @@ class fleaModel extends Model {
 			$image_more	= Db::select(array('table'=>'flea_upload','field'=>'file_name','where'=>' where item_id in ('.$goods_id.') and upload_type in ("12","13")'));
 			if(is_array($image_more) && !empty($image_more)){
 				foreach ($image_more as $v){
-					unlink(UPLOAD_SITE_URL.DS.ATTACH_MALBUM.DS.(empty($member_id) ? $_SESSION['member_id'] : $member_id).DS.$v['file_name']);
+					$result = unlink(UPLOAD_SITE_URL.DS.ATTACH_MALBUM.DS.(empty($member_id) ? $_SESSION['member_id'] : $member_id).DS.$v['file_name']);
 				}
 			}
 			Db::delete('flea_upload','where item_id in ('.$goods_id.') and upload_type in ("12","13")');
 		}
-		return true;
+		return $result;
 	}
 	/**
 	 * 闲置物品多图删除
