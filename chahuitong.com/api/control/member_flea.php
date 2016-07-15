@@ -33,11 +33,10 @@ class member_fleaControl extends mobileMemberControl {
                 $list_goods[$key]['goods_add_time'] = date('Y.m.d H:i', $val['goods_add_time']);
             }
 
-            $page_count = $page->getTotalPage();
-            output_json(1, array('list' => $list_goods), 'SUCCESS', mobile_page($page_count));
         }
 
-        output_json(0, array('list' => $list_goods), '暂无数据');
+        $page_count = $page->getTotalPage();
+        output_json(1, array('list' => $list_goods), 'SUCCESS', mobile_page($page_count));
     }
 
     public function flea_listOp() {
@@ -109,12 +108,22 @@ class member_fleaControl extends mobileMemberControl {
         $condition['image_type'] = 12;
         $field = 'file_thumb, store_id, upload_type, item_id';
         $desc_image	= $model_store_goods->getListImageGoods($condition, $field);
+        $goods_image_path = UPLOAD_SITE_URL.DS.ATTACH_MALBUM.'/'.$goods_info['member_id'].'/';
+        $model_store_goods->getThumb($desc_image,$goods_image_path);
         if(!empty($desc_image) && is_array($desc_image)) {
-            $image = '';
+            $image_default_key = 0;
             foreach ($desc_image as $key => $val) {
-                $image .= fleaThumb($val['file_thumb'], $goods_info['member_id']) . ',';
+                if ($goods_info['goods_image'] == $val['thumb_small']) {
+                    $image_default_key = $key;
+                }
             }
-            $goods_info['goods_image'] = $image;
+            if($image_default_key > 0) {//将封面图放到第一位显示
+                $desc_image_0	= $desc_image[0];
+                $desc_image[0]	= $desc_image[$image_default_key];
+                $desc_image[$image_default_key]	= $desc_image_0;
+            }
+
+            $goods_info['desc_image'] = $desc_image;
         }
 
         /**

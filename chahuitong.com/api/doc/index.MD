@@ -2218,7 +2218,7 @@ URL: act=member_flea&op=flea_detail
 
 参数：
 
->key 登录信息
+>key 登录信息   
 >goods_id 商品ID  如果不传或者传0将会返回用户的信息
 
 返回：
@@ -2228,45 +2228,44 @@ URL: act=member_flea&op=flea_detail
         "code": 1,
         "msg": "SUCCESS",
         "data": {
-            "goods_id": "21",
-            "goods_name": " 牛蒡茶",
+            "goods_id": "2",
+            "goods_name": "高頂茶业 滇系列生茶2015-30",
             "gc_id": "0",
             "gc_name": "",
-            "member_id": "4154",
-            "member_name": "13430056089",
-            "member_avatar": 
-            "goods_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif,http://img.chahuitong.com/shop/common/default_goods_image_240.gif,http://img.chahuitong.com/shop/common/default_goods_image_240.gif,",
-            "goods_tag": [],
+            "member_id": "151",
+            "member_name": "18659255555",
+            "goods_image": "1443436999_1.jpg",
+            "goods_tag": "",
             "goods_price": "0.00",
-            "goods_store_price": "80.00",
+            "goods_store_price": "0.00",
             "goods_show": "0",
-            "goods_click": "39",
+            "goods_click": "3",
             "flea_collect_num": "0",
             "goods_commend": "0",
-            "goods_add_time": "2016-06-27 19:39",
+            "goods_add_time": "2016-07-15 14:16",
             "goods_keywords": "",
             "goods_description": "",
-            "goods_body": "牛蒡性温、味甘无毒，通十二经脉、除五脏恶气，牛蒡茶有排除人体毒素，是老幼四季皆宜的保健饮品",
-            "commentnum": "2",
+            "goods_body": "这个卖家太懒了，宝贝描述里面一个字都不肯写。",
+            "commentnum": "0",
             "salenum": "0",
             "flea_quality": "0",
-            "flea_pname": "黄小姐",
-            "flea_pphone": "13430056089",
+            "flea_pname": "",
+            "flea_pphone": "18659255555",
             "flea_area_id": "0",
-            "flea_area_name": "揭阳",
-            "consult_list": [
+            "flea_area_name": "厦门和广州",
+            "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+            "desc_image": [
                 {
-                    "member_id": "164",
-                    "consult_id": "5",
-                    "goods_id": "21",
-                    "consult_content": "1",
-                    "consult_addtime": "1467025302",
-                    "consult_reply": null,
-                    "consult_reply_time": null,
-                    "member_name": "内测帐号",
-                    "member_avatar": "164_60.jpg"
+                    "file_thumb": "1443436999_1.jpg",
+                    "store_id": "151",
+                    "upload_type": "12",
+                    "item_id": "2",
+                    "thumb_small": "http://img.chahuitong.com/shop/member/151/1443436999_1.jpg",
+                    "thumb_mid": "http://img.chahuitong.com/shop/member/151/1443436999_1.jpg",
+                    "thumb_max": "http://img.chahuitong.com/shop/member/151/1443436999_1.jpg"
                 }
-            ]
+            ],
+            "consult_list": []
         }
     }
     发布新商品时,返回用户信息用于自动填充用户已经保存过资料的信息
