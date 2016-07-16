@@ -132,14 +132,7 @@ class discoverControl extends mobileHomeControl {
             } else {
                 $class_list[$key]['gc_thumb'] = '';
             }
-
-            $class_list[$key]['text'] = '';
-            $child_class_string = $goods_class_array[$value['gc_id']]['child'];
-            $child_class_array = explode(',', $child_class_string);
-            foreach ($child_class_array as $child_class) {
-                $class_list[$key]['text'] .= $goods_class_array[$child_class]['gc_name'] . '/';
-            }
-            $class_list[$key]['text'] = rtrim($class_list[$key]['text'], '/');
+            
             unset($class_list[$key]['type_id']);
             unset($class_list[$key]['type_name']);
             unset($class_list[$key]['commis_rate']);
