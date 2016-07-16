@@ -16,7 +16,12 @@ class discoverControl extends mobileHomeControl {
     }
 
     public function indexOp() {
-        $data = array();
+        $data = array(
+            'trace_list' => array(),
+            'flea_list' => array(),
+            'class_list' => array(),
+            'member_list' => array(),
+        );
 
         // 获取精选动态
         $model_trace = Model('sns_tracelog');
@@ -61,32 +66,35 @@ class discoverControl extends mobileHomeControl {
             $data['flea_list'] = $flea_list;
         }
 
-        // 获取热门茶类
-        $model_staple_class = Model('goods_class_staple');
-        $condition = array();
-        $condition['gc_id_1'] = array('gt', 0);
-        $field = 'staple_id, staple_name, gc_id_1, gc_id_2, gc_id_3, counter';
-        $class_list = $model_staple_class->getStapleList($condition, $field, 'counter desc', 6);
-        if (!empty($class_list)) {
-            foreach ($class_list as $key => $value) {
-                if ($value['gc_id_3'] > 0) {
-                    $class_list[$key]['gc_id'] = $value['gc_id_3'];
-                } elseif($value['gc_id_2'] > 0) {
-                    $class_list[$key]['gc_id'] = $value['gc_id_2'];
-                } else {
-                    $class_list[$key]['gc_id'] = $value['gc_id_1'];
-                }
+//        // 获取热门茶类
+//        $model_staple_class = Model('goods_class_staple');
+//        $condition = array();
+//        $condition['gc_id_1'] = array('gt', 0);
+//        $field = 'staple_id, staple_name, gc_id_1, gc_id_2, gc_id_3, counter';
+//        $class_list = $model_staple_class->getStapleList($condition, $field, 'counter desc', 6);
+//        if (!empty($class_list)) {
+//            foreach ($class_list as $key => $value) {
+//                if ($value['gc_id_3'] > 0) {
+//                    $class_list[$key]['gc_id'] = $value['gc_id_3'];
+//                } elseif($value['gc_id_2'] > 0) {
+//                    $class_list[$key]['gc_id'] = $value['gc_id_2'];
+//                } else {
+//                    $class_list[$key]['gc_id'] = $value['gc_id_1'];
+//                }
+//
+//                $staple_name = explode('>', $value['staple_name']);
+//                $class_list[$key]['gc_name'] = end($staple_name);
+//                unset($class_list[$key]['gc_id_3']);
+//                unset($class_list[$key]['gc_id_2']);
+//                unset($class_list[$key]['gc_id_1']);
+//                unset($class_list[$key]['staple_name']);
+//            }
+//            $data['class_list'] = $class_list;
+//        }
 
-                $staple_name = explode('>', $value['staple_name']);
-                $class_list[$key]['gc_name'] = end($staple_name);
-                unset($class_list[$key]['gc_id_3']);
-                unset($class_list[$key]['gc_id_2']);
-                unset($class_list[$key]['gc_id_1']);
-                unset($class_list[$key]['staple_name']);
-            }
-            $data['class_list'] = $class_list;
-        }
-        
+        // 六大茶类
+        $date['class_list'] = $this->_get_root_class();
+
         // 获取推荐用户
         $model_member = Model('member');
         $condition = array();
@@ -100,9 +108,41 @@ class discoverControl extends mobileHomeControl {
                 unset($member_list[$key]['member_state']);
                 unset($member_list[$key]['member_commend_flag']);
             }
-            $data['member_list'] = $member_list;
         }
+        $data['member_list'] = $member_list;
 
         output_json(1, $data);
     }
+
+    /**
+     * 返回一级分类列表
+     */
+    private function _get_root_class() {
+        $model_goods_class = Model('goods_class');
+        $model_mb_category = Model('mb_category');
+
+        $goods_class_array = Model('goods_class')->getGoodsClassForCacheModel();
+
+        $class_list = $model_goods_class->getGoodsClassListByParentId(0);
+        $mb_categroy = $model_mb_category->getLinkList(array());
+        $mb_categroy = array_under_reset($mb_categroy, 'gc_id');
+        foreach ($class_list as $key => $value) {
+            if(!empty($mb_categroy[$value['gc_id']])) {
+                $class_list[$key]['image'] = UPLOAD_SITE_URL.DS.ATTACH_MOBILE.DS.'category'.DS.$mb_categroy[$value['gc_id']]['gc_thumb'];
+            } else {
+                $class_list[$key]['image'] = '';
+            }
+
+            $class_list[$key]['text'] = '';
+            $child_class_string = $goods_class_array[$value['gc_id']]['child'];
+            $child_class_array = explode(',', $child_class_string);
+            foreach ($child_class_array as $child_class) {
+                $class_list[$key]['text'] .= $goods_class_array[$child_class]['gc_name'] . '/';
+            }
+            $class_list[$key]['text'] = rtrim($class_list[$key]['text'], '/');
+        }
+
+        return $class_list;
+    }
+
 }
