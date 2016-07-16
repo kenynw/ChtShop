@@ -93,7 +93,7 @@ class discoverControl extends mobileHomeControl {
 //        }
 
         // 六大茶类
-        $date['class_list'] = $this->_get_root_class();
+        $data['class_list'] = $this->_get_root_class();
 
         // 获取推荐用户
         $model_member = Model('member');
@@ -128,9 +128,9 @@ class discoverControl extends mobileHomeControl {
         $mb_categroy = array_under_reset($mb_categroy, 'gc_id');
         foreach ($class_list as $key => $value) {
             if(!empty($mb_categroy[$value['gc_id']])) {
-                $class_list[$key]['image'] = UPLOAD_SITE_URL.DS.ATTACH_MOBILE.DS.'category'.DS.$mb_categroy[$value['gc_id']]['gc_thumb'];
+                $class_list[$key]['gc_thumb'] = UPLOAD_SITE_URL.DS.ATTACH_MOBILE.DS.'category'.DS.$mb_categroy[$value['gc_id']]['gc_thumb'];
             } else {
-                $class_list[$key]['image'] = '';
+                $class_list[$key]['gc_thumb'] = '';
             }
 
             $class_list[$key]['text'] = '';
@@ -140,6 +140,13 @@ class discoverControl extends mobileHomeControl {
                 $class_list[$key]['text'] .= $goods_class_array[$child_class]['gc_name'] . '/';
             }
             $class_list[$key]['text'] = rtrim($class_list[$key]['text'], '/');
+            unset($class_list[$key]['type_id']);
+            unset($class_list[$key]['type_name']);
+            unset($class_list[$key]['commis_rate']);
+            unset($class_list[$key]['gc_virtual']);
+            unset($class_list[$key]['gc_title']);
+            unset($class_list[$key]['gc_keywords']);
+            unset($class_list[$key]['gc_description']);
         }
 
         return $class_list;
