@@ -292,6 +292,29 @@ class member_fleaControl extends mobileMemberControl {
     }
 
     /**
+     * 删除闲置物品
+     */
+    public function drop_ImageOp() {
+        /**
+         * 检查商品是否属于店铺
+         */
+        $upload_id = trim(empty($_POST['upload_id']) ? $_GET['upload_id'] : $_POST['upload_id']);
+        if(empty($upload_id)) output_json(0, false, Language::get('wrong_argument'));
+
+        /**
+         * 实例化闲置物品模型
+         */
+        $model_store_goods	= Model('flea');
+        $state = $model_store_goods->dropImageGoods(array('upload_id' => $upload_id));
+
+        if($state) {
+            output_json(1, $state, '删除成功');
+        } else {
+            output_json(0, false, '删除失败');
+        }
+    }
+
+    /**
      * 编辑闲置物品保存
      */
     public function edit_goodsOp() {
