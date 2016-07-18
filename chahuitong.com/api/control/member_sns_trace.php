@@ -142,7 +142,7 @@ class member_sns_traceControl extends mobileMemberControl {
         unset($upload_condition);
 
         $obj_validate = new Validate();
-        $validate_arr[] = array("input"=>$_GET['content'], "require"=>'true', "message"=>'输入内容不能空');
+        $validate_arr[] = array("input"=>$_POST['content'], "require"=>'true', "message"=>'输入内容不能空');
         $obj_validate -> validateparam = $validate_arr;
         $error = $obj_validate -> validate();
         if ($error != '') output_json(0, 0, $error);
@@ -154,7 +154,7 @@ class member_sns_traceControl extends mobileMemberControl {
         $insert_arr['trace_memberid'] = $this->member_info['member_id'];
         $insert_arr['trace_membername'] = $this->member_info['member_name'];
         $insert_arr['trace_memberavatar'] = $this->member_info['member_avatar'];
-        $insert_arr['trace_title'] = $_GET['content'];
+        $insert_arr['trace_title'] = $_POST['content'];
         $insert_arr['trace_content'] = '';
         $insert_arr['trace_addtime'] = time();
         $insert_arr['trace_state'] = '0';
