@@ -22,3 +22,8 @@ $lang['mouth']	                = '月';
 $lang['year']	                = '年';
 $lang['flea_no_explain']		= '这个卖家太懒了，宝贝描述里面一个字都不肯写。';
 $lang['flea_limit_goods_notice']= '每个用户最多发布10个闲置物品信息,请删除某个闲置物品信息后重新操作';
+
+$lang['sns_buyershow']	        = '买家秀';
+$lang['sns_buyershow_album_des']= '买家秀默认相册';
+$lang['sns_trace']	            = '动态';
+$lang['sns_trace_album_des']	= '动态配图相册';

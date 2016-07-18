@@ -132,7 +132,7 @@ class discoverControl extends mobileHomeControl {
             } else {
                 $class_list[$key]['gc_thumb'] = '';
             }
-            
+
             unset($class_list[$key]['type_id']);
             unset($class_list[$key]['type_name']);
             unset($class_list[$key]['commis_rate']);

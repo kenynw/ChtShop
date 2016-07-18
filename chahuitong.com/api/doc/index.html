@@ -1767,39 +1767,40 @@ id 动态id</p></blockquote>
 
 <h3>添加动态</h3>
 
-<p>URL: act=member_sns_trace&amp;op=trace_add</p>
-
-<p>参数：</p>
-
-<blockquote><p>key 当前登录令牌   <br/>
-content 动态内容 <br/>
-privacy 权限 0-公开 1-仅自己可见 默认为0</p></blockquote>
-
-<p>返回：</p>
-
-<pre><code>{
-    "code": 1,
-    "data": 16, // 添加的动态id
-    "msg": "SUCCESS"
-}
-</code></pre>
-
-<h3>动态图片上传</h3>
+<h4>第一步先上传图片</h4>
 
 <p>URL: act=member_sns_trace&amp;op=trace_image_upload</p>
 
 <p>参数：</p>
 
 <blockquote><p>key 当前登录令牌   <br/>
-trace_id 动态动态ID <br/>
-image （File） 图片文件,为File类型
-is_default 是否为封面</p></blockquote>
+image （File） 图片文件,为File类型</p></blockquote>
 
 <p>返回：</p>
 
 <pre><code>{
     "code": 1,
     "data": 16, // 图片ID
+    "msg": "SUCCESS"
+}
+</code></pre>
+
+<h4>第二步先上传文字</h4>
+
+<p>URL: act=member_sns_trace&amp;op=trace_add</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 当前登录令牌   <br/>
+content 动态内容 <br/>
+privacy 权限 0-公开 1-仅自己可见 默认为0
+image_id 封面图片ID,由第一步返回</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "data": 16, // 添加的动态id
     "msg": "SUCCESS"
 }
 </code></pre>
@@ -2248,11 +2249,12 @@ type 消息类型 0为私信、1为系统消息、2为留言、3为新的粉丝�
         ],
         "class_list": [
             {
-                "staple_id": "12",
-                "counter": "167",
                 "gc_id": "1",
-                "gc_name": "普洱茶"
-            }}
+                "gc_name": "普洱茶",
+                "gc_parent_id": "0",
+                "gc_sort": "1",
+                "gc_thumb": "http://www.chahuitong.com/data/upload/mobile/category/05220056207590144.jpg"
+            }
         ],
         "member_list": [
             {
@@ -2553,8 +2555,6 @@ goods_id 商品ID  如果不传或者传0将会返回用户的信息</p></blockq
 </code></pre>
 
 <h3>茶市发布商品</h3>
-
-<h4>第一步先上传图片</h4>
 
 <p>URL: act=member_flea&amp;op=image_upload</p>
 

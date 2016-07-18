@@ -129,13 +129,23 @@ class member_sns_traceControl extends mobileMemberControl {
      * 添加新动态
      */
     public function trace_addOp() {
+        /**
+         * 清除前一天冗余图片数据
+         */
+        $model_upload = Model('sns_albumpic');
+        $upload_condition = array();
+        $upload_condition['member_id']		= $this->member_info['member_id'];
+        $upload_condition['ap_type']	    = 0;
+        $upload_condition['item_id']		= 0;
+        $upload_condition['upload_time']	= array('lt', time()-24*60*60);
+        $model_upload->delete($upload_condition);
+        unset($upload_condition);
+
         $obj_validate = new Validate();
         $validate_arr[] = array("input"=>$_POST['content'], "require"=>'true', "message"=>'输入内容不能空');
         $obj_validate -> validateparam = $validate_arr;
         $error = $obj_validate -> validate();
-        if ($error != '') {
-            output_json(0, $error, 'error');
-        }
+        if ($error != '') output_json(0, 0, $error);
 
         $tracelog_model = Model('sns_tracelog');
         $insert_arr = array();
@@ -153,6 +163,24 @@ class member_sns_traceControl extends mobileMemberControl {
         $insert_arr['trace_copycount'] = 0;
         $result = $tracelog_model->tracelogAdd($insert_arr);
         if ($result) {
+            /**
+             * 更新闲置物品多图
+             */
+            $upload_condition = array();
+            $upload_condition['member_id']	    = $this->member_info['member_id'];
+            $upload_condition['item_id']	    = '0';
+            $upload_condition['upload_type_in'] = 0;
+//            $upload_array['upload_id_in']	= "'".implode("','", $_POST['goods_file_id'])."'";
+            $model_upload->where($upload_condition)->update(array('item_id'=>$result));
+
+            /**
+             * 商品封面图片修改
+             */
+            if(!empty($_POST['image_id'])) {
+                $image_info	= $tracelog_model->getTracelogRow(array('ap_id'=>intval($_POST['image_id'])));
+                $tracelog_model->updateGoods(array('goods_image'=>$image_info['ap_cover']), array('trace_id' => $result));
+            }
+
             output_json(1, $result);
         } else {
             output_json(0, $result, '发表失败,请稍后重试');
@@ -160,6 +188,23 @@ class member_sns_traceControl extends mobileMemberControl {
     }
 
     public function trace_image_uploadOp() {
+        /**
+         * 相册
+         */
+        $model = Model();
+        $default_class = $model->table('sns_albumclass')->where(array('member_id'=>$this->member_info['member_id'], 'ap_type'=>0))->find();
+        if(empty($default_class)){	// 验证时候存在买家秀相册，不存在添加。
+            $default_class = array();
+            $default_class['ac_name']		= Language::get("sns_trace");
+            $default_class['member_id']		= $this->member_info['member_id'];
+            $default_class['ac_des']		= Language::get('sns_trace_album_des');
+            $default_class['ac_sort']		= '255';
+            $default_class['is_default']	= 0;
+            $default_class['ap_type']	    = 0;
+            $default_class['upload_time']	= TIMESTAMP;
+            $default_class['ac_id']			= $model->table('sns_albumclass')->insert($default_class);
+        }
+
         /**
          * 上传图片
          */
@@ -169,7 +214,6 @@ class member_sns_traceControl extends mobileMemberControl {
         $upload->set('default_dir',$upload_dir.$upload->getSysSetPath());
         $thumb_width	= '240,1024';
         $thumb_height	= '2048,1024';
-
         $upload->set('max_size',C('image_max_filesize'));
         $upload->set('thumb_width', $thumb_width);
         $upload->set('thumb_height',$thumb_height);
@@ -177,19 +221,25 @@ class member_sns_traceControl extends mobileMemberControl {
         $upload->set('thumb_ext', '_240,_1024');
         $result = $upload->upfile('image');
         if (!$result){
-            output_json(0, $result . $_FILES['image']['name'], '上传失败');
+            output_json(0, 0, '上传失败');
         }
 
         $img_path = $upload->getSysSetPath().$upload->file_name;
+        list($width, $height, $type, $attr) = getimagesize(BASE_UPLOAD_PATH.DS.ATTACH_MALBUM.DS.$this->member_info['member_id'].DS.$img_path);
 
-        $model_trace_image = Model('sns_trace_images');
+        $model_album_pic = Model('sns_albumpic');
         $insert = array();
-        $insert['trace_id']	= intval($_POST['trace_id']);
-        $insert['member_id'] = $this->member_info['member_id'];
-        $insert['trace_image'] = $img_path;
-        $insert['upload_time'] = time();
-        $insert['is_default'] = intval($_POST['is_default']);
-        $result = $model_trace_image->insert($insert);
+        $insert['ap_name']		= $img_path;
+        $insert['ac_id']		= $default_class['ac_id'];
+        $insert['ap_cover']		= $img_path;
+        $insert['ap_size']		= intval($_FILES[trim($_POST['image'])]['size']);
+        $insert['ap_spec']		= $width.'x'.$height;
+        $insert['upload_time']	= TIMESTAMP;
+        $insert['member_id']	= $this->member_info['member_id'];
+        $insert['ap_type']		= 0;
+        $insert['item_id']		= intval($_POST['item_id']);
+
+        $result = $model_album_pic->insert($insert);
         if ($result) {
             if (intval($_POST['is_default']) == 1) {
                 $model_trace = Model('sns_tracelog');

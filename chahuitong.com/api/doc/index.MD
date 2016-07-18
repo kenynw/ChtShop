@@ -1521,32 +1521,14 @@ URL: act=member_sns_trace&op=trace_detail
      
 ### 添加动态
 
-URL: act=member_sns_trace&op=trace_add
-
-参数：
-
->key 当前登录令牌     
->content 动态内容   
->privacy 权限 0-公开 1-仅自己可见 默认为0
-
-返回：
-
-    {
-        "code": 1,
-        "data": 16, // 添加的动态id
-        "msg": "SUCCESS"
-    }
-     
-### 动态图片上传
+#### 第一步先上传图片
 
 URL: act=member_sns_trace&op=trace_image_upload
 
 参数：
 
 >key 当前登录令牌     
->trace_id 动态动态ID   
 >image （File） 图片文件,为File类型 
->is_default 是否为封面
 
 返回：
 
@@ -1556,6 +1538,25 @@ URL: act=member_sns_trace&op=trace_image_upload
         "msg": "SUCCESS"
     }
      
+#### 第二步先上传文字
+
+URL: act=member_sns_trace&op=trace_add
+
+参数：
+
+>key 当前登录令牌     
+>content 动态内容   
+>privacy 权限 0-公开 1-仅自己可见 默认为0
+>image_id 封面图片ID,由第一步返回
+
+返回：
+
+    {
+        "code": 1,
+        "data": 16, // 添加的动态id
+        "msg": "SUCCESS"
+    }
+
 ### 删除动态
 
 URL(Get/Post): act=member_sns_trace&op=trace_del
@@ -1986,11 +1987,12 @@ URL(Post): act=discover
             ],
             "class_list": [
                 {
-                    "staple_id": "12",
-                    "counter": "167",
                     "gc_id": "1",
-                    "gc_name": "普洱茶"
-                }}
+                    "gc_name": "普洱茶",
+                    "gc_parent_id": "0",
+                    "gc_sort": "1",
+                    "gc_thumb": "http://www.chahuitong.com/data/upload/mobile/category/05220056207590144.jpg"
+                }
             ],
             "member_list": [
                 {
@@ -2281,8 +2283,6 @@ URL: act=member_flea&op=flea_detail
     }
      
 ### 茶市发布商品
-
-#### 第一步先上传图片
 
 URL: act=member_flea&op=image_upload
 
