@@ -142,7 +142,7 @@ class member_sns_traceControl extends mobileMemberControl {
         unset($upload_condition);
 
         $obj_validate = new Validate();
-        $validate_arr[] = array("input"=>$_POST['content'], "require"=>'true', "message"=>'输入内容不能空');
+        $validate_arr[] = array("input"=>$_GET['content'], "require"=>'true', "message"=>'输入内容不能空');
         $obj_validate -> validateparam = $validate_arr;
         $error = $obj_validate -> validate();
         if ($error != '') output_json(0, 0, $error);
@@ -154,7 +154,7 @@ class member_sns_traceControl extends mobileMemberControl {
         $insert_arr['trace_memberid'] = $this->member_info['member_id'];
         $insert_arr['trace_membername'] = $this->member_info['member_name'];
         $insert_arr['trace_memberavatar'] = $this->member_info['member_avatar'];
-        $insert_arr['trace_title'] = $_POST['content'];
+        $insert_arr['trace_title'] = $_GET['content'];
         $insert_arr['trace_content'] = '';
         $insert_arr['trace_addtime'] = time();
         $insert_arr['trace_state'] = '0';
@@ -167,9 +167,9 @@ class member_sns_traceControl extends mobileMemberControl {
              * 更新闲置物品多图
              */
             $upload_condition = array();
-            $upload_condition['member_id']	    = $this->member_info['member_id'];
-            $upload_condition['item_id']	    = '0';
-            $upload_condition['upload_type_in'] = 0;
+            $upload_condition['member_id']  = $this->member_info['member_id'];
+            $upload_condition['item_id']    = 0;
+            $upload_condition['ap_type']    = 0;
 //            $upload_array['upload_id_in']	= "'".implode("','", $_POST['goods_file_id'])."'";
             $model_upload->where($upload_condition)->update(array('item_id'=>$result));
 
@@ -177,13 +177,13 @@ class member_sns_traceControl extends mobileMemberControl {
              * 商品封面图片修改
              */
             if(!empty($_POST['image_id'])) {
-                $image_info	= $tracelog_model->getTracelogRow(array('ap_id'=>intval($_POST['image_id'])));
-                $tracelog_model->updateGoods(array('goods_image'=>$image_info['ap_cover']), array('trace_id' => $result));
+                $image_info	= $model_upload->where(array('ap_id'=>intval($_POST['image_id'])))->find();
+                $tracelog_model->updateGoods(array('trace_image'=>$image_info['ap_cover']), array('trace_id' => $result));
             }
 
             output_json(1, $result);
         } else {
-            output_json(0, $result, '发表失败,请稍后重试');
+            output_json(0, 0, '发表失败,请稍后重试');
         }
     }
 
