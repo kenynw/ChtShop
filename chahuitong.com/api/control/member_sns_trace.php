@@ -88,7 +88,7 @@ class member_sns_traceControl extends mobileMemberControl {
 
         // 图片信息
         $model_trace_image = Model('sns_albumpic');
-        $image_list = $model_trace_image->where(array('trace_id' => $id))->select();
+        $image_list = $model_trace_image->where(array('item_id' => $id))->select();
         foreach ($image_list as $key=>$image) {
             $image_list[$key]['ap_cover'] = snsThumb($image['trace_image']);
         }
