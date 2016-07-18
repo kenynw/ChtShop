@@ -178,7 +178,7 @@ class member_sns_traceControl extends mobileMemberControl {
              */
             if(!empty($_POST['image_id'])) {
                 $image_info	= $model_upload->where(array('ap_id'=>intval($_POST['image_id'])))->find();
-                $tracelog_model->updateGoods(array('trace_image'=>$image_info['ap_cover']), array('trace_id' => $result));
+                $tracelog_model->tracelogEdit(array('trace_image'=>$image_info['ap_cover']), array('trace_id' => $result));
             }
 
             output_json(1, $result);
