@@ -87,13 +87,13 @@ class member_sns_traceControl extends mobileMemberControl {
         $trace_info['trace_memberavatar'] = getMemberAvatar($trace_info['trace_memberavatar']);
 
         // 图片信息
-        $model_trace_image = Model('sns_trace_images');
+        $model_trace_image = Model('sns_albumpic');
         $image_list = $model_trace_image->where(array('trace_id' => $id))->select();
-        $trace_image = '';
-        foreach ($image_list as $image) {
-            $trace_image .= snsThumb($image['trace_image']) . ',';
+        foreach ($image_list as $key=>$image) {
+            $image_list[$key]['ap_cover'] = snsThumb($image['trace_image']);
         }
-        $trace_info['trace_image'] = $trace_image;
+        $trace_info['trace_image_list'] = $image_list;
+        $trace_info['trace_image'] = snsThumb($trace_info['trace_image']);;
 
         if (empty($trace_info)) {
             output_json(0, $trace_info, '暂无数据');
