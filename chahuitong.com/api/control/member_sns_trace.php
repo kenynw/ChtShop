@@ -220,14 +220,11 @@ class member_sns_traceControl extends mobileMemberControl {
         $upload->set('fprefix',$this->member_info['member_id']);
         $upload->set('thumb_ext', '_240,_1024');
         $result = $upload->upfile('image');
-        if (!$result){
-            output_json(0, 0, '上传失败');
-        }
+        if (!$result) output_json(0, 0, '上传失败');
 
         $img_path = $upload->getSysSetPath().$upload->file_name;
         list($width, $height, $type, $attr) = getimagesize(BASE_UPLOAD_PATH.DS.ATTACH_MALBUM.DS.$this->member_info['member_id'].DS.$img_path);
 
-        $model_album_pic = Model('sns_albumpic');
         $insert = array();
         $insert['ap_name']		= $img_path;
         $insert['ac_id']		= $default_class['ac_id'];
@@ -239,16 +236,11 @@ class member_sns_traceControl extends mobileMemberControl {
         $insert['ap_type']		= 0;
         $insert['item_id']		= intval($_POST['item_id']);
 
-        $result = $model_album_pic->insert($insert);
+        $result = $model->table('sns_albumpic')->insert($insert);
         if ($result) {
-            if (intval($_POST['is_default']) == 1) {
-                $model_trace = Model('sns_tracelog');
-                $model_trace->tracelogEdit(array('trace_image' => $img_path), array('trace_id' => intval($_POST['trace_id'])));
-            }
-
             output_json(1, $result);
         } else {
-            output_json(0, '', '更新数据库失败');
+            output_json(0, $insert, '更新数据库失败');
         }
 
     }
