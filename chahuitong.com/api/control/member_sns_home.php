@@ -36,6 +36,7 @@ class member_sns_homeControl extends mobileHomeControl {
         $member_info['member_avatar'] = getMemberAvatar($this->member_info['member_avatar']);
         $member_info['member_sex'] = $this->member_info['member_sex'];
         $member_info['member_areainfo'] = $this->member_info['member_areainfo'];
+        $member_info['member_intro'] = $this->member_info['member_intro'];
 
         // 获取关注好友
         $model_friend = Model('sns_friend');
