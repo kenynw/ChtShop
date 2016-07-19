@@ -10,7 +10,7 @@ $lang['order_state_eval']       = '已评价';
 
 $lang['wrong_argument']         = '参数错误';
 $lang['error_no_goods']		    = '商品不存在';
-$lang['error_title_null']		= '商品不存在';
+$lang['error_title_null']		= '标题不能为空';
 $lang['error_content_null']		= '内容不能为空';
 
 $lang['flea_index_unable']		= '闲置市场功能未开启';

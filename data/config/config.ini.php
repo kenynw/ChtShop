@@ -12,7 +12,7 @@ $config['mobile_site_url'] 		= 'http://api.chahuitong.com';
 $config['wap_site_url'] 		= 'http://m.chahuitong.com';
 $config['chat_site_url'] 		= 'http://www.chahuitong.com/chat';
 $config['node_site_url'] 		= 'http://www.chahuitong.com:8090';
-$config['upload_site_url']		= 'http://www.chahuitong.com/data/upload';
+$config['upload_site_url']		= 'http://img.chahuitong.com';
 $config['resource_site_url']	= 'http://res.chahuitong.com';
 
 # 系统版本号,安装时自动生成

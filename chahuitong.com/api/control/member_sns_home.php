@@ -83,7 +83,7 @@ class member_sns_homeControl extends mobileHomeControl {
             }
 
             $page_count = $model_trace->gettotalpage();
-            $member_info['trace_list'] = array_merge(array('list' => $trace_list), mobile_page($page_count));
+            $member_info['trace_list'] = $trace_list;
         }
 
         output_json(1, $member_info);
