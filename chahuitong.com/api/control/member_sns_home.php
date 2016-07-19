@@ -124,7 +124,7 @@ class member_sns_homeControl extends mobileHomeControl {
         }
 
         $page_count = $page->getTotalPage();
-        output_json(1, array('list' => $trace_list), 'SUCCESS', mobile_page($page_count));
+        output_json(1, array('list' => empty($trace_list) ? array() : $trace_list), 'SUCCESS', mobile_page($page_count));
     }
 
 }
