@@ -74,7 +74,10 @@ class member_sns_homeControl extends mobileHomeControl {
             default:
                 $condition_trace['trace_privacy']	= 0;
         }
-        $trace_list = $model_trace->getTracelogList($condition_trace, $this->page, $field_trace);
+        $page = new Page();
+        $page->setStyle('admin');
+        $page->setEachNum($this->page);
+        $trace_list = $model_trace->getTracelogList($condition_trace, $page, $field_trace);
         // 数据处理
         if (!empty($trace_list)) {
             foreach ($trace_list as $key=>$value) {
