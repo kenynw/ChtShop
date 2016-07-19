@@ -84,10 +84,9 @@ class member_sns_homeControl extends mobileHomeControl {
                 $trace_list[$key]['trace_addtime'] = date('Y.m.d h:i', $value['trace_addtime']);
                 $trace_list[$key]['trace_image'] = snsThumb($value['trace_image']);
             }
-
-            $page_count = $model_trace->gettotalpage();
-            $member_info['trace_list'] = $trace_list;
         }
+        $page_count = $model_trace->gettotalpage();
+        $member_info['trace_list'] = empty($trace_list) ? array() : $trace_list;
 
         output_json(1, $member_info);
     }
