@@ -115,9 +115,7 @@ class member_sns_homeControl extends mobileHomeControl {
         $trace_list = $tracelog_model->getTracelogList($condition, $page, $filed);
 
         // 数据处理
-        if (empty($trace_list)) {
-            output_json(0, array(), '暂无数据');
-        } else {
+        if (!empty($trace_list)) {
             foreach ($trace_list as $key=>$value) {
                 $trace_list[$key]['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
                 $trace_list[$key]['trace_addtime'] = date('Y.m.d h:i', $value['trace_addtime']);
@@ -126,7 +124,6 @@ class member_sns_homeControl extends mobileHomeControl {
         }
 
         $page_count = $page->getTotalPage();
-
         output_json(1, array('list' => $trace_list), 'SUCCESS', mobile_page($page_count));
     }
 
