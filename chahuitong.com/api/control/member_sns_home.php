@@ -33,7 +33,7 @@ class member_sns_homeControl extends mobileHomeControl {
         $member_info['member_id'] = $this->member_info['member_id'];
         $member_info['member_name'] = $this->member_info['member_name'];
         $member_info['member_truename'] = $this->member_info['member_truename'];
-        $member_info['member_avatar'] = getMemberAvatar($this->member_info['member_avatar']);
+        $member_info['member_avatar'] = getMemberAvatarForID($this->member_info['member_avatar']);
         $member_info['member_sex'] = $this->member_info['member_sex'];
         $member_info['member_areainfo'] = $this->member_info['member_areainfo'];
         $member_info['member_intro'] = $this->member_info['member_intro'];
@@ -81,9 +81,17 @@ class member_sns_homeControl extends mobileHomeControl {
         $trace_list = $model_trace->getTracelogList($condition_trace, $page, $field_trace);
         // 数据处理
         if (!empty($trace_list)) {
-            foreach ($trace_list as $key=>$value) {
-                $trace_list[$key]['trace_addtime'] = date('Y.m.d h:i', $value['trace_addtime']);
-                $trace_list[$key]['trace_image'] = snsThumb($value['trace_image']);
+            foreach ($trace_list as $key=>$v) {
+                $trace_list[$key]['trace_addtime'] = date('Y.m.d h:i', $v['trace_addtime']);
+                $trace_list[$key]['trace_image'] = snsThumb($v['trace_image']);
+
+                if ($v['trace_title']){
+                    $v['trace_title'] = str_replace("%siteurl%", "com.cht.user".DS, $v['trace_title']);
+                }
+                if(!empty($v['trace_content'])){
+                    //替换内容中的siteurl
+                    $v['trace_content'] = str_replace("%siteurl%", "com.cht.user".DS, $v['trace_content']);
+                }
             }
         }
         $page_count = $model_trace->gettotalpage();
