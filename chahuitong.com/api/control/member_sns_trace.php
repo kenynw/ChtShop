@@ -52,13 +52,20 @@ class member_sns_traceControl extends mobileMemberControl {
         $trace_list = $tracelog_model->getTracelogList($condition, $page, $file);
 
         // 数据处理
-        if (empty($trace_list)) {
-            output_json(0, array(), '暂无数据');
-        } else {
+        if (!empty($trace_list)) {
             foreach ($trace_list as $key=>$value) {
                 $trace_list[$key]['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
                 $trace_list[$key]['trace_addtime'] = date('m.d h:i', $value['trace_addtime']);
                 $trace_list[$key]['trace_image'] = snsThumb($value['trace_image']);
+
+                // 处理@
+                if ($value['trace_title']){
+                    $trace_list[$key]['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_title']);
+                }
+                if(!empty($value['trace_content'])){
+                    //替换内容中的siteurl
+                    $trace_list[$key]['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_content']);
+                }
             }
         }
 
@@ -103,6 +110,9 @@ class member_sns_traceControl extends mobileMemberControl {
         // 与主人的关系。0-游客(未登录);1-未关注;2-互相关注;3-自己;4-已关注
         $trace_info['relation'] = $this->_check_relation($trace_info['trace_memberid']);
         $trace_info['trace_addtime'] = date('Y.m.d H:i', $trace_info['trace_addtime']);
+        // 处理@信息
+        $trace_info['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $trace_info['trace_title']);
+        $trace_info['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $trace_info['trace_content']);
 
         // 查询评论列表
         $comment_model = Model('sns_comment');
