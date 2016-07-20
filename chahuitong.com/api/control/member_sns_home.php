@@ -86,11 +86,11 @@ class member_sns_homeControl extends mobileHomeControl {
                 $trace_list[$key]['trace_image'] = snsThumb($v['trace_image']);
 
                 if ($v['trace_title']){
-                    $v['trace_title'] = str_replace("%siteurl%", "com.cht.user".DS, $v['trace_title']);
+                    $v['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $v['trace_title']);
                 }
                 if(!empty($v['trace_content'])){
                     //替换内容中的siteurl
-                    $v['trace_content'] = str_replace("%siteurl%", "com.cht.user".DS, $v['trace_content']);
+                    $v['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $v['trace_content']);
                 }
             }
         }
@@ -129,6 +129,14 @@ class member_sns_homeControl extends mobileHomeControl {
                 $trace_list[$key]['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
                 $trace_list[$key]['trace_addtime'] = date('Y.m.d h:i', $value['trace_addtime']);
                 $trace_list[$key]['trace_image'] = snsThumb($value['trace_image']);
+
+                if ($value['trace_title']){
+                    $value['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_title']);
+                }
+                if(!empty($v['trace_content'])){
+                    //替换内容中的siteurl
+                    $value['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_content']);
+                }
             }
         }
 
