@@ -125,8 +125,12 @@ function snsThumb($image_name = '', $type = ''){
     list($member_id) = explode('_', $image_name);
     $file_path = ATTACH_MALBUM.DS.$member_id.DS.str_ireplace('.', '_'.$type.'.', $image_name);
     if(!file_exists(BASE_UPLOAD_PATH.DS.$file_path)) {
-		return UPLOAD_SITE_URL.'/'.defaultGoodsImage('240');
+        $file_path = ATTACH_MALBUM.DS.$member_id.DS.str_ireplace('.', '_', $image_name);
+        if (!file_exists(BASE_UPLOAD_PATH.DS.$file_path)) {
+            return UPLOAD_SITE_URL.'/'.defaultGoodsImage('240');
+        }
 	}
+
 	return UPLOAD_SITE_URL.DS.$file_path;
 }
 
