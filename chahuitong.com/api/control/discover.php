@@ -93,7 +93,7 @@ class discoverControl extends mobileHomeControl {
 //        }
 
         // 六大茶类
-        $data['class_list'] = $this->_get_root_class();
+        $data['class_list'] = array_slice($this->_get_root_class(), 0, 6);
 
         // 获取推荐用户
         $model_member = Model('member');
