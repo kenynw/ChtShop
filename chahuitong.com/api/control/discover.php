@@ -53,7 +53,7 @@ class discoverControl extends mobileHomeControl {
 //        $condition['goods_show'] = 1;
         $condition['commend'] = 1;
         $condition['order'] = 'goods_id desc';
-        $field = 'goods_id, goods_image, goods_commend';
+        $field = 'goods_id, goods_image, goods_commend, member_id';
         $page	= new Page();
         $page->setEachNum(10);
         $page->setStyle('admin');

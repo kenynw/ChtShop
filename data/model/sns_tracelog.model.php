@@ -191,6 +191,10 @@ class sns_tracelogModel extends Model {
 		if ($condition_array['trace_contentortitle'] !=''){
 			$condition_sql	.= " and (`sns_tracelog`.trace_title like '%{$condition_array['trace_contentortitle']}%' or `sns_tracelog`.trace_content like '%{$condition_array['trace_contentortitle']}%') ";
 		}
+        //内容或者标题
+        if ($condition_array['trace_commend_flag'] !=''){
+            $condition_sql .= " and sns_tracelog.trace_commend_flag = '{$condition_array['trace_commend_flag']}' ";
+        }
 		return $condition_sql;
 	}
 }
