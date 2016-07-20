@@ -81,9 +81,9 @@ class member_sns_homeControl extends mobileHomeControl {
         $trace_list = $model_trace->getTracelogList($condition_trace, $page, $field_trace);
         // 数据处理
         if (!empty($trace_list)) {
-            foreach ($trace_list as $key=>$v) {
-                $trace_list[$key]['trace_addtime'] = date('Y.m.d h:i', $v['trace_addtime']);
-                $trace_list[$key]['trace_image'] = snsThumb($v['trace_image']);
+            foreach ($trace_list as $k=>$v) {
+                $v['trace_addtime'] = date('Y.m.d h:i', $v['trace_addtime']);
+                $v['trace_image'] = snsThumb($v['trace_image']);
 
                 if ($v['trace_title']){
                     $v['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $v['trace_title']);
@@ -92,6 +92,8 @@ class member_sns_homeControl extends mobileHomeControl {
                     //替换内容中的siteurl
                     $v['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $v['trace_content']);
                 }
+
+                $tracelist[$k] = $v;
             }
         }
         $page_count = $model_trace->gettotalpage();
@@ -126,17 +128,18 @@ class member_sns_homeControl extends mobileHomeControl {
         // 数据处理
         if (!empty($trace_list)) {
             foreach ($trace_list as $key=>$value) {
-                $trace_list[$key]['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
-                $trace_list[$key]['trace_addtime'] = date('Y.m.d h:i', $value['trace_addtime']);
-                $trace_list[$key]['trace_image'] = snsThumb($value['trace_image']);
+                $value['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
+                $value['trace_addtime'] = date('Y.m.d h:i', $value['trace_addtime']);
+                $value['trace_image'] = snsThumb($value['trace_image']);
 
                 if ($value['trace_title']){
                     $value['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_title']);
                 }
-                if(!empty($v['trace_content'])){
+                if(!empty($value['trace_content'])){
                     //替换内容中的siteurl
                     $value['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_content']);
                 }
+                $trace_list[$key] = $value;
             }
         }
 
