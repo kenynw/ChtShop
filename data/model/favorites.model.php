@@ -75,15 +75,11 @@ class favoritesModel extends Model{
 	 * @param string $field 查询字段
 	 * @return array 数组类型的返回结果
 	 */
-	public function getOneFavorites($condition,$field='*'){
-		$param = array();
-		$param['table'] = 'favorites';
-		$param['field'] = array_keys($condition);
-		$param['value'] = array_values($condition);
-		return Db::getRow($param,$field);
+	public function getOneFavorites($condition, $field='*'){
+        return $this->where($condition)->field($field)->find();
 	}
-	
-	/**
+
+    /**
 	 * 新增收藏
 	 *
 	 * @param array $param 参数内容
@@ -113,14 +109,20 @@ class favoritesModel extends Model{
 	/**
 	 * 验证是否为当前用户收藏
 	 *
-	 * @param array $param 条件数据
+	 * @param array $goods_id 商品ID
+	 * @param array $type 收藏类型 goods brand store
+	 * @param array $member_id 用户ID
 	 * @return bool 布尔类型的返回结果
 	 */
-	public function checkFavorites($fav_id,$fav_type,$member_id){
-		if (intval($fav_id) == 0 || empty($fav_type) || intval($member_id) == 0){
+	public function checkFavorites($goods_id, $type, $member_id){
+		if (intval($goods_id) == 0 || empty($type) || intval($member_id) == 0){
 			return true;
 		}
-		$result = self::getOneFavorites($fav_id,$fav_type,$member_id);
+		$condition = array();
+        $condition['fav_id'] = $goods_id;
+        $condition['fav_type'] = $type;
+        $condition['member_id'] = $member_id;
+		$result = self::getOneFavorites($condition);
 		if ($result['member_id'] == $member_id){
 			return true;
 		}else {

@@ -415,6 +415,7 @@ URL(Get): act=goods&op=goods_detail
             "mansong_info": null,
             "gift_array": [],
             "goods_image": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif,http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif,http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif,http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif"
+            "is_favorite": true // 是否收藏 
         },
         "msg": "SUCCESS"
     }
@@ -2246,44 +2247,58 @@ URL: act=member_flea&op=flea_detail
         "code": 1,
         "msg": "SUCCESS",
         "data": {
-            "goods_id": "2",
-            "goods_name": "高頂茶业 滇系列生茶2015-30",
+            "goods_id": "1",
+            "goods_name": "雲頂茶业 滇系列熟茶2015-301",
             "gc_id": "0",
             "gc_name": "",
             "member_id": "151",
             "member_name": "18659255555",
-            "goods_image": "1443436999_1.jpg",
+            "goods_image": "1443436860_1.jpg",
             "goods_tag": "",
             "goods_price": "0.00",
             "goods_store_price": "0.00",
             "goods_show": "0",
-            "goods_click": "3",
-            "flea_collect_num": "0",
+            "goods_click": "6",
+            "flea_collect_num": "3",
             "goods_commend": "0",
-            "goods_add_time": "2016-07-15 14:16",
+            "goods_add_time": "2016-07-21 18:59",
             "goods_keywords": "",
             "goods_description": "",
             "goods_body": "这个卖家太懒了，宝贝描述里面一个字都不肯写。",
-            "commentnum": "0",
+            "commentnum": "7",
             "salenum": "0",
             "flea_quality": "0",
             "flea_pname": "",
-            "flea_pphone": "18659255555",
+            "flea_pphone": "18650167777",
             "flea_area_id": "0",
-            "flea_area_name": "厦门和广州",
+            "flea_area_name": "北京",
             "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+            "belong_me": false, // 是否是属于我的
+            "favorite": true, // 是否收藏 
             "desc_image": [
                 {
-                    "file_thumb": "1443436999_1.jpg",
+                    "file_thumb": "1443436860_1.jpg",
                     "store_id": "151",
                     "upload_type": "12",
-                    "item_id": "2",
-                    "thumb_small": "http://img.chahuitong.com/shop/member/151/1443436999_1.jpg",
-                    "thumb_mid": "http://img.chahuitong.com/shop/member/151/1443436999_1.jpg",
-                    "thumb_max": "http://img.chahuitong.com/shop/member/151/1443436999_1.jpg"
+                    "item_id": "1",
+                    "thumb_small": "http://img.chahuitong.com/shop/member/151/1443436860_1.jpg",
+                    "thumb_mid": "http://img.chahuitong.com/shop/member/151/1443436860_1.jpg",
+                    "thumb_max": "http://img.chahuitong.com/shop/member/151/1443436860_1.jpg"
                 }
             ],
-            "consult_list": []
+            "consult_list": [
+                {
+                    "member_id": "164",
+                    "consult_id": "9",
+                    "goods_id": "1",
+                    "consult_content": "aaa",
+                    "consult_addtime": "10天前",
+                    "consult_reply": null,
+                    "consult_reply_time": null,
+                    "member_name": "内测帐号",
+                    "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif"
+                }
+            ]
         }
     }
     发布新商品时,返回用户信息用于自动填充用户已经保存过资料的信息

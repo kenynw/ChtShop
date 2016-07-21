@@ -409,6 +409,15 @@ class goodsControl extends mobileHomeControl{
         }
         $goods_detail['goods_info']['goods_attr']=$goods_attr;
 
+        // 是否收藏
+        $model_mb_user_token = Model('mb_user_token');
+        $key = empty($_GET['key']) ? $_POST['key'] : $_GET['key'];
+        $mb_user_token_info = $model_mb_user_token->getMbUserTokenInfoByToken($key);
+        if(!empty($mb_user_token_info)) {
+            $model_favorite = Model('favorites');
+            $goods_detail['is_favorite'] = $model_favorite->checkFavorites($goods_detail['goods_info']['goods_id'], 'goods', $mb_user_token_info['member_id']);
+        }
+
         unset($goods_detail['goods_info']['spec_name']);
         unset($goods_detail['spec_list']);
 
@@ -514,14 +523,16 @@ class goodsControl extends mobileHomeControl{
         //商品详细信息处理
         $goods_detail = $this->_goods_detail_extend($goods_detail);
         //add by lai 去除spec_value  spec_name 键值 java oc 没办法处理 <<
-        $spec_array=array();
-        foreach($goods_detail['goods_info']['spec_value'] as $key=>$value){
-            foreach($value as $k=>$v){
-                //$spec_array[]=$goods_detail['goods_info']['spec_name'][$key].','.$v.','.$goods_detail['spec_list'][$k];
-                $spec_array[]=array("spec_name"=>$goods_detail['goods_info']['spec_name'][$key],"spec_value"=>$v,"goods_id"=>$goods_detail['spec_list'][$k]);
+        if (!empty($goods_detail['goods_info']['spec_value']) && is_array($goods_detail['goods_info']['spec_value'])) {
+            $spec_array=array();
+            foreach($goods_detail['goods_info']['spec_value'] as $key=>$value){
+                foreach($value as $k=>$v){
+                    //$spec_array[]=$goods_detail['goods_info']['spec_name'][$key].','.$v.','.$goods_detail['spec_list'][$k];
+                    $spec_array[]=array("spec_name"=>$goods_detail['goods_info']['spec_name'][$key],"spec_value"=>$v,"goods_id"=>$goods_detail['spec_list'][$k]);
+                }
             }
+            $goods_detail['goods_info']['spec_value']=$spec_array;
         }
-        $goods_detail['goods_info']['spec_value']=$spec_array;
         $goods_attr=array();
         foreach($goods_detail['goods_info']['goods_attr'] as $value){
             $value=array_values($value);
@@ -536,11 +547,17 @@ class goodsControl extends mobileHomeControl{
         $goods_detail['goods_evaluate_info']=$goods_evaluate_info;
         //print_r($goods_detail);
         //add by lai 去除spec_value  spec_name 键值 java oc 没办法处理 >>
-        if($_GET['version']){
-            output_json(1,$goods_detail,'查询完成');
-            die;
+
+        // 是否收藏
+        $model_mb_user_token = Model('mb_user_token');
+        $key = empty($_GET['key']) ? $_POST['key'] : $_GET['key'];
+        $mb_user_token_info = $model_mb_user_token->getMbUserTokenInfoByToken($key);
+        if(!empty($mb_user_token_info)) {
+            $model_favorite = Model('favorites');
+            $goods_detail['is_favorite'] = $model_favorite->checkFavorites($goods_detail['goods_info']['goods_id'], 'goods', $mb_user_token_info['member_id']);
         }
-       output_data($goods_detail);
+
+        output_json(1,$goods_detail);
     }
 
 }
