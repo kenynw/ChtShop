@@ -415,7 +415,7 @@ class goodsControl extends mobileHomeControl{
         $mb_user_token_info = $model_mb_user_token->getMbUserTokenInfoByToken($key);
         if(!empty($mb_user_token_info)) {
             $model_favorite = Model('favorites');
-            $goods_detail['is_favorite'] = $model_favorite->checkFavorites($goods_detail['goods_info']['goods_id'], 'goods', $mb_user_token_info['member_id']);
+            $goods_detail['goods_info']['is_favorite'] = $model_favorite->checkFavorites($goods_detail['goods_info']['goods_id'], 'goods', $mb_user_token_info['member_id']);
         }
 
         unset($goods_detail['goods_info']['spec_name']);

@@ -408,6 +408,7 @@ URL(Get): act=goods&op=goods_detail
                 "down_price": "105.00",
                 "lower_limit": "1",
                 "goods_url": "http://www.chahuitong.com/shop/index.php?act=goods&op=index&goods_id=101701"
+                "is_favorite": false
             },
             "spec_image": [
                 "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_60.gif"
@@ -415,7 +416,6 @@ URL(Get): act=goods&op=goods_detail
             "mansong_info": null,
             "gift_array": [],
             "goods_image": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif,http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif,http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif,http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif"
-            "is_favorite": true // 是否收藏 
         },
         "msg": "SUCCESS"
     }
