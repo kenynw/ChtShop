@@ -2426,7 +2426,7 @@ URL: act=member_flea&op=class_list
 
 参数：
 
->key 登录令牌
+>key 登录令牌   
 >class_id 类别ID,如果不传默认返回一级类目  
 
 返回：
@@ -2446,6 +2446,65 @@ URL: act=member_flea&op=class_list
                 "has_child": true 是否有下级
             }
         ]
+    }
+ 
+### 茶市收藏列表
+
+URL: act=member_flea&op=favorites
+
+参数：
+
+>key 登录令牌   
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": [
+            {
+                "goods_id": "5",
+                "goods_name": "普洱茶 08年鹏程茶厂特级布朗山熟茶",
+                "goods_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+                "gc_name": "",
+                "member_id": "1354",
+                "fav_time": "2016.07.21 16:48"
+            }
+        ]
+    }
+ 
+### 茶市添加收藏
+
+URL(Post/Get): act=member_flea&op=add_favorites
+
+参数：
+
+>key 登录令牌   
+>goods_id 商品ID  
+
+返回：
+
+    {
+        "code": 0,
+        "msg": "已经收藏过了",
+        "data": false // 是否成功
+    }
+ 
+### 茶市删除收藏
+
+URL(Post/Get): act=member_flea&op=del_favorites
+
+参数：
+
+>key 登录令牌   
+>goods_id 商品ID 如果批量删除用逗号隔开    
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "删除成功",
+        "data": true
     }
  
 ### 意见反馈

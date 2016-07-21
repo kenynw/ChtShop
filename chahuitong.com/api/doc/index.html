@@ -2703,7 +2703,7 @@ content 留言内容</p></blockquote>
 
 <p>参数：</p>
 
-<blockquote><p>key 登录令牌
+<blockquote><p>key 登录令牌 <br/>
 class_id 类别ID,如果不传默认返回一级类目</p></blockquote>
 
 <p>返回：</p>
@@ -2723,6 +2723,68 @@ class_id 类别ID,如果不传默认返回一级类目</p></blockquote>
             "has_child": true 是否有下级
         }
     ]
+}
+</code></pre>
+
+<h3>茶市收藏列表</h3>
+
+<p>URL: act=member_flea&amp;op=favorites</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 登录令牌</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "SUCCESS",
+    "data": [
+        {
+            "goods_id": "5",
+            "goods_name": "普洱茶 08年鹏程茶厂特级布朗山熟茶",
+            "goods_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+            "gc_name": "",
+            "member_id": "1354",
+            "fav_time": "2016.07.21 16:48"
+        }
+    ]
+}
+</code></pre>
+
+<h3>茶市添加收藏</h3>
+
+<p>URL(Post/Get): act=member_flea&amp;op=add_favorites</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 登录令牌 <br/>
+goods_id 商品ID</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 0,
+    "msg": "已经收藏过了",
+    "data": false // 是否成功
+}
+</code></pre>
+
+<h3>茶市删除收藏</h3>
+
+<p>URL(Post/Get): act=member_flea&amp;op=del_favorites</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 登录令牌 <br/>
+goods_id 商品ID 如果批量删除用逗号隔开</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "删除成功",
+    "data": true
 }
 </code></pre>
 
