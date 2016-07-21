@@ -75,9 +75,7 @@ class member_fleaControl extends mobileMemberControl
     }
 
     public function flea_detailOp() {
-        $goods_id = intval(
-            empty($_GET['goods_id']) ? $_POST['goods_id'] : $_GET['goods_id']
-        );
+        $goods_id = intval(empty($_GET['goods_id']) ? $_POST['goods_id'] : $_GET['goods_id']);
         if ($goods_id <= 0) {
             $member_info = array();
             $member_info['member_id'] = $this->member_info['member_id'];
@@ -103,6 +101,7 @@ class member_fleaControl extends mobileMemberControl
         $goods_info['member_avatar'] = getMemberAvatarForID(
             $goods_info['member_id']
         );
+        $goods_info['belong_me'] = $goods_info['member_id'] == $this->member_info['member_id'] ? true : false;
 
         // 标签处理
         if ($goods_info['goods_tag']) {
@@ -121,6 +120,10 @@ class member_fleaControl extends mobileMemberControl
         if (!$abstract) {
             $goods_info['goods_body'] = Language::get('flea_no_explain');
         }
+
+        // 是否收藏
+        $model_favorites = Model('flea_favorites');
+        $goods_info['favorite'] = $model_favorites->checkFavorites($goods_id,'flea',$this->member_info['member_id']);
 
         /**
          * 商品多图
