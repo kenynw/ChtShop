@@ -38,9 +38,9 @@ class goods_classControl extends mobileHomeControl{
         $mb_categroy = array_under_reset($mb_categroy, 'gc_id');
         foreach ($class_list as $key => $value) {
             if(!empty($mb_categroy[$value['gc_id']])) {
-                $class_list[$key]['image'] = UPLOAD_SITE_URL.DS.ATTACH_MOBILE.DS.'category'.DS.$mb_categroy[$value['gc_id']]['gc_thumb'];
+                $class_list[$key]['gc_thumb'] = UPLOAD_SITE_URL.DS.ATTACH_MOBILE.DS.'category'.DS.$mb_categroy[$value['gc_id']]['gc_thumb'];
             } else {
-                $class_list[$key]['image'] = '';
+                $class_list[$key]['gc_thumb'] = '';
             }
 
             $class_list[$key]['text'] = '';
@@ -52,11 +52,7 @@ class goods_classControl extends mobileHomeControl{
             $class_list[$key]['text'] = rtrim($class_list[$key]['text'], '/');
         }
 
-        if(isset($_GET['version']) && $_GET['version'] == VERSION_3_0) {
-            output_json(1, $class_list);
-        } else {
-            output_data(array('class_list' => $class_list));
-        }
+        output_json(1, $class_list);
     }
 
     /**
