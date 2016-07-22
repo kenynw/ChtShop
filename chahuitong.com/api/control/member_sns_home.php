@@ -79,25 +79,8 @@ class member_sns_homeControl extends mobileHomeControl {
         $page->setStyle('admin');
         $page->setEachNum($this->page);
         $trace_list = $model_trace->getTracelogList($condition_trace, $page, $field_trace);
-        // 数据处理
-        if (!empty($trace_list)) {
-            foreach ($trace_list as $k=>$v) {
-                $v['trace_addtime'] = date('Y.m.d h:i', $v['trace_addtime']);
-                $v['trace_image'] = snsThumb($v['trace_image']);
 
-                if ($v['trace_title']){
-                    $v['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $v['trace_title']);
-                }
-                if(!empty($v['trace_content'])){
-                    //替换内容中的siteurl
-                    $v['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $v['trace_content']);
-                }
-
-                $trace_list[$k] = $v;
-            }
-        }
-        $page_count = $model_trace->gettotalpage();
-        $member_info['trace_list'] = empty($trace_list) ? array() : $trace_list;
+        $member_info['trace_list'] = $this->_get_extend($trace_list);
 
         output_json(1, $member_info);
     }
@@ -126,10 +109,22 @@ class member_sns_homeControl extends mobileHomeControl {
         $page->setStyle('admin');
         $trace_list = $tracelog_model->getTracelogList($condition, $page, $filed);
 
-        // 数据处理
-        if (!empty($trace_list)) {
+        $page_count = $page->getTotalPage();
+        output_json(1, array('list' => $this->_get_extend($trace_list)), 'SUCCESS', mobile_page($page_count));
+    }
+
+    private function _get_extend($trace_list) {
+        if (!empty($trace_list) && is_array($trace_list)) {
+            $model_trace_image = Model('sns_albumpic');
             foreach ($trace_list as $key=>$value) {
-                $value['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
+                $image_list = $model_trace_image->where(array('item_id' => $value['trace_id']))->field('ap_cover, item_id')->select();
+                foreach ($image_list as $k=>$image) {
+                    $image_list[$k]['thumb_mid'] = snsThumb($image['ap_cover'], 240);
+                    $image_list[$k]['thumb_max'] = snsThumb($image['ap_cover'], '1024');
+                }
+                $value['trace_image_list'] = $image_list;
+
+                if (!empty($value['trace_memberavatar'])) $value['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
                 $value['trace_addtime'] = date('Y.m.d h:i', $value['trace_addtime']);
                 $value['trace_image'] = snsThumb($value['trace_image']);
 
@@ -142,10 +137,9 @@ class member_sns_homeControl extends mobileHomeControl {
                 }
                 $trace_list[$key] = $value;
             }
+            return $trace_list;
         }
-
-        $page_count = $page->getTotalPage();
-        output_json(1, array('list' => empty($trace_list) ? array() : $trace_list), 'SUCCESS', mobile_page($page_count));
+        return array();
     }
 
 }
