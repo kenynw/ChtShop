@@ -857,18 +857,43 @@ URL: act=member_index&op=member_info
 参数：
 
 >key  登录令牌    
->member_truename 真实姓名   
->member_sex 性别 0-男， 1-女    
->member_birthday 生日   
->member
->member_avatar 头像，图片的Base64   
+>member_avatar      头像，图片的Base64  
+>member_name        昵称 
+>member_sex         性别 0-男， 1-女    
+>member_birthday    出生年月   
+>member_areainfo    所在地区 
+>member_intro       个人简介 
+
+返回： 
+
+    {
+        "code": 1,
+        "msg": "获取成功",
+        "data": {
+            "member_name": "内测帐号",
+            "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+            "member_birthday": "1991-06-11",
+            "member_sex": "男",
+            "member_areainfo": "福建厦门",
+            "member_intro": "这是简介"
+        }
+    }
+
+### 更改用户头像
+
+URL: act=member_index&op=upload_avatar
+
+参数：
+
+>key    登录令牌    
+>image  图片,File类型   
 
 返回： 
 
     {
       code: 1,
       msg: "更新成功",
-      data: {}
+      data: true
     }
 
 ### 更改用户信息
@@ -878,17 +903,21 @@ URL: act=member_index&op=update_member_info
 参数：
 
 >key  登录令牌    
->member_truename 真实姓名   
->member_sex 性别 0-男， 1-女    
->member_birthday 生日   
->member_avatar 头像，图片的Base64   
+>member_name        昵称 只支持中英文、数字、下划线   
+>member_sex         性别 0-男， 1-女    
+>member_areaid      地区ID    
+>member_cityid      市区ID    
+>member_province_id 省份ID    
+>member_areainfo    位置文本信息 例:福建厦门    
+>member_birthday    生日 格式为 yyyy-mm-dd   
+>member_intro       个人简介 最大为140个字符 
 
 返回： 
 
     {
       code: 1,
       msg: "更新成功",
-      data: {}
+      data: true
     }
 
 ### 购买第一步(获取订单信息)
@@ -897,10 +926,10 @@ URL: act=member_buy&op=buy_step1
 
 参数：
 
->key 登录令牌    
->cart_id  购买参数。立即购买： 第一个数字为商品编号，第二个数字为购买数量，用竖线分割。例：232|1；
-          购物车购买：第一个数字为购物车编号，第二个数字为购买数量，用竖线分割。多组用半角逗号分割，例：232|1,110|2                 232商品购买1个，110商品购买2个
->ifcart 购物车购买标志 1    
+>key        登录令牌    
+>cart_id    购买参数。立即购买： 第一个数字为商品编号，第二个数字为购买数量，用竖线分割。例：232|1；
+            购物车购买：第一个数字为购物车编号，第二个数字为购买数量，用竖线分割。多组用半角逗号分割，例：232|1,110|2 232商品购买1个，110商品购买2个    
+>ifcart     购物车购买标志 1    
 
 返回： 
 
@@ -943,7 +972,7 @@ URL: act=member_buy&op=buy_step1
       }
     }
 
-### 19.更换收货地址
+### 更换收货地址
 URL: act=member_buy&op=change_address  
 参数：
 
@@ -964,7 +993,7 @@ URL: act=member_buy&op=change_address
       }
     }
 
-### 20.购买第二步(生成订单)
+### 购买第二步(生成订单)
 URL: act=member_buy&op=buy_step2    
 参数：
 
@@ -991,7 +1020,7 @@ URL: act=member_buy&op=buy_step2
       }
     }
 
-### 21.购物车列表
+### 购物车列表
 URL: act=member_cart&op=cart_list 
 参数：
 
@@ -1017,7 +1046,7 @@ URL: act=member_cart&op=cart_list
       }
     }
 
-### 22.购物车添加
+### 购物车添加
 URL: act=member_cart&op=cart_add  
 参数：
 
@@ -1032,7 +1061,7 @@ URL: act=member_cart&op=cart_add
       datas: "1"
     }
 
-### 23.购物车删除
+### 购物车删除
 URL: act=member_cart&op=cart_del  
 参数：
 
@@ -1046,7 +1075,7 @@ URL: act=member_cart&op=cart_del
       datas: "1"
     }
 
-### 24.购物车修改数量
+### 购物车修改数量
 URL: act=member_cart&op=cart_edit_quantity  
 参数：
 
@@ -1065,7 +1094,7 @@ URL: act=member_cart&op=cart_edit_quantity
       }
     }
 
-### 25.收藏列表
+### 收藏列表
 URL: act=member_favorites&op=favorites_list
 参数：
 
@@ -1091,7 +1120,7 @@ URL: act=member_favorites&op=favorites_list
         },
         "msg": "SUCCESS"
 
-### 26.收藏添加
+### 收藏添加
 URL: act=member_favorites&op=favorites_add
 参数：
 
@@ -1105,7 +1134,7 @@ URL: act=member_favorites&op=favorites_add
       datas: "1"
     }
 
-### 27.收藏删除
+### 收藏删除
 URL: act=member_favorites&op=favorites_del
 参数：
 

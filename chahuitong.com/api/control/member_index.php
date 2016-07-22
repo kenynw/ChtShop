@@ -60,63 +60,58 @@ class member_indexControl extends mobileMemberControl {
         }
 	}
 
-    /*个人信息更新*/
-    public function update_member_infoOp(){
-        //$datas=json_decode($_POST['content'],true);
-        $datas=$_POST;
-        $data=array();
-        if(isset($datas['member_avatar'])) {
-            $originalAvatar=$this->member_info['member_id'].".jpg";
-            $data['member_avatar']=$originalAvatar;
-            //$newAvatar=base64_decode($datas['member_avatar']);
-            if(file_exists(ImgPath.$originalAvatar)){
-                list($imageName,$imageType)=explode(".",$originalAvatar);
-                unlink(ImgPath.$originalAvatar);
-                unlink(ImgPath.$imageName."_120.".$imageType);
-                unlink(ImgPath.$imageName."_360.".$imageType);
-            }
-            $saveImageResult=file_put_contents(ImgPath.$originalAvatar,base64_decode($datas['member_avatar']));
-            if($saveImageResult){
-                $resizeImage= new ResizeImage();
-                $resizeImage->newImg(ImgPath.$originalAvatar,120,120,0,"_120." , ImgPath);
-                $resizeImage->newImg(ImgPath.$originalAvatar,360,360,0,"_360." , ImgPath);
-                list($imageName,$imageType)=explode(".",$originalAvatar);
-                $data['member_avatar']=$imageName."_120.".$imageType;
-            }
+	public function upload_avatarOp() {
+        //上传图片
+        $upload = new UploadFile();
+        $upload->set('thumb_width',	500);
+        $upload->set('thumb_height',499);
+        $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
+        $upload->set('file_name',"avatar_{$this->member_info['member_id']}.$ext");
+        $upload->set('thumb_ext','_new');
+        $upload->set('ifremove',true);
+        $upload->set('default_dir',ATTACH_AVATAR);
+        $result = $upload->upfile('image');
+        if (!$result){
+            output_json(0, true, $upload->error);
         }
-        $data['member_login_time']=time();
-        if(isset($datas['member_truename'])) $data['member_truename']=addslashes($datas['member_truename']);
-        if(isset($datas['member_name'])) $data['member_name']=addslashes($datas['member_name']);
-        if(isset($datas['member_sex'])){
-          if($datas['member_sex']=='男'){
-              $data['member_sex']=1;
-          }elseif($datas['member_sex']=='女'){
-              $data['member_sex']=0;
-          }else{
-              $data['member_sex']=$datas['member_sex'];
-          }
-        }
-        if(isset($datas['member_birthday'])) $data['member_birthday']=addslashes($datas['member_birthday']);
-        $memberModel= model('member');
-        $result=$memberModel->where("member_id='".$this->member_info['member_id']."'")->update($data);
-        if($result){
-           output_json(1,$result,'更新成功');
-            die();
-        }else{
-            output_json(0,$result,'更新失败');
-            die();
-        }
+        output_json(1, false);
     }
 
-    public function get_member_infoOp(){
+    public function member_infoOp(){
         $member_info = array();
         $member_info['member_name'] = $this->member_info['member_name'];
-        $member_info['member_truename'] = $this->member_info['member_truename'];
         $member_info['member_avatar'] = getMemberAvatarForID($this->member_info['member_id']);
         $member_info['member_birthday'] = $this->member_info['member_birthday'];
         $member_info['member_sex'] = $this->member_info['member_sex'] == '1' ? '男' : '女';;
         $member_info['member_areainfo'] = $this->member_info['member_areainfo'];
+        $member_info['member_intro'] = $this->member_info['member_intro'];
         output_json(1, $member_info, '获取成功');
+    }
+
+    /**
+     * 更新个人资料
+     */
+    public function update_member_infoOp() {
+        if (!empty($_POST['member'])) {
+            var_dump($_POST['member']);
+        }
+
+        $member_array	= array();
+        $member_array['member_name']	    = $_POST['member_name'];
+        $member_array['member_sex']			= $_POST['member_sex'];
+        $member_array['member_areaid']		= $_POST['area_id'];
+        $member_array['member_cityid']		= $_POST['city_id'];
+        $member_array['member_provinceid']	= $_POST['province_id'];
+        $member_array['member_areainfo']	= $_POST['area_info'];
+        $member_array['member_intro']	    = $_POST['member_intro'];
+        if (strlen($_POST['birthday']) == 10){
+            $member_array['member_birthday']	= $_POST['birthday'];
+        }
+
+        $model_member= Model('member');
+        $result=$model_member->editMember(array('member_id' => $this->member_info['member_id']), $member_array);
+        if($result)output_json(1,true,'更新成功');
+        else output_json(0,false,'更新失败');
     }
 
     public function update_member_pwdOp(){
@@ -142,22 +137,5 @@ class member_indexControl extends mobileMemberControl {
         }
 
     }
-
-    /*二进制转化函数*/
-    private function bin2bstr($input){
-        if (!is_string($input)) return null; // Sanity check
-        // Pack into a string
-        $input = str_split($input, 4);
-        $str = '';
-        foreach ($input as $v)
-        {
-            $str .= base_convert($v, 2, 16);
-        }
-        $str =  pack('H*', $str);
-        return $str;
-    }
-
-
-
 
 }
