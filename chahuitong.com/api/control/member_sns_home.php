@@ -93,7 +93,7 @@ class member_sns_homeControl extends mobileHomeControl {
                     $v['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $v['trace_content']);
                 }
 
-                $tracelist[$k] = $v;
+                $trace_list[$k] = $v;
             }
         }
         $page_count = $model_trace->gettotalpage();
