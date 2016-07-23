@@ -533,6 +533,7 @@ class member_fleaControl extends mobileMemberControl
         $page->setEachNum($this->page);
         $page->setStyle('admin');
 
+        $type_list = array();
         $favorites_list = $favorites_class->getFavoritesList($condition, $page);
         if (!empty($favorites_list) && is_array($favorites_list)) {
             $favorites_id = array();//收藏的商品（店铺）编号
@@ -566,7 +567,8 @@ class member_fleaControl extends mobileMemberControl
             }
         }
 
-        output_json(1, empty($type_list) ? array() : $type_list);
+        $page_count = $page->getTotalNum();
+        output_json(1, array('list' => $type_list), 'SUCCESS', mobile_page($page_count));
     }
 
     /**
