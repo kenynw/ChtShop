@@ -68,14 +68,13 @@ class member_indexControl extends mobileMemberControl {
         $upload->set('thumb_width',	500);
         $upload->set('thumb_height',499);
         $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
-        $upload->set('file_name',"avatar_$member_id.$ext");
-        $upload->set('thumb_ext','_new');
+        $upload->set('file_name',"$member_id.$ext");
         $upload->set('ifremove',true);
         $upload->set('default_dir',ATTACH_AVATAR);
         $result = $upload->upfile('image');
         if (!$result) output_json(0, false, $upload->error);
 
-        Model('member')->editMember(array('member_id' => $member_id), array('member_avatar' => "avatar_$member_id.$ext"));
+        Model('member')->editMember(array('member_id' => $member_id), array('member_avatar' => "$member_id.$ext"));
 
         output_json(1, true);
     }
