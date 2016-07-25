@@ -70,8 +70,26 @@
     
     例如登录接口为:http://api.chahuitong.com?act=login
 
+### 注册
+URL: act=login&op=register_api  
+
+参数：
+
+>mobile   
+>password   
+>verificode   
+>label  
+>client   
+
+返回： 
+
+      {
+        code:  
+      }
+
 ### 登录
-URL：act=login  
+URL：act=login   
+
 参数：
 
 >username 用户名  
@@ -88,21 +106,20 @@ URL：act=login
         }
       }
 
-### 注册
-URL: act=login&op=register_api  
+### 注销登录
+URL：act=logout   
 
 参数：
 
->mobile   
->password   
->verificode   
->label  
->client   
+>mobile 手机号  
+>client 客户端类型(android wap ios wechat)  
 
-返回： 
+返回
 
       {
-        code:  
+        code: 1
+        data: '1'
+        msg:'SUCCESS'
       }
 
 ### 第三方登录
@@ -859,7 +876,7 @@ URL: act=member_index&op=member_info
 >key  登录令牌    
 >member_avatar      头像，图片的Base64  
 >member_name        昵称 
->member_sex         性别 0-男， 1-女    
+>member_sex         性别 1-男， 2-女    
 >member_birthday    出生年月   
 >member_areainfo    所在地区 
 >member_intro       个人简介 
@@ -902,14 +919,28 @@ URL: act=member_index&op=update_member_info
 
 参数：
 
+##### 第一种方法POST各个字段 
+
 >key  登录令牌    
 >member_name        昵称 只支持中英文、数字、下划线   
->member_sex         性别 0-男， 1-女    
+>member_sex         性别 1-男， 2-女  传数字或者字符都行  
 >member_cityid      市区ID    
 >member_province_id 省份ID    
 >member_areainfo    位置文本信息 例:福建厦门    
 >member_birthday    生日 格式为 yyyy-mm-dd   
 >member_intro       个人简介 最大为140个字符 
+
+##### 第二种方法用JSON格式
+
+    {
+        "member_name": "内测帐号",
+        "member_sex": "男" // 1-男， 2-女  传数字或者字符都行  
+        "member_cityid": "", 
+        "member_province_id": "",
+        "member_areainfo": "福建厦门",
+        "member_birthday": "1991-06-11",
+        "member_intro": "这是简介"
+    }
 
 返回： 
 

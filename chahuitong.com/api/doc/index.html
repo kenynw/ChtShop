@@ -238,26 +238,6 @@ sup {
 例如登录接口为:http://api.chahuitong.com?act=login
 </code></pre>
 
-<h3>登录</h3>
-
-<p>URL：act=login<br/>
-参数：</p>
-
-<blockquote><p>username 用户名<br/>
-password 密码<br/>
-client 客户端类型(android wap ios wechat)</p></blockquote>
-
-<p>返回</p>
-
-<pre><code>  {
-    code: 200
-    datas: {
-      username 用户名
-      key 登录令牌
-    }
-  }
-</code></pre>
-
 <h3>注册</h3>
 
 <p>URL: act=login&amp;op=register_api</p>
@@ -274,6 +254,45 @@ client</p></blockquote>
 
 <pre><code>  {
     code:  
+  }
+</code></pre>
+
+<h3>登录</h3>
+
+<p>URL：act=login</p>
+
+<p>参数：</p>
+
+<blockquote><p>username 用户名<br/>
+password 密码<br/>
+client 客户端类型(android wap ios wechat)</p></blockquote>
+
+<p>返回</p>
+
+<pre><code>  {
+    code: 200
+    datas: {
+      username 用户名
+      key 登录令牌
+    }
+  }
+</code></pre>
+
+<h3>注销登录</h3>
+
+<p>URL：act=logout</p>
+
+<p>参数：</p>
+
+<blockquote><p>mobile 手机号<br/>
+client 客户端类型(android wap ios wechat)</p></blockquote>
+
+<p>返回</p>
+
+<pre><code>  {
+    code: 1
+    data: '1'
+    msg:'SUCCESS'
   }
 </code></pre>
 
@@ -1061,18 +1080,44 @@ newpwd 新密码</p></blockquote>
 <p>参数：</p>
 
 <blockquote><p>key  登录令牌  <br/>
-member_truename 真实姓名 <br/>
-member_sex 性别 0-男， 1-女  <br/>
-member_birthday 生日 <br/>
-member
-member_avatar 头像，图片的Base64</p></blockquote>
+member_avatar      头像，图片的Base64<br/>
+member_name        昵称
+member_sex         性别 1-男， 2-女  <br/>
+member_birthday    出生年月 <br/>
+member_areainfo    所在地区
+member_intro       个人简介</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "获取成功",
+    "data": {
+        "member_name": "内测帐号",
+        "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+        "member_birthday": "1991-06-11",
+        "member_sex": "男",
+        "member_areainfo": "福建厦门",
+        "member_intro": "这是简介"
+    }
+}
+</code></pre>
+
+<h3>更改用户头像</h3>
+
+<p>URL: act=member_index&amp;op=upload_avatar</p>
+
+<p>参数：</p>
+
+<blockquote><p>key    登录令牌  <br/>
+image  图片,File类型</p></blockquote>
 
 <p>返回：</p>
 
 <pre><code>{
   code: 1,
   msg: "更新成功",
-  data: {}
+  data: true
 }
 </code></pre>
 
@@ -1082,18 +1127,36 @@ member_avatar 头像，图片的Base64</p></blockquote>
 
 <p>参数：</p>
 
+<h5>第一种方法POST各个字段</h5>
+
 <blockquote><p>key  登录令牌  <br/>
-member_truename 真实姓名 <br/>
-member_sex 性别 0-男， 1-女  <br/>
-member_birthday 生日 <br/>
-member_avatar 头像，图片的Base64</p></blockquote>
+member_name        昵称 只支持中英文、数字、下划线 <br/>
+member_sex         性别 1-男， 2-女  传数字或者字符都行<br/>
+member_cityid      市区ID  <br/>
+member_province_id 省份ID  <br/>
+member_areainfo    位置文本信息 例:福建厦门  <br/>
+member_birthday    生日 格式为 yyyy-mm-dd <br/>
+member_intro       个人简介 最大为140个字符</p></blockquote>
+
+<h5>第二种方法用JSON格式</h5>
+
+<pre><code>{
+    "member_name": "内测帐号",
+    "member_sex": "男" // 1-男， 2-女  传数字或者字符都行  
+    "member_cityid": "", 
+    "member_province_id": "",
+    "member_areainfo": "福建厦门",
+    "member_birthday": "1991-06-11",
+    "member_intro": "这是简介"
+}
+</code></pre>
 
 <p>返回：</p>
 
 <pre><code>{
   code: 1,
   msg: "更新成功",
-  data: {}
+  data: true
 }
 </code></pre>
 
@@ -1103,10 +1166,10 @@ member_avatar 头像，图片的Base64</p></blockquote>
 
 <p>参数：</p>
 
-<blockquote><p>key 登录令牌  <br/>
-cart_id  购买参数。立即购买： 第一个数字为商品编号，第二个数字为购买数量，用竖线分割。例：232|1；
-          购物车购买：第一个数字为购物车编号，第二个数字为购买数量，用竖线分割。多组用半角逗号分割，例：232|1,110|2                 232商品购买1个，110商品购买2个
-ifcart 购物车购买标志 1</p></blockquote>
+<blockquote><p>key        登录令牌  <br/>
+cart_id    购买参数。立即购买： 第一个数字为商品编号，第二个数字为购买数量，用竖线分割。例：232|1；
+            购物车购买：第一个数字为购物车编号，第二个数字为购买数量，用竖线分割。多组用半角逗号分割，例：232|1,110|2 232商品购买1个，110商品购买2个  <br/>
+ifcart     购物车购买标志 1</p></blockquote>
 
 <p>返回：</p>
 
@@ -1150,7 +1213,7 @@ ifcart 购物车购买标志 1</p></blockquote>
 }
 </code></pre>
 
-<h3>19.更换收货地址</h3>
+<h3>更换收货地址</h3>
 
 <p>URL: act=member_buy&amp;op=change_address<br/>
 参数：</p>
@@ -1173,7 +1236,7 @@ area_id 地区编号</p></blockquote>
 }
 </code></pre>
 
-<h3>20.购买第二步(生成订单)</h3>
+<h3>购买第二步(生成订单)</h3>
 
 <p>URL: act=member_buy&amp;op=buy_step2  <br/>
 参数：</p>
@@ -1202,7 +1265,7 @@ fcode F码购买时需提交</p></blockquote>
 }
 </code></pre>
 
-<h3>21.购物车列表</h3>
+<h3>购物车列表</h3>
 
 <p>URL: act=member_cart&amp;op=cart_list
 参数：</p>
@@ -1230,7 +1293,7 @@ fcode F码购买时需提交</p></blockquote>
 }
 </code></pre>
 
-<h3>22.购物车添加</h3>
+<h3>购物车添加</h3>
 
 <p>URL: act=member_cart&amp;op=cart_add<br/>
 参数：</p>
@@ -1247,7 +1310,7 @@ quantity 购买数量</p></blockquote>
 }
 </code></pre>
 
-<h3>23.购物车删除</h3>
+<h3>购物车删除</h3>
 
 <p>URL: act=member_cart&amp;op=cart_del<br/>
 参数：</p>
@@ -1263,7 +1326,7 @@ cart_id 购物车编号</p></blockquote>
 }
 </code></pre>
 
-<h3>24.购物车修改数量</h3>
+<h3>购物车修改数量</h3>
 
 <p>URL: act=member_cart&amp;op=cart_edit_quantity<br/>
 参数：</p>
@@ -1284,7 +1347,7 @@ quantity 新的购买数量</p></blockquote>
 }
 </code></pre>
 
-<h3>25.收藏列表</h3>
+<h3>收藏列表</h3>
 
 <p>URL: act=member_favorites&amp;op=favorites_list
 参数：</p>
@@ -1312,7 +1375,7 @@ quantity 新的购买数量</p></blockquote>
     "msg": "SUCCESS"
 </code></pre>
 
-<h3>26.收藏添加</h3>
+<h3>收藏添加</h3>
 
 <p>URL: act=member_favorites&amp;op=favorites_add
 参数：</p>
@@ -1328,7 +1391,7 @@ goods_id 商品编号</p></blockquote>
 }
 </code></pre>
 
-<h3>27.收藏删除</h3>
+<h3>收藏删除</h3>
 
 <p>URL: act=member_favorites&amp;op=favorites_del
 参数：</p>

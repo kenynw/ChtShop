@@ -33,7 +33,7 @@ class member_sns_homeControl extends mobileHomeControl {
         $member_info['member_id'] = $this->member_info['member_id'];
         $member_info['member_name'] = $this->member_info['member_name'];
         $member_info['member_truename'] = $this->member_info['member_truename'];
-        $member_info['member_avatar'] = getMemberAvatarForID($this->member_info['member_avatar']);
+        $member_info['member_avatar'] = getMemberAvatar($this->member_info['member_avatar']);
         $member_info['member_sex'] = $this->member_info['member_sex'];
         $member_info['member_areainfo'] = $this->member_info['member_areainfo'];
         $member_info['member_intro'] = $this->member_info['member_intro'];

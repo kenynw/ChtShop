@@ -53,7 +53,7 @@ class member_indexControl extends mobileMemberControl {
             output_json(1, $member_info);
         } else {
             $member_info['user_name'] = $this->member_info['member_name'];
-            $member_info['avator'] = getMemberAvatarForID($this->member_info['member_id']);
+            $member_info['avator'] = getMemberAvatar($this->member_info['member_avatar']);
             $member_info['point'] = $this->member_info['member_points'];
             $member_info['predepoit'] = $this->member_info['available_predeposit'];
             output_data(array('member_info' => $member_info));
@@ -66,23 +66,21 @@ class member_indexControl extends mobileMemberControl {
         $upload->set('thumb_width',	500);
         $upload->set('thumb_height',499);
         $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
-        $upload->set('file_name',"avatar_{$this->member_info['member_id']}.$ext");
-        $upload->set('thumb_ext','_new');
+        $upload->set('file_name',$this->member_info['member_id'] .$ext);
         $upload->set('ifremove',true);
         $upload->set('default_dir',ATTACH_AVATAR);
         $result = $upload->upfile('image');
-        if (!$result){
-            output_json(0, true, $upload->error);
-        }
-        output_json(1, false);
+        if (!$result)output_json(0, false, $upload->error);
+
+        output_json(1, true);
     }
 
     public function member_infoOp(){
         $member_info = array();
         $member_info['member_name'] = $this->member_info['member_name'];
-        $member_info['member_avatar'] = getMemberAvatarForID($this->member_info['member_id']);
+        $member_info['member_avatar'] = getMemberAvatar($this->member_info['member_avatar']);
         $member_info['member_birthday'] = $this->member_info['member_birthday'];
-        $member_info['member_sex'] = $this->member_info['member_sex'] == '1' ? '男' : '女';;
+        $member_info['member_sex'] = $this->member_info['member_sex'] == '1' ? '男' : ($this->member_info['member_sex'] == '2' ? '女' : '未填写');
         $member_info['member_areainfo'] = $this->member_info['member_areainfo'];
         $member_info['member_intro'] = $this->member_info['member_intro'];
         output_json(1, $member_info, '获取成功');
@@ -97,7 +95,7 @@ class member_indexControl extends mobileMemberControl {
             $member = json_decode(@file_get_contents("php://input"), true);
             if (!empty($member) && is_array($member)) {
                 $member_array['member_name']	    = $member['member_name'];
-                $member_array['member_sex']			= $member['member_sex'] == '男' ? 0 : ($member['member_sex'] == '女' ? 1 : $member['member_sex']);
+                $member_array['member_sex']			= $member['member_sex'] == '男' ? 1 : ($member['member_sex'] == '女' ? 2 : $member['member_sex']);
                 $member_array['member_areaid']		= $member['member_areaid'];
                 $member_array['member_cityid']		= $member['member_cityid'];
                 $member_array['member_provinceid']	= $member['member_provinceid'];
@@ -109,7 +107,7 @@ class member_indexControl extends mobileMemberControl {
             }
         } else {
             $member_array['member_name']	    = $_POST['member_name'];
-            $member_array['member_sex']			= $_POST['member_sex'] == '男' ? 0 : ($_POST['member_sex'] == '女' ? 1 : $_POST['member_sex']);
+            $member_array['member_sex']			= $_POST['member_sex'] == '男' ? 1 : ($_POST['member_sex'] == '女' ? 2 : $_POST['member_sex']);
             $member_array['member_areaid']		= $_POST['area_id'];
             $member_array['member_cityid']		= $_POST['city_id'];
             $member_array['member_provinceid']	= $_POST['province_id'];

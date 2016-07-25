@@ -137,7 +137,7 @@ class member_informationControl extends BaseMemberControl {
 		$upload->set('thumb_width',	500);
 		$upload->set('thumb_height',499);
 		$ext = strtolower(pathinfo($_FILES['pic']['name'], PATHINFO_EXTENSION));
-		$upload->set('file_name',"avatar_$member_id.$ext");
+		$upload->set('file_name',"$member_id.$ext");
 		$upload->set('thumb_ext','_new');
 		$upload->set('ifremove',true);
 		$upload->set('default_dir',ATTACH_AVATAR);
