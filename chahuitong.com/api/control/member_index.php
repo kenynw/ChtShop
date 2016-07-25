@@ -76,7 +76,7 @@ class member_indexControl extends mobileMemberControl {
         $result = $upload->upfile('image');
         if (!$result) output_json(0, false, $upload->error);
 
-        $src = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS.$upload->file_name;
+        $src = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS."avatar_{$member_id}_new.$ext";
         $avatarfile = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS."{$member_id}.jpg";
         import('function.thumb');
         $cropped = resize_thumb($avatarfile, $src, 120, 120, 0, 0, 1);
