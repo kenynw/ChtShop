@@ -178,12 +178,12 @@ class member_informationControl extends BaseMemberControl {
 			    redirect('index.php?act=member_information&op=avatar');
 			}
 			$src = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS.$_POST['newfile'];
-			$avatarfile = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS."avatar_{$_SESSION['member_id']}.jpg";
+			$avatarfile = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS."{$_SESSION['member_id']}.jpg";
 			import('function.thumb');
 			$cropped = resize_thumb($avatarfile, $src,$w,$h,$x1,$y1,$scale);
 			@unlink($src);
-			Model('member')->editMember(array('member_id'=>$_SESSION['member_id']),array('member_avatar'=>'avatar_'.$_SESSION['member_id'].'.jpg'));
-			$_SESSION['avatar'] = 'avatar_'.$_SESSION['member_id'].'.jpg';
+			Model('member')->editMember(array('member_id'=>$_SESSION['member_id']),array('member_avatar'=>$_SESSION['member_id'].'.jpg'));
+			$_SESSION['avatar'] = $_SESSION['member_id'].'.jpg';
 			redirect('index.php?act=member_information&op=avatar');
 		}
 	}

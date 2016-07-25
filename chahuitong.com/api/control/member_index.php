@@ -62,20 +62,26 @@ class member_indexControl extends mobileMemberControl {
 
 	public function upload_avatarOp() {
 	    $member_id = $this->member_info['member_id'];
+        $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
+        $file_name = "avatar_$member_id.$ext";
 
         //上传图片
         $upload = new UploadFile();
         $upload->set('thumb_width',	500);
         $upload->set('thumb_height',499);
         $upload->set('thumb_ext','_new');
-        $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
-        $upload->set('file_name',"avatar_$member_id.$ext");
+        $upload->set('file_name', $file_name);
         $upload->set('ifremove',true);
         $upload->set('default_dir',ATTACH_AVATAR);
         $result = $upload->upfile('image');
         if (!$result) output_json(0, false, $upload->error);
 
-        Model('member')->editMember(array('member_id' => $member_id), array('member_avatar' => "avatar_$member_id.$ext"));
+        $src = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS.$file_name;
+        $avatarfile = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS."{$member_id}.jpg";
+        $cropped = resize_thumb($avatarfile, $src, 120, 120, 0, 0, 1);
+        @unlink($src);
+
+        Model('member')->editMember(array('member_id' => $member_id), array('member_avatar' => "{$member_id}.jpg"));
 
         output_json(1, true);
     }
