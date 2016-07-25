@@ -905,7 +905,6 @@ URL: act=member_index&op=update_member_info
 >key  登录令牌    
 >member_name        昵称 只支持中英文、数字、下划线   
 >member_sex         性别 0-男， 1-女    
->member_areaid      地区ID    
 >member_cityid      市区ID    
 >member_province_id 省份ID    
 >member_areainfo    位置文本信息 例:福建厦门    

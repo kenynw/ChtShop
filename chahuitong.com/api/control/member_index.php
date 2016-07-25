@@ -92,20 +92,32 @@ class member_indexControl extends mobileMemberControl {
      * 更新个人资料
      */
     public function update_member_infoOp() {
-        if (!empty($_POST['member'])) {
-            var_dump($_POST['member']);
-        }
-
         $member_array	= array();
-        $member_array['member_name']	    = $_POST['member_name'];
-        $member_array['member_sex']			= $_POST['member_sex'];
-        $member_array['member_areaid']		= $_POST['area_id'];
-        $member_array['member_cityid']		= $_POST['city_id'];
-        $member_array['member_provinceid']	= $_POST['province_id'];
-        $member_array['member_areainfo']	= $_POST['area_info'];
-        $member_array['member_intro']	    = $_POST['member_intro'];
-        if (strlen($_POST['birthday']) == 10){
-            $member_array['member_birthday']	= $_POST['birthday'];
+        if (empty($_POST)) {
+            $member = json_decode(@file_get_contents("php://input"), true);
+            if (!empty($member) && is_array($member)) {
+                $member_array['member_name']	    = $member['member_name'];
+                $member_array['member_sex']			= $member['member_sex'] == '男' ? 0 : ($member['member_sex'] == '女' ? 1 : $member['member_sex']);
+                $member_array['member_areaid']		= $member['member_areaid'];
+                $member_array['member_cityid']		= $member['member_cityid'];
+                $member_array['member_provinceid']	= $member['member_provinceid'];
+                $member_array['member_areainfo']	= $member['member_areainfo'];
+                $member_array['member_intro']	    = $member['member_intro'];
+                if (strlen($member['member_birthday']) == 10) {
+                    $member_array['member_birthday']	= $member['member_birthday'];
+                }
+            }
+        } else {
+            $member_array['member_name']	    = $_POST['member_name'];
+            $member_array['member_sex']			= $_POST['member_sex'] == '男' ? 0 : ($_POST['member_sex'] == '女' ? 1 : $_POST['member_sex']);
+            $member_array['member_areaid']		= $_POST['area_id'];
+            $member_array['member_cityid']		= $_POST['city_id'];
+            $member_array['member_provinceid']	= $_POST['province_id'];
+            $member_array['member_areainfo']	= $_POST['area_info'];
+            $member_array['member_intro']	    = $_POST['member_intro'];
+            if (strlen($_POST['birthday']) == 10){
+                $member_array['member_birthday']	= $_POST['birthday'];
+            }
         }
 
         $model_member= Model('member');
