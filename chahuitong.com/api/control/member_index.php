@@ -70,7 +70,10 @@ class member_indexControl extends mobileMemberControl {
         $upload->set('ifremove',true);
         $upload->set('default_dir',ATTACH_AVATAR);
         $result = $upload->upfile('image');
-        if (!$result)output_json(0, false, $upload->error);
+        if (!$result) {
+            Model('member')->editMember(array('member_id'=>$this->member_info['member_id']), array('member_avatar' => $this->member_info['member_id'].$ext));
+            output_json(0, false, $upload->error);
+        }
 
         output_json(1, true);
     }
