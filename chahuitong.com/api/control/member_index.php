@@ -78,9 +78,9 @@ class member_indexControl extends mobileMemberControl {
 
         $src = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS.$file_name;
         $avatarfile = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS."{$member_id}.jpg";
+        import('function.thumb');
         $cropped = resize_thumb($avatarfile, $src, 120, 120, 0, 0, 1);
         @unlink($src);
-
         Model('member')->editMember(array('member_id' => $member_id), array('member_avatar' => "{$member_id}.jpg"));
 
         output_json(1, true);
