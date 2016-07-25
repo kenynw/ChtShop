@@ -61,19 +61,21 @@ class member_indexControl extends mobileMemberControl {
 	}
 
 	public function upload_avatarOp() {
+	    $member_id = $this->member_info['member_id'];
+
         //上传图片
         $upload = new UploadFile();
         $upload->set('thumb_width',	500);
         $upload->set('thumb_height',499);
         $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
-        $upload->set('file_name',$this->member_info['member_id'] .$ext);
+        $upload->set('file_name','avatar_' . $member_id . $ext);
+        $upload->set('thumb_ext','_new');
         $upload->set('ifremove',true);
         $upload->set('default_dir',ATTACH_AVATAR);
         $result = $upload->upfile('image');
-        if (!$result) {
-            Model('member')->editMember(array('member_id'=>$this->member_info['member_id']), array('member_avatar' => $this->member_info['member_id'].$ext));
-            output_json(0, false, $upload->error);
-        }
+        if (!$result) output_json(0, false, $upload->error);
+
+        Model('member')->editMember(array('member_id' => $member_id), array('member_avatar' => $upload->file_name));
 
         output_json(1, true);
     }
