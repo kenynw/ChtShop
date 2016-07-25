@@ -65,6 +65,9 @@ class member_indexControl extends mobileMemberControl {
 
         //上传图片
         $upload = new UploadFile();
+        $upload->set('thumb_width',	500);
+        $upload->set('thumb_height',499);
+        $upload->set('thumb_ext','');
         $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
         $upload->set('file_name',"avatar_$member_id.$ext");
         $upload->set('ifremove',true);
