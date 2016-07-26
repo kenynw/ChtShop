@@ -101,16 +101,13 @@ class member_indexControl extends mobileMemberControl {
      */
     public function update_member_infoOp() {
         $member_array	= array();
-        $model_member= Model('member');
 
         if (empty($_POST)) {
             $member = json_decode(@file_get_contents("php://input"), true);
             if (!empty($member) && is_array($member)) {
-                $member_array['member_nickname']	    = $member['member_nickname'];
-                $member_info = $model_member->getMemberInfo($member_array);
-                if (!empty($member_info) && $member_info['member_id'] != $this->member_info['member_id']) {
-                    output_json(0, false, '该昵称已存在');
-                }
+                $this->_check_member($member['member_name']);
+
+                $member_array['member_name']	    = $member['member_name'];
                 $member_array['member_sex']			= $member['member_sex'] == '男' ? 1 : ($member['member_sex'] == '女' ? 2 : $member['member_sex']);
                 $member_array['member_areaid']		= $member['member_areaid'];
                 $member_array['member_cityid']		= $member['member_cityid'];
@@ -122,11 +119,9 @@ class member_indexControl extends mobileMemberControl {
                 }
             }
         } else {
-            $member_array['member_nickname']	    = $_POST['member_name'];
-            $member_info = $model_member->getMemberInfo($member_array);
-            if (!empty($member_info) && $member_info['member_id'] != $this->member_info['member_id']) {
-                output_json(0, false, '该昵称已存在');
-            }
+            $this->_check_member($_POST['member_name']);
+
+            $member_array['member_name']	    = $_POST['member_name'];
             $member_array['member_sex']			= $_POST['member_sex'] == '男' ? 1 : ($_POST['member_sex'] == '女' ? 2 : $_POST['member_sex']);
             $member_array['member_areaid']		= $_POST['area_id'];
             $member_array['member_cityid']		= $_POST['city_id'];
@@ -138,9 +133,24 @@ class member_indexControl extends mobileMemberControl {
             }
         }
 
+        $model_member= Model('member');
         $result=$model_member->editMember(array('member_id' => $this->member_info['member_id']), $member_array);
         if($result)output_json(1,true,'更新成功');
         else output_json(0,false,'更新失败');
+    }
+
+    /**
+     * 会员名称检测
+     *
+     * @param
+     * @return
+     */
+    private function _check_member($member_name) {
+        $model_member	= Model('member');
+        $check_member_name	= $model_member->getMemberInfo(array('member_name' => $member_name));
+        if(is_array($check_member_name) and count($check_member_name)>0) {
+            output_json(0, false, '该昵称已存在');
+        }
     }
 
     public function update_member_pwdOp(){

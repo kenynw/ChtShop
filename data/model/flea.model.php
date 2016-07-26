@@ -125,6 +125,7 @@ class fleaModel extends Model {
 	public function getThumb(&$goods,$path){
 		if (is_array($goods)){
 			foreach ($goods as $k=>$v) {
+                $goods[$k]['file_path'] 	= $path.$v['file_name'];
 				$goods[$k]['thumb_small'] 	= $path.$v['file_thumb'];
 				$goods[$k]['thumb_mid'] 	= $path.str_replace('_small','_mid',$v['file_thumb']);
 				$goods[$k]['thumb_max'] 	= $path.str_replace('_small','_max',$v['file_thumb']);
