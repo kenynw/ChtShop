@@ -148,7 +148,7 @@ class member_indexControl extends mobileMemberControl {
     private function _check_member($member_name) {
         $model_member	= Model('member');
         $check_member_name	= $model_member->getMemberInfo(array('member_name' => $member_name));
-        if(is_array($check_member_name) and count($check_member_name)>0) {
+        if(is_array($check_member_name) and count($check_member_name)>0 and $check_member_name['member_id'] == $this->member_info['member_id']) {
             output_json(0, false, '该昵称已存在');
         }
     }
