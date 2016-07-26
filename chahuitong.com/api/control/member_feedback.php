@@ -30,7 +30,7 @@ class member_feedbackControl extends mobileMemberControl {
         $param['ftime'] = TIMESTAMP;
         $param['member_id'] = $this->member_info['member_id'];
         $param['member_name'] = $this->member_info['member_name'];
-        $param['member_contact'] = $_POST['contact'];
+        if (!empty($_POST['contact'])) $param['member_contact'] = $_POST['contact'];
 
         $result = $model_mb_feedback->addMbFeedback($param);
 

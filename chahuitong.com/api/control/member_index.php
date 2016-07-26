@@ -63,18 +63,17 @@ class member_indexControl extends mobileMemberControl {
 	public function upload_avatarOp() {
 	    $member_id = $this->member_info['member_id'];
         $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
-        $file_name = "avatar_$member_id.$ext";
 
         //上传图片
         $upload = new UploadFile();
         $upload->set('thumb_width',	500);
         $upload->set('thumb_height',499);
         $upload->set('thumb_ext','_new');
-        $upload->set('file_name', $file_name);
+        $upload->set('file_name', "avatar_$member_id.$ext");
         $upload->set('ifremove',true);
         $upload->set('default_dir',ATTACH_AVATAR);
         $result = $upload->upfile('image');
-        if (!$result) output_json(0, false, $upload->error);
+        if (!$result) output_json(0, $result, $upload->error);
 
         $src = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS."avatar_{$member_id}_new.$ext";
         $avatarfile = BASE_UPLOAD_PATH.DS.ATTACH_AVATAR.DS."{$member_id}.jpg";
@@ -88,7 +87,7 @@ class member_indexControl extends mobileMemberControl {
 
     public function member_infoOp(){
         $member_info = array();
-        $member_info['member_name'] = $this->member_info['member_name'];
+        $member_info['member_nickname'] = $this->member_info['member_nickname'];
         $member_info['member_avatar'] = getMemberAvatar($this->member_info['member_avatar']);
         $member_info['member_birthday'] = $this->member_info['member_birthday'];
         $member_info['member_sex'] = $this->member_info['member_sex'] == '1' ? '男' : ($this->member_info['member_sex'] == '2' ? '女' : '未填写');
@@ -102,34 +101,43 @@ class member_indexControl extends mobileMemberControl {
      */
     public function update_member_infoOp() {
         $member_array	= array();
+        $model_member= Model('member');
+
         if (empty($_POST)) {
             $member = json_decode(@file_get_contents("php://input"), true);
             if (!empty($member) && is_array($member)) {
-                $member_array['member_name']	    = $member['member_name'];
+                $member_array['member_nickname']	    = $member['member_nickname'];
+                $member_info = $model_member->getMemberInfo($member_array);
+                if (!empty($member_info) && $member_info['member_id'] != $this->member_info['member_id']) {
+                    output_json(0, false, '该昵称已存在');
+                }
                 $member_array['member_sex']			= $member['member_sex'] == '男' ? 1 : ($member['member_sex'] == '女' ? 2 : $member['member_sex']);
                 $member_array['member_areaid']		= $member['member_areaid'];
                 $member_array['member_cityid']		= $member['member_cityid'];
                 $member_array['member_provinceid']	= $member['member_provinceid'];
                 $member_array['member_areainfo']	= $member['member_areainfo'];
                 $member_array['member_intro']	    = $member['member_intro'];
-                if (strlen($member['member_birthday']) == 10) {
+                if (strlen($member['member_birthday']) == 10 || strlen($member['member_birthday']) == 9) {
                     $member_array['member_birthday']	= $member['member_birthday'];
                 }
             }
         } else {
-            $member_array['member_name']	    = $_POST['member_name'];
+            $member_array['member_nickname']	    = $_POST['member_name'];
+            $member_info = $model_member->getMemberInfo($member_array);
+            if (!empty($member_info) && $member_info['member_id'] != $this->member_info['member_id']) {
+                output_json(0, false, '该昵称已存在');
+            }
             $member_array['member_sex']			= $_POST['member_sex'] == '男' ? 1 : ($_POST['member_sex'] == '女' ? 2 : $_POST['member_sex']);
             $member_array['member_areaid']		= $_POST['area_id'];
             $member_array['member_cityid']		= $_POST['city_id'];
             $member_array['member_provinceid']	= $_POST['province_id'];
             $member_array['member_areainfo']	= $_POST['area_info'];
             $member_array['member_intro']	    = $_POST['member_intro'];
-            if (strlen($_POST['birthday']) == 10){
+            if (strlen($_POST['birthday']) == 10 || strlen($_POST['member_birthday']) == 9){
                 $member_array['member_birthday']	= $_POST['birthday'];
             }
         }
 
-        $model_member= Model('member');
         $result=$model_member->editMember(array('member_id' => $this->member_info['member_id']), $member_array);
         if($result)output_json(1,true,'更新成功');
         else output_json(0,false,'更新失败');

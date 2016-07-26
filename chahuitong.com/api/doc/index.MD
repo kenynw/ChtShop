@@ -924,10 +924,10 @@ URL: act=member_index&op=update_member_info
 >key  登录令牌    
 >member_name        昵称 只支持中英文、数字、下划线   
 >member_sex         性别 1-男， 2-女  传数字或者字符都行  
->member_cityid      市区ID    
->member_province_id 省份ID    
->member_areainfo    位置文本信息 例:福建厦门    
->member_birthday    生日 格式为 yyyy-mm-dd   
+>city_id            市区ID    
+>province_id        省份ID    
+>area_info          位置文本信息 例:福建厦门    
+>birthday           生日 格式为 yyyy-mm-dd   
 >member_intro       个人简介 最大为140个字符 
 
 ##### 第二种方法用JSON格式
@@ -2587,8 +2587,9 @@ URL: act=member_feedback&op=feedback_add
 
 参数：
 
->key 登录令牌
->feedback 反馈内容
+>key 登录令牌   
+>feedback 反馈内容  
+>contact 联系方式
 
 返回：
 

@@ -251,7 +251,7 @@ class member_fleaControl extends mobileMemberControl
                 $image_info = $model_store_goods->getListImageGoods(
                     array('upload_id' => intval($_POST['goods_file_id']))
                 );
-                $goods_image = $image_info[0]['file_thumb'];
+                $goods_image = $image_info[0]['file_name'];
                 $model_store_goods->updateGoods(
                     array('goods_image' => $goods_image), $state
                 );
