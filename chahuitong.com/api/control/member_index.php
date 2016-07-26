@@ -87,7 +87,7 @@ class member_indexControl extends mobileMemberControl {
 
     public function member_infoOp(){
         $member_info = array();
-        $member_info['member_name'] = $this->member_info['member_nickname'];
+        $member_info['member_name'] = $this->member_info['member_name'];
         $member_info['member_avatar'] = getMemberAvatar($this->member_info['member_avatar']);
         $member_info['member_birthday'] = $this->member_info['member_birthday'];
         $member_info['member_sex'] = $this->member_info['member_sex'] == '1' ? '男' : ($this->member_info['member_sex'] == '2' ? '女' : '未填写');
