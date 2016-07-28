@@ -115,23 +115,7 @@ class member_sns_traceControl extends mobileMemberControl {
         $trace_info['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $trace_info['trace_content']);
 
         // 查询评论列表
-        $comment_model = Model('sns_comment');
-        $condition = array();
-        $condition['comment_originalid'] = $id;
-        $condition['comment_originaltype'] = '0'; //原帖类型 0表示动态信息 1表示分享商品
-        $condition['comment_state'] = "0"; //0表示正常，1表示屏蔽
-        $condition['limit'] = $this->page;
-
-        $comment_list = $comment_model->getCommentList($condition);
-        if (!empty($comment_list)) {
-            foreach ($comment_list as $key => $value) {
-                $comment_list[$key]['comment_memberavatar'] = getMemberAvatar($value['comment_memberavatar']);
-                $comment_list[$key]['comment_addtime'] = date('Y.m.d H:i', $value['comment_addtime']);
-            }
-            $trace_info['comment_list'] = $comment_list;
-        } else {
-            $trace_info['comment_list'] = array();
-        }
+        $trace_info['comment_list'] = $this->_get_comment_list($id);
 
         output_json(1, $trace_info);
     }
@@ -291,23 +275,9 @@ class member_sns_traceControl extends mobileMemberControl {
         $id = intval(empty($_GET['id']) ? $_POST['id'] : $_GET['id']);
         if ($id <= 0) output_json(0, array(), '参数错误');
 
-        $comment_model = Model('sns_comment');
-        //查询评论总数
-        $condition = array();
-        $condition['comment_originalid'] = $id;
-        $condition['comment_originaltype'] = '0'; //原帖类型 0表示动态信息 1表示分享商品
-        $condition['comment_state'] = "0"; //0表示正常，1表示屏蔽
-        $condition['limit'] = $this->page;
-
         //评价列表
-        $comment_list = $comment_model->getCommentList($condition);
-        if (!empty($comment_list)) {
-            foreach ($comment_list as $key => $value) {
-                $comment_list[$key]['comment_memberavatar'] = getMemberAvatar($value['comment_memberavatar']);
-                $comment_list[$key]['comment_addtime'] = date('Y.m.d H:i', $value['comment_addtime']);
-            }
-        }
-
+        $comment_list = $this->_get_comment_list($id);
+        $comment_model = Model('sns_comment');
         $page_count = $comment_model->gettotalpage();
 
         output_json(1, array('list' => $comment_list), 'SUCCESS', mobile_page($page_count));
@@ -320,21 +290,21 @@ class member_sns_traceControl extends mobileMemberControl {
         $id = intval(empty($_GET['id']) ? $_POST['id'] : $_GET['id']);
         if ($id <= 0) output_json(0, array(), '参数错误');
 
+        $content = $_POST['content'];
+
         $obj_validate = new Validate();
-        $validate_arr[] = array("input"=>$_POST['content'], "require"=>"true","message"=>'评论不能空');
-        $validate_arr[] = array("input"=>$_POST['content'], "validator"=>'Length',"min"=>0,"max"=>140,"message"=>'评论不能超过140个中文字符');
+        $validate_arr[] = array("input"=>$content, "require"=>"true","message"=>'评论不能空');
+        $validate_arr[] = array("input"=>$content, "validator"=>'Length',"min"=>0,"max"=>140,"message"=>'评论不能超过140个中文字符');
         $obj_validate -> validateparam = $validate_arr;
         $error = $obj_validate->validate();
         if ($error != ''){
             output_json(0, array(), $error);
         }
 
-        //查询原动态信息
-        $tracelog_model = Model('sns_tracelog');
-        $tracelog_info = $tracelog_model->getTracelogRow(array('trace_id'=>"{$id}",'trace_state'=>'0'));
-        if (empty($tracelog_info)){
-            output_json(0, array(), '动态已不存在');
-        }
+        //查询原信息
+        $model_trace = Model('sns_tracelog');
+        $trace_info = $model_trace->getTracelogRow(array('trace_id'=>"{$id}",'trace_state'=>'0'));
+        if (empty($trace_info)) output_json(0, array(), '动态已不存在');
 
         $comment_model = Model('sns_comment');
         $insert_arr = array();
@@ -343,37 +313,111 @@ class member_sns_traceControl extends mobileMemberControl {
         $insert_arr['comment_memberavatar'] = $this->member_info['member_avatar'];
         $insert_arr['comment_originalid'] = $id;
         $insert_arr['comment_originaltype'] = 0;
-        $insert_arr['comment_content'] = $_POST['content'];
+        $insert_arr['comment_content'] = $content;
         $insert_arr['comment_addtime'] = time();
         $insert_arr['comment_ip'] = getIp();
         $insert_arr['comment_state'] = '0'; //正常
         $result = $comment_model->commentAdd($insert_arr);
         if ($result){
+            $insert_arr['comment_id'] = $result;
+
             // 发送消息
-            if ($tracelog_info['trace_memberid'] != $this->member_info['member_id']) {
+            if ($trace_info['trace_memberid'] != $this->member_info['member_id']) {
                 $insert = array();
-                $insert['member_id'] = $tracelog_info['trace_memberid'];
-                $insert['to_member_name'] = $tracelog_info['member_name'];
-                $insert['msg_content'] = $tracelog_info['trace_id'] . '&回复了你:' . $_GET['content'];
+                $insert['member_id'] = $trace_info['trace_memberid'];
+                $insert['to_member_name'] = $trace_info['trace_membername'];
+                $insert['msg_content'] = $content;
                 $insert['message_type'] = 4;
+                $insert['item_id'] = $trace_info['trace_id'];
                 $this->_send_msg($insert);
             }
 
             //更新动态统计信息
             $update_arr = array();
             $update_arr['trace_commentcount'] = array('sign'=>'increase','value'=>'1');
-            if (intval($tracelog_info['trace_originalid']) == 0){
+            if (intval($trace_info['trace_originalid']) == 0){
                 $update_arr['trace_orgcommentcount'] = array('sign'=>'increase','value'=>'1');
             }
-            $tracelog_model->tracelogEdit($update_arr,array('trace_id'=>"$id"));
+            $model_trace->tracelogEdit($update_arr,array('trace_id'=>"$id"));
             unset($update_arr);
             //更新所有转帖的原帖评论次数
-            if (intval($tracelog_info['trace_originalid']) == 0){
-                $tracelog_model->tracelogEdit(array('trace_orgcommentcount'=>$tracelog_info['trace_orgcommentcount']+1),array('trace_originalid'=>"$id"));
+            if (intval($trace_info['trace_originalid']) == 0){
+                $model_trace->tracelogEdit(array('trace_orgcommentcount'=>$trace_info['trace_orgcommentcount']+1),array('trace_originalid'=>"$id"));
             }
+
+            output_json(0, $insert_arr);
         }
 
-        output_json(1, $result);
+        output_json(0, array(), '添加失败');
+    }
+
+    /**
+     * 添加评论
+     */
+    public function comment_replyOp() {
+        $id = intval(empty($_GET['id']) ? $_POST['id'] : $_GET['id']);
+        if ($id <= 0) output_json(0, array(), '参数错误');
+
+        $content = $_POST['content'];
+
+        $obj_validate = new Validate();
+        $validate_arr[] = array("input"=>$content, "require"=>"true","message"=>'评论不能空');
+        $validate_arr[] = array("input"=>$content, "validator"=>'Length',"min"=>0,"max"=>140,"message"=>'评论不能超过140个中文字符');
+        $obj_validate -> validateparam = $validate_arr;
+        $error = $obj_validate->validate();
+        if ($error != '') output_json(0, array(), $error);
+
+        $comment_model = Model('sns_comment');
+        $comment_info = $comment_model->getCommentRow(array('comment_id'=>"{$id}",'comment_state'=>'0'));
+        if (empty($comment_info)) output_json(0, array(), '评论已删除');
+
+        $model_member = Model('member');
+        $member_info = $model_member->getMemberInfoByID($comment_info['comment_memberid'], 'member_id, member_name');
+
+        $insert_arr = array();
+        $insert_arr['comment_memberid'] = $this->member_info['member_id'];
+        $insert_arr['comment_membername'] = $this->member_info['member_name'];
+        $insert_arr['comment_memberavatar'] = $this->member_info['member_avatar'];
+        $insert_arr['comment_originalid'] = $comment_info['comment_originalid'];
+        $insert_arr['comment_originaltype'] = 0;
+        $insert_arr['comment_content'] = $content;
+        $insert_arr['comment_reply_id'] = $id;
+        $insert_arr['comment_addtime'] = time();
+        $insert_arr['comment_ip'] = getIp();
+        $insert_arr['comment_state'] = '0'; //正常
+        $result = $comment_model->commentAdd($insert_arr);
+        if ($result){
+            $insert_arr['comment_id'] = $result;
+
+            // 发送消息
+            if ($member_info['member_id'] != $this->member_info['member_id']) {
+                $insert = array();
+                $insert['member_id'] = $member_info['member_id'];
+                $insert['to_member_name'] = $member_info['member_name'];
+                $insert['msg_content'] = $content;
+                $insert['message_type'] = 4;
+                $insert['item_id'] = $comment_info['comment_id'];
+                $this->_send_msg($insert);
+            }
+
+            //更新动态统计信息
+            $update_arr = array();
+            $update_arr['trace_commentcount'] = array('sign'=>'increase','value'=>'1');
+            if (intval($comment_info['trace_originalid']) == 0){
+                $update_arr['trace_orgcommentcount'] = array('sign'=>'increase','value'=>'1');
+            }
+            $model_trace = Model('sns_tracelog');
+            $model_trace->tracelogEdit($update_arr,array('trace_id'=> $comment_info['comment_originalid']));
+            unset($update_arr);
+            //更新所有转帖的原帖评论次数
+            if (intval($comment_info['trace_originalid']) == 0){
+                $model_trace->tracelogEdit(array('trace_orgcommentcount'=>$comment_info['trace_orgcommentcount']+1),array('trace_originalid'=>$comment_info['comment_originalid']));
+            }
+
+            output_json(1, $insert_arr);
+        }
+
+        output_json(0, array(), '添加失败');
     }
 
     /**
@@ -402,13 +446,12 @@ class member_sns_traceControl extends mobileMemberControl {
             $tracelog_model->tracelogEdit($update_arr,array('trace_id'=>"{$comment_info['comment_originalid']}"));
             output_json(1, $result, 'SUCCESS');
         } else {
-            output_json(0, $comment_info, '评论已不存在');
+            output_json(0, $comment_info, '删除失败');
         }
     }
 
     /**
      * 点赞
-     * TODO
      */
     public function like_addOp() {
         $id = intval(empty($_GET['id']) ? $_POST['id'] : $_GET['id']);
@@ -443,8 +486,9 @@ class member_sns_traceControl extends mobileMemberControl {
                 $params = array();
                 $params['member_id'] = $type == 2 ? $original_info['comment_memberid'] : $original_info['trace_memberid'];
                 $params['to_member_name'] = $type == 2 ? $original_info['comment_membername'] : $original_info['trace_membername'];
-                $params['msg_content'] = $type == 2 ? $original_info['comment_id'] : $original_info['trace_id'] . '&赞了你:';
+                $params['msg_content'] = '赞了你';
                 $params['message_type'] = 4;
+                $params['item_id'] = $type == 2 ? $original_info['comment_id'] : $original_info['trace_id'];
                 $this->_send_msg($params);
             }
         } else {
@@ -465,41 +509,46 @@ class member_sns_traceControl extends mobileMemberControl {
         output_json(1, $result);
     }
 
-    /**
-     * 取消赞
-     */
-    public function like_cancelOp() {
-        $id = intval($_GET['id']);
-        if ($id <= 0) {
-            $id = intval($_POST['id']);
-        }
-        if ($id <= 0) {
-            output_json(0, array(), '参数错误');
-        }
+    private function _get_comment_list($id) {
 
-        $model_like = Model('sns_like');
-        $like_info = $model_like->getLikeInfo(array('like_originalid' => $id));
-        if (empty($like_info)) {
-            output_json(1, array(), '动态已被删除');
-        } elseif($like_info['like_state'] == 1) {
-            output_json(1, array(), '状态已经改变了');
-        }
+        // 查询评论列表
+        $comment_model = Model('sns_comment');
+        $condition = array();
+        $condition['comment_originalid'] = $id;
+        $condition['comment_originaltype'] = '0'; //原帖类型 0表示动态信息 1表示分享商品
+        $condition['comment_state'] = "0"; //0表示正常，1表示屏蔽
+        $condition['limit'] = $this->page;
 
-        $result = $model_like->cancelLike(array('like_id' => $like_info['like_id']));
+        $comment_list = $comment_model->getCommentList($condition);
+        if (!empty($comment_list)) {
+            $model_member = Model('member');
+            $model_like = Model('sns_like');
 
-        // 更改点赞数
-        if ($result) {
-            $action = array('sign'=>'decrease','value'=>'1');
-            if (intval($_POST['type']) == 0) {
-                $model_trace = Model('sns_tracelog');
-                $model_trace->tracelogEdit(array('trace_likecount' => $action),array('trace_id'=>$id));
-            } elseif(intval($_POST['type']) == 2) {
-                $model_comment = Model('sns_comment');
-                $model_comment->commentEdit(array('comment_likecount' => $action),array('comment_id'=>$id));
+            foreach ($comment_list as $key => $value) {
+                $member_info = $model_member->getMemberInfoByID($value['comment_memberid'], 'member_id, member_name, member_avatar');
+                $value['comment_membername'] = $member_info['member_name'];
+                $value['comment_memberavatar'] = getMemberAvatar($member_info['member_avatar']);
+                $value['comment_addtime'] = date('Y.m.d H:i', $value['comment_addtime']);
+
+                $condition = array();
+                $condition['like_originalid'] = $value['comment_id'];
+                $condition['like_memberid'] = $this->member_info['member_id'];
+                $condition['like_originaltype'] = 2;
+                $condition['like_state'] = 0;
+                $like_info = $model_like->getLikeInfo($condition);
+                if (empty($like_info)) $value['is_like'] = false;
+                else $value['is_like'] = true;
+
+                if ($value['comment_memberid'] == $this->member_info['member_id']) {
+                    $value['relation'] = 1;
+                } else {
+                    $value['relation'] = 0;
+                }
+                $comment_list[$key] = $value;
             }
         }
 
-        output_json(1, $result);
+        return $comment_list;
     }
 
     private function _send_msg($param) {

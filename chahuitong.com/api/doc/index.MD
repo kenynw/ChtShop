@@ -1676,6 +1676,8 @@ URL(Get/Post): act=member_sns_trace&op=comment_list
                     "comment_addtime": "2016.05.26 19:35",
                     "comment_ip": "127.0.0.1",
                     "comment_state": "0"
+                    "is_like": true 是否点赞过
+                    "relation": 0-其他人 1-自己发表的
                 }
             ],
             "hasmore": false,
@@ -1698,10 +1700,38 @@ URL(Post): act=member_sns_trace&op=comment_add
 
     {
         "code": 1,
-        "data": 13,
+        "data": 13{
+            "comment_id": "12",
+            "comment_memberid": "164",
+            "comment_membername": "内测帐号",
+            "comment_memberavatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+            "comment_originalid": "10",
+            "comment_originaltype": "0",
+            "comment_content": "test2",
+            "comment_addtime": "2016.05.26 19:35",
+            "comment_ip": "127.0.0.1",
+            "comment_state": "0"
+        },
         "msg": "SUCCESS"
     }
         
+### 回复评论
+
+URL(Get/Post): act=member_sns_trace&op=comment_reply
+
+参数：
+
+>key 当前登录令牌     
+>id 动态id    
+
+返回：
+
+    {
+        "code": 1,
+        "data": 13,
+        "msg": "SUCCESS"
+    }
+              
 ### 删除动态评论
 
 URL(Get/Post): act=member_sns_trace&op=comment_del
@@ -1718,7 +1748,7 @@ URL(Get/Post): act=member_sns_trace&op=comment_del
         "data": 13,
         "msg": "SUCCESS"
     }
-         
+           
 ### 点赞
 
 URL: act=member_sns_trace&op=like_add
