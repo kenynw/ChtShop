@@ -66,6 +66,17 @@ class member_sns_traceControl extends mobileMemberControl {
                     //替换内容中的siteurl
                     $trace_list[$key]['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_content']);
                 }
+
+                // 查询点赞状态
+                $model_like = Model('sns_like');
+                $like_info = $model_like->getLikeInfo(array(
+                    'like_memberid' => $this->member_info['member_id'],
+                    'like_originalid' => $value['trace_id'],
+                    'like_originaltype' => 0,
+                    'like_state' => 0
+                ));
+                if (empty($like_info)) $trace_list[$key]['is_like'] = false;
+                else $trace_list[$key]['is_like'] = true;
             }
         }
 
@@ -113,6 +124,17 @@ class member_sns_traceControl extends mobileMemberControl {
         // 处理@信息
         $trace_info['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $trace_info['trace_title']);
         $trace_info['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $trace_info['trace_content']);
+
+        // 查询点赞状态
+        $model_like = Model('sns_like');
+        $like_info = $model_like->getLikeInfo(array(
+            'like_memberid' => $this->member_info['member_id'],
+            'like_originalid' => $trace_info['trace_id'],
+            'like_originaltype' => 0,
+            'like_state' => 0
+        ));
+        if (empty($like_info)) $trace_info['is_like'] = false;
+        else $trace_info['is_like'] = true;
 
         // 查询评论列表
         $trace_info['comment_list'] = $this->_get_comment_list($id);

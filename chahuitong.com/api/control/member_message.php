@@ -80,18 +80,16 @@ class member_messageControl extends mobileMemberControl {
                 // 用户与动态信息
                 $member_info = $model_member->getMemberInfoByID($value['from_member_id'], 'member_avatar');
                 $value['from_member_avatar'] = getMemberAvatar($member_info['member_avatar']);
-                if ($value['message_type'] > 3 && $value['message_parent_id'] > 0) {
+                if ($value['message_type'] > 3 && $value['item_id'] > 0) {
                     $model_trace = Model('sns_tracelog');
                     $trace_info = $model_trace->getTracelogRow(array(
-                        'trace_id' => $value['message_parent_id'], 'trace_state'=>'0'),
+                        'trace_id' => $value['item_id'], 'trace_state'=>'0'),
                         'trace_id,trace_image,trace_title'
                     );
                     if (!empty($trace_info)) {
-                        foreach ($trace_info as $k_t=>$v_t) {
-                            $trace_info[$key]['trace_image'] = snsThumb($v_t['trace_image'], 240);
-                        }
-                        $value['trace_info'] = $trace_info;
+                        $trace_info['trace_image'] = snsThumb($trace_info['trace_image'], 240);
                     }
+                    $value['trace_info'] = $trace_info;
                 }
 
                 // 日期整理

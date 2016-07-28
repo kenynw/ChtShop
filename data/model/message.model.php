@@ -120,7 +120,8 @@ class messageModel extends Model {
 		$array['message_type']		= $param['message_type']?$param['message_type']:'0';
 		$array['message_ismore']	= $param['message_ismore']?$param['message_ismore']:'0';
 		$array['read_member_id']	= $param['read_member_id']?$param['read_member_id']:'';
-		$array['del_member_id']	= $param['del_member_id']?$param['del_member_id']:'';
+		$array['del_member_id']	    = $param['del_member_id']?$param['del_member_id']:'';
+		$array['item_id']	        = $param['item_id'] ? $param['item_id']: '0';
 		return Db::insert('message',$array);
 	}
 	/**

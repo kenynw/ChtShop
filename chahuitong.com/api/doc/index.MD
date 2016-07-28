@@ -1944,6 +1944,7 @@ URL: act=member_sns_friend&op=follow_list
 参数：
 
 >key 当前登录令牌     
+>mid 指定某个用户     
 
 返回：
 
@@ -1971,11 +1972,12 @@ URL: act=member_sns_friend&op=follow_list
        
 ### 粉丝列表
 
-URL: act=member_sns_friend&op=followers_list
+URL: act=member_sns_friend&op=follower_list
 
 参数：
 
 >key 当前登录令牌     
+>mid 指定某个用户     
 
 返回：
 
@@ -2034,7 +2036,12 @@ URL: act=member_message&op=message_list
                     "message_ismore": "0",
                     "from_member_name": "内测帐号",
                     "to_member_name": "qweqwe",
-                    "from_member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif"
+                    "from_member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                    "trace_info": {
+                        "trace_id": "40",
+                        "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+                        "trace_title": "@chahuitong</a>"
+                    }
                 }
             ],
             "hasmore": true,

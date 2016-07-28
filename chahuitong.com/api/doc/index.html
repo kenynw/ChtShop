@@ -1929,6 +1929,7 @@ id 动态id</p></blockquote>
                 "comment_addtime": "2016.05.26 19:35",
                 "comment_ip": "127.0.0.1",
                 "comment_state": "0"
+                "like_count": 2 点赞数
                 "is_like": true 是否点赞过
                 "relation": 0-其他人 1-自己发表的
             }
@@ -2206,7 +2207,8 @@ mid 用户ID</p></blockquote>
 
 <p>参数：</p>
 
-<blockquote><p>key 当前登录令牌</p></blockquote>
+<blockquote><p>key 当前登录令牌   <br/>
+mid 指定某个用户</p></blockquote>
 
 <p>返回：</p>
 
@@ -2235,11 +2237,12 @@ mid 用户ID</p></blockquote>
 
 <h3>粉丝列表</h3>
 
-<p>URL: act=member_sns_friend&amp;op=followers_list</p>
+<p>URL: act=member_sns_friend&amp;op=follower_list</p>
 
 <p>参数：</p>
 
-<blockquote><p>key 当前登录令牌</p></blockquote>
+<blockquote><p>key 当前登录令牌   <br/>
+mid 指定某个用户</p></blockquote>
 
 <p>返回：</p>
 
@@ -2299,7 +2302,12 @@ type 消息类型 0为私信、1为系统消息、2为留言、3为新的粉丝�
                 "message_ismore": "0",
                 "from_member_name": "内测帐号",
                 "to_member_name": "qweqwe",
-                "from_member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif"
+                "from_member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                "trace_info": {
+                    "trace_id": "40",
+                    "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+                    "trace_title": "@chahuitong&lt;/a&gt;"
+                }
             }
         ],
         "hasmore": true,

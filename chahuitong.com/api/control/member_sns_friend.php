@@ -195,9 +195,12 @@ class member_sns_friendControl extends mobileMemberControl {
      * 我关注的用户列表
      */
     public function follow_listOp() {
+        $mid = intval(empty($_POST['mid']) ? $_GET['mid'] : $_POST['mid']);
+        if ($mid <= 0) $mid = $this->member_info['member_id'];
+
         $model_follow = Model('sns_friend');
         $condition = array();
-        $condition['friend_frommid'] = $this->member_info['member_id'];
+        $condition['friend_frommid'] = $mid;
 
         $follow_list = $model_follow->getFriendList($condition, '*', $this->page);
 
@@ -210,9 +213,12 @@ class member_sns_friendControl extends mobileMemberControl {
      * 关注我的用户列表
      */
     public function follower_listOp() {
+        $mid = intval(empty($_POST['mid']) ? $_GET['mid'] : $_POST['mid']);
+        if ($mid <= 0) $mid = $this->member_info['member_id'];
+
         $model_follow = Model('sns_friend');
         $condition = array();
-        $condition['friend_tomid'] = $this->member_info['member_id'];
+        $condition['friend_tomid'] = $mid;
         
         $page = new Page();
         $page->setEachNum($this->page);

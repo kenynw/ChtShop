@@ -46,7 +46,7 @@ class sns_tracelogModel extends Model {
 			unset($matches);
 		}
 		$result = Db::insert('sns_tracelog',$param);
-		if ($message_id && $result) Model('message')->updateCommonMessage(array('message_parent_id'=>$result), array('message_id'=>array('in', $message_id)));
+		if ($message_id && $result) Model('message')->updateCommonMessage(array('item_id'=>$result), array('message_id'=>array('in', $message_id)));
 		return $result;
 	}
 	/**
