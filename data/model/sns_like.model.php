@@ -19,18 +19,16 @@ class sns_likeModel extends Model {
         return $this->where($condition)->update($update);
     }
 
-    /**
-     * 取消赞
-     *
-     * @param $condition
-     * @return mixed
-     */
     public function cancelLike($condition) {
         return $this->editLike($condition, array('like_state' => 1));
     }
 
     public function getLikeInfo($condition, $field = '*') {
         return $this->field($field)->where($condition)->find();
+    }
+
+    public function countLike($condition) {
+        return $this->where($condition)->count();
     }
     
 }

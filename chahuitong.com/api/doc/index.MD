@@ -1676,6 +1676,7 @@ URL(Get/Post): act=member_sns_trace&op=comment_list
                     "comment_addtime": "2016.05.26 19:35",
                     "comment_ip": "127.0.0.1",
                     "comment_state": "0"
+                    "like_count": 2 点赞数
                     "is_like": true 是否点赞过
                     "relation": 0-其他人 1-自己发表的
                 }

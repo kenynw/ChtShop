@@ -320,6 +320,8 @@ class member_sns_traceControl extends mobileMemberControl {
         $result = $comment_model->commentAdd($insert_arr);
         if ($result){
             $insert_arr['comment_id'] = $result;
+            $insert_arr['comment_memberavatar'] = getMemberAvatarForID($this->member_info['member_id']);
+            $insert_arr['comment_addtime'] = date('Y.m.d H:i', $insert_arr['comment_addtime']);
 
             // 发送消息
             if ($trace_info['trace_memberid'] != $this->member_info['member_id']) {
@@ -388,6 +390,8 @@ class member_sns_traceControl extends mobileMemberControl {
         $result = $comment_model->commentAdd($insert_arr);
         if ($result){
             $insert_arr['comment_id'] = $result;
+            $insert_arr['comment_memberavatar'] = getMemberAvatarForID($this->member_info['member_id']);
+            $insert_arr['comment_addtime'] = date('Y.m.d H:i', $insert_arr['comment_addtime']);
 
             // 发送消息
             if ($member_info['member_id'] != $this->member_info['member_id']) {
@@ -538,6 +542,8 @@ class member_sns_traceControl extends mobileMemberControl {
                 $like_info = $model_like->getLikeInfo($condition);
                 if (empty($like_info)) $value['is_like'] = false;
                 else $value['is_like'] = true;
+                unset($condition['like_memberid']);
+                $value['like_count'] = $model_like->countLike($condition);
 
                 if ($value['comment_memberid'] == $this->member_info['member_id']) {
                     $value['relation'] = 1;
