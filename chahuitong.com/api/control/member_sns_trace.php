@@ -345,7 +345,7 @@ class member_sns_traceControl extends mobileMemberControl {
                 $model_trace->tracelogEdit(array('trace_orgcommentcount'=>$trace_info['trace_orgcommentcount']+1),array('trace_originalid'=>"$id"));
             }
 
-            output_json(0, $insert_arr);
+            output_json(1, $insert_arr);
         }
 
         output_json(0, array(), '添加失败');
@@ -544,6 +544,12 @@ class member_sns_traceControl extends mobileMemberControl {
                 } else {
                     $value['relation'] = 0;
                 }
+
+                if ($value['comment_reply_id'] > 0) {
+                    $original_comment = $comment_model->getCommentRow(array('comment_id' => $value['comment_reply_id']), 'comment_id, comment_membername, comment_content');
+                    $value['comment_reply'] = $original_comment;
+                }
+
                 $comment_list[$key] = $value;
             }
         }
