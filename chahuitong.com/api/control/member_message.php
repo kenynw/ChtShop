@@ -54,7 +54,7 @@ class member_messageControl extends mobileMemberControl {
                 $value['message_open'] = '0';
                 if ($value['read_member_id'] !== '') {
                     $read_list = explode(',', $value['read_member_id']);
-                    if (in_array($this->member_info['member_id'], $read_list)) {
+                    if (is_array($read_list) && in_array($this->member_info['member_id'], $read_list)) {
                         $value['message_open'] = '1';
                     } else  { // 更新系统消息状态为已读
                         $read_list[] = $this->member_info['member_id'];
@@ -101,6 +101,9 @@ class member_messageControl extends mobileMemberControl {
                 } else {
                     $value['message_time'] = (int)($time / 60) . '分钟前';
                 }
+
+                // URL处理
+                $value['message_body'] = str_replace('http', 'cht', $value['message_body']);
 
                 $message_list[$key] = $value;
             }
