@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 body {
-	font:bold 12px/1.5em "Microsoft YaHei";
+	font:nomal 100% Helvetica,Arial,sans-serif;
 }
 .img-logo{
 	max-width:100%;
@@ -9,20 +9,22 @@ body {
 	margin-bottom:80px;
 }
 .content-intro h2{
-	font:75px;
-	letter-spacing:8px;
+	font-size:2em;
+	letter-spacing:0.2em;
 	margin-bottom:30px;
 }
+.content-intro h6 {
+	font-size:1em;
+	letter-spacing:0.2em;
+}
 .content-intro p {
-	font:35px;
-	letter-spacing:6px;
+	font-size:1em;
+	letter-spacing:0.1em;
 	color:#6c6c6c;
+	margin-bottom:30px;
 }
 .content-intro span{
 	color:#bb000d;
-}
-.content-intro p {
-	margin-bottom:50px;
 }
 .content-intro{
 	margin-bottom:80px;
@@ -31,6 +33,12 @@ body {
 	max-width:100%;
 	height:auto;
 	margin-bottom:80px;
+}
+.content-detail h6{
+	font-size:1em;
+}
+.content-detail p {
+	font-size:1em;
 }
 .content-product{
 	margin-top:80px;
@@ -48,20 +56,29 @@ body {
 	max-width:100%;
 	height:auto;
 	margin-top:80px;
-	margin-bottom:80px;
 }
-.img-footer{
-	margin-top:50px;
-	padding-left:25%;
+.content-effect {
+	background-color:#F1F1F1;
+}
+.content-effect .container{
+	padding:80px 50px;
+	background-color:#fff;
 }
 .content-effect h2{
+	font-size:1.5em;
 	text-align:center;
 }
 .content-effect h6{
+	font-size:1em;
 	text-align:center;
 }
 .content-effect p{
-	padding:10px 5px;
+	padding:10px 10%;
 	letter-spacing:5px;
-	font-size:18px;
+	font-size:1em;
+}
+.img-footer{
+	max-width:100%;
+	height:auto;
+	padding:50px 25%;
 }
