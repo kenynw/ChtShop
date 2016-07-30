@@ -118,3 +118,7 @@ class mobileCMSControl extends mobileMemberControl {
     const PICTURE = 2;
 
 }
+
+class mobileSNSControl extends mobileMemberControl {
+
+}

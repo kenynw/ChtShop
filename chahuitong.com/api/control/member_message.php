@@ -52,11 +52,11 @@ class member_messageControl extends mobileMemberControl {
             foreach ($message_list as $key=>$value) {
                 // 设置并更新消息打开状态
                 $value['message_open'] = '0';
-                if ($value['read_member_id'] !== '') {
+                if ($value['read_member_id'] != ' ') {
                     $read_list = explode(',', $value['read_member_id']);
                     if (is_array($read_list) && in_array($this->member_info['member_id'], $read_list)) {
                         $value['message_open'] = '1';
-                    } else  { // 更新系统消息状态为已读
+                    } else { // 更新系统消息状态为已读
                         $read_list[] = $this->member_info['member_id'];
                         foreach ($read_list as $readid_k=>$readid_v){
                             if ($readid_v == ''){
@@ -69,10 +69,11 @@ class member_messageControl extends mobileMemberControl {
                     }
                 } else {
                     $read_list = ',' . $this->member_info['member_id'] . '.';
+                    // 更新系统消息状态为已读
+                    $this->model_message->updateCommonMessage(array('read_member_id'=>$read_list),array('message_id' => $value['message_id']));
                 }
-                if ($value['message_type'] == 1) {
-                    $this->model_message->updateCommonMessage(array('read_member_id'=>$read_list),array('message_id'=>"{$read_list}"));
-                } else {
+
+                if ($value['message_type'] !== 1) {
                     // 更新消息状态为已读
                     $this->model_message->updateCommonMessage(array('message_open'=>'1'),array('message_id' => $value['message_id']));
                 }
@@ -104,6 +105,7 @@ class member_messageControl extends mobileMemberControl {
 
                 // URL处理
                 $value['message_body'] = str_replace('http', 'cht', $value['message_body']);
+                $value['message_body'] = str_replace('%siteurl%', 'com.cht.user', $value['message_body']);
 
                 $message_list[$key] = $value;
             }

@@ -68,6 +68,7 @@ class sns_tracelogModel extends Model {
 		$param['group'] = $condition['group'];
 		return Db::select($param,$page);
 	}
+
 	/**
 	 * 获取动态详细
 	 * 
@@ -81,7 +82,18 @@ class sns_tracelogModel extends Model {
 		$param['value'] = array_values($condition);
 		return Db::getRow($param,$field);
 	}
-	/**
+
+    /**
+     * 根据获取动态详细
+     *
+     * @param $condition 查询条件
+     * @param $field 查询字段
+     */
+    public function getTraceByID($trace_id,$field='*'){
+        return $this->field($field)->find($trace_id);
+    }
+
+    /**
 	 * 更新动态记录
 	 * @param	array $param 修改信息数组
 	 * @param	array $condition 条件数组

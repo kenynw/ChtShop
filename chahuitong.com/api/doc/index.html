@@ -2055,6 +2055,44 @@ mid 主页用户ID</p></blockquote>
 }
 </code></pre>
 
+<h3>举报动态、评论</h3>
+
+<p>URL(Get/Post): act=member_sns_inform&amp;op=inform_trace</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 当前登录令牌   <br/>
+trace_id 动态id    <br/>
+reply_id 评论id    <br/>
+inform_content 举报内容 由用户选择:广告、营销; 不友善内容(色情、谩骂等); 违法违规; 其他 <br/>
+type 0-动态 1-评论</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "SUCCESS"
+}
+</code></pre>
+
+<h3>举报用户</h3>
+
+<p>URL(Get/Post): act=member_sns_infrom&amp;op=infrom_home</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 当前登录令牌   <br/>
+mid 举报用户的ID
+inform_content 举报内容 由用户选择:广告、营销; 不友善内容(色情、谩骂等); 违法违规; 其他</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "SUCCESS"
+}
+</code></pre>
+
 <h3>全部动态列表</h3>
 
 <p>URL(Get): act=member_sns_home&amp;op=trace_list</p>

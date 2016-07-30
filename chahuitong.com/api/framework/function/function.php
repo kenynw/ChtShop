@@ -4,7 +4,6 @@
  *
  * 公共方法
  *
-
  */
 defined('InShopNC') or exit('Access Invalid!');
 function output_data($datas, $extend_data = array()) {
@@ -25,6 +24,14 @@ function output_data($datas, $extend_data = array()) {
         echo json_encode($data);
         die;
     }
+}
+
+function output_result($code, $msg = '') {
+    $result = array();
+    $result['code'] = $code;
+    $result['msg'] = !empty($msg) ? $msg : ($code == 1 ? 'SUCCESS' : 'ERROR');
+    echo json_encode($result);
+    die;
 }
 
 function output_error($message, $extend_data = array()) {

@@ -1795,7 +1795,43 @@ URL: act=member_sns_home
             "trace_count": "9"
         }
     }
-              
+
+### 举报动态、评论
+
+URL(Get/Post): act=member_sns_inform&op=inform_trace
+
+参数：
+
+>key 当前登录令牌     
+>trace_id 动态id      
+>reply_id 评论id      
+>inform_content 举报内容 由用户选择:广告、营销; 不友善内容(色情、谩骂等); 违法违规; 其他   
+>type 0-动态 1-评论  
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS"
+    }
+       
+### 举报用户
+
+URL(Get/Post): act=member_sns_infrom&op=infrom_home
+
+参数：
+
+>key 当前登录令牌     
+>mid 举报用户的ID
+>inform_content 举报内容 由用户选择:广告、营销; 不友善内容(色情、谩骂等); 违法违规; 其他   
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS"
+    }
+    
 ### 全部动态列表
 
 URL(Get): act=member_sns_home&op=trace_list
