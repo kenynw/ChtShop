@@ -1798,7 +1798,7 @@ URL: act=member_sns_home
 
 ### 举报动态、评论
 
-URL(Get/Post): act=member_sns_inform&op=inform_trace
+URL: act=member_sns_inform&op=inform_trace
 
 参数：
 
@@ -1813,16 +1813,17 @@ URL(Get/Post): act=member_sns_inform&op=inform_trace
     {
         "code": 1,
         "msg": "SUCCESS"
+        "data": true
     }
        
 ### 举报用户
 
-URL(Get/Post): act=member_sns_infrom&op=infrom_home
+URL: act=member_sns_infrom&op=infrom_home
 
 参数：
 
 >key 当前登录令牌     
->mid 举报用户的ID
+>mid 举报用户的ID    
 >inform_content 举报内容 由用户选择:广告、营销; 不友善内容(色情、谩骂等); 违法违规; 其他   
 
 返回：
@@ -1830,6 +1831,7 @@ URL(Get/Post): act=member_sns_infrom&op=infrom_home
     {
         "code": 1,
         "msg": "SUCCESS"
+        "data": true
     }
     
 ### 全部动态列表

@@ -2057,7 +2057,7 @@ mid 主页用户ID</p></blockquote>
 
 <h3>举报动态、评论</h3>
 
-<p>URL(Get/Post): act=member_sns_inform&amp;op=inform_trace</p>
+<p>URL: act=member_sns_inform&amp;op=inform_trace</p>
 
 <p>参数：</p>
 
@@ -2072,17 +2072,18 @@ type 0-动态 1-评论</p></blockquote>
 <pre><code>{
     "code": 1,
     "msg": "SUCCESS"
+    "data": true
 }
 </code></pre>
 
 <h3>举报用户</h3>
 
-<p>URL(Get/Post): act=member_sns_infrom&amp;op=infrom_home</p>
+<p>URL: act=member_sns_infrom&amp;op=infrom_home</p>
 
 <p>参数：</p>
 
 <blockquote><p>key 当前登录令牌   <br/>
-mid 举报用户的ID
+mid 举报用户的ID  <br/>
 inform_content 举报内容 由用户选择:广告、营销; 不友善内容(色情、谩骂等); 违法违规; 其他</p></blockquote>
 
 <p>返回：</p>
@@ -2090,6 +2091,7 @@ inform_content 举报内容 由用户选择:广告、营销; 不友善内容(色
 <pre><code>{
     "code": 1,
     "msg": "SUCCESS"
+    "data": true
 }
 </code></pre>
 

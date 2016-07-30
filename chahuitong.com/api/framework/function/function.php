@@ -26,14 +26,6 @@ function output_data($datas, $extend_data = array()) {
     }
 }
 
-function output_result($code, $msg = '') {
-    $result = array();
-    $result['code'] = $code;
-    $result['msg'] = !empty($msg) ? $msg : ($code == 1 ? 'SUCCESS' : 'ERROR');
-    echo json_encode($result);
-    die;
-}
-
 function output_error($message, $extend_data = array()) {
     $data = array();
     $data['code'] = 0;

@@ -65,15 +65,15 @@ class member_messageControl extends mobileMemberControl {
                         }
                         $read_list = array_unique($read_list);//去除相同
                         sort($read_list);//排序
-                        $read_list = ',' . implode(',',$read_list) . ',';
+                        $read_list = ',' . implode(',',$read_list) . ',';// 更新系统消息状态为已读
                     }
                 } else {
                     $read_list = ',' . $this->member_info['member_id'] . '.';
-                    // 更新系统消息状态为已读
-                    $this->model_message->updateCommonMessage(array('read_member_id'=>$read_list),array('message_id' => $value['message_id']));
                 }
 
-                if ($value['message_type'] !== 1) {
+                if ($value['message_type'] == 1) {
+                    if (is_string($read_list)) $this->model_message->updateCommonMessage(array('read_member_id'=>$read_list),array('message_id' => $value['message_id']));
+                } else {
                     // 更新消息状态为已读
                     $this->model_message->updateCommonMessage(array('message_open'=>'1'),array('message_id' => $value['message_id']));
                 }
