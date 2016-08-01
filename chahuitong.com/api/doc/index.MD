@@ -2641,4 +2641,25 @@ URL: act=member_feedback&op=feedback_add
         "msg": "SUCCESS",
         "data": 1
     }
-                        
+
+### Android版本检查
+
+URL: act=index&op=apk_version 
+
+参数：
+
+>version 客户端当前版本号  
+
+返回：
+
+    {
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": {
+            "version": "1.2.2" // 服务端最新版本号
+            "url": // 安装包下载地址
+            "if_update": true // 是否需要更新
+            "info": // 更新内容
+        }
+    }
+                          

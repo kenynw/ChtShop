@@ -1,6 +1,6 @@
 <?php
 /**
- * cms首页
+ * 首页
  *
  *
  *
@@ -63,13 +63,20 @@ class indexControl extends mobileHomeControl{
     public function apk_versionOp() {
 		$version = C('mobile_apk_version');
 		$url = C('mobile_apk');
+        $info = C('mobile_version_info');
         if(empty($version)) {
            $version = '';
         }
         if(empty($url)) {
             $url = '';
         }
+        if (empty($info)) {
+            $info = '';
+        }
 
-        output_data(array('version' => $version, 'url' => $url));
+        $data = array('version' => $version, 'url' => $url, 'info' => $info);
+        $data['if_update'] = $version !== $_GET['version'];
+
+        output_json(1, $data);
     }
 }

@@ -2929,5 +2929,27 @@ contact 联系方式</p></blockquote>
     "data": 1
 }
 </code></pre>
+
+<h3>Android版本检查</h3>
+
+<p>URL: act=index&amp;op=apk_version</p>
+
+<p>参数：</p>
+
+<blockquote><p>version 客户端当前版本号</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "SUCCESS",
+    "data": {
+        "version": "1.2.2" // 服务端最新版本号
+        "url": // 安装包下载地址
+        "if_update": true // 是否需要更新
+        "info": // 更新内容
+    }
+}
+</code></pre>
 </body>
 </html>

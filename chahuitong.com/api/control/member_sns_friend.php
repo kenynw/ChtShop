@@ -232,6 +232,7 @@ class member_sns_friendControl extends mobileMemberControl {
         }
 
         $condition = array();
+        $condition['no_friend_tomid'] = $this->member_info['member_id'];
         if ($type == 0) $condition['friend_frommid'] = $mid;
         else $condition['friend_tomid'] = $mid;
         $field = 'friend_id,friend_frommid,friend_tomid,member_id,member_name,member_avatar,member_sex';
