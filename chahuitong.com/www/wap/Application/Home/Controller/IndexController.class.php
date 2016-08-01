@@ -815,17 +815,6 @@ class IndexController extends Controller
         } else {
             $brandgoods = $goods->where("brand_id='$bid' and goods_state='1'")->select();
         }
-        /*yancang447*/
-        if ($bid == 447) {
-            $goodss = array();
-            foreach ($brandgoods as $value) {
-                $value['goods_price'] = '';
-                $value['goods_promotion_price'] = '';
-                $goodss[] = $value;
-            }
-            $brandgoods = $goodss;
-        }
-        /*end*/
         $this->assign('bid', $bid);
         $this->assign('brandImage', $brandImage);
         $this->assign("brandgoods", $brandgoods);
