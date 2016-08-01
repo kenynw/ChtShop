@@ -1975,7 +1975,7 @@ URL(Get): act=member_sns_friend&op=del_follow
         "msg": "SUCCESS"
     }
     
-### 关注好友列表
+### 用户关注列表
 
 URL: act=member_sns_friend&op=follow_list
 
@@ -1983,6 +1983,7 @@ URL: act=member_sns_friend&op=follow_list
 
 >key 当前登录令牌     
 >mid 指定某个用户     
+>type 0-关注列表 1-粉丝列表     
 
 返回：
 
@@ -1991,15 +1992,13 @@ URL: act=member_sns_friend&op=follow_list
             "data": {
                 "list": [
                     {
-                        "friend_id": "9",
-                        "friend_frommid": "167",
-                        "friend_frommname": "15375870891",
-                        "friend_frommavatar": "",
+                        "friend_id": "142",
+                        "friend_frommid": "3",
                         "friend_tomid": "164",
-                        "friend_tomname": "内测帐号",
-                        "friend_tomavatar": "164_60.jpg",
-                        "friend_addtime": "1464180914",
-                        "friend_followstate": "1"
+                        "member_id": "3",
+                        "member_name": "嗨~茶",
+                        "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                        "member_sex": "2"
                     }
                 ],
                 "hasmore": false,
@@ -2008,39 +2007,6 @@ URL: act=member_sns_friend&op=follow_list
             "msg": "SUCCESS"
         }
        
-### 粉丝列表
-
-URL: act=member_sns_friend&op=follower_list
-
-参数：
-
->key 当前登录令牌     
->mid 指定某个用户     
-
-返回：
-
-    {
-        "code": 1,
-        "data": {
-            "list": [
-                {
-                    "friend_id": "9",
-                    "friend_frommid": "167",
-                    "friend_frommname": "15375870891",
-                    "friend_frommavatar": "",
-                    "friend_tomid": "164",
-                    "friend_tomname": "内测帐号",
-                    "friend_tomavatar": "164_60.jpg",
-                    "friend_addtime": "1464180914",
-                    "friend_followstate": "1"
-                }
-            ],
-            "hasmore": false,
-            "page_total": 1
-        },
-        "msg": "SUCCESS"
-    }
-
 ### 消息列表
 
 URL: act=member_message&op=message_list

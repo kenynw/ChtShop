@@ -79,15 +79,25 @@ class member_sns_friendControl extends mobileMemberControl {
             }
         }
 
-        $field = 'friend_frommid,friend_tomid,friend_tomname,friend_tomavatar,friend_followstate';
-        $condition = 'friend_tomid != ' . $this->member_info['member_id'];
-        $friend_list = $model_friend->friendListGroupByToMid($condition, $field, $this->page);
+//        $field = 'friend_frommid,friend_tomid,friend_tomname,friend_tomavatar,friend_followstate';
+//        $condition = 'friend_tomid != ' . $this->member_info['member_id'];
+//        $friend_list = $model_friend->friendListGroupByToMid($condition, $field, $this->page);
+
+        $field = 'friend_id,friend_frommid,friend_tomid,friend_followstate,member_id,member_name,member_avatar,member_sex,member_commend_flag';
+        $condition = array();
+        $condition['group'] = 'friend_tomid';
+        $condition['no_friend_tomid'] = $this->member_info['member_id'];
+        $condition['member_commend'] = 1;
+        $page = new Page();
+        $page->setStyle('admin');
+        $page->setEachNum($this->page);
+        $friend_list = $model_friend->listFriend($condition, $field, $page, 'detail');
 
         $member_list = array();
         if (!empty($friend_list)) {
             $follow_id_arr = array_keys($follow_list_new);
 
-            $model_trace_images = Model('sns_trace_images');
+            $model_trace = Model('sns_tracelog');
             foreach ($friend_list as $key=>$value) {
                 if(in_array($value['friend_tomid'],$follow_id_arr)){
                     $member_list[$key]['follow_state'] = $follow_list_new[$value['friend_tomid']]['friend_followstate'];
@@ -95,20 +105,24 @@ class member_sns_friendControl extends mobileMemberControl {
                     $member_list[$key]['follow_state'] = 0;
                 }
 
-                $member_list[$key]['member_id'] = $value['friend_tomid'];
-                $member_list[$key]['member_name'] = $value['friend_tomname'];
-                $member_list[$key]['member_avatar'] = getMemberAvatar($value['friend_tomavatar']);
+                $member_list[$key]['friend_id'] = $value['friend_id'];
+                $member_list[$key]['member_id'] = $value['member_id'];
+                $member_list[$key]['member_name'] = $value['member_name'];
+                $member_list[$key]['member_avatar'] = getMemberAvatar($value['member_avatar']);
 
                 $condition = array();
-                $condition['member_id'] = $value['friend_tomid'];
-                $trace_image_list = $model_trace_images->field('trace_id,trace_image')->where($condition)->limit(3)->select();
+                $condition['trace_memberid'] = $value['member_id'];
+                $page = new Page();
+                $page->setStyle('admin');
+                $page->setEachNum(3);
+                $trace_list = $model_trace->getTracelogList($condition, $page, 'trace_id, trace_image,trace_memberid');
 
-                if (!empty($trace_image_list)) {
-                    foreach ($trace_image_list as $k=>$image) {
-                        $trace_image_list[$k]['trace_image'] = snsThumb($image['trace_image']);
+                if (!empty($trace_list)) {
+                    foreach ($trace_list as $k=>$image) {
+                        $trace_list[$k]['trace_image'] = snsThumb($image['trace_image']);
                     }
 
-                    $member_list[$key]['trace_list'] = $trace_image_list;
+                    $member_list[$key]['trace_list'] = $trace_list;
                 }
             }
         }
@@ -192,42 +206,32 @@ class member_sns_friendControl extends mobileMemberControl {
     }
 
     /**
-     * 我关注的用户列表
+     * 关注我的用户列表
      */
     public function follow_listOp() {
         $mid = intval(empty($_POST['mid']) ? $_GET['mid'] : $_POST['mid']);
+        $type = intval(empty($_POST['type']) ? $_GET['type'] : $_POST['type']);
         if ($mid <= 0) $mid = $this->member_info['member_id'];
 
         $model_follow = Model('sns_friend');
         $condition = array();
-        $condition['friend_frommid'] = $mid;
+        if ($type == 0) $condition['friend_frommid'] = $mid;
+        else $condition['friend_tomid'] = $mid;
 
-        $follow_list = $model_follow->getFriendList($condition, '*', $this->page);
+        $field = 'friend_id,friend_frommid,friend_tomid,member_id,member_name,member_avatar,member_sex';
 
-        $page_count = $model_follow->gettotalpage();
-
-        output_json(1, array('list' => $follow_list), 'SUCCESS', mobile_page($page_count));
-    }
-
-    /**
-     * 关注我的用户列表
-     */
-    public function follower_listOp() {
-        $mid = intval(empty($_POST['mid']) ? $_GET['mid'] : $_POST['mid']);
-        if ($mid <= 0) $mid = $this->member_info['member_id'];
-
-        $model_follow = Model('sns_friend');
-        $condition = array();
-        $condition['friend_tomid'] = $mid;
-        
         $page = new Page();
-        $page->setEachNum($this->page);
         $page->setStyle('admin');
-        $follow_list = $model_follow->listFriend($condition, '*', $page);
+        $page->setEachNum($this->page);
+        $follow_list = $model_follow->listFriend($condition, $field, $page, $type == 1 ? 'fromdetail' : 'detail');
 
-        $page_count = $model_follow->gettotalpage();
+        if (!empty($follow_list)) {
+            foreach ($follow_list as $key=>$value) {
+                $follow_list[$key]['member_avatar'] = getMemberAvatar($value['member_avatar']);
+            }
+        }
 
-        output_json(1, array('list' => $follow_list), 'SUCCESS', mobile_page($page_count));
+        output_json(1, array('list' => $follow_list), 'SUCCESS', mobile_page($page->getTotalPage()));
     }
 
     private function _check_relation($mid) {

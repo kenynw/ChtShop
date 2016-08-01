@@ -158,10 +158,17 @@ class sns_friendModel extends Model {
 		if($conditon_array['friend_tomid'] != '') {
 			$condition_sql	.= " and sns_friend.friend_tomid = '{$conditon_array['friend_tomid']}'";
 		}
+        if($conditon_array['no_friend_tomid'] != '') {
+            $condition_sql	.= " and sns_friend.friend_tomid != '{$conditon_array['no_friend_tomid']}'";
+        }
 		//关注状态
 		if($conditon_array['friend_followstate'] != '') {
 			$condition_sql	.= " and sns_friend.friend_followstate = '{$conditon_array['friend_followstate']}'";
 		}
+        //是否为推荐用户
+        if($conditon_array['member_commend'] != '') {
+            $condition_sql	.= " and member.member_commend_flag = '{$conditon_array['member_commend']}'";
+        }
 		return $condition_sql;
 	}
 }
