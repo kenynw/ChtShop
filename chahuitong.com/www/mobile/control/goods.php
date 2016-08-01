@@ -274,17 +274,6 @@ class goodsControl extends mobileHomeControl{
         $goods_detail['goods_info']['goods_url'] = urlShop('goods', 'index', array('goods_id' => $goods_detail['goods_info']['goods_id']));
 
         //整理数据
-		/*yancang447*/
-		 $goods_id = intval($_GET ['goods_id']);
-		 $array=array(101344,101345,101355,101356,101456);
-		 if(in_array($goods_id,$array)){
-			 //print_r($goods_detail);
-			 $goods_detail['goods_info']['goods_price']='';
-			 $goods_detail['goods_info']['goods_promotion_price']='';
-			 $goods_detail['goods_info']['goods_marketprice']='';
-			 $goods_detail['goods_info']['promotion_price']='';
-			 }		 
-		 /*yacang447*/
         unset($goods_detail['goods_info']['goods_commonid']);
         unset($goods_detail['goods_info']['gc_id']);
         unset($goods_detail['goods_info']['gc_name']);
