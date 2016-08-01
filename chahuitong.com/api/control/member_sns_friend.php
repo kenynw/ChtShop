@@ -214,19 +214,38 @@ class member_sns_friendControl extends mobileMemberControl {
         if ($mid <= 0) $mid = $this->member_info['member_id'];
 
         $model_follow = Model('sns_friend');
-        $condition = array();
-        if ($type == 0) $condition['friend_frommid'] = $mid;
-        else $condition['friend_tomid'] = $mid;
-
-        $field = 'friend_id,friend_frommid,friend_tomid,member_id,member_name,member_avatar,member_sex';
 
         $page = new Page();
         $page->setStyle('admin');
         $page->setEachNum($this->page);
+
+        //查询关注会员id
+        $condition = array();
+        $condition['friend_frommid'] = $this->member_info['member_id'];
+        $field_follow = 'friend_tomid,friend_followstate';
+        $my_follow_list = $model_follow->listFriend($condition, $field_follow, $page);
+        $follow_list_new = array();
+        if(!empty($my_follow_list)){
+            foreach($my_follow_list as $k=>$v){
+                $follow_list_new[$v['friend_tomid']] = $v;
+            }
+        }
+
+        $condition = array();
+        if ($type == 0) $condition['friend_frommid'] = $mid;
+        else $condition['friend_tomid'] = $mid;
+        $field = 'friend_id,friend_frommid,friend_tomid,member_id,member_name,member_avatar,member_sex';
         $follow_list = $model_follow->listFriend($condition, $field, $page, $type == 1 ? 'fromdetail' : 'detail');
 
         if (!empty($follow_list)) {
+            $follow_id_arr = array_keys($follow_list_new);
             foreach ($follow_list as $key=>$value) {
+                if(in_array($value['friend_tomid'],$follow_id_arr)){
+                    $follow_list[$key]['follow_state'] = $follow_list_new[$value['friend_tomid']]['friend_followstate'];
+                } else {
+                    $follow_list[$key]['follow_state'] = 0;
+                }
+
                 $follow_list[$key]['member_avatar'] = getMemberAvatar($value['member_avatar']);
             }
         }

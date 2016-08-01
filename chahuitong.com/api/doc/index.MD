@@ -1999,6 +1999,7 @@ URL: act=member_sns_friend&op=follow_list
                         "member_name": "嗨~茶",
                         "member_avatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
                         "member_sex": "2"
+                        "follow_state": 0-未关注 1-已关注 2-相互关注
                     }
                 ],
                 "hasmore": false,
