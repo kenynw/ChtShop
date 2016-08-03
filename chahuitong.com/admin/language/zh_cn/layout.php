@@ -122,7 +122,9 @@ $lang['nc_promotion_bundling']		= '优惠套装';
 $lang['nc_promotion_booth']         = '推荐展位';
 $lang['nc_mobile_adset'] 			= '广告设置';
 $lang['nc_mobile_homeset'] 			= '首页设置';
+$lang['nc_mobile_specialset'] 		= '专题设置';
 $lang['nc_mobile_catepic'] 			= '分类图片设置';
+$lang['nc_mobile_download'] 		= '下载设置';
 $lang['nc_mobile_feedback'] 		= '意见反馈';
 $lang['nc_mobile_update_cache'] 	= '更新缓存';
 

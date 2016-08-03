@@ -209,22 +209,23 @@ if(C('mobile_isuse')){
 				'nav' => 'mobile',
 				'text' => $lang['nc_mobile'],
 				'list' => array(
-					array('args'=>'index_edit,mb_special,mobile',				'text'=>'首页编辑'),
-					array('args'=>'special_list,mb_special,mobile',				'text'=>'专题设置'),
-					array('args'=>'mb_category_list,mb_category,mobile',	'text'=>$lang['nc_mobile_catepic']),
-					array('args'=>'mb_app,mb_app,mobile',				'text'=>'下载设置'),
-                    array('args'=>'flist,mb_feedback,mobile',					'text'=>$lang['nc_mobile_feedback']),
-					array('args'=>'mb_payment,mb_payment,mobile',				'text'=>'手机支付'),
+                    array('args'=>'mb_ad_list,mb_ad,mobile',				'text'=>$lang['nc_mobile_adset']), // 广告设置
+					array('args'=>'index_edit,mb_special,mobile',			'text'=>'nc_mobile_homeset'), // 首页设置
+					array('args'=>'special_list,mb_special,mobile',			'text'=>'nc_mobile_specialset'), // 专题设置
+					array('args'=>'mb_category_list,mb_category,mobile',	'text'=>$lang['nc_mobile_catepic']), // 分类图片设置
+					array('args'=>'mb_app,mb_app,mobile',				    'text'=>'nc_mobile_download'), // 下载设置
+                    array('args'=>'flist,mb_feedback,mobile',				'text'=>$lang['nc_mobile_feedback']),
+					array('args'=>'mb_payment,mb_payment,mobile',			'text'=>'手机支付'),
                     array('args'=>'mb_chashi,mb_chashi,mobile',				'text'=>'茶市信息'),
                     array('args'=>'mb_shequ,mb_shequ,mobile',				'text'=>'微博管理'),
                     array('args'=>'mb_leader,mb_shequ,mobile',				'text'=>'领袖管理'),
-                    array('args'=>'mb_lastnews,mb_shequ,mobile',				'text'=>'今日新声'),
+                    array('args'=>'mb_lastnews,mb_shequ,mobile',			'text'=>'今日新声'),
                     array('args'=>'mb_active,mb_shequ,mobile',				'text'=>'活动管理'),
                     array('args'=>'home_pic,mb_chashi,mobile',				'text'=>'轮播图管理'),
-					array('args'=>'mb_quotation_index,mb_chashi,mobile',				'text'=>'茶市行情'),
-                    array('args'=>'sample_list,mb_sample_manage,mobile',				'text'=>'免费茶样'),
-                    array('args'=>'search_key,mb_search_lable,mobile',				'text'=>'搜索标签'),
-                    array('args'=>'activity_list,mb_vote_activity,mobile',				'text'=>'投票活动'),
+					array('args'=>'mb_quotation_index,mb_chashi,mobile',	'text'=>'茶市行情'),
+                    array('args'=>'sample_list,mb_sample_manage,mobile',	'text'=>'免费茶样'),
+                    array('args'=>'search_key,mb_search_lable,mobile',		'text'=>'搜索标签'),
+                    array('args'=>'activity_list,mb_vote_activity,mobile',	'text'=>'投票活动'),
                     array('args'=>'recommend_list,mb_tasters_recommend,mobile',				'text'=>'试茶师推荐'),
 				)
 			);
