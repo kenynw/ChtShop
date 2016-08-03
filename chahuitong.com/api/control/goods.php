@@ -60,11 +60,7 @@ class goodsControl extends mobileHomeControl{
         //处理商品列表(抢购、限时折扣、商品图片、产地)
         $goods_list = $this->_goods_list_extend($goods_list);
 
-        if(isset($_GET['version']) && $_GET['version'] == VERSION_3_0) {
-            output_json(1, array('list' =>$goods_list), 'SUCCESS', mobile_page($page_count));
-        } else {
-            output_data(array('goods_list' => $goods_list), mobile_page($page_count));
-        }
+        output_json(1, array('list' =>$goods_list), 'SUCCESS', mobile_page($page_count));
     }
 
     /**
