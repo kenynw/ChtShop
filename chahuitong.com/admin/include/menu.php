@@ -210,10 +210,10 @@ if(C('mobile_isuse')){
 				'text' => $lang['nc_mobile'],
 				'list' => array(
                     array('args'=>'mb_ad_list,mb_ad,mobile',				'text'=>$lang['nc_mobile_adset']), // 广告设置
-					array('args'=>'index_edit,mb_special,mobile',			'text'=>'nc_mobile_homeset'), // 首页设置
-					array('args'=>'special_list,mb_special,mobile',			'text'=>'nc_mobile_specialset'), // 专题设置
+					array('args'=>'index_edit,mb_special,mobile',			'text'=>$lang['nc_mobile_homeset']), // 首页设置
+					array('args'=>'special_list,mb_special,mobile',			'text'=>$lang['nc_mobile_specialset']), // 专题设置
 					array('args'=>'mb_category_list,mb_category,mobile',	'text'=>$lang['nc_mobile_catepic']), // 分类图片设置
-					array('args'=>'mb_app,mb_app,mobile',				    'text'=>'nc_mobile_download'), // 下载设置
+					array('args'=>'mb_app,mb_app,mobile',				    'text'=>$lang['nc_mobile_download']), // 下载设置
                     array('args'=>'flist,mb_feedback,mobile',				'text'=>$lang['nc_mobile_feedback']),
 					array('args'=>'mb_payment,mb_payment,mobile',			'text'=>'手机支付'),
                     array('args'=>'mb_chashi,mb_chashi,mobile',				'text'=>'茶市信息'),
