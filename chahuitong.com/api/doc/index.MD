@@ -2091,6 +2091,13 @@ URL(Post): act=discover
         "code": 1,
         "msg": "SUCCESS",
         "data": {
+            "ad_list": [
+                {
+                    "link_pic": "adbbb2e550645d098d3e4ab92226de2a.jpg",
+                    "link_keyword": "百货",
+                    "link_pic_url": "http://img.chahuitong.com/mobile/ad/adbbb2e550645d098d3e4ab92226de2a.jpg"
+                }
+            ],
             "trace_list": [
                 {
                     "trace_id": "33",

@@ -17,11 +17,16 @@ class discoverControl extends mobileHomeControl {
 
     public function indexOp() {
         $data = array(
+            'ad_list' => array(),
             'trace_list' => array(),
             'flea_list' => array(),
             'class_list' => array(),
             'member_list' => array(),
         );
+
+        // 获取广告
+        $model_ad = Model('mb_ad');
+        $data['ad_list'] = $model_ad->getMbAdList(array(), null, '', 'link_pic,link_keyword');
 
         // 获取精选动态
         $model_trace = Model('sns_tracelog');

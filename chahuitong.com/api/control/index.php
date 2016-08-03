@@ -42,7 +42,7 @@ class indexControl extends mobileHomeControl{
      */
     private function _output_special($data, $type = 'json', $special_id = 0) {
         $model_special = Model('mb_special');
-        if($_GET['type'] == 'html') {
+        if($type == 'html') {
             $html_path = $model_special->getMbSpecialHtmlPath($special_id);
             if(!is_file($html_path)) {
                 ob_start();

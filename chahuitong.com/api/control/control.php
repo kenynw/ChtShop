@@ -70,19 +70,9 @@ class mobileMemberControl extends mobileControl{
         parent::__construct();
 
         $model_mb_user_token = Model('mb_user_token');
-        $key = $_POST['key'];
-        if(empty($key)) {
-            $key = $_GET['key'];
-        }
+        $key = empty($_POST['key']) ? $_GET['key'] : $_POST['key'];
         $mb_user_token_info = $model_mb_user_token->getMbUserTokenInfoByToken($key);
-        if(empty($mb_user_token_info)){
-            /*用于输出新的数据格式*/
-            if(isset($_POST['version'])){
-                output_json(0,'','请登陆');
-                die();
-            }
-            output_error('请登录', array('login' => '0'));
-        }
+        if(empty($mb_user_token_info)) output_json(-1, '','请登录');
 
         $model_member = Model('member');
         $this->member_info = $model_member->getMemberInfoByID($mb_user_token_info['member_id']);

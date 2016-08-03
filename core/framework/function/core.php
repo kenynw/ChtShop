@@ -958,7 +958,7 @@ function getCMSArticleUrl($article_id) {
  * 获取手机端文章URL
  */
 function getMbCMSArticleUrl($article_id) {
-	return MOBILE_SITE_URL.DS.'index.php?act=article&op=article_detail='.$article_id;
+	return MOBILE_SITE_URL.DS.'index.php?act=article&op=article_detail&article_id='.$article_id;
 }
 
 /**
