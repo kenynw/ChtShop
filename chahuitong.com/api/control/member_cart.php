@@ -204,8 +204,8 @@ class member_cartControl extends mobileMemberControl {
      * 更新购物车购买数量
      */
     public function cart_edit_quantityOp() {
-		$cart_id = intval(abs($_POST['cart_id']));
-		$quantity = intval(abs($_POST['quantity']));
+		$cart_id = intval(abs($_GET['cart_id']));
+		$quantity = intval(abs($_GET['quantity']));
 		if(empty($cart_id) || empty($quantity)) {
             output_error('参数错误');
 		}
@@ -226,15 +226,14 @@ class member_cartControl extends mobileMemberControl {
 
 		$data = array();
         $data['goods_num'] = $quantity;
-        $update = $model_cart->editCart($data, array('cart_id'=>$cart_id));
+        $update = $model_cart->editCart($data, array('cart_id'=>$cart_id, 'buyer_id' => $this->member_info['member_id']));
 		if ($update) {
 		    $return = array();
             $return['quantity'] = $quantity;
 			$return['goods_price'] = ncPriceFormat($cart_info['goods_price']);
 			$return['total_price'] = ncPriceFormat($cart_info['goods_price'] * $quantity);
-            $model_cart->getCartNum('db');
             $return['sum'] = $model_cart->cart_all_price;
-                output_data($return);
+            output_data($return);
 		} else {
             output_error('修改失败');
 		}
