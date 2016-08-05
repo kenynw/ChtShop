@@ -232,8 +232,9 @@ class member_cartControl extends mobileMemberControl {
             $return['quantity'] = $quantity;
 			$return['goods_price'] = ncPriceFormat($cart_info['goods_price']);
 			$return['total_price'] = ncPriceFormat($cart_info['goods_price'] * $quantity);
-            $return['sum'] = $model_cart->getCartNum('db');
-            output_data($return);
+            $model_cart->getCartNum('db');
+            $return['sum'] = $model_cart->cart_all_price;
+                output_data($return);
 		} else {
             output_error('修改失败');
 		}
