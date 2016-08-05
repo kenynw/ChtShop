@@ -199,15 +199,6 @@ class member_cartControl extends mobileMemberControl {
         output_data('1');
        
     }
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
     /**
      * 更新购物车购买数量
@@ -241,6 +232,7 @@ class member_cartControl extends mobileMemberControl {
             $return['quantity'] = $quantity;
 			$return['goods_price'] = ncPriceFormat($cart_info['goods_price']);
 			$return['total_price'] = ncPriceFormat($cart_info['goods_price'] * $quantity);
+            $return['sum'] = $model_cart->getCartNum('db');
             output_data($return);
 		} else {
             output_error('修改失败');
