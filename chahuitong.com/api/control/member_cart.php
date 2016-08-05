@@ -204,8 +204,8 @@ class member_cartControl extends mobileMemberControl {
      * 更新购物车购买数量
      */
     public function cart_edit_quantityOp() {
-		$cart_id = intval(abs($_GET['cart_id']));
-		$quantity = intval(abs($_GET['quantity']));
+		$cart_id = intval(abs($_POST['cart_id']));
+		$quantity = intval(abs($_POST['quantity']));
 		if(empty($cart_id) || empty($quantity)) {
             output_error('参数错误');
 		}
