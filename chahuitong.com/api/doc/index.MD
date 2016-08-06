@@ -1101,8 +1101,9 @@ URL: act=member_cart&op=cart_del
 返回： 
 
     {
-      code: 200,
-      datas: "1"
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": "1"
     }
 
 ### 购物车修改数量
