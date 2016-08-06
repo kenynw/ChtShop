@@ -160,7 +160,7 @@ class member_cartControl extends mobileMemberControl
      * 购物车删除
      */
     public function cart_delOp() {
-        $cart_id = trim($_GET['cart_id'], ',');
+        $cart_id = trim($_POST['cart_id'], ',');
         $cart_arr = explode(',', $cart_id);
         if (!empty($cart_id) && is_array($cart_arr)) {
             $model_cart = Model('cart');
