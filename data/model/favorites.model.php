@@ -125,7 +125,7 @@ class favoritesModel extends Model{
 		$result = self::getOneFavorites($condition);
 		if ($result['member_id'] == $member_id){
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 	}

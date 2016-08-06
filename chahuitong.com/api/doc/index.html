@@ -1338,12 +1338,30 @@ quantity 新的购买数量</p></blockquote>
 <p>返回：</p>
 
 <pre><code>{
-  code: 200,
-  datas: {
+  code: 1,
+  data: {
     quantity 购买数量
     goods_price 商品价格
     total_price 商品总价
   }
+}
+</code></pre>
+
+<h3>移动到收藏夹</h3>
+
+<p>URL: act=member_cart&amp;op=move_favorites</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 登录令牌  <br/>
+cart_id 购物车编号 如果是多个用逗号隔开</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+  code: 1,
+  datas: true,
+  msg: 'SUCCESS'
 }
 </code></pre>
 

@@ -1116,12 +1116,28 @@ URL: act=member_cart&op=cart_edit_quantity
 返回： 
 
     {
-      code: 200,
-      datas: {
+      code: 1,
+      data: {
         quantity 购买数量
         goods_price 商品价格
         total_price 商品总价
       }
+    }
+
+### 移动到收藏夹
+URL: act=member_cart&op=move_favorites  
+
+参数：
+
+>key 登录令牌    
+>cart_id 购物车编号 如果是多个用逗号隔开     
+
+返回： 
+
+    {
+      code: 1,
+      datas: true,
+      msg: 'SUCCESS'
     }
 
 ### 收藏列表

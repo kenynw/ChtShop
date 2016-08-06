@@ -240,6 +240,43 @@ class member_cartControl extends mobileMemberControl {
     }
 
     /**
+     * 移动到收藏夹
+     */
+    public function move_favoritesOp() {
+        $cart_id = trim($_POST['cart_id'], ',');
+        $cart_arr = explode(',', $cart_id);
+        if (!empty($cart_id) && is_array($cart_arr)) {
+            $model_cart = Model('cart');
+            $condition = array();
+            $condition['buyer_id'] = $this->member_info['member_id'];
+            $condition['cart_id'] = array('in', $cart_arr);
+            $cart_list = $model_cart->listCart('db', $condition);
+            if (empty($cart_list)) output_json(0, false, '获取数据出错');
+
+            $result = $model_cart->delCart('db', $condition);
+            if ($result) {
+                $model_fav = Model('favorites');
+
+                $condition = array();
+                $condition['member_id'] = $this->member_info['member_id'];
+                $condition['fav_type'] = 'goods';
+                $condition['fav_time'] = TIMESTAMP;
+                foreach ($cart_list as $key=>$value) {
+                    if (!$model_fav->checkFavorites($value['goods_id'],'goods',$this->member_info['member_id'])) {
+                        $condition['fav_id'] = $value['goods_id'];
+                        $model_fav->addFavorites($condition);
+                    }
+                }
+                output_json(1, true);
+
+            } else output_json(0, false);
+        } else {
+            output_json(0, false, '参数错误');
+        }
+
+    }
+
+    /**
      * 检查库存是否充足
      */
     private function _check_goods_storage($cart_info, $quantity, $member_id) {
