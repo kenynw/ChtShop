@@ -122,9 +122,9 @@ class member_fleaControl extends mobileMemberControl
         if (is_array($desc_image)){
             foreach ($desc_image as $k=>$v) {
                 $desc_image[$k]['file_path'] 	= fleaThumb($v['file_name']);
-                $desc_image[$k]['thumb_small'] 	= fleaThumb($v['file_thumb']);
-                $desc_image[$k]['thumb_mid'] 	= fleaThumb($v['file_thumb'], '640');
-                $desc_image[$k]['thumb_max'] 	= fleaThumb($v['file_thumb'], '1280');
+                $desc_image[$k]['thumb_small'] 	= fleaThumb($v['file_name']);
+                $desc_image[$k]['thumb_mid'] 	= fleaThumb($v['file_name'], '640');
+                $desc_image[$k]['thumb_max'] 	= fleaThumb($v['file_name'], '1280');
             }
         }
 
