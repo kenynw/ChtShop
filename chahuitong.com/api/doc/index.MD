@@ -2602,16 +2602,23 @@ URL: act=member_flea&op=favorites
     {
         "code": 1,
         "msg": "SUCCESS",
-        "data": [
-            {
-                "goods_id": "5",
-                "goods_name": "普洱茶 08年鹏程茶厂特级布朗山熟茶",
-                "goods_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
-                "gc_name": "",
-                "member_id": "1354",
-                "fav_time": "2016.07.21 16:48"
-            }
-        ]
+        "data": {
+            "list": [
+                {
+                    "member_id": "164",
+                    "fav_id": "54",
+                    "fav_type": "flea",
+                    "fav_time": "2016.07.26 18:26",
+                    "goods_id": "54",
+                    "goods_name": "祁门红茶 祁红香螺",
+                    "goods_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+                    "goods_store_price": "320.00",
+                    "goods_abstract": "祁红香螺高山茶，手工制作！[强][强][强]制作工艺：萎凋-揉捻-发酵-铁锅手工成形"
+                }
+            ],
+            "hasmore": false,
+            "page_total": 1
+        }
     }
  
 ### 茶市添加收藏

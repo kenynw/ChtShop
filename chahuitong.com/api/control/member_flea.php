@@ -57,8 +57,7 @@ class member_fleaControl extends mobileMemberControl
         $condition['body_input'] = 2;
         $condition['order'] = 'goods_tag desc, goods_click desc, goods_id desc';
 
-        $field
-            = 'goods_id, goods_name, member_id, goods_image, goods_tag, goods_store_price, goods_show, goods_click, goods_commend, goods_add_time, goods_body, flea_pname, flea_pphone';
+        $field = 'goods_id, goods_name, member_id, goods_image, goods_tag, goods_store_price, goods_show, goods_click, goods_commend, goods_add_time, goods_body, flea_pname, flea_pphone';
 
         $page = new Page();
         $page->setEachNum($this->page);
@@ -410,11 +409,8 @@ class member_fleaControl extends mobileMemberControl
         $goods_array['goods_show'] = '1';
         $goods_array['goods_commend'] = 0;
         $goods_array['goods_body'] = $_POST['g_body'];
-        $goods_array['goods_keywords'] = empty($_POST['seo_keywords'])
-            ? $_POST['goods_tag'] : $_POST['seo_keywords'];
-        $goods_array['goods_description'] = empty($_POST['seo_description'])
-            ? $_POST['goods_name'] . ',' . str_cut($_POST['g_body'], 120)
-            : $_POST['seo_description'];
+        $goods_array['goods_keywords'] = empty($_POST['seo_keywords']) ? $_POST['goods_tag'] : $_POST['seo_keywords'];
+        $goods_array['goods_description'] = empty($_POST['seo_description']) ? $_POST['goods_name'] . ',' . str_cut($_POST['g_body'], 120) : $_POST['seo_description'];
         $state = $model_store_goods->updateGoods($goods_array, $goods_id);
         if ($state) {
             /**
@@ -523,52 +519,23 @@ class member_fleaControl extends mobileMemberControl
      * 收藏列表
      */
     public function favoritesOp() {
-        $favorites_class = Model('flea_favorites');
+        $model_favorites = Model('flea_favorites');
 
         $condition = array();
-        $condition['member_id'] = $this->member_info['member_id'];
         $condition['fav_type'] = 'flea';
+        $condition['member_id'] = $this->member_info['member_id'];
+        $condition['field'] = 'flea_favorites.member_id, fav_id, fav_type, fav_time, goods_id, goods_name, goods_image, goods_store_price, goods_body';
 
         $page = new Page();
-        $page->setEachNum($this->page);
         $page->setStyle('admin');
+        $page->setEachNum($this->page);
+        $favorites_list = $model_favorites->getFavoritesList($condition, $page, 'detail');
 
-        $type_list = array();
-        $favorites_list = $favorites_class->getFavoritesList($condition, $page);
         if (!empty($favorites_list) && is_array($favorites_list)) {
-            $favorites_id = array();//收藏的商品（店铺）编号
-            $favorites_key = array();//商品（店铺）编号与键值的对应数组，方便下一步组合显示
-            foreach ($favorites_list as $key => $favorites) {
-                $fav_id = $favorites['fav_id'];
-                $favorites_id[] = $fav_id;
-                $favorites_key[$fav_id] = $key;
-                $favorites_list[$key]['fav_time'] = date(
-                    'Y.m.d H:i', $favorites['fav_time']
-                );
-                unset($favorites_list[$key]['member_id']);
-            }
-
-            $type_class = Model('flea');
-            $type_list = $type_class->listGoods(
-                array(
-                    'goods_id_in' => "'" . implode("','", $favorites_id) . "'"
-                ), '',
-                'goods_id,goods_name,goods_image,gc_name,member_id'
-            );
-            if (!empty($type_list) && is_array($type_list)) {
-                foreach ($type_list as $key => $fav) {
-                    $fav_id = $fav['goods_id'];
-                    $fav['goods_image'] = fleaThumb(
-                        $fav['goods_image'], $fav['member_id']
-                    );
-                    $fav['fav_time'] = $favorites_list[$favorites_key[$fav_id]]['fav_time'];
-                    $type_list[$key] = $fav;
-                }
-            }
+            $favorites_list = $this->_get_extend_goods($favorites_list);
         }
 
-        $page_count = $page->getTotalNum();
-        output_json(1, array('list' => $type_list), 'SUCCESS', mobile_page($page_count));
+        output_json(1, array('list' => $favorites_list), 'SUCCESS', mobile_page($page->getTotalPage()));
     }
 
     /**
@@ -659,28 +626,21 @@ class member_fleaControl extends mobileMemberControl
     private function _get_extend_goods($goods_list) {
         if (!empty($goods_list) && is_array($goods_list)) {
             foreach ($goods_list as $key => $val) {
-                $goods_list[$key]['goods_image_url'] = fleaThumb(
-                    $val['goods_image'], $val['member_id']
-                );
+                $goods_list[$key]['goods_image'] = fleaThumb($val['goods_image'], $val['member_id']);
 
-                $abstract = preg_replace(
-                    '/<[^>]*>|\s+/', '', $val['goods_body']
-                );
+                $abstract = preg_replace('/<[^>]*>|\s+/', '', $val['goods_body']);
                 if ($abstract) {
-                    $goods_list[$key]['goods_abstract'] = str_cut(
-                        $abstract, 70
-                    );
+                    $goods_list[$key]['goods_abstract'] = str_cut($abstract, 70);
                 } else {
-                    $goods_list[$key]['goods_abstract'] = Language::get(
-                        'flea_no_explain'
-                    );
+                    $goods_list[$key]['goods_abstract'] = Language::get('flea_no_explain');
                 }
 
-                $goods_list[$key]['goods_add_time'] = $this->_time_comb(
-                    intval($val['goods_add_time'])
-                );
+                if ($val['goods_add_time']) {
+                    $goods_list[$key]['goods_add_time'] = $this->_time_comb(intval($val['goods_add_time']));
+                } else if ($val['fav_time']) {
+                    $goods_list[$key]['fav_time'] = date('Y.m.d H:i', $val['fav_time']);
+                }
 
-                unset($goods_list[$key]['goods_image']);
                 unset($goods_list[$key]['goods_body']);
             }
         }

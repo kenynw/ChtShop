@@ -1,7 +1,7 @@
 <?php
 /**
  * 买家收藏
- *by 3 3hao .com 
+ *by 3 3hao .com
  */
 defined('InShopNC') or exit('Access Invalid!');
 class flea_favoritesModel{
@@ -9,20 +9,31 @@ class flea_favoritesModel{
 	 * 收藏列表
 	 *
 	 * @param array $condition 检索条件
-	 * @param obj $obj_page 分页对象
+	 * @param obj $page 分页对象
 	 * @return array 数组类型的返回结果
 	 */
-	public function getFavoritesList($condition,$page = ''){
+	public function getFavoritesList($condition, $page = '', $type = 'detail'){
 		$condition_str = $this->_condition($condition);
-		$param = array(
-					'table'=>'flea_favorites',
-					'where'=>$condition_str,
-					'order'=>$condition['order'] ? $condition['order'] : 'fav_time desc'
-				);		
-		$result = Db::select($param,$page);
+        $param = array();
+        switch ($type) {
+            case 'simple' :
+                $param['table']     = 'flea_favorites';
+                break;
+            case 'detail' :
+                $param['table']     = 'flea_favorites,flea';
+                $param['join_type']	= 'INNER JOIN';
+                $param['join_on']   = array('flea_favorites.fav_id=flea.goods_id');
+                break;
+        }
+        $param['where'] = $condition_str;
+        $param['field']	= $condition['field'] ? $condition['field'] : '*';
+        $param['order'] = $condition['order'] ? $condition['order'] : 'flea_favorites.fav_time desc';
+        $param['limit'] = $condition['limit'];
+        $param['group'] = $condition['group'];
+		$result         = Db::select($param,$page);
 		return $result;
 	}
-	
+
 	/**
 	 * 构造检索条件
 	 *
@@ -31,17 +42,17 @@ class flea_favoritesModel{
 	 */
 	public function _condition($condition){
 		$condition_str = '';
-		
+
 		if ($condition['member_id'] != ''){
-			$condition_str .= " and member_id = '{$condition['member_id']}'";
+			$condition_str .= " and flea_favorites.member_id = '{$condition['member_id']}'";
 		}
 		if ($condition['fav_type'] != ''){
-			$condition_str .= " and fav_type = '{$condition['fav_type']}'";
+			$condition_str .= " and flea_favorites.fav_type = '{$condition['fav_type']}'";
 		}
-		
+
 		return $condition_str;
 	}
-	
+
 	/**
 	 * 取单个收藏的内容
 	 *
@@ -61,7 +72,7 @@ class flea_favoritesModel{
 			return false;
 		}
 	}
-	
+
 	/**
 	 * 新增收藏
 	 *
@@ -83,7 +94,7 @@ class flea_favoritesModel{
 			return false;
 		}
 	}
-	
+
 	/**
 	 * 验证是否为当前用户收藏
 	 *
@@ -101,7 +112,7 @@ class flea_favoritesModel{
 			return false;
 		}
 	}
-	
+
 	/**
 	 * 删除
 	 *
