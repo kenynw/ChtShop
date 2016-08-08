@@ -32,17 +32,13 @@ class member_fleaControl extends mobileMemberControl
         if (is_array($list_goods) and !empty($list_goods)) {
             foreach ($list_goods as $key => $val) {
                 $list_goods[$key]['goods_image'] = fleaThumb($val['goods_image']);
-                $list_goods[$key]['goods_add_time'] = date(
-                    'Y.m.d H:i', $val['goods_add_time']
-                );
+                $list_goods[$key]['goods_add_time'] = date('Y.m.d H:i', $val['goods_add_time']);
             }
 
         }
 
         $page_count = $page->getTotalPage();
-        output_json(
-            1, array('list' => $list_goods), 'SUCCESS', mobile_page($page_count)
-        );
+        output_json(1, array('list' => $list_goods), 'SUCCESS', mobile_page($page_count));
     }
 
     public function flea_listOp() {
@@ -66,9 +62,7 @@ class member_fleaControl extends mobileMemberControl
         }
 
         $page_count = $page->getTotalPage();
-        output_json(
-            1, array('list' => $goods_list), 'SUCCESS', mobile_page($page_count)
-        );
+        output_json(1, array('list' => $goods_list), 'SUCCESS', mobile_page($page_count));
     }
 
     public function flea_detailOp() {
