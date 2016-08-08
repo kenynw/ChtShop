@@ -127,10 +127,10 @@ class member_fleaControl extends mobileMemberControl
         $desc_image = $model_store_goods->getListImageGoods($condition, $field);
         if (is_array($desc_image)){
             foreach ($desc_image as $k=>$v) {
-                $goods[$k]['file_path'] 	= fleaThumb($v['file_name']);
-                $goods[$k]['thumb_small'] 	= fleaThumb($v['file_thumb']);
-                $goods[$k]['thumb_mid'] 	= fleaThumb($v['file_thumb'], 640);
-                $goods[$k]['thumb_max'] 	= fleaThumb($v['file_thumb'], 1280);
+                $desc_image[$k]['file_path'] 	= fleaThumb($v['file_name']);
+                $desc_image[$k]['thumb_small'] 	= fleaThumb($v['file_thumb']);
+                $desc_image[$k]['thumb_mid'] 	= fleaThumb($v['file_thumb'], 640);
+                $desc_image[$k]['thumb_max'] 	= fleaThumb($v['file_thumb'], 1280);
             }
         }
 
