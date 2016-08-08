@@ -31,9 +31,7 @@ class member_fleaControl extends mobileMemberControl
 
         if (is_array($list_goods) and !empty($list_goods)) {
             foreach ($list_goods as $key => $val) {
-                $list_goods[$key]['goods_image'] = fleaThumb(
-                    $val['goods_image'], $val['member_id']
-                );
+                $list_goods[$key]['goods_image'] = fleaThumb($val['goods_image']);
                 $list_goods[$key]['goods_add_time'] = date(
                     'Y.m.d H:i', $val['goods_add_time']
                 );
@@ -79,17 +77,15 @@ class member_fleaControl extends mobileMemberControl
             $member_info = array();
             $member_info['member_id'] = $this->member_info['member_id'];
             $member_info['member_mobile'] = $this->member_info['member_mobile'];
-            $member_info['member_truename']
-                = $this->member_info['member_truename'];
-            $member_info['member_areainfo']
-                = $this->member_info['member_areainfo'];
+            $member_info['member_truename'] = $this->member_info['member_truename'];
+            $member_info['member_areainfo'] = $this->member_info['member_areainfo'];
             output_json(1, $member_info);
         }
 
         $model_store_goods = Model('flea');
         $condition = array();
         $condition['goods_id'] = $goods_id;
-//        $condition['goods_show'] = 1;
+        $condition['goods_show'] = 1;
         $goods_info = $model_store_goods->getGoodsInfo($condition);
 
         if (empty($goods_info)) {
@@ -97,16 +93,12 @@ class member_fleaControl extends mobileMemberControl
         }
 
         // 用户头像处理
-        $goods_info['member_avatar'] = getMemberAvatarForID(
-            $goods_info['member_id']
-        );
+        $goods_info['member_avatar'] = getMemberAvatarForID($goods_info['member_id']);
         $goods_info['belong_me'] = $goods_info['member_id'] == $this->member_info['member_id'] ? true : false;
 
         // 标签处理
         if ($goods_info['goods_tag']) {
-            $goods_info['goods_tag'] = str_replace(
-                ', ', ' ', $goods_info['goods_tag']
-            );
+            $goods_info['goods_tag'] = str_replace(', ', ' ', $goods_info['goods_tag']);
         }
 
         // 日期处理
@@ -133,9 +125,15 @@ class member_fleaControl extends mobileMemberControl
         $condition['image_type'] = 12;
         $field = 'file_thumb, store_id, upload_type, item_id';
         $desc_image = $model_store_goods->getListImageGoods($condition, $field);
-        $goods_image_path = UPLOAD_SITE_URL . DS . ATTACH_MALBUM . '/'
-            . $goods_info['member_id'] . '/';
-        $model_store_goods->getThumb($desc_image, $goods_image_path);
+        if (is_array($desc_image)){
+            foreach ($desc_image as $k=>$v) {
+                $goods[$k]['file_path'] 	= fleaThumb($v['file_name']);
+                $goods[$k]['thumb_small'] 	= fleaThumb($v['file_thumb']);
+                $goods[$k]['thumb_mid'] 	= fleaThumb($v['file_thumb'], 640);
+                $goods[$k]['thumb_max'] 	= fleaThumb($v['file_thumb'], 1280);
+            }
+        }
+
         if (!empty($desc_image) && is_array($desc_image)) {
             $image_default_key = 0;
             foreach ($desc_image as $key => $val) {
@@ -278,13 +276,13 @@ class member_fleaControl extends mobileMemberControl
         $upload = new UploadFile();
         $upload_dir = ATTACH_MALBUM . DS . $this->member_info['member_id'] . DS;
         $upload->set('default_dir', $upload_dir . $upload->getSysSetPath());
-        $thumb_width = '240,1024';
-        $thumb_height = '2048,1024';
+        $thumb_width = '240,640,1280';
+        $thumb_height = '2048,1048,1280';
         $upload->set('max_size', C('image_max_filesize'));
         $upload->set('thumb_width', $thumb_width);
         $upload->set('thumb_height', $thumb_height);
         $upload->set('fprefix', $this->member_info['member_id']);
-        $upload->set('thumb_ext', '_240,_1024');
+        $upload->set('thumb_ext', '_240,_640,_1280');
 
         $result = $upload->upfile('image');
         if ($result) {
@@ -472,8 +470,7 @@ class member_fleaControl extends mobileMemberControl
             $condition['commentnum']['sign'] = 'increase';
             $goods->updateGoods($condition, $goods_id);
 
-            $field
-                = 'consult_id, goods_id, member_id, consult_content, consult_addtime, consult_reply';
+            $field = 'consult_id, goods_id, member_id, consult_content, consult_addtime, consult_reply';
             $consult = $model_consult->getOneById($result);
             $consult['member_avatar'] = getMemberAvatarForID(
                 $consult['member_id']
@@ -626,22 +623,25 @@ class member_fleaControl extends mobileMemberControl
     private function _get_extend_goods($goods_list) {
         if (!empty($goods_list) && is_array($goods_list)) {
             foreach ($goods_list as $key => $val) {
-                $goods_list[$key]['goods_image'] = fleaThumb($val['goods_image'], $val['member_id']);
+                $val['goods_image'] = fleaThumb($val['goods_image']);
 
                 $abstract = preg_replace('/<[^>]*>|\s+/', '', $val['goods_body']);
                 if ($abstract) {
-                    $goods_list[$key]['goods_abstract'] = str_cut($abstract, 70);
+                    $val['goods_abstract'] = str_cut($abstract, 70);
                 } else {
-                    $goods_list[$key]['goods_abstract'] = Language::get('flea_no_explain');
+                    $val['goods_abstract'] = Language::get('flea_no_explain');
                 }
 
                 if ($val['goods_add_time']) {
-                    $goods_list[$key]['goods_add_time'] = $this->_time_comb(intval($val['goods_add_time']));
+                    $val['goods_add_time'] = $this->_time_comb(intval($val['goods_add_time']));
                 } else if ($val['fav_time']) {
-                    $goods_list[$key]['fav_time'] = date('Y.m.d H:i', $val['fav_time']);
+                    $val['fav_time'] = date('Y.m.d H:i', $val['fav_time']);
                 }
 
-                unset($goods_list[$key]['goods_body']);
+                $val['goods_store_price'] = ncPriceFormat($val['goods_store_price']);
+
+                unset($val['goods_body']);
+                $goods_list[$key] = $val;
             }
         }
 

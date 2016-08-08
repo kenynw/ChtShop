@@ -113,11 +113,11 @@ function gthumb($image_name = '', $type = ''){
  * 取得买家缩略图的完整URL路径
  *
  * @param string $imgurl 商品名称
- * @param string $type 缩略图类型  值为240,1024
+ * @param string $type 缩略图类型  值为240,640,1280
  * @return string
  */
 function snsThumb($image_name = '', $type = ''){
-	if (!in_array($type, array('240','1024'))) $type = '240';
+	if (!in_array($type, array('240','640','1280'))) $type = '240';
 	if (empty($image_name)){
 		return UPLOAD_SITE_URL.'/'.defaultGoodsImage('240');
     }
@@ -141,15 +141,19 @@ function snsThumb($image_name = '', $type = ''){
  * @param string $type 缩略图类型  值为240,1024
  * @return string
  */
-function fleaThumb($image_name = '', $member_id, $type = ''){
+function fleaThumb($image_name = '', $type = ''){
     if (!in_array($type, array('240','1024'))) $type = '240';
     if (empty($image_name)){
         return UPLOAD_SITE_URL.'/'.defaultGoodsImage('240');
     }
 
-    $file_path = ATTACH_MALBUM.DS.$member_id.DS.$image_name;
+    list($member_id) = explode('_', $image_name);
+    $file_path = ATTACH_MALBUM.DS.$member_id.DS.str_ireplace('.', '_'.$type.'.', $image_name);
     if(!file_exists(BASE_UPLOAD_PATH.DS.$file_path)) {
-		return UPLOAD_SITE_URL.'/'.defaultGoodsImage('240');
+        $file_path = ATTACH_MALBUM.DS.$member_id.DS.$image_name;
+        if (!file_exists(BASE_UPLOAD_PATH.DS.$file_path)) {
+            return UPLOAD_SITE_URL.'/'.defaultGoodsImage('240');
+        }
 	}
     return UPLOAD_SITE_URL.DS.$file_path;
 }
