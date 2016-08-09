@@ -375,7 +375,7 @@ class member_fleaControl extends mobileMemberControl
      * 编辑闲置物品保存
      */
     public function edit_goodsOp() {
-        $goods_id = intval($_POST['goods_id']);
+        $goods_id = $_POST['goods_id'];
 
         if (empty($_POST['goods_name'])) {
             output_json(0, 0, Language::get('error_title_null'));
@@ -412,9 +412,7 @@ class member_fleaControl extends mobileMemberControl
                     array('upload_id' => intval($_POST['goods_file_id']))
                 );
                 $goods_image = $image_info[0]['file_thumb'];
-                $model_store_goods->updateGoods(
-                    array('goods_image' => $goods_image), $goods_id
-                );
+                $model_store_goods->updateGoods(array('goods_image' => $goods_image), $goods_id);
             }
             output_json(1, $state);
         } else {
