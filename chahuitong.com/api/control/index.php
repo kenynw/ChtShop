@@ -71,7 +71,7 @@ class indexControl extends mobileHomeControl{
             'info' => $mobile_version_info['value'],
             'version' => $mobile_apk_version['value']
         );
-        $data['if_update'] = $mobile_apk['value'] !== $_GET['version'];
+        $data['if_update'] = $mobile_apk_version['value'] !== $_GET['version'];
 
         output_json(1, $data);
     }
