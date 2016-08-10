@@ -7,7 +7,7 @@
  */
 
 defined('InShopNC') or exit('Access Invalid!');
-class xianshi_goodsControl extends mobileHomeControl {
+class goods_xianshiControl extends mobileControl {
 
     const XIANSHI_STATE_NORMAL = 1; // 正常
 
@@ -16,6 +16,10 @@ class xianshi_goodsControl extends mobileHomeControl {
     const XIANSHI_STATE_CANCEL = 3; // 取消
 
     const XIANSHI_NAME_CURRENT = '今日抢购';
+
+    public function __construct() {
+        parent::__construct();
+    }
 
     /**
      * 获取今日抢购列表
@@ -58,5 +62,3 @@ class xianshi_goodsControl extends mobileHomeControl {
     }
 
 }
-
-?>
