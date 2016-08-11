@@ -159,10 +159,11 @@ class memberModel extends Model {
 		// 注册验证
 		$obj_validate = new Validate();
 		$obj_validate->validateparam = array(
-		array("input"=>$register_info["username"],		"require"=>"true",		"message"=>'用户名不能为空'),
-		array("input"=>$register_info["password"],		"require"=>"true",		"message"=>'密码不能为空'),
-		array("input"=>$register_info["password_confirm"],"require"=>"true",	"validator"=>"Compare","operator"=>"==","to"=>$register_info["password"],"message"=>'密码与确认密码不相同'),
-		array("input"=>$register_info["email"],			"require"=>"true",		"validator"=>"email", "message"=>'电子邮件格式不正确'),
+		array("input"=>$register_info["username"],		    "require"=>"true", "validator"=>'username', "message"=>'用户名不能为空'),
+		array("input"=>$register_info["password"],		    "require"=>"true", "message"=>'密码不能为空'),
+		array("input"=>$register_info["password_confirm"],  "require"=>"true", "validator"=>"Compare","operator"=>"==","to"=>$register_info["password"],"message"=>'密码与确认密码不相同'),
+		array("input"=>$register_info["email"],			    "require"=>"false","validator"=>"email", "message"=>'电子邮件格式不正确'),
+		array("input"=>$register_info["mobile"],			"require"=>"true", "validator"=>"mobile", "message"=>'手机号码格式不正确'),
 		);
 		$error = $obj_validate->validate();
 		if ($error != ''){
@@ -180,11 +181,21 @@ class memberModel extends Model {
 		if(is_array($check_member_email) and count($check_member_email)>0) {
             return array('error' => '邮箱已存在');
 		}
+
+		// 验证手机号是否重复
+        $check_member_email	= $this->getMemberInfo(array('member_mobile'=>$register_info['mobile']));
+        if(is_array($check_member_email) and count($check_member_email)>0) {
+            return array('error' => '手机号已注册');
+        }
+
 		// 会员添加
 		$member_info	= array();
-		$member_info['member_name']		= $register_info['username'];
-		$member_info['member_passwd']	= $register_info['password'];
-		$member_info['member_email']		= $register_info['email'];
+        $member_info['member_mobile']	    = $register_info['mobile'];
+        $member_info['member_mobile_bind']  = empty($register_info['mobile']) ? 0 : 1;
+		$member_info['member_name']		    = $register_info['username'];
+		$member_info['member_passwd']	    = $register_info['password'];
+		$member_info['member_email']	    = $register_info['email'];
+
         //第三方登陆
         if(isset($_POST['openid'])){
             if($_POST['op']=='qq'){
@@ -198,17 +209,6 @@ class memberModel extends Model {
             }
             $member_info['member_mobile_bind']=0;
         }
-        //begin手机注册 by lai
-        if(isset($register_info['mobile'])){
-            $member_info['member_mobile']=$register_info['mobile'];
-            $member_info['member_mobile_bind']=1;
-        }
-        //end 手机注册
-        //begin添加标签
-        if(isset($register_info['member_lable'])){
-            $member_info['member_lable']=$register_info['member_lable'];
-        }
-        //end标签
 		//添加邀请人(推荐人)会员积分 by abc.com
 		$member_info['inviter_id']		= $register_info['inviter_id'];
 		$insert_id	= $this->addMember($member_info);

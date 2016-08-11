@@ -87,10 +87,17 @@ $config['subdomain_suffix'] = 'chahuitong.com';
 $config['node_chat'] = true;
 //流量记录表数量，为1~10之间的数字，默认为3，数字设置完成后请不要轻易修改，否则可能造成流量统计功能数据错误
 $config['flowstat_tablenum'] = 3;
+
+// 亿美短信接口配置（http://www.emay.cn/）
 $config['sms']['gwUrl'] = 'http://sdkhttp.eucp.b2m.cn/sdk/SDKService';
 $config['sms']['serialNumber'] = '';
 $config['sms']['password'] = '';
 $config['sms']['sessionKey'] = '';
+// 互亿无线短信接口配置（http://sms.ihuyi.cn/）
+$config['sms']['hyUrl'] = 'http://106.ihuyi.cn/webservice/sms.php?method=Submit';
+$config['sms']['hyAccount'] = 'cf_chahuitong';
+$config['sms']['hyPassword'] = 'chahuitong2015';
+
 $config['queue']['open'] = false;
 $config['queue']['host'] = '127.0.0.1';
 $config['queue']['port'] = 6379;

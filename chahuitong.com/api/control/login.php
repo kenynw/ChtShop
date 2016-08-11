@@ -12,11 +12,9 @@
 
 defined('InShopNC') or exit('Access Invalid!');
 
-class loginControl extends mobileHomeControl
-{
+class loginControl extends mobileHomeControl {
 
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
     }
 
@@ -67,14 +65,14 @@ class loginControl extends mobileHomeControl
         if (!empty($member_info)) {
             $token = $this->_get_token($member_info['member_id'], $member_info['member_name'], $_POST['client']);
             if ($token) {
-                output_data(array('member_name' => $member_info['member_name'], 'key' => $token, 'member_avatar' => getMemberAvatar($member_info['member_avatar'])));
+                output_data(
+                    array(
+                        'member_name' => $member_info['member_name'], 'key' => $token,
+                        'member_avatar' => getMemberAvatar($member_info['member_avatar'])
+                    )
+                );
             } else {
-                if ($_POST['version']) {
-                    output_json(0, array('key' => $token), '登录失败');
-                    die();
-                }
-                output_error('登录失败');
-                //output_error($member_info['member_name']);
+                output_json(0, array('key' => $token), '登录失败');
             }
         } else {
             output_error('用户名密码错误');
@@ -82,10 +80,109 @@ class loginControl extends mobileHomeControl
     }
 
     /**
+     * 注册
+     */
+    public function registerOp() {
+        $model_member = Model('member');
+
+        $register_info = array();
+        $register_info['mobile']            = $_POST['mobile'];
+        $register_info['username']          = empty($_POST['username']) ? $_POST['mobile'] : $_POST['username'];
+        $register_info['password']          = $_POST['password'];
+        $register_info['password_confirm']  = $_POST['password_confirm'];
+        $register_info['email']             = $_POST['email'];
+        $member_info = $model_member->register($register_info);
+        if (!isset($member_info['error'])) {
+            $token = $this->_get_token($member_info['member_id'], $member_info['member_name'], $_POST['client']);
+            if ($token) {
+                output_data(array('username' => $member_info['member_name'], 'key' => $token));
+            } else {
+                output_error('注册失败,获取Token失败');
+            }
+        } else {
+            output_error($member_info['error']);
+        }
+    }
+
+    /**
+     * 忘记密码
+     */
+    public function forget_passwordOp() {
+        $model_member = Model("member");
+        $member_info = $model_member->getMemberInfo(array('member_mobile' => $_POST['mobile']), 'member_id, member_mobile');
+        if (empty($member_info)) output_json(0, false, '用户不存在');
+        if (empty($_POST['code'])) output_json(0, false, '验证码不能为空');
+        if (empty($_POST['new_pwd'])) output_json(0, false, '新密码不能为空');
+
+        $condition = array();
+        $condition['member_id'] = $member_info['member_id'];
+        $condition['auth_code'] = intval($_POST['code']);
+        $member_common_info = $model_member->getMemberCommonInfo($condition,'send_acode_time');
+        if (!$member_common_info) {
+            output_json(0, false, '手机验证码错误，请重新输入');
+        }
+        if (TIMESTAMP - $member_common_info['send_acode_time'] > 1800) {
+            output_json(0, false, '手机验证码已过期，请重新获取验证码');
+        }
+
+        $result = $model_member->editMember(
+            array('member_id' => $member_info['member_id']),
+            array('member_passwd' => md5($_POST['new_pwd']))
+        );
+
+        if ($result) {
+            output_json(1, true, '重置成功');
+        } else {
+            output_json(0, false, '重置失败,请求超时');
+        }
+    }
+
+    /**
+     * 统一发送身份验证码
+     */
+    public function send_codeOp() {
+        $validate = new Validate();
+        $validate->validateparam = array(
+            array("input"=>$_POST["mobile"], "require"=>"true", "validator"=>"mobile", "message"=>'手机号码格式不正确'),
+        );
+        $error = $validate->validate();
+        if ($error != '') output_json(0, false, $error);
+
+        $model_member = Model('member');
+        $member_info = $model_member->getMemberInfo(array('member_mobile'=>$_POST['mobile']), 'member_id,member_mobile');
+        if (!empty($member_info)) output_json(0, false, '该用户已注册');
+
+        $verify_code = rand(100,999).rand(100,999);
+        $data = array();
+        $data['auth_code'] = $verify_code;
+        $data['send_acode_time'] = TIMESTAMP;
+        $update = $model_member->editMemberCommon($data,array('member_id'=>$member_info['member_id']));
+        if (!$update) {
+            output_json(0, false, '系统发生错误，如有疑问请与管理员联系');
+        }
+
+        $model_tpl = Model('mail_templates');
+        $tpl_info = $model_tpl->getTplInfo(array('code'=>'authenticate'));
+
+        $param = array();
+        $param['send_time'] = date('Y-m-d H:i',TIMESTAMP);
+        $param['verify_code'] = $verify_code;
+        $param['site_name']	= C('site_name');
+        $message = ncReplaceText($tpl_info['content'],$param);
+        $sms = new Sms();
+        $result = $sms->sendHuyi($member_info["member_mobile"], $message);
+
+        if ($result) {
+            output_json(1, true, '验证码已发出，请注意查收');
+        } else {
+            output_json(0, false, '验证码发送失败');
+        }
+    }
+
+    /**
      * 登录生成token
      */
-    private function _get_token($member_id, $member_name, $client)
-    {
+    private function _get_token($member_id, $member_name, $client) {
         $model_mb_user_token = Model('mb_user_token');
 
         //重新登录后以前的令牌失效
@@ -97,12 +194,14 @@ class loginControl extends mobileHomeControl
 
         //生成新的token
         $mb_user_token_info = array();
-        $token = md5($member_name . strval(TIMESTAMP) . strval(rand(0, 999999)));
+        $token = md5(
+            $member_name . strval(TIMESTAMP) . strval(rand(0, 999999))
+        );
         $mb_user_token_info['member_id'] = $member_id;
         $mb_user_token_info['member_name'] = $member_name;
         $mb_user_token_info['token'] = $token;
         $mb_user_token_info['login_time'] = TIMESTAMP;
-        $mb_user_token_info['client_type'] = $_POST['client'];
+        $mb_user_token_info['client_type'] = $client;
         $result = $model_mb_user_token->addMbUserToken($mb_user_token_info);
         if ($result) {
             return $token;
@@ -112,37 +211,12 @@ class loginControl extends mobileHomeControl
 
     }
 
-    /**
-     * 注册
-     */
-    public function registerOp()
-    {
-        $model_member = Model('member');
-
-        $register_info = array();
-        $register_info['username'] = $_POST['username'];
-        $register_info['password'] = $_POST['password'];
-        $register_info['password_confirm'] = $_POST['password_confirm'];
-        $register_info['email'] = $_POST['email'];
-        $member_info = $model_member->register($register_info);
-        if (!isset($member_info['error'])) {
-            $token = $this->_get_token($member_info['member_id'], $member_info['member_name'], $_POST['client']);
-            if ($token) {
-                output_data(array('username' => $member_info['member_name'], 'key' => $token));
-            } else {
-                output_error('注册失败');
-            }
-        } else {
-            output_error($member_info['error']);
-        }
-
-    }
+    //==============================以下需重写==============================
 
     /**
      * 注册
      */
-    public function register_apiOp()
-    {
+    public function register_apiOp() {
         //create by lai 主要用于wap,app与第三方登陆，为简化原有接口而改造客户只要注册手机与密码即可
         if (isset($_POST['data'])) {
             $array = json_decode($_POST['data'], true);
@@ -191,7 +265,8 @@ class loginControl extends mobileHomeControl
             }
         }
         $register_info['mobile'] = $_POST['mobile'];
-        $register_info['username'] = isset($_POST['username']) ? $_POST['username'] : $_POST['mobile'];
+        $register_info['username'] = isset($_POST['username'])
+            ? $_POST['username'] : $_POST['mobile'];
         $register_info['password'] = $_POST['password'];
 
         //无需客户再确认密码
@@ -208,7 +283,10 @@ class loginControl extends mobileHomeControl
             $memberModel = Model("member");
             $memberInfo = $memberModel->where($sql)->find();
             if (!empty($memberInfo)) {
-                $token = $this->_get_token($memberInfo['member_id'], $memberInfo['member_name'], $_POST['client']);
+                $token = $this->_get_token(
+                    $memberInfo['member_id'], $memberInfo['member_name'],
+                    $_POST['client']
+                );
                 output_json(1, array('key' => $token), '登陆成功');
                 die();
             }
@@ -219,33 +297,39 @@ class loginControl extends mobileHomeControl
         if ($_POST['openid']) {
             $op = isset($_POST['op']) ? $_POST['op'] : 'qq';
             switch ($op) {
-                case "qq":
-                    $register_info['member_qqopenid'] = $_POST['openid'];
-                    $register_info['username'] = "QQ_" . rand(1000000, 9999990);
-                    $register_info['password'] = "000000";
-                    $register_info['password_confirm'] = $register_info['password'];
-                    $register_info['email'] = "noemal" . rand(1000000, 9999990) . "@qq.com";
-                    break;
-                case "sina":
-                    $register_info['member_sinaopenid'] = $_POST['openid'];
-                    $register_info['username'] = "sina_" . rand(1000000, 9999999);
-                    $register_info['password'] = "000000";
-                    $register_info['password_confirm'] = $register_info['password'];
-                    $register_info['email'] = "noemal" . rand(1000000, 9999990) . "@163.com";
-                    break;
-                case "wechat":
-                    $register_info['member_wechatopenid'] = $_POST['openid'];
-                    $register_info['username'] = "wechat_" . rand(1000000, 9999999);
-                    $register_info['password'] = "000000";
-                    $register_info['password_confirm'] = $register_info['password'];
-                    $register_info['email'] = "noemal" . rand(1000000, 9999990) . "@wechat.com";
-                    break;
+            case "qq":
+                $register_info['member_qqopenid'] = $_POST['openid'];
+                $register_info['username'] = "QQ_" . rand(1000000, 9999990);
+                $register_info['password'] = "000000";
+                $register_info['password_confirm'] = $register_info['password'];
+                $register_info['email'] = "noemal" . rand(1000000, 9999990)
+                    . "@qq.com";
+                break;
+            case "sina":
+                $register_info['member_sinaopenid'] = $_POST['openid'];
+                $register_info['username'] = "sina_" . rand(1000000, 9999999);
+                $register_info['password'] = "000000";
+                $register_info['password_confirm'] = $register_info['password'];
+                $register_info['email'] = "noemal" . rand(1000000, 9999990)
+                    . "@163.com";
+                break;
+            case "wechat":
+                $register_info['member_wechatopenid'] = $_POST['openid'];
+                $register_info['username'] = "wechat_" . rand(1000000, 9999999);
+                $register_info['password'] = "000000";
+                $register_info['password_confirm'] = $register_info['password'];
+                $register_info['email'] = "noemal" . rand(1000000, 9999990)
+                    . "@wechat.com";
+                break;
             }
         }
         $member_info = $model_member->register($register_info);
         if (!isset($member_info['error'])) {
             //如果开启了注册送优惠券添加优惠劵,register_voucher_give 不是系统默认, 添加到 setting,要清除字段缓存
-            $token = $this->_get_token($member_info['member_id'], $member_info['member_name'], $_POST['client']);
+            $token = $this->_get_token(
+                $member_info['member_id'], $member_info['member_name'],
+                $_POST['client']
+            );
             if (C('register_voucher_give')) {
                 $this->add_voucherOp($member_info['member_id']);
             }
@@ -268,11 +352,11 @@ class loginControl extends mobileHomeControl
     }
 
     /*标签接口*/
-    public function search_lableOp()
-    {
+    public function search_lableOp() {
         //$_POST['page']=2;
         $lableModel = Model("search_lable");
-        $lablekey = $lableModel->field("lable_text")->order("lable_order desc")->page(12)->select();
+        $lablekey = $lableModel->field("lable_text")->order("lable_order desc")
+            ->page(12)->select();
         $totalPage = $lableModel->getTotalPage();
         $data = array();
         if ($lablekey) {
@@ -287,8 +371,7 @@ class loginControl extends mobileHomeControl
     }
 
     /*生成查找标签字符串*/
-    public function build_search_lableOp($lable = array())
-    {
+    public function build_search_lableOp($lable = array()) {
         //$lable=array("普洱茶","绿茶","润元昌","滇臻號","袋装","源山古茶");
         $keys = $lable;
         if (empty($keys)) {
@@ -298,9 +381,11 @@ class loginControl extends mobileHomeControl
         $goodsClassModel = Model("goods_class");
         $goodsClassArray = $goodsClassModel->field("gc_id,gc_name")->select();
         $brandModel = Model("brand");
-        $brandArray = $brandModel->field("brand_id,brand_name")->page(300)->select();
+        $brandArray = $brandModel->field("brand_id,brand_name")->page(300)
+            ->select();
         $attrValueModel = Model("attribute_value");
-        $attrArray = $attrValueModel->field("attr_value_id,attr_value_name")->where("attr_value_id between 3100 and 3310")->select();
+        $attrArray = $attrValueModel->field("attr_value_id,attr_value_name")
+            ->where("attr_value_id between 3100 and 3310")->select();
         $classArray = array();
         foreach ($goodsClassArray as $v) {
             $classArray[$v['gc_id']] = $v['gc_name'];
@@ -352,84 +437,13 @@ class loginControl extends mobileHomeControl
         return $string;
     }
 
-    //短信发送验证
-    public function send_smsOp()
-    {
-        $ip = getIp();
-        if (isset($_SESSION['customer_ip']) && ($_SESSION['customer_ip'] == $ip) && ($_SESSION['logtime'] >= 6) && (date("m.d") == date("m.d", $_SESSION['time']))) {
-            output_json(0, array(), "同个ip一天只能登陆5次");
-            die();
-        }
-        $number = isset($_POST['mobile']) ? $_POST['mobile'] : $_GET['mobile'];
-        $result = array();
-        if (strlen($number) != 11) {
-            output_error('手机号码格式不正确');
-        }
-        $code = rand(100000, 999999);
-        $url = "http://106.ihuyi.cn/webservice/sms.php?method=Submit&account=cf_chahuitong&password=chahuitong2015&mobile=$number&content=您的验证码是：【" . $code . "】。请不要把验证码泄露给其他人。";
-        $results = file_get_contents($url);
-        $xml = simplexml_load_string($results);
-        if ($xml->code == 2) {
-            $result['code'] = 1;
-            $result['content'] = "短信发送成功，请在1分钟内填入$code";
-            $_SESSION['time'] = time();
-            $_SESSION['customer_ip'] = $ip;
-            $_SESSION['mobilecode'] = $code;
-            $_SESSION['mobilenumber'] = $number;
-            $_SESSION['logtime'] = isset($_SESSION['logtime']) ? ($_SESSION['logtime'] + 1) : 1;
-            $mobileData = array();
-            $mobileData['add_time'] = TIMESTAMP;
-            $mobileData['verificode'] = $code;
-            $mobileRecordModel = Model("mobile_record");
-            $alreadyRecord = $mobileRecordModel->where("mobile='$number'")->find();
-            if ($alreadyRecord) {
-                $mobileRecordModel->where("mobile='$number'")->update($mobileData);
-            } else {
-                $mobileData['mobile'] = $number;
-                $mobileRecordModel->insert($mobileData);
-            }
-
-        } else {
-            $result['code'] = 0;
-            $result['content'] = "发送失败，失败代码：{$xml->code}";
-        }
-        output_json($result['code'], '', $result['content']);
-    }
-
-    //验证短信
-    private function check_smsOp()
-    {
-        if (!isset($_POST['verificode'])) {
-            return false;
-        }
-        //超时时间判断,显示的是1分钟
-        /*
-        if((time()-$_SESSION['time'])>60){
-            return false;
-        }
-        */
-
-        if ($_SESSION['mobilecode'] != $_POST['verificode']) {
-            $mobileRecordModel = Model("mobile_record");
-            $data = array();
-            $data['mobile'] = $_POST['mobile'];
-            $data['verificode'] = $_POST['verificode'];
-            $AlreadyExists = $mobileRecordModel->where($data)->find();
-            if ($AlreadyExists) {
-                return true;
-            }
-            return false;
-        } else {
-            return true;
-        }
-    }
-
     //优惠券添加
-    private function add_voucherOp($uid = 253)
-    {
+    private function add_voucherOp($uid = 253) {
         $voucher_template_model = Model("voucher_template");
         $voucherModel = Model();
-        $vouchers = $voucher_template_model->where("voucher_t_register_give='1'")->select();
+        $vouchers = $voucher_template_model->where(
+            "voucher_t_register_give='1'"
+        )->select();
         $insert_arr = array();
         foreach ($vouchers as $value) {
             $insert_arr['voucher_code'] = mt_rand(10, 99)
@@ -447,40 +461,13 @@ class loginControl extends mobileHomeControl
             $insert_arr['voucher_state'] = 1;
             $insert_arr['voucher_active_date'] = time();
             $insert_arr['voucher_owner_id'] = $uid;
-            $insert_arr['voucher_owner_name'] = isset($_POST['username']) ? $_POST['username'] : $_POST['mobile'];
+            $insert_arr['voucher_owner_name'] = isset($_POST['username'])
+                ? $_POST['username'] : $_POST['mobile'];
             $voucherModel->table("voucher")->insert($insert_arr);
-            $voucher_template_model->where("voucher_t_id='" . $value['voucher_t_id'] . "'")->setInc('voucher_t_giveout', 1);
+            $voucher_template_model->where(
+                "voucher_t_id='" . $value['voucher_t_id'] . "'"
+            )->setInc('voucher_t_giveout', 1);
         }
-    }
-
-    public function for_testOp()
-    {
-        $str = "黑美人";
-        print_r(explode("/", $str));
-    }
-
-    /*更改密码*/
-    public function change_pwdOp()
-    {
-        $checkResult = $this->check_smsOp();
-        if (!$checkResult) {
-            output_json(0, array(), "验证码不正确或者已经超时" . $_SESSION['mobilecode']);
-            die();
-        }
-        $data = Array();
-        $member_mobile = $_POST['mobile'];
-        $data['member_passwd'] = md5($_POST['newpwd']);
-        $memberModel = Model("member");
-        $updateResult = $memberModel->where("`member_mobile`='" . $member_mobile . "'")->update($data);
-        if ($updateResult) {
-            output_json(1, '', '更新成功');
-            die();
-        } else {
-            $this->check_member_login();
-
-            output_json(0, '', '更新失败可能没用手机注册');
-        }
-
     }
 
 }

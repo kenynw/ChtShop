@@ -70,6 +70,22 @@
     
     例如登录接口为:http://api.chahuitong.com?act=login
 
+### 发送注册短信验证码
+
+URL: act=login&op=send_code 
+
+参数：
+
+>mobile   
+
+返回： 
+
+      {
+          "code": 1,
+          "msg": "验证码已发出，请注意查收",
+          "data": true
+      }
+
 ### 注册
 URL: act=login&op=register_api  
 
@@ -131,17 +147,6 @@ URL: act=login&op=register_api
 >client   客户端类型，可选：android，ios，web   
 >op   第三方类型，可选：sina,wechat,qq  
 >openid   第三方授权返回的唯一标识,如微博登录的Uid，腾讯的openId
-
-返回： 
-
-      {
-        code:  
-      }
-
-### 发送验证码
-URL: act=login&op=send_sms  
-参数：
->mobile  
 
 返回： 
 
@@ -680,7 +685,7 @@ URL： act=group_buy&op=sample_info
     }
 
 
-### ~~限时抢购今日~~<已被act=goods&op=current_list替换>
+### ~~限时抢购今日~~<已被act=goods_xianshi&op=current_list替换>
 URL： act=flash_sale&op=current_api
 
 参数：
@@ -690,7 +695,36 @@ URL： act=flash_sale&op=current_api
 返回：
 
     {
-      code: 
+        "code": 1,
+        "msg": "SUCCESS",
+        "data": {
+            "list": [
+                {
+                    "xianshi_goods_id": "65",
+                    "xianshi_id": "15",
+                    "xianshi_name": "双十一特价",
+                    "xianshi_title": "双十一特价",
+                    "xianshi_explain": "双十一特惠 ，好喝又不贵。",
+                    "goods_id": "101356",
+                    "store_id": "2",
+                    "goods_name": "滇臻號 “滇系列”熟茶 来自布朗山 357g",
+                    "goods_price": "380.00",
+                    "xianshi_price": "380.00",
+                    "goods_image": "2_04988369896060552.jpg",
+                    "start_time": "1446998400",
+                    "end_time": "1548812800",
+                    "lower_limit": "1",
+                    "state": "1",
+                    "xianshi_recommend": "0",
+                    "order": null,
+                    "goods_salenum": "192",
+                    "goods_storage": "991",
+                    "goods_image_url": "http://img.chahuitong.com/shop/common/default_goods_image_360.gif"
+                }
+            ],
+            "hasmore": true,
+            "page_total": 4
+        }
     }
 
 ### ~~限时抢购明日~~<已弃用>
@@ -787,34 +821,55 @@ URL(GET): act=goods&op=recommend_list
 
 ### 忘记密码
 
-URL: act=login&op=change_pwd  
+URL: act=login&op=forget_password  
 
 参数：
 
 >mobile 手机号码    
->verificode 验证码	
+>code 验证码	    
 >newpwd 新密码    
 
 返回： 
 
     {
-      code: 1,
-      msg: "更新成功"
+        "code": 1,
+        "msg": "重置成功",
+        "data": true
     }
 
+### 发送身份验证短信验证码（用于修改密码、绑定手机等）
+
+URL: act=member_security&op=send_auth_code 
+
+参数：
+
+>mobile   
+
+返回： 
+
+      {
+          "code": 1,
+          "msg": "验证码已发出，请注意查收",
+          "data": true
+      }
+
 ### 更改密码
-URL: act=member_index&op=update_member_pwd  
+
+URL: act=member_security&op=modify_pwd
+  
 参数：
 
 >key  登录状态下才能操作    
->oldpwd 旧密码    
->newpwd 新密码    
+>old_pwd 旧密码    
+>new_pwd 新密码    
+>confirm_pwd 确认密码       
 
 返回： 
 
     {
-      code: 1,
-      msg: "更新成功"
+        "code": 1,
+        "msg": "密码修改成功",
+        "data": true
     }
 
 ### 获取用户信息

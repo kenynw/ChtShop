@@ -78,8 +78,44 @@ class Sms {
             return true;
         } else {
             return false;
-             print_R($statusCode);
-             echo "处理状态码:".$statusCode;
+//             print_R($statusCode);
+//             echo "处理状态码:".$statusCode;
         }
     }
+
+    /**
+     * 互亿无线短信接口
+     *
+     * @param $mobile 手机号
+     * @param $content 短信内容
+     *
+     * @return bool
+     */
+    public function sendHuyi($mobile, $content) {
+        define('SCRIPT_ROOT',  BASE_DATA_PATH.'/api/huyi/');
+        require_once SCRIPT_ROOT.'Huyi.php';
+
+        /**
+         * 网关地址
+         */
+        $gwUrl = C('sms.hyUrl');
+        /**
+         * 互亿注册用户名
+         */
+        $account = C('sms.hyAccount');
+        /**
+         * 互亿注册密码
+         */
+        $password = C('sms.hyPassword');
+
+        $client = new Huyi($gwUrl, $account, $password);
+
+        $result = $client->sendSMS($mobile, $content);
+        if($result['SubmitResult']['code']==2){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
