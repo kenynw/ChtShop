@@ -76,7 +76,8 @@ URL: act=login&op=send_code
 
 参数：
 
->mobile   
+>mobile 手机号     
+>type 0-注册 1-忘记密码   
 
 返回： 
 
@@ -832,7 +833,7 @@ URL: act=login&op=forget_password
 
 >mobile 手机号码    
 >code 验证码	    
->newpwd 新密码    
+>new_pwd 新密码    
 
 返回： 
 
@@ -842,7 +843,7 @@ URL: act=login&op=forget_password
         "data": true
     }
 
-### 发送身份验证短信验证码（用于修改密码、绑定手机等）
+### 发送身份验证短信验证码（用于绑定手机、邮箱等）
 
 URL: act=member_security&op=send_auth_code 
 

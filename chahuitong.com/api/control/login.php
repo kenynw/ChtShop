@@ -158,16 +158,26 @@ class loginControl extends mobileHomeControl {
         $error = $validate->validate();
         if ($error != '') output_json(0, false, $error);
 
+        $type = intval($_POST['type']);
+
         $model_member = Model('member');
         $member_info = $model_member->getMemberInfo(array('member_mobile'=>$_POST['mobile']), 'member_id,member_mobile');
-        if (!empty($member_info)) output_json(0, false, '该用户已注册');
+        if($type == 1) {
+            if (empty($member_info)) output_json(0, false, '该用户未注册');
+        } else {
+            if (!empty($member_info)) output_json(0, false, '该用户已注册');
+        }
 
         $verify_code = rand(100,999).rand(100,999);
         $data = array();
         $data['auth_code'] = $verify_code;
         $data['send_acode_time'] = TIMESTAMP;
         $data['mobile'] = $_POST['mobile'];
-        $update = $model_member->addMemberCommon($data);
+        if ($type == 1){
+            $update = $model_member->editMemberCommon($data, array('member_id'=>$member_info['member_id']));
+        } else {
+            $update = $model_member->addMemberCommon($data);
+        }
         if (!$update) {
             output_json(0, false, '系统发生错误，如有疑问请与管理员联系');
         }

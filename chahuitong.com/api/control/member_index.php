@@ -153,28 +153,4 @@ class member_indexControl extends mobileMemberControl {
         }
     }
 
-    public function update_member_pwdOp(){
-        $member_id=$this->member_info['member_id'];
-        if(md5($_POST['oldpwd'])!=$this->member_info['member_passwd']){
-            output_json(0,'','旧密码不正确');
-            die();
-        }
-        if(empty($_POST['newpwd'])){
-            output_json(0,'','新密码不能为空');
-            die();
-        }
-        $data=array();
-        $data['member_passwd']=md5($_POST['newpwd']);
-        $memberModel=Model("member");
-        $updateResult=$memberModel->where("member_id='$member_id'")->update($data);
-        if($updateResult){
-            output_json(1,$updateResult,'更新成功');
-            die();
-        }else{
-            output_json(0,'','更新失败');
-            die();
-        }
-
-    }
-
 }
