@@ -238,22 +238,43 @@ sup {
 例如登录接口为:http://api.chahuitong.com?act=login
 </code></pre>
 
-<h3>注册</h3>
+<h3>发送注册短信验证码</h3>
 
-<p>URL: act=login&amp;op=register_api</p>
+<p>URL: act=login&amp;op=send_code</p>
 
 <p>参数：</p>
 
-<blockquote><p>mobile <br/>
-password <br/>
-verificode <br/>
-label<br/>
-client</p></blockquote>
+<blockquote><p>mobile</p></blockquote>
 
 <p>返回：</p>
 
 <pre><code>  {
-    code:  
+      "code": 1,
+      "msg": "验证码已发出，请注意查收",
+      "data": true
+  }
+</code></pre>
+
+<h3>注册</h3>
+
+<p>URL: act=login&amp;op=register</p>
+
+<p>参数：</p>
+
+<blockquote><p>mobile     手机号 <br/>
+password   密码<br/>
+code       验证码  <br/>
+client     客户端类型(android wap wechat ios)</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>  {
+      "code": 1,
+      "msg": "SUCCESS",
+      "data": {
+          "username": "12345678912",
+          "key": "bb6a573583605063443c65f4395e559a"
+      }
   }
 </code></pre>
 
@@ -263,9 +284,9 @@ client</p></blockquote>
 
 <p>参数：</p>
 
-<blockquote><p>username 用户名<br/>
-password 密码<br/>
-client 客户端类型(android wap ios wechat)</p></blockquote>
+<blockquote><p>username   用户名<br/>
+password   密码<br/>
+client     客户端类型(android wap wechat ios)</p></blockquote>
 
 <p>返回</p>
 
@@ -302,24 +323,10 @@ client 客户端类型(android wap ios wechat)</p></blockquote>
 
 <p>参数：</p>
 
-<blockquote><p>key  shopNC的MD5值，固定为『804451dc13014b1c785fb73b1617b760』   <br/>
-client   客户端类型，可选：android，ios，web <br/>
-op   第三方类型，可选：sina,wechat,qq<br/>
-openid   第三方授权返回的唯一标识,如微博登录的Uid，腾讯的openId</p></blockquote>
-
-<p>返回：</p>
-
-<pre><code>  {
-    code:  
-  }
-</code></pre>
-
-<h3>发送验证码</h3>
-
-<p>URL: act=login&amp;op=send_sms<br/>
-参数：</p>
-
-<blockquote><p>mobile</p></blockquote>
+<blockquote><p>key    shopNC的MD5值，固定为『804451dc13014b1c785fb73b1617b760』   <br/>
+client 客户端类型，可选：android，ios，web <br/>
+op     第三方类型，可选：sina,wechat,qq<br/>
+openid 第三方授权返回的唯一标识,如微博登录的Uid，腾讯的openId</p></blockquote>
 
 <p>返回：</p>
 
@@ -874,7 +881,7 @@ version 接口版本号 大于等于3-返回3.0版本数据结构 其他-旧版�
 }
 </code></pre>
 
-<h3><del>限时抢购今日</del>&lt;已被act=goods&amp;op=current_list替换></h3>
+<h3><del>限时抢购今日</del>&lt;已被act=goods_xianshi&amp;op=current_list替换></h3>
 
 <p>URL： act=flash_sale&amp;op=current_api</p>
 
@@ -885,7 +892,36 @@ version 接口版本号 大于等于3-返回3.0版本数据结构 其他-旧版�
 <p>返回：</p>
 
 <pre><code>{
-  code: 
+    "code": 1,
+    "msg": "SUCCESS",
+    "data": {
+        "list": [
+            {
+                "xianshi_goods_id": "65",
+                "xianshi_id": "15",
+                "xianshi_name": "双十一特价",
+                "xianshi_title": "双十一特价",
+                "xianshi_explain": "双十一特惠 ，好喝又不贵。",
+                "goods_id": "101356",
+                "store_id": "2",
+                "goods_name": "滇臻號 “滇系列”熟茶 来自布朗山 357g",
+                "goods_price": "380.00",
+                "xianshi_price": "380.00",
+                "goods_image": "2_04988369896060552.jpg",
+                "start_time": "1446998400",
+                "end_time": "1548812800",
+                "lower_limit": "1",
+                "state": "1",
+                "xianshi_recommend": "0",
+                "order": null,
+                "goods_salenum": "192",
+                "goods_storage": "991",
+                "goods_image_url": "http://img.chahuitong.com/shop/common/default_goods_image_360.gif"
+            }
+        ],
+        "hasmore": true,
+        "page_total": 4
+    }
 }
 </code></pre>
 
@@ -988,36 +1024,57 @@ gc_id 分类编号</p></blockquote>
 
 <h3>忘记密码</h3>
 
-<p>URL: act=login&amp;op=change_pwd</p>
+<p>URL: act=login&amp;op=forget_password</p>
 
 <p>参数：</p>
 
 <blockquote><p>mobile 手机号码  <br/>
-verificode 验证码 <br/>
+code 验证码   <br/>
 newpwd 新密码</p></blockquote>
 
 <p>返回：</p>
 
 <pre><code>{
-  code: 1,
-  msg: "更新成功"
+    "code": 1,
+    "msg": "重置成功",
+    "data": true
 }
+</code></pre>
+
+<h3>发送身份验证短信验证码（用于修改密码、绑定手机等）</h3>
+
+<p>URL: act=member_security&amp;op=send_auth_code</p>
+
+<p>参数：</p>
+
+<blockquote><p>mobile</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>  {
+      "code": 1,
+      "msg": "验证码已发出，请注意查收",
+      "data": true
+  }
 </code></pre>
 
 <h3>更改密码</h3>
 
-<p>URL: act=member_index&amp;op=update_member_pwd<br/>
-参数：</p>
+<p>URL: act=member_security&amp;op=modify_pwd</p>
+
+<p>参数：</p>
 
 <blockquote><p>key  登录状态下才能操作  <br/>
-oldpwd 旧密码  <br/>
-newpwd 新密码</p></blockquote>
+old_pwd 旧密码  <br/>
+new_pwd 新密码  <br/>
+confirm_pwd 确认密码</p></blockquote>
 
 <p>返回：</p>
 
 <pre><code>{
-  code: 1,
-  msg: "更新成功"
+    "code": 1,
+    "msg": "密码修改成功",
+    "data": true
 }
 </code></pre>
 
@@ -2097,7 +2154,7 @@ type 0-动态 1-评论</p></blockquote>
 
 <h3>举报用户</h3>
 
-<p>URL: act=member_sns_infrom&amp;op=infrom_home</p>
+<p>URL: act=member_sns_inform&amp;op=inform_home</p>
 
 <p>参数：</p>
 

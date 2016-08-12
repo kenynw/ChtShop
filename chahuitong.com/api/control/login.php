@@ -84,12 +84,22 @@ class loginControl extends mobileHomeControl {
      */
     public function registerOp() {
         $model_member = Model('member');
+        $condition = array();
+        $condition['mobile'] = $_POST['mobile'];
+        $condition['auth_code'] = $_POST['code'];
+        $member_common_info = $model_member->getMemberCommonInfo($condition,'send_acode_time');
+        if (!$member_common_info) {
+            output_json(0, false, '手机验证码错误，请重新输入');
+        }
+        if (TIMESTAMP - $member_common_info['send_acode_time'] > 1800) {
+            output_json(0, false, '手机验证码已过期，请重新获取验证码');
+        }
 
         $register_info = array();
         $register_info['mobile']            = $_POST['mobile'];
         $register_info['username']          = empty($_POST['username']) ? $_POST['mobile'] : $_POST['username'];
         $register_info['password']          = $_POST['password'];
-        $register_info['password_confirm']  = $_POST['password_confirm'];
+        $register_info['password_confirm']  = empty($_POST['password_confirm']) ? $_POST['password'] : $_POST['password_confirm'];
         $register_info['email']             = $_POST['email'];
         $member_info = $model_member->register($register_info);
         if (!isset($member_info['error'])) {
@@ -143,7 +153,7 @@ class loginControl extends mobileHomeControl {
     public function send_codeOp() {
         $validate = new Validate();
         $validate->validateparam = array(
-            array("input"=>$_POST["mobile"], "require"=>"true", "validator"=>"mobile", "message"=>'手机号码格式不正确'),
+            array("input"=>$_POST['mobile'], "require"=>"true", "validator"=>"mobile", "message"=>'手机号码格式不正确'),
         );
         $error = $validate->validate();
         if ($error != '') output_json(0, false, $error);
@@ -156,7 +166,8 @@ class loginControl extends mobileHomeControl {
         $data = array();
         $data['auth_code'] = $verify_code;
         $data['send_acode_time'] = TIMESTAMP;
-        $update = $model_member->editMemberCommon($data,array('member_id'=>$member_info['member_id']));
+        $data['mobile'] = $_POST['mobile'];
+        $update = $model_member->addMemberCommon($data);
         if (!$update) {
             output_json(0, false, '系统发生错误，如有疑问请与管理员联系');
         }
@@ -170,7 +181,7 @@ class loginControl extends mobileHomeControl {
         $param['site_name']	= C('site_name');
         $message = ncReplaceText($tpl_info['content'],$param);
         $sms = new Sms();
-        $result = $sms->sendHuyi($member_info["member_mobile"], $message);
+        $result = $sms->sendHuyi($_POST['mobile'], $message);
 
         if ($result) {
             output_json(1, true, '验证码已发出，请注意查收');

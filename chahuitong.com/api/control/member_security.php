@@ -8,26 +8,6 @@
 class member_securityControl extends mobileMemberControl {
 
     /**
-     * 修改密码
-     */
-    public function modify_pwdOp() {
-        $obj_validate = new Validate();
-        $obj_validate->validateparam = array(
-            array("input"=>md5($_POST["old_pwd"]), "require"=>"true", "validator"=>"Compare","operator"=>"==","to"=>$this->member_info['member_passwd'],"message"=>'旧密码输入错误'),
-            array("input"=>$_POST["new_pwd"], "require"=>"true", "message"=>'请正确输入密码'),
-            array("input"=>$_POST["confirm_pwd"], "require"=>"true", "validator"=>"Compare","operator"=>"==","to"=>$_POST["new_pwd"],"message"=>'两次密码输入不一致'),
-        );
-        $error = $obj_validate->validate();
-        if ($error != '') output_json(0, false, $error);
-
-        $model_member = Model('member');
-        $update	= $model_member->editMember(array('member_id'=>$this->member_info['member_id']),array('member_passwd'=>md5($_POST['new_pwd'])));
-
-        if ($update) output_json(1, true, '密码修改成功');
-        else output_json(0, false, '密码修改失败');
-    }
-
-    /**
      * 统一发送身份验证码
      */
     public function send_auth_codeOp() {
@@ -64,6 +44,26 @@ class member_securityControl extends mobileMemberControl {
         } else {
             output_json(0, false, '验证码发送失败');
         }
+    }
+
+    /**
+     * 修改密码
+     */
+    public function modify_pwdOp() {
+        $obj_validate = new Validate();
+        $obj_validate->validateparam = array(
+            array("input"=>md5($_POST["old_pwd"]), "require"=>"true", "validator"=>"Compare","operator"=>"==","to"=>$this->member_info['member_passwd'],"message"=>'旧密码输入错误'),
+            array("input"=>$_POST["new_pwd"], "require"=>"true", "message"=>'请正确输入密码'),
+            array("input"=>$_POST["confirm_pwd"], "require"=>"true", "validator"=>"Compare","operator"=>"==","to"=>$_POST["new_pwd"],"message"=>'两次密码输入不一致'),
+        );
+        $error = $obj_validate->validate();
+        if ($error != '') output_json(0, false, $error);
+
+        $model_member = Model('member');
+        $update	= $model_member->editMember(array('member_id'=>$this->member_info['member_id']),array('member_passwd'=>md5($_POST['new_pwd'])));
+
+        if ($update) output_json(1, true, '密码修改成功');
+        else output_json(0, false, '密码修改失败');
     }
 
 }

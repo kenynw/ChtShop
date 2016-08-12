@@ -87,20 +87,25 @@ URL: act=login&op=send_code
       }
 
 ### 注册
-URL: act=login&op=register_api  
+
+URL: act=login&op=register  
 
 参数：
 
->mobile   
->password   
->verificode   
->label  
->client   
+>mobile     手机号   
+>password   密码  
+>code       验证码    
+>client     客户端类型(android wap wechat ios)
 
 返回： 
 
       {
-        code:  
+          "code": 1,
+          "msg": "SUCCESS",
+          "data": {
+              "username": "12345678912",
+              "key": "bb6a573583605063443c65f4395e559a"
+          }
       }
 
 ### 登录
@@ -108,9 +113,9 @@ URL：act=login
 
 参数：
 
->username 用户名  
->password 密码  
->client 客户端类型(android wap ios wechat)  
+>username   用户名  
+>password   密码  
+>client     客户端类型(android wap wechat ios)  
 
 返回
 
@@ -143,10 +148,10 @@ URL: act=login&op=register_api
 
 参数：
 
->key  shopNC的MD5值，固定为『804451dc13014b1c785fb73b1617b760』     
->client   客户端类型，可选：android，ios，web   
->op   第三方类型，可选：sina,wechat,qq  
->openid   第三方授权返回的唯一标识,如微博登录的Uid，腾讯的openId
+>key    shopNC的MD5值，固定为『804451dc13014b1c785fb73b1617b760』     
+>client 客户端类型，可选：android，ios，web   
+>op     第三方类型，可选：sina,wechat,qq  
+>openid 第三方授权返回的唯一标识,如微博登录的Uid，腾讯的openId
 
 返回： 
 
@@ -1890,7 +1895,7 @@ URL: act=member_sns_inform&op=inform_trace
        
 ### 举报用户
 
-URL: act=member_sns_infrom&op=infrom_home
+URL: act=member_sns_inform&op=inform_home
 
 参数：
 
