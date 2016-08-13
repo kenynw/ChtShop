@@ -122,7 +122,8 @@ class mb_specialModel extends Model{
             foreach ($item_list as $value) {
                 //处理图片
                 $item_data = $this->_formatMbSpecialData($value['item_data'], $value['item_type']);
-                $new_item_list[] = array($value['item_type'] => $item_data);
+//                $new_item_list[] = array($value['item_type'] => $item_data);
+                $new_item_list[$value['item_type']] = $item_data;
             }
             $item_list = $new_item_list;
         }
