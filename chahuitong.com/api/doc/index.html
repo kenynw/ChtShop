@@ -413,62 +413,177 @@ page   猜你喜欢的页数</p></blockquote>
 <p>返回:</p>
 
 <pre><code>{
-"code": 1,
-"data": {
-    "adds": [
-        {
-            "id": "14",
-            "image": "http://www.chahuitong.com/data/upload/mobile/home/1458113957.jpg",
-            "state": "1",
-            "order": "1",
-            "link": "http://www.chahuitong.com/example/web/raiders.html#",
-            "location": "1"
-        }
-    ],
-    "sample_image": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_240.gif",
-    "xianshi": {
-        "end_time": "1548812800",
-        "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_240.gif"
+    "code": 1,
+    "data": {
+        "adds": [
+            {
+                "id": "14",
+                "image": "http://www.chahuitong.com/data/upload/mobile/home/1458113957.jpg",
+                "state": "1",
+                "order": "1",
+                "link": "http://www.chahuitong.com/example/web/raiders.html#",
+                "location": "1"
+            }
+        ],
+        "sample_image": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_240.gif",
+        "xianshi": {
+            "end_time": "1548812800",
+            "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_240.gif"
+        },
+        "tasters_list": [
+            {
+                "goods_id": "101758",
+                "goods_name": "大益 普洱茶8582 生茶 357g 买二送一",
+                "goods_image": "2_05060208241996128.png",
+                "goods_price": "480.00",
+                "goods_promotion_price": "480.00",
+                "goods_marketprice": "480.00",
+                "goods_promotion_type": "0",
+                "store_id": "2",
+                "recommend_score": "9",
+                "recommend_taste": "回甘快",
+                "recommend_light": "金黄",
+                "recommend_aroma": "纯正",
+                "recommend_leaf": "柔匀",
+                "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif"
+            }
+        ],
+        "guess_list": [
+            {
+                "goods_id": "101724",
+                "goods_commonid": "101009",
+                "store_id": "2",
+                "goods_name": "云源号 普洱生茶2011年乔木早春官正宗品包邮云南布朗茶叶380g",
+                "goods_price": "188.00",
+                "goods_marketprice": "315.00",
+                "goods_image": "2_05034182403801496.jpg",
+                "goods_salenum": "0",
+                "evaluation_good_star": "5",
+                "evaluation_count": "0",
+                "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif",
+                "origin": "云南"
+            }
+        ]
     },
-    "tasters_list": [
-        {
-            "goods_id": "101758",
-            "goods_name": "大益 普洱茶8582 生茶 357g 买二送一",
-            "goods_image": "2_05060208241996128.png",
-            "goods_price": "480.00",
-            "goods_promotion_price": "480.00",
-            "goods_marketprice": "480.00",
-            "goods_promotion_type": "0",
-            "store_id": "2",
-            "recommend_score": "9",
-            "recommend_taste": "回甘快",
-            "recommend_light": "金黄",
-            "recommend_aroma": "纯正",
-            "recommend_leaf": "柔匀",
-            "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif"
-        }
-    ],
-    "guess_list": [
-        {
-            "goods_id": "101724",
-            "goods_commonid": "101009",
-            "store_id": "2",
-            "goods_name": "云源号 普洱生茶2011年乔木早春官正宗品包邮云南布朗茶叶380g",
-            "goods_price": "188.00",
-            "goods_marketprice": "315.00",
-            "goods_image": "2_05034182403801496.jpg",
-            "goods_salenum": "0",
-            "evaluation_good_star": "5",
-            "evaluation_count": "0",
-            "goods_image_url": "http://www.chahuitong.com/data/upload/shop/common/default_goods_image_360.gif",
-            "origin": "云南"
-        }
-    ]
-},
-"msg": "SUCCESS"
+    "msg": "SUCCESS"
+}       
 </code></pre>
 
-<p>}</p>
+<h3>首页（后台动态控制版）</h3>
+
+<p>URL: act=index</p>
+
+<p>参数：</p>
+
+<blockquote><p>key    登录令牌,根据浏览记录获取猜你喜欢商品列表</p></blockquote>
+
+<p>返回:</p>
+
+<pre><code>{
+    "code": 1,
+    "msg": "SUCCESS",
+    "data": {
+        "adv_list": {
+            "item": [
+                {
+                    "image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+                    "type": "url",
+                    "data": "http://www.chahuitong.com/example/web/raiders.html#"
+                },
+                {
+                    "image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+                    "type": "url",
+                    "data": "http://www.chahuitong.com/example/web/raiders.html#"
+                }
+            ]
+        },
+        "home3": {
+            "title": "",
+            "item": [
+                {
+                    "image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+                    "type": "url",
+                    "data": "goodsList://m.chahuitong.com/commend"
+                },
+                {
+                    "image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+                    "type": "keyword",
+                    "data": "滇臻號"
+                }
+            ]
+        },
+        "home1": {
+            "title": "试茶师推荐",
+            "image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+            "type": "special",
+            "data": "3"
+        },
+        "goods": {
+            "title": "试茶师推荐",
+            "item": [
+                {
+                    "goods_id": "101758",
+                    "goods_name": "大益 普洱茶8582 生茶 357g 买二送一",
+                    "goods_promotion_price": "480.00",
+                    "goods_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
+                },
+                {
+                    "goods_id": "101938",
+                    "goods_name": "中茶 圆茶-丹凤金毫普洱茶（2015年熟茶） 500g",
+                    "goods_promotion_price": "968.00",
+                    "goods_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
+                },
+                {
+                    "goods_id": "101761",
+                    "goods_name": "大益 06年 7542 生茶 357g 601批 买二送一",
+                    "goods_promotion_price": "880.00",
+                    "goods_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
+                },
+                {
+                    "goods_id": "101937",
+                    "goods_name": "中茶 2015年中茶普洱 布朗乔木老树 生茶 357g",
+                    "goods_promotion_price": "258.00",
+                    "goods_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
+                }
+            ]
+        },
+        "home4": {
+            "title": "",
+            "rectangle1_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+            "rectangle1_type": "url",
+            "rectangle1_data": "http://www.chahuitong.com/wap/index.php/Home/index/categorydetail/id/1",
+            "rectangle2_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+            "rectangle2_type": "url",
+            "rectangle2_data": "http://www.chahuitong.com/wap/index.php/Home/index/product_list?keyword=新品",
+            "square_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+            "square_type": "url",
+            "square_data": "http://www.chahuitong.com/wap/index.php/Home/index/product_list?keyword=尊享"
+        },
+        "home2": {
+            "title": "",
+            "square_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+            "square_type": "url",
+            "square_data": "http://www.chahuitong.com/wap/index.php/Home/Index/brandGoods/bid/375",
+            "rectangle1_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+            "rectangle1_type": "url",
+            "rectangle1_data": "http://www.chahuitong.com/wap/index.php/Home/index/product_list?keyword=%E7%89%B9%E5%8D%96",
+            "rectangle2_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif",
+            "rectangle2_type": "url",
+            "rectangle2_data": "http://www.chahuitong.com/wap/index.php/Home/index/product_list?keyword=精品"
+        },
+        "guess_list": [
+            {
+                "goods_id": "101469",
+                "goods_name": "陶茗堂 云南建水县陶茗堂松雕紫陶茶壶一把",
+                "goods_price": "600.00",
+                "goods_image": "2_05009856838990058.jpg",
+                "goods_image_url": "http://img.chahuitong.com/shop/common/default_goods_image_360.gif",
+                "origin": "云南"
+            }
+        ]
+    }
+}
+</code></pre>
 
 <h3>商品列表</h3>
 
