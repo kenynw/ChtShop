@@ -53,7 +53,12 @@ class indexControl extends mobileHomeControl{
             header('Location: ' . $model_special->getMbSpecialHtmlUrl($special_id));
             die;
         } else {
-            //猜你喜欢
+//            $new_data = array();
+//            foreach ($data as $value) {
+//                $new_data['home2'] = $value['home2'];
+//            }
+
+            // 猜你喜欢
             $model_mb_user_token = Model('mb_user_token');
             $key = $_POST['key'];
             if(empty($key)) {

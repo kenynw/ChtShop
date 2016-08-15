@@ -159,7 +159,7 @@ class mb_specialModel extends Model{
                     $value['goods_image'] = cthumb($value['goods_image']);
                     $new_item[] = $value;
                 }
-                $item_data['item'] = $new_item;
+                $item_data = $new_item;
                 break;
             default:
                 $new_item = array();
@@ -167,7 +167,7 @@ class mb_specialModel extends Model{
                     $value['image'] = getMbSpecialImageUrl($value['image']);
                     $new_item[] = $value;
                 }
-                $item_data['item'] = $new_item;
+                $item_data = $new_item;
         }
         return $item_data;
     }
