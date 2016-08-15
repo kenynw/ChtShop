@@ -30,9 +30,10 @@ class goodsControl extends mobileHomeControl{
         } elseif (!empty($_GET['keyword'])) {
             $condition['goods_name|goods_jingle'] = array('like', '%' . $_GET['keyword'] . '%');
         }
+        $condition['goods_commend'] = intval(empty($_GET['commend']) ? $_POST['commend'] : $_GET['commend']);
 
         //所需字段
-        $fieldstr = "goods_id,goods_commonid,store_id,goods_name,goods_price,goods_marketprice,goods_image,goods_salenum,evaluation_good_star,evaluation_count";
+        $fieldstr = "goods_id,goods_commonid,store_id,goods_name,goods_commend,goods_price,goods_marketprice,goods_image,goods_salenum,evaluation_good_star,evaluation_count";
 
         // 添加3个状态字段
         $fieldstr .= ',is_virtual,is_presell,is_fcode,have_gift';

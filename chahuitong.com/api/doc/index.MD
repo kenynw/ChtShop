@@ -374,12 +374,13 @@ URL(Get): act=goods&op=goods_list
 参数：
 
 >version 版本号	
->key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序	
->order 排序方式 1-升序 2-降序	
->page 每页数量	
->curPage 当前页码	
->gc_id 分类编号	
->keyword 搜索关键字 注：gc_id和keyword二选一不能同时出现	
+>key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序	    
+>order 排序方式 1-升序 2-降序   
+>page 每页数量  
+>curPage 当前页码   
+>gc_id 分类编号     
+>keyword 搜索关键字 注：gc_id和keyword二选一不能同时出现     
+>commend 是否推荐 0-推荐 1-未推荐    	
 
 返回：
 
@@ -389,7 +390,8 @@ URL(Get): act=goods&op=goods_list
             "list": [
                 {
                     "goods_id": "102064",
-                    "goods_name": "倚澜岩 武夷山岩茶 虎肉 两盒装 250g",
+                    "goods_name": "滇臻號·【滇】",
+                    "goods_commend": "1",
                     "goods_price": "300.00",
                     "goods_marketprice": "399.00",
                     "goods_image": "2_05102418687282446.jpg",
