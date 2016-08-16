@@ -480,14 +480,12 @@ class member_fleaControl extends mobileMemberControl
      * 获取类别列表
      */
     public function class_listOp() {
-        $id = intval(
-            empty($_POST['class_id']) ? $_GET['class_id'] : $_POST['class_id']
-        );
+        $id = empty($_POST['class_id']) ? $_GET['class_id'] : $_POST['class_id'];
 
         $model_goods_class = Model('flea_class');
         $condition = array();
         $condition['gc_show'] = 1;
-        $condition['gc_parent_id'] = $id;
+        $condition['gc_parent_id'] = "$id";
         $goods_class = $model_goods_class->getClassList($condition);
         foreach ($goods_class as $key => $value) {
             $child_list = $model_goods_class->getNextLevelGoodsClassById(
