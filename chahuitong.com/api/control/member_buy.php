@@ -24,10 +24,10 @@ class member_buyControl extends mobileMemberControl {
      */
     public function buy_step1Op() {
 
-        $cart_id = explode(',', $_GET['cart_id']);
+        $cart_id = explode(',', $_POST['cart_id']);
         $logic_buy = logic('buy');
         //得到购买数据
-        $result = $logic_buy->buyStep1($cart_id, $_GET['ifcart'], $this->member_info['member_id'], $this->member_info['store_id']);
+        $result = $logic_buy->buyStep1($cart_id, $_POST['ifcart'], $this->member_info['member_id'], $this->member_info['store_id']);
         if(!$result['state']) {
             output_error($result['msg']);
         } else {
