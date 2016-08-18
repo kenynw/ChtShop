@@ -165,13 +165,11 @@ class member_buyControl extends mobileMemberControl {
 
         $data = $logic_buy->changeAddr($_POST['freight_hash'],$_POST['city_id'],$_POST['area_id'], $this->member_info['member_id']);
         if(!empty($data) && $data['state'] == 'success' ) {
-            if($_POST['version']){
-                output_json(1,$data,'查询正常');
-                die();
-            }
-            output_data($data);
+            $data['allow_offpay_batch'] = array_values($data['allow_offpay_batch']);
+            unset($data['state']);
+            output_json(1, $data);
         } else {
-            output_error('地址修改失败');
+            output_json(0, array(), '地址修改失败');
         }
     }
 
