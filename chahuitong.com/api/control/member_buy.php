@@ -24,50 +24,10 @@ class member_buyControl extends mobileMemberControl {
      */
     public function buy_step1Op() {
 
-        $cart_id = explode(',', $_POST['cart_id']);
-        /*立即购买免费茶样领取检测<<*/
-        if(count($cart_id)==1){
-          list($goods_id,$buynum)=explode('|',$cart_id[0]);
-          $goodsModel=Model("goods");
-          $isGoodsId=$goodsModel->table("goods")->where("goods_id='$goods_id' and is_goods_sample='1'")->find();
-          if($isGoodsId){
-              $sampleModel=Model("goods_sample");
-              $goodsSampleInfo=$sampleModel->where("sample_link='$goods_id'")->find();
-              //是否是正在进行茶样
-              if(TIMESTAMP<$goodsSampleInfo["sample_start_time"]){
-                  if(isset($_POST['version'])){
-                      output_json(0,'','免费茶样还未开始');
-                      die();
-                  }else{
-                      output_error('免费茶样还未开始');
-                  }
-              }
-              if(TIMESTAMP>$goodsSampleInfo["sample_end_time"]){
-                  if(isset($_POST['version'])){
-                      output_json(0,'','免费茶样已经结束');
-                      die();
-                  }else{
-                      output_error('免费茶样已经结束');
-                  }
-              }
-              //是否已经领取过了
-              $sql="select gs.goods_id,o.add_time from shopnc_order_goods as gs left join shopnc_order as o on gs.order_id=o.order_id where gs.goods_id=$goods_id and o.add_time>".$goodsSampleInfo["sample_start_time"]." and o.add_time<".$goodsSampleInfo["sample_end_time"]." and o.buyer_id='".$this->member_info['member_id']."'";
-              $model=Model();
-              $result=$model->query($sql);
-              if($result&&($this->member_info['member_id']!=164)&&($this->member_info['member_id']!=1829)){
-                  if(isset($_POST['version'])){
-                     output_json(0,'','您已经领取了免费茶样');
-                      die();
-                  }else{
-                      output_error('您已经领取了免费茶样');
-                  }
-              }
-          }
-        }
-        /*立即购买免费茶样领取检测>>*/
+        $cart_id = explode(',', $_GET['cart_id']);
         $logic_buy = logic('buy');
         //得到购买数据
-        $result = $logic_buy->buyStep1($cart_id, $_POST['ifcart'], $this->member_info['member_id'], $this->member_info['store_id']);
+        $result = $logic_buy->buyStep1($cart_id, $_GET['ifcart'], $this->member_info['member_id'], $this->member_info['store_id']);
         if(!$result['state']) {
             output_error($result['msg']);
         } else {
@@ -76,47 +36,25 @@ class member_buyControl extends mobileMemberControl {
         //整理数据
         $store_cart_list = array();
         foreach ($result['store_cart_list'] as $key => $value) {
-            if(isset($_POST['version']) && $_POST['version'] > 1) {
-                $store_list = array();
-                $store_list['goods_list'] = $value;
-                $store_list['store_goods_total'] = $result['store_goods_total'][$key];
-                if(!empty($result['store_premiums_list'][$key])) {
-                    $result['store_premiums_list'][$key][0]['premiums'] = true;
-                    $result['store_premiums_list'][$key][0]['goods_total'] = 0.00;
-                    $store_cart_list['goods_list'][] = $result['store_premiums_list'][$key][0];
-                }
-                $store_list['store_mansong_rule_list'] = $result['store_mansong_rule_list'][$key];
-                $store_list['store_voucher_list'] = array_values($result['store_voucher_list'][$key]);
-                if(!empty($result['cancel_calc_sid_list'][$key])){
-                    $store_list['freight'] = false;
-                    $store_list['freight_message'] = $result['cancel_calc_sid_list'][$key]['desc'];
-                } else {
-                    $store_list['freight'] = true;
-                }
-                $store_list['store_id'] = $key;
-                $store_list['store_name'] = $value[0]['store_name'];
-                $store_cart_list[] = $store_list;
-            } else {
-                $store_cart_list[$key]['goods_list'] = $value;
-                $store_cart_list[$key]['store_goods_total'] = $result['store_goods_total'][$key];
-                if(!empty($result['store_premiums_list'][$key])) {
-                    $result['store_premiums_list'][$key][0]['premiums'] = true;
-                    $result['store_premiums_list'][$key][0]['goods_total'] = 0.00;
-                    $store_cart_list[$key]['goods_list'][] = $result['store_premiums_list'][$key][0];
-                }
-                $store_cart_list[$key]['store_mansong_rule_list'] = $result['store_mansong_rule_list'][$key];
-                $store_cart_list[$key]['store_voucher_list'] = $result['store_voucher_list'][$key];
-                if(!empty($result['cancel_calc_sid_list'][$key])){
-                    $store_cart_list[$key]['freight'] = '0';
-                    $store_cart_list[$key]['freight_message'] = $result['cancel_calc_sid_list'][$key]['desc'];
-                } else {
-                    $store_cart_list[$key]['freight'] = '1';
-                }
-                /*代金券 add by lai<<*/
-                $store_cart_list[$key]['voucher_list']=array_values($result['store_voucher_list'][$key]);
-                /*代金券>>*/
-                $store_cart_list[$key]['store_name'] = $value[0]['store_name'];
+            $store_list = array();
+            $store_list['goods_list'] = $value;
+            $store_list['store_goods_total'] = $result['store_goods_total'][$key];
+            if(!empty($result['store_premiums_list'][$key])) {
+                $result['store_premiums_list'][$key][0]['premiums'] = true;
+                $result['store_premiums_list'][$key][0]['goods_total'] = 0.00;
+                $store_cart_list['goods_list'][] = $result['store_premiums_list'][$key][0];
             }
+            $store_list['store_mansong_rule_list'] = $result['store_mansong_rule_list'][$key];
+            $store_list['store_voucher_list'] = $result['store_voucher_list'][$key];
+            if(!empty($result['cancel_calc_sid_list'][$key])){
+                $store_list['freight'] = false;
+                $store_list['freight_message'] = $result['cancel_calc_sid_list'][$key]['desc'];
+            } else {
+                $store_list['freight'] = true;
+            }
+            $store_list['store_id'] = $key;
+            $store_list['store_name'] = $value[0]['store_name'];
+            $store_cart_list[] = $store_list;
         }
 
         $buy_list = array();
@@ -135,16 +73,7 @@ class member_buyControl extends mobileMemberControl {
         $buy_list['offpay_hash']=$datas['offpay_hash'];
         $buy_list['offpay_hash_batch']=$datas['offpay_hash_batch'];
 
-        /**/
-        /*end*/
-        //output_data($buy_list);
-        /*add by lai用户判断是否用新格式输出json<<*/
-        if(isset($_POST['version'])){
-            output_json(1,$buy_list);
-        }else{
-            output_data($buy_list);
-        }
-        /*add by lai用户判断是否用新格式输出json>>*/
+        output_json(1, $buy_list);
     }
 
     /**
