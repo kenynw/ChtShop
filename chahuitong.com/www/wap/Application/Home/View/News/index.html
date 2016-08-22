@@ -38,8 +38,8 @@
 									   $(".new").html(html);
 									   									   
 									   }else{
-			var html='<li id="'+data.content[i].article_id+'"><div class="text"><h4><a href="#">'+data.content[i].article_title+'</a><time>'+data.content[i].article_publish_time+'</time></h4><p>'+data.content[i].article_abstract+'</p></div><img src="/data/upload/cms/article/'+data.content[i].article_image.path+'/'+data.content[i].article_image.name+'"></li>';				 
-			                         $(".list ul").append(html);						   										   										   
+			var html='<li id="'+data.content[i].article_id+'"><div class="text"><h4><a href="__URL__/articleDetail/id/' + data.content[i].article_id + '">'+data.content[i].article_title+'</a><time>'+data.content[i].article_publish_time+'</time></h4><p>'+data.content[i].article_abstract+'</p></div><img src="/data/upload/cms/article/'+data.content[i].article_image.path+'/'+data.content[i].article_image.name+'"></li>';
+			                         $(".list ul").append(html);
 										   }							
 								
 								}
@@ -47,13 +47,11 @@
 						 $("nav a").click(nav);
 						 
 						 jQuery(window).scroll(sliderdown);
-						 
-						 	
-						 $(".list li").click(showDetail);			
+
+						 //$(".list li").click(showDetail);
 						  
 						 $(".new").click(showDetail);		
-						   					 
-							  
+
 							  }else{
 								  
 							alert("this is error");
