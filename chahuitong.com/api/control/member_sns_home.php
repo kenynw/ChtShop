@@ -5,73 +5,34 @@
  * Date: 16/5/26
  * Time: 下午7:20
  */
-class member_sns_homeControl extends mobileHomeControl {
-
-    public function __construct() {
-        parent::__construct();
-    }
+class member_sns_homeControl extends mobileSNSControl {
 
     /**
      * 个人主页
      */
     public function indexOp() {
-        $key = empty($_GET['key']) ? $_POST['key'] : $_GET['key'];
-        $model_mb_user_token = Model('mb_user_token');
-        $mb_user_token_info = $model_mb_user_token->getMbUserTokenInfoByToken($key);
-
-        $mid = intval(empty($_GET['mid']) ? $_POST['mid'] : $_GET['mid']);
-        if ($mid <= 0) {
-            if (empty($mb_user_token_info)) {
-                output_json(-1, array(), '请登录');
-            }
-            $mid = intval($mb_user_token_info['member_id']);
-        }
-
         // 用户基本信息
         $model_member = Model('member');
-        $this->member_info = $model_member->getMemberInfoByID($mid);
-        $member_info['member_id'] = $this->member_info['member_id'];
-        $member_info['member_name'] = $this->member_info['member_name'];
-        $member_info['member_truename'] = $this->member_info['member_truename'];
-        $member_info['member_avatar'] = getMemberAvatar($this->member_info['member_avatar']);
-        $member_info['member_sex'] = $this->member_info['member_sex'];
-        $member_info['member_areainfo'] = $this->member_info['member_areainfo'];
-        $member_info['member_intro'] = $this->member_info['member_intro'];
+        $field_member = 'member_id, member_name, member_truename, member_avatar, member_sex, member_areainfo, member_intro';
+        $member_info= $model_member->getMemberInfoByID($this->master_id, $field_member);
 
         // 获取关注好友
         $model_friend = Model('sns_friend');
-        $relation = 0;
-        if ($mid == $mb_user_token_info['member_id']) {
-            $relation = 3;
-        } else {
-            $condition_friend = array();
-            $condition_friend['friend_frommid'] = $mb_user_token_info['member_id'];
-            $condition_friend['friend_tomid'] = $mid;
-            $friend_info = $model_friend->getFriendRow($condition_friend);
-            if (empty($friend_info)) {
-                $relation = 1;
-            } elseif($friend_info['friend_followstate'] == 2) {
-                $relation = 2;
-            } elseif($friend_info['friend_followstate'] == 1) {
-                $relation = 4;
-            }
-        }
-        $member_info['relation'] = $relation;
-        $member_info['following'] = $model_friend->countFriend(array('friend_frommid' => $mid));
-        $member_info['followers'] = $model_friend->countFriend(array('friend_tomid' => $mid));
+        $member_info['relation'] = $this->relation;
+        $member_info['following'] = $model_friend->countFriend(array('friend_frommid' => $this->master_id));
+        $member_info['followers'] = $model_friend->countFriend(array('friend_tomid' => $this->master_id));
 
         // 获取动态相关
         $model_trace = Model('sns_tracelog');
-        $member_info['trace_count'] = $model_trace->countTrace(array('trace_memberid' => $mid, 'trace_state' => 0));
+        $member_info['trace_count'] = $model_trace->countTrace(array('trace_memberid' => $this->master_id, 'trace_state' => 0));
         $condition_trace = array();
-        $condition_trace['trace_memberid']	= $mid;
+        $condition_trace['trace_memberid']	= $this->master_id;
         $condition_trace['trace_state']		= 0;
-        $field_trace = 'trace_id,trace_originalid,trace_title,trace_image,trace_addtime,trace_state,trace_privacy,trace_commentcount,trace_likecount';
-        switch ($relation){
+        $field_trace = 'trace_id,trace_originalid,trace_title,trace_image,trace_memberid,trace_addtime,trace_state,trace_privacy,trace_commentcount,trace_likecount';
+        switch ($this->relation){
             case 2:
                 $condition_trace['trace_privacy']	= array('in', array(0,1));
                 break;
-            case 1:
             default:
                 $condition_trace['trace_privacy']	= 0;
         }
@@ -135,6 +96,21 @@ class member_sns_homeControl extends mobileHomeControl {
                     //替换内容中的siteurl
                     $value['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_content']);
                 }
+
+                // 与登录用户关系
+                $value['relation'] = $this->relation;
+
+                // 查询点赞状态
+                $model_like = Model('sns_like');
+                $like_info = $model_like->getLikeInfo(array(
+                    'like_memberid' => $this->member_id,
+                    'like_originalid' => $value['trace_id'],
+                    'like_originaltype' => 0,
+                    'like_state' => 0
+                ));
+                if (empty($like_info)) $value['is_like'] = false;
+                else $value['is_like'] = true;
+
                 $trace_list[$key] = $value;
             }
             return $trace_list;

@@ -109,6 +109,48 @@ class mobileCMSControl extends mobileMemberControl {
 
 }
 
-class mobileSNSControl extends mobileMemberControl {
+class mobileSNSControl extends mobileControl {
+
+    // 主人ID
+    protected $master_id;
+
+    // 登录用户和主人关系 0表示未登录 1表示未关注 2表示互相关注 3表示自己 4表示已关注
+    protected $relation;
+
+    // 浏览者ID
+    protected $member_id;
+
+    public function __construct() {
+        parent::__construct();
+
+        $this->_check_relation();
+    }
+
+    private function _check_relation() {
+        $key = empty($_GET['key']) ? $_POST['key'] : $_GET['key'];
+        $model_mb_user_token = Model('mb_user_token');
+        $mb_user_token_info = $model_mb_user_token->getMbUserTokenInfoByToken($key);
+        $this->member_id = $mb_user_token_info['member_id'];
+
+        $this->master_id = intval(empty($_GET['mid']) ? $_POST['mid'] : $_GET['mid']);
+        if ($this->master_id <= 0) $this->master_id = intval($mb_user_token_info['member_id']);
+
+        $model_friend = Model('sns_friend');
+        if ($this->master_id == $mb_user_token_info['member_id']) {
+            $this->relation = 3;
+        } else {
+            $condition_friend = array();
+            $condition_friend['friend_frommid'] = $mb_user_token_info['member_id'];
+            $condition_friend['friend_tomid'] = $this->master_id;
+            $friend_info = $model_friend->getFriendRow($condition_friend);
+            if (empty($friend_info)) {
+                $this->relation = 1;
+            } elseif($friend_info['friend_followstate'] == 2) {
+                $this->relation = 2;
+            } elseif($friend_info['friend_followstate'] == 1) {
+                $this->relation = 4;
+            }
+        }
+    }
 
 }

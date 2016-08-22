@@ -6,7 +6,7 @@
  * Time: 下午3:40
  */
 class member_sns_traceControl extends mobileMemberControl {
-    
+
     public function __construct() {
         parent::__construct();
     }
@@ -77,6 +77,9 @@ class member_sns_traceControl extends mobileMemberControl {
                 ));
                 if (empty($like_info)) $trace_list[$key]['is_like'] = false;
                 else $trace_list[$key]['is_like'] = true;
+
+                // 关系
+                $trace_list[$key]['relation'] = $this->_check_relation($value['trace_memberid']);
             }
         }
 
