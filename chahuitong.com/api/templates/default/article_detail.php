@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <title>专题</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo RESOURCE_SITE_URL; ?>/wap/css/bootstrap.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo RESOURCE_SITE_URL; ?>/wap/css/articleStyle.css">
 </head>
 <body>
