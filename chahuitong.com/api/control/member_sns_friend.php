@@ -171,14 +171,24 @@ class member_sns_friendControl extends mobileMemberControl {
                 $model_friend->editFriend(array('friend_followstate'=>'2'),array('friend_id'=>"{$friend_info['friend_id']}"));
             }
 
+            // 添加消息通知
+            $model_message = Model('message');
             $param = array();
             $param['from_member_id'] = $this->member_info['member_id'];
-            $param['from_member_name'] = $this->member_info['member_name'];
             $param['to_member_id'] = $member_info['member_id'];
-            $param['to_member_name'] = $member_info['member_name'];
-            $param['msg_content'] = $this->member_info['member_name'] . '&关注了你';
             $param['message_type'] = 3;
-            Model('message')->saveMessage($param);
+            $message_info = $model_message->getRowMessage($param);
+            if (!empty($message_info)) {
+                $condition = array();
+                $condition['from_member_name'] = $this->member_info['member_name'];
+                $condition['to_member_name'] = $member_info['member_name'];
+                $model_message->updateCommonMessage($param, $condition);
+            } else {
+                $param['from_member_name'] = $this->member_info['member_name'];
+                $param['to_member_name'] = $member_info['member_name'];
+                $param['msg_content'] = $this->member_info['member_name'] . '关注了你';
+                $model_message->saveMessage($param);
+            }
 
             output_json(1, $insert['friend_followstate']);
         } else {
@@ -199,6 +209,15 @@ class member_sns_friendControl extends mobileMemberControl {
         if($result){
             //更新对方的关注状态
             $friend_model->editFriend(array('friend_followstate'=>'1'),array('friend_frommid'=>"$mid",'friend_tomid'=>$this->member_info['member_id']));
+
+            // 更新消息通知
+            $model_message = Model('message');
+            $param = array();
+            $param['from_member_id'] = $this->member_info['member_id'];
+            $param['to_member_id'] = $mid;
+            $param['message_type'] = 3;
+            $model_message->dropCommonMessage($param, 'sns_msg');
+            
             output_json(1, 0);
         }else{
             output_json(0, 1, '取消关注失败');
