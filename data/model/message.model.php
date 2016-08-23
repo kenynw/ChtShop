@@ -128,13 +128,12 @@ class messageModel extends Model {
 	 * 更新站内信
 	 */
 	public function updateCommonMessage($param,$condition){
-//		if(empty($param)) {
-//			return false;
-//		}
-//		//得到条件语句
-//		$condition_str = $this->getCondition($condition);
-//		Db::update('message',$param,$condition_str);
-		return $this->table('message')->where($condition)->update($param);
+		if(empty($param)) {
+			return false;
+		}
+		//得到条件语句
+		$condition_str = $this->getCondition($condition);
+		return Db::update('message',$param,$condition_str);
 	}
 	/**
 	 * 删除发送信息
