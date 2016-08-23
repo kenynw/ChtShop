@@ -58,9 +58,20 @@ class articleControl extends mobileCMSControl {
         if(empty($article_detail) || intval($article_detail['article_state']) !== self::ARTICLE_STATE_PUBLISHED) {
             output_json(0, '文章不存在');
         }
-        
+
+        // 处理头像
+        Tpl::output("publisher_avatar", getMemberAvatarForID($article_detail['article_publisher_id']));
+
+        // 处理点击
+        $article_detail['article_heat'] = $article_detail['article_click'] . '次阅 · ' . $article_detail['article_comment_count'] . '评论';
+
         //计数加1
         $model_article->modify(array('article_click'=>array('exp','article_click+1')),array('article_id'=>$article_id));
+
+        //seo
+        Tpl::output('seo_title', $article_detail['article_title']);
+        Tpl::output('article_keyword', $article_detail['article_keyword']);
+        Tpl::output('article_description', $article_detail['article_abstract']);
 
         Tpl::output('article_detail', $article_detail);
         Tpl::showpage('article_detail');

@@ -216,8 +216,8 @@ class member_sns_friendControl extends mobileMemberControl {
             $param['from_member_id'] = $this->member_info['member_id'];
             $param['to_member_id'] = $mid;
             $param['message_type'] = 3;
-            $model_message->dropCommonMessage($param, 'sns_msg');
-            
+            $model_message->dropCommonMessage($param, 'msg_private');
+
             output_json(1, 0);
         }else{
             output_json(0, 1, '取消关注失败');

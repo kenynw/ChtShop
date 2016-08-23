@@ -87,7 +87,7 @@ class mobileMemberControl extends mobileControl{
     }
 }
 
-class mobileCMSControl extends mobileMemberControl {
+class mobileCMSControl extends mobileControl {
 
     //文章状态草稿箱
     const ARTICLE_STATE_DRAFT = 1;
@@ -106,6 +106,15 @@ class mobileCMSControl extends mobileMemberControl {
     //文章评论类型
     const ARTICLE = 1;
     const PICTURE = 2;
+
+    public function __construct() {
+        parent::__construct();
+
+        // SEO
+        Tpl::output('html_title',C('cms_seo_title').'-'.C('site_name').'');
+        Tpl::output('seo_keywords',C('cms_seo_keywords'));
+        Tpl::output('seo_description',C('cms_seo_description'));
+    }
 
 }
 

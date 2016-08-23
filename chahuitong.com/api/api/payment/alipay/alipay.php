@@ -164,6 +164,24 @@ class alipay
         return false;
     }
 
+    public function getPayInfo() {
+        $client = new AopClient();
+        $client->appId = "2015102600552912";
+        $client->rsaPrivateKeyFilePath = BASE_PATH.DS.'api'.DS.'payment'.DS.'alipay-sdk'.DS. "key/rsa_private_key.pem";
+        $client->alipayPulicKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5SOD9ryw1FARj7WkRnsYierkK 9Vp7qHOOp/2vY/stoS7lbo/H4NVzT9zQ0sc4kO4vaqL7hhSVXWdbePxMQwXvkuK6 kTZA5YybQC8iZRI1IlkXN/Z5aQJTq+RvfNSoTce2Ncx/t+vP2wCG2/oNkZrzZoLN lQTAI3T1/f6yXDRVoQIDAQAB";
+        // alipay.trade.app.pay
+        $request = new AlipayTradeAppPayRequest();
+        $request->setBizContent("{" .
+            "    \"subject\":\"茶汇通-订单编号8000000000152501\"," .
+            "    \"out_trade_no\":\"360524941490891164\"" .
+            "    \"total_amount\":\"10990.0\"" .
+            "    \"seller_id\":\"damenghai@aliyun.com\"" .
+            "    \"product_code\":\"QUICK_MSECURITY_PAY\"" .
+            "  }");
+        $response = $client->execute($request);
+        return $response;
+    }
+
     /**
      * 获取notify信息
      */
