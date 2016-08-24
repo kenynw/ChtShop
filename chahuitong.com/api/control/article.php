@@ -59,9 +59,6 @@ class articleControl extends mobileCMSControl {
             output_json(0, '文章不存在');
         }
 
-        // 处理头像
-        Tpl::output("publisher_avatar", getMemberAvatarForID($article_detail['article_publisher_id']));
-
         //计数加1
         $model_article->modify(array('article_click'=>array('exp','article_click+1')),array('article_id'=>$article_id));
 

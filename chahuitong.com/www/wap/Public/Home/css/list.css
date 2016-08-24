@@ -1,22 +1,130 @@
 @charset "utf-8";
 /* CSS Document */
-*{margin:0;padding:0;}
-body{width:100%;min-width:320px;max-width:640px;text-align:center;background:#f5f5f5;font-family:"微软雅黑";margin:0 auto;}
-a{text-decoration:none; color:#9a9a9a;}
-.nav{background:#fff;width:100%;height:25px;padding-top:8px;position:fixed;top:40px;left:0px;}
-.nav ul{list-style-type:none;}
-.nav ul li{float:left;width:24%;}
-.nav ul li a{padding:1px 5px;}
-:target{color:#1b8b80;border-bottom:3px solid #1b8b80;}
-.list{margin-top:28px;padding-bottom:50px;overflow:auto;width:100%}
-.show{width:48.3%;min-width:143px;background:#fff;float:left;border:1px solid #ccc;margin:5px 0.5% 0px 0.5%;}
-.title{padding:8px 0px;font-size:0.7em;width:90%;margin:0 auto;}
-.title img{width:143px;height:143px;}
-.jiage{width:100%;height:30px;text-align:left;border-top:1px solid #ccc;}
-.jiage mark{ position:relative;top:3px;color:#1b8b80;font-size:1.1em;background:#fff;}
-.jiage img:first-child{height:30px;vertical-align:middle;margin:0 5px 0 10px;}
-.jiage img:last-child{width:6.7px;height:12px;float:right;margin:8px 20px;}
-nav{width:100%;height:55px;position:fixed;left:0px;bottom:0px;}
-nav a{float:left;width:20%;background:#fff;padding:5px 0px;font-size:14px}
-nav img{width:20px;}
-.show h3{width:100%;height:16px;line-height:16px;overflow:hidden;}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    text-align: center;
+    background: #f5f5f5;
+    font-family: "微软雅黑";
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #9a9a9a;
+}
+
+.nav {
+    background: #fff;
+    width: 100%;
+    height: 25px;
+    padding-top: 8px;
+    position: fixed;
+    top: 40px;
+    left: 0px;
+}
+
+.nav ul {
+    list-style-type: none;
+}
+
+.nav ul li {
+    float: left;
+    width: 24%;
+}
+
+.nav ul li a {
+    padding: 1px 5px;
+}
+
+:target {
+    color: #1b8b80;
+    border-bottom: 3px solid #1b8b80;
+}
+
+.list {
+    margin-top: 28px;
+    padding-bottom: 50px;
+    overflow: auto;
+    width: 100%
+}
+
+.show {
+    width: 48.3%;
+    min-width: 143px;
+    background: #fff;
+    float: left;
+    border: 1px solid #ccc;
+    margin: 5px 0.5% 0px 0.5%;
+}
+
+.title {
+    padding: 8px 8px 0 8px;
+    font-size: 0.7em;
+}
+
+.title img {
+    width: 100%;
+    height: 143px;
+}
+
+.jiage {
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    border-top: 1px solid #ccc;
+}
+
+.jiage mark {
+    position: relative;
+    top: 3px;
+    color: #1b8b80;
+    font-size: 1.1em;
+    background: #fff;
+}
+
+.jiage img:first-child {
+    height: 30px;
+    vertical-align: middle;
+    margin: 0 5px 0 10px;
+}
+
+.jiage img:last-child {
+    width: 6.7px;
+    height: 12px;
+    float: right;
+    margin: 8px 20px;
+}
+
+nav {
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+
+nav a {
+    float: left;
+    width: 20%;
+    background: #fff;
+    padding: 5px 0px;
+    font-size: 14px
+}
+
+nav img {
+    width: 20px;
+}
+
+.show h3 {
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+}
