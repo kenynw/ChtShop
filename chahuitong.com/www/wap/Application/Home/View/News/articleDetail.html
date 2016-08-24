@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>茶汇通资讯</title>
+    <meta name="keywords" content="茶汇通,普洱,普洱茶">
+    <meta name="description" content="茶汇通普洱饼茶">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <script src="_JS_/jquery.min.js"></script>
+    <script src="_JS_/jquery.cookie.js"></script>
+    <script>
+        $(document).ready(function() {
+
+
+
+                        //var acticle_id={$acticle.acticle_id};
+
+                        $.ajax({
+
+                            url: "__URL__/newsDetailApi",
+                            type: "post",
+                            dataType: "json",
+                            data: {article_id: "6356"},
+                            success: function (data) {
+
+                                if (data.code == 200) {
+
+                                    $(".title").html(data.content.article_title);
+
+                                    $(".content").html(data.content.article_content);
+
+
+                                    $(".top").show();
+
+                                    $(".detail").slideDown("6000");
+
+                                    $(".list").css("opacity", "0");
+
+                                    $("#close").click(clickclose);
+
+                                    $(window).scrollTop(0);
+
+                                    var nav = document.getElementById('nav');
+                                    window.onscroll = function () {
+                                        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                                        if (scrollTop < 50) {
+                                            nav.style.position = 'fixed';
+                                            nav.style.top = 50 - scrollTop + 'px';
+                                        } else {
+                                            nav.style.top = "0px";
+                                        }
+                                    }
+
+                                }
+
+                                /*图片处理,添加大勐海网站图片*/
+
+                                opertionimage()
+
+                                /*end 图片处理*/
+
+                            }
+
+                        })
+        })
+    </script>
+</head>
+<body>
+<div class="detail" style="position:absolute;top:0px;margin-top:40px;left:0px;width:100%;display:none;background:white;z-index:999;overflow:scroll">
+    </div>
+
+    <div class="title" style="overflow:scroll;background:#FFF;padding-top:45px;"></div>
+
+    <div class="content" style="overflow:scroll;background:#FFF;padding-top:30px;"></div>
+
+</div>
+</body>
+</html>
