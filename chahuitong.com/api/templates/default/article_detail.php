@@ -33,4 +33,21 @@
 
     <p class="acticle-content"><?php echo $output['article_detail']['article_content'];?></p>
 </section>
+
+<div class="article-judge">
+    <div class="judge-header">
+        <p>评论</p>
+    </div>
+    <img src="images/茶汇通LOGO@2x.png" alt="">
+    <div class="publisher">
+        <h5>茶汇通</h5>
+        <h6>2小时前</h6>
+    </div> 
+    <a class="attention">点赞</a>
+</div>
+<div class="clearfix">
+</div>
+<p class="judge-content">如果你是开发者，请选择homebrew，mac下最好的包管理工具，没有之一，用它可以安装php开发需要的所有相关。
+    如果你喜欢使用源码安装，也可以不用homebrew，但是</p>
+<hr>
 </body>
