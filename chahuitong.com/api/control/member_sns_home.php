@@ -75,7 +75,7 @@ class member_sns_homeControl extends mobileSNSControl {
             foreach ($trace_list as $key=>$value) {
                 $image_list = $model_trace_image->where(array('item_id' => $value['trace_id']))->field('ap_cover, item_id')->select();
                 foreach ($image_list as $k=>$image) {
-                    $image_list[$k]['thumb_mid'] = snsThumb($image['ap_cover'], 640);
+                    $image_list[$k]['thumb_mid'] = snsThumb($image['ap_cover'], '640');
                     $image_list[$k]['thumb_max'] = snsThumb($image['ap_cover'], '1024');
                 }
                 $value['trace_image_list'] = $image_list;
