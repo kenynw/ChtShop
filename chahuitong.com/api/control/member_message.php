@@ -88,7 +88,7 @@ class member_messageControl extends mobileMemberControl {
                         'trace_id,trace_image,trace_title'
                     );
                     if (!empty($trace_info)) {
-                        $trace_info['trace_image'] = snsThumb($trace_info['trace_image'], 240);
+                        $trace_info['trace_image'] = snsThumb($trace_info['trace_image']);
                     }
                     $value['trace_info'] = $trace_info;
                 }

@@ -111,7 +111,7 @@ class member_sns_traceControl extends mobileMemberControl {
         $model_trace_image = Model('sns_albumpic');
         $image_list = $model_trace_image->where(array('item_id' => $id))->select();
         foreach ($image_list as $key=>$image) {
-            $image_list[$key]['thumb_mid'] = snsThumb($image['ap_cover'], 240);
+            $image_list[$key]['thumb_mid'] = snsThumb($image['ap_cover']);
             $image_list[$key]['thumb_max'] = snsThumb($image['ap_cover'], 1024);
         }
         $trace_info['trace_image_list'] = $image_list;
@@ -228,13 +228,13 @@ class member_sns_traceControl extends mobileMemberControl {
         $upload_dir = ATTACH_MALBUM.DS.$this->member_info['member_id'].DS;
 
         $upload->set('default_dir',$upload_dir.$upload->getSysSetPath());
-        $thumb_width	= '240,640,1024';
+        $thumb_width	= '640,1024';
         $thumb_height	= '2048,1024';
         $upload->set('max_size',C('image_max_filesize'));
         $upload->set('thumb_width', $thumb_width);
         $upload->set('thumb_height',$thumb_height);
         $upload->set('fprefix',$this->member_info['member_id']);
-        $upload->set('thumb_ext', '_240,_1024');
+        $upload->set('thumb_ext', '_640,_1024');
         $result = $upload->upfile('image');
         if (!$result) output_json(0, 0, '上传失败');
 

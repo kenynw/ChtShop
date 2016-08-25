@@ -117,7 +117,7 @@ function gthumb($image_name = '', $type = ''){
  * @return string
  */
 function snsThumb($image_name = '', $type = ''){
-	if (!in_array($type, array('240','1024'))) $type = '240';
+	if (!in_array($type, array('640','1024'))) $type = '640';
 	if (empty($image_name)){
 		return UPLOAD_SITE_URL.'/'.defaultGoodsImage('240');
     }
