@@ -147,6 +147,14 @@ class sns_tracelogModel extends Model {
 		$count = Db::getCount('sns_tracelog',$condition_str);
 		return $count;
 	}
+
+    /**
+     * 动态图片列表
+     */
+	public function getImageList($condition, $field='*', $limit) {
+	    return $this->table('sns_albumpic')->where($condition)->field($field)->limit($limit)->select();
+    }
+
 	/**
 	 * 将条件数组组合为SQL语句的条件部分
 	 *

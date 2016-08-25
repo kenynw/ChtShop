@@ -79,10 +79,6 @@ class member_sns_friendControl extends mobileMemberControl {
             }
         }
 
-//        $field = 'friend_frommid,friend_tomid,friend_tomname,friend_tomavatar,friend_followstate';
-//        $condition = 'friend_tomid != ' . $this->member_info['member_id'];
-//        $friend_list = $model_friend->friendListGroupByToMid($condition, $field, $this->page);
-
         $field = 'friend_id,friend_frommid,friend_tomid,friend_followstate,member_id,member_name,member_avatar,member_sex,member_commend_flag';
         $condition = array();
         $condition['group'] = 'friend_tomid';
@@ -110,19 +106,19 @@ class member_sns_friendControl extends mobileMemberControl {
                 $member_list[$key]['member_name'] = $value['member_name'];
                 $member_list[$key]['member_avatar'] = getMemberAvatar($value['member_avatar']);
 
+                // 获取动态图片
                 $condition = array();
-                $condition['trace_memberid'] = $value['member_id'];
-                $page = new Page();
-                $page->setStyle('admin');
-                $page->setEachNum(3);
-                $trace_list = $model_trace->getTracelogList($condition, $page, 'trace_id, trace_image,trace_memberid');
-
-                if (!empty($trace_list)) {
-                    foreach ($trace_list as $k=>$image) {
-                        $trace_list[$k]['trace_image'] = snsThumb($image['trace_image']);
+                $condition['member_id'] = $value['member_id'];
+                $image_list = $model_trace->getImageList($condition, 'item_id, ap_name, member_id', 3);
+                if (!empty($image_list)) {
+                    foreach ($image_list as $k=>$image) {
+                        $trace_image= array();
+                        $trace_image['trace_id'] = $image['item_id'];
+                        $trace_image['trace_image'] = snsThumb($image['ap_name']);
+                        $image_list[$k] = $trace_image;
                     }
 
-                    $member_list[$key]['trace_list'] = $trace_list;
+                    $member_list[$key]['trace_list'] = $image_list;
                 }
             }
         }
@@ -173,21 +169,18 @@ class member_sns_friendControl extends mobileMemberControl {
 
             // 添加消息通知
             $model_message = Model('message');
-            $param = array();
-            $param['from_member_id'] = $this->member_info['member_id'];
-            $param['to_member_id'] = $member_info['member_id'];
-            $param['message_type'] = 3;
-            $message_info = $model_message->getRowMessage($param);
+            $condition = array();
+            $condition['from_member_id'] = $this->member_info['member_id'];
+            $condition['to_member_id'] = $member_info['member_id'];
+            $condition['message_type'] = 3;
+            $message_info = $model_message->getRowMessage($condition);
             if (!empty($message_info)) {
-                $condition = array();
+                $model_message->updateCommonMessage(array('message_update_time' => TIMESTAMP), $condition);
+            } else {
                 $condition['from_member_name'] = $this->member_info['member_name'];
                 $condition['to_member_name'] = $member_info['member_name'];
-                $model_message->updateCommonMessage($param, $condition);
-            } else {
-                $param['from_member_name'] = $this->member_info['member_name'];
-                $param['to_member_name'] = $member_info['member_name'];
-                $param['msg_content'] = $this->member_info['member_name'] . '关注了你';
-                $model_message->saveMessage($param);
+                $condition['msg_content'] = '关注了你';
+                $model_message->saveMessage($condition);
             }
 
             output_json(1, $insert['friend_followstate']);
