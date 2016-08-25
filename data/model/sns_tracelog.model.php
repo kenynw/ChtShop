@@ -124,7 +124,19 @@ class sns_tracelogModel extends Model {
 		if ($condition['trace_memberid'] != ''){
 			$condition_str .= " and trace_memberid='{$condition['trace_memberid']}' ";
 		}
-		return Db::delete('sns_tracelog',$condition_str);
+		$state = Db::delete('sns_tracelog',$condition_str);;
+        // 删除图片
+        if ($state) {
+            $model_album = Model('sns_albumpic');
+            $image_list = $model_album->where(array('item_id' => $condition['trace_id']))->field('ap_name')->select();
+            if(is_array($image_list) && !empty($image_list)){
+                foreach ($image_list as $value) {
+                    @unlink(UPLOAD_SITE_URL.DS.ATTACH_MALBUM.DS.$condition['trace_memberid'].DS.$value['ap_name']);
+                }
+                $state = $model_album->where(array('item_id' => $condition['trace_id']))->delete();
+            }
+        }
+        return $state;
 	}
 	/**
 	 * 动态总数

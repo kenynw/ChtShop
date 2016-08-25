@@ -102,7 +102,7 @@ class member_sns_traceControl extends mobileMemberControl {
         $condition['trace_privacy'] = 0;
         $condition['trace_state'] = 0;
         $trace_info = $tracelog_model->getTracelogRow($condition);
-        if (empty($trace_info)) output_json(0, array(), '暂无数据');
+        if (empty($trace_info)) output_json(0, array(), '动态已被删除');
 
         // 处理头像
         $trace_info['trace_memberavatar'] = getMemberAvatar($trace_info['trace_memberavatar']);
@@ -116,10 +116,6 @@ class member_sns_traceControl extends mobileMemberControl {
         }
         $trace_info['trace_image_list'] = $image_list;
         $trace_info['trace_image'] = snsThumb($trace_info['trace_image']);;
-
-        if (empty($trace_info)) {
-            output_json(0, $trace_info, '暂无数据');
-        }
 
         // 与主人的关系。0-游客(未登录);1-未关注;2-互相关注;3-自己;4-已关注
         $trace_info['relation'] = $this->_check_relation($trace_info['trace_memberid']);
@@ -232,7 +228,7 @@ class member_sns_traceControl extends mobileMemberControl {
         $upload_dir = ATTACH_MALBUM.DS.$this->member_info['member_id'].DS;
 
         $upload->set('default_dir',$upload_dir.$upload->getSysSetPath());
-        $thumb_width	= '240,1024';
+        $thumb_width	= '240,640,1024';
         $thumb_height	= '2048,1024';
         $upload->set('max_size',C('image_max_filesize'));
         $upload->set('thumb_width', $thumb_width);

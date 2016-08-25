@@ -17,10 +17,13 @@
 </head>
 <body>
 <header class="article-header">
-    <img src="<?php echo getMemberAvatarForID($output['article_detail']['article_publisher_id']); ?>" alt="<?php echo $output['article_detail']['article_publisher_name']; ?>">
+    <a href="<?php echo str_replace('http', 'com.cht.user', MOBILE_SITE_URL); ?>/index.php?act=member_sns_home&mid=<?php echo $output['article_detail']['article_publisher_id']; ?>">
+        <img src="<?php echo getMemberAvatarForID($output['article_detail']['article_publisher_id']); ?>" alt="<?php echo $output['article_detail']['article_publisher_name']; ?>">
+    </a>
+
     <div class="publisher">
         <h5><?php echo $output['article_detail']['article_publisher_name']; ?></h5>
-        <h6><?php echo $output['article_detail']['article_publisher_time']; ?></h6>
+        <h6><?php echo date('Y-m-d',$output['article_detail']['article_publish_time']); ?></h6>
     </div>
     <a class="attention"> +关注</a>
 </header>
