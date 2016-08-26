@@ -162,4 +162,80 @@ class mobileSNSControl extends mobileControl {
         }
     }
 
+    /**
+     * 处理动态列表
+     */
+    protected function _get_list_extend($trace_list) {
+        if (!empty($trace_list) && is_array($trace_list)) {
+            $model_trace_image = Model('sns_albumpic');
+            foreach ($trace_list as $key=>$value) {
+                if (!empty($value['trace_memberavatar'])) $value['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
+                $value['trace_addtime'] = date('Y.m.d h:i', $value['trace_addtime']);
+                $value['trace_image'] = snsThumb($value['trace_image']);
+
+                // 替换<a>中的scheme
+                if ($value['trace_title']){
+                    $value['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_title']);
+                }
+                if(!empty($value['trace_content'])){
+                    //替换内容中的siteurl
+                    $value['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_content']);
+                }
+
+                // 与登录用户关系
+                $value['relation'] = $this->relation;
+
+                // 图片列表
+                $image_list = $model_trace_image->where(array('item_id' => $value['trace_id']))->field('ap_cover, item_id')->select();
+                foreach ($image_list as $k=>$image) {
+                    $image_list[$k]['thumb_mid'] = snsThumb($image['ap_cover'], '640');
+                    $image_list[$k]['thumb_max'] = snsThumb($image['ap_cover'], '1024');
+                }
+                $value['trace_image_list'] = $image_list;
+
+                // 查询点赞状态
+                $model_like = Model('sns_like');
+                $like_info = $model_like->getLikeInfo(array(
+                    'like_memberid' => $this->member_id,
+                    'like_originalid' => $value['trace_id'],
+                    'like_originaltype' => 0,
+                    'like_state' => 0
+                ));
+                if (empty($like_info)) $value['is_like'] = false;
+                else $value['is_like'] = true;
+
+                $trace_list[$key] = $value;
+            }
+            return $trace_list;
+        }
+        return array();
+    }
+
+}
+
+class mobileMemberSNSControl extends mobileSNSControl {
+
+    protected $member_info = array();
+
+    public function __construct() {
+        $model_mb_user_token = Model('mb_user_token');
+        $key = empty($_POST['key']) ? $_GET['key'] : $_POST['key'];
+        $mb_user_token_info = $model_mb_user_token->getMbUserTokenInfoByToken($key);
+        if(empty($mb_user_token_info)) output_json(-1, '','请登录');
+
+        $model_member = Model('member');
+        $this->member_info = $model_member->getMemberInfoByID($mb_user_token_info['member_id']);
+        $this->member_info['client_type'] = $mb_user_token_info['client_type'];
+        if(empty($this->member_info)) {
+            output_error('请登录', array('login' => '0'));
+        } else {
+            //读取卖家信息
+            $seller_info = Model('seller')->getSellerInfo(array('member_id'=>$this->member_info['member_id']));
+            $this->member_info['store_id'] = $seller_info['store_id'];
+        }
+
+        parent::__construct();
+    }
+
+
 }

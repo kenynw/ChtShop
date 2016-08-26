@@ -1066,10 +1066,10 @@ page 每页默认数</p></blockquote>
 
 <p>参数：</p>
 
-<blockquote><p>key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序 <br/>
-order 排序方式 1-升序 2-降序 <br/>
+<blockquote><p>key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序     <br/>
+order 排序方式 1-升序 2-降序     <br/>
 page 每页数量<br/>
-curPage 当前页码 <br/>
+curPage 当前页码     <br/>
 gc_id 分类编号</p></blockquote>
 
 <p>返回：</p>
@@ -1306,8 +1306,9 @@ member_intro       个人简介 最大为140个字符</p></blockquote>
 <p>参数：</p>
 
 <blockquote><p>key        登录令牌  <br/>
-cart_id    购买参数。立即购买： 第一个数字为商品编号，第二个数字为购买数量，用竖线分割。例：232|1；
-            购物车购买：第一个数字为购物车编号，第二个数字为购买数量，用竖线分割。多组用半角逗号分割，例：232|1,110|2 232商品购买1个，110商品购买2个  <br/>
+cart_id    购买参数。     <br/>
+            立即购买： 第一个数字为商品编号，第二个数字为购买数量，用竖线分割。例：232|1；   <br/>
+            购物车购买：第一个数字为购物车编号，第二个数字为购买数量，用竖线分割。多组用半角逗号分割，例：232|1,110|2 232商品购买1个，110商品购买2个        <br/>
 ifcart     购物车购买标志 1</p></blockquote>
 
 <p>返回：</p>
@@ -1354,8 +1355,9 @@ ifcart     购物车购买标志 1</p></blockquote>
 
 <h3>更换收货地址</h3>
 
-<p>URL: act=member_buy&amp;op=change_address<br/>
-参数：</p>
+<p>URL: act=member_buy&amp;op=change_address</p>
+
+<p>参数：</p>
 
 <blockquote><p>key 登录令牌  <br/>
 freight_hash 运费hash，第一步返回结果里有直接提交  <br/>
@@ -1637,12 +1639,12 @@ address_id 地址编号</p></blockquote>
 <p>参数：</p>
 
 <blockquote><p>key 登录令牌  <br/>
-true_name 姓名
-city_id 城市编号(地址联动的第二级)
-area_id 地区编号(地址联动的第三级)
-area_info 地区信息，例：天津 天津市 红桥区
-address 地址信息，例：水游城8层
-tel_phone 电话号码
+true_name 姓名     <br/>
+city_id 城市编号(地址联动的第二级)   <br/>
+area_id 地区编号(地址联动的第三级)   <br/>
+area_info 地区信息，例：天津 天津市 红桥区  <br/>
+address 地址信息，例：水游城8层 <br/>
+tel_phone 电话号码   <br/>
 mob_phone 手机</p></blockquote>
 
 <p>返回：</p>
@@ -1662,13 +1664,13 @@ mob_phone 手机</p></blockquote>
 <p>参数：</p>
 
 <blockquote><p>key 登录令牌  <br/>
-address_id 地址编号
-true_name 姓名
-area_id 地区编号
-city_id 城市编号
-area_info 地区信息，例：天津 天津市 红桥区
-address 地址信息，例：水游城8层
-tel_phone 电话号码
+address_id 地址编号  <br/>
+true_name 姓名 <br/>
+area_id 地区编号 <br/>
+city_id 城市编号 <br/>
+area_info 地区信息，例：天津 天津市 红桥区  <br/>
+address 地址信息，例：水游城8层 <br/>
+tel_phone 电话号码   <br/>
 mob_phone 手机</p></blockquote>
 
 <p>返回：</p>
@@ -1703,7 +1705,7 @@ address_id 地址编号</p></blockquote>
 
 <p>参数：</p>
 
-<blockquote><p>key 当前登录令牌
+<blockquote><p>key 当前登录令牌   <br/>
 area_id 地区编号(为空时默认返回一级分类)</p></blockquote>
 
 <p>返回：</p>
@@ -1730,10 +1732,10 @@ area_id 地区编号(为空时默认返回一级分类)</p></blockquote>
 
 <p>参数：</p>
 
-<blockquote><p>key 当前登录令牌
-version 版本号
-order_state 订单状态
-curpage 当前列表页,用GET方式
+<blockquote><p>key 当前登录令牌   <br/>
+version 版本号  <br/>
+order_state 订单状态 <br/>
+curpage 当前列表页,用GET方式 <br/>
 page 每页显示项目数,默认15,用GET方式</p></blockquote>
 
 <p>返回：</p>
@@ -1813,7 +1815,7 @@ page 每页显示项目数,默认15,用GET方式</p></blockquote>
 
 <p>参数：</p>
 
-<blockquote><p>key 当前登录令牌
+<blockquote><p>key 当前登录令牌   <br/>
 order_id 订单ID</p></blockquote>
 
 <p>返回：</p>
@@ -1868,8 +1870,8 @@ order_id 订单ID</p></blockquote>
 
 <p>参数：</p>
 
-<blockquote><p>key 当前登录令牌
-order_id 订单ID
+<blockquote><p>key 当前登录令牌   <br/>
+order_id 订单ID<br/>
 version</p></blockquote>
 
 <p>返回：</p>
@@ -1898,13 +1900,14 @@ version</p></blockquote>
 }
 </code></pre>
 
-<h3>好友动态列表</h3>
+<h3>某个用户的动态列表</h3>
 
 <p>URL: act=member_sns_trace&amp;op=trace_list</p>
 
 <p>参数：</p>
 
-<blockquote><p>key 当前登录令牌</p></blockquote>
+<blockquote><p>key 当前登录令牌      <br/>
+mid 用户ID 指定某个用户的ID,如果不传则会返回当前登录用户的</p></blockquote>
 
 <p>返回：</p>
 
@@ -2031,7 +2034,7 @@ image （File） 图片文件,为File类型</p></blockquote>
 
 <blockquote><p>key 当前登录令牌   <br/>
 content 动态内容 <br/>
-privacy 权限 0-公开 1-仅自己可见 默认为0
+privacy 权限 0-公开 1-仅自己可见 默认为0 <br/>
 image_id 封面图片ID,由第一步返回</p></blockquote>
 
 <p>返回：</p>
@@ -2255,12 +2258,12 @@ inform_content 举报内容 由用户选择:广告、营销; 不友善内容(色
 
 <h3>全部动态列表</h3>
 
-<p>URL(Get): act=member_sns_home&amp;op=trace_list</p>
+<p>URL: act=member_sns_home&amp;op=trace_list</p>
 
 <p>参数：</p>
 
-<blockquote><p>mid 登录令牌,查看自己的动态列表  <br/>
-mid 用户ID 可以指定某个用户的动态列表,如果不传则默认返回全部列表</p></blockquote>
+<blockquote><p>key 登录令牌,查看自己的动态列表  <br/>
+commend 是否为精选动态 传1为是 其他不传或传0</p></blockquote>
 
 <p>返回：</p>
 
@@ -2280,6 +2283,42 @@ mid 用户ID 可以指定某个用户的动态列表,如果不传则默认返回
                 "trace_state": "0",
                 "trace_privacy": "0",
                 "trace_commentcount": "0"
+            }
+        ],
+        "hasmore": false,
+        "page_total": 1
+    },
+    "msg": "SUCCESS"
+}
+</code></pre>
+
+<h3>好友动态列表</h3>
+
+<p>URL: act=member_sns_friend&amp;op=trace_list</p>
+
+<p>参数：</p>
+
+<blockquote><p>key 当前登录令牌</p></blockquote>
+
+<p>返回：</p>
+
+<pre><code>{
+    "code": 1,
+    "data": {
+        "list": [
+            {
+                "trace_id": "15",
+                "trace_originalid": "0",
+                "trace_memberid": "2",
+                "trace_membername": "茶汇通",
+                "trace_memberavatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                "trace_title": "test test 茶汇通 茶汇通",
+                "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
+                "trace_addtime": "2016.05.25 09:00",
+                "trace_state": "0",
+                "trace_privacy": "0",
+                "trace_commentcount": "0" 评论数
+                "is_like" 是否点赞
             }
         ],
         "hasmore": false,
@@ -2564,7 +2603,7 @@ type 消息类型 0为私信、1为系统消息、2为留言、3为新的粉丝�
 <p>参数：</p>
 
 <blockquote><p>key 当前登录令牌   <br/>
-class_id 文章类目ID
+class_id 文章类目ID  <br/>
 tag_id 标签ID</p></blockquote>
 
 <p>返回：</p>
@@ -2619,8 +2658,8 @@ article_id 文章编号</p></blockquote>
 <p>参数：</p>
 
 <blockquote><p>key 当前登录令牌<br/>
-order 排序 0-热度 1-时间 默认为热度
-object_id 文章ID
+order 排序 0-热度 1-时间 默认为热度 <br/>
+object_id 文章ID   <br/>
 type 类型 1-文章 2-画报 默认为文章</p></blockquote>
 
 <p>返回：</p>
@@ -2653,8 +2692,8 @@ type 类型 1-文章 2-画报 默认为文章</p></blockquote>
 <p>参数：</p>
 
 <blockquote><p>key 当前登录令牌   <br/>
-object_id 文章或画报ID
-comment_message 评论内容
+object_id 文章或画报ID<br/>
+comment_message 评论内容 <br/>
 comment_type 评论类型 1-文章 2-画报 默认为1</p></blockquote>
 
 <p>返回：</p>
@@ -2673,7 +2712,7 @@ comment_type 评论类型 1-文章 2-画报 默认为1</p></blockquote>
 <p>参数：</p>
 
 <blockquote><p>key 当前登录令牌   <br/>
-comment_id 评论编号
+comment_id 评论编号  <br/>
 comment_type 评论类型 1-文章 2-画报 默认为1</p></blockquote>
 
 <p>返回：</p>

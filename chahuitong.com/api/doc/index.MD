@@ -868,10 +868,10 @@ URL(GET): act=goods&op=recommend_list
 
 参数：
 
->key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序	
->order 排序方式 1-升序 2-降序	
->page 每页数量	
->curPage 当前页码	
+>key 排序方式 1-销量 2-浏览量 3-价格 空-按最新发布排序	    
+>order 排序方式 1-升序 2-降序	    
+>page 每页数量  
+>curPage 当前页码	    
 >gc_id 分类编号	
 
 返回： 
@@ -1404,12 +1404,12 @@ URL: act=member_address&op=address_add
 参数：
 
 >key 登录令牌    
->true_name 姓名
->city_id 城市编号(地址联动的第二级)
->area_id 地区编号(地址联动的第三级)
->area_info 地区信息，例：天津 天津市 红桥区
->address 地址信息，例：水游城8层
->tel_phone 电话号码
+>true_name 姓名       
+>city_id 城市编号(地址联动的第二级)     
+>area_id 地区编号(地址联动的第三级)     
+>area_info 地区信息，例：天津 天津市 红桥区    
+>address 地址信息，例：水游城8层   
+>tel_phone 电话号码     
 >mob_phone 手机
 
 返回： 
@@ -1427,14 +1427,14 @@ URL: act=member_address&op=address_edit
 参数：
 
 >key 登录令牌    
->address_id 地址编号
->true_name 姓名
->area_id 地区编号
->city_id 城市编号
->area_info 地区信息，例：天津 天津市 红桥区
->address 地址信息，例：水游城8层
->tel_phone 电话号码
->mob_phone 手机
+>address_id 地址编号    
+>true_name 姓名   
+>area_id 地区编号   
+>city_id 城市编号   
+>area_info 地区信息，例：天津 天津市 红桥区    
+>address 地址信息，例：水游城8层   
+>tel_phone 电话号码     
+>mob_phone 手机   
 
 返回： 
 
@@ -1464,7 +1464,7 @@ URL: act=member_address&op=area_list
 
 参数：
 
->key 当前登录令牌
+>key 当前登录令牌     
 >area_id 地区编号(为空时默认返回一级分类)
 
 返回： 
@@ -1490,11 +1490,11 @@ URL: act=member_order&op=order_list
 
 参数：
 
->key 当前登录令牌
->version 版本号
->order_state 订单状态
->curpage 当前列表页,用GET方式
->page 每页显示项目数,默认15,用GET方式
+>key 当前登录令牌     
+>version 版本号    
+>order_state 订单状态   
+>curpage 当前列表页,用GET方式   
+>page 每页显示项目数,默认15,用GET方式   
 
 返回：
 
@@ -1572,7 +1572,7 @@ URL: act=member_order&op=order_info
 
 参数：
 
->key 当前登录令牌
+>key 当前登录令牌     
 >order_id 订单ID
 
 返回：
@@ -1625,8 +1625,8 @@ URL: act=member_order&op=search_deliver
 
 参数：
 
->key 当前登录令牌
->order_id 订单ID
+>key 当前登录令牌     
+>order_id 订单ID  
 >version
 
 返回：
@@ -1654,12 +1654,13 @@ URL: act=member_order&op=search_deliver
         "msg": "SUCCESS"
     }
 
-### 好友动态列表
+### 某个用户的动态列表
 URL: act=member_sns_trace&op=trace_list
 
 参数：
 
->key 当前登录令牌
+>key 当前登录令牌        
+>mid 用户ID 指定某个用户的ID,如果不传则会返回当前登录用户的 
 
 返回：
 
@@ -1783,7 +1784,7 @@ URL: act=member_sns_trace&op=trace_add
 
 >key 当前登录令牌     
 >content 动态内容   
->privacy 权限 0-公开 1-仅自己可见 默认为0
+>privacy 权限 0-公开 1-仅自己可见 默认为0   
 >image_id 封面图片ID,由第一步返回
 
 返回：
@@ -1997,12 +1998,12 @@ URL: act=member_sns_inform&op=inform_home
     
 ### 全部动态列表
 
-URL(Get): act=member_sns_home&op=trace_list
+URL: act=member_sns_home&op=trace_list
 
 参数：
 
->mid 登录令牌,查看自己的动态列表    
->mid 用户ID 可以指定某个用户的动态列表,如果不传则默认返回全部列表    
+>key 登录令牌,查看自己的动态列表    
+>commend 是否为精选动态 传1为是 其他不传或传0  
     
 返回：
 
@@ -2029,7 +2030,41 @@ URL(Get): act=member_sns_home&op=trace_list
         },
         "msg": "SUCCESS"
     }
-                     
+
+### 好友动态列表
+URL: act=member_sns_friend&op=trace_list
+
+参数：
+
+>key 当前登录令牌
+
+返回：
+
+    {
+        "code": 1,
+        "data": {
+            "list": [
+                {
+                    "trace_id": "15",
+                    "trace_originalid": "0",
+                    "trace_memberid": "2",
+                    "trace_membername": "茶汇通",
+                    "trace_memberavatar": "http://img.chahuitong.com/shop/common/default_user_portrait.gif",
+                    "trace_title": "test test 茶汇通 茶汇通",
+                    "trace_image": "http://img.chahuitong.com/shop/common/default_goods_image_240.gif"
+                    "trace_addtime": "2016.05.25 09:00",
+                    "trace_state": "0",
+                    "trace_privacy": "0",
+                    "trace_commentcount": "0" 评论数
+                    "is_like" 是否点赞
+                }
+            ],
+            "hasmore": false,
+            "page_total": 1
+        },
+        "msg": "SUCCESS"
+    }
+                  
 ### 推荐好友列表,根据粉丝数排名
 
 URL(Get): act=member_sns_friend&op=popular_list
@@ -2298,7 +2333,7 @@ URL: act=article&op=article_list
 参数：
 
 >key 当前登录令牌     
->class_id 文章类目ID 
+>class_id 文章类目ID    
 >tag_id 标签ID 
 
 返回：
@@ -2351,9 +2386,9 @@ URL: act=article_comment&op=comment_list
 参数：
 
 >key 当前登录令牌  
->order 排序 0-热度 1-时间 默认为热度
->object_id 文章ID 
->type 类型 1-文章 2-画报 默认为文章
+>order 排序 0-热度 1-时间 默认为热度   
+>object_id 文章ID     
+>type 类型 1-文章 2-画报 默认为文章    
 
 返回：
 
@@ -2384,8 +2419,8 @@ URL(Get): act=article_comment&op=comment_add
 参数：
 
 >key 当前登录令牌     
->object_id 文章或画报ID 
->comment_message 评论内容 
+>object_id 文章或画报ID  
+>comment_message 评论内容   
 >comment_type 评论类型 1-文章 2-画报 默认为1 
 
 返回：
@@ -2403,8 +2438,8 @@ URL(Post): act=article_comment&op=comment_del
 参数：
 
 >key 当前登录令牌     
->comment_id 评论编号
->comment_type 评论类型 1-文章 2-画报 默认为1 
+>comment_id 评论编号    
+>comment_type 评论类型 1-文章 2-画报 默认为1   
 
 返回：
 

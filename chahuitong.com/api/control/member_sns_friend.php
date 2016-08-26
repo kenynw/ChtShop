@@ -11,6 +11,10 @@ class member_sns_friendControl extends mobileMemberControl {
         parent::__construct();
     }
 
+    public function indexOp() {
+        $this->find_listOp();
+    }
+
     /**
      * 查找好友列表
      */
@@ -81,9 +85,9 @@ class member_sns_friendControl extends mobileMemberControl {
 
         $field = 'friend_id,friend_frommid,friend_tomid,friend_followstate,member_id,member_name,member_avatar,member_sex,member_commend_flag';
         $condition = array();
-        $condition['group'] = 'friend_tomid';
-        $condition['no_friend_tomid'] = $this->member_info['member_id'];
-        $condition['member_commend'] = 1;
+        $condition['group']             = 'friend_tomid';
+        $condition['no_friend_tomid']   = $this->member_info['member_id'];
+        $condition['member_commend']    = 1;
         $page = new Page();
         $page->setStyle('admin');
         $page->setEachNum($this->page);
@@ -266,6 +270,83 @@ class member_sns_friendControl extends mobileMemberControl {
         }
 
         output_json(1, array('list' => $follow_list), 'SUCCESS', mobile_page($page->getTotalPage()));
+    }
+
+    /**
+     * 查询关注的动态列表
+     */
+    public function trace_listOp() {
+        //查询关注以及好友列表
+        $friend_model = Model('sns_friend');
+        $friend_list = $friend_model->listFriend(array('friend_frommid'=>$this->member_info['member_id']));
+        $mutual_follow_id_arr = array();
+        $follow_id_arr = array();
+        if (!empty($friend_list)){
+            foreach ($friend_list as $k=>$v){
+                $follow_id_arr[] = $v['friend_tomid'];
+                if ($v['friend_followstate'] == 2){
+                    $mutual_follow_id_arr[] = $v['friend_tomid'];
+                }
+            }
+        }
+
+        $tracelog_model = Model('sns_tracelog');
+        $condition = array();
+        $condition['allowshow'] = '1';
+        $condition['allowshow_memberid'] = $this->member_info['member_id'];
+        $condition['allowshow_followerin'] = "";
+        if (!empty($follow_id_arr)){
+            $condition['allowshow_followerin'] = implode("','",$follow_id_arr);
+        }
+        $condition['allowshow_friendin'] = "";
+        if (!empty($mutual_follow_id_arr)){
+            $condition['allowshow_friendin'] = implode("','",$mutual_follow_id_arr);
+        }
+        $condition['trace_state'] = "0";
+        $condition['trace_originalid'] = '0'; // 原创
+
+        $file = 'trace_id,trace_originalid,trace_memberid,trace_membername,trace_memberavatar,trace_title,trace_image,trace_addtime,trace_state,trace_privacy,trace_commentcount,trace_likecount';
+
+        $page = new Page();
+        $page->setEachNum($this->page);
+        $page->setStyle('admin');
+        $trace_list = $tracelog_model->getTracelogList($condition, $page, $file);
+
+        // 数据处理
+        if (!empty($trace_list)) {
+            foreach ($trace_list as $key=>$value) {
+                $trace_list[$key]['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
+                $trace_list[$key]['trace_addtime'] = date('m.d h:i', $value['trace_addtime']);
+                $trace_list[$key]['trace_image'] = snsThumb($value['trace_image']);
+
+                // 处理@
+                if ($value['trace_title']){
+                    $trace_list[$key]['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_title']);
+                }
+                if(!empty($value['trace_content'])){
+                    //替换内容中的siteurl
+                    $trace_list[$key]['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_content']);
+                }
+
+                // 查询点赞状态
+                $model_like = Model('sns_like');
+                $like_info = $model_like->getLikeInfo(array(
+                    'like_memberid' => $this->member_info['member_id'],
+                    'like_originalid' => $value['trace_id'],
+                    'like_originaltype' => 0,
+                    'like_state' => 0
+                ));
+                if (empty($like_info)) $trace_list[$key]['is_like'] = false;
+                else $trace_list[$key]['is_like'] = true;
+
+                // 关系
+                $trace_list[$key]['relation'] = $this->_check_relation($value['trace_memberid']);
+            }
+        }
+
+        $page_count = $page->getTotalPage();
+
+        output_json(1, array('list' => $trace_list), 'SUCCESS', mobile_page($page_count));
     }
 
     private function _check_relation($mid) {

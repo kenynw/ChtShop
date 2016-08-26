@@ -5,7 +5,7 @@
  * Date: 16/5/25
  * Time: 下午3:40
  */
-class member_sns_traceControl extends mobileMemberControl {
+class member_sns_traceControl extends mobileMemberSNSControl {
 
     public function __construct() {
         parent::__construct();
@@ -15,32 +15,9 @@ class member_sns_traceControl extends mobileMemberControl {
      * 查询关注的动态列表
      */
     public function trace_listOp() {
-        //查询关注以及好友列表
-        $friend_model = Model('sns_friend');
-        $friend_list = $friend_model->listFriend(array('friend_frommid'=>$this->member_info['member_id']));
-        $mutual_follow_id_arr = array();
-        $follow_id_arr = array();
-        if (!empty($friend_list)){
-            foreach ($friend_list as $k=>$v){
-                $follow_id_arr[] = $v['friend_tomid'];
-                if ($v['friend_followstate'] == 2){
-                    $mutual_follow_id_arr[] = $v['friend_tomid'];
-                }
-            }
-        }
-
         $tracelog_model = Model('sns_tracelog');
         $condition = array();
-        $condition['allowshow'] = '1';
-        $condition['allowshow_memberid'] = $this->member_info['member_id'];
-        $condition['allowshow_followerin'] = "";
-        if (!empty($follow_id_arr)){
-            $condition['allowshow_followerin'] = implode("','",$follow_id_arr);
-        }
-        $condition['allowshow_friendin'] = "";
-        if (!empty($mutual_follow_id_arr)){
-            $condition['allowshow_friendin'] = implode("','",$mutual_follow_id_arr);
-        }
+        $condition['trace_memberid'] = $this->master_id;
         $condition['trace_state'] = "0";
         $condition['trace_originalid'] = '0'; // 原创
 
@@ -51,41 +28,9 @@ class member_sns_traceControl extends mobileMemberControl {
         $page->setStyle('admin');
         $trace_list = $tracelog_model->getTracelogList($condition, $page, $file);
 
-        // 数据处理
-        if (!empty($trace_list)) {
-            foreach ($trace_list as $key=>$value) {
-                $trace_list[$key]['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
-                $trace_list[$key]['trace_addtime'] = date('m.d h:i', $value['trace_addtime']);
-                $trace_list[$key]['trace_image'] = snsThumb($value['trace_image']);
-
-                // 处理@
-                if ($value['trace_title']){
-                    $trace_list[$key]['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_title']);
-                }
-                if(!empty($value['trace_content'])){
-                    //替换内容中的siteurl
-                    $trace_list[$key]['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_content']);
-                }
-
-                // 查询点赞状态
-                $model_like = Model('sns_like');
-                $like_info = $model_like->getLikeInfo(array(
-                    'like_memberid' => $this->member_info['member_id'],
-                    'like_originalid' => $value['trace_id'],
-                    'like_originaltype' => 0,
-                    'like_state' => 0
-                ));
-                if (empty($like_info)) $trace_list[$key]['is_like'] = false;
-                else $trace_list[$key]['is_like'] = true;
-
-                // 关系
-                $trace_list[$key]['relation'] = $this->_check_relation($value['trace_memberid']);
-            }
-        }
-
         $page_count = $page->getTotalPage();
 
-        output_json(1, array('list' => $trace_list), 'SUCCESS', mobile_page($page_count));
+        output_json(1, array('list' => $this->_get_list_extend($trace_list)), 'SUCCESS', mobile_page($page_count));
     }
 
     /**
