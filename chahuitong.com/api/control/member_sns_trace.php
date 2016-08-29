@@ -439,7 +439,11 @@ class member_sns_traceControl extends mobileMemberSNSControl {
         if (empty($original_info)) output_json(0, array(), $type == 2 ? '原评论不存在' : '原动态不存在');
 
         $model_like = Model('sns_like');
-        $like_info = $model_like->getLikeInfo(array('like_originalid' => $id, 'like_memberid' => $this->member_info['member_id']));
+        $like_info = $model_like->getLikeInfo(array(
+            'like_originalid' => $id,
+            'like_memberid' => $this->member_info['member_id'],
+            'like_originaltype' => $type
+        ));
         if (empty($like_info)) {
             $insert = array();
             $insert['like_memberid'] = $this->member_info['member_id'];
