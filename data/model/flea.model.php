@@ -257,6 +257,9 @@ class fleaModel extends Model {
 		if($condition_array['image_store_id'] != '') {
 			$condition_sql	.= " and store_id=".$condition_array['image_store_id']." and item_id=".$condition_array['item_id']." and upload_type='".$condition_array['image_type']."'";
 		}
+        if($condition_array['show'] != '') {
+            $condition_sql	.= " and goods_show=".$condition_array['show'];
+        }
 		//添加不等于某商品的条件
 		if($condition_array['goods_id_diff'] != 0) {
 			$condition_sql  .= " and goods_id<>".$condition_array['goods_id_diff'];

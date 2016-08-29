@@ -46,7 +46,7 @@ class member_fleaControl extends mobileMemberControl
         $flea_model = Model('flea');
 
         $condition = array();
-//        $condition['goods_show'] = 1;
+        $condition['show'] = '1';
         $condition['pic_input'] = 2;
         $condition['body_input'] = 2;
         $condition['order'] = 'goods_tag desc, goods_click desc, goods_id desc';
