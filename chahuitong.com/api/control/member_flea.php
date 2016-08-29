@@ -79,7 +79,7 @@ class member_fleaControl extends mobileMemberControl
         $model_store_goods = Model('flea');
         $condition = array();
         $condition['goods_id'] = $goods_id;
-        $condition['goods_show'] = 1;
+        $condition['goods_show'] = '1';
         $goods_info = $model_store_goods->getGoodsInfo($condition);
 
         if (empty($goods_info)) {

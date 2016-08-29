@@ -45,7 +45,7 @@ class member_messageControl extends mobileMemberControl {
             $condition['to_member_id_common'] = $this->member_info['member_id'];
             $condition['no_message_state'] = '2';
             // 新的粉丝
-            if ($type == 3) $condition['message_open_common'] = 1;
+            if ($type == 3) $condition['message_open_common'] = '0';
         }
 
         $message_list = $this->model_message->listMessage($condition, $this->obj_page);

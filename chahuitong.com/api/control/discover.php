@@ -55,7 +55,7 @@ class discoverControl extends mobileHomeControl {
         // 获取推荐茶市
         $model_flea = Model('flea');
         $condition = array();
-//        $condition['goods_show'] = 1;
+        $condition['goods_show'] = '1';
         $condition['commend'] = 1;
         $condition['order'] = 'goods_id desc';
         $field = 'goods_id, goods_image, goods_commend, member_id';
