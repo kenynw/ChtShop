@@ -59,8 +59,17 @@ class articleControl extends mobileCMSControl {
             output_json(0, '文章不存在');
         }
 
-        //计数加1
+        // 计数加1
         $model_article->modify(array('article_click'=>array('exp','article_click+1')),array('article_id'=>$article_id));
+
+        // 获取评论
+        $model_cms_comment = Model('cms_comment');
+        $condition = array();
+        $condition["comment_object_id"] = $article_id;
+        $condition["comment_type"] = self::ARTICLE;
+        $order = 'comment_up desc, comment_id desc';
+        $comment_list = $model_cms_comment->getListWithUserInfo($condition, $this->page, $order);
+        Tpl::output('comment_list', $comment_list);
 
         //seo
         Tpl::output('seo_title', $article_detail['article_title']);

@@ -1,95 +1,200 @@
 @charset "UTF-8";
 /* CSS Document */
-body {
-	font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
-	max-width:600px;
-	margin:0 auto;
-}
-.article-header {
-	padding-bottom:30px;
-}
-.article-header img {
-	padding:10px 15px;
-	height:40px;
-	width:40px;
-	float:left;
-	border-radius:50%;
-}
-.article-header .publisher {
-	float:left;
-}
-.publisher h5 {
-	font-size:14px;
-	margin-top:10px;
-}
-.publisher h6 {
-	font-size:10px;
-	margin-top:-15px;
-}
-.article-header a {
-	float:right;
-	color:#383535;
-	border-radius: 4px;
-}
-.clearfix{clear:both;height:0;overflow:hidden;}
-hr {
-	margin-top:1px;
-	height:1px;
-	border:none;
-	border-top:1px solid #555555;
-}
-.article-header .attention {
-	font-size:10px;
-	margin:10px;
-	padding:5px 12px;
-	border-style: solid;
-	border-color: black;
-	border-width: 1px;
+html {
+    background: #fff;
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    word-break: break-all;
 }
 
-.article-content h4 {
-	text-align:left;
+html, div, span, object, button, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, code, em, img, q, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, table, tbody, tr, th, td, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
-.article-content img {
-	width: 100%;
-	height: auto;
+
+body {
+    margin: 0 auto;
+    max-width: 750px;
 }
-.article-content p {
-	margin: 0 0 10px;
+
+a {
+    text-decoration: none;
 }
-.judge-header {
-	background-color:#837E7E;
+
+hr {
+    margin: 1px -17px 0 -17px;
+    height: 1px;
+    border: none;
+    border-top: 1px solid #eee;
 }
-.judge-header p {
-	font-size:8px;
+
+.clearfix:after {
+    visibility: hidden;
+    display: block; /* font-size:0; */
+    content: " ";
+    clear: both;
+    height: 0;
 }
-.article-judge img {
-	padding:5px 6px;
-	height:25px;
-	width:25px;
-	float:left;
-	border-radius:50%;
+
+.avatar-link {
+    display: block;
+    float: left;
 }
-.article-judge .publisher {
-	float:left;
+
+.article-detail {
+    padding: 17px;
+    position: relative;
 }
-.article-judge .publisher h5 {
-	font-size:12px;
-	margin-top:1px;
-	margin-left:5px;
+
+.article-detail .title {
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 28px;
+    text-align: left;
+    margin-top: 17px;
+    color: #3A3A3A;
 }
-.article-judge .publisher h6 {
-	font-size:10px;
-	margin-top:-15px;
-	margin-left:5px;
+
+.article-detail .article-content {
+    font-size: 16px;
+    color: #444;
+    line-height: 26px;
+    word-break: break-all;
 }
-.article-judge a {
-	font-size:12px;
-	float:right;
-	color:#837F7F;
-	border-radius: 4px;
+
+.article-detail .article-content img {
+    width: 100%;
+    height: auto;
 }
-.judge-content{
-	margin-top:0px;
-	font-size:12px;
+
+.article-detail .article-content p {
+    margin-top: 1em;
+}
+
+.article-detail .article-content .article-heat {
+    font-size: 8px;
+    color: #999;
+}
+
+.article-detail .article-header {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.article-detail .article-header .avatar-link img {
+    height: 36px;
+    width: 36px;
+    float: left;
+    border-radius: 50%;
+}
+
+.article-detail .article-header .publisher {
+    float: left;
+    padding: 2px 0 0 10px;
+}
+
+.article-detail .article-header .publisher .name {
+    line-height: 16px;
+    margin-bottom: 4px;
+}
+
+.article-detail .article-header .publisher .time {
+    font-size: 10px;
+    color: #999;
+}
+
+.article-detail .article-header .follow {
+    width: 58px;
+    height: 28px;
+    text-align: center;
+    color: #383535;
+    font-size: 12px;
+    line-height: 28px;
+    right: 0;
+    margin-top: 2px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 4px;
+    display: block;
+    position: absolute;
+}
+
+.article-detail .comment-list {
+    position: relative;
+}
+
+.article-detail .comment-list .title {
+    background-color: #f5f5f5;
+    font-size: 12px;
+    margin: 0 -17px 0 -17px;
+    padding: 10px 10px;
+}
+
+.article-detail .comment-list .comment-member {
+    padding: 10px 0 10px 0;
+}
+
+.article-detail .comment-list .avatar-link img {
+    height: 25px;
+    width: 25px;
+    margin-top: 6px;
+    float: left;
+    border-radius: 50%;
+}
+
+.article-detail .comment-list .publisher {
+    display: block;
+    float: left;
+}
+
+.comment-list dl {
+    padding-top: 10px;
+    overflow: hidden;
+    font-size: 0;
+}
+.comment-list dl dt {
+    display: inline-block;
+    position: relative;
+}
+.comment-list dl dd {
+    margin-left: 8px;
+    display: inline-block;
+    width: 92%;
+    vertical-align: top;
+}
+.comment-list dl dd .comment-name {
+    font-size: 10px;
+    display: block;
+    position: relative;
+}
+.comment-list dl dd .comment-name a {
+    line-height: 20px;
+    font-size: 14px;
+    color: #999;
+}
+.comment-list dl dd .comment-name .like-btn {
+    color: #999;
+    right: 0;
+    position: absolute;
+    display: inline-block;
+    line-height: 32px;
+    padding-left: 17px;
+    font-size: 10px;
+    min-width: 24px;;
+    background: url(../images/like-btn.png) no-repeat 0 0;
+    background-size: 14px;
+    background-position: 0 8px;
+}
+.comment-list dl dd .comment-time {
+    font-size: 8px;
+    color: #999;;
+}
+.comment-list dl dd .comment-content {
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 24px;
+    overflow: hidden;
+    word-wrap: break-word;
+    color: #505050;
 }

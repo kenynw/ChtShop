@@ -5,7 +5,7 @@
  * Date: 16/6/1
  * Time: 下午8:21
  */
-class member_sns_friendControl extends mobileMemberControl {
+class member_sns_friendControl extends mobileMemberSNSControl {
     
     public function __construct() {
         parent::__construct();
@@ -312,41 +312,9 @@ class member_sns_friendControl extends mobileMemberControl {
         $page->setStyle('admin');
         $trace_list = $tracelog_model->getTracelogList($condition, $page, $file);
 
-        // 数据处理
-        if (!empty($trace_list)) {
-            foreach ($trace_list as $key=>$value) {
-                $trace_list[$key]['trace_memberavatar'] = getMemberAvatar($value['trace_memberavatar']);
-                $trace_list[$key]['trace_addtime'] = date('m.d h:i', $value['trace_addtime']);
-                $trace_list[$key]['trace_image'] = snsThumb($value['trace_image']);
-
-                // 处理@
-                if ($value['trace_title']){
-                    $trace_list[$key]['trace_title'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_title']);
-                }
-                if(!empty($value['trace_content'])){
-                    //替换内容中的siteurl
-                    $trace_list[$key]['trace_content'] = str_replace("%siteurl%", "com.cht.user://".DS, $value['trace_content']);
-                }
-
-                // 查询点赞状态
-                $model_like = Model('sns_like');
-                $like_info = $model_like->getLikeInfo(array(
-                    'like_memberid' => $this->member_info['member_id'],
-                    'like_originalid' => $value['trace_id'],
-                    'like_originaltype' => 0,
-                    'like_state' => 0
-                ));
-                if (empty($like_info)) $trace_list[$key]['is_like'] = false;
-                else $trace_list[$key]['is_like'] = true;
-
-                // 关系
-                $trace_list[$key]['relation'] = $this->_check_relation($value['trace_memberid']);
-            }
-        }
-
         $page_count = $page->getTotalPage();
 
-        output_json(1, array('list' => $trace_list), 'SUCCESS', mobile_page($page_count));
+        output_json(1, array('list' => $this->_get_list_extend($trace_list)), 'SUCCESS', mobile_page($page_count));
     }
 
     private function _check_relation($mid) {
