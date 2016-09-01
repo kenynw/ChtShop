@@ -18,10 +18,6 @@
     <link href="templates/default/css/article.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/jquery.js" charset="utf-8"></script>
-    <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/jquery-ui/jquery.ui.js"></script>
-    <script id="dialog_js" type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/dialog/dialog.js" charset="utf-8"></script>
-    <script type="text/javascript" src="<?php echo RESOURCE_SITE_URL;?>/js/common.js" charset="utf-8"></script>
-    <script type="text/javascript" src="<?php echo CMS_SITE_URL;?>/resource/js/common.js" charset="utf-8"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -69,21 +65,19 @@
 
     <hr>
 
-    <h1 class="title"><?php echo $output['article_detail']['article_title']; ?></h1>
+    <h1 class="article-title"><?php echo $output['article_detail']['article_title']; ?></h1>
 
     <div class="article-content">
-        <span
-            class="article-heat"><?php echo $output['article_detail']['article_click']
-                . '次阅 · ' . $output['article_detail']['article_comment_count']
-                . '评论'; ?></span>
+        <span class="article-heat">
+            <?php echo $output['article_detail']['article_click'] . '次阅 · ' . $output['article_detail']['article_comment_count'] . '评论'; ?>
+        </span>
 
         <?php echo $output['article_detail']['article_content']; ?>
     </div>
 
-
     <?php if (!empty($output['comment_list']) && is_array($output['comment_list'])) { ?>
         <div id="comment_list" class="comment-list">
-            <div class="title"><h5>评论</h5></div>
+            <div class="title"><h3>评论</h3></div>
 
             <?php foreach ($output['comment_list'] as $value) { ?>
                 <dl>

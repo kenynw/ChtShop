@@ -79,5 +79,37 @@ class articleControl extends mobileCMSControl {
         Tpl::output('article_detail', $article_detail);
         Tpl::showpage('article_detail');
     }
-    
+
+    /**
+     * 赞文章评论
+     */
+    public function comment_upOp() {
+
+        $data = array();
+        $data['result'] = 'true';
+
+        $comment_id = intval($_POST['comment_id']);
+        if($comment_id > 0) {
+            $model_comment_up = Model('cms_comment_up');
+            $param = array();
+            $param['comment_id'] = $comment_id;
+            $param['up_member_id'] = $_SESSION['member_id'];
+            $is_exist = $model_comment_up->isExist($param);
+            if(!$is_exist) {
+                $param['up_time'] = time();
+                $model_comment_up->save($param);
+
+                $model_comment = Model('cms_comment');
+                $model_comment->modify(array('comment_up'=>array('exp', 'comment_up+1')), array('comment_id'=>$comment_id));
+            } else {
+                $data['result'] = 'false';
+                $data['message'] = '顶过了';
+            }
+        } else {
+            $data['result'] = 'false';
+            $data['message'] = Language::get('wrong_argument');
+        }
+        self::echo_json($data);
+    }
+
 }
