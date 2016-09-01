@@ -158,10 +158,11 @@ hr {
     position: relative;
 }
 .comment-list dl dd {
-    margin-left: 8px;
-    display: inline-block;
     width: 92%;
+    float: right;
+    margin-left: 8px;
     vertical-align: top;
+    display: inline-block;
 }
 .comment-list dl dd .comment-name {
     font-size: 10px;
