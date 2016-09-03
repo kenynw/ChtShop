@@ -87,7 +87,7 @@ class mobileMemberControl extends mobileControl{
     }
 }
 
-class mobileCMSControl extends mobileControl {
+class mobileCMSControl extends mobileMemberControl {
 
     //文章状态草稿箱
     const ARTICLE_STATE_DRAFT = 1;
