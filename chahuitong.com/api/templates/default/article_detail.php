@@ -60,7 +60,7 @@
                 ); ?></span>
         </div>
 
-<!--        <div class="follow"><a>+关注</a></div>-->
+        <div class="follow"><a>+关注</a></div>
     </div>
 
     <hr>
