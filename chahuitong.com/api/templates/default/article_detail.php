@@ -60,7 +60,7 @@
                 ); ?></span>
         </div>
 
-        <div class="follow"><a>+关注</a></div>
+<!--        <div class="follow"><a>+关注</a></div>-->
     </div>
 
     <hr>
@@ -89,7 +89,7 @@
                     <dd>
                         <p class="comment-name">
                             <a href="com.cht.user://api.chahuitong.com?act=member_snshome&mid=<?php echo $value['member_id']; ?>" target="_blank"><?php echo $value['member_name']; ?></a>
-                            <a nctype="comment_up" comment_id="<?php echo $value['comment_id'];?>" href="javascript:void(0)" class="like-btn"><em><?php echo $value['comment_up']; ?></em></a>
+<!--                            <a nctype="comment_up" comment_id="--><?php //echo $value['comment_id'];?><!--" href="javascript:void(0)" class="like-btn"><em>--><?php //echo $value['comment_up']; ?><!--</em></a>-->
                         </p>
                         <p class="comment-time"><?php echo date('Y-m-d H:i', $value['comment_time']); ?></p>
                         <p class="comment-content"><?php echo $value['comment_message'];?></p>
