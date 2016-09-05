@@ -163,7 +163,7 @@ class memberModel extends Model {
 		array("input"=>$register_info["password"],		    "require"=>"true", "message"=>'密码不能为空'),
 		array("input"=>$register_info["password_confirm"],  "require"=>"true", "validator"=>"Compare","operator"=>"==","to"=>$register_info["password"],"message"=>'密码与确认密码不相同'),
 		array("input"=>$register_info["email"],			    "require"=>"false","validator"=>"email", "message"=>'电子邮件格式不正确'),
-		array("input"=>$register_info["mobile"],			"require"=>"true", "validator"=>"mobile", "message"=>'手机号码格式不正确'),
+		array("input"=>$register_info["mobile"],			"require"=> !empty($_POST['username']), "validator"=>"mobile", "message"=>'手机号码格式不正确'),
 		);
 		$error = $obj_validate->validate();
 		if ($error != ''){

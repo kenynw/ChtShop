@@ -106,7 +106,7 @@ class discoverControl extends mobileHomeControl {
         $condition['member_state'] = 1;
         $condition['member_commend_flag'] = 1;
         $field = 'member_id, member_name, member_avatar, member_state, member_commend_flag';
-        $member_list = $model_member->getMemberList($condition, $field, $this->page);
+        $member_list = $model_member->getMemberList($condition, $field, $this->page, 'member_id asc');
         if (!empty($member_list)) {
             foreach ($member_list as $key => $value) {
                 $member_list[$key]['member_avatar'] = getMemberAvatar($value['member_avatar']);
