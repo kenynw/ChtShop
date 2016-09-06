@@ -29,6 +29,12 @@
         $iphone = (strpos($agent, 'iphone')) ? true : false;
         $ipad = (strpos($agent, 'ipad')) ? true : false;
         $android = (strpos($agent, 'android')) ? true : false;
+        if($iphone || $ipad) {
+            echo "<script type=\"text/javascript\">window.location.href='https://itunes.apple.com/cn/app/cha-hui-tong/id1024062041?mt=8'</script>";
+        }
+        if($android) {
+            echo "<script type=\"text/javascript\">window.location.href='cht.apk'</script>";
+        }
     ?>
 
     <script type="text/javascript">
