@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	font:nomal 100% Helvetica,Arial,sans-serif;
+    margin:0 auto;
+}
+
+h5 {
+	font-size:18px;
+}
+h6 {
+	font-size:16px;
+}
+p {
+	font-size:15px;
+}
+
+.top-hr {
+	height:1px;
+	border:none;
+	border-top:1px solid #555555;
+	margin-bottom:50px;
+}
+.header-nav {
+	height:60px;
+	background-color:#fff;
+	padding-top:30px;
+	padding-bottom:50px;
+}
+.header-nav p {
+	color:#000000;
+	font-size:15px;
+}
+.header-nav a {
+	color:#000000;
+}
+.nav-center {
+	margin-top:-20px;
+}
+
+.header-nav p{
+	text-align:center;
+}
+.nav-center h5 {
+	text-align:center;
+	letter-spacing:1px;
+	margin-bottom:-20px;
+}
+
+.carousel-indicators {
+    left: 15%;
+	
+}
+.carousel-indicators li {
+	width:8px;
+	height:8px;
+	border: 1px solid #fff;
+	background-color: #fff \9;
+	
+}
+.carousel-indicators .active {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  background-color: #fff;
+}
+.carousel-inner img {
+	margin-top:30px;
+	width:100%;
+	height:auto;
+}
+
+.product {
+	margin-bottom:50px;
+}
+.product-header img {
+	margin-top:50px;
+	margin-bottom:0;
+	margin-left:35%;
+	width:30%;
+	height:auto;
+}
+.superscript {
+	margin-left:13.3%;
+	width:100px;
+	height:100px;
+	z-index:100;
+	margin-top:-30px;
+	padding-top:50px;
+}
+.product-content img {
+	width:100%;
+	height:auto;
+	z-index:99;
+}
+.product-content-left {
+	float:left;
+	margin-left:18.1%;
+	width:42.3%;
+}
+.product-content-left-bottom-left {
+	float:left;
+	width:49%;
+}
+	
+.product-content-left-bottom-right {
+	float:right;
+	width:49%;
+
+}
+.product-content-right {
+	float:right;
+	margin-right:18.1%;
+	width:20.6%;
+}
+.product-content img {
+	margin-bottom:10px;
+}
+
+.footer {
+	margin-top:50px;
+	background-color:#F1F1F1;
+}
+.yunding-intro img{
+	margin-top:50px;
+	padding-left:49%;
+	padding-right:49%;
+	width:100%;
+}
+.yunding-intro h4 {
+	padding-top:20px;
+	padding-bottom:20px;
+	text-align:center;
+}
+.yunding-intro p {
+	text-align:center;
+	margin-bottom:15px;
+	margin-left:20%;
+	margin-right:20%;
+}
+.yunding-contract {
+	padding-bottom:80px;
+}
+.yunding-contract img{
+	margin-top:50px;
+	padding-left:49%;
+	padding-right:49%;
+	width:100%;
+}
+.yunding-contract h4 {
+	padding-top:20px;
+	padding-bottom:20px;
+	text-align:center;
+}
+.yunding-contract p {
+	text-align:center;
+	margin-bottom:15px;
+	margin-left:20%;
+	margin-right:20%;
+}
+.yunding-contract u {
+	text-decoration:underline;
+	text-align:center;
+}
