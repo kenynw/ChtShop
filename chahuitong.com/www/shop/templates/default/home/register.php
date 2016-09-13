@@ -20,60 +20,7 @@
       <h3><?php echo $lang['login_register_join_us'];?></h3>
     </div>
     <div class="nc-login-content">
-      <form id="register_form" method="post" action="<?php echo SHOP_SITE_URL;?>/index.php?act=login&op=usersave">
-      <?php Security::getToken();?>
-        <dl>
-          <dt><?php echo $lang['login_register_username'];?></dt>
-          <dd style="min-height:54px;">
-            <input type="text" id="user_name" name="user_name" class="text tip" title="<?php echo $lang['login_register_username_to_login'];?>" autofocus />
-            <label></label>
-          </dd>
-        </dl>
-        <dl>
-          <dt><?php echo $lang['login_register_pwd'];?></dt>
-          <dd style="min-height:54px;">
-            <input type="password" id="password" name="password" class="text tip" title="<?php echo $lang['login_register_password_to_login'];?>" />
-            <label></label>
-          </dd>
-        </dl>
-        <dl>
-          <dt><?php echo $lang['login_register_ensure_password'];?></dt>
-          <dd style="min-height:54px;">
-            <input type="password" id="password_confirm" name="password_confirm" class="text tip" title="<?php echo $lang['login_register_input_password_again'];?>"/>
-            <label></label>
-          </dd>
-        </dl>
-        <dl>
-          <dt><?php echo $lang['login_register_email'];?></dt>
-          <dd style="min-height:54px;">
-            <input type="text" id="email" name="email" class="text tip" title="<?php echo $lang['login_register_input_valid_email'];?>" />
-            <label></label>
-          </dd>
-        </dl>
-        <?php if(C('captcha_status_register') == '1') { ?>
-        <dl>
-          <dt><?php echo $lang['login_register_code'];?></dt>
-          <dd style="min-height:54px;">
-            <input type="text" id="captcha" name="captcha" class="text w50 fl tip" maxlength="4" size="10" title="<?php echo $lang['login_register_input_code'];?>" />
-            <img src="index.php?act=seccode&op=makecode&nchash=<?php echo getNchash();?>" title="" name="codeimage" border="0" id="codeimage" class="fl ml5"/> <a href="javascript:void(0)" class="ml5" onclick="javascript:document.getElementById('codeimage').src='index.php?act=seccode&op=makecode&nchash=<?php echo getNchash();?>&t=' + Math.random();"><?php echo $lang['login_register_click_to_change_code'];?></a>
-            <label></label>
-          </dd>
-        </dl>
-        <?php } ?>
-        <dl>
-          <dt>&nbsp;</dt>
-          <dd>
-            <input type="submit" id="Submit" value="<?php echo $lang['login_register_regist_now'];?>" class="submit" title="<?php echo $lang['login_register_regist_now'];?>" />
-            <input name="agree" type="checkbox" class="vm ml10" id="clause" value="1" checked="checked" />
-            <span for="clause" class="ml5"><?php echo $lang['login_register_agreed'];?><a href="<?php echo urlShop('document', 'index',array('code'=>'agreement'));?>" target="_blank" class="agreement" title="<?php echo $lang['login_register_agreed'];?>"><?php echo $lang['login_register_agreement'];?></a></span>
-            <label></label>
-          </dd>
-        </dl>
-        <input type="hidden" value="<?php echo $_GET['ref_url']?>" name="ref_url">
-        <input name="nchash" type="hidden" value="<?php echo getNchash();?>" />
-        <input type="hidden" name="form_submit" value="ok" />
-      </form>
-      <div class="clear"></div>
+        <img src="../images/download.png">
     </div>
     <div class="nc-login-bottom"></div>
   </div>
