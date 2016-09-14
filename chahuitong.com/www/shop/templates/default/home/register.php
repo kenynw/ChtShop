@@ -20,7 +20,7 @@
       <h3><?php echo $lang['login_register_join_us'];?></h3>
     </div>
     <div class="nc-login-content">
-        <img src="../images/download.png">
+        <img src="templates/default/images/download.png">
     </div>
     <div class="nc-login-bottom"></div>
   </div>
