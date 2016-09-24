@@ -7,7 +7,9 @@
  *
  */
 defined('InShopNC') or exit('Access Invalid!');
-class cms_articleControl extends SystemControl{
+
+class cms_articleControl extends SystemControl
+{
     //文章状态草稿箱
     const ARTICLE_STATE_DRAFT = 1;
     //文章状态待审核
@@ -35,10 +37,10 @@ class cms_articleControl extends SystemControl{
             $condition['article_state'] = $_GET['article_state'];
         }
 		if(!empty($_GET['article_class_id'])){
-			
+
 			$condition['article_class_id']=$_GET['article_class_id'];
-			
-			
+
+
 			}
         $this->get_cms_article_list($condition, 'list');
     }
@@ -231,127 +233,130 @@ class cms_articleControl extends SystemControl{
     }
 	/*获取单条文章信息*/
 	public function editorOp(){
-		
+
 		$id=isset($_GET['article_id'])?intval($_GET['article_id']):1;
-		
+
 		$condition=array();
-		
+
 		$condition['article_id']=$id;
-		
+
 		$article=Model("cms_article");
-		
+
 		$content=$article->getOne($condition);
-		
+
 		//获取cms 分类
-		
+
 		$model = Model('cms_article_class');
-      
+
 	   $list = $model->getList(TRUE);
-       
+
 	   // print_r($list);
-	   
+
         Tpl::output('list',$list);
-		
+
 		//end
-		
+
        Tpl::output('cms',$content);
-	   
+
        Tpl::showpage("cms_article.editor");
-		
-		
-		
-		
+
+
+
+
 		}
 
-   /*cms 文章修改保存*/
-   public function editor_saveOp(){
-	   
-	   $condition=array();
-	   $data=array();
-	   
-	    if($_POST['form_submit']=='ok'){
-			
-			//如果有图片处理图片
-			if(isset($_FILES['image'])){
-				if($_FILES['image']['size'] > 1000000){  
-                echo '文件过大！';  
-                  exit;  
-                 }  
-				$upfile="../data/upload/cms/article/{$_POST['article_attachment_path']}/{$_FILES['image']['name']}"; 
-				if(!move_uploaded_file($_FILES['image']['tmp_name'], $upfile))  
-              {  
-               echo '移动文件失败！'.$upfile;  
-               exit;  
-               }else{
-				   
-				 $dstW=50;//缩略图宽
-               $dstH=50;//缩略图高
-			   
-			    $type=substr($_FILES['image']['name'],-3);
+    /*cms 文章修改保存*/
+    public function editor_saveOp() {
+        $condition = array();
+        $data = array();
 
-			    $listimage="../data/upload/cms/article/{$_POST['article_attachment_path']}/".substr($_FILES['image']['name'],0,-4)."_list.".$type;
-				
-			  	 switch($type){
-				 case "jpg":	 
-               $src_image=ImageCreateFromJPEG($upfile);
-               $srcW=ImageSX($src_image); //获得图片宽
-               $srcH=ImageSY($src_image); //获得图片高
-               $dst_image=ImageCreateTrueColor($dstW,$dstH);
-               ImageCopyResized($dst_image,$src_image,0,0,0,0,$dstW,$dstH,$srcW,$srcH);
-               ImageJpeg($dst_image,$listimage); 
-			    $data['article_image']=serialize(array("name"=>$_FILES['image']['name'],"width"=>$srcW,"height"=>$srcH,"path"=>$_POST['article_attachment_path']));
-			    
-				 break;
-				 case "png":	 
-               $src_image=ImageCreateFromPng($upfile);
-               $srcW=ImageSX($src_image); //获得图片宽
-               $srcH=ImageSY($src_image); //获得图片高
-               $dst_image=ImageCreateTrueColor($dstW,$dstH);
-               ImageCopyResized($dst_image,$src_image,0,0,0,0,$dstW,$dstH,$srcW,$srcH);
-               ImagePng($dst_image,$listimage); 
-			    $data['article_image']=serialize(array("name"=>$_FILES['image']['name'],"width"=>$srcW,"height"=>$srcH,"path"=>$_POST['article_attachment_path']));
-			    
-				 break;
-						   
-			             }
-			 
-				 }  
-			}
-			
-		
-			$data['article_title']=$_POST['article_title'];
-			
-			$data['article_class_id']=$_POST['article_class_id'];
-			
-			$data['article_state']=$_POST['article_state'];
-			
-			$data['article_sort']=$_POST['article_sort'];
+        if ($_POST['form_submit'] == 'ok') {
+            //如果有图片处理图片
+            if (isset($_FILES['image'])) {
+                if ($_FILES['image']['size'] > 1000000) {
+                    echo '文件过大！';
+                    exit;
+                }
+                $upfile = UPLOAD_SITE_URL . "/cms/article/{$_POST['article_attachment_path']}/{$_FILES['image']['name']}";
+                if (!move_uploaded_file($_FILES['image']['tmp_name'], $upfile)) {
+                    echo '移动文件失败！' . $upfile;
+                    exit;
+                } else {
+                    $dstW = 50;//缩略图宽
+                    $dstH = 50;//缩略图高
 
-            $data['article_content']=$_POST['article_content'];
-			
-			$condition['article_id']=$_POST['article_id'];
-				
-			
-			}
-			
-			$article=Model("cms_article");
-			
-			$result=$article->article_save($condition,$data);
-			
-			
-			
-			
-			 if($result){			
-			showMessage("更新成功");
-			}else{				
-			showMessage("更新失败");	
-	    			}	
-	   
-	     
-	   
-	   }		
-	
-	
-	
+                    $type = substr($_FILES['image']['name'], -3);
+
+                    $listimage = "../data/upload/cms/article/{$_POST['article_attachment_path']}/" . substr($_FILES['image']['name'], 0, -4) . "_list." . $type;
+
+                    switch ($type) {
+                    case "jpg":
+                        $src_image = ImageCreateFromJPEG($upfile);
+                        $srcW = ImageSX($src_image); //获得图片宽
+                        $srcH = ImageSY($src_image); //获得图片高
+                        $dst_image = ImageCreateTrueColor($dstW, $dstH);
+                        ImageCopyResized(
+                            $dst_image, $src_image, 0, 0, 0, 0, $dstW, $dstH,
+                            $srcW, $srcH
+                        );
+                        ImageJpeg($dst_image, $listimage);
+                        $data['article_image'] = serialize(
+                            array(
+                                "name" => $_FILES['image']['name'],
+                                "width" => $srcW, "height" => $srcH,
+                                "path" => $_POST['article_attachment_path']
+                            )
+                        );
+
+                        break;
+                    case "png":
+                        $src_image = ImageCreateFromPng($upfile);
+                        $srcW = ImageSX($src_image); //获得图片宽
+                        $srcH = ImageSY($src_image); //获得图片高
+                        $dst_image = ImageCreateTrueColor($dstW, $dstH);
+                        ImageCopyResized(
+                            $dst_image, $src_image, 0, 0, 0, 0, $dstW, $dstH,
+                            $srcW, $srcH
+                        );
+                        ImagePng($dst_image, $listimage);
+                        $data['article_image'] = serialize(
+                            array(
+                                "name" => $_FILES['image']['name'],
+                                "width" => $srcW, "height" => $srcH,
+                                "path" => $_POST['article_attachment_path']
+                            )
+                        );
+
+                        break;
+
+                    }
+
+                }
+            }
+
+
+            $data['article_title'] = $_POST['article_title'];
+
+            $data['article_class_id'] = $_POST['article_class_id'];
+
+            $data['article_state'] = $_POST['article_state'];
+
+            $data['article_sort'] = $_POST['article_sort'];
+
+            $data['article_content'] = $_POST['article_content'];
+
+            $condition['article_id'] = $_POST['article_id'];
+        }
+
+        $article = Model("cms_article");
+
+        $result = $article->article_save($condition, $data);
+
+        if ($result) {
+            showMessage("更新成功");
+        } else {
+            showMessage("更新失败");
+        }
+    }
 
 }

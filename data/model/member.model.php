@@ -268,20 +268,14 @@ class memberModel extends Model {
 		    $member_info['member_sex']			= $param['member_sex'];
 		    $member_info['member_avatar']		= $param['member_avatar'];
 		    $member_info['member_qqopenid']		= $param['member_qqopenid'];
-		    //$member_info['member_qqinfo']		= $param['member_qqinfo'];
+		    $member_info['member_qqinfo']		= $param['member_qqinfo'];
 		    $member_info['member_sinaopenid']	= $param['member_sinaopenid'];
-		    //$member_info['member_sinainfo']	= $param['member_sinainfo'];
-            //begin 添加微信登陆 by lai
+		    $member_info['member_sinainfo']	    = $param['member_sinainfo'];
             $member_info['member_weixinopenid']	= $param['member_weixinopenid'];
-            //$member_info['member_weixininfo']	= $param['member_weixininfo'];
-            //end 微信登陆
+            $member_info['member_weixininfo']	= $param['member_weixininfo'];
             //绑定手机
-            $member_info['member_mobile']	= $param['member_mobile'];
+            $member_info['member_mobile']	    = $param['member_mobile'];
             $member_info['member_mobile_bind']	= $param['member_mobile_bind'];
-            //end 绑定手机
-            //begin 添加搜索标签 by lai
-            $member_info['member_lable']=isset($param['member_lable'])?$param['member_lable']:'';
-            //end 添加搜索标签
 		    //添加邀请人(推荐人)会员积分 by abc.com
 		    $member_info['inviter_id']	        = $param['inviter_id'];
 		    $insert_id	= $this->table('member')->insert($member_info);

@@ -201,6 +201,52 @@ class loginControl extends mobileHomeControl {
     }
 
     /**
+     * 第三方登录
+     */
+    public function oauthOp() {
+
+        $model_member = Model('member');
+
+        $type = empty($_POST['type']) ? $_POST['type'] : 'qq';
+
+        $member_array = array();
+        if ($type == "qq") {
+            $member_array['member_qqopenid'] = $_POST['openid'];
+        }
+        if ($type == "sina") {
+            $member_array['member_sinaopenid'] = $_POST['openid'];
+        }
+        if ($type == "wechat") {
+            $member_array['member_weixinopenid'] = $_POST['openid'];
+        }
+
+        $member_info = $model_member->getMemberInfo($member_array, 'member_id, member_name');
+        if (!empty($member_info) && is_array($member_info)) {
+            $member_info['key'] = $this->_get_token($member_info['member_id'], $member_info['member_name'], $_POST['client']);
+            output_json(1, array('key' => $member_info));
+        } else {
+            $password = rand(100000, 999999);
+            $member_array['member_name'] = $this->_check_member_name($_POST['username']);
+            $member_array['member_passwd'] = $password;
+            $member_array['member_mobile']	    = '';
+            $member_array['member_mobile_bind']  = 0;
+
+            $insert_id = $model_member->addMember($member_array);
+            if ($insert_id) {
+                $member = array();
+                $member['member_name'] = $member_array['member_name'];
+                $member['member_id'] = $insert_id;
+                $member['key'] = $this->_get_token($insert_id, $member_array['member_name'], $_POST['client']);
+                output_json(1, $member);
+            }
+            else {
+                output_json(0, array());
+            }
+        }
+
+    }
+
+    /**
      * 登录生成token
      */
     private function _get_token($member_id, $member_name, $client) {
@@ -230,6 +276,18 @@ class loginControl extends mobileHomeControl {
             return null;
         }
 
+    }
+
+    private function _check_member_name($member_name) {
+        $name = $member_name . (strlen($member_name) < 3 ? rand(100, 899) : '');
+
+        $model_member	= Model('member');
+        $check_member_name	= $model_member->getMemberInfo(array('member_name' => $name));
+        if(is_array($check_member_name) and count($check_member_name)>0) {
+            $name = $name . rand(100, 899);
+            $this->_check_member_name($name . rand(100, 899));
+        }
+        return $name;
     }
 
     //==============================以下需重写==============================
@@ -293,64 +351,56 @@ class loginControl extends mobileHomeControl {
         //无需客户再确认密码
         $register_info['password_confirm'] = $_POST['password'];
         $register_info['email'] = $_POST['mobile'] . "@186.com";
-        /*判断第三方是否已经注册过*/
+
+        /*第三方登录*/
         if ($_POST['openid']) {
+            $condition = array();
             if ($_POST['op'] == "qq") {
-                $sql = "member_qqopenid='" . $_POST['openid'] . "'";
+                $condition['member_qqopenid'] = $_POST['openid'];
             }
             if ($_POST['op'] == "sina") {
-                $sql = "member_sinaopenid='" . $_POST['openid'] . "'";
+                $condition['member_sinaopenid'] = $_POST['openid'];
             }
-            $memberModel = Model("member");
-            $memberInfo = $memberModel->where($sql)->find();
-            if (!empty($memberInfo)) {
-                $token = $this->_get_token(
-                    $memberInfo['member_id'], $memberInfo['member_name'],
-                    $_POST['client']
-                );
-                output_json(1, array('key' => $token), '登陆成功');
-                die();
+            if ($_POST['op'] == "wechat") {
+                $condition['member_weixinopenid'] = $_POST['openid'];
             }
-
-        }
-
-        //第三方登陆
-        if ($_POST['openid']) {
-            $op = isset($_POST['op']) ? $_POST['op'] : 'qq';
-            switch ($op) {
-            case "qq":
-                $register_info['member_qqopenid'] = $_POST['openid'];
-                $register_info['username'] = "QQ_" . rand(1000000, 9999990);
-                $register_info['password'] = "000000";
-                $register_info['password_confirm'] = $register_info['password'];
-                $register_info['email'] = "noemal" . rand(1000000, 9999990)
-                    . "@qq.com";
-                break;
-            case "sina":
-                $register_info['member_sinaopenid'] = $_POST['openid'];
-                $register_info['username'] = "sina_" . rand(1000000, 9999999);
-                $register_info['password'] = "000000";
-                $register_info['password_confirm'] = $register_info['password'];
-                $register_info['email'] = "noemal" . rand(1000000, 9999990)
-                    . "@163.com";
-                break;
-            case "wechat":
-                $register_info['member_wechatopenid'] = $_POST['openid'];
-                $register_info['username'] = "wechat_" . rand(1000000, 9999999);
-                $register_info['password'] = "000000";
-                $register_info['password_confirm'] = $register_info['password'];
-                $register_info['email'] = "noemal" . rand(1000000, 9999990)
-                    . "@wechat.com";
-                break;
+            $model_member = Model('member');
+            $member_info = $model_member->getMemberInfo($condition, 'member_id, member_name');
+            if (!empty($member_info)) {
+                $member_info['key'] = $this->_get_token($member_info['member_id'], $member_info['member_name'], $_POST['client']);
+                output_json(1, array('key' => $member_info), '登陆成功');
+            } else {
+                $op = isset($_POST['op']) ? $_POST['op'] : 'qq';
+                switch ($op) {
+                case "qq":
+                    $register_info['username'] = "QQ_" . rand(1000000, 9999990);
+                    $register_info['password'] = "000000";
+                    $register_info['password_confirm'] = $register_info['password'];
+                    $register_info['email'] = "noemal" . rand(1000000, 9999990)
+                        . "@qq.com";
+                    break;
+                case "sina":
+                    $register_info['username'] = "sina_" . rand(1000000, 9999999);
+                    $register_info['password'] = "000000";
+                    $register_info['password_confirm'] = $register_info['password'];
+                    $register_info['email'] = "noemal" . rand(1000000, 9999990)
+                        . "@163.com";
+                    break;
+                case "wechat":
+                    $register_info['username'] = "wechat_" . rand(1000000, 9999999);
+                    $register_info['password'] = "000000";
+                    $register_info['password_confirm'] = $register_info['password'];
+                    $register_info['email'] = "noemal" . rand(1000000, 9999990)
+                        . "@wechat.com";
+                    break;
+                }
             }
         }
+
         $member_info = $model_member->register($register_info);
         if (!isset($member_info['error'])) {
             //如果开启了注册送优惠券添加优惠劵,register_voucher_give 不是系统默认, 添加到 setting,要清除字段缓存
-            $token = $this->_get_token(
-                $member_info['member_id'], $member_info['member_name'],
-                $_POST['client']
-            );
+            $token = $this->_get_token($member_info['member_id'], $member_info['member_name'], $_POST['client']);
             if (C('register_voucher_give')) {
                 $this->add_voucherOp($member_info['member_id']);
             }
@@ -358,16 +408,12 @@ class loginControl extends mobileHomeControl {
                 //output_data(array('username' => $member_info['member_name'], 'key' => $token));
                 $data['key'] = $token;
                 output_json(1, $data, '注册成功');
-                die();
             } else {
-                //output_error('注册失败');
                 output_json(0, array(), '获取token失败');
-                die();
             }
         } else {
             //output_error($member_info['error']);
             output_json(0, array(), $member_info['error']);
-            die();
         }
 
     }

@@ -320,19 +320,27 @@ client 客户端类型(android wap ios wechat)</p></blockquote>
 
 <h3>第三方登录</h3>
 
-<p>URL: act=login&amp;op=register_api</p>
+<p>URL: act=login&amp;op=oauth</p>
 
 <p>参数：</p>
 
-<blockquote><p>key    shopNC的MD5值，固定为『804451dc13014b1c785fb73b1617b760』   <br/>
-client 客户端类型，可选：android，ios，web <br/>
-op     第三方类型，可选：sina,wechat,qq<br/>
-openid 第三方授权返回的唯一标识,如微博登录的Uid，腾讯的openId</p></blockquote>
+<blockquote><p>client 客户端类型，可选：android，ios，web <br/>
+type   第三方类型，可选：sina,wechat,qq<br/>
+openid 第三方授权返回的唯一标识,如微博登录的Uid，腾讯的openId  <br/>
+username 用户在第三方平台的用户名或者昵称</p></blockquote>
 
 <p>返回：</p>
 
 <pre><code>  {
-    code:  
+      "code": 1,
+      "msg": "SUCCESS",
+      "data": {
+          "key": {
+              "member_id": "5294",
+              "member_name": "DSK155",
+              "key": "60f1f1dd9856187e58abcdf85fc57182"
+          }
+      }
   }
 </code></pre>
 

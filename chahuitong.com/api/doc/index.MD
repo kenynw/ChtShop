@@ -145,19 +145,27 @@ URL：act=logout
       }
 
 ### 第三方登录
-URL: act=login&op=register_api  
+URL: act=login&op=oauth  
 
 参数：
 
->key    shopNC的MD5值，固定为『804451dc13014b1c785fb73b1617b760』     
 >client 客户端类型，可选：android，ios，web   
->op     第三方类型，可选：sina,wechat,qq  
->openid 第三方授权返回的唯一标识,如微博登录的Uid，腾讯的openId
+>type   第三方类型，可选：sina,wechat,qq  
+>openid 第三方授权返回的唯一标识,如微博登录的Uid，腾讯的openId    
+>username 用户在第三方平台的用户名或者昵称
 
 返回： 
 
       {
-        code:  
+          "code": 1,
+          "msg": "SUCCESS",
+          "data": {
+              "key": {
+                  "member_id": "5294",
+                  "member_name": "DSK155",
+                  "key": "60f1f1dd9856187e58abcdf85fc57182"
+              }
+          }
       }
 
 ### 首页
