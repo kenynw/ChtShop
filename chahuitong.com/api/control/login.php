@@ -223,7 +223,7 @@ class loginControl extends mobileHomeControl {
         $member_info = $model_member->getMemberInfo($member_array, 'member_id, member_name');
         if (!empty($member_info) && is_array($member_info)) {
             $member_info['key'] = $this->_get_token($member_info['member_id'], $member_info['member_name'], $_POST['client']);
-            output_json(1, array('key' => $member_info));
+            output_json(1, $member_info);
         } else {
             $password = rand(100000, 999999);
             $member_array['member_name'] = $this->_check_member_name($_POST['username']);
