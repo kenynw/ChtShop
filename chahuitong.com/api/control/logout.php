@@ -28,7 +28,7 @@ class logoutControl extends mobileMemberControl {
 
         $model_mb_user_token = Model('mb_user_token');
 
-        if($this->member_info['member_mobile'] == $_POST['mobile']) {
+        if($this->member_info['member_mobile'] == $_POST['mobile'] || $this->member_info['member_name'] == $_POST['username']) {
             $condition = array();
             $condition['member_id'] = $this->member_info['member_id'];
             $condition['client_type'] = $_POST['client'];
